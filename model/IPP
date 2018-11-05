@@ -1,0 +1,12 @@
+class IPP(object):
+
+    def __init__(self, device):
+        self.device = device
+        self.internet_interfaces = {}
+        self.mpls_interfaces = {}
+        self.ebgp_neigbors = {}
+
+    """un ipp es internet Peering point, es un router que tiene conexiones a internet
+    varias conexiones a los equippos internernos de la mpls
+    en general trabaja con filtros de salida y de entrada en las sesiones BGP
+    """

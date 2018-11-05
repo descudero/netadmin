@@ -1,0 +1,1842 @@
+
+RO-CGA-CMY1-CerroGarron#
+RO-CGA-CMY1-CerroGarron#
+RO-CGA-CMY1-CerroGarron#show  mpls traffic-eng tunnels detail
+
+P2P TUNNELS/LSPs:
+
+Name: FRR_LP_PLI-SPE                      (Tunnel1) Destination: 172.16.30.43
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit FRR_LP_PLI-SPE (Basis for Setup, path weight 45)
+
+  Config Parameters:
+    Bandwidth: 0        kbps (Global)  Priority: 7  7   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 0 [0] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/2/0, 117
+  Next Hop : 172.16.26.74
+  RSVP Signalling Info:
+       Src 172.16.30.4, Dst 172.16.30.43, Tun_Id 1, Tun_Instance 2144
+    RSVP Path Info:
+      My Address: 172.16.26.73
+      Explicit Route: 172.16.26.74 172.16.27.9 172.16.26.65 172.16.26.158
+                      172.16.30.43
+      Record   Route:   NONE
+      Tspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 4 hours, 36 minutes
+      Number of LSP IDs (Tun_Instances) used: 2144
+    Current LSP: [ID: 2144]
+      Uptime: 4 hours, 36 minutes
+    Prior LSP: [ID: 2143]
+      ID: path option unknown
+      Removal Trigger: path verification failed
+
+Name: FRR_LP_PLI-VPL                      (Tunnel2) Destination: 172.16.30.44
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit FRR_LP_PLI-VPL (Basis for Setup, path weight 530)
+
+  Config Parameters:
+    Bandwidth: 0        kbps (Global)  Priority: 7  7   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 0 [0] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/4/1, 1340
+  Next Hop : 172.16.20.109
+  RSVP Signalling Info:
+       Src 172.16.30.4, Dst 172.16.30.44, Tun_Id 2, Tun_Instance 8489
+    RSVP Path Info:
+      My Address: 172.16.20.110
+      Explicit Route: 172.16.20.109 172.16.20.9 172.16.20.174 172.16.27.5
+                      172.16.30.44
+      Record   Route:   NONE
+      Tspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 7 days, 6 hours, 11 minutes
+      Number of LSP IDs (Tun_Instances) used: 8489
+    Current LSP: [ID: 8489]
+      Uptime: 7 days, 6 hours, 11 minutes
+    Prior LSP: [ID: 8488]
+      ID: path option unknown
+      Removal Trigger: path error
+
+Name: NAP3-NAP2-PLI-ESC                   (Tunnel50608) Destination: 172.16.30.42
+  Status:
+    Admin: up         Oper: down   Path: not valid   Signalling: Down
+    path option 10, type explicit PATH_NAP3-NAP2-PLI-ESC
+
+  Config Parameters:
+    Bandwidth: 1000     kbps (Global)  Priority: 7  7   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 1000 [0] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Number of LSP IDs (Tun_Instances) used: 1852
+
+LSP Tunnel RO-NAP-CMY3_t50611 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/1/1, 362
+  Prev Hop : 172.16.20.13
+  OutLabel : TenGigabitEthernet0/3/0, 473
+  Next Hop : 172.16.26.77
+  RSVP Signalling Info:
+       Src 172.16.30.1, Dst 172.19.24.1, Tun_Id 50611, Tun_Instance 4733
+    RSVP Path Info:
+      My Address: 172.16.26.78
+      Explicit Route: 172.16.26.77 172.19.24.1*
+      Record   Route:  172.16.20.13 172.16.20.73 172.16.20.42
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.18.25.242 172.18.24.13 172.18.24.21 172.18.24.6
+                       172.20.96.1 172.20.96.2
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel PATH_NAP3-CRZ-SPE is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/2/0, 2586
+  Prev Hop : 172.16.26.74
+  OutLabel : TenGigabitEthernet0/3/0, implicit-null
+  Next Hop : 172.16.26.77
+  RSVP Signalling Info:
+       Src 172.16.30.1, Dst 172.16.30.43, Tun_Id 50613, Tun_Instance 4698
+    RSVP Path Info:
+      My Address: 172.16.26.78
+      Explicit Route: 172.16.26.77 172.16.30.43
+      Record   Route:  172.16.26.74 172.16.27.49 172.16.20.65
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.26.77
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel TRANSDATELECOM is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/1/1, 1294
+  Prev Hop : 172.16.20.13
+  OutLabel : TenGigabitEthernet0/3/0, 878
+  Next Hop : 172.16.26.77
+  FRR OutLabel : Tunnel1, 878
+  RSVP Signalling Info:
+       Src 172.16.30.1, Dst 172.19.24.24, Tun_Id 50614, Tun_Instance 7163
+    RSVP Path Info:
+      My Address: 172.16.26.78
+      Explicit Route: 172.16.26.77 172.18.24.70* 172.18.24.14 172.18.25.170
+      Record   Route:  172.16.20.13 172.16.20.73 172.16.20.42
+      Tspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.43(878) 172.18.24.69(878)
+                       172.17.26.2(1557) 172.18.24.13(1557)
+                       172.17.26.3(187) 172.18.25.169(187)
+                       172.19.24.24(3) 172.18.25.170(3)
+      Fspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+
+LSP Tunnel IBW-CR-EMERGENCIA is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/4/1, 143
+  Prev Hop : 172.16.20.109
+  OutLabel : TenGigabitEthernet0/3/0, implicit-null
+  Next Hop : 172.16.26.77
+  RSVP Signalling Info:
+       Src 172.16.30.1, Dst 172.16.30.43, Tun_Id 50616, Tun_Instance 3203
+    RSVP Path Info:
+      My Address: 172.16.26.78
+      Explicit Route: 172.16.26.77 172.16.30.43
+      Record   Route:  172.16.20.109 172.16.20.9 172.16.20.70
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.26.77
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel RSL_CYBERFUEL_MIA_CR is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/4/1, 1454
+  Prev Hop : 172.16.20.109
+  OutLabel : TenGigabitEthernet0/0/8, 483
+  Next Hop : 172.16.26.85
+  FRR OutLabel : Tunnel1, 483
+  RSVP Signalling Info:
+       Src 172.16.30.1, Dst 172.17.26.22, Tun_Id 50623, Tun_Instance 150
+    RSVP Path Info:
+      My Address: 172.16.26.86
+      Explicit Route: 172.16.26.85 172.18.24.70* 172.18.24.1 172.18.24.57
+                      172.18.25.78
+      Record   Route:  172.16.20.109 172.16.20.73 172.16.20.42
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.43(483) 172.18.24.69(483)
+                       172.17.26.2(114) 172.18.24.2(114)
+                       172.17.26.1(1440) 172.18.24.58(1440)
+                       172.17.26.44(705) 172.18.25.77(705)
+                       172.17.26.22(3) 172.18.25.78(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel CRCRRSL10001977I|TELECABLE|INTER.ND_SP  is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/1, 110
+  Prev Hop : 172.16.27.17
+  OutLabel : TenGigabitEthernet0/0/8, implicit-null
+  Next Hop : 172.16.26.85
+  FRR OutLabel : Tunnel1, implicit-null
+  RSVP Signalling Info:
+       Src 172.16.30.1, Dst 172.16.30.43, Tun_Id 50624, Tun_Instance 1231
+    RSVP Path Info:
+      My Address: 172.16.26.86
+      Explicit Route: 172.16.26.85 172.16.30.43
+      Record   Route:  172.16.27.17 172.16.27.6 172.16.20.65
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.43(3) 172.16.26.85(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel FROM-CMY3-TO-WBP2 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/1, 187
+  Prev Hop : 172.16.27.17
+  OutLabel : TenGigabitEthernet0/4/1, 2089
+  Next Hop : 172.16.20.109
+  RSVP Signalling Info:
+       Src 172.16.30.1, Dst 172.16.30.14, Tun_Id 57001, Tun_Instance 2677
+    RSVP Path Info:
+      My Address: 172.16.20.110
+      Explicit Route: 172.16.20.109 172.16.20.9 172.16.20.105 172.16.20.94
+                      172.16.30.14
+      Record   Route:  172.16.27.17 172.16.27.2 172.16.20.65
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.20.10 172.16.20.106 172.16.20.93 172.16.20.94
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel FROM-CMY4-TO-ESC-CER1 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/2/0, 19
+  Prev Hop : 172.16.26.74
+  OutLabel : TenGigabitEthernet0/0/8, 365
+  Next Hop : 172.16.26.85
+  RSVP Signalling Info:
+       Src 172.16.30.5, Dst 172.16.30.42, Tun_Id 50616, Tun_Instance 736
+    RSVP Path Info:
+      My Address: 172.16.26.86
+      Explicit Route: 172.16.26.85 172.16.30.42*
+      Record   Route:  172.16.26.74 172.16.27.41 172.16.20.173
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.26.82 172.16.26.81
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel TE_CRUS03890065_AMERICAN_DATA is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/4/1, 948
+  Prev Hop : 172.16.20.109
+  OutLabel : TenGigabitEthernet0/0/8, 1561
+  Next Hop : 172.16.26.85
+  FRR OutLabel : Tunnel1, 1561
+  RSVP Signalling Info:
+       Src 172.16.30.5, Dst 172.19.24.44, Tun_Id 50620, Tun_Instance 5172
+    RSVP Path Info:
+      My Address: 172.16.26.86
+      Explicit Route: 172.16.26.85 172.19.24.44*
+      Record   Route:  172.16.20.109 172.16.20.73
+      Tspec: ave rate=2252800 kbits, burst=1000 bytes, peak rate=2252800 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.43(1561) 172.18.25.242(1561)
+                       172.17.26.2(455) 172.20.97.45(455)
+                       172.19.24.48(123) 172.20.97.86(123)
+                       172.19.24.44(3) 172.20.97.85(3)
+      Fspec: ave rate=2252800 kbits, burst=1000 bytes, peak rate=2252800 kbits
+
+LSP Tunnel FROM-CMY4_TO_PA-PE-KIO is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/1/1, 2570
+  Prev Hop : 172.16.20.13
+  OutLabel : TenGigabitEthernet0/2/0, 927
+  Next Hop : 172.16.26.74
+  RSVP Signalling Info:
+       Src 172.16.30.5, Dst 172.19.28.20, Tun_Id 50701, Tun_Instance 6557
+    RSVP Path Info:
+      My Address: 172.16.26.73
+      Explicit Route: 172.16.26.74 172.16.30.44 172.19.28.20*
+      Record   Route:  172.16.20.13 172.16.20.9
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.18.28.65 172.18.28.1 172.20.112.145 172.20.112.150
+                       172.20.112.149
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel FROM-CMY4-TO-WBP is signalled, connection is down
+
+LSP Tunnel GUAYACAN-NAP is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/2/0, 978
+  Prev Hop : 172.16.26.74
+  OutLabel : TenGigabitEthernet0/1/1, 195
+  Next Hop : 172.16.20.13
+  RSVP Signalling Info:
+       Src 172.16.30.7, Dst 172.16.30.34, Tun_Id 50221, Tun_Instance 5216
+    RSVP Path Info:
+      My Address: 172.16.20.14
+      Explicit Route: 172.16.20.13 172.16.22.25 172.16.30.34
+      Record   Route:  172.16.26.74 172.16.27.2 172.16.20.65 172.16.20.134
+                       172.16.20.29
+      Tspec: ave rate=10 kbits, burst=1000 bytes, peak rate=10 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.3(195) 172.16.22.26(195)
+                       172.16.30.34(3) 172.16.22.25(3)
+      Fspec: ave rate=10 kbits, burst=1000 bytes, peak rate=10 kbits
+
+LSP Tunnel YOTA_CRZ_SUM is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/2/0, 327
+  Prev Hop : 172.16.26.74
+  OutLabel : TenGigabitEthernet0/3/0, 1250
+  Next Hop : 172.16.26.77
+  RSVP Signalling Info:
+       Src 172.16.30.9, Dst 172.19.20.29, Tun_Id 50505, Tun_Instance 1767
+    RSVP Path Info:
+      My Address: 172.16.26.78
+      Explicit Route: 172.16.26.77 172.16.26.81 172.16.25.65 172.19.20.29*
+      Record   Route:  172.16.26.74 172.16.27.6
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.26.82 172.16.25.66 172.18.20.129 172.18.20.1
+                       172.20.80.57 172.20.80.58
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel BTL_BENQUE-NAP_BZUS02590002-Path_7 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/1, 1005
+  Prev Hop : 172.16.27.17
+  OutLabel : TenGigabitEthernet0/0/8, 1037
+  Next Hop : 172.16.26.85
+  RSVP Signalling Info:
+       Src 172.16.30.10, Dst 172.17.22.60, Tun_Id 50117, Tun_Instance 7572
+    RSVP Path Info:
+      My Address: 172.16.26.86
+      Explicit Route: 172.16.26.85 172.16.25.9 172.16.24.1 172.16.23.9
+                      172.16.22.65 172.17.22.52* 172.18.8.30 172.18.8.38
+                      172.18.8.42 172.18.8.46 172.18.8.54 172.18.8.58
+                      172.18.8.62 172.18.8.66 172.18.8.253 172.18.9.34
+      Record   Route:  172.16.27.17 172.16.27.6 172.16.20.65 172.16.20.41
+                       172.16.20.46
+      Tspec: ave rate=200000 kbits, burst=1000 bytes, peak rate=200000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.25.10 172.16.24.2 172.16.23.10 172.16.22.66
+                       172.18.9.162 172.18.8.29 172.18.8.37 172.18.8.41
+                       172.18.8.45 172.18.8.53 172.18.8.57 172.18.8.61
+                       172.18.8.65 172.18.8.254 172.18.9.33 172.18.9.34
+      Fspec: ave rate=200000 kbits, burst=1000 bytes, peak rate=200000 kbits
+
+LSP Tunnel ESC-AGG1_TO_NAP-ACC2 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/1/1, 1370
+  Prev Hop : 172.16.20.13
+  OutLabel : TenGigabitEthernet0/0/8, 687
+  Next Hop : 172.16.26.85
+  RSVP Signalling Info:
+       Src 172.16.30.10, Dst 172.19.24.1, Tun_Id 50610, Tun_Instance 8611
+    RSVP Path Info:
+      My Address: 172.16.26.86
+      Explicit Route: 172.16.26.85 172.19.24.1*
+      Record   Route:  172.16.20.13 172.16.20.9 172.16.20.46
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.18.25.242 172.18.24.13 172.18.24.21 172.18.24.6
+                       172.20.96.1 172.20.96.2
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel ESC-AGG1_TO_NAP-ACC2 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/1/1, 1353
+  Prev Hop : 172.16.20.13
+  OutLabel : TenGigabitEthernet0/0/8, 1252
+  Next Hop : 172.16.26.85
+  RSVP Signalling Info:
+       Src 172.16.30.10, Dst 172.19.24.1, Tun_Id 50612, Tun_Instance 2519
+    RSVP Path Info:
+      My Address: 172.16.26.86
+      Explicit Route: 172.16.26.85 172.19.24.1*
+      Record   Route:  172.16.20.13 172.16.20.9 172.16.20.46
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.18.25.242 172.18.24.13 172.18.24.21 172.18.24.6
+                       172.20.96.1 172.20.96.2
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel RO-GUY-CER1_t5 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/1/1, 3077
+  Prev Hop : 172.16.20.13
+  OutLabel : TenGigabitEthernet0/3/1, 938
+  Next Hop : 172.16.27.17
+  FRR OutLabel : Tunnel2, 938
+  RSVP Signalling Info:
+       Src 172.16.30.34, Dst 172.17.27.6, Tun_Id 5, Tun_Instance 5401
+    RSVP Path Info:
+      My Address: 172.16.27.18
+      Explicit Route: 172.16.27.17 172.16.27.13 172.17.27.6*
+      Record   Route:  172.16.20.13 172.16.22.77
+      Tspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.44(938) 172.16.27.14(938)
+                       172.16.30.45(1041) 172.18.28.69(1041)
+                       172.17.27.6(3) 172.18.28.70(3)
+      Fspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+
+LSP Tunnel RO-GUY-CER1_t50 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/1/1, 531
+  Prev Hop : 172.16.20.13
+  OutLabel : TenGigabitEthernet0/3/1, 1365
+  Next Hop : 172.16.27.17
+  RSVP Signalling Info:
+       Src 172.16.30.34, Dst 172.17.27.6, Tun_Id 50, Tun_Instance 8379
+    RSVP Path Info:
+      My Address: 172.16.27.18
+      Explicit Route: 172.16.27.17 172.16.27.13 172.17.27.6*
+      Record   Route:  172.16.20.13 172.16.22.77
+      Tspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.27.14 172.18.28.69 172.18.28.70
+      Fspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+
+LSP Tunnel GUAYACAN-NAP is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/1/1, 1200
+  Prev Hop : 172.16.20.13
+  OutLabel : TenGigabitEthernet0/0/8, 1177
+  Next Hop : 172.16.26.85
+  FRR OutLabel : Tunnel1, 1177
+  RSVP Signalling Info:
+       Src 172.16.30.34, Dst 172.16.30.7, Tun_Id 50221, Tun_Instance 3125
+    RSVP Path Info:
+      My Address: 172.16.26.86
+      Explicit Route: 172.16.26.85 172.16.26.81 172.16.30.42 172.16.30.9*
+                      172.16.20.65 172.16.30.7*
+      Record   Route:  172.16.20.13 172.16.22.77
+      Tspec: ave rate=10 kbits, burst=1000 bytes, peak rate=10 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.43(1177) 172.16.26.82(1177)
+                       172.16.30.42(428) 172.16.26.65(428)
+                       172.16.30.45(1203) 172.16.27.13(1203)
+                       172.16.30.44(972) 172.16.27.42(972)
+                       172.16.30.9(129) 172.16.20.66(129)
+                       172.16.30.1(51) 172.16.20.133(51)
+                       172.16.30.2(2153) 172.16.20.30(2153)
+                       172.16.30.7(3) 172.16.20.29(3)
+      Fspec: ave rate=10 kbits, burst=1000 bytes, peak rate=10 kbits
+
+LSP Tunnel FRR_LP_ESC-SMU is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/0, 1153
+  Prev Hop : 172.16.26.77
+  OutLabel : TenGigabitEthernet0/4/1, 592
+  Next Hop : 172.16.20.109
+  RSVP Signalling Info:
+       Src 172.16.30.42, Dst 172.16.30.40, Tun_Id 1, Tun_Instance 5794
+    RSVP Path Info:
+      My Address: 172.16.20.110
+      Explicit Route: 172.16.20.109 172.16.24.77 172.16.24.73 172.16.25.6
+                      172.16.30.40
+      Record   Route:   NONE
+      Tspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+
+LSP Tunnel FRR_LP_ESC-HUB is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/0, 97
+  Prev Hop : 172.16.26.77
+  OutLabel : TenGigabitEthernet0/2/0, 246
+  Next Hop : 172.16.26.74
+  RSVP Signalling Info:
+       Src 172.16.30.42, Dst 172.16.30.45, Tun_Id 2, Tun_Instance 2547
+    RSVP Path Info:
+      My Address: 172.16.26.73
+      Explicit Route: 172.16.26.74 172.16.27.13 172.16.30.45
+      Record   Route:   NONE
+      Tspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+
+LSP Tunnel FRR_LP_ESC-INT_SUBA is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/0, 574
+  Prev Hop : 172.16.26.77
+  OutLabel : TenGigabitEthernet0/4/1, 718
+  Next Hop : 172.16.20.109
+  RSVP Signalling Info:
+       Src 172.16.30.42, Dst 172.17.28.192, Tun_Id 4, Tun_Instance 6029
+    RSVP Path Info:
+      My Address: 172.16.20.110
+      Explicit Route: 172.16.20.109 172.16.20.9 172.16.20.105 172.16.20.94
+                      172.16.20.97 172.16.20.114 172.17.28.192
+      Record   Route:   NONE
+      Tspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+
+LSP Tunnel RO-ESC-CER1_t10 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/8, 86
+  Prev Hop : 172.16.26.85
+  OutLabel : TenGigabitEthernet0/1/1, 1027
+  Next Hop : 172.16.20.13
+  RSVP Signalling Info:
+       Src 172.16.30.42, Dst 172.16.30.36, Tun_Id 10, Tun_Instance 9640
+    RSVP Path Info:
+      My Address: 172.16.20.14
+      Explicit Route: 172.16.20.13 172.16.22.73 172.16.22.70 172.16.23.5
+                      172.16.30.36
+      Record   Route:   NONE
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel RO-ESC-CER1_t500 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/8, 986
+  Prev Hop : 172.16.26.85
+  OutLabel : TenGigabitEthernet0/1/1, 1079
+  Next Hop : 172.16.20.13
+  RSVP Signalling Info:
+       Src 172.16.30.42, Dst 172.17.22.54, Tun_Id 500, Tun_Instance 6732
+    RSVP Path Info:
+      My Address: 172.16.20.14
+      Explicit Route: 172.16.20.13 172.16.22.77 172.17.22.52* 172.18.8.241
+      Record   Route:  172.16.26.85 172.16.26.81
+      Tspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.22.78 172.18.9.162 172.18.8.242 172.18.8.241
+      Fspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+
+LSP Tunnel RO-ESC-CER1_t600 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/8, 249
+  Prev Hop : 172.16.26.85
+  OutLabel : TenGigabitEthernet0/1/1, 606
+  Next Hop : 172.16.20.13
+  RSVP Signalling Info:
+       Src 172.16.30.42, Dst 172.17.22.54, Tun_Id 600, Tun_Instance 1755
+    RSVP Path Info:
+      My Address: 172.16.20.14
+      Explicit Route: 172.16.20.13 172.16.22.77 172.17.22.52* 172.18.8.241
+      Record   Route:  172.16.26.85 172.16.26.81
+      Tspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.3(606) 172.16.22.78(606)
+                       172.16.30.34(1309) 172.18.9.162(1309)
+                       172.17.22.52(1429) 172.18.8.242(1429)
+                       172.17.22.54(3) 172.18.8.241(3)
+      Fspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+
+LSP Tunnel FRR_LP_SPE-PLI is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/2/0, implicit-null
+  Prev Hop : 172.16.26.74
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.16.30.43, Dst 172.16.30.4, Tun_Id 1, Tun_Instance 4621
+    RSVP Path Info:
+      My Address: 172.16.30.4
+      Explicit Route:  NONE
+      Record   Route:   NONE
+      Tspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+
+LSP Tunnel IBW-CR-EMERGENCIA is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/0, 576
+  Prev Hop : 172.16.26.77
+  OutLabel : TenGigabitEthernet0/4/1, 1194
+  Next Hop : 172.16.20.109
+  RSVP Signalling Info:
+       Src 172.16.30.43, Dst 172.16.30.1, Tun_Id 50616, Tun_Instance 4345
+    RSVP Path Info:
+      My Address: 172.16.20.110
+      Explicit Route: 172.16.20.109 172.16.30.3 172.16.20.73 172.16.20.42
+      Record   Route:  172.16.26.77
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.3(1194) 172.16.20.74(1194)
+                       172.16.30.5(411) 172.16.20.41(411)
+                       172.16.30.1(3) 172.16.20.42(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel CRCRRSL10001977I|TELECABLE|INTER.ND_SP   is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/8, 409
+  Prev Hop : 172.16.26.85
+  OutLabel : TenGigabitEthernet0/4/1, 732
+  Next Hop : 172.16.20.109
+  RSVP Signalling Info:
+       Src 172.16.30.43, Dst 172.16.20.65, Tun_Id 50624, Tun_Instance 6361
+    RSVP Path Info:
+      My Address: 172.16.20.110
+      Explicit Route: 172.16.20.109 172.16.27.17* 172.16.27.2 172.16.20.65
+      Record   Route:  172.16.26.85
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.3(732) 172.16.20.57(732)
+                       172.16.30.1(3) 172.16.20.58(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel FRR_LP_VPL-PLI is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/1/1, implicit-null
+  Prev Hop : 172.16.20.13
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.16.30.44, Dst 172.16.30.4, Tun_Id 2, Tun_Instance 1987
+    RSVP Path Info:
+      My Address: 172.16.30.4
+      Explicit Route:  NONE
+      Record   Route:   NONE
+      Tspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+
+LSP Tunnel ORANGE_PACR is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/2/0, 374
+  Prev Hop : 172.16.26.74
+  OutLabel : TenGigabitEthernet0/0/8, 425
+  Next Hop : 172.16.26.85
+  RSVP Signalling Info:
+       Src 172.16.30.44, Dst 172.19.24.25, Tun_Id 50702, Tun_Instance 971
+    RSVP Path Info:
+      My Address: 172.16.26.86
+      Explicit Route: 172.16.26.85 172.19.24.25*
+      Record   Route:  172.16.26.74
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.18.25.242 172.18.24.13 172.18.24.18 172.18.24.10
+                       172.20.96.161 172.20.96.162
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel FRR_LP_HUB-ESC is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/1/1, 479
+  Prev Hop : 172.16.20.13
+  OutLabel : TenGigabitEthernet0/0/8, 1341
+  Next Hop : 172.16.26.85
+  RSVP Signalling Info:
+       Src 172.16.30.45, Dst 172.16.30.42, Tun_Id 2, Tun_Instance 3833
+    RSVP Path Info:
+      My Address: 172.16.26.86
+      Explicit Route: 172.16.26.85 172.16.26.81 172.16.30.42
+      Record   Route:   NONE
+      Tspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+
+LSP Tunnel NAP-ORG1_TO_ESC-AGG1 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/1/1, 484
+  Prev Hop : 172.16.20.13
+  OutLabel : TenGigabitEthernet0/3/0, 1142
+  Next Hop : 172.16.26.77
+  FRR OutLabel : Tunnel1, 1142
+  RSVP Signalling Info:
+       Src 172.17.20.2, Dst 172.19.24.1, Tun_Id 50613, Tun_Instance 833
+    RSVP Path Info:
+      My Address: 172.16.26.78
+      Explicit Route: 172.16.26.77 172.16.26.81 172.17.26.1* 172.19.24.1*
+      Record   Route:  172.16.20.13 172.16.20.9 172.16.20.46 172.18.0.14
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.43(1142) 172.16.26.82(1142)
+                       172.16.30.42(881) 172.18.25.134(881)
+                       172.17.26.1(674) 172.20.96.1(674)
+                       172.19.24.1(3) 172.20.96.2(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel NAP-ORG1_TO_ESC-AGG1 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/1/1, 880
+  Prev Hop : 172.16.20.13
+  OutLabel : TenGigabitEthernet0/3/0, 1041
+  Next Hop : 172.16.26.77
+  FRR OutLabel : Tunnel1, 1041
+  RSVP Signalling Info:
+       Src 172.17.20.2, Dst 172.19.24.1, Tun_Id 50614, Tun_Instance 3601
+    RSVP Path Info:
+      My Address: 172.16.26.78
+      Explicit Route: 172.16.26.77 172.16.26.81 172.17.26.1* 172.19.24.1*
+      Record   Route:  172.16.20.13 172.16.20.9 172.16.20.46 172.18.0.14
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.43(1041) 172.16.26.82(1041)
+                       172.16.30.42(719) 172.18.25.134(719)
+                       172.17.26.1(133) 172.20.96.1(133)
+                       172.19.24.1(3) 172.20.96.2(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel COLL-BT_CR is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/1/1, 571
+  Prev Hop : 172.16.20.13
+  OutLabel : TenGigabitEthernet0/3/0, 361
+  Next Hop : 172.16.26.77
+  FRR OutLabel : Tunnel1, 361
+  RSVP Signalling Info:
+       Src 172.17.20.5, Dst 172.19.24.20, Tun_Id 50620, Tun_Instance 8958
+    RSVP Path Info:
+      My Address: 172.16.26.78
+      Explicit Route: 172.16.26.77 172.19.24.20*
+      Record   Route:  172.16.20.13 172.16.20.9 172.16.20.46 172.18.0.34
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.43(361) 172.18.25.242(361)
+                       172.17.26.2(798) 172.20.97.57(798)
+                       172.19.24.20(3) 172.20.97.58(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel GUY-CORE-RO-GUY-CER1-RO-PCO-CMY1-RO-CGA-CMY1-RO-SPE-CER1-SPE-AS is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/4/1, 279
+  Prev Hop : 172.16.20.109
+  OutLabel : TenGigabitEthernet0/3/0, 757
+  Next Hop : 172.16.26.77
+  RSVP Signalling Info:
+       Src 172.17.22.53, Dst 172.19.24.20, Tun_Id 9111, Tun_Instance 820
+    RSVP Path Info:
+      My Address: 172.16.26.78
+      Explicit Route: 172.16.26.77 172.17.26.2* 172.20.97.58
+      Record   Route:  172.16.20.109 172.16.22.77 172.18.9.246 172.18.8.237
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.18.25.242 172.20.97.57 172.20.97.58
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel TE GUY-BT LP is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/4/1, 814
+  Prev Hop : 172.16.20.109
+  OutLabel : TenGigabitEthernet0/3/0, 1073
+  Next Hop : 172.16.26.77
+  FRR OutLabel : Tunnel1, 1073
+  RSVP Signalling Info:
+       Src 172.17.22.53, Dst 172.19.24.20, Tun_Id 51206, Tun_Instance 3412
+    RSVP Path Info:
+      My Address: 172.16.26.78
+      Explicit Route: 172.16.26.77 172.16.26.157 172.17.26.1* 172.18.24.2
+                      172.20.97.58
+      Record   Route:  172.16.20.109 172.16.22.77 172.18.9.246 172.18.8.237
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.43(1073) 172.16.26.158(1073)
+                       172.16.30.42(925) 172.18.25.134(925)
+                       172.17.26.1(1133) 172.18.24.1(1133)
+                       172.17.26.2(140) 172.20.97.57(140)
+                       172.19.24.20(3) 172.20.97.58(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel RO-GUY-AGG4_t500 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/1/1, 17
+  Prev Hop : 172.16.20.13
+  OutLabel : TenGigabitEthernet0/0/8, 1410
+  Next Hop : 172.16.26.85
+  RSVP Signalling Info:
+       Src 172.17.22.54, Dst 172.16.30.42, Tun_Id 500, Tun_Instance 7001
+    RSVP Path Info:
+      My Address: 172.16.26.86
+      Explicit Route: 172.16.26.85 172.16.30.42*
+      Record   Route:  172.16.20.13 172.16.22.77 172.18.9.246 172.18.8.241
+      Tspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.26.82 172.16.26.81
+      Fspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+
+LSP Tunnel RO-GUY-AGG4_t600 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/1/1, 444
+  Prev Hop : 172.16.20.13
+  OutLabel : TenGigabitEthernet0/0/8, 1072
+  Next Hop : 172.16.26.85
+  FRR OutLabel : Tunnel1, 1072
+  RSVP Signalling Info:
+       Src 172.17.22.54, Dst 172.16.30.42, Tun_Id 600, Tun_Instance 7363
+    RSVP Path Info:
+      My Address: 172.16.26.86
+      Explicit Route: 172.16.26.85 172.16.30.42*
+      Record   Route:  172.16.20.13 172.16.22.77 172.18.9.246 172.18.8.241
+      Tspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.43(1072) 172.16.26.82(1072)
+                       172.16.30.42(3) 172.16.26.81(3)
+      Fspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+
+LSP Tunnel Tunel Paypal - BT is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/4/1, 240
+  Prev Hop : 172.16.20.109
+  OutLabel : TenGigabitEthernet0/3/0, 1541
+  Next Hop : 172.16.26.77
+  RSVP Signalling Info:
+       Src 172.17.22.54, Dst 172.17.26.1, Tun_Id 5026, Tun_Instance 7253
+    RSVP Path Info:
+      My Address: 172.16.26.78
+      Explicit Route: 172.16.26.77 172.16.26.81 172.17.26.1*
+      Record   Route:  172.16.20.109 172.16.22.77 172.18.9.246 172.18.8.241
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.26.82 172.18.25.134 172.18.25.133
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel PAYPAL_AT&T_GTCO04510019-Path_1 is signalled, connection is down
+
+LSP Tunnel PAYPAL_AT&T_GTCO04510019-Path_5 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/1/1, 3078
+  Prev Hop : 172.16.20.13
+  OutLabel : TenGigabitEthernet0/0/8, 1069
+  Next Hop : 172.16.26.85
+  RSVP Signalling Info:
+       Src 172.17.22.54, Dst 172.17.28.192, Tun_Id 50215, Tun_Instance 1614
+    RSVP Path Info:
+      My Address: 172.16.26.86
+      Explicit Route: 172.16.26.85 172.16.26.81 172.16.28.14
+      Record   Route:  172.16.20.13 172.16.22.77 172.18.9.246 172.18.8.241
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.26.82 172.16.28.13 172.16.28.14
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+LSP Tunnel PAYPAL-2-AT&T-GTPA04510022-Path_1 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/4/1, 2613
+  Prev Hop : 172.16.20.109
+  OutLabel : TenGigabitEthernet0/3/1, 604
+  Next Hop : 172.16.27.17
+  RSVP Signalling Info:
+       Src 172.17.22.54, Dst 172.17.27.5, Tun_Id 50711, Tun_Instance 7160
+    RSVP Path Info:
+      My Address: 172.16.27.18
+      Explicit Route: 172.16.27.17 172.17.27.1* 172.18.28.2 172.18.28.6
+                      172.18.28.10 172.18.28.14
+      Record   Route:  172.16.20.109 172.16.22.73 172.18.9.246 172.18.8.241
+      Tspec: ave rate=1000000 kbits, burst=1000 bytes, peak rate=1000000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.18.28.65 172.18.28.1 172.18.28.5 172.18.28.9
+                       172.18.28.13 172.18.28.14
+      Fspec: ave rate=1000000 kbits, burst=1000 bytes, peak rate=1000000 kbits
+
+LSP Tunnel BTL_BENQUE-NAP_BZUS02590002-Path_7 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/8, 1003
+  Prev Hop : 172.16.26.85
+  OutLabel : TenGigabitEthernet0/3/1, 1520
+  Next Hop : 172.16.27.17
+  RSVP Signalling Info:
+       Src 172.17.22.60, Dst 172.16.30.10, Tun_Id 50117, Tun_Instance 6057
+    RSVP Path Info:
+      My Address: 172.16.27.18
+      Explicit Route: 172.16.27.17 172.16.27.6 172.16.20.65 172.16.20.41
+                      172.16.20.46
+      Record   Route:  172.16.26.85 172.16.25.9 172.16.24.1 172.16.23.9
+                       172.16.22.65 172.18.9.246 172.18.8.30 172.18.8.38
+                       172.18.8.42 172.18.8.46 172.18.8.54 172.18.8.58
+                       172.18.8.62 172.18.8.66 172.18.8.253 172.18.9.34
+      Tspec: ave rate=200000 kbits, burst=1000 bytes, peak rate=200000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.27.5 172.16.20.66 172.16.20.42 172.16.20.45
+                       172.16.20.46
+      Fspec: ave rate=200000 kbits, burst=1000 bytes, peak rate=200000 kbits
+
+LSP Tunnel RO-RVT-AGG1-RO-GUY-CORSP3-RO-GUY-CER1-RO-BET-CER1-RO-TGU-CER-RO is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/1/1, 404
+  Prev Hop : 172.16.20.13
+  OutLabel : TenGigabitEthernet0/2/0, 1121
+  Next Hop : 172.16.26.74
+  RSVP Signalling Info:
+       Src 172.17.22.69, Dst 172.19.24.20, Tun_Id 9112, Tun_Instance 764
+    RSVP Path Info:
+      My Address: 172.16.26.73
+      Explicit Route: 172.16.26.74 172.16.27.9 172.16.26.89 172.17.26.1*
+                      172.18.24.10 172.18.24.18 172.18.24.13 172.20.97.58
+      Record   Route:  172.16.20.13 172.16.24.69 172.16.23.9 172.16.22.69
+                       172.18.9.161 172.18.9.129 172.18.9.181
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.27.10 172.16.26.90 172.18.25.134 172.18.24.9
+                       172.18.24.17 172.18.24.14 172.20.97.57 172.20.97.58
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel TACTIC-ESTOR-RIODULCE-BARRIOS-RO-PCO-CMY1-RO-CGA-CMY1-RO-SPE-CE is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/4/1, 657
+  Prev Hop : 172.16.20.109
+  OutLabel : TenGigabitEthernet0/3/0, 1071
+  Next Hop : 172.16.26.77
+  RSVP Signalling Info:
+       Src 172.17.22.69, Dst 172.19.24.20, Tun_Id 9116, Tun_Instance 8959
+    RSVP Path Info:
+      My Address: 172.16.26.78
+      Explicit Route: 172.16.26.77 172.17.26.2* 172.20.97.58
+      Record   Route:  172.16.20.109 172.16.27.25 172.18.9.121 172.18.8.77
+                       172.18.9.93 172.18.9.89 172.18.9.85 172.18.9.81
+                       172.18.8.53 172.18.8.45 172.18.8.41 172.18.8.37
+                       172.18.9.134
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.18.25.242 172.20.97.57 172.20.97.58
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel RO-PET-AGG1_t50206 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/4/1, 1355
+  Prev Hop : 172.16.20.109
+  OutLabel : TenGigabitEthernet0/3/1, 1127
+  Next Hop : 172.16.27.17
+  RSVP Signalling Info:
+       Src 172.17.22.69, Dst 172.19.24.20, Tun_Id 50206, Tun_Instance 4630
+    RSVP Path Info:
+      My Address: 172.16.27.18
+      Explicit Route: 172.16.27.17 172.16.27.13 172.16.26.65 172.19.24.20*
+      Record   Route:  172.16.20.109 172.16.22.77 172.18.9.161 172.18.9.129
+                       172.18.9.181
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.27.14 172.16.26.66 172.18.24.65 172.18.24.9
+                       172.18.24.17 172.18.24.14 172.20.97.57 172.20.97.58
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel PAYPAL_AT&T_GTCO04510019-Path_6 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/1/1, 160
+  Prev Hop : 172.16.20.13
+  OutLabel : TenGigabitEthernet0/3/1, 183
+  Next Hop : 172.16.27.17
+  RSVP Signalling Info:
+       Src 172.17.22.79, Dst 172.17.28.192, Tun_Id 50217, Tun_Instance 2456
+    RSVP Path Info:
+      My Address: 172.16.27.18
+      Explicit Route: 172.16.27.17 172.16.27.9 172.16.26.89 172.16.28.14
+      Record   Route:  172.16.20.13 172.16.24.69 172.16.23.9 172.16.22.65
+                       172.16.22.2 172.18.9.2 172.18.10.62
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.27.10 172.16.26.90 172.16.28.13 172.16.28.14
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+LSP Tunnel PAYPAL_AT&T_GTCO04510019-Path_4 is signalled, connection is down
+
+LSP Tunnel PAYPAL-2-AT&T-GTPA04510022-Path_6 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/0, 1376
+  Prev Hop : 172.16.26.77
+  OutLabel : TenGigabitEthernet0/3/1, 953
+  Next Hop : 172.16.27.17
+  RSVP Signalling Info:
+       Src 172.17.22.79, Dst 172.17.27.5, Tun_Id 50716, Tun_Instance 1937
+    RSVP Path Info:
+      My Address: 172.16.27.18
+      Explicit Route: 172.16.27.17 172.17.27.1* 172.18.28.2 172.18.28.6
+                      172.18.28.10 172.18.28.14
+      Record   Route:  172.16.26.77 172.16.25.13 172.16.24.1 172.16.23.9
+                       172.16.22.65 172.16.22.2 172.18.9.2 172.18.10.62
+      Tspec: ave rate=1000000 kbits, burst=1000 bytes, peak rate=1000000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.18.28.65 172.18.28.1 172.18.28.5 172.18.28.9
+                       172.18.28.13 172.18.28.14
+      Fspec: ave rate=1000000 kbits, burst=1000 bytes, peak rate=1000000 kbits
+
+LSP Tunnel Sykes-AT&T-PASV00540132-Path_1 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/0, 887
+  Prev Hop : 172.16.26.77
+  OutLabel : TenGigabitEthernet0/3/1, 1782
+  Next Hop : 172.16.27.17
+  RSVP Signalling Info:
+       Src 172.17.23.1, Dst 172.17.27.5, Tun_Id 50751, Tun_Instance 8549
+    RSVP Path Info:
+      My Address: 172.16.27.18
+      Explicit Route: 172.16.27.17 172.17.27.1* 172.18.28.2 172.18.28.6
+                      172.18.28.10 172.18.28.14
+      Record   Route:  172.16.26.77 172.16.25.13 172.16.24.1 172.16.23.9
+                       172.16.23.73 172.18.12.29
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.18.28.65 172.18.28.1 172.18.28.5 172.18.28.9
+                       172.18.28.13 172.18.28.14
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+LSP Tunnel Sykes-AT&T-PASV00540132-Path_3 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/1/1, 927
+  Prev Hop : 172.16.20.13
+  OutLabel : TenGigabitEthernet0/2/0, 1630
+  Next Hop : 172.16.26.74
+  RSVP Signalling Info:
+       Src 172.17.23.1, Dst 172.17.27.5, Tun_Id 50753, Tun_Instance 7069
+    RSVP Path Info:
+      My Address: 172.16.26.73
+      Explicit Route: 172.16.26.74 172.16.27.9 172.17.27.6* 172.18.28.17
+      Record   Route:  172.16.20.13 172.16.22.73 172.16.22.2 172.16.22.10
+                       172.18.12.29
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.27.10 172.18.28.69 172.18.28.18 172.18.28.17
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+LSP Tunnel Sykes-AT&T-PASV00540132-Path_10 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/0, 1371
+  Prev Hop : 172.16.26.77
+  OutLabel : TenGigabitEthernet0/2/0, 1426
+  Next Hop : 172.16.26.74
+  RSVP Signalling Info:
+       Src 172.17.23.1, Dst 172.17.27.5, Tun_Id 50760, Tun_Instance 3184
+    RSVP Path Info:
+      My Address: 172.16.26.73
+      Explicit Route: 172.16.26.74 172.17.27.1* 172.18.28.2 172.18.28.6
+                      172.18.28.10 172.18.28.14
+      Record   Route:  172.16.26.77 172.16.26.157 172.16.25.65 172.16.25.17
+                       172.16.24.74 172.16.24.81 172.16.23.77 172.18.12.29
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.18.28.65 172.18.28.1 172.18.28.5 172.18.28.9
+                       172.18.28.13 172.18.28.14
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+LSP Tunnel SMA-SV_ATT-IDC-PA is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/1/1, 354
+  Prev Hop : 172.16.20.13
+  OutLabel : TenGigabitEthernet0/3/1, 767
+  Next Hop : 172.16.27.17
+  FRR OutLabel : Tunnel2, 767
+  RSVP Signalling Info:
+       Src 172.17.23.2, Dst 172.19.28.21, Tun_Id 50715, Tun_Instance 6375
+    RSVP Path Info:
+      My Address: 172.16.27.18
+      Explicit Route: 172.16.27.17 172.19.28.21*
+      Record   Route:  172.16.20.13 172.16.22.73 172.16.22.70 172.18.12.33
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.44(767) 172.18.28.65(767)
+                       172.17.27.1(755) 172.18.28.234(755)
+                       172.17.27.51(263) 172.18.28.229(263)
+                       172.17.27.7(602) 172.18.28.22(602)
+                       172.17.27.6(46) 172.18.28.18(46)
+                       172.17.27.5(258) 172.20.112.157(258)
+                       172.19.28.21(3) 172.20.112.158(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel Sykes-AT&T-PASV00540132-Path_6 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/4/1, 1386
+  Prev Hop : 172.16.20.109
+  OutLabel : TenGigabitEthernet0/3/1, 1024
+  Next Hop : 172.16.27.17
+  RSVP Signalling Info:
+       Src 172.17.23.2, Dst 172.17.27.5, Tun_Id 50756, Tun_Instance 8642
+    RSVP Path Info:
+      My Address: 172.16.27.18
+      Explicit Route: 172.16.27.17 172.17.27.1* 172.18.28.2 172.18.28.6
+                      172.18.28.10 172.18.28.14
+      Record   Route:  172.16.20.109 172.16.22.73 172.16.22.66 172.18.12.33
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.18.28.65 172.18.28.1 172.18.28.5 172.18.28.9
+                       172.18.28.13 172.18.28.14
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+LSP Tunnel Tunel Paypal - BT is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/0, 302
+  Prev Hop : 172.16.26.77
+  OutLabel : TenGigabitEthernet0/4/1, 1044
+  Next Hop : 172.16.20.109
+  RSVP Signalling Info:
+       Src 172.17.26.1, Dst 172.17.22.54, Tun_Id 5026, Tun_Instance 2605
+    RSVP Path Info:
+      My Address: 172.16.20.110
+      Explicit Route: 172.16.20.109 172.16.22.77 172.17.22.54*
+      Record   Route:  172.16.26.77 172.16.26.81 172.18.24.66
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.22.78 172.18.9.162 172.18.8.242 172.18.8.241
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel RSL#1_CR_NAP is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/0, 708
+  Prev Hop : 172.16.26.77
+  OutLabel : TenGigabitEthernet0/4/1, 2611
+  Next Hop : 172.16.20.109
+  RSVP Signalling Info:
+       Src 172.17.26.1, Dst 172.16.30.1, Tun_Id 50610, Tun_Instance 7467
+    RSVP Path Info:
+      My Address: 172.16.20.110
+      Explicit Route: 172.16.20.109 172.16.30.3 172.16.20.73 172.16.20.42
+      Record   Route:  172.16.26.77 172.16.26.81 172.18.25.133
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.3(2611) 172.16.20.74(2611)
+                       172.16.30.5(126) 172.16.20.41(126)
+                       172.16.30.1(3) 172.16.20.42(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel ATT_HP_BR_CR-PA is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/8, 272
+  Prev Hop : 172.16.26.85
+  OutLabel : TenGigabitEthernet0/2/0, 798
+  Next Hop : 172.16.26.74
+  FRR OutLabel : Tunnel2, 798
+  RSVP Signalling Info:
+       Src 172.17.26.3, Dst 172.19.28.41, Tun_Id 50603, Tun_Instance 1603
+    RSVP Path Info:
+      My Address: 172.16.26.73
+      Explicit Route: 172.16.26.74 172.16.27.9 172.19.28.41*
+      Record   Route:  172.16.26.85 172.18.25.241 172.18.24.14
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.44(798) 172.16.27.10(798)
+                       172.16.30.45(1804) 172.18.28.69(1804)
+                       172.17.27.6(716) 172.18.28.18(716)
+                       172.17.27.5(413) 172.20.113.57(413)
+                       172.19.28.41(3) 172.20.113.58(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel IDC-BRL is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/8, 613
+  Prev Hop : 172.16.26.85
+  OutLabel : TenGigabitEthernet0/2/0, 1190
+  Next Hop : 172.16.26.74
+  RSVP Signalling Info:
+       Src 172.17.26.3, Dst 172.17.27.5, Tun_Id 50701, Tun_Instance 3552
+    RSVP Path Info:
+      My Address: 172.16.26.73
+      Explicit Route: 172.16.26.74 172.17.27.5*
+      Record   Route:  172.16.26.85 172.18.25.241 172.18.24.14
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.18.28.65 172.18.28.234 172.18.28.229 172.18.28.22
+                       172.18.28.18 172.18.28.17
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel PA_BRL-CR-ATT-IDC is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/0, 478
+  Prev Hop : 172.16.26.77
+  OutLabel : TenGigabitEthernet0/1/1, 1470
+  Next Hop : 172.16.20.13
+  RSVP Signalling Info:
+       Src 172.17.26.3, Dst 172.19.28.21, Tun_Id 50711, Tun_Instance 6947
+    RSVP Path Info:
+      My Address: 172.16.20.14
+      Explicit Route: 172.16.20.13 172.16.20.58 172.16.20.66 172.16.27.1
+                      172.19.28.21*
+      Record   Route:  172.16.26.77 172.18.25.241 172.18.24.14
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.20.57 172.16.20.65 172.16.27.2 172.18.28.65
+                       172.18.28.234 172.18.28.229 172.18.28.22 172.18.28.18
+                       172.20.112.157 172.20.112.158
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel SW-ESC-AGG1_t1506 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/8, 807
+  Prev Hop : 172.16.26.85
+  OutLabel : TenGigabitEthernet0/1/1, 333
+  Next Hop : 172.16.20.13
+  RSVP Signalling Info:
+       Src 172.17.26.8, Dst 172.16.30.1, Tun_Id 1506, Tun_Instance 2999
+    RSVP Path Info:
+      My Address: 172.16.20.14
+      Explicit Route: 172.16.20.13 172.16.20.58
+      Record   Route:  172.16.26.85 172.16.26.81 172.18.24.66 172.18.24.57
+                       172.18.24.34
+      Tspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.3(333) 172.16.20.57(333)
+                       172.16.30.1(3) 172.16.20.58(3)
+      Fspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+
+LSP Tunnel Tunel BACARDI is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/0, 974
+  Prev Hop : 172.16.26.77
+  OutLabel : TenGigabitEthernet0/3/1, 874
+  Next Hop : 172.16.27.17
+  RSVP Signalling Info:
+       Src 172.17.26.10, Dst 172.19.28.21, Tun_Id 56572, Tun_Instance 3154
+    RSVP Path Info:
+      My Address: 172.16.27.18
+      Explicit Route: 172.16.27.17 172.19.28.21*
+      Record   Route:  172.16.26.77 172.18.25.241 172.18.24.14 172.18.24.49
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.18.28.65 172.18.28.234 172.18.28.229 172.18.28.22
+                       172.18.28.18 172.20.112.157 172.20.112.158
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel ATT_HP_ZFA_CR-CO is signalled, connection is down
+
+LSP Tunnel CRPA00550060 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/8, 1110
+  Prev Hop : 172.16.26.85
+  OutLabel : TenGigabitEthernet0/2/0, 201
+  Next Hop : 172.16.26.74
+  FRR OutLabel : Tunnel2, 201
+  RSVP Signalling Info:
+       Src 172.17.26.26, Dst 172.19.28.41, Tun_Id 50604, Tun_Instance 290
+    RSVP Path Info:
+      My Address: 172.16.26.73
+      Explicit Route: 172.16.26.74 172.16.27.9 172.19.28.41*
+      Record   Route:  172.16.26.85 172.18.25.241 172.18.24.14 172.18.25.86
+                       172.18.26.6
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.44(201) 172.16.27.10(201)
+                       172.16.30.45(781) 172.18.28.69(781)
+                       172.17.27.6(830) 172.18.28.18(830)
+                       172.17.27.5(90) 172.20.113.57(90)
+                       172.19.28.41(3) 172.20.113.58(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel BEL-CR_ATT-IDC-PA is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/0, 1269
+  Prev Hop : 172.16.26.77
+  OutLabel : TenGigabitEthernet0/1/1, 1024
+  Next Hop : 172.16.20.13
+  RSVP Signalling Info:
+       Src 172.17.26.26, Dst 172.19.28.21, Tun_Id 50706, Tun_Instance 672
+    RSVP Path Info:
+      My Address: 172.16.20.14
+      Explicit Route: 172.16.20.13 172.16.20.58 172.16.20.66 172.16.27.1
+                      172.19.28.21*
+      Record   Route:  172.16.26.77 172.18.25.241 172.18.24.14 172.18.25.86
+                       172.18.26.6
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.20.57 172.16.20.65 172.16.27.2 172.18.28.65
+                       172.18.28.234 172.18.28.229 172.18.28.22 172.18.28.18
+                       172.20.112.157 172.20.112.158
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel PAYPAL-2-AT&T-GTPA04510022-Path_1 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/1, 173
+  Prev Hop : 172.16.27.17
+  OutLabel : TenGigabitEthernet0/4/1, 1219
+  Next Hop : 172.16.20.109
+  RSVP Signalling Info:
+       Src 172.17.27.5, Dst 172.17.22.54, Tun_Id 50711, Tun_Instance 8124
+    RSVP Path Info:
+      My Address: 172.16.20.110
+      Explicit Route: 172.16.20.109 172.16.22.73 172.17.22.52* 172.18.8.241
+      Record   Route:  172.16.27.17 172.18.28.66 172.18.28.2 172.18.28.6
+                       172.18.28.10 172.18.28.14
+      Tspec: ave rate=1000000 kbits, burst=1000 bytes, peak rate=1000000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.22.74 172.18.9.162 172.18.8.242 172.18.8.241
+      Fspec: ave rate=1000000 kbits, burst=1000 bytes, peak rate=1000000 kbits
+
+LSP Tunnel PAYPAL-2-AT&T-GTPA04510022-Path_6 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/1, 793
+  Prev Hop : 172.16.27.17
+  OutLabel : TenGigabitEthernet0/3/0, 86
+  Next Hop : 172.16.26.77
+  RSVP Signalling Info:
+       Src 172.17.27.5, Dst 172.17.22.79, Tun_Id 50716, Tun_Instance 2603
+    RSVP Path Info:
+      My Address: 172.16.26.78
+      Explicit Route: 172.16.26.77 172.16.25.13 172.16.24.1 172.16.23.9
+                      172.16.22.65 172.16.22.2 172.17.22.100* 172.18.10.62
+      Record   Route:  172.16.27.17 172.18.28.66 172.18.28.2 172.18.28.6
+                       172.18.28.10 172.18.28.14
+      Tspec: ave rate=1000000 kbits, burst=1000 bytes, peak rate=1000000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.25.14 172.16.24.2 172.16.23.10 172.16.22.66
+                       172.16.22.1 172.18.9.1 172.18.10.61 172.18.10.62
+      Fspec: ave rate=1000000 kbits, burst=1000 bytes, peak rate=1000000 kbits
+
+LSP Tunnel Sykes-AT&T-PASV00540132-Path_1 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/1, 520
+  Prev Hop : 172.16.27.17
+  OutLabel : TenGigabitEthernet0/3/0, 1139
+  Next Hop : 172.16.26.77
+  RSVP Signalling Info:
+       Src 172.17.27.5, Dst 172.17.23.1, Tun_Id 50751, Tun_Instance 7278
+    RSVP Path Info:
+      My Address: 172.16.26.78
+      Explicit Route: 172.16.26.77 172.16.25.13 172.16.24.1 172.16.23.9
+                      172.16.23.73 172.17.23.1*
+      Record   Route:  172.16.27.17 172.18.28.66 172.18.28.2 172.18.28.6
+                       172.18.28.10 172.18.28.14
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.25.14 172.16.24.2 172.16.23.10 172.16.23.74
+                       172.18.12.30 172.18.12.29
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+LSP Tunnel Sykes-AT&T-PASV00540132-Path_3 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/2/0, 483
+  Prev Hop : 172.16.26.74
+  OutLabel : TenGigabitEthernet0/1/1, 1491
+  Next Hop : 172.16.20.13
+  RSVP Signalling Info:
+       Src 172.17.27.5, Dst 172.17.23.1, Tun_Id 50753, Tun_Instance 1487
+    RSVP Path Info:
+      My Address: 172.16.20.14
+      Explicit Route: 172.16.20.13 172.16.22.73 172.16.22.2 172.16.22.10
+                      172.17.23.1*
+      Record   Route:  172.16.26.74 172.16.27.9 172.18.28.70 172.18.28.17
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.22.74 172.16.22.1 172.16.22.9 172.18.12.30
+                       172.18.12.29
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+LSP Tunnel Sykes-AT&T-PASV00540132-Path_6 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/1, 3090
+  Prev Hop : 172.16.27.17
+  OutLabel : TenGigabitEthernet0/4/1, 233
+  Next Hop : 172.16.20.109
+  RSVP Signalling Info:
+       Src 172.17.27.5, Dst 172.17.23.2, Tun_Id 50756, Tun_Instance 9523
+    RSVP Path Info:
+      My Address: 172.16.20.110
+      Explicit Route: 172.16.20.109 172.16.22.73 172.16.22.66 172.17.23.2*
+      Record   Route:  172.16.27.17 172.18.28.66 172.18.28.2 172.18.28.6
+                       172.18.28.10 172.18.28.14
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.22.74 172.16.22.65 172.18.12.34 172.18.12.33
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+LSP Tunnel Sykes-AT&T-PASV00540132-Path_10 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/2/0, 82
+  Prev Hop : 172.16.26.74
+  OutLabel : TenGigabitEthernet0/3/0, 63
+  Next Hop : 172.16.26.77
+  RSVP Signalling Info:
+       Src 172.17.27.5, Dst 172.17.23.1, Tun_Id 50760, Tun_Instance 1072
+    RSVP Path Info:
+      My Address: 172.16.26.78
+      Explicit Route: 172.16.26.77 172.16.26.157 172.16.25.65 172.16.25.17
+                      172.16.24.74 172.16.24.81 172.16.23.77 172.17.23.1*
+      Record   Route:  172.16.26.74 172.18.28.66 172.18.28.2 172.18.28.6
+                       172.18.28.10 172.18.28.14
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.26.158 172.16.25.66 172.16.25.18 172.16.24.73
+                       172.16.24.82 172.16.23.78 172.18.12.30 172.18.12.29
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+LSP Tunnel HUB-ASR903-C1_t5 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/1, 232
+  Prev Hop : 172.16.27.17
+  OutLabel : TenGigabitEthernet0/1/1, 456
+  Next Hop : 172.16.20.13
+  RSVP Signalling Info:
+       Src 172.17.27.6, Dst 172.16.30.34, Tun_Id 5, Tun_Instance 446
+    RSVP Path Info:
+      My Address: 172.16.20.14
+      Explicit Route: 172.16.20.13 172.16.22.77
+      Record   Route:   NONE
+      Tspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.3(456) 172.16.30.34(3)
+      Fspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+
+LSP Tunnel HUB-ASR903-C1_t50 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/1, 100
+  Prev Hop : 172.16.27.17
+  OutLabel : TenGigabitEthernet0/1/1, 283
+  Next Hop : 172.16.20.13
+  RSVP Signalling Info:
+       Src 172.17.27.6, Dst 172.16.30.34, Tun_Id 50, Tun_Instance 7553
+    RSVP Path Info:
+      My Address: 172.16.20.14
+      Explicit Route: 172.16.20.13 172.16.22.77
+      Record   Route:   NONE
+      Tspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+
+LSP Tunnel FRR_LP_INT_SUBA-ESC is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/1/1, 629
+  Prev Hop : 172.16.20.13
+  OutLabel : TenGigabitEthernet0/0/8, 1107
+  Next Hop : 172.16.26.85
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.16.30.42, Tun_Id 4, Tun_Instance 6762
+    RSVP Path Info:
+      My Address: 172.16.26.86
+      Explicit Route: 172.16.26.85 172.16.26.157 172.16.30.42
+      Record   Route:   NONE
+      Tspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+
+LSP Tunnel PAYPAL_AT&T_GTCO04510019-Path_5 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/8, 1095
+  Prev Hop : 172.16.26.85
+  OutLabel : TenGigabitEthernet0/1/1, 385
+  Next Hop : 172.16.20.13
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.22.54, Tun_Id 50215, Tun_Instance 5775
+    RSVP Path Info:
+      My Address: 172.16.20.14
+      Explicit Route: 172.16.20.13 172.16.22.77 172.17.22.52* 172.18.8.241
+      Record   Route:  172.16.26.85 172.16.26.81 172.16.28.14
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.22.78 172.18.9.162 172.18.8.242 172.18.8.241
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+LSP Tunnel PAYPAL_AT&T_GTCO04510019-Path_6 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/1, 1120
+  Prev Hop : 172.16.27.17
+  OutLabel : TenGigabitEthernet0/1/1, 1279
+  Next Hop : 172.16.20.13
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.22.79, Tun_Id 50217, Tun_Instance 6866
+    RSVP Path Info:
+      My Address: 172.16.20.14
+      Explicit Route: 172.16.20.13 172.16.24.69 172.16.23.9 172.16.22.65
+                      172.16.22.2 172.17.22.100* 172.18.10.62
+      Record   Route:  172.16.27.17 172.16.27.9 172.16.26.89 172.16.28.14
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.24.70 172.16.23.10 172.16.22.66 172.16.22.1
+                       172.18.10.46 172.18.10.61 172.18.10.62
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+LSP Tunnel ATT-IDC-PA_SMA-SV is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/8, 138
+  Prev Hop : 172.16.26.85
+  OutLabel : TenGigabitEthernet0/1/1, 175
+  Next Hop : 172.16.20.13
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.19.12.1, Tun_Id 50311, Tun_Instance 5561
+    RSVP Path Info:
+      My Address: 172.16.20.14
+      Explicit Route: 172.16.20.13 172.16.22.73 172.16.22.6 172.16.22.18
+                      172.19.12.1*
+      Record   Route:  172.16.26.85 172.16.26.81 172.16.28.14
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.3(175) 172.16.22.74(175)
+                       172.16.30.34(989) 172.16.22.5(989)
+                       172.16.30.35(1056) 172.16.22.17(1056)
+                       172.16.30.36(750) 172.18.12.30(750)
+                       172.17.23.1(1058) 172.18.12.62(1058)
+                       172.17.23.11(1493) 172.18.12.65(1493)
+                       172.19.12.1(3) 172.18.12.66(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel SMA-ROCOINTERNALSUBAA is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/1/1, 3072
+  Prev Hop : 172.16.20.13
+  OutLabel : TenGigabitEthernet0/0/8, 1363
+  Next Hop : 172.16.26.85
+  FRR OutLabel : Tunnel1, 1363
+  RSVP Signalling Info:
+       Src 172.19.12.1, Dst 172.17.28.192, Tun_Id 50311, Tun_Instance 7571
+    RSVP Path Info:
+      My Address: 172.16.26.86
+      Explicit Route: 172.16.26.85 172.16.26.81 172.16.28.14
+      Record   Route:  172.16.20.13 172.16.22.73 172.16.22.6 172.16.22.18
+                       172.18.12.29 172.18.12.61 172.18.12.66
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.43(1363) 172.16.26.82(1363)
+                       172.16.30.42(2615) 172.16.28.13(2615)
+                       172.17.28.192(3) 172.16.28.14(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel YOTA_SUM_CRZ is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/0, 546
+  Prev Hop : 172.16.26.77
+  OutLabel : TenGigabitEthernet0/2/0, 1701
+  Next Hop : 172.16.26.74
+  RSVP Signalling Info:
+       Src 172.19.20.29, Dst 172.16.30.9, Tun_Id 50505, Tun_Instance 9683
+    RSVP Path Info:
+      My Address: 172.16.26.73
+      Explicit Route: 172.16.26.74 172.16.27.6
+      Record   Route:  172.16.26.77 172.16.26.81 172.16.25.65 172.18.20.130
+                       172.18.20.2 172.20.80.58
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.27.5 172.16.27.6
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel BT_NI-COLL is signalled, connection is down
+
+LSP Tunnel AGG1-ROCOINTERNALSUBAA-MONITOREO is signalled, connection is down
+
+LSP Tunnel ESC-AGG1_TO_NAP-ACC2 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/8, 881
+  Prev Hop : 172.16.26.85
+  OutLabel : TenGigabitEthernet0/1/1, 2066
+  Next Hop : 172.16.20.13
+  RSVP Signalling Info:
+       Src 172.19.24.1, Dst 172.16.30.10, Tun_Id 50610, Tun_Instance 3258
+    RSVP Path Info:
+      My Address: 172.16.20.14
+      Explicit Route: 172.16.20.13 172.16.20.9 172.16.20.46
+      Record   Route:  172.16.26.85 172.18.25.241 172.18.24.14 172.18.24.22
+                       172.18.24.5 172.20.96.2
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.20.10 172.16.20.45 172.16.20.46
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel SUBA-INT_EZU-ASR920-AGG1 is signalled, connection is down
+
+LSP Tunnel ESC-AGG1_TO_NAP-ACC2 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/8, 339
+  Prev Hop : 172.16.26.85
+  OutLabel : TenGigabitEthernet0/1/1, 536
+  Next Hop : 172.16.20.13
+  RSVP Signalling Info:
+       Src 172.19.24.1, Dst 172.16.30.10, Tun_Id 50612, Tun_Instance 7052
+    RSVP Path Info:
+      My Address: 172.16.20.14
+      Explicit Route: 172.16.20.13 172.16.20.9 172.16.20.46
+      Record   Route:  172.16.26.85 172.18.25.241 172.18.24.14 172.18.24.22
+                       172.18.24.5 172.20.96.2
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.20.10 172.16.20.45 172.16.20.46
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel ESC-AGG1_TO_NAP-ORG1 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/0, 671
+  Prev Hop : 172.16.26.77
+  OutLabel : TenGigabitEthernet0/4/1, 55
+  Next Hop : 172.16.20.109
+  RSVP Signalling Info:
+       Src 172.19.24.1, Dst 172.17.20.2, Tun_Id 50614, Tun_Instance 9252
+    RSVP Path Info:
+      My Address: 172.16.20.110
+      Explicit Route: 172.16.20.109 172.16.20.9 172.16.20.46 172.17.20.2*
+      Record   Route:  172.16.26.77 172.16.26.157 172.18.25.133 172.20.96.2
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.3(55) 172.16.20.10(55)
+                       172.16.30.5(961) 172.16.20.45(961)
+                       172.16.30.10(978) 172.18.0.13(978)
+                       172.17.20.2(3) 172.18.0.14(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel RSL-CR-NAP is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/0, 555
+  Prev Hop : 172.16.26.77
+  OutLabel : TenGigabitEthernet0/4/1, 1241
+  Next Hop : 172.16.20.109
+  RSVP Signalling Info:
+       Src 172.19.24.1, Dst 172.16.30.1, Tun_Id 50621, Tun_Instance 6527
+    RSVP Path Info:
+      My Address: 172.16.20.110
+      Explicit Route: 172.16.20.109 172.16.30.3 172.16.20.73 172.16.20.42
+      Record   Route:  172.16.26.77 172.16.26.81 172.18.24.66 172.20.96.2
+      Tspec: ave rate=3000 kbits, burst=1000 bytes, peak rate=3000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.20.74 172.16.20.41 172.16.20.42
+      Fspec: ave rate=3000 kbits, burst=1000 bytes, peak rate=3000 kbits
+
+LSP Tunnel Prueba JDSU TE is signalled, connection is down
+
+LSP Tunnel GUY-CORE-RO-GUY-CER1-RO-PCO-CMY1-RO-CGA-CMY1-RO-SPE-CER1-SPE-AS is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/0, 189
+  Prev Hop : 172.16.26.77
+  OutLabel : TenGigabitEthernet0/4/1, 1220
+  Next Hop : 172.16.20.109
+  RSVP Signalling Info:
+       Src 172.19.24.20, Dst 172.17.22.53, Tun_Id 9111, Tun_Instance 5105
+    RSVP Path Info:
+      My Address: 172.16.20.110
+      Explicit Route: 172.16.20.109 172.16.22.77 172.17.22.52* 172.18.8.237
+      Record   Route:  172.16.26.77 172.18.25.241 172.20.97.58
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.22.78 172.18.9.162 172.18.8.238 172.18.8.237
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel RO-RVT-AGG1-RO-GUY-CORSP3-RO-GUY-CER1-RO-BET-CER1-RO-TGU-CER-RO is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/2/0, 615
+  Prev Hop : 172.16.26.74
+  OutLabel : TenGigabitEthernet0/1/1, 160
+  Next Hop : 172.16.20.13
+  RSVP Signalling Info:
+       Src 172.19.24.20, Dst 172.17.22.69, Tun_Id 9112, Tun_Instance 6956
+    RSVP Path Info:
+      My Address: 172.16.20.14
+      Explicit Route: 172.16.20.13 172.16.24.69 172.16.23.9 172.16.22.69
+                      172.17.22.52* 172.18.9.129 172.18.9.181
+      Record   Route:  172.16.26.74 172.16.27.9 172.16.26.89 172.18.24.66
+                       172.18.24.10 172.18.24.18 172.18.24.13 172.20.97.58
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.24.70 172.16.23.10 172.16.22.70 172.18.9.162
+                       172.18.9.130 172.18.9.182 172.18.9.181
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel TACTIC-ESTOR-RIODULCE-BARRIOS-RO-PCO-CMY1-RO-CGA-CMY1-RO-SPE-CE is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/0, 47
+  Prev Hop : 172.16.26.77
+  OutLabel : TenGigabitEthernet0/4/1, 800
+  Next Hop : 172.16.20.109
+  RSVP Signalling Info:
+       Src 172.19.24.20, Dst 172.17.22.69, Tun_Id 9116, Tun_Instance 8371
+    RSVP Path Info:
+      My Address: 172.16.20.110
+      Explicit Route: 172.16.20.109 172.16.30.50* 172.18.9.121* 172.17.22.19*
+                      172.17.22.67* 172.17.22.66* 172.17.22.65* 172.17.22.14*
+                      172.17.22.12* 172.17.22.11* 172.17.22.10* 172.17.22.100*
+                      172.18.9.134
+      Record   Route:  172.16.26.77 172.18.25.241 172.20.97.58
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.27.26 172.18.9.122 172.18.8.78 172.18.9.94
+                       172.18.9.90 172.18.9.86 172.18.9.82 172.18.8.54
+                       172.18.8.46 172.18.8.42 172.18.8.38 172.18.9.133
+                       172.18.9.134
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel TE BT-PET is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/1, 932
+  Prev Hop : 172.16.27.17
+  OutLabel : TenGigabitEthernet0/4/1, 449
+  Next Hop : 172.16.20.109
+  RSVP Signalling Info:
+       Src 172.19.24.20, Dst 172.17.22.69, Tun_Id 50206, Tun_Instance 3057
+    RSVP Path Info:
+      My Address: 172.16.20.110
+      Explicit Route: 172.16.20.109 172.16.22.77 172.17.22.69*
+      Record   Route:  172.16.27.17 172.16.27.13 172.16.26.65 172.18.24.66
+                       172.18.24.6 172.18.24.21 172.18.24.13 172.20.97.58
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.22.78 172.18.9.162 172.18.9.130 172.18.9.182
+                       172.18.9.181
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel BT_CR-COLL is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/0, 1122
+  Prev Hop : 172.16.26.77
+  OutLabel : TenGigabitEthernet0/4/1, 616
+  Next Hop : 172.16.20.109
+  RSVP Signalling Info:
+       Src 172.19.24.20, Dst 172.17.20.5, Tun_Id 50620, Tun_Instance 9415
+    RSVP Path Info:
+      My Address: 172.16.20.110
+      Explicit Route: 172.16.20.109 172.16.20.9 172.16.20.46 172.17.20.5*
+      Record   Route:  172.16.26.77 172.18.25.241 172.20.97.58
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.3(616) 172.16.20.10(616)
+                       172.16.30.5(412) 172.16.20.45(412)
+                       172.16.30.10(1073) 172.18.0.33(1073)
+                       172.17.20.5(3) 172.18.0.34(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel BT_CR-COLL is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/0, 1225
+  Prev Hop : 172.16.26.77
+  OutLabel : TenGigabitEthernet0/3/1, 1281
+  Next Hop : 172.16.27.17
+  RSVP Signalling Info:
+       Src 172.19.24.20, Dst 172.17.20.5, Tun_Id 50620, Tun_Instance 9518
+    RSVP Path Info:
+      My Address: 172.16.27.18
+      Explicit Route: 172.16.27.17 172.16.27.2 172.16.20.65 172.16.20.41
+                      172.16.20.46 172.17.20.5* 172.16.26.81 172.16.26.66
+                      172.16.27.10
+      Record   Route:  172.16.26.77 172.18.25.241 172.20.97.58
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.27.1 172.16.20.66 172.16.20.42 172.16.20.45
+                       172.18.0.33 172.18.0.34
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel TRANSDATELECOM-NAP-1.2G is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/8, 565
+  Prev Hop : 172.16.26.85
+  OutLabel : TenGigabitEthernet0/1/1, 459
+  Next Hop : 172.16.20.13
+  RSVP Signalling Info:
+       Src 172.19.24.24, Dst 172.16.30.1, Tun_Id 50614, Tun_Instance 6870
+    RSVP Path Info:
+      My Address: 172.16.20.14
+      Explicit Route: 172.16.20.13 172.16.20.58
+      Record   Route:  172.16.26.85 172.18.24.70 172.18.24.14 172.18.25.170
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.3(459) 172.16.20.57(459)
+                       172.16.30.1(3) 172.16.20.58(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel ORANGE_CRPA is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/8, 283
+  Prev Hop : 172.16.26.85
+  OutLabel : TenGigabitEthernet0/2/0, implicit-null
+  Next Hop : 172.16.26.74
+  RSVP Signalling Info:
+       Src 172.19.24.25, Dst 172.16.30.44, Tun_Id 50702, Tun_Instance 1794
+    RSVP Path Info:
+      My Address: 172.16.26.73
+      Explicit Route: 172.16.26.74
+      Record   Route:  172.16.26.85 172.18.25.241 172.18.24.14 172.18.24.17
+                       172.18.24.9 172.20.96.162
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.26.74
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel description TE_CRUS03890065_AMERICAN_DATA is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/8, 556
+  Prev Hop : 172.16.26.85
+  OutLabel : TenGigabitEthernet0/1/1, 973
+  Next Hop : 172.16.20.13
+  RSVP Signalling Info:
+       Src 172.19.24.44, Dst 172.16.30.5, Tun_Id 50620, Tun_Instance 1630
+    RSVP Path Info:
+      My Address: 172.16.20.14
+      Explicit Route: 172.16.20.13 172.16.20.73
+      Record   Route:  172.16.26.85 172.18.25.241 172.20.97.46 172.20.97.85
+      Tspec: ave rate=2252800 kbits, burst=1000 bytes, peak rate=2252800 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.3(973) 172.16.20.74(973)
+                       172.16.30.5(3) 172.16.20.73(3)
+      Fspec: ave rate=2252800 kbits, burst=1000 bytes, peak rate=2252800 kbits
+
+LSP Tunnel ATT-IDC-PA_BEL-CR is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/1/1, 510
+  Prev Hop : 172.16.20.13
+  OutLabel : TenGigabitEthernet0/3/0, 306
+  Next Hop : 172.16.26.77
+  RSVP Signalling Info:
+       Src 172.19.28.21, Dst 172.17.26.26, Tun_Id 50706, Tun_Instance 3096
+    RSVP Path Info:
+      My Address: 172.16.26.78
+      Explicit Route: 172.16.26.77 172.17.26.26*
+      Record   Route:  172.16.20.13 172.16.20.58 172.16.20.66 172.16.27.1
+                       172.18.28.66 172.18.28.233 172.18.28.230 172.18.28.21
+                       172.18.28.17 172.20.112.158
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.18.25.242 172.18.24.13 172.18.25.85 172.18.26.5
+                       172.18.26.6
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel ATT-IDC-PA_BRL-CR is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/1/1, 459
+  Prev Hop : 172.16.20.13
+  OutLabel : TenGigabitEthernet0/3/0, 1141
+  Next Hop : 172.16.26.77
+  RSVP Signalling Info:
+       Src 172.19.28.21, Dst 172.17.26.3, Tun_Id 50711, Tun_Instance 3500
+    RSVP Path Info:
+      My Address: 172.16.26.78
+      Explicit Route: 172.16.26.77 172.17.26.3*
+      Record   Route:  172.16.20.13 172.16.20.58 172.16.20.66 172.16.27.1
+                       172.18.28.66 172.18.28.233 172.18.28.230 172.18.28.21
+                       172.18.28.17 172.20.112.158
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.18.25.242 172.18.24.13 172.18.24.14
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel ATT-IDC-PA_BET-SV is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/2/0, 876
+  Prev Hop : 172.16.26.74
+  OutLabel : TenGigabitEthernet0/1/1, 276
+  Next Hop : 172.16.20.13
+  RSVP Signalling Info:
+       Src 172.19.28.21, Dst 172.17.23.2, Tun_Id 50715, Tun_Instance 4462
+    RSVP Path Info:
+      My Address: 172.16.20.14
+      Explicit Route: 172.16.20.13 172.16.22.77 172.16.22.66 172.18.12.33*
+      Record   Route:  172.16.26.74 172.16.27.9 172.18.28.70 172.18.28.17
+                       172.20.112.162
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.3(276) 172.16.22.78(276)
+                       172.16.30.34(1294) 172.16.22.65(1294)
+                       172.16.30.37(249) 172.18.12.34(249)
+                       172.17.23.2(3) 172.18.12.33(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel Tunel BACARDI is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/3/1, 380
+  Prev Hop : 172.16.27.17
+  OutLabel : TenGigabitEthernet0/3/0, 944
+  Next Hop : 172.16.26.77
+  RSVP Signalling Info:
+       Src 172.19.28.21, Dst 172.17.26.10, Tun_Id 56572, Tun_Instance 3799
+    RSVP Path Info:
+      My Address: 172.16.26.78
+      Explicit Route: 172.16.26.77 172.17.26.10*
+      Record   Route:  172.16.27.17 172.18.28.66 172.18.28.233 172.18.28.230
+                       172.18.28.21 172.18.28.17 172.20.112.158
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.18.25.242 172.18.24.13 172.18.24.50 172.18.24.49
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel ATT_HP_BR_CR-PA is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/2/0, 3087
+  Prev Hop : 172.16.26.74
+  OutLabel : TenGigabitEthernet0/0/8, 461
+  Next Hop : 172.16.26.85
+  FRR OutLabel : Tunnel1, 461
+  RSVP Signalling Info:
+       Src 172.19.28.41, Dst 172.17.26.3, Tun_Id 50603, Tun_Instance 472
+    RSVP Path Info:
+      My Address: 172.16.26.86
+      Explicit Route: 172.16.26.85 172.16.26.85* 172.18.24.70 172.18.24.14
+      Record   Route:  172.16.26.74 172.16.27.9 172.18.28.70 172.18.28.17
+                       172.20.113.58
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.43(461) 172.18.24.69(461)
+                       172.17.26.2(990) 172.18.24.13(990)
+                       172.17.26.3(3) 172.18.24.14(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel ATT_HP_BR_CR-PA is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/2/0, 435
+  Prev Hop : 172.16.26.74
+  OutLabel : TenGigabitEthernet0/0/8, 875
+  Next Hop : 172.16.26.85
+  FRR OutLabel : Tunnel1, 875
+  RSVP Signalling Info:
+       Src 172.19.28.41, Dst 172.17.26.26, Tun_Id 50604, Tun_Instance 958
+    RSVP Path Info:
+      My Address: 172.16.26.86
+      Explicit Route: 172.16.26.85 172.16.26.85* 172.18.24.70 172.18.24.14
+                      172.18.25.86
+      Record   Route:  172.16.26.74 172.16.27.9 172.18.28.70 172.18.28.17
+                       172.20.113.58
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.43(875) 172.18.24.69(875)
+                       172.17.26.2(1598) 172.18.24.13(1598)
+                       172.17.26.3(1491) 172.18.25.85(1491)
+                       172.17.26.73(1087) 172.18.26.5(1087)
+                       172.17.26.26(3) 172.18.26.6(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel ATT_HP_BR_CR-PA is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/2/0, 419
+  Prev Hop : 172.16.26.74
+  OutLabel : TenGigabitEthernet0/0/8, 166
+  Next Hop : 172.16.26.85
+  FRR OutLabel : Tunnel1, 166
+  RSVP Signalling Info:
+       Src 172.19.28.41, Dst 172.17.26.39, Tun_Id 50605, Tun_Instance 8972
+    RSVP Path Info:
+      My Address: 172.16.26.86
+      Explicit Route: 172.16.26.85 172.16.26.85* 172.18.24.70 172.18.24.1
+                      172.18.24.57 172.18.24.54 172.17.26.39
+      Record   Route:  172.16.26.74 172.16.27.9 172.18.28.70 172.18.28.17
+                       172.20.113.58
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.43(166) 172.18.24.69(166)
+                       172.17.26.2(1157) 172.18.24.2(1157)
+                       172.17.26.1(1358) 172.18.24.58(1358)
+                       172.17.26.44(130) 172.18.24.53(130)
+                       172.17.26.10(187) 172.18.25.45(187)
+                       172.17.26.39(3) 172.18.25.46(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+P2MP TUNNELS:
+
+P2MP SUB-LSPS:
+RO-CGA-CMY1-CerroGarron#
