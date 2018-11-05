@@ -1487,3 +1487,47 @@ class CiscoIOS(Parent):
             if (snmp_value.find(pattern) > -1):
                 return plattform_name
         self.plattform = plattform
+
+    def set_physical_interfaces(self):
+        interfaces_prefixes = ["Te", "Gi", "Hu"]
+        command = 'show interfaces description  | e "\\\\." '
+        connection = self.connect()
+        show_interfaces = self.send_command(connection, command, self.hostname, timeout=5)
+        interfaces = {}
+        for interface in show_interfaces.split("\n"):
+            interface_data = {}
+            try:
+
+                interface_split = re.sub(" +", " ", interface).split(" ")
+                interface_data["index"] = interface_split[0]
+                interface_data["status"] = interface_split[1]
+                interface_data["protocol"] = interface_split[2]
+                interface_data["description"] = "_".join(interface_split[3:])
+                for prefix in interfaces_prefixes:
+                    if (interface_data["index"].find(prefix) > -1):
+                        interfaces[interface_data["index"]] = interface_data
+            except:
+                pass
+        self.physical_interfaces = interfaces
+        return (self.physical_interfaces)
+
+    def set_inventory(self):
+        command = "show inventory"
+        connection = self.connect()
+        show_inventory = self.send_command(connection, command, self.hostname, timeout=5)
+        parts = []
+        for inventory_item in show_inventory.split("\n\n"):
+            try:
+                part = {}
+
+                lines = inventory_item.replace('"', "").split("\n")
+                part["local_name"] = lines[0].split(",")[0].replace("NAME:", "")
+                part["description"] = lines[0].split(",")[1].replace("DESCR:", "")
+                part["PID"] = lines[1].split(",")[0].replace("PID:", "").replace(" ", "")
+                part["VID"] = lines[1].split(",")[1].replace("VID:", "").replace(" ", "")
+                part["SN"] = lines[1].split(",")[2].replace("SN:", "").replace(" ", "")
+                parts.append(part)
+            except (Exception):
+                pass
+        self.inventory = parts
+        return self.inventory

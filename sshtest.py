@@ -48,8 +48,13 @@ master = Master(password="zekto2014-", username="descuderor")
 claro.set_master(password="zekto2014-", username="descuderor")
 
 # print(test.set_arp_list(vrf="INTERNET"))
-test2 = CiscoIOS("172.16.30.42", "IOS", master)
-test2.set_all_interfaces()
+test2 = CiscoXR("172.16.30.248", "IOS", master)
+pprint(test2.set_physical_interfaces())
+# devices = claro.load_devices_csv("host.csv")
+
+# for device in devices:
+#    pprint(device.set_inventory())
+
 # test2.set_jump_gateway("10.250.55.3","telnet")
 # arp_list =test2.set_arp_list()
 # pprint(arp_list)

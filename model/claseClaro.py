@@ -827,6 +827,19 @@ class Claro:
             if (mtu_flag_bad):
                 print(adj)
 
+    def load_devices_csv(self, filename):
+        open_file = open(filename, "r").read()
+        devices = []
+        for device_line in open_file.split("\n")[1:]:
+            device_data = device_line.split(",")
+            platform = device_data[4]
+            ip = device_data[3]
+            hostname = device_data[0]
+            device = eval(platform)(ip, hostname, self.master)
+
+            device.platform = platform
+            devices.append(device)
+        return devices
 
 """
     def display_qos_ipp(self):
