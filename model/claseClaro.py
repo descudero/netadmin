@@ -827,6 +827,12 @@ class Claro:
             if (mtu_flag_bad):
                 print(adj)
 
+    def asr_mod_inventory(self):
+        devices = self.load_devices_csv("host.csv")
+        self.excute_methods(devices=devices, methods={"set_inventory": {}, "set_physical_interfaces": {}})
+        for device in devices:
+            pprint(device.inventory)
+
     def load_devices_csv(self, filename):
         open_file = open(filename, "r").read()
         devices = []

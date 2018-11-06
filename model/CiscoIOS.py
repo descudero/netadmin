@@ -1,4 +1,5 @@
 import ipaddress
+from model.cisco_part import cisco_part
 import re
 import sqlite3 as sql
 import shelve
@@ -1516,18 +1517,33 @@ class CiscoIOS(Parent):
         connection = self.connect()
         show_inventory = self.send_command(connection, command, self.hostname, timeout=5)
         parts = []
+        connection.disconnect()
         for inventory_item in show_inventory.split("\n\n"):
             try:
                 part = {}
 
                 lines = inventory_item.replace('"', "").split("\n")
-                part["local_name"] = lines[0].split(",")[0].replace("NAME:", "")
+                if (len(lines) > 2):
+                    lines = lines[1:]
+                part["local_name"] = lines[0].split(",")[0].replace("NAME:", "") \
+                    .replace(" module", "") \
+                    .replace(" mau ", " ") \
+                    .replace("/CPU0", "") \
+                    .replace("TenGigE", "") \
+                    .replace("GigE", "") \
+                    .replace(" ", "")
                 part["description"] = lines[0].split(",")[1].replace("DESCR:", "")
                 part["PID"] = lines[1].split(",")[0].replace("PID:", "").replace(" ", "")
                 part["VID"] = lines[1].split(",")[1].replace("VID:", "").replace(" ", "")
+
                 part["SN"] = lines[1].split(",")[2].replace("SN:", "").replace(" ", "")
                 parts.append(part)
             except (Exception):
                 pass
         self.inventory = parts
         return self.inventory
+
+    def set_inventory_tree(self):
+        self.set_inventory()
+        cisco_part.create_inventory_tree(self, self.inventory)
+        return self.inventory_tree
