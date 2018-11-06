@@ -1,5 +1,5 @@
 import ipaddress
-from model.cisco_part import cisco_part
+from model.CiscoPart import CiscoPart
 import re
 import sqlite3 as sql
 import shelve
@@ -1545,5 +1545,5 @@ class CiscoIOS(Parent):
 
     def set_inventory_tree(self):
         self.set_inventory()
-        cisco_part.create_inventory_tree(self, self.inventory)
+        CiscoPart.create_inventory_tree(self, self.inventory)
         return self.inventory_tree
