@@ -49,11 +49,11 @@ claro.set_master(password="zekto2014-", username="descuderor")
 
 # print(test.set_arp_list(vrf="INTERNET"))
 test2 = CiscoXR("172.16.30.244", "IOS", master)
-test2.set_inventory_tree()
-for index, part in test2.inventory_tree.items():
-    print(part)
-    part.print_children()
+#test2.set_chassis()
+#print(test2.chassis)
+#test2.chassis.print_children()
 
+test2.draw_device_hardware(x=0,y=0)
 # pprint(test2.set_physical_interfaces())
 # devices = claro.load_devices_csv("host.csv")
 # claro.asr_mod_inventory()

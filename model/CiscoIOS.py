@@ -15,6 +15,7 @@ from model.InterfaceIOS import InterfaceIOS
 from multiping import multi_ping
 from pprint import pprint
 from pysnmp.entity.rfc3413.oneliner import cmdgen
+from tkinter import *
 
 
 class CiscoIOS(Parent):
@@ -1513,37 +1514,57 @@ class CiscoIOS(Parent):
         return (self.physical_interfaces)
 
     def set_inventory(self):
-        command = "show inventory"
+        command = "admin show inventory"
         connection = self.connect()
-        show_inventory = self.send_command(connection, command, self.hostname, timeout=5)
+        admin_show_inventory = self.send_command(connection, command, self.hostname, timeout=5)[:-1]
         parts = []
         connection.disconnect()
-        for inventory_item in show_inventory.split("\n\n"):
+        for inventory_item in admin_show_inventory.split("\n\n"):
             try:
                 part = {}
 
                 lines = inventory_item.replace('"', "").split("\n")
+
                 if (len(lines) > 2):
-                    lines = lines[1:]
+                    lines = lines[len(lines)-2:]
                 part["local_name"] = lines[0].split(",")[0].replace("NAME:", "") \
                     .replace(" module", "") \
                     .replace(" mau ", " ") \
                     .replace("/CPU0", "") \
                     .replace("TenGigE", "") \
                     .replace("GigE", "") \
-                    .replace(" ", "")
+                    .replace("/SP","")
                 part["description"] = lines[0].split(",")[1].replace("DESCR:", "")
                 part["PID"] = lines[1].split(",")[0].replace("PID:", "").replace(" ", "")
                 part["VID"] = lines[1].split(",")[1].replace("VID:", "").replace(" ", "")
 
                 part["SN"] = lines[1].split(",")[2].replace("SN:", "").replace(" ", "")
                 parts.append(part)
+                pprint(parts)
             except (Exception):
+                print("no able to add line")
+                print(lines)
                 pass
         self.inventory = parts
-        return self.inventory
+        return parts
 
-    def set_inventory_tree(self):
-        self.set_inventory()
-        CiscoPart.create_inventory_tree(self, self.inventory)
-        return self.inventory_tree
+    def set_chassis(self):
+        CiscoPart.create_inventory_tree(self,self.set_inventory())
+        return self.chassis
+
+
+    def draw_device_hardware(self,x,y):
+        self.set_chassis()
+        print(self.chassis.get_slots_summary(side=0))
+        master = Tk()
+
+        canvas = Canvas(master, width=300, height=1000)
+        self.chassis.draw_in_canvas(canvas,x,y,recursive=True)
+        canvas.pack()
+
+
+
+        mainloop()
+
+
+
