@@ -40,7 +40,7 @@ class Claro:
         self.max_threads = 50
         self.not_connected_devices = []
 
-    def tabulate_mpls_traffic_tunnels(self, ip_lsr_router):
+    def tabulate_mpls_traffic_tunnels(self, ip_lsr_router, filename="test_mpls"):
         lsr = CiscoIOS(master=self.master, ip=ip_lsr_router, display_name="lsr")
         lsr.set_mpls_te_tunnels()
         pprint(len(lsr.mpls_te_tunnels))
@@ -92,7 +92,7 @@ class Claro:
 
         # pprint(mpls_te_data)
 
-        self.save_to_excel_dict(mpls_te_data, "test_mpls2")
+        self.save_to_excel_dict(mpls_te_data, filename)
 
     def dict_to_list(self, dict_input):
         data_list = []

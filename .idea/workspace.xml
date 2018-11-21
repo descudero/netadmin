@@ -4,18 +4,13 @@
     <bookmark url="file://$PROJECT_DIR$/sshtest.py" line="124" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< Updated upstream
     <list default="true" id="462384ac-2f64-47a0-b6d2-b16ff1b36497" name="Default" comment="first3">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boip.log" beforeDir="false" afterPath="$PROJECT_DIR$/boip.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sshtest.py" beforeDir="false" afterPath="$PROJECT_DIR$/sshtest.py" afterDir="false" />
-=======
-    <list default="true" id="462384ac-2f64-47a0-b6d2-b16ff1b36497" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/te_tunnel_tabulate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/groups.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/groups.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/boip.log" beforeDir="false" afterPath="$PROJECT_DIR$/boip.log" afterDir="false" />
->>>>>>> Stashed changes
+      <change beforePath="$PROJECT_DIR$/model/claseClaro.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/claseClaro.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,45 +25,34 @@
     <session id="1641016877">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-<<<<<<< Updated upstream
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="2" />
-=======
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
->>>>>>> Stashed changes
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-<<<<<<< Updated upstream
-          <entry key="py" value="2" />
-=======
-          <entry key="py" value="1" />
->>>>>>> Stashed changes
+          <entry key="py" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-<<<<<<< Updated upstream
-          <entry key="Python" value="2" />
+          <entry key="Python" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="11" />
-          <entry key="py" value="4409" />
+          <entry key="py" value="4513" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="13" />
-          <entry key="Python" value="4409" />
-=======
-          <entry key="Python" value="1" />
->>>>>>> Stashed changes
+          <entry key="Python" value="4513" />
         </counts>
       </usages-collector>
     </session>
@@ -78,19 +62,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-<<<<<<< Updated upstream
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sshtest.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1449">
-              <caret line="69" column="54" selection-start-line="69" selection-start-column="54" selection-end-line="69" selection-end-column="54" />
-=======
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sshtest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="50" column="47" lean-forward="true" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
->>>>>>> Stashed changes
+            <state>
+              <caret selection-end-line="12" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/te_tunnel_tabulate.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -99,83 +87,49 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-<<<<<<< Updated upstream
         <entry file="file://$PROJECT_DIR$/model/L3Path.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1869">
               <caret line="95" selection-start-line="95" selection-end-line="95" />
-=======
-        <entry file="file://$PROJECT_DIR$/config/Master.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="1483" column="12" selection-start-line="1483" selection-start-column="12" selection-end-line="1483" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
->>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-<<<<<<< Updated upstream
         <entry file="file://$PROJECT_DIR$/print_bgp_sumary_table.py">
-=======
-        <entry file="file://$PROJECT_DIR$/core.py">
->>>>>>> Stashed changes
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
+            <state relative-caret-position="322">
               <caret line="31" selection-start-line="31" selection-end-line="35" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-<<<<<<< Updated upstream
         <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pysnmp/entity/rfc3413/oneliner/cmdgen.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3444">
               <caret line="169" column="14" selection-start-line="169" selection-start-column="8" selection-end-line="169" selection-end-column="14" />
-=======
-        <entry file="file://$PROJECT_DIR$/model/L3Path.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1958">
-              <caret line="95" selection-start-line="95" selection-end-line="95" />
->>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-<<<<<<< Updated upstream
         <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3990">
-              <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-=======
-        <entry file="file://$PROJECT_DIR$/print_bgp_sumary_table.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
->>>>>>> Stashed changes
+            <state relative-caret-position="1671">
+              <caret line="1548" column="20" lean-forward="true" selection-start-line="1548" selection-start-column="20" selection-end-line="1548" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/claseClaro.py">
-<<<<<<< Updated upstream
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="186">
+              <caret line="68" column="43" lean-forward="true" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -186,19 +140,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/CiscoPart.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
-=======
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="271" column="36" selection-start-line="271" selection-start-column="35" selection-end-line="271" selection-end-column="36" />
->>>>>>> Stashed changes
-              <folding>
-                <marker date="1541463432272" expanded="true" signature="59:64" ph="..." />
-                <marker date="1541463432272" expanded="true" signature="457:640" ph="..." />
-                <marker date="1541463432272" expanded="true" signature="666:794" ph="..." />
-                <marker date="1541463432272" expanded="true" signature="2477:2482" ph="..." />
-              </folding>
+            <state relative-caret-position="3676">
+              <caret line="192" column="26" selection-start-line="192" selection-start-column="26" selection-end-line="192" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -218,8 +161,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/InterfaceIOS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+            <state relative-caret-position="1995">
+              <caret line="95" selection-start-line="95" selection-end-line="95" />
             </state>
           </provider>
         </entry>
@@ -235,8 +178,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>def send_command</find>
-      <find>tabulate_mpls_traffic_tunnels</find>
       <find>pprint</find>
       <find>set_serv</find>
       <find>tabu</find>
@@ -265,6 +206,8 @@
       <find>file</find>
       <find>re.sub(&quot; +&quot;, &quot; &quot;, xconnect).split(&quot; &quot;)</find>
       <find>meth</find>
+      <find>tunn</find>
+      <find>invento</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -273,7 +216,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/getPrefixIpp.py" />
         <option value="$PROJECT_DIR$/internetIpp.py" />
         <option value="$PROJECT_DIR$/RoutePolicy.py" />
         <option value="$USER_HOME$/Dropbox/trabajo/BackOffice/Scripts/source/runGui.py" />
@@ -318,16 +260,13 @@
         <option value="$PROJECT_DIR$/core.py" />
         <option value="$PROJECT_DIR$/model/L3Path.py" />
         <option value="$PROJECT_DIR$/print_bgp_sumary_table.py" />
-<<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/model/CiscoXR.py" />
-        <option value="$PROJECT_DIR$/model/claseClaro.py" />
         <option value="$PROJECT_DIR$/model/cisco_part.py" />
         <option value="$PROJECT_DIR$/model/CiscoPart.py" />
         <option value="$PROJECT_DIR$/model/CiscoIOS.py" />
         <option value="$PROJECT_DIR$/sshtest.py" />
-=======
         <option value="$PROJECT_DIR$/model/claseClaro.py" />
->>>>>>> Stashed changes
+        <option value="$PROJECT_DIR$/te_tunnel_tabulate.py" />
       </list>
     </option>
   </component>
@@ -343,40 +282,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
               <item name="netadmin" type="462c0819:PsiDirectoryNode" />
-<<<<<<< Updated upstream
-=======
-            </path>
-            <path>
-              <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
->>>>>>> Stashed changes
-            </path>
-            <path>
-              <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netadmin" type="462c0819:PsiDirectoryNode" />
-<<<<<<< Updated upstream
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-=======
-              <item name="recursive1.01" type="462c0819:PsiDirectoryNode" />
->>>>>>> Stashed changes
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/descudero/PycharmProjects/groups/CiscoXR.py&#10;:&#9;null&#9;null" />
-    <property name="last_opened_file_path" value="$USER_HOME$/pba.txt" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sshtest.py" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -391,6 +313,124 @@
       <recent name="C:\Users\descudero\PycharmProjects\groups" />
     </key>
   </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/groups.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/misc.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/boip.log</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/model/CiscoIOS.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/model/CiscoPart.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/sshtest.py</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/graph_test.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/multireplace.py</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -403,7 +443,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.sshtest">
+  <component name="RunManager" selected="Python.te_tunnel_tabulate">
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -465,27 +505,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Master" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="groups" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/config" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/config/Master.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="claseClaro" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="groups" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -535,12 +554,33 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\descudero\Anaconda3\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sshtest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="te_tunnel_tabulate" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="groups" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\descudero\Anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/te_tunnel_tabulate.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -555,15 +595,11 @@
       <item itemvalue="Python.mpls_te_csv" />
       <item itemvalue="Python.CiscoIOS" />
       <item itemvalue="Python.InterfaceIOS" />
-      <item itemvalue="Python.Master" />
+      <item itemvalue="Python.te_tunnel_tabulate" />
     </list>
     <recent_temporary>
       <list>
-<<<<<<< Updated upstream
-=======
-        <item itemvalue="Python.Master" />
-        <item itemvalue="Python.InterfaceIOS" />
->>>>>>> Stashed changes
+        <item itemvalue="Python.te_tunnel_tabulate" />
         <item itemvalue="Python.CiscoIOS" />
         <item itemvalue="Python.InterfaceIOS" />
         <item itemvalue="Python.mpls_te_csv" />
@@ -617,7 +653,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541463433414</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="first3">
+      <created>1541546761826</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1541546761826</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -630,43 +673,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-6" y="-6" width="1293" height="693" extended-state="6" />
+    <editor active="true" />
     <layout>
-<<<<<<< Updated upstream
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.488" weight="0.16136725" />
-=======
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.488" visible="true" weight="0.16122234" />
->>>>>>> Stashed changes
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.488" visible="true" weight="0.16136725" />
       <window_info id="Structure" order="1" sideWeight="0.512" side_tool="true" weight="0.16136725" />
       <window_info id="Favorites" order="2" sideWeight="0.50133336" side_tool="true" weight="0.16136725" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4977778" weight="0.32938755" />
-<<<<<<< Updated upstream
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7806041" visible="true" weight="0.2669039" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7806041" weight="0.2669039" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49875" weight="0.57295376" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32740214" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50158983" side_tool="true" weight="0.3291815" />
       <window_info anchor="bottom" id="Python Console" order="8" sideWeight="0.49875" weight="0.3291592" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32740214" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32740214" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49841017" weight="0.3291815" />
-=======
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7813991" weight="0.39696312" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49875" weight="0.39892665" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286334" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.21860096" side_tool="true" weight="0.33273703" />
-      <window_info anchor="bottom" id="Python Console" order="8" sideWeight="0.49875" weight="0.3291592" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3291592" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.329718" />
->>>>>>> Stashed changes
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-<<<<<<< Updated upstream
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.488" visible="true" weight="0.16136725" />
       <window_info id="Structure" order="1" sideWeight="0.512" side_tool="true" weight="0.16136725" />
@@ -686,8 +713,32 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout-to-restore>
-=======
->>>>>>> Stashed changes
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -727,7 +778,6 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-<<<<<<< Updated upstream
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -735,8 +785,6 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-=======
->>>>>>> Stashed changes
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -745,13 +793,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/getPolicyRateIpp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Dropbox/trabajo/BackOffice/Scripts/source/runGui.py" />
     <entry file="file://$PROJECT_DIR$/pathl3.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -760,8 +801,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pymongo/network.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pymongo/pool.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pymongo/network.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pymongo/pool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="516" selection-start-line="516" selection-end-line="516" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/model/RoutePolicy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -797,7 +850,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/ipaddress.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/ipaddress.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="1535" selection-start-line="1535" selection-end-line="1535" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/getPrefixIpp.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -812,10 +871,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/netmiko/cisco/cisco_ios.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/threading.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/dbm/dumb.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pyping/__init__.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/netmiko/cisco/cisco_ios.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/threading.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17997">
+          <caret line="863" selection-start-line="863" selection-end-line="863" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/dbm/dumb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1785">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pyping/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -823,10 +906,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/netmiko/cisco_base_connection.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/netmiko/base_connection.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/telnetlib.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/socket.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/netmiko/cisco_base_connection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1281">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/netmiko/base_connection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14154">
+          <caret line="690" selection-start-line="690" selection-end-line="690" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/telnetlib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7560">
+          <caret line="363" selection-start-line="363" selection-end-line="363" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14868">
+          <caret line="712" selection-start-line="712" selection-end-line="712" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ospf_topolocy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -834,7 +941,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/multiping/__init__.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/multiping/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6636">
+          <caret line="319" selection-start-line="319" selection-end-line="319" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/model/BaseDevice.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -842,7 +955,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/paramiko/transport.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/paramiko/transport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38871">
+          <caret line="1896" selection-start-line="1896" selection-end-line="1896" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/graph_isp.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -850,7 +969,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pyasn1/__init__.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pyasn1/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/model/InterfaceXR.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -858,15 +979,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pysnmp/hlapi/auth.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/xml/etree/ElementTree.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/xlwt/Row.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pyyed/__init__.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pysnmp/hlapi/auth.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/xml/etree/ElementTree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1056" selection-start-line="1056" selection-end-line="1056" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/xlwt/Row.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pyyed/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3969">
+          <caret line="190" selection-start-line="190" selection-end-line="190" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/snmp_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
-<<<<<<< Updated upstream
         </state>
       </provider>
     </entry>
@@ -881,18 +1025,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1680">
           <caret line="124" column="4" selection-start-line="124" selection-start-column="4" selection-end-line="124" selection-end-column="4" />
-=======
->>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/-1050493869/builtins.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/netmiko/ssh_dispatcher.py" />
     <entry file="file://$PROJECT_DIR$/ospf_area_topology.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-<<<<<<< Updated upstream
         </state>
       </provider>
     </entry>
@@ -900,12 +1039,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3591">
           <caret line="175" selection-start-line="175" selection-end-line="175" />
-=======
->>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/pprint.py" />
     <entry file="file://$PROJECT_DIR$/mpls_te_csv.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -913,25 +1049,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pysnmp/entity/rfc3413/oneliner/cmdgen.py" />
-    <entry file="file://$PROJECT_DIR$/build/exe.win-amd64-3.6/xlwt/excel-formula.g">
+    <entry file="file://$PROJECT_DIR$/config/Master.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="291" column="19" selection-start-line="291" selection-start-column="19" selection-end-line="291" selection-end-column="19" />
+        <state relative-caret-position="105">
+          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/build/exe.win-amd64-3.6/xlwt/excel-formula.g">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="291" column="19" selection-start-line="291" selection-start-column="19" selection-end-line="291" selection-end-column="19" />
-=======
-    <entry file="file://$PROJECT_DIR$/core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="136" column="11" selection-start-line="136" selection-start-column="11" selection-end-line="136" selection-end-column="11" />
->>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -942,7 +1070,6 @@
         </state>
       </provider>
     </entry>
-<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/model/L3Path.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1869">
@@ -950,63 +1077,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/print_bgp_sumary_table.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="31" selection-start-line="31" selection-end-line="35" selection-end-column="37" />
-=======
-    <entry file="file://$PROJECT_DIR$/print_bgp_sumary_table.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/L3Path.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1958">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
->>>>>>> Stashed changes
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pysnmp/entity/rfc3413/oneliner/cmdgen.py">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
         <state relative-caret-position="3444">
           <caret line="169" column="14" selection-start-line="169" selection-start-column="8" selection-end-line="169" selection-end-column="14" />
-=======
-        <state relative-caret-position="330">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
->>>>>>> Stashed changes
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/claseClaro.py">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
-        <state>
-=======
-        <state relative-caret-position="154">
-          <caret line="271" column="36" selection-start-line="271" selection-start-column="35" selection-end-line="271" selection-end-column="36" />
->>>>>>> Stashed changes
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< Updated upstream
-    <entry file="file://$PROJECT_DIR$/model/CiscoPart.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
-          <folding>
-            <marker date="1541463432272" expanded="true" signature="59:64" ph="..." />
-            <marker date="1541463432272" expanded="true" signature="457:640" ph="..." />
-            <marker date="1541463432272" expanded="true" signature="666:794" ph="..." />
-            <marker date="1541463432272" expanded="true" signature="2477:2482" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1024,45 +1098,59 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1995">
           <caret line="95" selection-start-line="95" selection-end-line="95" />
-=======
-    <entry file="file://$PROJECT_DIR$/config/Master.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sshtest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="50" column="47" lean-forward="true" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
+        <state>
+          <caret selection-end-line="12" selection-end-column="31" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
->>>>>>> Stashed changes
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/print_bgp_sumary_table.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="31" selection-start-line="31" selection-end-line="35" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/CiscoPart.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3676">
+          <caret line="192" column="26" selection-start-line="192" selection-start-column="26" selection-end-line="192" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/claseClaro.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="68" column="43" lean-forward="true" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
-        <state relative-caret-position="-3990">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        <state relative-caret-position="1671">
+          <caret line="1548" column="20" lean-forward="true" selection-start-line="1548" selection-start-column="20" selection-end-line="1548" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sshtest.py">
+    <entry file="file://$PROJECT_DIR$/te_tunnel_tabulate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1449">
-          <caret line="69" column="54" selection-start-line="69" selection-start-column="54" selection-end-line="69" selection-end-column="54" />
+        <state relative-caret-position="168">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
-=======
-        <state relative-caret-position="306">
-          <caret line="1483" column="12" selection-start-line="1483" selection-start-column="12" selection-end-line="1483" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
->>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
