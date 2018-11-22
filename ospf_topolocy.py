@@ -10,9 +10,8 @@ from multiping import multi_ping
 
 claro = Claro()
 
-master = Master(password="zekto2014-", username="descuderor")
-# test = CiscoXR("10.250.55.225","XR",master)
-claro.set_master(password="zekto2014-", username="descuderor")
+claro.set_master(password=Master.decode("ufinet", "w4rDjMOSw5zDisOowqbCnsOI"),
+                 username=Master.decode("pinf con vrf", "w5fDjsOhw5rCicOSw50="))
 
 claro.recollect_ospf_topology()
 # print(test.set_arp_list(vrf="INTERNET"))

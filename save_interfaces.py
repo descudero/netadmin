@@ -15,7 +15,6 @@ parser.add_argument('-i', '--int_stats', action="store_true",
 
 args = parser.parse_args()
 claro = Claro()
-master = Master(password="gestion", username="descuderor")
-
-claro.set_master(password="gestion", username="Ufinet18_")
+claro.set_master(password=Master.decode("ufinet", "w4rDjMOSw5zDisOowqbCnsOI"),
+                 username=Master.decode("pinf con vrf", "w5fDjsOhw5rCicOSw50="))
 pprint(claro.generate_report_consumption(network=args.network, filename=args.filename))
