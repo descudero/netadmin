@@ -1,20 +1,21 @@
-from model.CiscoIOS import CiscoIOS
+
 from model.claseClaro import Claro
 from config.Master import Master
 from model.CiscoXR import CiscoXR
 from pprint import pprint
+import argparse
 
+parser = argparse.ArgumentParser(description='Interfaces report Generator')
+parser.add_argument('network', type=str,
+                    help='network wirh prefix exp 10.0.0.0/16')
+parser.add_argument('filename', type=str,
+                    help='file_name_full_path')
+parser.add_argument('-i', '--int_stats', action="store_true",
+                    help='display interface stats')
+
+args = parser.parse_args()
 claro = Claro()
-master = Master(password="zekto2014-", username="descuderor")
-# test = CiscoXR("172.16.30.244","XR",master)
-claro.set_master(password="zekto2014-", username="descuderor")
+master = Master(password="gestion", username="descuderor")
 
-# print(test.set_arp_list(vrf="INTERNET"))
-test2 = CiscoXR("10.235.252.18", "IOS", master)
-# test2.set_chassis()
-# print(test2.chassis)
-# test2.chassis.print_children()
-
-pprint(claro.generate_report_consumption(network="172.16.30.0/24", filename="interfaces_regionales"))
-# test2.set_all_interfaces()
-# pprint(test2.interfaces)
+claro.set_master(password="gestion", username="Ufinet18_")
+pprint(claro.generate_report_consumption(network=args.network, filename=args.filename))
