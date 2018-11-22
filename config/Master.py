@@ -10,7 +10,7 @@ class Master:
 
     def __init__(self, AdebugLevel=0, password="", username="", logg_name="master"):
 
-        self.communities = ["snmpUfi", "pnrw-med"]
+        self.communities = ["snmpUfi", "pnrw-med", "uFi08NeT", "pnrw-all"]
 
         if password != "" and username != "":
             self.username = username

@@ -1,6 +1,7 @@
 import socket
 from platform import system as system_name  # Returns the system/OS name
 from subprocess import call   as system_call  # Execute a shell command
+import datetime
 import subprocess
 from multiping import multi_ping
 import threading as th
@@ -105,17 +106,21 @@ class Claro:
 
     def save_to_excel_dict(self, dictionay_data, file_name):
         data_list = self.dict_to_list(dict_input=dictionay_data)
+        self.save_to_excel_list(data_list, file_name)
+
+    def save_to_excel_list(self, list_data, file_name):
+
 
         workbook = xlwt.Workbook()
         worksheet = workbook.add_sheet("data")
 
         rows_skipped = 1
 
-        columns = data_list[0].keys()
+        columns = list_data[0].keys()
         for colidx, column in enumerate(columns):
             worksheet.write(rows_skipped, colidx, column)
 
-        for rowidx, row in enumerate(data_list):
+        for rowidx, row in enumerate(list_data):
 
             for colindex, col in enumerate(columns):
 
@@ -886,11 +891,21 @@ class Claro:
             pprint([*responses])
             ip_devices = ip_devices + [*responses]
             final_responses = {**responses, **final_responses}
-        pprint(ip_devices)
+            devices = []
+            for ip in ip_devices:
+                device = CiscoIOS(ip, "ios", self.master)
+                devices.append(device)
+        devices = self.correct_device_platform(devices)
+        return devices, ip_devices
 
-
-
-
+    def generate_report_consumption(self, network, filename="test", window=35):
+        devices, ipdevices = self.devices_from_network(network, window)
+        timestamp = datetime.datetime.fromtimestamp(time.time()).strftime('%Y%m%d_%H%M%S')
+        self.excute_methods(devices=devices, methods={"set_all_interfaces": {}, "set_snmp_community": {}})
+        interface_data = []
+        for device in devices:
+            interface_data = interface_data + device.get_interfaces_dict_data()
+        self.save_to_excel_list(interface_data, file_name=filename + "_" + timestamp)
 
 """
     def display_qos_ipp(self):

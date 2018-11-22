@@ -1562,10 +1562,14 @@ class CiscoIOS(Parent):
         canvas = Canvas(master, width=300, height=1000)
         self.chassis.draw_in_canvas(canvas,x,y,recursive=True)
         canvas.pack()
-
-
-
         mainloop()
 
+    def get_interfaces_dict_data(self):
 
-
+        interface_data_list = []
+        for interface_index, interface in self.interfaces.items():
+            interface_dict = interface.__dict__
+            interface_dict["device"] = self.hostname
+            interface_dict["ip_device"] = self.ip
+            interface_data_list.append(interface_dict)
+        return interface_data_list

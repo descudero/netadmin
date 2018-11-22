@@ -15,6 +15,6 @@ test2 = CiscoXR("10.235.252.18", "IOS", master)
 # print(test2.chassis)
 # test2.chassis.print_children()
 
-pprint(claro.devices_from_network(string_network="172.16.30.0/24"))
+pprint(claro.generate_report_consumption(network="172.16.30.0/24", filename="interfaces_regionales"))
 # test2.set_all_interfaces()
 # pprint(test2.interfaces)
