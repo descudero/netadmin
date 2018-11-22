@@ -1,5 +1,8 @@
 import socket
+from platform import system as system_name  # Returns the system/OS name
+from subprocess import call   as system_call  # Execute a shell command
 import subprocess
+from multiping import multi_ping
 import threading as th
 import pyyed
 import shelve
@@ -672,9 +675,19 @@ class Claro:
     @staticmethod
     def check_device_up(device):
 
-        response = subprocess.call("ping -w 150 -n 1 " + device.ip, stdout=subprocess.PIPE)
-        is_device_up = True if response == 0 else False
-        return is_device_up
+        """
+            Returns True if host (str) responds to a ping request.
+            Remember that a host may not respond to a ping (ICMP) request even if the host name is valid.
+            """
+
+        # Ping command count option as function of OS
+        param1 = '-n' if system_name().lower() == 'windows' else '-c'
+        param2 = '-w' if system_name().lower() == 'windows' else '-W'
+        # Building the command. Ex: "ping -c 1 google.com"
+        command = ['ping', param2, '200', param1, '1', device.ip]
+
+        # Pinging
+        return system_call(command, shell=True) == 0
 
     @staticmethod
     def check_ssh(device):
@@ -846,6 +859,38 @@ class Claro:
             device.platform = platform
             devices.append(device)
         return devices
+
+    def devices_from_network(self, string_network, window=30):
+        network = ipaddress.ip_network(string_network)
+        hosts = network.hosts()
+        host_string_ip = []
+        for host in hosts:
+            host_string_ip.append(str(host))
+        # pprint(host_string_ip)
+        # pprint(hosts)
+        final_responses = {}
+        final_no_responses = {}
+        ip_devices = []
+        while (len(host_string_ip) > 0):
+            if (window > (len(host_string_ip))):
+                window = len(host_string_ip)
+            responses, no_responses = multi_ping(host_string_ip[0:window - 1], timeout=1, retry=5)
+            # pprint(responses)
+            if (window == len(host_string_ip)):
+                host_string_ip = []
+                print("no more hosts")
+            else:
+                host_string_ip = host_string_ip[window:]
+                print("new ping window")
+                # pprint(host_string_ip)
+            pprint([*responses])
+            ip_devices = ip_devices + [*responses]
+            final_responses = {**responses, **final_responses}
+        pprint(ip_devices)
+
+
+
+
 
 """
     def display_qos_ipp(self):

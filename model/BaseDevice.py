@@ -9,7 +9,7 @@ import select
 import paramiko
 
 
-class BaseDevice:
+class BaseDevice(object):
 
     def __init__(self, ip, display_name, master, platform="CiscoIOS", gateway="null"):
         self.ip = ip
@@ -22,6 +22,8 @@ class BaseDevice:
         self.log = []
         self.gateway = gateway
 
+    def __str__(self):
+        return self.display_name + " " + self.ip
     def send_command(self, connection, command, pattern="#", read=True, timeout=1):
 
         print(command)

@@ -87,6 +87,7 @@ class CiscoIOS(Parent):
     def test_multiping_arp(self, vrf="default"):
         self.set_arp_list(vrf=vrf)
 
+
         # for index in range(0,len(self.arp_list.keys()),step=30)
         #   end = len(self.arp_list.keys())
         # responses, no_responses = multi_ping(dest_addrs=self.arp_list.keys()[step], timeout=3, retry=5,
@@ -1446,7 +1447,7 @@ class CiscoIOS(Parent):
             interface_object = InterfaceIOS(self, "NA")
             interface_object.parse_interface_out(interface)
             interfaces[interface_object.index] = interface_object
-        pprint(interfaces)
+        self.interfaces = interfaces
 
     def set_snmp_community(self):
 
