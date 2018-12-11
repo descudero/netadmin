@@ -63,9 +63,7 @@ class Claro:
                    "set_template_type_pseudowires": "template_type_pseudowires", "set_bridge_domains": "bridge_domains",
                    "set_vfis": "vfis"
                    }
-
-        devices = self.dict_to_list(cisco_sources)
-        self.excute_methods(methods=methods, devices=devices)
+        self.excute_methods(methods=methods, devices=cisco_sources.values())
 
         for tunnel_instance, tunnel in mpls_te_data.items():
             if (tunnel["source_ip"] not in cisco_sources):
@@ -74,7 +72,7 @@ class Claro:
             device = cisco_sources[tunnel["source_ip"]]
             service_instance_data = device.get_service_instance_by_tunnel_id(tunnel_id=tunnel["tunnel_id"])
             if (service_instance_data != "null"):
-                print(service_instance_data)
+
                 tunnel["root_interface"] = service_instance_data["interface"]
                 tunnel["root_service_instance"] = service_instance_data["service_instance"]
                 tunnel["root_description"] = service_instance_data["description"]
@@ -86,7 +84,7 @@ class Claro:
                 tunnel["root_description"] = ""
                 tunnel["root_dot1q"] = ""
                 pprint("interfaces VFI")
-                print(service_instances_vfi)
+
                 if service_instances_vfi:
                     for service_instance_data in service_instances_vfi:
                         tunnel["root_interface"] += service_instance_data["interface"] + " ! "
@@ -99,18 +97,14 @@ class Claro:
         self.save_to_excel_dict(mpls_te_data, filename)
 
     def dict_to_list(self, dict_input):
-        data_list = []
-        for index, data in dict_input.items():
-            data_list.append(data)
-        return data_list
+
+        return dict_input.values()
 
     def save_to_excel_dict(self, dictionay_data, file_name):
         data_list = self.dict_to_list(dict_input=dictionay_data)
         self.save_to_excel_list(data_list, file_name)
 
     def save_to_excel_list(self, list_data, file_name):
-
-
         workbook = xlwt.Workbook()
         worksheet = workbook.add_sheet("data")
 
@@ -669,181 +663,8 @@ class Claro:
     def clean_list_devices(self, devices):
 
         new_devices = []
-        for device in devices:
-            if (Claro.check_device_up(device)):
-                if (Claro.check_telnet(device) or Claro.check_ssh(device)):
-                    new_devices.append(device)
-                else:
-                    self.not_connected_devices.append(device.ip)
-        return new_devices, self.not_connected_devices
 
-    @staticmethod
-    def check_device_up(device):
-
-        """
-            Returns True if host (str) responds to a ping request.
-            Remember that a host may not respond to a ping (ICMP) request even if the host name is valid.
-            """
-
-        # Ping command count option as function of OS
-        param1 = '-n' if system_name().lower() == 'windows' else '-c'
-        param2 = '-w' if system_name().lower() == 'windows' else '-W'
-        # Building the command. Ex: "ping -c 1 google.com"
-        command = ['ping', param2, '200', param1, '1', device.ip]
-
-        # Pinging
-        return system_call(command, shell=True) == 0
-
-    @staticmethod
-    def check_ssh(device):
-        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        result = sock.connect_ex((device.ip, 22))
-        return result == 0
-
-    @staticmethod
-    def check_telnet(device):
-        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        result = sock.connect_ex((device.ip, 23))
-        return result == 0
-
-    def check_device_able_connect(self, device):
-        return (self.check_device_up(device=device)) and (
-                self.check_ssh(device=device) or self.check_telnet(device=device))
-
-    def adj_report(self, report_name, device_list_filename):
-
-        methods = {"set_mpls_ldp_interfaces": "mpls_ldp_interfaces",
-                   "set_pim_interfaces": "pim_interfaces", "set_ip_ospf_interfaces": 'ospf_interfaces'
-                   }
-        devices = self.get_device_list(filename=device_list_filename)
-        devices = self.clean_list_devices(devices=devices)
-        devices = self.correct_device_platform(devices=devices)
-        ready_devices = self.excute_methods(methods=methods, devices=devices)
-        self.save_sql_devices(devices=ready_devices, methods=methods, report_name=report_name)
-        self.save_report(report_name)
-
-    def save_sql_devices(self, devices, methods, report_name):
-        for device in devices:
-            for method, variable in methods.items():
-                device.save_report_sql(atribute=variable, report_name=report_name)
-
-    def save_report(self, report_name):
-        rows, cursor = self.get_rows_sql_report(report_name=report_name)
-        workbook = xlwt.Workbook()
-        worksheet = workbook.add_sheet("prueba")
-        rows_skipped = 2
-        for colidx, heading in enumerate(cursor.description):
-            worksheet.write(rows_skipped, colidx, heading[0])
-
-        # Write rows
-        for rowidx, row in enumerate(rows):
-            for colindex, col in enumerate(row):
-                worksheet.write(rowidx + rows_skipped + 1, colindex, col)
-        workbook.save(report_name + '.xls')
-
-    def get_cursor_db(self):
-        try:
-            conn = pmsql.connect(
-                "dbname='" + self.dbname + "' user='" + self.dbuser + "' host='" + self.dbhost + "' password='" + self.dbpassword + "'")
-            return conn.cursor()
-        except Exception:
-            return 0
-
-    def get_rows_sql_report(self, report_name):
-        cursor = self.get_cursor_db()
-        sql = "select COALESCE( ospf.interface,ldp.interface,pim.interface) as interface, COALESCE(ospf.local_router_ip ,ldp.local_router_ip ,pim.local_router_ip) as ip , * from pim_interfaces as pim full outer join ospf_interfaces as ospf on ((pim .report_name = ospf.report_name) and  (pim.local_router_ip	 =  ospf.local_router_ip) and ( pim.interface= ospf.interface)) full outer join  mpls_ldp_interfaces as ldp on ((ldp.report_name = ospf.report_name) and (ldp.local_router_ip =  ospf.local_router_ip) and ( ldp.interface =  ospf.interface)) WHERE  ldp.report_name='" + report_name + "'"
-        cursor.execute(sql)
-        rows = cursor.fetchall()
-        return rows, cursor
-
-    def ospf_save_excel_adj(self):
-
-        workbook = xlwt.Workbook()
-        worksheet = workbook.add_sheet("1")
-        worksheet.write(0, 1, 'network_id')
-
-        rows_skipped = 2
-        db_mongo = self.master.connect_mongo()
-        ospf_adjs = db_mongo.ospf_adj.find({'$where': "this.interfaces.length > 1"})
-        rowidx = 0
-        for adj in ospf_adjs:
-            rowidx += 1
-            colid = 4
-            print(rowidx)
-            worksheet.write(rowidx, 1, adj['network_id'])
-            mtu_compare = None
-            mtu_flag_bad = False
-            for interface in adj['interfaces']:
-                if not mtu_flag_bad:
-
-                    mtu = interface['mtu']
-                    for keys, value in interface.items():
-                        colid += 1
-                        print(str(rowidx) + " : " + str(colid))
-                        worksheet.write(rowidx, colid, value)
-                    try:
-                        mtu_interface = int(mtu)
-                    except ValueError as verr:
-                        mtu_interface = 0
-                        pass  # do job to handle: s does not contain anything convertible to int
-                    except Exception as ex:
-                        mtu_interface = 0
-                        pass  # do job to handle: Exception occurred while converting to int
-                    if interface['device_plattform'] == 'CiscoXR':
-                        mtu_interface = mtu_interface - 14
-                    if mtu_compare is None:
-                        mtu_compare = mtu_interface
-                    else:
-                        mtu_flag_bad = mtu_interface != mtu_compare
-            worksheet.write(rowidx, 2, mtu_flag_bad)
-            if (mtu_flag_bad):
-                print(adj)
-        # Write rows
-
-        workbook.save('reporte_prueba3.xls')
-
-    def consulted_devices(self):
-        db_mongo = self.master.connect_mongo()
-        ospf_devices = db_mongo.ospf_adj.aggregate([{"$unwind": "$interfaces"},
-                                                    {"$project": {"interfaces.ip_neighbor": 1}}])
-        devices = {}
-        for device in ospf_devices:
-            devices[device["interfaces"]["ip_neighbor"]] = 1
-
-        pprint(devices)
-
-    def ospf_save_adj(self):
-
-        devices = self.clean_list_devices(self.get_device_list("C:\\Users\\descudero\\Desktop\\listado.csv"))
-        devices = self.correct_device_platform(devices=devices)
-        methods = {"save_ospf_adjacencies": "test"}
-        self.excute_methods(methods, devices)
-
-    def opsf_check_mtu_adjacencies(self):
-        db_mongo = self.master.connect_mongo()
-        ospf_adjs = db_mongo.ospf_adj.find({'$where': "this.interfaces.length > 1"})
-        for adj in ospf_adjs:
-            mtu_compare = None
-            mtu_flag_bad = False
-            for interface in adj['interfaces']:
-                if not mtu_flag_bad:
-                    mtu = interface['mtu']
-                    try:
-                        mtu_interface = int(mtu)
-                    except ValueError as verr:
-                        mtu_interface = 0
-                        pass  # do job to handle: s does not contain anything convertible to int
-                    except Exception as ex:
-                        mtu_interface = 0
-                        pass  # do job to handle: Exception occurred while converting to int
-                    if interface['device_plattform'] == 'CiscoXR':
-                        mtu_interface = mtu_interface - 14
-                    if mtu_compare is None:
-                        mtu_compare = mtu_interface
-                    else:
-                        mtu_flag_bad = mtu_interface != mtu_compare
-            if (mtu_flag_bad):
-                print(adj)
+        return [device for device in devices if device.check_able_connect()]
 
     def asr_mod_inventory(self):
         devices = self.load_devices_csv("host.csv")
@@ -871,8 +692,6 @@ class Claro:
         host_string_ip = []
         for host in hosts:
             host_string_ip.append(str(host))
-        # pprint(host_string_ip)
-        # pprint(hosts)
         final_responses = {}
         final_no_responses = {}
         ip_devices = []

@@ -3,27 +3,16 @@
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/sshtest.py" line="124" mnemonic="9" />
     <bookmark url="file://$PROJECT_DIR$/model/claseClaro.py" />
-    <bookmark url="file://$PROJECT_DIR$/model/claseClaro.py" line="899" />
+    <bookmark url="file://$PROJECT_DIR$/model/claseClaro.py" line="718" />
     <bookmark url="file://$PROJECT_DIR$/resources/templates/transciever_ios.template" line="5" mnemonic="6" />
-    <bookmark url="file://$PROJECT_DIR$/model/CiscoIOS.py" line="1579" />
+    <bookmark url="file://$PROJECT_DIR$/model/CiscoIOS.py" line="1564" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="462384ac-2f64-47a0-b6d2-b16ff1b36497" name="Default" comment="first3">
-      <change afterPath="$PROJECT_DIR$/config/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/output_test/show mpls l2transport vc detail ios" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/templates/l2transport_vc_detail_ios.template" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/templates/text_transciver_ios.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/templates/transceiver_detail_ios.template" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/templates/transciever_ios.template" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/templates/ttextfsm_uf.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trasnciever_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/groups.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/groups.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boip.log" beforeDir="false" afterPath="$PROJECT_DIR$/boip.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/BaseDevice.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/BaseDevice.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/CiscoIOS.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/CiscoIOS.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/claseClaro.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/claseClaro.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,19 +27,19 @@
     <session id="1641016877">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="2" />
-          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.4" value="3" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="53" />
+          <entry key="py" value="54" />
           <entry key="show mpls l2transport vc detail ios" value="3" />
           <entry key="template" value="2" />
           <entry key="transciever_ios" value="1" />
@@ -60,7 +49,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Python" value="53" />
+          <entry key="Python" value="54" />
           <entry key="XHTML" value="1" />
         </counts>
       </usages-collector>
@@ -68,7 +57,7 @@
         <counts>
           <entry key="Python Console" value="247" />
           <entry key="dummy" value="14" />
-          <entry key="py" value="7728" />
+          <entry key="py" value="8078" />
           <entry key="show mpls l2transport vc detail ios" value="3" />
           <entry key="template" value="663" />
           <entry key="transciever_ios" value="34" />
@@ -78,7 +67,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="829" />
-          <entry key="Python" value="7975" />
+          <entry key="Python" value="8325" />
           <entry key="XHTML" value="34" />
         </counts>
       </usages-collector>
@@ -88,116 +77,111 @@
     <favorites_list name="groups" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/resources/templates/transciever_ios.template">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="154">
-                  <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/resources/templates/transceiver_detail_ios.template">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="132">
-                  <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="17" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/resources/templates/l2transport_vc_detail_ios.template">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="35" lean-forward="true" selection-start-column="35" selection-end-column="35" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/resources/templates/ttextfsm_uf.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="110">
-                  <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://E:/progra/anaconda/Lib/site-packages/textfsm.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-2731">
-                  <caret line="862" column="6" selection-start-line="862" selection-start-column="6" selection-end-line="862" selection-end-column="6" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/model/BaseDevice.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1166">
-                  <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
-                  <folding>
-                    <element signature="e#0#37#0" expanded="true" />
-                    <marker date="1544115475855" expanded="true" signature="661:715" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
-                  <caret line="103" column="48" selection-start-line="103" selection-start-column="19" selection-end-line="103" selection-end-column="48" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/trasnciever_test.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="176">
-                  <caret line="16" selection-start-line="16" selection-end-line="16" />
-                  <folding>
-                    <element signature="e#0#37#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/sshtest.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="946">
-                  <caret line="51" selection-start-line="45" selection-end-line="51" />
-                  <folding>
-                    <element signature="e#0#37#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/resources/output_test/show mpls l2transport vc detail ios">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret selection-end-column="63" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/templates/transciever_ios.template">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/templates/transceiver_detail_ios.template">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/templates/l2transport_vc_detail_ios.template">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="35" selection-start-column="35" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/templates/ttextfsm_uf.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://E:/progra/anaconda/Lib/site-packages/textfsm.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18920">
+              <caret line="862" column="6" selection-start-line="862" selection-start-column="6" selection-end-line="862" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/BaseDevice.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="25">
+              <caret line="91" selection-start-line="91" selection-end-line="91" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+                <marker date="1544539346273" expanded="true" signature="820:874" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="354">
+              <caret line="101" column="24" selection-start-line="101" selection-start-column="24" selection-end-line="101" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model/claseClaro.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-276">
+              <caret line="668" selection-start-line="668" selection-end-line="668" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trasnciever_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sshtest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="946">
+              <caret line="51" selection-start-line="45" selection-end-line="51" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -208,8 +192,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>P</find>
-      <find>vfi</find>
       <find>template</find>
       <find>error line</find>
       <find>error</find>
@@ -238,6 +220,8 @@
       <find>get_interface_errors</find>
       <find>interfaces_utilizacio</find>
       <find>comm</find>
+      <find>get_service_instance_data</find>
+      <find>clean</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -273,7 +257,6 @@
         <option value="$PROJECT_DIR$/model/InterfaceXR.py" />
         <option value="$PROJECT_DIR$/scripts/save_interfaces.py" />
         <option value="$PROJECT_DIR$/model/InterfaceIOS.py" />
-        <option value="$PROJECT_DIR$/model/claseClaro.py" />
         <option value="$PROJECT_DIR$/config/Master.py" />
         <option value="$PROJECT_DIR$/save_interfaces.py" />
         <option value="$PROJECT_DIR$/findIpPrefixSet.py" />
@@ -287,16 +270,17 @@
         <option value="$PROJECT_DIR$/model/__init__.py" />
         <option value="$PROJECT_DIR$/resources/templates/transciever_ios" />
         <option value="$PROJECT_DIR$/resources/templates/transciever_ios.txt" />
-        <option value="$PROJECT_DIR$/model/BaseDevice.py" />
         <option value="$PROJECT_DIR$/trasnciever_test.py" />
         <option value="$PROJECT_DIR$/resources/templates/text_transciver_ios.txt" />
         <option value="$PROJECT_DIR$/resources/templates/transceiver_detail_ios.template" />
         <option value="$PROJECT_DIR$/resources/templates/transciever_ios.template" />
-        <option value="$PROJECT_DIR$/model/CiscoIOS.py" />
         <option value="$PROJECT_DIR$/resources/output_test/show mpls l2transport vc detail ios" />
         <option value="$PROJECT_DIR$/resources/templates/test_textfsm.py" />
         <option value="$PROJECT_DIR$/resources/templates/l2transport_vc_detail_ios.template" />
         <option value="$PROJECT_DIR$/resources/templates/ttextfsm_uf.py" />
+        <option value="$PROJECT_DIR$/model/CiscoIOS.py" />
+        <option value="$PROJECT_DIR$/model/BaseDevice.py" />
+        <option value="$PROJECT_DIR$/model/claseClaro.py" />
       </list>
     </option>
   </component>
@@ -322,19 +306,7 @@
             <path>
               <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
               <item name="netadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="output_test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -616,7 +588,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542926752934</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="first3">
+      <created>1544536176319</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1544536176319</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -664,7 +643,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.488" visible="true" weight="0.1861449" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.488" visible="true" weight="0.1861449" />
       <window_info id="Structure" order="1" sideWeight="0.512" side_tool="true" weight="0.16136725" />
       <window_info id="Favorites" order="2" sideWeight="0.50133336" side_tool="true" weight="0.16136725" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -861,16 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/claseClaro.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="907" column="71" selection-start-line="907" selection-start-column="71" selection-end-line="907" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/save_interfaces.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -909,13 +878,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/web.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1005,10 +968,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/templates/text_transciver_ios.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="61" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/templates/transciever_ios.template">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/templates/transceiver_detail_ios.template">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/templates/ttextfsm_uf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/progra/anaconda/Lib/site-packages/textfsm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18920">
+          <caret line="862" column="6" selection-start-line="862" selection-start-column="6" selection-end-line="862" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/trasnciever_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="198">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
@@ -1025,52 +1023,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/transciever_ios.template">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/BaseDevice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1166">
-          <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-            <marker date="1544115475855" expanded="true" signature="661:715" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="103" column="48" selection-start-line="103" selection-start-column="19" selection-end-line="103" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/text_transciver_ios.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="61" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/transceiver_detail_ios.template">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/progra/anaconda/Lib/site-packages/textfsm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2731">
-          <caret line="862" column="6" selection-start-line="862" selection-start-column="6" selection-end-line="862" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/output_test/show mpls l2transport vc detail ios">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1078,17 +1030,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/ttextfsm_uf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/templates/l2transport_vc_detail_ios.template">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="35" lean-forward="true" selection-start-column="35" selection-end-column="35" />
+          <caret column="35" selection-start-column="35" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="101" column="24" selection-start-line="101" selection-start-column="24" selection-end-line="101" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/BaseDevice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+            <marker date="1544539346273" expanded="true" signature="820:874" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/claseClaro.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-276">
+          <caret line="668" selection-start-line="668" selection-end-line="668" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

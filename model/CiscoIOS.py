@@ -96,7 +96,10 @@ class CiscoIOS(Parent):
         # return responses, no_responses
 
     def get_service_instance_data(self, interface, service_instance):
-        return self.service_instances[interface + ":" + service_instance]
+        try:
+            return self.service_instances[interface + ":" + service_instance]
+        except:
+            return 'null'
 
     def set_pseudo_wire_class(self):
 
@@ -118,7 +121,7 @@ class CiscoIOS(Parent):
             self.pseudo_wire_class[lines[0]] = data
 
     def set_mpls_te_tunnels(self):
-        print("set set_mpls tunnles self" + self.ip)
+
         self.mpls_te_tunnels = {}
         command = "show mpls traffic-eng tunnels detail"
         connection = self.connect()
@@ -129,7 +132,7 @@ class CiscoIOS(Parent):
             lsp_data["name"] = lsp.split(" is ")[0].replace(" ", "")
             lsp_data["state"] = lsp.split("connection is")[1].replace(" ", "").split("\n")[0]
             for line in lsp.split("\n"):
-                if (line.find("InLabel  : ") > -1):
+                if "InLabel  :" in line:
                     data = line.replace("InLabel  : ", "").split(",")
                     lsp_data["interface_in"] = CiscoIOS.get_normalize_interface_name(data[0].replace(" ", ""))
                     lsp_data["label_in"] = data[1]
@@ -192,13 +195,10 @@ class CiscoIOS(Parent):
                 self.service_instances[service_data["interface"] + ":" + service_data["id"]] = service_data
 
             except:
-                print("not interface data " + self.ip)
-                print(service_instance)
                 pprint(service_data)
         # pprint(self.service_instances)
 
     def get_template_by_tunnel_id(self, tunnel_id):
-        pprint("tunerl id for vfi " + tunnel_id)
         for name, template in self.template_type_pseudowires.items():
 
             if (template["interface"] == "Tunnel" + str(tunnel_id)):
@@ -206,12 +206,9 @@ class CiscoIOS(Parent):
         return "null"
 
     def get_vfi_by_template(self, template_name):
-        pprint("vfi for template " + template_name)
         for name, vfi in self.vfis.items():
             for pseudowire in vfi["pseudowires"]:
-                print(pseudowire)
                 if (pseudowire["template"] == template_name):
-                    print("get vfi " + name)
                     return name
         return "null"
 
@@ -220,26 +217,14 @@ class CiscoIOS(Parent):
         for name, bridge in self.bridge_domains.items():
             if "vfi" in bridge:
                 if (bridge["vfi"] == vfi):
-                    pprint(self.ip + " interfaces by vfi " + vfi)
-                    pprint(bridge["interfaces"])
                     return bridge["interfaces"]
         return []
 
     def get_service_instance_by_interfaces(self, interfaces):
-        pprint(self.ip + " instances by interfaces ")
-        pprint(interfaces)
-        service_intances = []
-        if (interfaces):
-            for interface in interfaces:
-                try:
-                    service_intances.append(
-                        self.get_service_instance_data(interface["interface"], interface["service_instance"]))
 
-                except:
-                    pass
-            # pprint(service_intances)
-            return service_intances
-        return []
+        return [self.get_service_instance_data(interface["interface"], interface["service_instance"])
+                for interface in interfaces]
+
 
     def get_service_instance_by_tunnel_id_vfi(self, tunnel_id):
         template = self.get_template_by_tunnel_id(tunnel_id=tunnel_id)
@@ -251,6 +236,7 @@ class CiscoIOS(Parent):
 
     def set_template_type_pseudowires(self, ):
         self.template_type_pseudowires = {}
+
         command = "show run | s template type"
         connection = self.connect()
         output = self.send_command(command=command, connection=connection)
@@ -289,6 +275,7 @@ class CiscoIOS(Parent):
         # pprint(self.bridge_domains)
 
     def set_vfis(self):
+
         self.vfis = {}
         command = "show run | s l2vpn vfi "
         connection = self.connect()
@@ -326,7 +313,6 @@ class CiscoIOS(Parent):
             self.vfis[data["name"]] = data
 
     def set_pseudowires(self):
-        print("set pseudowires ip self" + self.ip)
         self.pseudowires = {}
         command = "show run | i xconnect"
         connection = self.connect()
