@@ -1,7 +1,7 @@
 import ipaddress
 
 
-class InterfaceIOS:
+class InterfaceIOS(object):
     def __init__(self, parent_device, index):
         self.parent_device = parent_device
         self.index = index
@@ -179,3 +179,6 @@ class InterfaceIOS:
             interface_string = interface_string.replace(pattern, corrected_name)
 
         return interface_string
+
+    def __str__(self):
+        return self.index + " " + self.phy_state + " "

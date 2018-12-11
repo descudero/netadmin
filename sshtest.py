@@ -48,7 +48,7 @@ master = Master(password="zekto2014-", username="descuderor")
 claro.set_master(password="zekto2014-", username="descuderor")
 
 # print(test.set_arp_list(vrf="INTERNET"))
-test2 = CiscoXR("172.16.30.244", "IOS", master)
+test2 = CiscoXR("10.235.252.18", "IOS", master)
 #test2.set_chassis()
 #print(test2.chassis)
 #test2.chassis.print_children()

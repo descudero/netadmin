@@ -1,6 +1,7 @@
 import getpass;
 import logging
 from pymongo import MongoClient
+import base64
 
 import ast
 import time
@@ -10,7 +11,7 @@ class Master:
 
     def __init__(self, AdebugLevel=0, password="", username="", logg_name="master"):
 
-        self.communities = ["snmpUfi", "pnrw-med"]
+        self.communities = ["snmpUfi", "pnrw-med", "uFi08NeT", "pnrw-all"]
 
         if password != "" and username != "":
             self.username = username
@@ -53,3 +54,22 @@ class Master:
         '''
         self.logger.log(level=level,
                         msg=" usr " + self.username + " class " + str(type(originator).__name__) + " " + str(message))
+
+    @staticmethod
+    def encode(key, clear):
+        enc = []
+        for i in range(len(clear)):
+            key_c = key[i % len(key)]
+            enc_c = chr((ord(clear[i]) + ord(key_c)) % 256)
+            enc.append(enc_c)
+        return base64.urlsafe_b64encode("".join(enc).encode()).decode()
+
+    @staticmethod
+    def decode(key, enc):
+        dec = []
+        enc = base64.urlsafe_b64decode(enc).decode()
+        for i in range(len(enc)):
+            key_c = key[i % len(key)]
+            dec_c = chr((256 + ord(enc[i]) - ord(key_c)) % 256)
+            dec.append(dec_c)
+        return "".join(dec)

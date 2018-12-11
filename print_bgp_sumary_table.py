@@ -8,7 +8,8 @@ from model.claseClaro import Claro
 from pprint import pprint
 
 claro = Claro()
-master = Master(password="zekto2014-", username="descuderor")
+master = Master(password=Master.decode("ufinet", "w4rDjMOSw5zDisOowqbCnsOI"),
+                username=Master.decode("pinf con vrf", "w5fDjsOhw5rCicOSw50="))
 # test = CiscoXR("10.234.5.171","XR",master)
 # test_ios = CiscoIOS("10.243.1.8","IOS",master)
 # interfaz="Gi2/3"

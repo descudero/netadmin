@@ -1,0 +1,8 @@
+Value IFACE (\w+\d+\/\S+)
+Value TEMPERATURE (\d+.\d+)
+Value VOLTAGE (\d+.\d+)
+Value TX_PWR (\S+)
+Value RX_PWR (\S+)
+
+Start
+  ^${IFACE}

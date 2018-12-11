@@ -8,7 +8,8 @@ from model.CiscoXR import CiscoXR
 
 ip = "186.151.62.1"
 print("prueba")
-master = Master(password="zekto2014-", username="descudero")
+master = Master(password=Master.decode("ufinet", "w4rDjMOSw5zDisOowqbCnsOI"),
+                username=Master.decode("pinf con vrf", "w5fDjsOhw5rCicOSw50="))
 print("prueba2")
 
 # pba = CiscoDevice("PBAIPP",'C:\\Users\\descudero\\pba.txt')

@@ -8,8 +8,10 @@ from model.claseClaro import Claro
 from pprint import pprint
 
 claro = Claro()
-master = Master(password="zekto2014-", username="descuderor")
+master = Master(password=Master.decode("ufinet", "w4rDjMOSw5zDisOowqbCnsOI"),
+                username=Master.decode("pinf con vrf", "w5fDjsOhw5rCicOSw50="))
 test = CiscoXR("10.235.252.18", "XR", master)
-claro.set_master(password="zekto2014-", username="descuderor")
+claro.set_master(password=Master.decode("ufinet", "w4rDjMOSw5zDisOowqbCnsOI"),
+                 username=Master.decode("pinf con vrf", "w5fDjsOhw5rCicOSw50="))
 claro.init_bgp_pe()
 claro.set_bgp_neighbors(address_family="ipv4 unicast", vrf="INTERNET")

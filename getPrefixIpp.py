@@ -6,7 +6,8 @@ from collections import defaultdict
 from config.Master import Master
 from model.CiscoXR import CiscoXR
 
-master = Master(password="descudero", username="zekto2014-")
+master = Master(password=Master.decode("ufinet", "w4rDjMOSw5zDisOowqbCnsOI"),
+                username=Master.decode("pinf con vrf", "w5fDjsOhw5rCicOSw50="))
 
 # pba = CiscoDevice("PBAIPP",'C:\\Users\\descudero\\pba.txt')
 # blu = CiscoDevice("BLUIPP",'C:\\Users\\descudero\\blu.txt')

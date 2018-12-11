@@ -7,9 +7,13 @@ import sys
 import time
 import select
 import paramiko
+import textfsm
+import socket
 
+from platform import system as system_name  # Returns the system/OS name
+from subprocess import call   as system_call  # Execute a shell command
 
-class BaseDevice:
+class BaseDevice(object):
 
     def __init__(self, ip, display_name, master, platform="CiscoIOS", gateway="null"):
         self.ip = ip
@@ -22,6 +26,8 @@ class BaseDevice:
         self.log = []
         self.gateway = gateway
 
+    def __str__(self):
+        return self.display_name + " " + self.ip
     def send_command(self, connection, command, pattern="#", read=True, timeout=1):
 
         print(command)
@@ -76,3 +82,42 @@ class BaseDevice:
         self.config = self.send_command(connection, Acommand, self.hostname, timeout=10)
         self.close(connection)
         return self.config
+
+    def load_template(self, template_name):
+        if not "template" in template_name:
+            template_name += ".template"
+        parser = textfsm.TextFSM(open("./resources/templates/" + template_name))
+        return parser
+
+    def check_ssh(self):
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        result = sock.connect_ex((self.ip, 22))
+        self.able_ssh = result == 0
+        return self.able_ssh
+
+    def check_telnet(self):
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        result = sock.connect_ex((self.ip, 23))
+        self.able_telnet = result == 0
+        return self.able_telne
+
+    def check_able_connect(self):
+        self.able_connect = (self.check_device_up() and (
+                self.check_ssh() or self.check_telnet()))
+        return self.able_connect
+
+    def check_device_up(self):
+
+        """
+            Returns True if host (str) responds to a ping request.
+            Remember that a host may not respond to a ping (ICMP) request even if the host name is valid.
+            """
+
+        # Ping command count option as function of OS
+        param1 = '-n' if system_name().lower() == 'windows' else '-c'
+        param2 = '-w' if system_name().lower() == 'windows' else '-W'
+        # Building the command. Ex: "ping -c 1 google.com"
+        command = ['ping', param2, '200', param1, '1', self.ip]
+        self.device_up = system_call(command, shell=True) == 0
+        # Pinging
+        return self.device_up

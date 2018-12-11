@@ -1,0 +1,15 @@
+Value IFACE (\w+\d+\/\S+)
+Value TX_PWR (\S+)
+Value TX_HA (\S+)
+Value TX_LA (\S+)
+Value TX_HW (\S+)
+Value TX_LW (\S+)
+Value RX_PWR (\S+)
+Value RX_HA (\S+)
+Value RX_LA (\S+)
+Value RX_HW (\S+)
+Value RX_LW (\S+)
+
+Start
+  ^${IFACE}\s+${TX_PWR}\s+${TX_HA}\s+${TX_HW}\s+${TX_LW}\s+${TX_LA}\s+ -> Record
+
