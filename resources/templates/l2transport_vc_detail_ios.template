@@ -1,0 +1,4 @@
+Value LOCAL_INTERFACE (\w+\d+\/\S+)
+
+Start
+  ^Local interface: ${LOCAL_INTERFACE}((\s(\w+))+,?)+-> Record

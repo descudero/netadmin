@@ -7,6 +7,7 @@ import sys
 import time
 import select
 import paramiko
+import textfsm
 
 
 class BaseDevice(object):
@@ -78,3 +79,9 @@ class BaseDevice(object):
         self.config = self.send_command(connection, Acommand, self.hostname, timeout=10)
         self.close(connection)
         return self.config
+
+    def load_template(self, template_name):
+        if not "template" in template_name:
+            template_name += ".template"
+        parser = textfsm.TextFSM(open("./resources/templates/" + template_name))
+        return parser

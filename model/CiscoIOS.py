@@ -99,7 +99,7 @@ class CiscoIOS(Parent):
         return self.service_instances[interface + ":" + service_instance]
 
     def set_pseudo_wire_class(self):
-        print("set set_pseudo_wire_class ip self" + self.ip)
+
         self.pseudo_wire_class = {}
         command = "show run | s pseudowire-class"
         connection = self.connect()
@@ -1573,3 +1573,10 @@ class CiscoIOS(Parent):
             interface_dict["ip_device"] = self.ip
             interface_data_list.append(interface_dict)
         return interface_data_list
+
+    def set_interfaces_transciever_optics(self):
+        parser = self.load_template("transciever_ios")
+        command = "show interfaces trans "
+        connection = self.connect()
+        output = connection.send_command(command)
+        trasnciever_data = parser.ParseText(output)

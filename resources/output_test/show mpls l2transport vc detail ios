@@ -1,0 +1,79 @@
+Local interface: Gi0/0/4 up, line protocol up, Eth VLAN 3481 up
+  Interworking type is Ethernet
+  Destination address: 172.17.26.3, VC ID: 11865, VC status: up
+    Output interface: Te0/2/1, imposed label stack {16426 1307}
+    Preferred path: not configured
+    Default path: active
+    Next hop: 172.16.20.57
+  Create time: 41w0d, last status change time: 17w3d
+    Last label FSM state change time: 17w3d
+  Signaling protocol: LDP, peer 172.17.26.3:0 up
+    Targeted Hello: 172.16.30.1(LDP Id) -> 172.17.26.3, LDP is UP
+    Graceful restart: configured and enabled
+    Non stop routing: not configured and not enabled
+    Status TLV support (local/remote)   : enabled/supported
+      LDP route watch                   : enabled
+      Label/status state machine        : established, LruRru
+      Last local dataplane   status rcvd: No fault
+      Last BFD dataplane     status rcvd: Not sent
+      Last BFD peer monitor  status rcvd: No fault
+      Last local AC  circuit status rcvd: No fault
+      Last local AC  circuit status sent: No fault
+      Last local PW i/f circ status rcvd: No fault
+      Last local LDP TLV     status sent: No fault
+      Last remote LDP TLV    status rcvd: No fault
+      Last remote LDP ADJ    status rcvd: No fault
+    MPLS VC labels: local 1664, remote 1307
+    Group ID: local 10, remote 23
+    MTU: local 9216, remote 9216
+    Remote interface description: ORANGE_PHILLIS_MORRIS_CRUS00010193- E-LINE
+  Sequencing: receive disabled, send disabled
+  Control Word: On (configured: autosense)
+  SSO Descriptor: 172.17.26.3/11865, local label: 1664
+  Dataplane:
+    SSM segment/switch IDs: 550642/213354 (used), PWID: 96
+  VC statistics:
+    transit packet totals: receive 531981220, send 614482797
+    transit byte totals:   receive 153357087110, send 628062372023
+    transit packet drops:  receive 0, seq error 0, send 0
+
+Local interface: Te0/2/0 up, line protocol up, Eth VLAN 3524 up
+  Interworking type is Ethernet
+  Destination address: 172.17.24.28, VC ID: 504352401, VC status: up
+    Output interface: Te0/2/1, imposed label stack {16024 1348}
+    Preferred path: Tunnel50620,  no route
+    Default path: active
+    Next hop: 172.16.20.57
+  Create time: 1w6d, last status change time: 1w6d
+    Last label FSM state change time: 1w6d
+  Signaling protocol: LDP, peer 172.17.24.28:0 up
+    Targeted Hello: 172.16.30.1(LDP Id) -> 172.17.24.28, LDP is UP
+    Graceful restart: configured and enabled
+    Non stop routing: not configured and not enabled
+    Status TLV support (local/remote)   : enabled/supported
+      LDP route watch                   : enabled
+      Label/status state machine        : established, LruRru
+      Last local dataplane   status rcvd: No fault
+      Last BFD dataplane     status rcvd: Not sent
+      Last BFD peer monitor  status rcvd: No fault
+      Last local AC  circuit status rcvd: No fault
+      Last local AC  circuit status sent: No fault
+      Last local PW i/f circ status rcvd: No fault
+      Last local LDP TLV     status sent: No fault
+      Last remote LDP TLV    status rcvd: No fault
+      Last remote LDP ADJ    status rcvd: No fault
+    MPLS VC labels: local 286, remote 1348
+    Group ID: local 27, remote 30
+    MTU: local 9216, remote 9216
+    Remote interface description: INTERNET_HN
+  Sequencing: receive disabled, send disabled
+  Control Word: On (configured: autosense)
+  SSO Descriptor: 172.17.24.28/504352401, local label: 286
+  Dataplane:
+    SSM segment/switch IDs: 165727/67422 (used), PWID: 228
+  VC statistics:
+    transit packet totals: receive 805582161461, send 247254442579
+    transit byte totals:   receive 192299006511518, send 236960774486471
+    transit packet drops:  receive 0, seq error 0, send 0
+
+
