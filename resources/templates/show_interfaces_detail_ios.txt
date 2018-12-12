@@ -1,0 +1,1155 @@
+GigabitEthernet0/0/0 is administratively down, line protocol is down
+  Hardware is A900-IMA8S1Z, address is 1cde.a7a7.0400 (bia 1cde.a7a7.0400)
+  Description: Raisecom-UFV
+  MTU 9216 bytes, BW 1000000 Kbit/sec, DLY 10 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive not set
+  Full Duplex, 1000Mbps, link type is auto, media type is T
+  output flow-control is unsupported, input flow-control is unsupported
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  30 second input rate 0 bits/sec, 0 packets/sec
+  30 second output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 0 multicast, 0 pause input
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+GigabitEthernet0/0/1 is up, line protocol is up
+  Hardware is A900-IMA8S1Z, address is 1cde.a7a7.0401 (bia 1cde.a7a7.0401)
+  Description: Raisecom-UFVP__FUJITSU_CRPA02090054
+  MTU 9216 bytes, BW 1000000 Kbit/sec, DLY 10 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive not set
+  Full Duplex, 1000Mbps, link type is auto, media type is LX
+  output flow-control is unsupported, input flow-control is on
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input never, output 00:00:07, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  30 second input rate 115000 bits/sec, 60 packets/sec
+  30 second output rate 0 bits/sec, 0 packets/sec
+     473115037 packets input, 104242234687 bytes, 0 no buffer
+     Received 522519 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 237385980 multicast, 0 pause input
+     224285742 packets output, 50121720352 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+GigabitEthernet0/0/2 is up, line protocol is up
+  Hardware is A900-IMA8S1Z, address is 1cde.a7a7.0402 (bia 1cde.a7a7.0402)
+  MTU 9216 bytes, BW 1000000 Kbit/sec, DLY 10 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive not set
+  Full Duplex, 1000Mbps, link type is auto, media type is T
+  output flow-control is unsupported, input flow-control is on
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input never, output 00:00:28, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  30 second input rate 3000 bits/sec, 6 packets/sec
+  30 second output rate 27000 bits/sec, 42 packets/sec
+     139579597 packets input, 24888344210 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 86045 multicast, 0 pause input
+     185783935 packets output, 21420180580 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+GigabitEthernet0/0/3 is up, line protocol is up
+  Hardware is A900-IMA8S1Z, address is 1cde.a7a7.0403 (bia 1cde.a7a7.0403)
+  Description: NNI_SW_TELLABS_VICTORIA_PLAZA
+  MTU 9216 bytes, BW 1000000 Kbit/sec, DLY 10 usec,
+     reliability 255/255, txload 67/255, rxload 15/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Full Duplex, 1000Mbps, link type is auto, media type is LX
+  output flow-control is unsupported, input flow-control is on
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input never, output 00:00:16, output hang never
+  Last clearing of "show interface" counters 5d19h
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 862
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  30 second input rate 61756000 bits/sec, 18822 packets/sec
+  30 second output rate 265422000 bits/sec, 28378 packets/sec
+     6683059915 packets input, 3297111622535 bytes, 0 no buffer
+     Received 78608 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 360644 multicast, 0 pause input
+     8556578428 packets output, 9571524183756 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+GigabitEthernet0/0/4 is up, line protocol is up
+  Hardware is A900-IMA8S1Z, address is 1cde.a7a7.0404 (bia 1cde.a7a7.0404)
+  Description: ISCOM2900_DIG_UFINET_VP_P4
+  MTU 9216 bytes, BW 1000000 Kbit/sec, DLY 10 usec,
+     reliability 255/255, txload 10/255, rxload 134/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Full Duplex, 1000Mbps, link type is auto, media type is LX
+  output flow-control is unsupported, input flow-control is on
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input never, output 00:00:22, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 2800727
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  30 second input rate 525805000 bits/sec, 219857 packets/sec
+  30 second output rate 41442000 bits/sec, 9893 packets/sec
+     366283107296 packets input, 111003646395858 bytes, 0 no buffer
+     Received 283407 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 962858 multicast, 0 pause input
+     12454195697 packets output, 8532907400659 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+GigabitEthernet0/0/5 is up, line protocol is up
+  Hardware is A900-IMA8S1Z, address is 1cde.a7a7.0405 (bia 1cde.a7a7.0405)
+  Description: INTERNET_PANAMA DIS-SW-C3750X-ITX_Iternet_Nap Gi1/0/22
+  MTU 9216 bytes, BW 1000000 Kbit/sec, DLY 10 usec,
+     reliability 255/255, txload 174/255, rxload 24/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Full Duplex, 1000Mbps, link type is auto, media type is T
+  output flow-control is unsupported, input flow-control is on
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input never, output 00:00:16, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 12160633
+  Queueing strategy: Class-based queueing
+  Output queue: 0/40 (size/max)
+  30 second input rate 96190000 bits/sec, 45807 packets/sec
+  30 second output rate 683465000 bits/sec, 87417 packets/sec
+     56647168630 packets input, 16908526107373 bytes, 0 no buffer
+     Received 5100 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 711300 multicast, 0 pause input
+     93368823574 packets output, 87340488289947 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+GigabitEthernet0/0/6 is up, line protocol is up
+  Hardware is A900-IMA8S1Z, address is 1cde.a7a7.0406 (bia 1cde.a7a7.0406)
+  Description: LIBERTY_POR_PANAM
+  MTU 9216 bytes, BW 1000000 Kbit/sec, DLY 10 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive not set
+  Full Duplex, 1000Mbps, link type is auto, media type is T
+  output flow-control is unsupported, input flow-control is on
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input never, output 00:00:09, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 1000 bits/sec, 2 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     5150771 packets input, 414067870 bytes, 0 no buffer
+     Received 6 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 3228199 multicast, 0 pause input
+     2286636 packets output, 476860749 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+GigabitEthernet0/0/7 is up, line protocol is up
+  Hardware is A900-IMA8S1Z, address is 1cde.a7a7.0407 (bia 1cde.a7a7.0407)
+  Description: TEMPORAL_HACIA_SW-DISTRIBUCION_RAISECOM_10.237.1.1_P1
+  MTU 9216 bytes, BW 1000000 Kbit/sec, DLY 10 usec,
+     reliability 255/255, txload 25/255, rxload 25/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Full Duplex, 1000Mbps, link type is auto, media type is LX
+  output flow-control is unsupported, input flow-control is on
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input never, output 00:00:21, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  30 second input rate 98729000 bits/sec, 8137 packets/sec
+  30 second output rate 98725000 bits/sec, 8135 packets/sec
+     17163139304 packets input, 26034822045170 bytes, 0 no buffer
+     Received 283423 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 962921 multicast, 0 pause input
+     17161948682 packets output, 26034597305686 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+TenGigabitEthernet0/0/8 is up, line protocol is up
+  Hardware is A900-IMA8S1Z, address is 1cde.a7a7.0408 (bia 1cde.a7a7.0408)
+  Description: TO_RO-CRZ-SAC1_TE0/2/1_TERCER-ENLACE
+  Internet address is 172.16.27.42/30
+  MTU 9216 bytes, BW 10000000 Kbit/sec, DLY 10 usec,
+     reliability 255/255, txload 7/255, rxload 126/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Full Duplex, 10000Mbps, link type is force-up, media type is SFP-ER
+  output flow-control is unsupported, input flow-control is on
+  Asymmetric Carrier-Delay Up Timer is 2 sec
+  Asymmetric Carrier-Delay Down Timer is 0 msec
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 00:00:07, output 00:00:00, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: Class-based queueing
+  Output queue: 0/40 (size/max)
+  30 second input rate 4971233000 bits/sec, 548497 packets/sec
+  30 second output rate 283486000 bits/sec, 56424 packets/sec
+     868289531119 packets input, 930804344643980 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 1085411 multicast, 0 pause input
+     89231184193 packets output, 54909999778495 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+TenGigabitEthernet0/1/0 is up, line protocol is up
+  Hardware is A900-IMA2Z, address is 1cde.a7a7.0409 (bia 1cde.a7a7.0409)
+  Description: TO_RO-HUB-CER1_TE0/0/8
+  Internet address is 172.16.27.10/30
+  MTU 9216 bytes, BW 10000000 Kbit/sec, DLY 10 usec,
+     reliability 255/255, txload 5/255, rxload 15/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Full Duplex, 10000Mbps, link type is force-up, media type is SFP-LR
+  output flow-control is unsupported, input flow-control is on
+  Asymmetric Carrier-Delay Up Timer is 2 sec
+  Asymmetric Carrier-Delay Down Timer is 0 msec
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 00:00:13, output 00:00:00, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/2618/0 (size/max/drops/flushes); Total output drops: 61852
+  Queueing strategy: Class-based queueing
+  Output queue: 0/40 (size/max)
+  30 second input rate 594465000 bits/sec, 130483 packets/sec
+  30 second output rate 209986000 bits/sec, 41278 packets/sec
+     131864843383 packets input, 67406620411221 bytes, 0 no buffer
+     Received 2 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 1003671 multicast, 0 pause input
+     83974855837 packets output, 78615992224360 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+TenGigabitEthernet0/1/1 is up, line protocol is up
+  Hardware is A900-IMA2Z, address is 1cde.a7a7.040a (bia 1cde.a7a7.040a)
+  Description: TO_RO-CRZ-SAC1_TE0/1/0_PRINCIPAL
+  Internet address is 172.16.27.1/30
+  MTU 9216 bytes, BW 10000000 Kbit/sec, DLY 10 usec,
+     reliability 255/255, txload 3/255, rxload 42/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Full Duplex, 10000Mbps, link type is force-up, media type is SFP-ER
+  output flow-control is unsupported, input flow-control is on
+  Asymmetric Carrier-Delay Up Timer is 2 sec
+  Asymmetric Carrier-Delay Down Timer is 0 msec
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 00:00:03, output 00:00:00, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/1056/0 (size/max/drops/flushes); Total output drops: 16251
+  Queueing strategy: Class-based queueing
+  Output queue: 0/40 (size/max)
+  30 second input rate 1672973000 bits/sec, 197105 packets/sec
+  30 second output rate 149953000 bits/sec, 20284 packets/sec
+     299184459447 packets input, 325326923102367 bytes, 0 no buffer
+     Received 3 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 871099 multicast, 0 pause input
+     90774073501 packets output, 60135261387875 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+TenGigabitEthernet0/2/0 is up, line protocol is up
+  Hardware is A900-IMA2Z, address is 1cde.a7a7.0412 (bia 1cde.a7a7.0412)
+  Description: TO_RO-CGA-CMY1_TE0/2/0
+  Internet address is 172.16.26.74/30
+  MTU 9202 bytes, BW 10000000 Kbit/sec, DLY 10 usec,
+     reliability 255/255, txload 32/255, rxload 9/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Full Duplex, 10000Mbps, link type is force-up, media type is SFP-LR
+  output flow-control is unsupported, input flow-control is on
+  Asymmetric Carrier-Delay Up Timer is 2 sec
+  Asymmetric Carrier-Delay Down Timer is 0 msec
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 00:00:11, output 00:00:01, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/1112/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: Class-based queueing
+  Output queue: 0/40 (size/max)
+  30 second input rate 391362000 bits/sec, 155659 packets/sec
+  30 second output rate 1285237000 bits/sec, 408825 packets/sec
+     148204207426 packets input, 50780292487933 bytes, 0 no buffer
+     Received 38 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     76 input errors, 76 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 1039333 multicast, 0 pause input
+     641955054582 packets output, 254639465453673 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+TenGigabitEthernet0/2/1 is up, line protocol is up
+  Hardware is A900-IMA2Z, address is 1cde.a7a7.0413 (bia 1cde.a7a7.0413)
+  Description: TO_RO-CRZ-SAC1_TE0/2/0_SECUNDARIA
+  Internet address is 172.16.27.5/30
+  MTU 9216 bytes, BW 10000000 Kbit/sec, DLY 10 usec,
+     reliability 255/255, txload 19/255, rxload 32/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Full Duplex, 10000Mbps, link type is force-up, media type is SFP-ER
+  output flow-control is unsupported, input flow-control is on
+  Asymmetric Carrier-Delay Up Timer is 2 sec
+  Asymmetric Carrier-Delay Down Timer is 0 msec
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 00:00:09, output 00:00:00, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: Class-based queueing
+  Output queue: 0/40 (size/max)
+  30 second input rate 1293421000 bits/sec, 138306 packets/sec
+  30 second output rate 745149000 bits/sec, 277543 packets/sec
+     200255158533 packets input, 222437406035368 bytes, 0 no buffer
+     Received 3 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 871100 multicast, 0 pause input
+     411223598978 packets output, 147519572561072 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+TenGigabitEthernet0/3/0 is up, line protocol is up
+  Hardware is A900-IMA2Z, address is 1cde.a7a7.041b (bia 1cde.a7a7.041b)
+  Description: TO_RO-HUB-CER1_TE0/2/1_PATH1
+  Internet address is 172.16.27.14/30
+  MTU 9216 bytes, BW 10000000 Kbit/sec, DLY 10 usec,
+     reliability 255/255, txload 80/255, rxload 13/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Full Duplex, 10000Mbps, link type is force-up, media type is SFP-LR
+  output flow-control is unsupported, input flow-control is on
+  Asymmetric Carrier-Delay Up Timer is 2 sec
+  Asymmetric Carrier-Delay Down Timer is 0 msec
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 00:00:25, output 00:00:02, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/2644/0 (size/max/drops/flushes); Total output drops: 15558975
+  Queueing strategy: Class-based queueing
+  Output queue: 0/40 (size/max)
+  30 second input rate 536633000 bits/sec, 84498 packets/sec
+  30 second output rate 3150285000 bits/sec, 562081 packets/sec
+     100690022251 packets input, 76591813788596 bytes, 0 no buffer
+     Received 3 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 1136749 multicast, 0 pause input
+     611741618185 packets output, 509692715320193 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+TenGigabitEthernet0/3/1 is up, line protocol is up
+  Hardware is A900-IMA2Z, address is 1cde.a7a7.041c (bia 1cde.a7a7.041c)
+  Description: TO_RO-CRZ-SAC1_TE0/5/0_CUARTO-ENLACE
+  Internet address is 172.16.27.50/30
+  MTU 9216 bytes, BW 10000000 Kbit/sec, DLY 10 usec,
+     reliability 255/255, txload 1/255, rxload 99/255
+  Encapsulation ARPA, loopback not set
+  Keepalive not set
+  Full Duplex, 10000Mbps, link type is force-up, media type is SFP-LR
+  output flow-control is unsupported, input flow-control is on
+  Asymmetric Carrier-Delay Up Timer is 2 sec
+  Asymmetric Carrier-Delay Down Timer is 0 msec
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 00:00:06, output 00:00:08, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/763/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: Class-based queueing
+  Output queue: 0/40 (size/max)
+  30 second input rate 3897612000 bits/sec, 622616 packets/sec
+  30 second output rate 24000 bits/sec, 43 packets/sec
+     664918148161 packets input, 629435754912201 bytes, 0 no buffer
+     Received 3 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 873589 multicast, 0 pause input
+     703622333 packets output, 195089553382 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+TenGigabitEthernet0/4/0 is up, line protocol is up
+  Hardware is A900-IMA2Z, address is 1cde.a7a7.0424 (bia 1cde.a7a7.0424)
+  Description: NNI_VP-ASR903-C1,Te0/2/0_(172.17.27.1)
+  Internet address is 172.18.28.65/30
+  MTU 9216 bytes, BW 10000000 Kbit/sec, DLY 10 usec,
+     reliability 255/255, txload 64/255, rxload 37/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Full Duplex, 10000Mbps, link type is force-up, media type is SFP-LR
+  output flow-control is unsupported, input flow-control is on
+  Asymmetric Carrier-Delay Up Timer is 2 sec
+  Asymmetric Carrier-Delay Down Timer is 0 msec
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 00:00:29, output 00:00:00, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/1955/0 (size/max/drops/flushes); Total output drops: 2935
+  Queueing strategy: Class-based queueing
+  Output queue: 0/40 (size/max)
+  30 second input rate 1470675000 bits/sec, 484361 packets/sec
+  30 second output rate 2542231000 bits/sec, 407345 packets/sec
+     666184365605 packets input, 258980967988621 bytes, 0 no buffer
+     Received 20 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 1005315 multicast, 0 pause input
+     498287959446 packets output, 433809394474206 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+TenGigabitEthernet0/4/1 is up, line protocol is up
+  Hardware is A900-IMA2Z, address is 1cde.a7a7.0425 (bia 1cde.a7a7.0425)
+  Description: TO_RO-CGA-CMY1_TE0/3/1
+  Internet address is 172.16.27.17/30
+  MTU 9202 bytes, BW 10000000 Kbit/sec, DLY 10 usec,
+     reliability 255/255, txload 41/255, rxload 2/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Full Duplex, 10000Mbps, link type is force-up, media type is SFP-LR
+  output flow-control is unsupported, input flow-control is on
+  Asymmetric Carrier-Delay Up Timer is 2 sec
+  Asymmetric Carrier-Delay Down Timer is 0 msec
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 00:00:19, output 00:00:02, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/2349/0 (size/max/drops/flushes); Total output drops: 107099
+  Queueing strategy: Class-based queueing
+  Output queue: 0/40 (size/max)
+  30 second input rate 114598000 bits/sec, 50656 packets/sec
+  30 second output rate 1617949000 bits/sec, 286133 packets/sec
+     58702805287 packets input, 30211827691806 bytes, 0 no buffer
+     Received 29 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     204 input errors, 204 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 1016730 multicast, 0 pause input
+     237745974037 packets output, 193142027388544 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+TenGigabitEthernet0/5/0 is up, line protocol is up
+  Hardware is A900-IMA2Z, address is 1cde.a7a7.042d (bia 1cde.a7a7.042d)
+  Description: TO-RO-ESC-COR9K_Te0/1/0/4
+  MTU 9216 bytes, BW 10000000 Kbit/sec, DLY 10 usec,
+     reliability 255/255, txload 117/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Full Duplex, 10000Mbps, link type is force-up, media type is SFP-LR
+  output flow-control is unsupported, input flow-control is on
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input never, output 00:00:21, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 1000 bits/sec, 2 packets/sec
+  5 minute output rate 4618998000 bits/sec, 513568 packets/sec
+     5351158 packets input, 383837328 bytes, 0 no buffer
+     Received 335 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 83021 multicast, 0 pause input
+     781108278060 packets output, 856567832124375 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+TenGigabitEthernet0/5/1 is down, line protocol is down
+  Hardware is A900-IMA2Z, address is 1cde.a7a7.042e (bia 1cde.a7a7.042e)
+  Description: REDUNDANCIA_CONELECTRICAS_ESCAZU_ASR9K_NAP
+  MTU 9216 bytes, BW 10000000 Kbit/sec, DLY 10 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Full Duplex, 10000Mbps, link type is force-up, media type is SFP-LR
+  output flow-control is unsupported, input flow-control is on
+  Asymmetric Carrier-Delay Up Timer is 0 msec
+  Asymmetric Carrier-Delay Down Timer is 60 sec
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  30 second input rate 0 bits/sec, 0 packets/sec
+  30 second output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 0 multicast, 0 pause input
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+GigabitEthernet0 is administratively down, line protocol is down
+  Hardware is RP management port, address is 1cde.a7a7.0436 (bia 1cde.a7a7.0436)
+  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Full Duplex, 1000Mbps, link type is auto, media type is RJ45
+  output flow-control is unsupported, input flow-control is unsupported
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 3w3d, output 3w3d, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     166 packets input, 12799 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 0 multicast, 0 pause input
+     8 packets output, 626 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     1 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+Loopback1 is up, line protocol is up
+  Hardware is Loopback
+  Description: <===| MPLS_MANAGEMENT |===>
+  Internet address is 172.16.30.44/32
+  MTU 1514 bytes, BW 8000000 Kbit/sec, DLY 5000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation LOOPBACK, loopback not set
+  Keepalive set (10 sec)
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+Loopback52468 is up, line protocol is up
+  Hardware is Loopback
+  Description: VPLS_LOOPBACK
+  Internet address is 172.16.30.230/32
+  MTU 1514 bytes, BW 8000000 Kbit/sec, DLY 5000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation LOOPBACK, loopback not set
+  Keepalive set (10 sec)
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+MPLS-Remote-Lfa3 is up, line protocol is up
+  Hardware is MPLS-Remote-Lfa
+  Interface is unnumbered. Using address of TenGigabitEthernet0/3/1 (172.16.27.50)
+  MTU 17940 bytes, BW 9 Kbit/sec, DLY 500000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation UNKNOWN, loopback not set
+  Keepalive not set
+  0x8375B1A0 (0x0) type LDP idb 0x82ED2914,39,MP3 out_if 0x79C4E934,21,Te0/3/1 nh 172.16.27.49 topo 0x0 tail 172.16.30.5 specific lbl=281, flags=0x200 adj=0x826C7120(IP),0x0(),0x826CAE60(TAG), path_spec=I/F=0x79C4E934,21,Te0/3/1 nh=172.16.27.49 pfx=172.16.30.5/32 topo/ctx_id=0x0/0 nh_ctx=0 lbl=1048577 client=10
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+MPLS-Remote-Lfa5 is up, line protocol is up
+  Hardware is MPLS-Remote-Lfa
+  Interface is unnumbered. Using address of TenGigabitEthernet0/4/1 (172.16.27.17)
+  MTU 17940 bytes, BW 9 Kbit/sec, DLY 500000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation UNKNOWN, loopback not set
+  Keepalive not set
+  0x8375BEEC (0x0) type LDP idb 0x839860E8,42,MP5 out_if 0x79C5599C,23,Te0/4/1 nh 172.16.27.18 topo 0x0 tail 172.16.30.3 specific lbl=24085, flags=0x200 adj=0x826CACA0(IP),0x0(),0x826C72E0(TAG), path_spec=I/F=0x79C5599C,23,Te0/4/1 nh=172.16.27.18 pfx=172.16.30.3/32 topo/ctx_id=0x0/0 nh_ctx=0 lbl=1048577 client=10
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+MPLS-Remote-Lfa6 is up, line protocol is up
+  Hardware is MPLS-Remote-Lfa
+  Interface is unnumbered. Using address of TenGigabitEthernet0/4/1 (172.16.27.17)
+  MTU 17940 bytes, BW 9 Kbit/sec, DLY 500000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation UNKNOWN, loopback not set
+  Keepalive not set
+  0x8375C704 (0x0) type LDP idb 0x83383904,43,MP6 out_if 0x79C5599C,23,Te0/4/1 nh 172.16.27.18 topo 0x0 tail 172.16.30.43 specific lbl=24107, flags=0x200 adj=0x826CD6A0(IP),0x0(),0x826CD160(TAG), path_spec=I/F=0x79C5599C,23,Te0/4/1 nh=172.16.27.18 pfx=172.16.30.43/32 topo/ctx_id=0x0/0 nh_ctx=0 lbl=1048577 client=10
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+Tunnel1 is up, line protocol is up
+  Hardware is Tunnel
+  Description: FRR_LP_VPL-HUB
+  Interface is unnumbered. Using address of Loopback1 (172.16.30.44)
+  MTU 17936 bytes, BW 100 Kbit/sec, DLY 50000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation TUNNEL, loopback not set
+  Keepalive not set
+  Tunnel linestate evaluation up
+  Tunnel source 172.16.30.44, destination 172.16.30.45
+  Tunnel protocol/transport Label Switching
+  Tunnel transmit bandwidth 8000 (kbps)
+  Tunnel receive bandwidth 8000 (kbps)
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters 3w3d
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+Tunnel2 is up, line protocol is up
+  Hardware is Tunnel
+  Description: FRR_LP_VPL-PLI
+  Interface is unnumbered. Using address of Loopback1 (172.16.30.44)
+  MTU 17936 bytes, BW 100 Kbit/sec, DLY 50000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation TUNNEL, loopback not set
+  Keepalive not set
+  Tunnel linestate evaluation up
+  Tunnel source 172.16.30.44, destination 172.16.30.4
+  Tunnel protocol/transport Label Switching
+  Tunnel transmit bandwidth 8000 (kbps)
+  Tunnel receive bandwidth 8000 (kbps)
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters 3w3d
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+Tunnel3 is up, line protocol is up
+  Hardware is Tunnel
+  Description: FRR_LP_VPL-CRZ
+  Interface is unnumbered. Using address of Loopback1 (172.16.30.44)
+  MTU 17940 bytes, BW 100 Kbit/sec, DLY 50000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation TUNNEL, loopback not set
+  Keepalive not set
+  Tunnel linestate evaluation up
+  Tunnel source 172.16.30.44, destination 172.16.30.9
+  Tunnel protocol/transport Label Switching
+  Tunnel transmit bandwidth 8000 (kbps)
+  Tunnel receive bandwidth 8000 (kbps)
+  Last input never, output 6d12h, output hang never
+  Last clearing of "show interface" counters 3w3d
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     7 packets output, 1092 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+Tunnel5071 is up, line protocol is up
+  Hardware is Tunnel
+  Description: TE_CONELECTRICAS_BACKUP
+  Interface is unnumbered. Using address of Loopback1 (172.16.30.44)
+  MTU 17936 bytes, BW 100 Kbit/sec, DLY 50000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation TUNNEL, loopback not set
+  Keepalive not set
+  Tunnel linestate evaluation up
+  Tunnel source 172.16.30.44, destination 172.16.30.5
+  Tunnel protocol/transport Label Switching
+  Tunnel transmit bandwidth 8000 (kbps)
+  Tunnel receive bandwidth 8000 (kbps)
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters 3w3d
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+Tunnel50701 is up, line protocol is up
+  Hardware is Tunnel
+  Description: VPL-CRZ-NAP3
+  Interface is unnumbered. Using address of Loopback1 (172.16.30.44)
+  MTU 17936 bytes, BW 100 Kbit/sec, DLY 50000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation TUNNEL, loopback not set
+  Keepalive not set
+  Tunnel linestate evaluation up
+  Tunnel source 172.16.30.44, destination 172.16.30.1
+  Tunnel protocol/transport Label Switching
+  Tunnel transmit bandwidth 8000 (kbps)
+  Tunnel receive bandwidth 8000 (kbps)
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters 3w3d
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+Tunnel50702 is up, line protocol is up
+  Hardware is Tunnel
+  Description: ORANGE_PACR
+  Interface is unnumbered. Using address of Loopback1 (172.16.30.44)
+  MTU 17936 bytes, BW 100 Kbit/sec, DLY 50000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation TUNNEL, loopback not set
+  Keepalive not set
+  Tunnel linestate evaluation up
+  Tunnel source 172.16.30.44, destination 172.19.24.25
+  Tunnel protocol/transport Label Switching
+  Tunnel transmit bandwidth 8000 (kbps)
+  Tunnel receive bandwidth 8000 (kbps)
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters 3w3d
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+Tunnel50710 is up, line protocol is up
+  Hardware is Tunnel
+  Description: TE_IFX_PA-US
+  Interface is unnumbered. Using address of Loopback1 (172.16.30.44)
+  MTU 17936 bytes, BW 100 Kbit/sec, DLY 50000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation TUNNEL, loopback not set
+  Keepalive not set
+  Tunnel linestate evaluation up
+  Tunnel source 172.16.30.44, destination 172.16.30.11
+  Tunnel protocol/transport Label Switching
+  Tunnel transmit bandwidth 8000 (kbps)
+  Tunnel receive bandwidth 8000 (kbps)
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters 3w3d
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+Tunnel50720 is up, line protocol is up
+  Hardware is Tunnel
+  Description: Yota hacia el NAP
+  Interface is unnumbered. Using address of Loopback1 (172.16.30.44)
+  MTU 17936 bytes, BW 100 Kbit/sec, DLY 50000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation TUNNEL, loopback not set
+  Keepalive not set
+  Tunnel linestate evaluation up
+  Tunnel source 172.16.30.44, destination 172.16.30.5
+  Tunnel protocol/transport Label Switching
+  Tunnel transmit bandwidth 8000 (kbps)
+  Tunnel receive bandwidth 8000 (kbps)
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters 3w1d
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+Tunnel50730 is up, line protocol is up
+  Hardware is Tunnel
+  Description: VPL_CRZ_CONELECTRICAS
+  Interface is unnumbered. Using address of Loopback1 (172.16.30.44)
+  MTU 17940 bytes, BW 100 Kbit/sec, DLY 50000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation TUNNEL, loopback not set
+  Keepalive not set
+  Tunnel linestate evaluation up
+  Tunnel source 172.16.30.44, destination 172.16.30.9
+  Tunnel protocol/transport Label Switching
+  Tunnel transmit bandwidth 8000 (kbps)
+  Tunnel receive bandwidth 8000 (kbps)
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters 3w3d
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+pseudowire100001 is up
+    MTU 1500 bytes, BW not configured
+    Encapsulation mpls
+    Peer IP 172.17.26.3, VC ID 42018
+    RX
+      224215071 packets 49197720152 bytes 0 drops
+    TX
+      235469417 packets 53032198954 bytes 0 drops
+pseudowire100002 is up
+    MTU 1500 bytes, BW not configured
+    Encapsulation mpls
+    Peer IP 172.17.27.1, VC ID 44086
+    RX
+      185713440 packets 21973246560 bytes 0 drops
+    TX
+      139509141 packets 24874246666 bytes 0 drops
+pseudowire100003 is up
+    MTU 1500 bytes, BW not configured
+    Encapsulation mpls
+    Peer IP 172.19.8.10, VC ID 502370710
+    RX
+      0 packets 0 bytes 0 drops
+    TX
+      0 packets 0 bytes 0 drops
+pseudowire100004 is up
+    MTU 1500 bytes, BW not configured
+    Encapsulation mpls
+    Peer IP 172.19.20.17, VC ID 44037
+    RX
+      0 packets 0 bytes 0 drops
+    TX
+      0 packets 0 bytes 0 drops
+pseudowire100005 is up
+    MTU 1500 bytes, BW not configured
+    Encapsulation mpls
+    Peer IP 172.17.26.8, VC ID 44042
+    RX
+      0 packets 0 bytes 0 drops
+    TX
+      0 packets 0 bytes 0 drops
+pseudowire100006 is up
+    MTU 1500 bytes, BW not configured
+    Encapsulation mpls
+    Peer IP 172.17.26.5, VC ID 44043
+    RX
+      0 packets 0 bytes 0 drops
+    TX
+      0 packets 0 bytes 0 drops
+pseudowire100011 is up
+    MTU 1500 bytes, BW not configured
+    Encapsulation mpls
+    Peer IP 172.16.30.40, VC ID 44056
+    RX
+      206636228 packets 174013792985 bytes 0 drops
+    TX
+      243778813 packets 148541354765 bytes 0 drops
+pseudowire100012 is up
+    MTU 1500 bytes, BW not configured
+    Encapsulation mpls
+    Peer IP 172.17.26.8, VC ID 13529
+    RX
+      50378147 packets 15264524398 bytes 0 drops
+    TX
+      37123867 packets 15858664434 bytes 0 drops
+pseudowire100013 is up
+    MTU 1500 bytes, BW not configured
+    Encapsulation mpls
+    Peer IP 172.19.8.14, VC ID 502366201
+    RX
+      70614101 packets 6284874191 bytes 0 drops
+    TX
+      59329748 packets 5277990850 bytes 0 drops
+pseudowire100014 is up
+    MTU 1500 bytes, BW not configured
+    Encapsulation mpls
+    Peer IP 172.17.22.54, VC ID 44069
+    RX
+      357239 packets 23213154 bytes 0 drops
+    TX
+      148 packets 10334 bytes 0 drops
+pseudowire100015 is up
+    MTU 1500 bytes, BW not configured
+    Encapsulation mpls
+    Peer IP 172.16.30.34, VC ID 44076
+    RX
+      0 packets 0 bytes 0 drops
+    TX
+      0 packets 0 bytes 0 drops
+pseudowire100016 is up
+    MTU 1500 bytes, BW not configured
+    Encapsulation mpls
+    Peer IP 172.19.8.19, VC ID 502376001
+    RX
+      2 packets 3028 bytes 0 drops
+    TX
+      0 packets 0 bytes 0 drops
+pseudowire100017 is up
+    MTU 1500 bytes, BW not configured
+    Encapsulation mpls
+    Peer IP 172.17.26.8, VC ID 13824
+    RX
+      110504188 packets 71398759846 bytes 0 drops
+    TX
+      70556201 packets 41239766580 bytes 0 drops
+pseudowire100018 is up
+    MTU 1500 bytes, BW not configured
+    Encapsulation mpls
+    Peer IP 172.16.30.10, VC ID 44090
+    RX
+      37340828516 packets 42389372665610 bytes 0 drops
+    TX
+      28770141393 packets 13203714502147 bytes 0 drops
+pseudowire100019 is up
+    MTU 1500 bytes, BW not configured
+    Encapsulation mpls
+    Peer IP 172.17.22.54, VC ID 502353801
+    RX
+      0 packets 0 bytes 0 drops
+    TX
+      0 packets 0 bytes 0 drops
+pseudowire100020 is up
+    MTU 1500 bytes, BW not configured
+    Encapsulation mpls
+    Peer IP 172.16.30.1, VC ID 44009
+    RX
+      12456967849 packets 8537087138850 bytes 0 drops
+    TX
+      366282784673 packets 111003695715336 bytes 0 drops
+pseudowire100021 is up
+    MTU 1500 bytes, BW not configured
+    Encapsulation mpls
+    Peer IP 172.16.30.1, VC ID 44010
+    RX
+      47887813694 packets 51930712689820 bytes 0 drops
+    TX
+      56549446818 packets 16884203904856 bytes 0 drops
+pseudowire100022 is up
+    MTU 1500 bytes, BW not configured
+    Encapsulation mpls
+    Peer IP 172.16.30.42, VC ID 506327101
+    RX
+      517720 packets 33134280 bytes 0 drops
+    TX
+      0 packets 0 bytes 0 drops
+pseudowire100023 is up
+    MTU 1500 bytes, BW not configured
+    Encapsulation mpls
+    Peer IP 172.16.30.5, VC ID 507357801
+    RX
+      44850915035 packets 35176215665215 bytes 0 drops
+    TX
+      97067694 packets 24250630188 bytes 0 drops
+pseudowire100024 is up
+    MTU 1500 bytes, BW not configured
+    Encapsulation mpls
+    Peer IP 172.16.30.34, VC ID 502395101
+    RX
+      641973062 packets 70876189040 bytes 0 drops
+    TX
+      421624 packets 52980206 bytes 0 drops
+pseudowire100025 is up
+    MTU 1500 bytes, BW not configured
+    Encapsulation mpls
+    Peer IP 172.16.30.1, VC ID 7001
+    RX
+      2216208 packets 450198043 bytes 0 drops
+    TX
+      4026347 packets 258210563 bytes 0 drops
+pseudowire100026 is up
+    MTU 1500 bytes, BW not configured
+    Encapsulation mpls
+    Peer IP 172.16.30.1, VC ID 44085
+    RX
+      17161910188 packets 25965970036779 bytes 0 drops
+    TX
+      17161925142 packets 26034640410919 bytes 0 drops
+pseudowire100027 is up
+    MTU 1500 bytes, BW not configured
+    Encapsulation mpls
+    Peer IP 172.16.30.9, VC ID 380701
+    RX
+      485009 packets 44423050 bytes 0 drops
+    TX
+      233 packets 14912 bytes 0 drops
+pseudowire100028 is up
+    MTU 1500 bytes, BW not configured
+    Encapsulation mpls
+    Peer IP 172.16.30.5, VC ID 57396201
+    RX
+      735838929925 packets 804972053908702 bytes 0 drops
+    TX
+      4863922 packets 338812408 bytes 0 drops
+pseudowire100029 is up
+    MTU 1500 bytes, BW not configured
+    Encapsulation mpls
+    Peer IP 172.16.30.5, VC ID 359201
+    RX
+      1519596 packets 113016518 bytes 0 drops
+    TX
+      0 packets 0 bytes 0 drops
+

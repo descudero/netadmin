@@ -1,0 +1,43 @@
+Value Required  INDEX (\w+\d+\/\S+)
+Value LINK_STATE (.+?)
+Value PROTOCOL_STATE (.+?)
+Value MAC_ADDRESS ([a-fA-F0-9]{4}\.[a-fA-F0-9]{4}\.[a-fA-F0-9]{4})
+Value VIA ([a-fA-F0-9]{4}\.[a-fA-F0-9]{4}\.[a-fA-F0-9]{4})
+Value DESCRIPTION (.+?)
+Value MTU (\d+)
+Value SPEED (\S+)
+Value DUPLEX (([Ff]ull|[Aa]uto|[Hh]alf|[Aa]-).*?)
+Value HARDWARE_TYPE ([\w ]+)
+Value MEDIA_TYPE (\S+)
+Value OUTPUT_DROPS (\d+)
+Value INPUT_RATE (\d+)
+Value OUTPUT_RATE (\d+)
+Value INPUT_PACKETS (\d+)
+Value OUTPUT_PACKETS (\d+)
+Value INPUT_ERRORS (\d+)
+Value CRC (\d+)
+Value FRAME (\d+)
+Value OVERRUN (\d+)
+Value IGNORED (\d+)
+Value BW (\d+\s+\w+)
+Value DELAY (\d+\s+\S+)
+
+Start
+    ^\S+\s+is\s+.+?,\s+line\s+protocol.*$$ -> Continue.Record
+    ^${INDEX}\s+is\s+${LINK_STATE},\s+line\s+protocol\s+is\s+${PROTOCOL_STATE}\s*$$
+    ^\s+Hardware\s+is\s+${HARDWARE_TYPE}.+address\s+is\s+${ADDRESS}\s+\(bia\s+${BIA}\)\s*$$
+    ^\s+Description:\s+${DESCRIPTION}\s*$$
+    ^\s+MTU\s+${MTU}.*BW\s+${BW}.*DLY\s+${DELAY},\s*$$
+    ^\s+${DUPLEX},\s+${SPEED},.+\s+{MEDIA_TYPE}is$$
+    ^.*Total output drops:\s+*{OUTPUT_DROPS}\s*$$
+    ^.*input\s+rate\s+${INPUT_RATE}.+${INPUT_PACKETS}.+$$
+    ^.*output\s+rate\s+${OUTPUT_RATE}.+${OUTPUT_PACKETS}.+$$
+    ^
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 0 multicast, 0 pause input
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out

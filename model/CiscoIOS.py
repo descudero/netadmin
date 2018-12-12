@@ -1288,52 +1288,7 @@ class CiscoIOS(Parent):
     def get_log(self, filter=""):
         return self.log
 
-    def save_ospf_adjacencies(self):
-        self.get_platform()
-        self.set_ip_ospf_interfaces()
-        interfaces_index = self.ospf_interfaces.keys()
-        self.set_interfaces_stats(interfaces_index=interfaces_index)
-        db_connection = self.master.connect_mongo()
-        collection = db_connection.ospf_adj
 
-        for interface_index, ospf_interface in self.ospf_interfaces.items():
-            if ("network_id" in ospf_interface):
-                db_result = collection.find_one({'network_id': ospf_interface["network_id"]})
-                if (db_result is None):
-                    collection.insert_one({'network_id': ospf_interface["network_id"],
-                                           'interfaces': [
-                                               {
-                                                   'ip_neighbor': self.ip,
-                                                   'interface_index': interface_index,
-                                                   'mtu': self.interfaces[interface_index].mtu,
-                                                   'ip_interface': ospf_interface['ospf_ip_address'],
-                                                   'network_type': ospf_interface['ospf_net_type'],
-                                                   'device_plattform': self.platform
-
-                                               }
-                                           ]})
-                else:
-                    interfaces_list = db_result["interfaces"]
-                    flag_in_set = False
-                    for interface_data in interfaces_list:
-                        if (interface_data["ip_neighbor"] == self.ip):
-                            flag_in_set = True
-
-                    if (not flag_in_set):
-                        collection.update_one({'network_id': ospf_interface["network_id"]},
-                                              {'$push': {
-                                                  'interfaces':
-                                                      {
-                                                          'ip_neighbor': self.ip,
-                                                          'interface_index': interface_index,
-                                                          'mtu': self.interfaces[interface_index].mtu,
-                                                          'ip_interface': ospf_interface['ospf_ip_address'],
-                                                          'network_type': ospf_interface['ospf_net_type'],
-                                                          'device_plattform': self.platform
-
-                                                      }
-
-                                              }})
 
     def create_policies_bgp_neighbors(self, address_family="ipv4 unicast", country_key="CR", conection_type="CUS"):
         if (hasattr(self, "bgp_neighbors")):
@@ -1396,8 +1351,6 @@ class CiscoIOS(Parent):
                 result += "\n---------------------prefix out ------------------\n\n"
                 result += self.send_command(connection, "show run | i prefix-list " + neighbor["bgp_prefix_out"])
                 result += "\n---------------------------------------\n\n"
-
-        print(result)
 
     def print_bgp_neighbors(self, address_family="ipv4 unicast"):
         if (hasattr(self, "bgp_neighbors")):
@@ -1477,28 +1430,11 @@ class CiscoIOS(Parent):
                 return plattform_name
         self.plattform = plattform
 
-    def set_physical_interfaces(self):
-        interfaces_prefixes = ["Te", "Gi", "Hu"]
-        command = 'show interfaces description  | e "\\\\." '
-        connection = self.connect()
-        show_interfaces = self.send_command(connection, command, self.hostname, timeout=5)
-        interfaces = {}
-        for interface in show_interfaces.split("\n"):
-            interface_data = {}
-            try:
-
-                interface_split = re.sub(" +", " ", interface).split(" ")
-                interface_data["index"] = interface_split[0]
-                interface_data["status"] = interface_split[1]
-                interface_data["protocol"] = interface_split[2]
-                interface_data["description"] = "_".join(interface_split[3:])
-                for prefix in interfaces_prefixes:
-                    if (interface_data["index"].find(prefix) > -1):
-                        interfaces[interface_data["index"]] = interface_data
-            except:
-                pass
-        self.physical_interfaces = interfaces
-        return (self.physical_interfaces)
+    def get_physical_interfaces(self):
+        if (not hasattr(self.interfaces)):
+            self.set_all_interfaces()
+        return {key: interface for key, interface in self.interfaces.items()
+                if "." not in interface["description"]}
 
     def set_inventory(self):
         command = "admin show inventory"
@@ -1542,7 +1478,6 @@ class CiscoIOS(Parent):
 
     def draw_device_hardware(self,x,y):
         self.set_chassis()
-        print(self.chassis.get_slots_summary(side=0))
         master = Tk()
 
         canvas = Canvas(master, width=300, height=1000)
