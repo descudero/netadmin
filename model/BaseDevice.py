@@ -89,6 +89,18 @@ class BaseDevice(object):
         parser = textfsm.TextFSM(open("./resources/templates/" + template_name))
         return parser
 
+    def send_command_and_parse(self, command, template_name, close_connection=True):
+        connection = self.connect()
+        cli_output = self.send_command(connection=connection, command=command)
+        connection.disconnect()
+        parser = self.load_template(template_name=template_name)
+        fsm_results = parser.ParseText(cli_output)
+        header = [column.lower() for column in parser.header]
+        return {row[0]: dict(zip(header, row)) for row in fsm_results}
+
+    def set_jump_gateway(self, ip, protocol):
+        self.jump_gateway = {"ip": ip, "protocol": protocol}
+
     def check_ssh(self):
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         result = sock.connect_ex((self.ip, 22))

@@ -1,26 +1,36 @@
 import ipaddress
 
-
 class InterfaceIOS(object):
-    def __init__(self, parent_device, index):
+    def __init__(self, parent_device, parse_data):
         self.parent_device = parent_device
-        self.index = index
         self.set_initial_stats()
-        pass
+        for key, value in parse_data.items():
+            if not value == '':
+                setattr(self, key, value)
+        self.utilization_in = 0 if self.bw == 0 else round(float(self.input_rate) / (float(self.bw * 10)), 2)
+        self.utilization_out = 0 if self.bw == 0 else round(float(self.output_rate) / (float(self.bw * 10)), 2)
+
+        self.ip = ipaddress.ip_address(self.ip)
 
     def set_initial_stats(self):
-        self.phy_state = "DOWN"
+        self.index = ""
+        self.link_state = "DOWN"
         self.protocol_state = "DOWN"
         self.hardware_type = "NA"
         self.mac_address = "aaaa.aaaa.aaaa"
+        self.bia = "aaaa.aaaa.aaaa"
         self.description = "null"
+        self.media_type = "null"
         self.mtu = "1500"
-        self.bw = 1
+        self.bw = 0
         self.duplex = "NA"
-        self.last_clear_counters = "0"
+        self.delay = "NA"
+        self.last_reset = "0"
         self.output_drops = "0"
-        self.rate_in = "0"
-        self.rate_out = "0"
+        self.input_rate = "0"
+        self.output_rate = "0"
+        self.input_packets = "0"
+        self.output_packets = "0"
         self.runts = "0"
         self.giants = "0"
         self.throttles = "0"
@@ -123,8 +133,7 @@ class InterfaceIOS(object):
             if linea.find('Last clearing of ') != -1:
                 self.last_clear_counters = linea.split(" counters ")[1]
 
-        self.utilization_in = 0 if self.bw == 0 else round(float(self.rate_in) / (float(self.bw * 10)), 2)
-        self.utilization_out = 0 if self.bw == 0 else round(float(self.rate_out) / (float(self.bw * 10)), 2)
+
 
     def set_stats(self, connection, command="show interface "):
         show_interface_output = connection.send_command(command + self.index)
@@ -181,4 +190,7 @@ class InterfaceIOS(object):
         return interface_string
 
     def __str__(self):
-        return self.index + " " + self.phy_state + " "
+        return self.index + " " + self.link_state + " "
+
+    def __repr__(self):
+        return self.index + " " + self.description + " " + self.link_state + " "

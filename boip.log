@@ -4,3 +4,141 @@
 2018-12-06 11:01:05,738 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
 2018-12-06 11:01:14,529 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.3 # 1 @
 2018-12-06 11:01:21,505 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:30:33,356 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:30:33,356 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:30:58,517 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:30:58,517 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:30:58,517 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces detail @
+2018-12-12 17:30:58,517 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces detail @
+2018-12-12 17:32:01,998 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:32:01,998 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:32:08,060 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:32:08,060 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:32:08,060 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces detail @
+2018-12-12 17:32:08,060 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces detail @
+2018-12-12 17:32:45,036 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:32:45,036 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:32:51,155 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:32:51,155 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:32:51,155 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces detail @
+2018-12-12 17:32:51,155 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces detail @
+2018-12-12 17:33:26,753 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:33:26,753 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:33:35,705 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:33:35,705 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:33:35,705 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces detail @
+2018-12-12 17:33:35,705 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces detail @
+2018-12-12 17:34:07,612 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:34:07,612 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:34:13,823 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:34:13,823 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:34:13,823 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfacesS @
+2018-12-12 17:34:13,823 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfacesS @
+2018-12-12 17:35:01,062 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:35:01,062 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:35:07,021 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:35:07,021 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:35:07,021 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfacesS @
+2018-12-12 17:35:07,021 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfacesS @
+2018-12-12 17:35:24,972 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:35:24,972 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:35:30,907 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:35:30,907 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:35:30,907 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 17:35:30,907 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 17:37:42,462 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:37:42,462 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:37:48,835 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:37:48,835 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:37:48,835 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 17:37:48,835 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 17:47:55,049 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:47:55,049 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:48:02,076 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:48:02,076 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:48:02,076 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 17:48:02,076 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 17:48:46,437 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:48:46,437 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:48:52,553 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:48:52,553 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:48:52,553 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 17:48:52,553 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 17:50:21,153 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:50:21,153 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:50:27,527 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:50:27,527 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:50:27,527 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 17:50:27,527 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 17:51:57,929 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:51:57,929 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:52:05,172 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:52:05,172 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:52:05,172 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 17:52:05,172 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 17:52:28,097 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:52:28,097 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:52:34,274 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:52:34,274 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:52:34,274 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 17:52:34,274 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 17:53:05,690 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:53:05,690 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:53:11,833 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:53:11,833 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:53:11,833 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 17:53:11,833 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 17:53:43,124 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:53:43,124 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:53:49,394 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:53:49,394 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:53:49,394 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 17:53:49,394 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 17:54:26,143 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:54:26,143 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:54:32,341 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:54:32,341 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:54:32,341 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 17:54:32,341 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 17:55:46,070 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:55:46,070 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 17:55:55,564 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:55:55,564 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 17:55:55,564 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 17:55:55,564 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 18:00:34,889 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 18:00:34,889 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 18:00:41,134 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 18:00:41,134 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 18:00:41,134 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 18:00:41,134 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 18:02:15,101 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 18:02:15,101 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 18:02:21,840 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 18:02:21,840 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 18:02:21,840 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 18:02:21,840 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 18:06:11,773 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 18:06:11,773 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 18:06:18,829 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 18:06:18,829 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 18:06:18,829 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 18:06:18,829 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 18:07:38,321 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 18:07:38,321 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 18:07:46,034 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 18:07:46,034 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 18:07:46,034 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 18:07:46,034 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 18:10:45,957 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 18:10:45,957 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 18:10:52,736 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 18:10:52,736 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 18:10:52,736 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 18:10:52,736 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 18:12:01,685 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 18:12:01,685 - master - INFO - @ usr descuderor class CiscoIOS conection ip 172.16.30.5 # 1 @
+2018-12-12 18:12:08,553 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 18:12:08,553 - master - INFO - @ usr descuderor class CiscoIOS telnet up IOS @
+2018-12-12 18:12:08,553 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @
+2018-12-12 18:12:08,553 - master - INFO - @ usr descuderor class CiscoIOS sent 172.16.30.5 command show interfaces @

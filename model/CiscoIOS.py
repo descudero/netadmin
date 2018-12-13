@@ -15,7 +15,7 @@ from model.InterfaceIOS import InterfaceIOS
 from multiping import multi_ping
 from pprint import pprint
 from pysnmp.entity.rfc3413.oneliner import cmdgen
-from tkinter import *
+from tools import normalize_interface_name
 
 
 class CiscoIOS(Parent):
@@ -134,12 +134,12 @@ class CiscoIOS(Parent):
             for line in lsp.split("\n"):
                 if "InLabel  :" in line:
                     data = line.replace("InLabel  : ", "").split(",")
-                    lsp_data["interface_in"] = CiscoIOS.get_normalize_interface_name(data[0].replace(" ", ""))
+                    lsp_data["interface_in"] = normalize_interface_name(data[0].replace(" ", ""))
                     lsp_data["label_in"] = data[1]
                 if (line.find("OutLabel :") > -1):
                     data = line.replace("OutLabel :", "").split(",")
                     if (len(data) > 1):
-                        lsp_data["interface_out"] = CiscoIOS.get_normalize_interface_name(data[0].replace(" ", ""))
+                        lsp_data["interface_out"] = normalize_interface_name(data[0].replace(" ", ""))
                         lsp_data["label_out"] = data[1].replace(" ", "")
                 if (line.find("Src") > -1 and line.find("Dst")):
                     data = line.split(",")
@@ -156,7 +156,6 @@ class CiscoIOS(Parent):
         # pprint(self.mpls_te_tunnels)
 
     def set_service_instances(self):
-        print("set set service intances ip self" + self.ip)
         self.service_instances = {}
         command = "show ethernet service instance detail"
         connection = self.connect()
@@ -184,7 +183,7 @@ class CiscoIOS(Parent):
                             print("no funciono el dot1q " + line)
                             service_data["dot1q"] = "na"
                 if (line.find("Associated Interface: ") > -1):
-                    service_data["interface"] = CiscoIOS.get_normalize_interface_name(line.split(" ")[2])
+                    service_data["interface"] = normalize_interface_name(line.split(" ")[2])
                 if (line.find("Description: ") > -1):
                     service_data["description"] = line.replace("Description:", "").split(" ")[1]
             if ("description" not in service_data):
@@ -268,7 +267,7 @@ class CiscoIOS(Parent):
                     split = line.split(" ")
 
                     data["interfaces"].append(
-                        {"interface": CiscoIOS.get_normalize_interface_name(split[2]), "service_instance": split[4]})
+                        {"interface": normalize_interface_name(split[2]), "service_instance": split[4]})
                 if (line.find("vfi") > -1):
                     data["vfi"] = line.replace(" member vfi ", "")
             self.bridge_domains[data["name"]] = data
@@ -472,7 +471,7 @@ class CiscoIOS(Parent):
         output = self.send_command(connection=connection, command=command)
         connection.disconnect()
         if (output.find("directly connected, via") > -1):
-            interface = CiscoIOS.get_normalize_interface_name(
+            interface = normalize_interface_name(
                 output.split("directly connected, via")[1].split("\n")[0].replace(" ", ""))
         else:
 
@@ -1144,8 +1143,7 @@ class CiscoIOS(Parent):
         self.close(conn)
         return platform
 
-    def set_jump_gateway(self, ip, protocol):
-        self.jump_gateway = {"ip": ip, "protocol": protocol}
+
 
     def set_pim_interfaces(self):
         connection = self.connect()
@@ -1374,6 +1372,13 @@ class CiscoIOS(Parent):
         output = header + "\n" + output
 
         return output
+
+    def set_interfaces(self):
+        interfaces = self.send_command_and_parse(command="show interfaces"
+                                                 , template_name="show_interfaces_detail_ios.template")
+        self.interfaces = {normalize_interface_name(key): InterfaceIOS(self, interface) for key, interface in
+                           interfaces.items()}
+        return self.interfaces
 
     def set_all_interfaces(self):
         command = "show interfaces "
