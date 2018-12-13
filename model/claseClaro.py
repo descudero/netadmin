@@ -5,7 +5,7 @@ import datetime
 import subprocess
 from multiping import multi_ping
 import threading as th
-import pyyed
+from lib import pyyed
 import shelve
 import time
 import os, sys
