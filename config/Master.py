@@ -31,6 +31,17 @@ class Master:
         self.logger.addHandler(ch)
         self.logger.setLevel(self.level_log)
 
+        self.logger = logging.getLogger("Timer")
+
+        ch2 = logging.FileHandler('timestamps.log')
+        ch2.setLevel(0)
+        formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - @%(message)s @')
+        ch2.setFormatter(formatter)
+        self.level_time_log = 20
+        self.logger_time.addHandler(ch2)
+        self.logger_time.setLevel(self.level_time_log)
+
+
     def get_password(self):
         return self.password
 
@@ -42,6 +53,15 @@ class Master:
         db_connection = client.claro
         return db_connection
 
+    def logtime(self, level, time_start, time_end, originator, method):
+
+        message = "Method: {0} Start: {1} End {2} Duration {3}".format(str(method.__name__), str(time_start)
+                                                                       , str(time_end),
+                                                                       str((time_end - time_start) * 1000))
+
+        self.logger_time.log(level=level,
+                             msg=" usr " + self.username + " class " + str(type(originator).__name__) + " " + str(
+                                 message))
     def log(self, level, message, originator):
         '''
         logs level

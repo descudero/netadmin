@@ -4,13 +4,28 @@ class InterfaceIOS(object):
     def __init__(self, parent_device, parse_data):
         self.parent_device = parent_device
         self.set_initial_stats()
+
         for key, value in parse_data.items():
             if not value == '':
                 setattr(self, key, value)
-        self.utilization_in = 0 if self.bw == 0 else round(float(self.input_rate) / (float(self.bw * 10)), 2)
-        self.utilization_out = 0 if self.bw == 0 else round(float(self.output_rate) / (float(self.bw * 10)), 2)
 
-        self.ip = ipaddress.ip_address(self.ip)
+        try:
+            self.util_in = round(float(self.input_rate) / (float(self.bw * 10)), 2)
+        except:
+
+            print(self.index, self.parent_device, "unable to set rate in ," + self.input_rate, self.bw)
+            self.util_in = 0
+        try:
+            self.util_out = round(float(self.output_rate) / (float(self.bw * 10)), 2)
+        except:
+            print(self.index, self.parent_device, "unable to set rate in ," + self.output_rate, self.bw)
+            self.util_out = 0
+
+        try:
+            self.ip = ipaddress.ip_interface(self.ip).ip
+        except:
+            self.ip = ipaddress.ip_address("127.0.0.1")
+
 
     def set_initial_stats(self):
         self.index = ""
@@ -53,6 +68,20 @@ class InterfaceIOS(object):
         self.utilization_out = "0"
         self.ip = "na"
         self.speed = "na"
+
+    def util(self):
+
+        real_bw = float(self.bw) * 1024
+        if ("Hu" in self.index):
+            real_bw = 100000000000
+        if ("Te" in self.index):
+            real_bw = 10000000000
+        if ("Gi" in self.index):
+            real_bw = 1000000000
+        util_in = round(float(self.input_rate) / real_bw * 100, 2)
+        util_out = round(float(self.output_rate) / real_bw * 100, 2)
+        return util_in, util_out
+
 
     def parse_interface_out(self, show_output):
 
@@ -190,7 +219,7 @@ class InterfaceIOS(object):
         return interface_string
 
     def __str__(self):
-        return self.index + " " + self.link_state + " "
+        return str(id(self)) + str(self.__class__) + self.index + " " + self.description + " " + self.link_state + " "
 
     def __repr__(self):
-        return self.index + " " + self.description + " " + self.link_state + " "
+        return str(id(self)) + str(self.__class__) + self.index + " " + self.description + " " + self.link_state + " "

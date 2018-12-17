@@ -26,6 +26,18 @@ class BaseDevice(object):
         self.log = []
         self.gateway = gateway
 
+    def log_performance(self, function_to_logtime):
+        start_test = time.time()
+
+        def wrapper(*args, **kwargs):
+            output = function_to_logtime(*args, **kwargs)
+
+        end_test = time.time()
+        self.master.log_time(30, start_test, end_test, self, print_function)
+        return wrapper
+
+
+
     def __str__(self):
         return self.display_name + " " + self.ip
     def send_command(self, connection, command, pattern="#", read=True, timeout=1):
@@ -89,14 +101,14 @@ class BaseDevice(object):
         parser = textfsm.TextFSM(open("./resources/templates/" + template_name))
         return parser
 
-    def send_command_and_parse(self, command, template_name, close_connection=True):
+    def send_command_and_parse(self, command, template_name, timeout=5, close_connection=True):
         connection = self.connect()
-        cli_output = self.send_command(connection=connection, command=command)
+        cli_output = self.send_command(connection=connection, command=command, timeout=timeout)
         connection.disconnect()
         parser = self.load_template(template_name=template_name)
         fsm_results = parser.ParseText(cli_output)
         header = [column.lower() for column in parser.header]
-        return {row[0]: dict(zip(header, row)) for row in fsm_results}
+        return [dict(zip(header, row)) for row in fsm_results]
 
     def set_jump_gateway(self, ip, protocol):
         self.jump_gateway = {"ip": ip, "protocol": protocol}
@@ -133,3 +145,6 @@ class BaseDevice(object):
         self.device_up = system_call(command, shell=True) == 0
         # Pinging
         return self.device_up
+
+    def __repr__(self):
+        return str(self.__class__) + " " + self.ip

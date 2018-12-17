@@ -1,24 +1,43 @@
 import ipaddress
-from model.CiscoPart import CiscoPart
 import re
-import sqlite3 as sql
 import shelve
+import sqlite3 as sql
+from pprint import pprint
 import psycopg2 as pmsql
+from multiping import multi_ping
 from netmiko import ConnectHandler
 from netmiko import NetMikoAuthenticationException
 from netmiko import NetMikoTimeoutException
-from paramiko import SSHException
 from paramiko import AuthenticationException
-import os
-from model.BaseDevice import BaseDevice as Parent
-from model.InterfaceIOS import InterfaceIOS
-from multiping import multi_ping
-from pprint import pprint
+from paramiko import SSHException
 from pysnmp.entity.rfc3413.oneliner import cmdgen
+
+import lib.pyyed as pyyed
+from model.BaseDevice import BaseDevice as Parent
+from model.CiscoPart import CiscoPart
+from model.InterfaceIOS import InterfaceIOS
 from tools import normalize_interface_name
 
 
 class CiscoIOS(Parent):
+
+    def __init__(self, ip, display_name, master, platform="CiscoIOS", gateway="null"):
+        super().__init__(ip, display_name, master, platform, gateway)
+        self.pseudo_wire_class = dict()
+        self.mpls_te_tunnels = dict()
+        self.service_instances = dict()
+        self.template_type_pseudowires = dict()
+        self.config = ""
+        self.pseudowires = dict()
+        self.static_routes = dict()
+        self.inventory = dict()
+        self.plattform = "CiscoIOS"
+        self.community = ""
+        self.interfaces_ip = dict()
+        self.ldp_neighbors = dict()
+        self.mpls_ldp_interfaces = dict()
+        self.ospf_interfaces = dict()
+        self.bridge_domains = dict()
 
     def send_command(self, connection, command, pattern="#", read=True, timeout=4):
         '''
@@ -42,25 +61,17 @@ class CiscoIOS(Parent):
         while output == "" and retry_counter < 3:
             retry_counter += 1
             try:
-                if hasattr(self, "hostname"):
-                    # print("hostname"+self.hostname)
-                    pattern = self.hostname
-                    # print(command   )
-                    output = connection.send_command(command_string=command,
-                                                     expect_string=pattern, delay_factor=timeout, max_loops=100)
-                else:
-                    output = connection.send_command(command_string=command,
-                                                     delay_factor=timeout,
-                                                     expect_string=pattern,
-                                                     max_loops=50)
-            except (OSError) as e:
+                output = connection.send_command(command_string=command, delay_factor=timeout,
+                                                 expect_string=pattern, max_loops=55550)
+            except OSError as e:
+                self.master.log(level=40, message="os error unable to send command " + self.ip, originator=self)
                 output = ""
         self.master.log(2, " RX " + self.ip + " output " + output, self)
         return output
 
     def internet_validation_arp(self, test_name, vrf):
         test_ping = shelve.open(test_name + self.display_name)
-        if ("responses" in test_ping):
+        if "responses" in test_ping:
             test_ping["responses"]
             responses, no_responses = multi_ping(test_ping["responses"].keys(), timeout=3, retry=2,
                                                  ignore_lookup_errors=True)
@@ -68,7 +79,7 @@ class CiscoIOS(Parent):
             test_ping["test_no_responses"] = no_responses
 
             for i in range(0, 5):
-                if (len(no_responses2) > 0):
+                if len(no_responses2) > 0:
                     responses2, no_responses = multi_ping(no_responses2, timeout=3, retry=1, ignore_lookup_errors=True)
                     responses = {**responses, **responses2}
                     no_responses2 = no_responses
@@ -87,7 +98,6 @@ class CiscoIOS(Parent):
     def test_multiping_arp(self, vrf="default"):
         self.set_arp_list(vrf=vrf)
 
-
         # for index in range(0,len(self.arp_list.keys()),step=30)
         #   end = len(self.arp_list.keys())
         # responses, no_responses = multi_ping(dest_addrs=self.arp_list.keys()[step], timeout=3, retry=5,
@@ -102,8 +112,6 @@ class CiscoIOS(Parent):
             return 'null'
 
     def set_pseudo_wire_class(self):
-
-        self.pseudo_wire_class = {}
         command = "show run | s pseudowire-class"
         connection = self.connect()
         output = self.send_command(command=command, connection=connection)
@@ -111,24 +119,23 @@ class CiscoIOS(Parent):
         for pw_class in output.split("pseudowire-class ")[1:]:
             # print(pw_class)
             lines = pw_class.split("\n")
-            data = {}
+            data = dict()
             data["encapsulation"] = lines[1].replace(" encapsulation ", "")
 
-            if (len(lines) > 2):
-                if (lines[2].find("Tunnel")):
+            if len(lines) > 2:
+                if lines[2].find("Tunnel"):
                     data["interface"] = lines[2].replace(" preferred-path interface ", "").replace(" ", "").replace(
                         "disable-fallback", "")
             self.pseudo_wire_class[lines[0]] = data
 
     def set_mpls_te_tunnels(self):
-
-        self.mpls_te_tunnels = {}
+        # todo change to textfsm template
         command = "show mpls traffic-eng tunnels detail"
         connection = self.connect()
         output = self.send_command(command=command, connection=connection)
         connection.disconnect()
         for lsp in output.split("LSP Tunnel ")[1:]:
-            lsp_data = {}
+            lsp_data = dict()
             lsp_data["name"] = lsp.split(" is ")[0].replace(" ", "")
             lsp_data["state"] = lsp.split("connection is")[1].replace(" ", "").split("\n")[0]
             for line in lsp.split("\n"):
@@ -136,7 +143,7 @@ class CiscoIOS(Parent):
                     data = line.replace("InLabel  : ", "").split(",")
                     lsp_data["interface_in"] = normalize_interface_name(data[0].replace(" ", ""))
                     lsp_data["label_in"] = data[1]
-                if (line.find("OutLabel :") > -1):
+                if line.find("OutLabel :") > -1:
                     data = line.replace("OutLabel :", "").split(",")
                     if (len(data) > 1):
                         lsp_data["interface_out"] = normalize_interface_name(data[0].replace(" ", ""))
@@ -156,7 +163,8 @@ class CiscoIOS(Parent):
         # pprint(self.mpls_te_tunnels)
 
     def set_service_instances(self):
-        self.service_instances = {}
+        # todo change to textfsm template
+
         command = "show ethernet service instance detail"
         connection = self.connect()
         output = self.send_command(command=command, connection=connection)
@@ -169,7 +177,7 @@ class CiscoIOS(Parent):
             id = lines[0].replace(" ", "")
             service_data["id"] = id
             for line in lines:
-                if (line.find("Service Instance Type: ") > -1):
+                if "Service Instance Type: " in line:
                     service_data["type"] = line.split(" ")[3]
                 if (line.find("Encapsulation: ") > -1):
                     # print(line)
@@ -205,14 +213,15 @@ class CiscoIOS(Parent):
         return "null"
 
     def get_vfi_by_template(self, template_name):
+
         for name, vfi in self.vfis.items():
             for pseudowire in vfi["pseudowires"]:
-                if (pseudowire["template"] == template_name):
+                if pseudowire["template"] == template_name:
                     return name
         return "null"
 
     def get_interfaces_instance_by_vfi(self, vfi):
-        pprint(self.ip + " interfaces by vfi " + vfi)
+
         for name, bridge in self.bridge_domains.items():
             if "vfi" in bridge:
                 if (bridge["vfi"] == vfi):
@@ -224,7 +233,6 @@ class CiscoIOS(Parent):
         return [self.get_service_instance_data(interface["interface"], interface["service_instance"])
                 for interface in interfaces]
 
-
     def get_service_instance_by_tunnel_id_vfi(self, tunnel_id):
         template = self.get_template_by_tunnel_id(tunnel_id=tunnel_id)
         vfi = self.get_vfi_by_template(template_name=template)
@@ -234,8 +242,7 @@ class CiscoIOS(Parent):
         return service_instances
 
     def set_template_type_pseudowires(self, ):
-        self.template_type_pseudowires = {}
-
+        #todo change to textfsm
         command = "show run | s template type"
         connection = self.connect()
         output = self.send_command(command=command, connection=connection)
@@ -252,23 +259,24 @@ class CiscoIOS(Parent):
             self.template_type_pseudowires[data["name"]] = data
 
     def set_bridge_domains(self):
-        self.bridge_domains = {}
+        # todo change to textfsm
+
         command = "show run | s bridge-domain "
         connection = self.connect()
         output = self.send_command(command=command, connection=connection)
         connection.disconnect()
         for bridge in output.split("bridge-domain ")[1:]:
-            data = {}
+            data = dict()
             data["interfaces"] = []
             lines = bridge.split("\n")
             data["name"] = lines[0].replace(" ", "")
             for line in lines[1:]:
-                if (line.find("service-instance") > -1):
+                if line.find("service-instance" > -1):
                     split = line.split(" ")
 
                     data["interfaces"].append(
                         {"interface": normalize_interface_name(split[2]), "service_instance": split[4]})
-                if (line.find("vfi") > -1):
+                if line.find("vfi") > -1:
                     data["vfi"] = line.replace(" member vfi ", "")
             self.bridge_domains[data["name"]] = data
         # pprint(self.bridge_domains)
@@ -312,7 +320,7 @@ class CiscoIOS(Parent):
             self.vfis[data["name"]] = data
 
     def set_pseudowires(self):
-        self.pseudowires = {}
+
         command = "show run | i xconnect"
         connection = self.connect()
         output = self.send_command(command=command, connection=connection)
@@ -492,7 +500,8 @@ class CiscoIOS(Parent):
         return prefix_interface
 
     def connect(self, username_pattern='username', password_pattern="password", pattern="#", device_type="cisco_ios_"):
-        device_type = "cisco_ios_"
+        if not hasattr(self, 'device_type'):
+            self.device_type = 'cisco_ios_'
         '''
            Metodo : connect
                Parametros:
@@ -520,16 +529,16 @@ class CiscoIOS(Parent):
 
         retry_counter = 0
 
-        if (not hasattr(self, "jump_gateway")):
+        if not hasattr(self, "jump_gateway"):
             while type(connection) is str and retry_counter != 3:
                 retry_counter += 1
                 self.master.log(20, "conection ip " + self.ip + " # " + str(retry_counter), self)
                 try:
-                    connection = ConnectHandler(device_type=device_type + "ssh"
+                    connection = ConnectHandler(device_type=self.device_type + "ssh"
                                                 , ip=self.ip,
                                                 username=self.master.username,
                                                 password=self.master.password)
-                    self.master.log(20, "telnet up " + self.display_name, self)
+                    self.master.log(20, "ssh up " + " ip " + self.ip, self)
 
                 except (
                         AuthenticationException, NetMikoTimeoutException, EOFError, SSHException,
@@ -537,10 +546,10 @@ class CiscoIOS(Parent):
                         ValueError, ConnectionRefusedError) as e:
                     try:
 
-                        connection = ConnectHandler(device_type=device_type + "telnet",
+                        connection = ConnectHandler(device_type=self.device_type + "telnet",
                                                     ip=self.ip, username=self.master.username,
                                                     password=self.master.password)
-                        self.master.log(20, "ssh up " + self.display_name, self)
+                        self.master.log(20, "telnet up " + self.display_name + " ip " + self.ip, self)
 
                     # try ssh
 
@@ -560,9 +569,10 @@ class CiscoIOS(Parent):
             command += self.master.username + "\n"
             command += self.master.password + "\n"
             print(gateway.send_command(connection, command, pattern='name:'))
-
-            # print(gateway.send_command(connection, command, pattern='name:'))
-
+            if not connection == "":
+                self.master.log(50, "connected to  " + self.display_name + " via gateway :" + str(gateway) + self)
+            else:
+                self.master.log(50, "not connected to  " + self.display_name + " via gateway :" + str(gateway) + self)
         return connection
 
     def set_hostname(self, connection, command_host="show run | i hostname"):
@@ -697,7 +707,7 @@ class CiscoIOS(Parent):
                 se regresa self.static_routes.
         """
         self.set_config()
-        self.static_routes = {}
+
         lines_config = self.config.split("\n")
 
         for index, lines in enumerate(lines_config):
@@ -887,6 +897,7 @@ class CiscoIOS(Parent):
         return self.self_ospf_process_list
 
     def set_ip_ospf_interfaces(self, as_ospf="14754"):
+        #todo text fsm
         '''
         :param as_ospf (string):  este es un parametro para definir el sistema autionomo o el numero de proceso
          que se tendra en el output, se trabaja con ese como el global.
@@ -988,8 +999,8 @@ class CiscoIOS(Parent):
         :param address_family(string) default("ipv4 unicast"):
         :return:
         '''
-        if not hasattr(self, "bgp_neighbors"):
-            self.bgp_neighbors = {}
+        if self.bgp_neighbors is None:
+            self.bgp_neighbors = dict()
 
         connection = self.connect()
         command = "show bgp " + address_family + " neighbors"
@@ -1057,23 +1068,8 @@ class CiscoIOS(Parent):
 
         return self.bgp_neighbors
 
-    @staticmethod
-    def get_normalize_interface_name(interface_string):
-        interface_dict = {"TenGigabitEthernet": "Te",
-                          "GigabitEthernet": "Gi",
-                          "TenGigE": "Te",
-                          "HundredGigE": "Hu",
-                          "FortyGigE": "Fo"}
-
-        for pattern, corrected_name in interface_dict.items():
-            interface_string = interface_string.replace(pattern, corrected_name)
-
-        return interface_string
-
     def set_mpls_ldp_interfaces(self, address_family="ipv4 unicast"):
-        if not hasattr(self, "ospf_interfaces"):
-            # self.set_ip_ospf_interface()
-            pass
+        #todo change to parse of textfsm
         connection = self.connect()
         command = "show mpls interfaces"
         show_mpls_interface = self.send_command(connection, command, self.hostname, timeout=5)
@@ -1137,19 +1133,16 @@ class CiscoIOS(Parent):
         show_version = self.send_command(connection=conn, command="show version", timeout=10)
         platform = "CiscoIOS"
         self.platform = platform
-        if (show_version.find("IOS XR") > -1):
+        if show_version.find("IOS XR") > -1:
             platform = "CiscoXR"
         self.platform = platform
         self.close(conn)
         return platform
 
-
-
     def set_pim_interfaces(self):
+        #todo parse textfsm.. not user for the moment
         connection = self.connect()
         command = "show "
-        show_mpls_interface = self.send_command(connection, command, self.hostname, timeout=5)
-        connection = self.connect()
         command2 = 'show ip pim neighbor | b Add'
         show_pim_neighbor = self.send_command(connection, command2, self.hostname, timeout=5)
         command3 = 'show ip pim interface  | b Prior'
@@ -1190,93 +1183,16 @@ class CiscoIOS(Parent):
 
         return interfaces, pim_neighbors
 
-    def save_report_sql(self, atribute, report_name="test"):
-        # pim_interfaces
-        # bgp_neighbors
-        # mpls_ldp_interfaces
-        # ospf_interfaces
-
-        conn = pmsql.connect("dbname='boip' user='postgres' host='localhost' password='epsilon123'")
-
-        cur = conn.cursor()
-        if (hasattr(self, atribute)):
-            atribute_dict = getattr(self, atribute)
-            table_name = atribute
-            for key, row in atribute_dict.items():
-                sql_string = "INSERT INTO " + table_name + " ( report_name , local_router_ip," + (",").join(
-                    row.keys()) + ") "
-                sql_string += " VALUES " + "('" + report_name + "','" + self.ip + "','" + (
-                    "','".join(map(str, row.values()))) + "')"
-                # print(sql_string)
-                last = cur.execute(sql_string)
-                conn.commit()
-                # print(last)
-            pass
-
-    def create_connection(self):
-        """ create a database connection to the SQLite database
-            specified by db_file
-        :param db_file: database file
-        :return: Connection object or None
-        """
-        conn = sql.connect("boip.db")
-
-        return None
-
-    def create_project(self, conn, project):
-        """
-        Create a new project into the projects table
-        :param conn:
-        :param project:
-        :return: project id
-        """
-        sql = ''' INSERT INTO projects(name,begin_date,end_date)
-                  VALUES(?,?,?) '''
-        cur = conn.cursor()
-        cur.execute(sql, project)
-        return cur.lastrowid
-
-    def create_task(self, conn, task):
-        """
-        Create a new task
-        :param conn:
-        :param task:
-        :return:
-        """
-
-        sql = ''' INSERT INTO tasks(name,priority,status_id,project_id,begin_date,end_date)
-                  VALUES(?,?,?,?,?,?) '''
-        cur = conn.cursor()
-        cur.execute(sql, task)
-        return cur.lastrowid
-
-    def set_interface(self, index):
-        interface = InterfaceIOS(self, index)
-        # print("adentro del metodo",index)
-        self.interfaces[index] = interface
-
-    def set_interfaces_stats(self, interfaces_index=[]):
-        connection = self.connect()
-        if (len(interfaces_index) == 0):
-            for index, interface in self.interfaces.items():
-                interface.set_stats(connection)
-        else:
-            for index in interfaces_index:
-                if (index in self.interfaces):
-                    pass
-                else:
-                    self.set_interface(index)
-                self.interfaces[index].set_stats(connection)
-        self.close(connection)
 
     def get_interfaces_stats(self, interfaces_index=[]):
         output = "";
         for index in interfaces_index:
-            if (index in self.interfaces):
-                output += self.interfaces[index].get_interface_summary()
+            if index in self.interfaces:
+                output.join(self.interfaces[index].get_interface_summary())
         return output
 
     def set_log(self, filter=""):
+        #todo parse log per hour and class log_line to check time
         connection = self.connect()
         command = "show logging " + ("" if filter == "" else " | i " + filter)
 
@@ -1286,72 +1202,35 @@ class CiscoIOS(Parent):
     def get_log(self, filter=""):
         return self.log
 
+    def ospf_database_router(self, process_id='1'):
+        return self.send_command_and_parse(command="show ip ospf " + process_id + " database router",
+                                           template_name="show ip ospf database router.template")
 
+    def ospf_area_adjacency_p2p(self, process_id='1', area='0'):
+        ospf_database = self.ospf_database_router(process_id=process_id)
 
-    def create_policies_bgp_neighbors(self, address_family="ipv4 unicast", country_key="CR", conection_type="CUS"):
-        if (hasattr(self, "bgp_neighbors")):
-            if not address_family in self.bgp_neighbors:
-                self.set_ip_bgp_neighbors(address_family)
-        else:
-            self.set_ip_bgp_neighbors(address_family)
-        connection = self.connect()
-        result = ""
+        p2p = [{'router_id': row['router_id'],
+                'neighbor_ip': row['link_id'],
+                'interface_ip': row['link_data'],
+                'area': row['area'],
+                'metric': row['metric'],
+                'network': str(ipaddress.IPv4Network(row['link_data'] + "/30", strict=False).network_address)
 
-        for ip, neighbor in self.bgp_neighbors.items():
+                }
+               for row in ospf_database if row['area'] == area and row['lsa_type'] == 'point-to-point']
+        routers = {row['router_id'] for row in ospf_database}
+        p2p_reduced = dict()
+        for link in p2p:
+            if link['network'] not in p2p_reduced:
+                p2p_reduced[link['network']] = [link]
+            else:
+                p2p_reduced[link['network']].append(link)
 
-            if (neighbor["bgp_description"].find(conection_type) > -1):
-                protocol = "IP4" if neighbor["bgp_address_family"].find("ipv4") > -1 else "IP6"
-                route_map_in = "RMP" + country_key + "IN" + protocol + conection_type + "_" + neighbor[
-                    "bgp_description"].replace("|", "_")
-                route_map_out = "RMP" + country_key + "IT" + protocol + conection_type + "_" + neighbor[
-                    "bgp_description"].replace("|", "_")
-                prefix_list = "PFX" + country_key + "IN" + protocol + conection_type + "_" + neighbor[
-                    "bgp_description"].replace("|", "_")
-                result += "---------------------------------------\n"
-                result += "data \n"
-                result += "as || " + neighbor["bgp_remote_as"] + " || ip " + ip + "  description " + neighbor[
-                    "bgp_description"] + "\n"
-                result += "---------------------------------------\n"
-                result += "policies\n"
-                result += "router bgp 52468 \n"
-                result += "address-family " + neighbor["bgp_address_family"] + "\n"
-                result += "neighbor " + ip + " route-map " + route_map_in + " in \n"
-                result += "\n" if neighbor[
-                                      "bgp_policy_out"] == "NA" else "neighbor " + ip + " route-map " + route_map_out + " out \n"
-                result += "\nexit\n"
-                result += "route-map " + route_map_in + " permit 10\n"
-                result += "match ipv6 address prefix-list " + prefix_list + "\n"
-                result += "set community 52468:10200 " + neighbor["bgp_remote_as"][
-                                                         -5:] + ":52468 52468:1504 52468:20410 52468:20510 52468:20610 52468:20530" + \
-                          " 52468:20120 52468:20220 52468:20420 52468:20520 52468:20729   52468:20620) \n"
-
-                result += "\n" if neighbor["bgp_policy_out"] == "NA" else "route-map " + route_map_out + " permit 10\n"
-                result += " ipv6 prefix-list " + prefix_list + " permit \n"
-                result += self.send_command(connection,
-                                            "show run  | s prefix-list " + neighbor["bgp_policy_in"]).replace(
-                    neighbor["bgp_policy_in"], prefix_list)
-
-                result += " shows --------\n\n"
-
-                result += "show run  | s route-map " + neighbor["bgp_policy_out"] + "\n\n"
-
-                result += self.send_command(connection, "show run  | s route-map  " + neighbor["bgp_policy_out"])
-                result += "\nshow run route-policy " + neighbor["bgp_policy_in"] + "\n\n"
-                result += self.send_command(connection, "show run  | s route-map " + neighbor["bgp_policy_in"])
-                result += "\n---------------------------------------\n\n"
-                result += "show run  | s prefix-list " + neighbor["bgp_policy_out"] + "\n\n"
-                result += self.send_command(connection,
-                                            "show run  | s prefix-list " + neighbor["bgp_policy_in"]).replace(
-                    neighbor["bgp_policy_in"], prefix_list)
-                result += "\n---------------------------------------\n\n"
-                result += "\n---------------------prefix in ------------------\n\n"
-                result += self.send_command(connection, "show run | i prefix-list " + neighbor["bgp_prefix_in"])
-                result += "\n---------------------prefix out ------------------\n\n"
-                result += self.send_command(connection, "show run | i prefix-list " + neighbor["bgp_prefix_out"])
-                result += "\n---------------------------------------\n\n"
+        return p2p_reduced, routers
 
     def print_bgp_neighbors(self, address_family="ipv4 unicast"):
-        if (hasattr(self, "bgp_neighbors")):
+        # todo crear un output en excel
+        if hasattr(self, "bgp_neighbors"):
             if not address_family in self.bgp_neighbors:
                 self.set_ip_bgp_neighbors(address_family)
         else:
@@ -1375,23 +1254,14 @@ class CiscoIOS(Parent):
 
     def set_interfaces(self):
         interfaces = self.send_command_and_parse(command="show interfaces"
-                                                 , template_name="show_interfaces_detail_ios.template")
-        self.interfaces = {normalize_interface_name(key): InterfaceIOS(self, interface) for key, interface in
-                           interfaces.items()}
+                                                 , template_name="show_interfaces_detail_ios.template", timeout=15)
+        for interface in interfaces:
+            interface["index"] = normalize_interface_name(interface["index"])
+            interface_object = InterfaceIOS(self, interface)
+            self.interfaces[interface["index"]] = interface_object
+            self.interfaces_ip[str(interface_object.ip)] = interface_object
+
         return self.interfaces
-
-    def set_all_interfaces(self):
-        command = "show interfaces "
-        connection = self.connect()
-
-        show_interfaces = self.send_command(connection, command, self.hostname, timeout=5)
-        split_interfaces = show_interfaces.split("swapped out\n")
-        interfaces = {}
-        for interface in split_interfaces:
-            interface_object = InterfaceIOS(self, "NA")
-            interface_object.parse_interface_out(interface)
-            interfaces[interface_object.index] = interface_object
-        self.interfaces = interfaces
 
     def set_snmp_community(self):
 
@@ -1402,42 +1272,45 @@ class CiscoIOS(Parent):
                 break
 
     def set_snmp_hostname(self):
-        community = self.community
-        value = "1.3.6.1.2.1.1.5.0"
-        cmdGen = cmdgen.CommandGenerator()
-        errorIndication, errorStatus, errorIndex, varBinds = cmdGen.getCmd(cmdgen.CommunityData(community),
-                                                                           cmdgen.UdpTransportTarget(
+        oid = "1.3.6.1.2.1.1.5.0"
+        cmd_gen = cmdgen.CommandGenerator()
+        error_indication, error_status, error_index, var_binds = cmd_gen.getCmd(cmdgen.CommunityData(self.community),
+                                                                                cmdgen.UdpTransportTarget(
                                                                                (self.ip, 161)),
-                                                                           value
-                                                                           )
+                                                                                oid
+                                                                                )
         hostname = "no_snmp"
-        for name, val in varBinds:
+        for name, val in var_binds:
             hostname = str(val).split(".")[0]
         self.hostname = hostname
 
     def set_snmp_plattform(self):
 
-        platfforms = {"9K": "ASR9K", "ASR920": "ASR920", "900": "ASR900", "default": 'null'}
-        cmdGen = cmdgen.CommandGenerator()
+        platfforms = {"9K": "CiscoXR", "ASR920": "CiscoIOS", "900": "CiscoIOS", "default": 'CiscoIOS'}
         oid = "	1.3.6.1.2.1.1.1"
-        errorIndication, errorStatus, errorIndex, varBinds = cmdGen.nextCmd(cmdgen.CommunityData(self.community),
-                                                                            cmdgen.UdpTransportTarget(
-                                                                                (self.ip, 161)),
-                                                                            oid
-                                                                            )
+        cmd_gen = cmdgen.CommandGenerator()
+        error_indication, error_status, error_index, var_binds = cmd_gen.getCmd(cmdgen.CommunityData(self.community),
+                                                                                cmdgen.UdpTransportTarget(
+                                                                                    (self.ip, 161)),
+                                                                                oid
+                                                                                )
         plattform = platfforms["default"]
         snmp_value = "null"
-        for val in varBinds:
+        for val in var_binds:
             snmp_value = str(val[0][1]).split("\n")[0]
 
         for pattern, plattform_name in platfforms.items():
             if (snmp_value.find(pattern) > -1):
+                if plattform == "CiscoIOS":
+                    self.device_type = 'cisco_ios_'
+                else:
+                    self.device_type = 'cisco_xr_'
+                self.plattform = plattform
                 return plattform_name
-        self.plattform = plattform
 
     def get_physical_interfaces(self):
-        if (not hasattr(self.interfaces)):
-            self.set_all_interfaces()
+        if self.interfaces is None:
+            self.set_interfaces()
         return {key: interface for key, interface in self.interfaces.items()
                 if "." not in interface["description"]}
 
@@ -1453,15 +1326,15 @@ class CiscoIOS(Parent):
 
                 lines = inventory_item.replace('"', "").split("\n")
 
-                if (len(lines) > 2):
-                    lines = lines[len(lines)-2:]
+                if len(lines) > 2:
+                    lines = lines[len(lines) - 2:]
                 part["local_name"] = lines[0].split(",")[0].replace("NAME:", "") \
                     .replace(" module", "") \
                     .replace(" mau ", " ") \
                     .replace("/CPU0", "") \
                     .replace("TenGigE", "") \
                     .replace("GigE", "") \
-                    .replace("/SP","")
+                    .replace("/SP", "")
                 part["description"] = lines[0].split(",")[1].replace("DESCR:", "")
                 part["PID"] = lines[1].split(",")[0].replace("PID:", "").replace(" ", "")
                 part["VID"] = lines[1].split(",")[1].replace("VID:", "").replace(" ", "")
@@ -1469,24 +1342,23 @@ class CiscoIOS(Parent):
                 part["SN"] = lines[1].split(",")[2].replace("SN:", "").replace(" ", "")
                 parts.append(part)
                 pprint(parts)
-            except (Exception):
-                print("no able to add line")
-                print(lines)
+            except Exception:
+                self.master.log(20, message="unable to add line to inventory :" + self.ip + lines, originator=self)
+
                 pass
         self.inventory = parts
         return parts
 
     def set_chassis(self):
-        CiscoPart.create_inventory_tree(self,self.set_inventory())
+        CiscoPart.create_inventory_tree(self, self.set_inventory())
         return self.chassis
 
-
-    def draw_device_hardware(self,x,y):
+    def draw_device_hardware(self, x, y):
         self.set_chassis()
         master = Tk()
 
         canvas = Canvas(master, width=300, height=1000)
-        self.chassis.draw_in_canvas(canvas,x,y,recursive=True)
+        self.chassis.draw_in_canvas(canvas, x, y, recursive=True)
         canvas.pack()
         mainloop()
 
@@ -1506,3 +1378,26 @@ class CiscoIOS(Parent):
         connection = self.connect()
         output = connection.send_command(command)
         trasnciever_data = parser.ParseText(output)
+
+    def get_yed_node(self):
+        shape = 'rectangle3d'
+        shape_fill = '#442233'
+        height = 275
+        width = 275
+        if "9K" in self.hostname:
+            shape = 'hexagon'
+            height = 350
+            width = 350
+        if "NAP" in self.hostname:
+            shape_fill = '#90d680'
+        additional_label = [{"text": self.ip, "modelPosition": "s"},
+                            {"text": self.hostname, "modelPosition": "n"}]
+        node = pyyed.Node(node_name=self.ip,
+                          additional_labels=additional_label,
+                          font_size='23',
+                          shape_fill=shape_fill,
+                          edge_color="#442233",
+                          height=str(height), width=str(width), edge_width='8',
+                          shape=shape
+                          )
+        return node

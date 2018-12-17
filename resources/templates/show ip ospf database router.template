@@ -1,0 +1,21 @@
+Value Filldown area (\d+)
+Value Filldown router_id (.*?)
+Value lsa_type ((Stub|point-to-point))
+Value link_id (.*?)
+Value link_data (.*?)
+Value metric (\d+)
+
+Start
+  ^\s+Router\sLink\sStates\s\(Area\s${area}.*
+  ^\s+Options:.*$$ -> Router
+
+Router
+  ^\s+Link\sState\sID:\s+${router_id}$$ -> Lsa
+
+Lsa
+  ^\s+Link\sconnected\sto:.*${lsa_type}.*$$
+  ^\s+\(Link\sID\).+:\s+${link_id}$$
+  ^\s+\(Link\sData\).+:\s+${link_data}$$
+  ^\s+TOS.+:\s+${metric}$$ -> Record
+  ^\s+LS\sage:.* -> Start
+

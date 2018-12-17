@@ -116,13 +116,14 @@ class Group:
 
 
 class Node:
-    def __init__(self, node_name, label=None, shape="rectangle", font_family="Dialog",
+    def __init__(self, node_name, label=None, additional_labels=[], shape="rectangle", font_family="Dialog",
                  underlined_text="false", font_style="plain", font_size="12",
                  shape_fill="#FF0000", transparent="false", edge_color="#000000",
                  edge_type="line", edge_width="1.0", height=False, width=False, x=False,
                  y=False, node_type="ShapeNode", UML=False):
 
-        self.labels = []
+        self.labels = additional_labels
+
         self.label = label
 
         if label is None:
@@ -147,7 +148,7 @@ class Node:
             raise RuntimeWarning("Font style %s not recognised" % font_style)
 
         self.font_style = font_style
-        self.font_size = font_size
+        self.font_size = str(font_size)
 
         # shape fill
         self.shape_fill = shape_fill
@@ -165,13 +166,13 @@ class Node:
         # geometry
         self.geom = {}
         if height:
-            self.geom["height"] = height
+            self.geom["height"] = str(height)
         if width:
-            self.geom["width"] = width
+            self.geom["width"] = str(width)
         if x:
-            self.geom["x"] = x
+            self.geom["x"] = str(x)
         if y:
-            self.geom["y"] = y
+            self.geom["y"] = str(y)
 
     def add_label(self, text, modelPosition="n"):
         self.labels.append({"text": text, "modelPosition": modelPosition})
@@ -200,9 +201,8 @@ class Node:
 
         ET.SubElement(shape, "y:Shape", type=self.shape)
         if len(self.labels) > 0:
-            print(self.labels)
             for label1 in self.labels:
-                print(label1)
+
                 label2 = ET.SubElement(shape, "y:NodeLabel", modelName="sandwich",
                                        modelPosition=label1["modelPosition"]
                                        , fontFamily=self.font_family,
@@ -225,10 +225,10 @@ class Node:
 
 class Edge:
     def __init__(self, node1, node2, label="", arrowhead="standard", arrowfoot="none",
-                 color="#000000", line_type="line", width="1.0", id="", label2="", aditional_labels=[]):
+                 color="#000000", line_type="line", width="1.0", id="", label2="", additional_labels=[]):
         self.node1 = node1
         self.node2 = node2
-        self.aditional_labels = []
+        self.additional_labels = additional_labels
         if (id == ""):
             self.edge_id = "%s_%s" % (node1, node2)
         else:
@@ -254,10 +254,8 @@ class Edge:
         self.color = color
         self.width = width
 
-    def add_aditional_label(self, text="", color="#000000", position="scenter", size="12"):
-        print(self)
-        print(str((len(self.aditional_labels))))
-        self.aditional_labels.append({"text": text, "color": color, "position": position, "size": size})
+    def add_additional_label(self, text="", color="#000000", position="scenter", size="12"):
+        self.additional_labels.append({"text": text, "color": color, "position": position, "size": size})
 
     @staticmethod
     def set_label(subelement, text="", color="#000000", position="scenter", size="12"):
@@ -274,7 +272,7 @@ class Edge:
         model_parameter = ET.SubElement(label, "y:ModelParameter")
         ET.SubElement(model_parameter, "y:RotatedDiscreteEdgeLabelModelParameter", position=position)
         ET.SubElement(label, "y:PreferredPlacementDescriptor", angle="0.0", angleOffsetOnRightSide="0",
-                      angleReference="absolute", angleRotationOnRightSide="co", distance="-1.0", frozen="true",
+                      angleReference="absolute", angleRotationOnRightSide="co", distance="20.0", frozen="true",
                       placement="anywhere", side="anywhere", sideReference="relative_to_edge_flow")
 
     def convert(self):
@@ -290,7 +288,7 @@ class Edge:
             Edge.set_label(poli_line, text=self.label, position="scenter")
         if self.label2:
             Edge.set_label(poli_line, text=self.label2, position="tcenter")
-        for label in self.aditional_labels:
+        for label in self.additional_labels:
             Edge.set_label(poli_line, text=label["text"] + "\n", color=label["color"], position=label["position"],
                            size=label["size"])
         return edge

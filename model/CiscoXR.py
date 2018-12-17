@@ -775,18 +775,20 @@ class CiscoXR(Parent):
             self.ip_bgp_neighbors[bgp_neigbor_ip]["recived_routes"] = bgp_recived_routes
         return (bgp_recived_routes)
 
-    def set_all_interfaces(self):
+    def set_interfaces(self):
+        pprint(self)
         command = "show interfaces "
         connection = self.connect()
 
-        show_interfaces = self.send_command(connection, command, self.hostname, timeout=5)[1:]
+        show_interfaces = self.send_command(connection, command, self.hostname, timeout=4465)[1:]
         split_interfaces = show_interfaces.split("\n\n")
-        interfaces = {}
+        self.interfaces = {}
+        self.interfaces_ip = {}
         for interface in split_interfaces:
             interface_object = InterfaceXR(self, "NA")
             interface_object.parse_interface_out(interface)
-            interfaces[interface_object.index] = interface_object
-        self.interfaces = interfaces
+            self.interfaces[interface_object.index] = interface_object
+            self.interfaces_ip[str(interface_object.ip)] = interface_object
 
     """
     def get_kivy_policy_rate(self):

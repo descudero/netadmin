@@ -39,7 +39,7 @@ Start
   ^.*Hardware\s+is\s+${HARDWARE_TYPE}.+address\s+is\s+${MAC_ADDRESS}\s+\(bia\s+${BIA}\)\s*$$
   ^\s+Description:\s+${DESCRIPTION}\s*$$
   ^\s+Internet\saddress\sis\s${IP}\s*$$
-  ^\s+MTU\s+${MTU}.*BW\s+${BW}.*DLY\s+${DELAY},\s*$$
+  ^\s+MTU\s+${MTU}.*BW\s+${BW}.*(DLY\s+${DELAY},\s*)?$$
   ^\s+${DUPLEX},\s+${SPEED},.+,.+media\stype\sis\s${MEDIA_TYPE}$$
   ^\s+Last\sclearing.*counters\s${LAST_RESET}
   ^.*Total output drops:\s+${OUTPUT_DROPS}\s*$$

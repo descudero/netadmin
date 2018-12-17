@@ -8,7 +8,7 @@ class InterfaceXR(Parent):
     def parse_interface_out(self, show_output):
         lines_show_ouput = show_output.split("\n")
         duplex_set = False
-
+        self.ip = ipaddress.ip_address("172.0.0.1")
         try:
 
             for linea in lines_show_ouput:
@@ -39,8 +39,7 @@ class InterfaceXR(Parent):
                         self.ip = ipaddress.ip_address(ip.split("/")[0])
                         self.network = ipaddress.ip_network(ip, False)
                     except Exception:
-                        print(ip)
-                        self.ip = ipaddress.ip_address("0.0.0.0")
+                        self.ip = ipaddress.ip_address("172.0.0.1")
                         self.network = "0.0.0.0"
                 if linea.find("MTU") != -1:
                     # print("MTU")
@@ -101,10 +100,16 @@ class InterfaceXR(Parent):
                     self.last_clear_counters = linea.split(" counters ")[1]
         except Exception:
             print(show_output)
+        try:
+            self.util_in = round(float(self.rate_in) / (float(self.bw * 10)), 2)
 
-
-        self.utilization_in = 0 if self.bw == 0 else round(float(self.rate_in) / (float(self.bw * 10)), 2)
-        self.utilization_out = 0 if self.bw == 0 else round(float(self.rate_out) / (float(self.bw * 10)), 2)
-
+        except:
+            # print(self.parent_device,"unable to set rate in ," + self.rate_in, self.bw)
+            self.util_in = 0
+        try:
+            self.util_out = round(float(self.rate_out) / (float(self.bw * 10)), 2)
+        except:
+            # print(self.parent_device,"unable to set rate in ," + self.rate_out, self.bw)
+            self.util_out = 0
     def __str__(self):
         return self.index + " " + self.phy_state + " "

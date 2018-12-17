@@ -13,6 +13,7 @@ import socket
 import random
 from struct import pack, unpack
 from datetime import datetime as dt
+from model.ospf_database import ospf_database
 
 from pysnmp.entity.rfc3413.oneliner import cmdgen
 from pysnmp.proto.rfc1902 import Integer, IpAddress, OctetString
@@ -43,6 +44,11 @@ class Claro:
         self.dbpassword = 'epsilon123'
         self.max_threads = 50
         self.not_connected_devices = []
+
+    def ospf_topology(self, ip_seed_router, process_id='1', area='0', filename="pruebayed"):
+        ospf_db = ospf_database(ip_seed_router=ip_seed_router, isp=self, process_id=process_id, area=area)
+        ospf_db.get_yed_file(filename=filename)
+
 
     def tabulate_mpls_traffic_tunnels(self, ip_lsr_router, filename="test_mpls"):
         lsr = CiscoIOS(master=self.master, ip=ip_lsr_router, display_name="lsr")
@@ -304,6 +310,7 @@ class Claro:
 
             g.add_node(node_name=router, height=str(200), width=str(200), shape=shape,
                        x=str(grid_x_counter * separation), y=str(grid_y_counter * separation), shape_fill=bcolor)
+
             label_text = data["hostname"]
             g.nodes[router].add_label(label_text)
             if grid_x_counter == 9:
@@ -618,7 +625,15 @@ class Claro:
         device_list = []
 
         for device in devices:
-            t = th.Thread(target=device.get_platform)
+            t = th.Thread(target=device.set_snmp_community)
+            t.start()
+            threads.append(t)
+
+        for t in threads:
+            t.join()
+
+        for device in devices:
+            t = th.Thread(target=device.set_snmp_plattform)
             t.start()
             threads.append(t)
 
@@ -630,7 +645,6 @@ class Claro:
             device = eval(device.platform)(device.ip, device.display_name, self.master)
             device_list.append(device)
             device.platform = platform
-            print(device)
         return device_list
 
     def get_device_list(self, filename):

@@ -46,14 +46,15 @@ print(no_responses)
 master = Master(password="zekto2014-", username="descuderor")
 # test = CiscoXR("172.16.30.244","XR",master)
 claro.set_master(password="zekto2014-", username="descuderor")
-
+claro.ospf_topology(ip_seed_router='172.16.30.5', process_id='1', area='0')
 # print(test.set_arp_list(vrf="INTERNET"))
-test2 = CiscoIOS("172.16.30.5", "IOS", master)
+# test2 = CiscoXR("172.16.30.246", "IOS", master)
 #test2.set_chassis()
 #print(test2.chassis)
 #test2.chassis.print_children()
 
-pprint(test2.set_interfaces())
+#pprint(test2.get_ospf_area_adjacency_p2p())
+
 # pprint(test2.set_physical_interfaces())
 # devices = claro.load_devices_csv("host.csv")
 # claro.asr_mod_inventory()
