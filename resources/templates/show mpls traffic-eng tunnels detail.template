@@ -1,0 +1,51 @@
+Value name (.*)
+Value tunnel (\d+)
+Value destination_ip ((\d{1,3}\.){3}\d{1,3})
+Value source_ip ((\d{1,3}\.){3}\d{1,3})
+Value tunnel_instance (\d+)
+Value admin (\S+)
+Value oper (\S+)
+Value valid_path (.+)
+Value signalling (\S+)
+Value List path_option (\d+,\s\S+\s\S+(\s\S+)?)
+Value actual_state (.*)
+Value interface_in (\S+)
+Value label_in (\S+)
+Value prev_hop ((\d{1,3}\.){3}\d{1,3})
+Value interface_out (\S+)
+Value label_out (\S+)
+Value next_hop ((\d{1,3}\.){3}\d{1,3})
+Value my_address ((\d{1,3}\.){3}\d{1,3})
+Value List explicit_hops ((\d{1,3}\.){3}\d{1,3})
+
+Start
+  ^Name:\s$name\s+\(Tunnel$tunnel\)\sDestination:\s$destination_ip
+  ^LSP\sTunnel\s$name\s+is,.* -> Active
+  ^\s+Admin:\s$admin\s+Oper:\s$oper\s+Path:\s$valid_path\s+Signalling:\s$signalling.* -> Config
+
+
+Path
+  ^\s+(Explicit\sRoute:)?\s$explicit_hops\s? -> Continue
+  ^\s+(Explicit\sRoute:)?\s\S+\s$explicit_hops\s? -> Continue
+  ^\s+(Explicit\sRoute:)?:\s\S+\s\S+\s$explicit_hops\s? -> Continue
+  ^\s+(Explicit\sRoute:)?\s\S+\s\S+\s\S+\s$explicit_hops\s? -> Continue
+  ^\s+Record.* -> Continue.Record
+  ^\s+Record.* -> Start
+
+Config
+  ^\s+path\soption\s$path_option.*
+  ^\s+Config\sParameters:+ -> Active
+
+Active
+  ^\s+State:\s$actual_state
+  ^\s+InLabel\s+:\s+$interface_in,\s+$label_in
+  ^\s+Pre.*:\s+$prev_hop
+  ^\s+OutLabel\s+:\s+$interface_out,\s+$label_out
+  ^\s+Next.*:\s+$next_hop
+  ^\s+Src\s$source_ip,\s+Dst\s$destination_ip,\sTun_Id\s+$tunnel,\s+Tun_Instance\s+$tunnel_instance
+  ^\s+My\sAddress:\s$my_address -> Path
+  ^\s+History:.* -> Continue.Record
+  ^\s+History.* -> Start
+
+
+

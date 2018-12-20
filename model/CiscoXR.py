@@ -2,11 +2,11 @@ import re
 
 from model.CiscoIOS import CiscoIOS as Parent
 from model.Interface import InternetInterface
-from model.InterfaceXR import InterfaceXR
+from model.InterfaceIOS import InterfaceIOS
 from model.RoutePolicy import RoutePolicy
 from model.prefixSet import PrefixSet
 from pprint import pprint
-
+from tools import normalize_interface_name
 
 # from kivy.uix.boxlayout import bgpBoxLayout
 # from LabelB import LabelB
@@ -188,6 +188,9 @@ class CiscoXR(Parent):
                     in_prefix = True
 
         self.prefix_sets = prefix_sets
+
+    def routes(self, address_family=" ipv4 unicast", vrf="INTERNET", type="all"):
+        pass
 
     def route_policy_per_interface(self):
         self.set_internet_interfaces()
@@ -775,20 +778,10 @@ class CiscoXR(Parent):
             self.ip_bgp_neighbors[bgp_neigbor_ip]["recived_routes"] = bgp_recived_routes
         return (bgp_recived_routes)
 
-    def set_interfaces(self):
+    def set_interfaces(self, template_name="show_interfaces_detail_ios.template"):
         pprint(self)
-        command = "show interfaces "
-        connection = self.connect()
+        super().set_interfaces(template_name=template_name)
 
-        show_interfaces = self.send_command(connection, command, self.hostname, timeout=4465)[1:]
-        split_interfaces = show_interfaces.split("\n\n")
-        self.interfaces = {}
-        self.interfaces_ip = {}
-        for interface in split_interfaces:
-            interface_object = InterfaceXR(self, "NA")
-            interface_object.parse_interface_out(interface)
-            self.interfaces[interface_object.index] = interface_object
-            self.interfaces_ip[str(interface_object.ip)] = interface_object
 
     """
     def get_kivy_policy_rate(self):

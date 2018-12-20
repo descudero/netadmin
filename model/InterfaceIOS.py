@@ -23,9 +23,10 @@ class InterfaceIOS(object):
 
         try:
             self.ip = ipaddress.ip_interface(self.ip).ip
+            self.netmask = ipaddress.ip_interface(self.ip).netmask
         except:
             self.ip = ipaddress.ip_address("127.0.0.1")
-
+            self.netmask = ipaddress.ip_interface("127.0.0.1/32").netmask
 
     def set_initial_stats(self):
         self.index = ""

@@ -3,15 +3,13 @@ import re
 from netmiko import ConnectHandler
 from netmiko import NetMikoTimeoutException
 from netmiko import NetMikoAuthenticationException
-import sys
 import time
-import select
-import paramiko
 import textfsm
 import socket
 
 from platform import system as system_name  # Returns the system/OS name
 from subprocess import call   as system_call  # Execute a shell command
+
 
 class BaseDevice(object):
 
@@ -103,11 +101,13 @@ class BaseDevice(object):
 
     def send_command_and_parse(self, command, template_name, timeout=5, close_connection=True):
         connection = self.connect()
+        parser = self.load_template(template_name=template_name)
         cli_output = self.send_command(connection=connection, command=command, timeout=timeout)
         connection.disconnect()
-        parser = self.load_template(template_name=template_name)
+
         fsm_results = parser.ParseText(cli_output)
         header = [column.lower() for column in parser.header]
+
         return [dict(zip(header, row)) for row in fsm_results]
 
     def set_jump_gateway(self, ip, protocol):

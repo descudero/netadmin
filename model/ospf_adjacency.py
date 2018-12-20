@@ -33,12 +33,17 @@ class ospf_adjacency:
         red = Color("Red")
         colors = list(green.range_to(yellow, 50)) + list(yellow.range_to(red, 51))
         additional_labels = []
+        line_type = "line"
+        if "NAP" in self.adj_neighbors["s"]["network_device"].hostname or \
+                "NAP" in self.adj_neighbors["t"]["network_device"].hostname:
+            line_type = "dashed"
+
         for key, neighbor in self.adj_neighbors.items():
             input_rate, output_rate = neighbor["interface"].util()
             color = colors[int(max(input_rate, output_rate))].hex
             width = str(2 * int(max(input_rate, output_rate) / 10))
-            interface_rate_text = neighbor["interface"].index + ' R:' + str(output_rate) + "% " + "C:" + neighbor[
-                "metric"]
+            interface_rate_text = neighbor["interface"].index + "C:" + neighbor[
+                "metric"] + '\n' + str(output_rate) + "% "
             additional_labels.append(
                 {"text": interface_rate_text, "color": "#000000", "position": key + "center", "size": '20'})
 
@@ -47,7 +52,7 @@ class ospf_adjacency:
 
         edge = pyyed.Edge(node1=self.adj_neighbors['s']["router_id"],
                           node2=self.adj_neighbors['t']["router_id"],
-                          id=self.network_id,
+                          id=self.network_id, line_type=line_type,
                           additional_labels=additional_labels, width=width,
                           color=color
                           )

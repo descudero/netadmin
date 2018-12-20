@@ -1,0 +1,15 @@
+Value id (\d+)
+Value description (.*)
+Value interface (\S+)
+Value vlan (\S+)
+Value state (\S+)
+
+
+Start
+  ^\Service.+ID:\s$id
+  ^\Description:\s$description
+  ^.*Interface:\s$interface
+  ^Encaps.*:\sdot1q\s$vlan\s.*
+  ^State:\s$state
+  ^EFP\sSta.* -> Record
+

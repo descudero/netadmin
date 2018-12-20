@@ -1,0 +1,2373 @@
+P2P TUNNELS/LSPs:
+
+Name: FRR_LP_INT_SUBA-ESC                 (Tunnel4) Destination: 172.16.30.42
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit FRR_LP_INT_SUBA-ESC (Basis for Setup, path weight 175)
+
+  Config Parameters:
+    Bandwidth: 0        kbps (Global)  Priority: 7  7   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 0 [0] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/2, 603
+  Next Hop : 172.16.20.113
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.16.30.42, Tun_Id 4, Tun_Instance 6968
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route: 172.16.20.113 172.16.20.98 172.16.20.93 172.16.20.106
+                      172.16.20.174 172.16.27.5 172.16.27.13 172.16.26.65
+                      172.16.30.42
+      Record   Route:   NONE
+      Tspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 34 minutes, 3 seconds
+      Number of LSP IDs (Tun_Instances) used: 6968
+    Current LSP: [ID: 6968]
+      Uptime: 34 minutes, 3 seconds
+    Prior LSP: [ID: 6967]
+      ID: path option unknown
+      Removal Trigger: path verification failed
+
+Name: TE Callzilla                        (Tunnel5701) Destination: 172.16.30.11
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit CALLZILLA-PRI (Basis for Setup, path weight 140)
+    path option 20, type explicit CALLZILLA-SEC
+    path option 30, type dynamic
+    Path Protection: 2 Common Link(s), 2 Common Node(s)
+    path protect option 10, type explicit CALLZILLA-PRI-BKP (Basis for Protect, path weight 189)
+    path protect option 20, type explicit CALLZILLA-SEC-BKP
+
+  Config Parameters:
+    Bandwidth: 1000     kbps (Global)  Priority: 1  1   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 1000 [2000000] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/2, 372
+  Next Hop : 172.16.20.113
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.16.30.11, Tun_Id 5701, Tun_Instance 6664
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route: 172.16.20.113 172.16.20.98 172.16.20.93 172.16.20.106
+                      172.16.20.22 172.16.30.11
+      Record   Route:
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.13(372) 172.16.20.97(372)
+                       172.16.30.14(1037) 172.16.20.94(1037)
+                       172.16.30.15(505) 172.16.20.105(505)
+                       172.16.30.5(1509) 172.16.20.21(1509)
+                       172.16.30.11(3) 172.16.20.22(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 1 days, 11 hours, 3 minutes
+      Number of LSP IDs (Tun_Instances) used: 6664
+    Current LSP: [ID: 6664]
+      Uptime: 1 days, 11 hours, 3 minutes
+      Selection: reoptimization
+    Prior LSP: [ID: 6662]
+      ID: path option 10 [6609]
+      Removal Trigger: reoptimization completed
+      Last Error: RSVP:: Path Error from 172.16.20.98: Routing Problem: No route available toward destination (flags 0)
+
+Name: ATT-IDC-PA_SMA-SV_MONITOREO         (Tunnel9910) Destination: 172.19.24.1
+  Status:
+    Admin: admin-down Oper: down   Path: not valid   Signalling: Down
+    path option 10, type explicit L_SUB-ESC-EAG1
+    path option 20, type explicit L_SUB-ESC-SPE-EAG1
+    path option 30, type explicit L_SUB-WBP1-TOL-CGA-SPE-EAG1
+    path option 40, type explicit L_SUB-WBP1-WBP2-SAL-TOL-NAP3-PCO-TAL-PIN-SPE-EAG1
+    path option 50, type explicit L_SUB-WBP1-TOL-CGA-PCO-GUY-20C-SMA-NAC-SUM-ESC-SPE-EAG1
+    path option 60, type explicit L_SUB-WBP1-WBP2-SAL-TOL-NAP3-CRZ-VPL-CGA-SPE-EAG1
+    path option 70, type explicit L_SUB-WBP1-TOL-NAP3-CRZ-VPL-HUB-ESC-SPE-EAG1
+    path option 80, type explicit L_SUB-WBP1-TOL-NAP3-CRZ-VPL-HUB-ESC-EAG1
+    path option 90, type explicit L_SUB-WBP1-WBP2-SAL-TOL-NAP3-NAP4-PCO-TAL-NAC-SUM-ESC-EAG1
+    path option 100, type explicit L_SUB-WBP1-TOL-CGA-PCO-GUY-BET-TAL-PIN-SPE-ESC-EAG1
+    path option 110, type explicit L_SUB-WBP1-WBP2-SAL-TOL-CGA-PCO-GUY-BET-TAL-PIN-SPE-ESC-EAG1
+    path option 120, type dynamic
+    path protect option 10, type list name P_LSP_SUB-EAG1_10
+    path protect option 20, type list name P_LSP_SUB-EAG1_20
+    path protect option 30, type list name P_LSP_SUB-EAG1_30
+    path protect option 40, type list name P_LSP_SUB-EAG1_40
+    path protect option 50, type list name P_LSP_SUB-EAG1_50
+    path protect option 60, type list name P_LSP_SUB-EAG1_60
+    path protect option 70, type list name P_LSP_SUB-EAG1_70
+    path protect option 80, type list name P_LSP_SUB-EAG1_80
+    path protect option 90, type list name P_LSP_SUB-EAG1_90
+    path protect option 100, type list name P_LSP_SUB-EAG1_100
+    path protect option 110, type list name P_LSP_SUB-EAG1_110
+
+  Config Parameters:
+    Bandwidth: 1000     kbps (Global)  Priority: 1  1   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 1000 [0] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+
+  Reason for the tunnel being down: Tunnel interface is shutdown
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Number of LSP IDs (Tun_Instances) used: 0
+
+Name: ATT-IDC-PA_SMA-SV_MONITOREO         (Tunnel9911) Destination: 172.19.12.1
+  Status:
+    Admin: admin-down Oper: down   Path: not valid   Signalling: Down
+    path option 10, type explicit L_SUB-ESC-SPE-CGA-PCO-GUY-20C-SMA-SAG1
+    path option 20, type explicit L_SUB-ESC-SPE-CGA-PCO-GUY-BET-SAG1
+    path option 30, type explicit L_SUB-ESC-SPE-CGA-PCO-TAL-BET-SAG1
+    path option 40, type explicit L_SUB-WBP1-WBP2-SAL-TOL-NAP3-PCO-GUY-20C-SMA-SAG1
+    path option 50, type explicit L_SUB-WBP1-TOL-NAP3-NAP4-PCO-TAL-BET-SAG1
+    path option 60, type explicit L_SUB-ESC-SUM-NAC-SMA-SAG1
+    path option 70, type explicit L_SUB-WBP1-TOL-NAP3-CRZ-VPL-HUB-ESC-SUM-NAC-SMA-SAG1
+    path option 80, type explicit L_SUB-WBP1-WBP2-SAL-TOL-NAP3-CRZ-VPL-HUB-ESC-SUM-NAC-SMA-SAG1
+    path option 90, type explicit L_SUB-ESC-SPE-PIN-TAL-BET-SAG1
+    path option 100, type explicit L_SUB-WBP1-TOL-NAP3-CRZ-VPL-HUB-ESC-SPE-PIN-TAL-BET-SAG1
+    path option 110, type explicit L_SUB-WB1-WB2-SAL-TOL-NAP3-CRZ-VPL-HUB-ESC-SPE-PIN-TAL-BET-SAG1
+    path protect option 10, type list name P_LSP_SUB-SAG1_10
+    path protect option 20, type list name P_LSP_SUB-SAG1_20
+    path protect option 30, type list name P_LSP_SUB-SAG1_30
+    path protect option 40, type list name P_LSP_SUB-SAG1_40
+    path protect option 50, type list name P_LSP_SUB-SAG1_50
+    path protect option 60, type list name P_LSP_SUB-SAG1_60
+    path protect option 70, type list name P_LSP_SUB-SAG1_70
+    path protect option 80, type list name P_LSP_SUB-SAG1_80
+    path protect option 90, type list name P_LSP_SUB-SAG1_90
+    path protect option 100, type list name P_LSP_SUB-SAG1_100
+    path protect option 110, type list name P_LSP_SUB-SAG1_110
+
+  Config Parameters:
+    Bandwidth: 1000     kbps (Global)  Priority: 1  1   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 1000 [0] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+
+  Reason for the tunnel being down: Tunnel interface is shutdown
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Number of LSP IDs (Tun_Instances) used: 0
+
+Name: PAYPAL_AT&T_GTCO04510019-Path_1     (Tunnel50211) Destination: 172.17.22.54
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit staticCOGT_1_Paypal (Basis for Setup, path weight 179)
+
+  Config Parameters:
+    Bandwidth: 100000   kbps (Global)  Priority: 1  1   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 100000 [20000] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/2, 406
+  Next Hop : 172.16.20.113
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.22.54, Tun_Id 50211, Tun_Instance 84
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route: 172.16.20.113 172.16.20.81 172.16.20.78 172.16.20.109
+                      172.16.22.73 172.17.22.52* 172.18.8.241
+      Record   Route:
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.20.82 172.16.20.77 172.16.20.78 172.16.20.109
+                       172.18.9.245 172.18.8.242 172.18.8.241
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 33 minutes, 1 seconds
+      Number of LSP IDs (Tun_Instances) used: 84
+    Current LSP: [ID: 84]
+      Uptime: 13 minutes, 40 seconds
+      Selection: reoptimization
+    Prior LSP: [ID: 82]
+      ID: path option 10 [82]
+      Removal Trigger: reoptimization completed
+      Last Error: RSVP:: Path Error from 172.16.22.73: Notify: Better path exists (flags 0)
+
+Name: PAYPAL_AT&T_GTCO04510019-Path_3     (Tunnel50212) Destination: 172.17.22.54
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit staticCOGT_2_Paypal (Basis for Setup, path weight 71)
+
+  Config Parameters:
+    Bandwidth: 100000   kbps (Global)  Priority: 1  1   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 100000 [20000] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/5, 1622
+  Next Hop : 172.16.28.13
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.22.54, Tun_Id 50212, Tun_Instance 3606
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route: 172.16.28.13 172.16.26.158 172.16.25.9 172.16.24.74
+                      172.16.23.1 172.16.22.65 172.17.22.52* 172.18.8.241
+      Record   Route:
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.26.157 172.16.25.10 172.16.24.73 172.16.23.2
+                       172.16.22.66 172.18.9.245 172.18.8.242 172.18.8.241
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 19 hours, 25 minutes
+      Number of LSP IDs (Tun_Instances) used: 3606
+    Current LSP: [ID: 3606]
+      Uptime: 13 minutes, 40 seconds
+      Selection: reoptimization
+    Prior LSP: [ID: 3604]
+      ID: path option 10 [3604]
+      Removal Trigger: reoptimization completed
+      Last Error: RSVP:: Path Error from 172.16.22.65: Notify: Better path exists (flags 0)
+
+Name: PAYPAL_AT&T_GTCO04510019-Path_7     (Tunnel50213) Destination: 172.17.22.54
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit staticCOGT_3_Paypal (Basis for Setup, path weight 70)
+
+  Config Parameters:
+    Bandwidth: 100000   kbps (Global)  Priority: 1  1   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 100000 [20000] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/5, 764
+  Next Hop : 172.16.28.13
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.22.54, Tun_Id 50213, Tun_Instance 4397
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route: 172.16.28.13 172.16.25.69 172.16.24.65 172.16.23.65
+                      172.16.22.17 172.16.22.5 172.17.22.52* 172.18.8.241
+      Record   Route:
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.25.70 172.16.24.66 172.16.23.66 172.16.22.18
+                       172.16.22.6 172.18.9.245 172.18.8.242 172.18.8.241
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 21 minutes, 23 seconds
+      Number of LSP IDs (Tun_Instances) used: 4397
+    Current LSP: [ID: 4397]
+      Uptime: 13 minutes, 40 seconds
+      Selection: reoptimization
+    Prior LSP: [ID: 4395]
+      ID: path option 10 [4395]
+      Removal Trigger: reoptimization completed
+      Last Error: RSVP:: Path Error from 172.16.22.5: Notify: Better path exists (flags 0)
+
+Name: PAYPAL_AT&T_GTCO04510019-Path_9     (Tunnel50214) Destination: 172.17.22.54
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit staticCOGT_4_Paypal (Basis for Setup, path weight 140)
+
+  Config Parameters:
+    Bandwidth: 100000   kbps (Global)  Priority: 1  1   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 100000 [20000] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/2, 640
+  Next Hop : 172.16.20.113
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.22.54, Tun_Id 50214, Tun_Instance 4757
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route: 172.16.20.113 172.16.20.81 172.16.20.86 172.16.20.57
+                      172.16.27.25 172.16.30.50 172.18.9.121* 172.18.8.77
+                      172.18.9.93 172.18.9.89 172.18.9.85 172.18.9.81
+                      172.18.8.53 172.18.8.45 172.18.8.41 172.18.8.37
+                      172.18.8.29 172.18.8.241
+      Record   Route:
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.20.82 172.16.20.85 172.16.20.58 172.16.20.57
+                       172.18.9.122 172.18.8.78 172.18.9.94 172.18.9.90
+                       172.18.9.86 172.18.9.82 172.18.8.54 172.18.8.46
+                       172.18.8.42 172.18.8.38 172.18.8.30 172.18.8.242
+                       172.18.8.241
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 33 minutes, 1 seconds
+      Number of LSP IDs (Tun_Instances) used: 4757
+    Current LSP: [ID: 4757]
+      Uptime: 33 minutes, 1 seconds
+    Prior LSP: [ID: 4704]
+      ID: path option unknown
+      Removal Trigger: path verification failed
+
+Name: PAYPAL_AT&T_GTCO04510019-Path_5     (Tunnel50215) Destination: 172.17.22.54
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit staticCOGT_5_Paypal (Basis for Setup, path weight 60)
+
+  Config Parameters:
+    Bandwidth: 100000   kbps (Global)  Priority: 1  1   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 100000 [20000] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/5, 35
+  Next Hop : 172.16.28.13
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.22.54, Tun_Id 50215, Tun_Instance 9889
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route: 172.16.28.13 172.16.26.82 172.16.26.86 172.16.20.13
+                      172.16.22.77 172.17.22.52* 172.18.8.241
+      Record   Route:
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.26.81 172.16.26.85 172.16.26.86 172.16.20.13
+                       172.18.9.245 172.18.8.242 172.18.8.241
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 24 minutes, 53 seconds
+      Number of LSP IDs (Tun_Instances) used: 9889
+    Current LSP: [ID: 9889]
+      Uptime: 13 minutes, 40 seconds
+      Selection: reoptimization
+    Prior LSP: [ID: 9887]
+      ID: path option 10 [9887]
+      Removal Trigger: reoptimization completed
+      Last Error: RSVP:: Path Error from 172.16.22.77: Notify: Better path exists (flags 0)
+
+Name: PAYPAL_AT&T_GTCO04510019-Path_2     (Tunnel50216) Destination: 172.17.22.79
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit staticCOGT_6_Paypal (Basis for Setup, path weight 80)
+
+  Config Parameters:
+    Bandwidth: 100000   kbps (Global)  Priority: 1  1   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 100000 [20000] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/5, 800
+  Next Hop : 172.16.28.13
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.22.79, Tun_Id 50216, Tun_Instance 7361
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route: 172.16.28.13 172.16.25.65 172.16.25.17 172.16.24.1
+                      172.16.24.81 172.16.23.77 172.16.22.9 172.17.22.100*
+                      172.18.10.62
+      Record   Route:
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.25.66 172.16.25.18 172.16.24.2 172.16.24.82
+                       172.16.23.78 172.16.22.10 172.18.10.46 172.18.10.61
+                       172.18.10.62
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 4 days, 38 minutes
+      Number of LSP IDs (Tun_Instances) used: 7361
+    Current LSP: [ID: 7361]
+      Uptime: 3 minutes, 40 seconds
+      Selection: reoptimization
+    Prior LSP: [ID: 7359]
+      ID: path option 10 [7359]
+      Removal Trigger: reoptimization completed
+      Last Error: RSVP:: Path Error from 172.16.22.9: Notify: Better path exists (flags 0)
+
+Name: PAYPAL_AT&T_GTCO04510019-Path_6     (Tunnel50217) Destination: 172.17.22.79
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit staticCOGT_7_Paypal (Basis for Setup, path weight 106)
+
+  Config Parameters:
+    Bandwidth: 100000   kbps (Global)  Priority: 1  1   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 100000 [20000] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/5, 1203
+  Next Hop : 172.16.28.13
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.22.79, Tun_Id 50217, Tun_Instance 8418
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route: 172.16.28.13 172.16.26.90 172.16.27.10 172.16.27.18
+                      172.16.20.13 172.16.24.69 172.16.23.9 172.16.22.65
+                      172.16.22.2 172.17.22.100* 172.18.10.62
+      Record   Route:
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.26.89 172.16.27.9 172.16.27.17 172.16.27.18
+                       172.16.20.13 172.16.23.10 172.16.22.66 172.16.22.1
+                       172.18.10.46 172.18.10.61 172.18.10.62
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 14 hours, 21 minutes
+      Number of LSP IDs (Tun_Instances) used: 8418
+    Current LSP: [ID: 8418]
+      Uptime: 3 minutes, 40 seconds
+      Selection: reoptimization
+    Prior LSP: [ID: 8416]
+      ID: path option 10 [8416]
+      Removal Trigger: reoptimization completed
+      Last Error: RSVP:: Path Error from 172.16.22.2: Notify: Better path exists (flags 0)
+
+Name: PAYPAL_AT&T_GTCO04510019-Path_4     (Tunnel50218) Destination: 172.17.22.79
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit staticCOGT_8_Paypal (Basis for Setup, path weight 209)
+
+  Config Parameters:
+    Bandwidth: 100000   kbps (Global)  Priority: 1  1   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 100000 [20000] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/2, 229
+  Next Hop : 172.16.20.113
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.22.79, Tun_Id 50218, Tun_Instance 8614
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route: 172.16.20.113 172.16.20.81 172.16.20.78 172.16.20.109
+                      172.16.24.77 172.16.24.85 172.16.23.77 172.16.22.17
+                      172.17.22.100* 172.18.10.62
+      Record   Route:
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.20.82 172.16.20.77 172.16.20.78 172.16.20.109
+                       172.16.24.86 172.16.23.78 172.16.22.18 172.18.10.46
+                       172.18.10.61 172.18.10.62
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 33 minutes, 1 seconds
+      Number of LSP IDs (Tun_Instances) used: 8614
+    Current LSP: [ID: 8614]
+      Uptime: 3 minutes, 40 seconds
+      Selection: reoptimization
+    Prior LSP: [ID: 8612]
+      ID: path option 10 [8612]
+      Removal Trigger: reoptimization completed
+      Last Error: RSVP:: Path Error from 172.16.22.17: Notify: Better path exists (flags 0)
+
+Name: PAYPAL_AT&T_GTCO04510019-Path_8     (Tunnel50219) Destination: 172.17.22.79
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit staticCOGT_9_Paypal (Basis for Setup, path weight 150)
+
+  Config Parameters:
+    Bandwidth: 100000   kbps (Global)  Priority: 1  1   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 100000 [20000] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/2, 1284
+  Next Hop : 172.16.20.113
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.22.79, Tun_Id 50219, Tun_Instance 4612
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route: 172.16.20.113 172.16.20.81 172.16.20.86 172.16.20.41
+                      172.16.20.10 172.16.27.25 172.16.30.50 172.18.9.121*
+                      172.18.8.77 172.18.9.93 172.18.9.89 172.18.9.85
+                      172.18.9.81 172.18.8.53 172.18.8.45 172.18.8.41
+                      172.18.8.37 172.18.10.62
+      Record   Route:
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.20.82 172.16.20.85 172.16.20.42 172.16.20.9
+                       172.16.20.10 172.18.9.122 172.18.8.78 172.18.9.94
+                       172.18.9.90 172.18.9.86 172.18.9.82 172.18.8.54
+                       172.18.8.46 172.18.8.42 172.18.8.38 172.18.10.61
+                       172.18.10.62
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 33 minutes, 1 seconds
+      Number of LSP IDs (Tun_Instances) used: 4612
+    Current LSP: [ID: 4612]
+      Uptime: 33 minutes, 1 seconds
+    Prior LSP: [ID: 4559]
+      ID: path option unknown
+      Removal Trigger: path verification failed
+
+Name: ATT-IDC-PA_SMA-SV                   (Tunnel50311) Destination: 172.19.12.1
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit L_SUB-ESC-SPE-CGA-PCO-GUY-20C-SMA-SAG1 (Basis for Setup, path weight 80)
+    path option 20, type explicit L_SUB-ESC-SPE-CGA-PCO-GUY-BET-SAG1
+    path option 30, type explicit L_SUB-ESC-SPE-CGA-PCO-TAL-BET-SAG1
+    path option 40, type explicit L_SUB-WBP1-WBP2-SAL-TOL-NAP3-PCO-GUY-20C-SMA-SAG1
+    path option 50, type explicit L_SUB-WBP1-TOL-NAP3-NAP4-PCO-TAL-BET-SAG1
+    path option 60, type explicit L_SUB-ESC-SUM-NAC-SMA-SAG1
+    path option 70, type explicit L_SUB-WBP1-TOL-NAP3-CRZ-VPL-HUB-ESC-SUM-NAC-SMA-SAG1
+    path option 80, type explicit L_SUB-WBP1-WBP2-SAL-TOL-NAP3-CRZ-VPL-HUB-ESC-SUM-NAC-SMA-SAG1
+    path option 90, type explicit L_SUB-ESC-SPE-PIN-TAL-BET-SAG1
+    path option 100, type explicit L_SUB-WBP1-TOL-NAP3-CRZ-VPL-HUB-ESC-SPE-PIN-TAL-BET-SAG1
+    path option 110, type explicit L_SUB-WB1-WB2-SAL-TOL-NAP3-CRZ-VPL-HUB-ESC-SPE-PIN-TAL-BET-SAG1
+    path option 120, type dynamic
+    Path Protection: 0 Common Link(s), 1 Common Node(s)
+    Primary Path: Some links could not be checked
+    Protect Path: Some links could not be checked
+    path protect option 10, type list name P_LSP_SUB-SAG1_10
+      Inuse path-option 50, type explicit L_SUB-WBP1-TOL-NAP3-NAP4-PCO-TAL-BET-SAG1 (Basis for Protect, path weight 161)
+    path protect option 20, type list name P_LSP_SUB-SAG1_20
+    path protect option 30, type list name P_LSP_SUB-SAG1_30
+    path protect option 40, type list name P_LSP_SUB-SAG1_40
+    path protect option 50, type list name P_LSP_SUB-SAG1_50
+    path protect option 60, type list name P_LSP_SUB-SAG1_60
+    path protect option 70, type list name P_LSP_SUB-SAG1_70
+    path protect option 80, type list name P_LSP_SUB-SAG1_80
+    path protect option 90, type list name P_LSP_SUB-SAG1_90
+    path protect option 100, type list name P_LSP_SUB-SAG1_100
+    path protect option 110, type list name P_LSP_SUB-SAG1_110
+
+  Config Parameters:
+    Bandwidth: 1000     kbps (Global)  Priority: 1  1   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 1000 [2000000] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/5, 16
+  Next Hop : 172.16.28.13
+  FRR OutLabel : Tunnel4, 16
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.19.12.1, Tun_Id 50311, Tun_Instance 3772
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route: 172.16.28.13 172.16.26.82 172.16.26.86 172.16.20.13
+                      172.16.22.73 172.16.22.6 172.16.22.18 172.19.12.1*
+      Record   Route:
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.42(16) 172.16.26.81(16)
+                       172.16.30.43(629) 172.16.26.85(629)
+                       172.16.30.247(25350) 172.16.26.86(25350)
+                       172.16.30.3(17415) 172.16.20.13(17415)
+                       172.16.30.34(1108) 172.16.22.5(1108)
+                       172.16.30.35(1242) 172.16.22.17(1242)
+                       172.16.30.36(947) 172.18.12.138(947)
+                       172.17.23.11(377) 172.18.12.65(377)
+                       172.19.12.1(3) 172.18.12.66(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 23 minutes, 37 seconds
+      Number of LSP IDs (Tun_Instances) used: 3772
+    Current LSP: [ID: 3772]
+      Uptime: 23 minutes, 40 seconds
+      Selection: reoptimization
+    Prior LSP: [ID: 3751]
+      ID: path option unknown
+      Removal Trigger: reoptimization completed
+
+Name: ATT-IDC-PA_SMA-SV                   (Tunnel50312) Destination: 172.17.23.2
+  Status:
+    Admin: admin-down Oper: down   Path: not valid   Signalling: Down
+     no path options defined
+
+  Config Parameters:
+    Bandwidth: 1000     kbps (Global)  Priority: 1  1   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 1000 [0] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+
+  Reason for the tunnel being down: Tunnel interface is shutdown
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Number of LSP IDs (Tun_Instances) used: 0
+
+Name: AT&T NICO04460003                   (Tunnel50557) Destination: 172.17.25.3
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit SUBAA-LVR-viaTolu (Basis for Setup, path weight 179)
+    Path Protection: 0 Common Link(s), 0 Common Node(s)
+    Primary Path: Some links could not be checked
+    Protect Path: Some links could not be checked
+    path protect option 10, type explicit SUBAA-LVR-viaEscazu (Basis for Protect, path weight 30)
+
+  Config Parameters:
+    Bandwidth: 1000     kbps (Global)  Priority: 7  7   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 1000 [2000000] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/2, 1043
+  Next Hop : 172.16.20.113
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.25.3, Tun_Id 50557, Tun_Instance 8903
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route: 172.16.20.113 172.16.20.81 172.16.20.78 172.16.26.85
+                      172.16.25.9 172.17.25.3*
+      Record   Route:
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.13(1043) 172.16.20.82(1043)
+                       172.16.30.12(758) 172.16.20.77(758)
+                       172.16.30.247(25357) 172.16.20.78(25357)
+                       172.16.30.43(71) 172.16.25.10(71)
+                       172.16.30.41(1363) 172.18.20.169(1363)
+                       172.17.25.2(748) 172.18.20.5(748)
+                       172.17.25.3(3) 172.18.20.6(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 24 minutes, 30 seconds
+      Number of LSP IDs (Tun_Instances) used: 8903
+    Current LSP: [ID: 8903]
+      Uptime: 23 minutes, 40 seconds
+      Selection: reoptimization
+    Prior LSP: [ID: 8900]
+      ID: path option unknown
+      Removal Trigger: reoptimization completed
+
+Name: ATT_HP_ZFA_CR-CO                    (Tunnel50601) Destination: 172.17.26.26
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit AT&T_HP_ZFA_CR-CO (Basis for Setup, path weight 20)
+    path option 20, type dynamic
+
+  Config Parameters:
+    Bandwidth: 1000     kbps (Global)  Priority: 7  7   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 1000 [2000000] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/5, 70
+  Next Hop : 172.16.28.13
+  FRR OutLabel : Tunnel4, 70
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.26.26, Tun_Id 50601, Tun_Instance 1583
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route: 172.16.28.13 172.17.26.3* 172.18.25.86 172.18.26.6
+      Record   Route:
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.42(70) 172.18.25.134(70)
+                       172.17.26.1(1511) 172.18.24.5(1511)
+                       172.17.26.5(292) 172.18.24.22(292)
+                       172.17.26.3(260) 172.18.25.85(260)
+                       172.17.26.26(3) 172.18.25.86(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 17 hours, 52 minutes
+      Number of LSP IDs (Tun_Instances) used: 1583
+    Current LSP: [ID: 1583]
+      Uptime: 3 minutes, 41 seconds
+      Selection: reoptimization
+    Prior LSP: [ID: 1580]
+      ID: path option 10 [1580]
+      Removal Trigger: reoptimization completed
+      Last Error: RSVP:: Path Error from 172.16.28.13: Notify: Better path exists (flags 0)
+
+Name: ATT_HP_ZFA_CR-CO                    (Tunnel50602) Destination: 172.17.26.26
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 5, type explicit HP_ULTRACR-CO50602_R2 (Basis for Setup, path weight 110)
+    path option 20, type dynamic
+    Path Protection: 0 Common Link(s), 0 Common Node(s)
+    Primary Path: Some links could not be checked
+    Protect Path: Some links could not be checked
+    path protect option 5, type explicit HP_ULTRACR-CO50602 (Basis for Protect, path weight 20)
+
+  Config Parameters:
+    Bandwidth: 1000     kbps (Global)  Priority: 7  7   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 1000 [2000000] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 5 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/2, 32
+  Next Hop : 172.16.20.113
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.26.26, Tun_Id 50602, Tun_Instance 7779
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route: 172.16.20.113 172.16.20.81 172.16.30.12 172.16.20.78
+                      172.16.26.77 172.17.26.26*
+      Record   Route:
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.13(32) 172.16.20.82(32)
+                       172.16.30.12(615) 172.16.20.77(615)
+                       172.16.30.247(25428) 172.16.20.78(25428)
+                       172.16.30.43(173) 172.18.25.242(173)
+                       172.17.26.2(396) 172.18.24.13(396)
+                       172.17.26.3(1557) 172.18.25.85(1557)
+                       172.17.26.26(3) 172.18.25.86(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 24 minutes, 59 seconds
+      Number of LSP IDs (Tun_Instances) used: 7779
+    Current LSP: [ID: 7779]
+      Uptime: 13 minutes, 41 seconds
+      Selection: reoptimization
+    Prior LSP: [ID: 7777]
+      ID: path option unknown
+      Removal Trigger: reoptimization completed
+
+Name: ATT_HP_ZFA_CR-CO                    (Tunnel50603) Destination: 172.17.26.4
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit HP_ULTRACR-CO50603 (Basis for Setup, path weight 20)
+    path option 20, type dynamic
+
+  Config Parameters:
+    Bandwidth: 1000     kbps (Global)  Priority: 7  7   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 1000 [2000000] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/5, 1268
+  Next Hop : 172.16.28.13
+  FRR OutLabel : Tunnel4, 1268
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.26.4, Tun_Id 50603, Tun_Instance 5104
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route: 172.16.28.13 172.17.26.4*
+      Record   Route:
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.42(1268) 172.18.25.134(1268)
+                       172.17.26.1(902) 172.18.24.9(902)
+                       172.17.26.4(3) 172.18.24.10(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 12 days, 12 hours, 9 minutes
+      Number of LSP IDs (Tun_Instances) used: 5104
+    Current LSP: [ID: 5104]
+      Uptime: 23 minutes, 41 seconds
+      Selection: reoptimization
+    Prior LSP: [ID: 5097]
+      ID: path option 10 [5097]
+      Removal Trigger: reoptimization completed
+      Last Error: RSVP:: Path Error from 172.16.28.13: Notify: Better path exists (flags 0)
+
+Name: HP_ULTRACR-CO                       (Tunnel50604) Destination: 172.17.26.8
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit HP_ULTRACR-CO50604 (Basis for Setup, path weight 20)
+
+  Config Parameters:
+    Bandwidth: 1000     kbps (Global)  Priority: 7  7   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 1000 [2000000] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/5, 1004
+  Next Hop : 172.16.28.13
+  FRR OutLabel : Tunnel4, 1004
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.26.8, Tun_Id 50604, Tun_Instance 4412
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route: 172.16.28.13 172.17.26.8*
+      Record   Route:
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.42(1004) 172.18.25.134(1004)
+                       172.17.26.1(1506) 172.18.24.58(1506)
+                       172.17.26.44(124) 172.18.24.33(124)
+                       172.17.26.8(3) 172.18.24.34(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 23 days, 10 hours, 44 minutes
+      Number of LSP IDs (Tun_Instances) used: 4412
+    Current LSP: [ID: 4412]
+      Uptime: 3 minutes, 41 seconds
+      Selection: reoptimization
+    Prior LSP: [ID: 4409]
+      ID: path option 10 [4409]
+      Removal Trigger: reoptimization completed
+      Last Error: RSVP:: Path Error from 172.16.28.13: Notify: Better path exists (flags 0)
+
+Name: ATT_CRCO00550063                    (Tunnel50606) Destination: 172.17.26.39
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit FROM_CO_TO_CR_UTP1 (Basis for Setup, path weight 30)
+    path option 20, type dynamic
+
+  Config Parameters:
+    Bandwidth: 1000     kbps (Global)  Priority: 7  7   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 1000 [2000000] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/5, 1251
+  Next Hop : 172.16.28.13
+  FRR OutLabel : Tunnel4, 1251
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.26.39, Tun_Id 50606, Tun_Instance 2946
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route: 172.16.28.13 172.16.26.82 172.16.30.43 172.18.24.70
+                      172.18.24.14 172.18.25.50
+      Record   Route:   NONE
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.42(1251) 172.16.30.43(898)
+                       172.17.26.2(1453) 172.17.26.3(1561)
+                       172.17.26.39(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 1 hours, 42 minutes
+      Number of LSP IDs (Tun_Instances) used: 2946
+    Current LSP: [ID: 2946]
+      Uptime: 1 hours, 42 minutes
+    Prior LSP: [ID: 2943]
+      ID: path option unknown
+      Removal Trigger: path error
+
+Name: ATT_CRCO00550061                    (Tunnel50607) Destination: 172.17.26.3
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit FROM_CO_TO_CR_ATT1 (Basis for Setup, path weight 30)
+
+  Config Parameters:
+    Bandwidth: 1000     kbps (Global)  Priority: 7  7   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 1000 [2000000] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/5, 1071
+  Next Hop : 172.16.28.13
+  FRR OutLabel : Tunnel4, 1071
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.26.3, Tun_Id 50607, Tun_Instance 1032
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route: 172.16.28.13 172.16.26.82 172.16.30.43 172.18.24.70
+                      172.18.24.14
+      Record   Route:
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.42(1071) 172.16.26.81(1071)
+                       172.16.30.43(777) 172.18.24.69(777)
+                       172.17.26.2(1331) 172.18.24.13(1331)
+                       172.17.26.3(3) 172.18.24.14(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 1 hours, 42 minutes
+      Number of LSP IDs (Tun_Instances) used: 1032
+    Current LSP: [ID: 1032]
+      Uptime: 1 hours, 42 minutes
+    Prior LSP: [ID: 1031]
+      ID: path option unknown
+      Removal Trigger: path error
+
+Name: ATT_CRCO00550061                    (Tunnel50608) Destination: 172.17.26.26
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit FROM_CO_TO_CR_ATT2 (Basis for Setup, path weight 30)
+
+  Config Parameters:
+    Bandwidth: 1000     kbps (Global)  Priority: 7  7   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 1000 [2000000] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/5, 1652
+  Next Hop : 172.16.28.13
+  FRR OutLabel : Tunnel4, 1652
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.26.26, Tun_Id 50608, Tun_Instance 1986
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route: 172.16.28.13 172.16.26.82 172.16.30.43 172.18.24.70
+                      172.18.24.14 172.18.25.86 172.18.26.6
+      Record   Route:
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.42(1652) 172.16.26.81(1652)
+                       172.16.30.43(473) 172.18.24.69(473)
+                       172.17.26.2(988) 172.18.24.13(988)
+                       172.17.26.3(1053) 172.18.25.85(1053)
+                       172.17.26.26(3) 172.18.25.86(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 1 hours, 42 minutes
+      Number of LSP IDs (Tun_Instances) used: 1986
+    Current LSP: [ID: 1986]
+      Uptime: 1 hours, 42 minutes
+    Prior LSP: [ID: 1985]
+      ID: path option unknown
+      Removal Trigger: path error
+
+Name: SUBA-INT_EZU-ASR920-AGG1            (Tunnel50611) Destination: 172.19.24.1
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit L_SUB-ESC-EAG1 (Basis for Setup, path weight 20)
+    path option 20, type explicit L_SUB-ESC-SPE-EAG1
+    path option 30, type explicit L_SUB-WBP1-TOL-CGA-SPE-EAG1
+    path option 40, type explicit L_SUB-WBP1-WBP2-SAL-TOL-NAP3-PCO-TAL-PIN-SPE-EAG1
+    path option 50, type explicit L_SUB-WBP1-TOL-CGA-PCO-GUY-20C-SMA-NAC-SUM-ESC-SPE-EAG1
+    path option 60, type explicit L_SUB-WBP1-WBP2-SAL-TOL-NAP3-CRZ-VPL-CGA-SPE-EAG1
+    path option 70, type explicit L_SUB-WBP1-TOL-NAP3-CRZ-VPL-HUB-ESC-SPE-EAG1
+    path option 80, type explicit L_SUB-WBP1-TOL-NAP3-CRZ-VPL-HUB-ESC-EAG1
+    path option 90, type explicit L_SUB-WBP1-WBP2-SAL-TOL-NAP3-NAP4-PCO-TAL-NAC-SUM-ESC-EAG1
+    path option 100, type explicit L_SUB-WBP1-TOL-CGA-PCO-GUY-BET-TAL-PIN-SPE-ESC-EAG1
+    path option 110, type explicit L_SUB-WBP1-WBP2-SAL-TOL-CGA-PCO-GUY-BET-TAL-PIN-SPE-ESC-EAG1
+    path option 120, type dynamic
+    Path Protection: 0 Common Link(s), 0 Common Node(s)
+    Primary Path: Some links could not be checked
+    Protect Path: Some links could not be checked
+    path protect option 10, type list name P_LSP_SUB-EAG1_10
+      Inuse path-option 40, type explicit L_SUB-WBP1-WBP2-SAL-TOL-NAP3-PCO-TAL-PIN-SPE-EAG1 (Basis for Protect, path weight 180)
+    path protect option 20, type list name P_LSP_SUB-EAG1_20
+    path protect option 30, type list name P_LSP_SUB-EAG1_30
+    path protect option 40, type list name P_LSP_SUB-EAG1_40
+    path protect option 50, type list name P_LSP_SUB-EAG1_50
+    path protect option 60, type list name P_LSP_SUB-EAG1_60
+    path protect option 70, type list name P_LSP_SUB-EAG1_70
+    path protect option 80, type list name P_LSP_SUB-EAG1_80
+    path protect option 90, type list name P_LSP_SUB-EAG1_90
+    path protect option 100, type list name P_LSP_SUB-EAG1_100
+    path protect option 110, type list name P_LSP_SUB-EAG1_110
+
+  Config Parameters:
+    Bandwidth: 1000     kbps (Global)  Priority: 1  1   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 1000 [2000000] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/5, 151
+  Next Hop : 172.16.28.13
+  FRR OutLabel : Tunnel4, 151
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.19.24.1, Tun_Id 50611, Tun_Instance 2640
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route: 172.16.28.13 172.19.24.1*
+      Record   Route:
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.42(151) 172.18.25.134(151)
+                       172.17.26.1(1290) 172.20.96.1(1290)
+                       172.19.24.1(3) 172.20.96.2(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 4 days, 33 minutes
+      Number of LSP IDs (Tun_Instances) used: 2640
+    Current LSP: [ID: 2640]
+      Uptime: 3 minutes, 41 seconds
+      Selection: reoptimization
+    Prior LSP: [ID: 2638]
+      ID: path option 10 [2638]
+      Removal Trigger: reoptimization completed
+      Last Error: RSVP:: Path Error from 172.16.28.13: Notify: Better path exists (flags 0)
+
+Name: HP_ULTRAPARK1|AT&T|CRCO00550054-... (Tunnel50621) Destination: 172.17.26.26
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit staticCOCR_1_HP (Basis for Setup, path weight 20)
+
+  Config Parameters:
+    Bandwidth: 300000   kbps (Global)  Priority: 1  1   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 300000 [6666] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/5, 1689
+  Next Hop : 172.16.28.13
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.26.26, Tun_Id 50621, Tun_Instance 8941
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route: 172.16.28.13 172.17.26.1* 172.18.24.57 172.18.25.97
+      Record   Route:
+      Tspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.18.25.134 172.18.24.58 172.18.25.98 172.18.25.97
+      Fspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 26 days, 4 hours, 39 minutes
+      Time since path change: 4 days, 38 minutes
+      Number of LSP IDs (Tun_Instances) used: 8941
+    Current LSP: [ID: 8941]
+      Uptime: 3 minutes, 41 seconds
+      Selection: reoptimization
+    Prior LSP: [ID: 8939]
+      ID: path option 10 [8939]
+      Removal Trigger: reoptimization completed
+      Last Error: RSVP:: Path Error from 172.16.28.13: Notify: Better path exists (flags 0)
+
+Name: HP_ULTRAPARK1|AT&T|CRCO00550054-... (Tunnel50622) Destination: 172.17.26.26
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit staticCOCR_2_HP (Basis for Setup, path weight 169)
+
+  Config Parameters:
+    Bandwidth: 300000   kbps (Global)  Priority: 1  1   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 300000 [6666] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/2, 1299
+  Next Hop : 172.16.20.113
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.26.26, Tun_Id 50622, Tun_Instance 5388
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route: 172.16.20.113 172.16.20.81 172.16.20.78 172.16.26.85
+                      172.17.26.2* 172.18.24.14 172.18.25.86
+      Record   Route:
+      Tspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.20.82 172.16.20.77 172.16.20.78 172.18.25.242
+                       172.18.24.13 172.18.25.85 172.18.25.86
+      Fspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 26 days, 4 hours, 38 minutes
+      Time since path change: 24 minutes, 54 seconds
+      Number of LSP IDs (Tun_Instances) used: 5388
+    Current LSP: [ID: 5388]
+      Uptime: 13 minutes, 41 seconds
+      Selection: reoptimization
+    Prior LSP: [ID: 5386]
+      ID: path option 10 [5386]
+      Removal Trigger: reoptimization completed
+      Last Error: RSVP:: Path Error from 172.16.26.85: Notify: Better path exists (flags 0)
+
+Name: HP_ULTRAPARK1|AT&T|CRCO00550054-... (Tunnel50623) Destination: 172.17.26.33
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit staticCOCR_3_HP (Basis for Setup, path weight 20)
+
+  Config Parameters:
+    Bandwidth: 300000   kbps (Global)  Priority: 1  1   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 300000 [6666] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/5, 221
+  Next Hop : 172.16.28.13
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.26.33, Tun_Id 50623, Tun_Instance 7545
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route: 172.16.28.13 172.17.26.1* 172.18.24.10 172.18.24.26
+                      172.17.26.33*
+      Record   Route:
+      Tspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.18.25.134 172.18.24.9 172.18.24.25 172.18.25.37
+                       172.18.25.41 172.18.25.42
+      Fspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 26 days, 4 hours, 46 minutes
+      Time since path change: 23 hours, 23 minutes
+      Number of LSP IDs (Tun_Instances) used: 7545
+    Current LSP: [ID: 7545]
+      Uptime: 3 minutes, 41 seconds
+      Selection: reoptimization
+    Prior LSP: [ID: 7543]
+      ID: path option 10 [7543]
+      Removal Trigger: reoptimization completed
+      Last Error: RSVP:: Path Error from 172.16.28.13: Notify: Better path exists (flags 0)
+
+Name: HP_ULTRAPARK1|AT&T|CRCO00550054-... (Tunnel50624) Destination: 172.17.26.26
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit staticCOCR_4_HP (Basis for Setup, path weight 160)
+
+  Config Parameters:
+    Bandwidth: 300000   kbps (Global)  Priority: 1  1   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 300000 [6666] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/2, 618
+  Next Hop : 172.16.20.113
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.26.26, Tun_Id 50624, Tun_Instance 5818
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route: 172.16.20.113 172.16.20.98 172.16.20.93 172.16.20.106
+                      172.16.20.10 172.16.20.14 172.16.26.77 172.17.26.2*
+                      172.18.24.14 172.18.25.86
+      Record   Route:
+      Tspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.20.97 172.16.20.94 172.16.20.105 172.16.20.9
+                       172.16.20.10 172.16.20.14 172.18.25.242 172.18.24.13
+                       172.18.25.85 172.18.25.86
+      Fspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 26 days, 4 hours, 37 minutes
+      Time since path change: 24 minutes, 52 seconds
+      Number of LSP IDs (Tun_Instances) used: 5818
+    Current LSP: [ID: 5818]
+      Uptime: 13 minutes, 41 seconds
+      Selection: reoptimization
+    Prior LSP: [ID: 5816]
+      ID: path option 10 [5816]
+      Removal Trigger: reoptimization completed
+      Last Error: RSVP:: Path Error from 172.16.26.77: Notify: Better path exists (flags 0)
+
+Name: HP_ULTRAPARK1|AT&T|CRCO00550054-... (Tunnel50625) Destination: 172.17.26.33
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit staticCOCR_5_HP (Basis for Setup, path weight 170)
+
+  Config Parameters:
+    Bandwidth: 300000   kbps (Global)  Priority: 1  1   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 300000 [6666] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/2, 292
+  Next Hop : 172.16.20.113
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.26.33, Tun_Id 50625, Tun_Instance 2832
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route: 172.16.20.113 172.16.20.81 172.16.20.86 172.16.20.57
+                      172.16.24.69 172.16.24.81 172.16.24.66 172.16.25.70
+                      172.17.26.1* 172.18.24.10 172.18.24.26 172.17.26.33*
+      Record   Route:
+      Tspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.20.82 172.16.20.85 172.16.20.58 172.16.20.57
+                       172.16.24.82 172.16.24.65 172.16.25.69 172.18.25.134
+                       172.18.24.9 172.18.24.25 172.18.25.37 172.18.25.41
+                       172.18.25.42
+      Fspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 26 days, 4 hours, 42 minutes
+      Time since path change: 21 minutes, 24 seconds
+      Number of LSP IDs (Tun_Instances) used: 2832
+    Current LSP: [ID: 2832]
+      Uptime: 3 minutes, 41 seconds
+      Selection: reoptimization
+    Prior LSP: [ID: 2830]
+      ID: path option 10 [2830]
+      Removal Trigger: reoptimization completed
+      Last Error: RSVP:: Path Error from 172.16.25.70: Notify: Better path exists (flags 0)
+
+Name: HP_ULTRAPARK1|AT&T|CRCO00550054-... (Tunnel50626) Destination: 172.17.26.26
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit staticCOCR_6_HP (Basis for Setup, path weight 170)
+
+  Config Parameters:
+    Bandwidth: 300000   kbps (Global)  Priority: 1  1   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 300000 [6666] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/2, 1377
+  Next Hop : 172.16.20.113
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.26.26, Tun_Id 50626, Tun_Instance 4310
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route: 172.16.20.113 172.16.20.81 172.16.20.86 172.16.20.41
+                      172.16.20.10 172.16.24.77 172.16.24.73 172.16.25.14
+                      172.17.26.2* 172.18.24.14 172.18.25.86
+      Record   Route:
+      Tspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.20.82 172.16.20.85 172.16.20.42 172.16.20.9
+                       172.16.20.10 172.16.24.74 172.16.25.13 172.18.25.242
+                       172.18.24.13 172.18.25.85 172.18.25.86
+      Fspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 26 days, 4 hours, 36 minutes
+      Time since path change: 33 minutes, 2 seconds
+      Number of LSP IDs (Tun_Instances) used: 4310
+    Current LSP: [ID: 4310]
+      Uptime: 13 minutes, 41 seconds
+      Selection: reoptimization
+    Prior LSP: [ID: 4308]
+      ID: path option 10 [4308]
+      Removal Trigger: reoptimization completed
+      Last Error: RSVP:: Path Error from 172.16.25.14: Notify: Better path exists (flags 0)
+
+Name: HP_ULTRAPARK1|AT&T|CRCO00550054-... (Tunnel50627) Destination: 172.17.26.33
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit staticCOCR_7_HP (Basis for Setup, path weight 71694)
+
+  Config Parameters:
+    Bandwidth: 300000   kbps (Global)  Priority: 1  1   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 300000 [6666] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/2, 805
+  Next Hop : 172.16.20.113
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.26.33, Tun_Id 50627, Tun_Instance 9533
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route: 172.16.20.113 172.16.20.81 172.16.20.78 172.16.26.209
+                      172.16.26.169 172.17.26.1* 172.18.24.10 172.18.24.26
+                      172.17.26.33*
+      Record   Route:
+      Tspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.20.82 172.16.20.77 172.16.20.78 172.16.26.170
+                       172.18.25.134 172.18.24.9 172.18.24.25 172.18.25.37
+                       172.18.25.41 172.18.25.42
+      Fspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 26 days, 4 hours, 41 minutes
+      Time since path change: 33 minutes, 2 seconds
+      Number of LSP IDs (Tun_Instances) used: 9533
+    Current LSP: [ID: 9533]
+      Uptime: 3 minutes, 41 seconds
+      Selection: reoptimization
+    Prior LSP: [ID: 9531]
+      ID: path option 10 [9531]
+      Removal Trigger: reoptimization completed
+      Last Error: RSVP:: Path Error from 172.16.26.169: Notify: Better path exists (flags 0)
+
+Name: HP_ULTRAPARK1|AT&T|CRCO00550054-... (Tunnel50628) Destination: 172.17.26.33
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit staticCOCR_8_HP (Basis for Setup, path weight 175)
+
+  Config Parameters:
+    Bandwidth: 300000   kbps (Global)  Priority: 1  1   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 300000 [6666] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/2, 774
+  Next Hop : 172.16.20.113
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.17.26.33, Tun_Id 50628, Tun_Instance 9811
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route: 172.16.20.113 172.16.20.98 172.16.20.93 172.16.20.106
+                      172.16.20.174 172.16.27.1 172.16.27.9 172.16.26.65
+                      172.17.26.33*
+      Record   Route:
+      Tspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.20.97 172.16.20.94 172.16.20.105 172.16.20.173
+                       172.16.27.2 172.16.27.10 172.16.26.66 172.18.25.134
+                       172.18.24.9 172.18.24.25 172.18.25.37 172.18.25.41
+                       172.18.25.42
+      Fspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 26 days, 4 hours, 40 minutes
+      Time since path change: 14 hours, 21 minutes
+      Number of LSP IDs (Tun_Instances) used: 9811
+    Current LSP: [ID: 9811]
+      Uptime: 23 minutes, 41 seconds
+      Selection: reoptimization
+    Prior LSP: [ID: 9804]
+      ID: path option 10 [9804]
+      Removal Trigger: reoptimization completed
+      Last Error: RSVP:: Path Error from 172.16.26.65: Notify: Better path exists (flags 0)
+
+Name: SITEL-COPA                          (Tunnel50757) Destination: 172.19.28.21
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 5, type explicit SITEL-ATT-SEC (Basis for Setup, path weight 169)
+    Path Protection: 0 Common Link(s), 0 Common Node(s)
+    Primary Path: Some links could not be checked
+    Protect Path: Some links could not be checked
+    path protect option 5, type explicit SITEL-ATT-PRI (Basis for Protect, path weight 35)
+
+  Config Parameters:
+    Bandwidth: 1000     kbps (Global)  Priority: 1  1   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 1000 [2000000] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 5 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/2, 934
+  Next Hop : 172.16.20.113
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.19.28.21, Tun_Id 50757, Tun_Instance 9833
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route: 172.16.20.113 172.16.20.81 172.16.20.78 172.16.27.17
+                      172.19.28.21*
+      Record   Route:
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.13(934) 172.16.20.82(934)
+                       172.16.30.12(1413) 172.16.20.77(1413)
+                       172.16.30.247(25516) 172.16.20.78(25516)
+                       172.16.30.44(1018) 172.18.28.65(1018)
+                       172.17.27.1(295) 172.18.28.234(295)
+                       172.17.27.51(881) 172.18.28.229(881)
+                       172.17.27.7(261) 172.18.28.22(261)
+                       172.17.27.6(22) 172.18.28.18(22)
+                       172.17.27.5(572) 172.20.112.157(572)
+                       172.19.28.21(3) 172.20.112.158(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 32 minutes, 31 seconds
+      Number of LSP IDs (Tun_Instances) used: 9833
+    Current LSP: [ID: 9833]
+      Uptime: 23 minutes, 41 seconds
+      Selection: reoptimization
+    Prior LSP: [ID: 9830]
+      ID: path option unknown
+      Removal Trigger: reoptimization completed
+
+Name: SUBA_L3_ESC                         (Tunnel57010) Destination: 172.16.30.245
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 10, type explicit FROM-SUBA-LEVEL3-ESC-LOOP (Basis for Setup, path weight 65555)
+
+  Config Parameters:
+    Bandwidth: 1000     kbps (Global)  Priority: 1  1   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 1000 [2000000] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 10 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/5, 1576
+  Next Hop : 172.16.28.13
+  FRR OutLabel : Tunnel4, 1576
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.16.30.245, Tun_Id 57010, Tun_Instance 4151
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route: 172.16.28.13 172.16.26.170 172.16.30.245
+      Record   Route:
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.42(1576) 172.16.26.169(1576)
+                       172.16.30.245(3) 172.16.26.170(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 30 days, 10 hours, 4 minutes
+      Number of LSP IDs (Tun_Instances) used: 4151
+    Current LSP: [ID: 4151]
+      Uptime: 4 days, 38 minutes
+      Selection: reoptimization
+    Prior LSP: [ID: 4140]
+      ID: path option unknown
+      Removal Trigger: re-route path verification failed
+
+Name: Prueba JDSU TE                      (Tunnel57506) Destination: 172.19.24.1
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+    path option 5, type explicit SUBAA-EZU-VIA-TOLU (Basis for Setup, path weight 169)
+
+  Config Parameters:
+    Bandwidth: 0        kbps (Global)  Priority: 7  7   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 0 [0] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+  Active Path Option Parameters:
+    State: explicit path option 5 is active
+    BandwidthOverride: disabled  LockDown: disabled  Verbatim: disabled
+
+
+  InLabel  :  -
+  OutLabel : TenGigabitEthernet0/0/2, 1202
+  Next Hop : 172.16.20.113
+  RSVP Signalling Info:
+       Src 172.17.28.192, Dst 172.19.24.1, Tun_Id 57506, Tun_Instance 258
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route: 172.16.20.113 172.16.20.81 172.16.20.78 172.16.26.85
+                      172.18.24.70* 172.18.24.1 172.20.96.2
+      Record   Route:
+      Tspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.20.82 172.16.20.77 172.16.20.78 172.18.24.69
+                       172.18.24.2 172.20.96.1 172.20.96.2
+      Fspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 24 minutes, 54 seconds
+      Number of LSP IDs (Tun_Instances) used: 258
+    Current LSP: [ID: 258]
+      Uptime: 24 minutes, 54 seconds
+    Prior LSP: [ID: 9972]
+      ID: path option unknown
+      Removal Trigger: signalling shutdown
+
+Name: PAYPAL_GTCO04510019                 (Tunnel60001) Destination: 172.19.8.20
+  Status:
+    Admin: up         Oper: down   Path: not valid   Signalling: Down
+    path option 10, type explicit PAYPAL_SUBA_PATH_1
+    path option 20, type dynamic
+    path protect option 10, type explicit PAYPAL_SUBA_PATH_2
+
+  Config Parameters:
+    Bandwidth: 1000     kbps (Global)  Priority: 7  7   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute: disabled LockDown: disabled Loadshare: 1000 [0] bw-based
+    auto-bw: disabled
+    Fault-OAM: disabled, Wrap-Protection: disabled, Wrap-Capable: No
+
+
+  History:
+    Tunnel:
+      Time since created: 49 days, 17 hours, 2 minutes
+      Time since path change: 5 seconds
+      Number of LSP IDs (Tun_Instances) used: 188
+    Prior LSP: [ID: 185]
+      ID: path option 20 [188]
+      Removal Trigger: path error
+      Last Error: CTRL:: Destination IP address, 172.19.8.20, not found
+
+LSP Tunnel TE Callzilla is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/2, implicit-null
+  Prev Hop : 172.16.20.113
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.16.30.11, Dst 172.17.28.192, Tun_Id 5701, Tun_Instance 4856
+    RSVP Path Info:
+      My Address: 172.17.28.192
+      Explicit Route:  NONE
+      Record   Route:  172.16.20.113 172.16.20.98 172.16.20.93 172.16.20.106
+                       172.16.20.22
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel TE Callzilla is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/2, implicit-null
+  Prev Hop : 172.16.20.113
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.16.30.11, Dst 172.17.28.192, Tun_Id 5701, Tun_Instance 4876
+    RSVP Path Info:
+      My Address: 172.17.28.192
+      Explicit Route:  NONE
+      Record   Route:  172.16.20.113 172.16.20.81 172.16.20.78 172.16.20.109
+                       172.16.20.73 172.16.20.22
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel SUBA_L3_ESC is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/2, 471
+  Prev Hop : 172.16.20.113
+  OutLabel : TenGigabitEthernet0/0/5, 62
+  Next Hop : 172.16.28.13
+  FRR OutLabel : Tunnel4, 62
+  RSVP Signalling Info:
+       Src 172.16.30.15, Dst 172.16.30.245, Tun_Id 57010, Tun_Instance 8626
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route: 172.16.28.13 172.16.26.170 172.16.30.245
+      Record   Route:  172.16.20.113 172.16.20.98 172.16.20.93
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.42(62) 172.16.26.169(62)
+                       172.16.30.245(3) 172.16.26.170(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel FRR_LP_ESC-INT_SUBA is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/2, implicit-null
+  Prev Hop : 172.16.20.113
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.16.30.42, Dst 172.17.28.192, Tun_Id 4, Tun_Instance 1417
+    RSVP Path Info:
+      My Address: 172.17.28.192
+      Explicit Route:  NONE
+      Record   Route:   NONE
+      Tspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+
+LSP Tunnel ESC_L3_SUBA is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/5, 470
+  Prev Hop : 172.16.28.13
+  OutLabel : TenGigabitEthernet0/0/2, 1394
+  Next Hop : 172.16.20.113
+  RSVP Signalling Info:
+       Src 172.16.30.245, Dst 172.16.30.15, Tun_Id 57010, Tun_Instance 1016
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route: 172.16.20.113 172.16.20.98 172.16.20.93 172.16.30.15
+      Record   Route:  172.16.28.13 172.16.26.170
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:  172.16.30.13(1394) 172.16.20.97(1394)
+                       172.16.30.14(1215) 172.16.20.94(1215)
+                       172.16.30.15(3) 172.16.20.93(3)
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel PAYPAL_AT&T_GTCO04510019-Path_1 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/2, implicit-null
+  Prev Hop : 172.16.20.113
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.22.54, Dst 172.17.28.192, Tun_Id 50211, Tun_Instance 9950
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route:  NONE
+      Record   Route:  172.16.20.113 172.16.20.81 172.16.20.78 172.16.20.109
+                       172.16.22.73 172.18.9.161 172.18.8.241
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+LSP Tunnel PAYPAL_AT&T_GTCO04510019-Path_3 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/5, implicit-null
+  Prev Hop : 172.16.28.13
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.22.54, Dst 172.17.28.192, Tun_Id 50212, Tun_Instance 8583
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route:  NONE
+      Record   Route:  172.16.28.13 172.16.26.158 172.16.25.9 172.16.24.74
+                       172.16.23.1 172.16.22.65 172.18.9.246 172.18.8.241
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+LSP Tunnel PAYPAL_AT&T_GTCO04510019-Path_7 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/5, implicit-null
+  Prev Hop : 172.16.28.13
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.22.54, Dst 172.17.28.192, Tun_Id 50213, Tun_Instance 7041
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route:  NONE
+      Record   Route:  172.16.28.13 172.16.25.69 172.16.24.65 172.16.23.65
+                       172.16.22.17 172.16.22.5 172.18.9.246 172.18.8.241
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+LSP Tunnel PAYPAL_AT&T_GTCO04510019-Path_9 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/2, implicit-null
+  Prev Hop : 172.16.20.113
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.22.54, Dst 172.17.28.192, Tun_Id 50214, Tun_Instance 6204
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route:  NONE
+      Record   Route:  172.16.20.113 172.16.20.81 172.16.20.86 172.16.20.57
+                       172.16.27.25 172.18.9.121 172.18.8.77 172.18.9.93
+                       172.18.9.89 172.18.9.85 172.18.9.81 172.18.8.53
+                       172.18.8.45 172.18.8.41 172.18.8.37 172.18.8.29
+                       172.18.8.241
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+LSP Tunnel PAYPAL_AT&T_GTCO04510019-Path_5 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/5, implicit-null
+  Prev Hop : 172.16.28.13
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.22.54, Dst 172.17.28.192, Tun_Id 50215, Tun_Instance 1566
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route:  NONE
+      Record   Route:  172.16.28.13 172.16.26.82 172.16.26.86 172.16.20.13
+                       172.16.22.77 172.18.9.161 172.18.8.241
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+LSP Tunnel PAYPAL_AT&T_GTCO04510019-Path_2 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/5, implicit-null
+  Prev Hop : 172.16.28.13
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.22.79, Dst 172.17.28.192, Tun_Id 50216, Tun_Instance 2279
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route:  NONE
+      Record   Route:  172.16.28.13 172.16.25.65 172.16.25.17 172.16.24.1
+                       172.16.24.81 172.16.23.77 172.16.22.9 172.18.10.45
+                       172.18.10.62
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+LSP Tunnel PAYPAL_AT&T_GTCO04510019-Path_6 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/5, implicit-null
+  Prev Hop : 172.16.28.13
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.22.79, Dst 172.17.28.192, Tun_Id 50217, Tun_Instance 3616
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route:  NONE
+      Record   Route:  172.16.28.13 172.16.26.90 172.16.27.10 172.16.27.18
+                       172.16.20.13 172.16.24.69 172.16.23.9 172.16.22.65
+                       172.16.22.2 172.18.10.45 172.18.10.62
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+LSP Tunnel PAYPAL_AT&T_GTCO04510019-Path_4 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/2, implicit-null
+  Prev Hop : 172.16.20.113
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.22.79, Dst 172.17.28.192, Tun_Id 50218, Tun_Instance 4097
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route:  NONE
+      Record   Route:  172.16.20.113 172.16.20.81 172.16.20.78 172.16.20.109
+                       172.16.24.77 172.16.24.85 172.16.23.77 172.16.22.17
+                       172.18.10.45 172.18.10.62
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+LSP Tunnel PAYPAL_AT&T_GTCO04510019-Path_8 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/2, implicit-null
+  Prev Hop : 172.16.20.113
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.22.79, Dst 172.17.28.192, Tun_Id 50219, Tun_Instance 1301
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route:  NONE
+      Record   Route:  172.16.20.113 172.16.20.81 172.16.20.86 172.16.20.41
+                       172.16.20.10 172.16.27.25 172.18.9.121 172.18.8.77
+                       172.18.9.93 172.18.9.89 172.18.9.85 172.18.9.81
+                       172.18.8.53 172.18.8.45 172.18.8.41 172.18.8.37
+                       172.18.10.62
+      Tspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=100000 kbits, burst=1000 bytes, peak rate=100000 kbits
+
+LSP Tunnel AT&T NICO04460003 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/5, implicit-null
+  Prev Hop : 172.16.28.13
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.25.3, Dst 172.17.28.192, Tun_Id 50557, Tun_Instance 6499
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route:  NONE
+      Record   Route:  172.16.28.13 172.16.25.69 172.18.20.130 172.18.20.2
+                       172.18.20.6
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel AT&T NICO04460003 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/2, implicit-null
+  Prev Hop : 172.16.20.113
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.25.3, Dst 172.17.28.192, Tun_Id 50557, Tun_Instance 6501
+    RSVP Path Info:
+      My Address: 172.17.28.192
+      Explicit Route:  NONE
+      Record   Route:  172.16.20.113 172.16.20.81 172.16.20.78 172.16.26.85
+                       172.16.25.9 172.18.20.170 172.18.20.6
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel ATT_CRCO00550061 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/5, implicit-null
+  Prev Hop : 172.16.28.13
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.26.3, Dst 172.17.28.192, Tun_Id 50607, Tun_Instance 2606
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route:  NONE
+      Record   Route:  172.16.28.13 172.16.26.82 172.18.25.241 172.18.24.14
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel ATT_HP_ZFA_CR-CO is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/5, implicit-null
+  Prev Hop : 172.16.28.13
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.26.4, Dst 172.17.28.192, Tun_Id 50603, Tun_Instance 353
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route:  NONE
+      Record   Route:  172.16.28.13 172.18.24.66 172.18.24.10
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel HP_ULTRACR-CO is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/5, implicit-null
+  Prev Hop : 172.16.28.13
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.26.8, Dst 172.17.28.192, Tun_Id 50604, Tun_Instance 9906
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route:  NONE
+      Record   Route:  172.16.28.13 172.18.24.66 172.18.24.57 172.18.24.34
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel ATT_HP_ZFA_CR-CO is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/5, implicit-null
+  Prev Hop : 172.16.28.13
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.26.26, Dst 172.17.28.192, Tun_Id 50601, Tun_Instance 9258
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route:  NONE
+      Record   Route:  172.16.28.13 172.18.25.133 172.18.24.6 172.18.24.21
+                       172.18.25.86
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel ATT_HP_ZFA_CR-CO is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/2, implicit-null
+  Prev Hop : 172.16.20.113
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.26.26, Dst 172.17.28.192, Tun_Id 50602, Tun_Instance 1938
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route:  NONE
+      Record   Route:  172.16.20.113 172.16.20.81 172.16.20.78 172.16.26.85
+                       172.18.25.241 172.18.24.14 172.18.25.86
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel ATT_HP_ZFA_CR-CO is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/5, implicit-null
+  Prev Hop : 172.16.28.13
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.26.26, Dst 172.17.28.192, Tun_Id 50602, Tun_Instance 1939
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route:  NONE
+      Record   Route:  172.16.28.13 172.18.25.133 172.18.24.6 172.18.24.21
+                       172.18.25.86
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel ATT_CRCO00550061 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/5, implicit-null
+  Prev Hop : 172.16.28.13
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.26.26, Dst 172.17.28.192, Tun_Id 50608, Tun_Instance 1010
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route:  NONE
+      Record   Route:  172.16.28.13 172.16.26.82 172.18.25.241 172.18.24.14
+                       172.18.25.86
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel HP_ULTRAPARK1|AT&T|CRCO00550054-Path_1 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/5, implicit-null
+  Prev Hop : 172.16.28.13
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.26.26, Dst 172.17.28.192, Tun_Id 50621, Tun_Instance 3973
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route:  NONE
+      Record   Route:  172.16.28.13 172.18.24.66 172.18.24.57 172.18.25.97
+      Tspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+
+LSP Tunnel HP_ULTRAPARK1|AT&T|CRCO00550054-Path_2 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/2, implicit-null
+  Prev Hop : 172.16.20.113
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.26.26, Dst 172.17.28.192, Tun_Id 50622, Tun_Instance 8298
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route:  NONE
+      Record   Route:  172.16.20.113 172.16.20.81 172.16.20.78 172.16.26.85
+                       172.18.25.241 172.18.24.14 172.18.25.86
+      Tspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+
+LSP Tunnel HP_ULTRAPARK1|AT&T|CRCO00550054-Path_4 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/2, implicit-null
+  Prev Hop : 172.16.20.113
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.26.26, Dst 172.17.28.192, Tun_Id 50624, Tun_Instance 8275
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route:  NONE
+      Record   Route:  172.16.20.113 172.16.20.98 172.16.20.93 172.16.20.106
+                       172.16.20.10 172.16.20.14 172.16.26.77 172.18.25.241
+                       172.18.24.14 172.18.25.86
+      Tspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+
+LSP Tunnel HP_ULTRAPARK1|AT&T|CRCO00550054-Path_6 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/2, implicit-null
+  Prev Hop : 172.16.20.113
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.26.26, Dst 172.17.28.192, Tun_Id 50626, Tun_Instance 2224
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route:  NONE
+      Record   Route:  172.16.20.113 172.16.20.81 172.16.20.86 172.16.20.41
+                       172.16.20.10 172.16.24.77 172.16.24.73 172.16.25.14
+                       172.18.25.241 172.18.24.14 172.18.25.86
+      Tspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+
+LSP Tunnel HP_ULTRAPARK1|AT&T|CRCO00550054-Path_3 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/5, implicit-null
+  Prev Hop : 172.16.28.13
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.26.33, Dst 172.17.28.192, Tun_Id 50623, Tun_Instance 1410
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route:  NONE
+      Record   Route:  172.16.28.13 172.18.25.133 172.18.24.10 172.18.24.26
+                       172.18.25.38 172.18.25.42
+      Tspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+
+LSP Tunnel HP_ULTRAPARK1|AT&T|CRCO00550054-Path_5 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/2, implicit-null
+  Prev Hop : 172.16.20.113
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.26.33, Dst 172.17.28.192, Tun_Id 50625, Tun_Instance 5977
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route:  NONE
+      Record   Route:  172.16.20.113 172.16.20.81 172.16.20.86 172.16.20.57
+                       172.16.24.69 172.16.24.81 172.16.24.66 172.16.25.70
+                       172.18.25.133 172.18.24.10 172.18.24.26 172.18.25.38
+                       172.18.25.42
+      Tspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+
+LSP Tunnel HP_ULTRAPARK1|AT&T|CRCO00550054-Path_7 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/2, implicit-null
+  Prev Hop : 172.16.20.113
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.26.33, Dst 172.17.28.192, Tun_Id 50627, Tun_Instance 2008
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route:  NONE
+      Record   Route:  172.16.20.113 172.16.20.81 172.16.20.78 172.16.26.209
+                       172.16.26.169 172.18.25.133 172.18.24.10 172.18.24.26
+                       172.18.25.38 172.18.25.42
+      Tspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+
+LSP Tunnel HP_ULTRAPARK1|AT&T|CRCO00550054-Path_8 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/2, implicit-null
+  Prev Hop : 172.16.20.113
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.26.33, Dst 172.17.28.192, Tun_Id 50628, Tun_Instance 7168
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route:  NONE
+      Record   Route:  172.16.20.113 172.16.20.98 172.16.20.93 172.16.20.106
+                       172.16.20.174 172.16.27.1 172.16.27.9 172.16.26.65
+                       172.18.24.66 172.18.24.10 172.18.24.26 172.18.25.38
+                       172.18.25.42
+      Tspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=300000 kbits, burst=1000 bytes, peak rate=300000 kbits
+
+LSP Tunnel ATT_CRCO00550063 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/5, implicit-null
+  Prev Hop : 172.16.28.13
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.17.26.39, Dst 172.17.28.192, Tun_Id 50606, Tun_Instance 1313
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route:  NONE
+      Record   Route:  172.16.28.13 172.16.26.82 172.18.25.241 172.18.24.14
+                       172.18.25.50
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel SMA-ROCOINTERNALSUBAA is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/5, implicit-null
+  Prev Hop : 172.16.28.13
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.19.12.1, Dst 172.17.28.192, Tun_Id 50311, Tun_Instance 5972
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route:  NONE
+      Record   Route:  172.16.28.13 172.16.26.82 172.16.26.86 172.16.20.13
+                       172.16.22.73 172.16.22.6 172.16.22.18 172.18.12.137
+                       172.18.12.66
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel SMA-ROCOINTERNALSUBAA is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/2, implicit-null
+  Prev Hop : 172.16.20.113
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.19.12.1, Dst 172.17.28.192, Tun_Id 50311, Tun_Instance 5973
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route:  NONE
+      Record   Route:  172.16.20.113 172.16.20.81 172.16.20.86 172.16.20.69
+                       172.16.20.74 172.16.24.69 172.16.23.9 172.18.12.81
+                       172.18.12.121 172.18.12.253 172.18.12.61 172.18.12.66
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel AGG1-ROCOINTERNALSUBAA-MONITOREO is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/5, implicit-null
+  Prev Hop : 172.16.28.13
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.19.24.1, Dst 172.17.28.192, Tun_Id 9910, Tun_Instance 7930
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route:  NONE
+      Record   Route:  172.16.28.13 172.18.24.66 172.20.96.2
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel AGG1-ROCOINTERNALSUBAA-MONITOREO is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/2, implicit-null
+  Prev Hop : 172.16.20.113
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.19.24.1, Dst 172.17.28.192, Tun_Id 9910, Tun_Instance 8518
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route:  NONE
+      Record   Route:  172.16.20.113 172.16.20.98 172.16.20.93 172.16.20.89
+                       172.16.20.86 172.16.20.57 172.16.24.69 172.16.24.73
+                       172.16.25.14 172.18.25.241 172.18.24.1 172.20.96.2
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel SUBA-INT_EZU-ASR920-AGG1 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/5, implicit-null
+  Prev Hop : 172.16.28.13
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.19.24.1, Dst 172.17.28.192, Tun_Id 50611, Tun_Instance 3828
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route:  NONE
+      Record   Route:  172.16.28.13 172.18.24.66 172.20.96.2
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel SUBA-INT_EZU-ASR920-AGG1 is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/2, implicit-null
+  Prev Hop : 172.16.20.113
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.19.24.1, Dst 172.17.28.192, Tun_Id 50611, Tun_Instance 4416
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route:  NONE
+      Record   Route:  172.16.20.113 172.16.20.98 172.16.20.93 172.16.20.89
+                       172.16.20.86 172.16.20.57 172.16.24.69 172.16.24.73
+                       172.16.25.14 172.18.25.241 172.18.24.1 172.20.96.2
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel Prueba JDSU TE is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/2, implicit-null
+  Prev Hop : 172.16.20.113
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.19.24.1, Dst 172.17.28.192, Tun_Id 57506, Tun_Instance 4180
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route:  NONE
+      Record   Route:  172.16.20.113 172.16.20.81 172.16.20.78 172.16.20.13
+                       172.16.24.69 172.16.24.73 172.16.25.14 172.18.25.241
+                       172.18.24.1 172.20.96.2
+      Tspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=0 kbits, burst=1000 bytes, peak rate=0 kbits
+
+LSP Tunnel SITEL PACO is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/5, implicit-null
+  Prev Hop : 172.16.28.13
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.19.28.21, Dst 172.17.28.192, Tun_Id 50757, Tun_Instance 4385
+    RSVP Path Info:
+      My Address: 172.16.28.14
+      Explicit Route:  NONE
+      Record   Route:  172.16.28.13 172.16.26.90 172.18.28.70 172.18.28.17
+                       172.20.112.158
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+LSP Tunnel SITEL PACO is signalled, connection is up
+  InLabel  : TenGigabitEthernet0/0/2, implicit-null
+  Prev Hop : 172.16.20.113
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 172.19.28.21, Dst 172.17.28.192, Tun_Id 50757, Tun_Instance 4388
+    RSVP Path Info:
+      My Address: 172.16.20.114
+      Explicit Route:  NONE
+      Record   Route:  172.16.20.113 172.16.20.81 172.16.20.78 172.16.27.17
+                       172.18.28.66 172.18.28.233 172.18.28.230 172.18.28.21
+                       172.18.28.17 172.20.112.158
+      Tspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+    RSVP Resv Info:
+      Record   Route:   NONE
+      Fspec: ave rate=1000 kbits, burst=1000 bytes, peak rate=1000 kbits
+
+P2MP TUNNELS:
+
+P2MP SUB-LSPS:
+ROCOINTERNALSUBAA920#

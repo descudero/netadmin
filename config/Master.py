@@ -22,6 +22,7 @@ class Master:
         self.debug = AdebugLevel
         self.dbname = "boip.db"
         self.logger = logging.getLogger(logg_name)
+        self.logger_time = logging.getLogger("timer")
 
         ch = logging.FileHandler('boip.log')
         ch.setLevel(0)

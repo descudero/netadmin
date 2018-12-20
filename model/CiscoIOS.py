@@ -17,6 +17,8 @@ from model.BaseDevice import BaseDevice as Parent
 from model.CiscoPart import CiscoPart
 from model.InterfaceIOS import InterfaceIOS
 from tools import normalize_interface_name
+from lib.snmp_helper import *
+from model.BridgeDomain import BridgeDomain
 
 
 class CiscoIOS(Parent):
@@ -31,7 +33,7 @@ class CiscoIOS(Parent):
         self.pseudowires = dict()
         self.static_routes = dict()
         self.inventory = dict()
-        self.plattform = "CiscoIOS"
+        self.platform = "CiscoIOS"
         self.community = ""
         self.interfaces_ip = dict()
         self.ldp_neighbors = dict()
@@ -129,81 +131,26 @@ class CiscoIOS(Parent):
             self.pseudo_wire_class[lines[0]] = data
 
     def set_mpls_te_tunnels(self):
-        # todo change to textfsm template
+        # todo change to textfsm template, template listo solo falta el methodo
+        # todo create mpls te tunnel
         command = "show mpls traffic-eng tunnels detail"
-        connection = self.connect()
-        output = self.send_command(command=command, connection=connection)
-        connection.disconnect()
-        for lsp in output.split("LSP Tunnel ")[1:]:
-            lsp_data = dict()
-            lsp_data["name"] = lsp.split(" is ")[0].replace(" ", "")
-            lsp_data["state"] = lsp.split("connection is")[1].replace(" ", "").split("\n")[0]
-            for line in lsp.split("\n"):
-                if "InLabel  :" in line:
-                    data = line.replace("InLabel  : ", "").split(",")
-                    lsp_data["interface_in"] = normalize_interface_name(data[0].replace(" ", ""))
-                    lsp_data["label_in"] = data[1]
-                if line.find("OutLabel :") > -1:
-                    data = line.replace("OutLabel :", "").split(",")
-                    if (len(data) > 1):
-                        lsp_data["interface_out"] = normalize_interface_name(data[0].replace(" ", ""))
-                        lsp_data["label_out"] = data[1].replace(" ", "")
-                if (line.find("Src") > -1 and line.find("Dst")):
-                    data = line.split(",")
-                    lsp_data["source_ip"] = data[0].replace("Src", "").replace(" ", "")
-                    lsp_data["destination_ip"] = data[1].replace("Dst", "").replace(" ", "")
-                    lsp_data["tunnel_id"] = data[2].replace(" Tun_Id ", "").replace(" ", "")
-                    lsp_data["tunnel_instance"] = data[3].replace("Tun_Instance ", "").replace(" ", "")
-            if ("tunnel_instance" not in lsp_data):
-                # print("not tunnel instance")
-                # print(lsp_data)
-                pass
-            else:
-                self.mpls_te_tunnels[lsp_data["tunnel_instance"]] = lsp_data
+        template = "show mpls traffic-eng tunnels detail.template"
+        te = self.send_command_and_parse(template_name=template,
+                                         command=command)
+
+        self.mpls_te_tunnels = {tunnel['tunnel']: tunnel for tunnel in te}
         # pprint(self.mpls_te_tunnels)
 
     def set_service_instances(self):
         # todo change to textfsm template
 
         command = "show ethernet service instance detail"
-        connection = self.connect()
-        output = self.send_command(command=command, connection=connection)
-        connection.disconnect()
-        # print(output)
-        for service_instance in output.split("Service Instance ID: ")[1:]:
-            lines = service_instance.split("\n")
+        template = "show ethernet service instance detail ios.template"
+        service_instances = self.send_command_and_parse(template_name=template,
+                                                        command=command)
+        self.service_instances = {normalize_interface_name(row["interface"]) + ":" + row["id"]: row
+                                  for row in service_instances}
 
-            service_data = {}
-            id = lines[0].replace(" ", "")
-            service_data["id"] = id
-            for line in lines:
-                if "Service Instance Type: " in line:
-                    service_data["type"] = line.split(" ")[3]
-                if (line.find("Encapsulation: ") > -1):
-                    # print(line)
-
-                    if (line.find("untagged") > -1 or line.find("default") > -1):
-                        service_data["dot1q"] = "untagged"
-                    else:
-                        try:
-                            service_data["dot1q"] = line.split(" ")[2]
-                        except:
-                            print("no funciono el dot1q " + line)
-                            service_data["dot1q"] = "na"
-                if (line.find("Associated Interface: ") > -1):
-                    service_data["interface"] = normalize_interface_name(line.split(" ")[2])
-                if (line.find("Description: ") > -1):
-                    service_data["description"] = line.replace("Description:", "").split(" ")[1]
-            if ("description" not in service_data):
-                service_data["description"] = "null"
-            if ("service_instace" not in service_data):
-                service_data["service_instance"] = service_data["id"]
-            try:
-                self.service_instances[service_data["interface"] + ":" + service_data["id"]] = service_data
-
-            except:
-                pprint(service_data)
-        # pprint(self.service_instances)
 
     def get_template_by_tunnel_id(self, tunnel_id):
         for name, template in self.template_type_pseudowires.items():
@@ -260,113 +207,34 @@ class CiscoIOS(Parent):
 
     def set_bridge_domains(self):
         # todo change to textfsm
+        list_bridge = self.send_command_and_parse(template_name="show bridge-domain ios.template",
+                                                  command="show bridge-domain")
+        list_bridge_vfi = self.send_command_and_parse(template_name="show bridge-domain vfi ios.template",
+                                                      command="show bridge-domain")
+        self.bridge_domains = {}
+        for interface_bridge in list_bridge:
+            index_bd = interface_bridge["bride_domain"]
+            if index_bd not in self.bridge_domains:
+                self.bridge_domains[index_bd] = BridgeDomain(id_bd=index_bd, parent_device=self)
+                self.bridge_domains[index_bd].add_interfaces(interface_bridge)
+            else:
+                self.bridge_domains[index_bd].add_interfaces(interface_bridge)
 
-        command = "show run | s bridge-domain "
-        connection = self.connect()
-        output = self.send_command(command=command, connection=connection)
-        connection.disconnect()
-        for bridge in output.split("bridge-domain ")[1:]:
-            data = dict()
-            data["interfaces"] = []
-            lines = bridge.split("\n")
-            data["name"] = lines[0].replace(" ", "")
-            for line in lines[1:]:
-                if line.find("service-instance" > -1):
-                    split = line.split(" ")
-
-                    data["interfaces"].append(
-                        {"interface": normalize_interface_name(split[2]), "service_instance": split[4]})
-                if line.find("vfi") > -1:
-                    data["vfi"] = line.replace(" member vfi ", "")
-            self.bridge_domains[data["name"]] = data
-        # pprint(self.bridge_domains)
-
-    def set_vfis(self):
-
-        self.vfis = {}
-        command = "show run | s l2vpn vfi "
-        connection = self.connect()
-        output = self.send_command(command=command, connection=connection)
-        connection.disconnect()
-        for bridge in output.split("l2vpn vfi context ")[1:]:
-            data = {}
-            data["pseudowires"] = []
-            lines = bridge.split("\n")
-            data["name"] = lines[0].replace(" ", "")
-            for line in lines[1:]:
-                if (line.find("member ") > -1):
-                    split = line.split(" ")
-                    pseudowire = {}
-                    pseudowire["destination"] = split[1]
-                    pseudowire["id"] = split[3]
-                    if (line.find("template") > -1):
-
-                        try:
-                            pseudowire["template"] = split[5]
-                        except:
-                            try:
-                                pseudowire["template"] = split[4]
-
-
-                            except:
-                                pseudowire["template"] = "mpls"
-                                print("error line " + line)
-                                print(split)
-
-
-                    else:
-                        pseudowire["template"] = "mpls"
-                    data["pseudowires"].append(pseudowire)
-            self.vfis[data["name"]] = data
+        for interface_bridge in list_bridge_vfi:
+            index_bd = interface_bridge["bride_domain"]
+            if index_bd not in self.bridge_domains:
+                self.bridge_domains[index_bd] = BridgeDomain(id_bd=index_bd, parent_device=self)
+                self.bridge_domains[index_bd].add_vfi(interface_bridge)
+            else:
+                self.bridge_domains[index_bd].add_vfi(interface_bridge)
 
     def set_pseudowires(self):
 
-        command = "show run | i xconnect"
-        connection = self.connect()
-        output = self.send_command(command=command, connection=connection)
-        command = "show xconnect all | i ac"
-        connection = self.connect()
-        output2 = self.send_command(command=command, connection=connection)
-        connection.disconnect()
-        for xconnect in output.split("\n"):
-            data_xconnect = {}
-            xconnect = xconnect.replace("  xconnect ", "")
-            if (xconnect.find("encapsulation mpls") > -1):
-                data = xconnect.split(" ")
-                # print(data)
-                data_xconnect["destination"] = data[0]
-                data_xconnect["id"] = data[1].replace(" ", "")
-                if (len(data) > 4):
-                    data_xconnect["pw_class"] = data[5]
-                else:
-                    data_xconnect["pw_class"] = "null"
-                self.pseudowires[data_xconnect["id"]] = data_xconnect
-        # pprint(self.pseudowires)
-        for xconnect in output2.split("\n")[1:]:
-            xconnectsplit = re.sub(" +", " ", xconnect).split(" ")
-            # print(xconnectsplit)
-            try:
-                id = xconnectsplit[7].split(":")[1]
+        output = self.send_command_and_parse(template_name="show mpls l2transport vc detail ios.template",
+                                             command="show mpls l2transport vc detail")
+        pseudowires = {row["vc_id"]: row for row in output}
+        self.pseudowires = pseudowires
 
-            except:
-                try:
-                    id = xconnectsplit[6].split(":")[1]
-                except:
-                    id = "null"
-
-            try:
-                interface = xconnectsplit[3].split(":")[0]
-                service_instance = xconnectsplit[3].split(":")[1].split("(")[0]
-            except:
-                interface = "null"
-                service_instance = "0"
-            try:
-                self.pseudowires[id]["interface"] = interface
-                self.pseudowires[id]["service_instance"] = service_instance
-            except:
-                print("unable to set interface" + id + " device " + self.ip)
-
-        # print(self.pseudowires)
 
     def get_pw_class_by_tunnel_id(self, tunnel_id):
         print(tunnel_id + " router " + self.ip)
@@ -1129,15 +997,9 @@ class CiscoIOS(Parent):
         return ldp_neighbor, interfaces_mpls
 
     def get_platform(self):
-        conn = self.connect()
-        show_version = self.send_command(connection=conn, command="show version", timeout=10)
-        platform = "CiscoIOS"
-        self.platform = platform
-        if show_version.find("IOS XR") > -1:
-            platform = "CiscoXR"
-        self.platform = platform
-        self.close(conn)
-        return platform
+        self.set_snmp_community()
+        self.set_snmp_plattform()
+        return self.platform
 
     def set_pim_interfaces(self):
         #todo parse textfsm.. not user for the moment
@@ -1240,7 +1102,7 @@ class CiscoIOS(Parent):
         output = ""
         for key, neighbor in self.bgp_neighbors.items():
             output = output + key + "!"
-            if (len(columns) == 0):
+            if len(columns) == 0:
                 columns = neighbor.keys()
             for name_column, data_column in neighbor.items():
                 output = output + str(data_column) + "!"
@@ -1252,9 +1114,10 @@ class CiscoIOS(Parent):
 
         return output
 
-    def set_interfaces(self):
+    def set_interfaces(self, template_name="show_interfaces_detail_ios.template"):
+
         interfaces = self.send_command_and_parse(command="show interfaces"
-                                                 , template_name="show_interfaces_detail_ios.template", timeout=15)
+                                                 , template_name=template_name, timeout=15)
         for interface in interfaces:
             interface["index"] = normalize_interface_name(interface["index"])
             interface_object = InterfaceIOS(self, interface)
@@ -1287,26 +1150,14 @@ class CiscoIOS(Parent):
     def set_snmp_plattform(self):
 
         platfforms = {"9K": "CiscoXR", "ASR920": "CiscoIOS", "900": "CiscoIOS", "default": 'CiscoIOS'}
-        oid = "	1.3.6.1.2.1.1.1"
-        cmd_gen = cmdgen.CommandGenerator()
-        error_indication, error_status, error_index, var_binds = cmd_gen.getCmd(cmdgen.CommunityData(self.community),
-                                                                                cmdgen.UdpTransportTarget(
-                                                                                    (self.ip, 161)),
-                                                                                oid
-                                                                                )
-        plattform = platfforms["default"]
-        snmp_value = "null"
-        for val in var_binds:
-            snmp_value = str(val[0][1]).split("\n")[0]
-
-        for pattern, plattform_name in platfforms.items():
-            if (snmp_value.find(pattern) > -1):
-                if plattform == "CiscoIOS":
-                    self.device_type = 'cisco_ios_'
-                else:
-                    self.device_type = 'cisco_xr_'
-                self.plattform = plattform
-                return plattform_name
+        oid = ".1.3.6.1.2.1.1.1.0"
+        a_device = (self.ip, self.community, 161)
+        snmp_data = snmp_get_oid(a_device=a_device, oid=oid, display_errors=False)
+        snmp_text = snmp_extract(snmp_data)
+        for pattern, platform_name in platfforms.items():
+            if pattern in snmp_text:
+                self.platform = platform_name
+                break
 
     def get_physical_interfaces(self):
         if self.interfaces is None:
@@ -1401,3 +1252,70 @@ class CiscoIOS(Parent):
                           shape=shape
                           )
         return node
+
+    def get_vfis_interface_per_service_instance(self):
+        '''
+        set service _instance
+        Value id (\d+)
+        Value description (.*)
+        Value interface (\S+)
+        Value vlan (\S+)
+        Value state (\S+)
+
+        set pseudowire [Value vc_id (\d+)
+                        Value vc_status (\S+)
+                        Value destination_ip ((\d{1,3}\.){3}\d{1,3})
+                        Value interface (\S+)
+                        Value interface_state (\S+)
+                        Value vfi (VFI)
+                        Value output_interface (\S+)
+                        Value preferred_path (\S+(\s\S+)?)
+                        Value preferred_path_state (\S+(\s\S+)?)
+                        Value default_path (\w+)
+                        Value next_hop (\S+)
+                        Value local_mtu (\d+)
+                        Value remote_mtu (\d+)
+                        Value ldp_state (\w+)
+                        Vlan
+            ]
+        set briddomain
+        :return:
+        '''
+
+        self.set_pseudowires()
+        self.set_service_instances()
+        self.set_bridge_domains()
+        temporal_service_instance = dict(self.service_instances)
+
+        for index, si in temporal_service_instance.items():
+            index_interface = normalize_interface_name(si["interface"])
+            bd = self.bridge_domain_per_interface_si(interface=index_interface, si=si["id"])
+            if bd is not None:
+                si["pws_neighbor"] = ""
+                si["pws_vcid"] = ""
+                si["vfi"] = bd.get_string_vfi()
+            pws = self.pseudowire_per_interface_vlan(interface=index_interface, vlan=si["vlan"])
+
+            if len(pws) > 0:
+                if "vfi" not in si:
+                    si["vfi"] = ""
+                si["pws_neighbor"] = pws[0]["destination_ip"]
+                si["pws_vcid"] = pws[0]["vc_id"]
+
+        return temporal_service_instance
+
+    def pseudowire_per_interface_vlan(self, interface, vlan):
+        return [pw for key, pw in self.pseudowires.items() if
+                normalize_interface_name(pw["interface"]) == interface and pw["vlan"] == vlan]
+
+    def bridge_domain_per_interface_si(self, interface, si):
+        for bd in self.bridge_domains.values():
+            if bd.interface_bridge_domain(interface, si):
+                return bd
+        return None
+
+    def service_instance_per_vlan(self, interface, vlan_id):
+        interface = normalize_interface_name(interface)
+        for id_si, si in self.service_instances.items():
+            if normalize_interface_name(si["interface"]) == interface and vlan_id == si["vlan"]:
+                return id_si, si

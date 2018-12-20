@@ -1,0 +1,30 @@
+Value vc_id (\d+)
+Value vc_status (\S+)
+Value destination_ip ((\d{1,3}\.){3}\d{1,3})
+Value interface (\S+)
+Value interface_state (\S+)
+Value vfi (VFI)
+Value output_interface (\S+)
+Value preferred_path (\S+(\s\S+)?)
+Value preferred_path_state (\S+(\s\S+)?)
+Value default_path (\w+)
+Value next_hop (\S+)
+Value local_mtu (\d+)
+Value remote_mtu (\d+)
+Value ldp_state (\w+)
+Value vlan (\d+)
+
+
+Start
+  ^Local\sinterface:\s($vfi\s)$interface\s(vfi\s)$interface_state
+  ^Local\sinterface:\s($vfi\s)?$interface\s(vfi\s)?$interface_state,.*VLAN\s$vlan.*
+  ^\s+Destination\saddress:\s$destination_ip,\sVC\sID:\s$vc_id,\sVC\sstatus:\s$vc_status
+  ^\s+Output.*:\s$output_interface,.*
+  ^\s+Preferred.*:\s$preferred_path,?(\s$preferred_path_state)?
+  ^\s+Default.*:\s$default_path
+  ^.*LDP,\speer\s\S+\s$ldp_state
+  ^\s+Next\shop:\s$next_hop
+  ^\s+MTU.*local\s$local_mtu,\sremote\s$remote_mtu
+  ^\s+VC\sstatistics: -> Record
+
+

@@ -1,0 +1,83 @@
+Value Required INDEX (\w+\S+)
+Value LINK_STATE (.+?)
+Value PROTOCOL_STATE (.+?)
+Value HARDWARE_TYPE (\S+)
+Value MAC_ADDRESS ([a-fA-F0-9]{4}\.[a-fA-F0-9]{4}\.[a-fA-F0-9]{4})
+Value BIA ([a-fA-F0-9]{4}\.[a-fA-F0-9]{4}\.[a-fA-F0-9]{4})
+Value DESCRIPTION (.+?)
+Value IP (.*)
+Value MTU (\d+)
+Value BW (\d+)
+Value DELAY (\d+\s+\S+)
+Value DUPLEX (([Ff]ull|[Aa]uto|[Hh]alf|[Aa]-).*?)
+Value SPEED (.*?)
+Value MEDIA_TYPE (.*?)
+Value LAST_RESET (\S+)
+Value OUTPUT_DROPS (\d+)
+Value INPUT_RATE (\d+)
+Value INPUT_PACKETS (\d+)
+Value OUTPUT_RATE (\d+)
+Value OUTPUT_PACKETS (\d+)
+Value RUNTS (\d+)
+Value GIANTS (\d+)
+Value THROTTLES (\d+)
+Value INPUT_ERRORS (\d+)
+Value CRC (\d+)
+Value FRAME (\d+)
+Value OVERRUN (\d+)
+Value IGNORED (\d+)
+Value BABBLES (\d+)
+Value LATE_COLLISION (\d+)
+Value DEFERRED (\d+)
+Value LOST_CARRIER (\d+)
+Value NO_CARRIER (\d+)
+Value PAUSE_OUTPUT (\d+)
+
+Start
+  ^\S+\s+is\s+.+?,\s+line\s+protocol.*$$ -> Continue.Record
+  ^${INDEX}\s+is\s+${LINK_STATE},\s+line\s+protocol\s+is\s+${PROTOCOL_STATE}\s*$$
+  ^.*Hardware\s+is\s+${HARDWARE_TYPE}.+address\s+is\s+${MAC_ADDRESS}\s+\(bia\s+${BIA}\)\s*$$
+  ^\s+Description:\s+${DESCRIPTION}$$
+  ^\s+Internet\saddress\sis\s${IP}\s*$$
+  ^\s+MTU\s+${MTU}.*BW\s+${BW}.*(DLY\s+${DELAY},\s*)?$$
+  ^\s+${DUPLEX}.*,\s+${SPEED},.+,\s+${MEDIA_TYPE},.*$$
+  ^\s+Last\sclearing.*counters\s{LAST_RESET}$$
+  ^.*Total output drops:\s+${OUTPUT_DROPS}\s*$$
+  ^.*input\s+rate\s+${INPUT_RATE}.+${INPUT_PACKETS}.+$$
+  ^.*output\s+rate\s+${OUTPUT_RATE}.+${OUTPUT_PACKETS}.+$$
+  ^.*${RUNTS}\srunts,\s${GIANTS}\sgiants,\s${THROTTLES}\sthrottles.*$$
+  ^.*${INPUT_ERRORS}\sinput\serrors,\s${CRC}\sCRC,\s+${FRAME}\sframe,\s${OVERRUN}\soverrun,\s${IGNORED}\signored.*$$
+  0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+  ^.*${BABBLES}\sbabbles,\s${LATE_COLLISION}\slate.*,\s${DEFERRED}.*$$
+  ^.*${LOST_CARRIER}\slost.*,\s${NO_CARRIER}\sno.*,\s${PAUSE_OUTPUT}.*$$
+
+
+TenGigE0/0/0/0 is up, line protocol is up
+  Interface state transitions: 5
+  Hardware is TenGigE, address is 701f.53cb.1f08 (bia 701f.53cb.1f08)
+  Layer 1 Transport Mode is LAN
+  Description: IPT_CONEXION_PRINCIPAL_CON_TELIASONERA_IC-306958_TELIA01_COM(2041X) PRTGID(4808)
+  Internet address is 62.115.46.42/30
+  MTU 9000 bytes, BW 10000000 Kbit (Max: 10000000 Kbit)
+     reliability 255/255, txload 96/255, rxload 190/255
+  Encapsulation ARPA,
+  Full-duplex, 10000Mb/s, LR, link type is force-up
+  output flow control is off, input flow control is off
+  Carrier delay (up) is 10 msec
+  loopback not set,
+  Last link flapped 21w0d
+  ARP type ARPA, ARP timeout 04:00:00
+  Last input 00:00:00, output 00:00:00
+  Last clearing of "show interface" counters 5d03h
+  30 second input rate 7463847000 bits/sec, 882972 packets/sec
+  30 second output rate 3771724000 bits/sec, 1484324 packets/sec
+     249803887502 packets input, 252428385452273 bytes, 3 total input drops
+     1 drops for unrecognized upper-level protocol
+     Received 1 broadcast packets, 2698 multicast packets
+              0 runts, 0 giants, 0 throttles, 0 parity
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     524759249995 packets output, 193045057927762 bytes, 0 total output drops
+     Output 0 broadcast packets, 18071 multicast packets
+     0 output errors, 0 underruns, 0 applique, 0 resets
+     0 output buffer failures, 0 output buffers swapped out
+     0 carrier transitions

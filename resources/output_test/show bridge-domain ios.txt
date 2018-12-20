@@ -1,0 +1,610 @@
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 10
+    vfi HVPLS-10 neighbor 172.19.12.1 9911
+    vfi HVPLS-10 neighbor 172.19.24.1 9910
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   10    000e.5e39.e391  DYNAMIC  172.19.12.1, 9911
+   10    000e.5e3a.0cdf  DYNAMIC  172.19.24.1, 9910
+   10    5017.ff25.bd3f  DYNAMIC  Te0/0/3.Efp10
+
+Bridge-domain 99 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 99
+    vfi HVPLS-99 neighbor 172.17.22.53 13224
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   99    000e.5ebe.2edb  DYNAMIC  Te0/0/3.Efp99
+   99    0013.c4eb.7d01  DYNAMIC  172.17.22.53, 13224
+   99    f07f.06c1.77f0  DYNAMIC  Te0/0/3.Efp99
+
+Bridge-domain 3007 (3 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/4 service instance 3007
+    vfi HVPLS-3007 neighbor 172.17.26.26 506224901
+    vfi HVPLS-3007 neighbor 172.17.26.22 506196101
+
+Bridge-domain 3008 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/4 service instance 3008
+    vfi HVPLS-3008 neighbor 172.17.25.3 505239301
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3008  0021.5970.7b73  DYNAMIC  Te0/0/4.Efp3008
+   3008  002c.c894.e812  DYNAMIC  172.17.25.3, 505239301
+
+Bridge-domain 3010 (3 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/4 service instance 3010
+    vfi L2-ATT_HP_U1_3010 neighbor 172.17.26.26 506301002
+    vfi L2-ATT_HP_U1_3010 neighbor 172.17.26.3 506301001
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3010  0021.5970.7b75  DYNAMIC  Te0/0/4.Efp3010
+   3010  3822.d61c.7fff  DYNAMIC  172.17.26.26, 506301002
+
+Bridge-domain 3012 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/4 service instance 3012
+    vfi L2-ATT_HP_U1_3012 neighbor 172.17.26.39 506301201
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3012  0021.5970.7b74  DYNAMIC  Te0/0/4.Efp3012
+   3012  3822.d697.853d  DYNAMIC  172.17.26.39, 506301201
+
+Bridge-domain 3015 (3 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/4 service instance 3015
+    vfi HVPLS-3015 neighbor 172.17.26.22 506301502
+    vfi HVPLS-3015 neighbor 172.17.26.46 506301501
+
+Bridge-domain 3019 (0 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+
+Bridge-domain 3027 (3 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/4 service instance 3027
+    vfi CRCO00550074|AT&T|WIPRO neighbor 172.17.26.4 506224912
+    vfi CRCO00550074|AT&T|WIPRO neighbor 172.17.26.3 506220111
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3027  0081.c4cc.5b20  DYNAMIC  172.17.26.3, 506220111
+   3027  7819.f75f.4af4  DYNAMIC  Te0/0/4.Efp3027
+
+Bridge-domain 3029 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/4 service instance 3029
+    vfi HVPLS-3029 neighbor 172.17.23.6 50430296
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3029  0035.1ab5.e4c1  DYNAMIC  172.17.23.6, 50430296
+   3029  7819.f75f.4af4  DYNAMIC  Te0/0/4.Efp3029
+
+Bridge-domain 3037 (3 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/4 service instance 3037
+    vfi COCRAT&10000751CA|BIMBO_VALENCI neighbor 172.17.26.10 506148102
+    vfi COCRAT&10000751CA|BIMBO_VALENCI neighbor 172.17.26.39 506114503
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3037  00c1.b168.7591  DYNAMIC  172.17.26.10, 506148102
+   3037  7819.f75f.4af4  DYNAMIC  Te0/0/4.Efp3037
+
+Bridge-domain 3042 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/4 service instance 3042
+    vfi CONIAT&10002370C|IBEX_GLO_ED.IN neighbor 172.17.25.4 505167316
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3042  0021.5970.7b73  DYNAMIC  Te0/0/4.Efp3042
+   3042  5897.bd68.3070  DYNAMIC  172.17.25.4, 505167316
+
+Bridge-domain 3046 (3 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/4 service instance 3046
+    vfi L2-ATT_HP_U1_3046 neighbor 172.17.26.26 506304602
+    vfi L2-ATT_HP_U1_3046 neighbor 172.17.26.3 506304601
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3046  0021.5970.7b75  DYNAMIC  Te0/0/4.Efp3046
+   3046  3822.d61c.7fff  DYNAMIC  172.17.26.26, 506304602
+
+Bridge-domain 3047 (3 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/4 service instance 3047
+    vfi L2-ATT_HP_U1_3047 neighbor 172.17.26.26 506304702
+    vfi L2-ATT_HP_U1_3047 neighbor 172.17.26.3 506304701
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3047  000e.5e9c.1915  DYNAMIC  172.17.26.26, 506304702
+   3047  0021.5970.7b75  DYNAMIC  Te0/0/4.Efp3047
+
+Bridge-domain 3048 (3 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/4 service instance 3048
+    vfi L2-ATT_HP_U1_3048 neighbor 172.17.26.26 506304802
+    vfi L2-ATT_HP_U1_3048 neighbor 172.17.26.3 506304801
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3048  0021.5970.7b75  DYNAMIC  Te0/0/4.Efp3048
+   3048  3822.d61c.7fff  DYNAMIC  172.17.26.26, 506304802
+
+Bridge-domain 3059 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/4 service instance 3059
+    vfi L2-ATT_ABBOTT_3059 neighbor 172.17.22.3 502305911
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3059  0021.5970.7af6  DYNAMIC  Te0/0/4.Efp3059
+   3059  d0d0.fd30.c917  DYNAMIC  172.17.22.3, 502305911
+
+Bridge-domain 3078 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/4 service instance 3078
+    vfi L2-ATT_COPA10013487C|Adidas3078 neighbor 172.17.27.8 502307811
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3078  7819.f75f.4a76  DYNAMIC  Te0/0/4.Efp3078
+   3078  9ccc.83b7.9589  DYNAMIC  172.17.27.8, 502307811
+   3078  f08e.db88.d485  DYNAMIC  172.17.27.8, 502307811
+
+Bridge-domain 3080 (3 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/4 service instance 3080
+    vfi COCRAT&10013486C|AT&T|SONY_CC neighbor 172.17.26.2 506104977
+    vfi COCRAT&10013486C|AT&T|SONY_CC neighbor 172.17.26.7 506308001
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3080  0006.f63c.20a0  DYNAMIC  172.17.26.2, 506104977
+   3080  3c61.0433.b2f7  DYNAMIC  Te0/0/4.Efp3080
+
+Bridge-domain 3087 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/4 service instance 3087
+    vfi COCRAT&10018953C|EVONIK_CENTRO neighbor 172.17.26.7 506133770
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3087  7001.b518.33c0  DYNAMIC  172.17.26.7, 506133770
+   3087  7819.f75f.4a75  DYNAMIC  Te0/0/4.Efp3087
+
+Bridge-domain 3280 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 3280
+    vfi HVPLS-3280 neighbor 172.17.27.1 13280
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3280  0021.5970.7a75  DYNAMIC  Te0/0/3.Efp3280
+   3280  0081.c417.f792  DYNAMIC  172.17.27.1, 13280
+
+Bridge-domain 3282 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 3282
+    vfi HVPLS-3282 neighbor 172.17.26.5 1220101
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3282  0021.5970.7a75  DYNAMIC  Te0/0/3.Efp3282
+   3282  cc46.d616.10e0  DYNAMIC  172.17.26.5, 1220101
+
+Bridge-domain 3283 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 3283
+    vfi HVPLS-3283 neighbor 172.17.25.4 13283
+
+Bridge-domain 3284 (3 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 3284
+    vfi HVPLS-3284 neighbor 172.17.26.27 506328402
+    vfi HVPLS-3284 neighbor 172.17.26.51 506328401
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3284  00a2.ee01.5781  DYNAMIC  172.17.26.51, 506328401
+   3284  7819.f75f.4a75  DYNAMIC  Te0/0/3.Efp3284
+
+Bridge-domain 3285 (3 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 3285
+    vfi HVPLS-3285 neighbor 172.16.30.42 23285
+    vfi HVPLS-3285 neighbor 172.16.30.10 13285
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3285  4c96.140a.4c02  DYNAMIC  172.16.30.42, 23285
+   3285  b838.61e4.e061  DYNAMIC  Te0/0/3.Efp3285
+   3285  d8b1.22ed.1871  DYNAMIC  172.16.30.10, 13285
+
+Bridge-domain 3288 (3 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 3288
+    vfi HVPLS-3288 neighbor 172.17.26.42 506328802
+    vfi HVPLS-3288 neighbor 172.17.26.10 506328801
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3288  00a2.ee90.b340  DYNAMIC  172.17.26.10, 506328801
+   3288  7819.f75f.4a76  DYNAMIC  Te0/0/3.Efp3288
+
+Bridge-domain 3291 (3 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 60 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 3291
+    vfi HVPLS_3291 neighbor 172.17.26.4 506329102
+    vfi HVPLS_3291 neighbor 172.17.26.26 506329101
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3291  7819.f75f.4a76  DYNAMIC  Te0/0/3.Efp3291
+   3291  9ccc.83b7.8ac9  DYNAMIC  Te0/0/3.Efp3291
+
+Bridge-domain 3426 (3 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/4 service instance 3426
+    vfi AT&T|CAPITAL_ONE_3426 neighbor 172.17.26.2 506342601
+    vfi AT&T|CAPITAL_ONE_3426 neighbor 172.17.26.42 506342602
+
+Bridge-domain 3540 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 3540
+    vfi HVPLS-3540 neighbor 172.16.30.8 13540
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3540  1c6a.7ab4.4e03  DYNAMIC  172.16.30.8, 13540
+   3540  a80c.0dd6.31b1  DYNAMIC  172.16.30.8, 13540
+   3540  f07f.067f.f121  DYNAMIC  Te0/0/3.Efp3540
+
+Bridge-domain 3665 (3 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/4 service instance 3665
+    vfi HVPLS-3665 neighbor 172.17.26.10 506366501
+    vfi HVPLS-3665 neighbor 172.17.26.39 506366502
+
+Bridge-domain 3725 (3 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 3725
+    vfi HVPLS-3725 neighbor 172.19.24.1 506372501
+    vfi HVPLS-3725 neighbor 172.17.26.6 506372502
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3725  74a0.2fa0.ec11  DYNAMIC  172.19.24.1, 506372501
+   3725  7819.f75f.4af5  DYNAMIC  Te0/0/3.Efp3725
+
+Bridge-domain 3732 (3 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/4 service instance 3732
+    vfi HVPLS-3732 neighbor 172.17.26.26 506373202
+    vfi HVPLS-3732 neighbor 172.17.26.3 506373201
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3732  0c86.1015.498c  DYNAMIC  172.17.26.26, 506373202
+   3732  0c86.1015.4992  DYNAMIC  172.17.26.26, 506373202
+   3732  3c61.0433.b2f7  DYNAMIC  Te0/0/4.Efp3732
+
+Bridge-domain 3733 (3 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 3733
+    vfi HVPLS-3733 neighbor 172.17.23.2 503373302
+    vfi HVPLS-3733 neighbor 172.19.12.1 503373301
+
+Bridge-domain 3745 (3 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/4 service instance 3745
+    vfi L2-CELSIA_TORRE_ARGOS neighbor 172.17.27.8 57374502
+    vfi L2-CELSIA_TORRE_ARGOS neighbor 172.17.27.9 57374501
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3745  500f.807d.f93f  DYNAMIC  Te0/0/4.Efp3745
+   3745  70df.2ff3.54f3  DYNAMIC  172.17.27.9, 57374501
+
+Bridge-domain 3794 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 3794
+    vfi HVPLS-3794 neighbor 172.19.28.21 507379401
+
+Bridge-domain 3826 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 3826
+    vfi HVPLS-3826 neighbor 172.17.26.8 23826
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3826  0021.5970.7a75  DYNAMIC  Te0/0/3.Efp3826
+   3826  0035.1a21.f430  DYNAMIC  172.17.26.8, 23826
+
+Bridge-domain 3863 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 3863
+    vfi HVPLS-3863 neighbor 172.19.28.21 507386301
+
+Bridge-domain 3864 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 3864
+    vfi HVPLS-3864 neighbor 172.17.22.3 78643
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3864  0021.5970.7a75  DYNAMIC  Te0/0/3.Efp3864
+
+Bridge-domain 3866 (3 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 3866
+    vfi HVPLS-3866 neighbor 172.17.25.2 33866
+    vfi HVPLS-3866 neighbor 172.17.25.3 23866
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3866  0021.5970.7a75  DYNAMIC  Te0/0/3.Efp3866
+   3866  f07f.0678.1520  DYNAMIC  172.17.25.3, 23866
+
+Bridge-domain 3867 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 3867
+    vfi HVPLS-3867 neighbor 172.19.28.19 23867
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3867  6cb2.ae45.d2b0  DYNAMIC  172.19.28.19, 23867
+   3867  7819.f75f.4af4  DYNAMIC  Te0/0/3.Efp3867
+
+Bridge-domain 3868 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 3868
+    vfi HVPLS-3868 neighbor 172.17.20.1 23868
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3868  0015.2ce7.3a30  DYNAMIC  172.17.20.1, 23868
+   3868  00a3.d15e.5e81  DYNAMIC  Te0/0/3.Efp3868
+
+Bridge-domain 3869 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 3869
+    vfi HVPLS-3869 neighbor 172.17.27.1 23869
+
+Bridge-domain 3870 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 3870
+    vfi HVPLS-3870 neighbor 172.17.27.16 23870
+
+Bridge-domain 3871 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 3871
+    vfi HVPLS-3871 neighbor 172.17.22.59 502387101
+
+Bridge-domain 3876 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 3876
+    vfi HVPLS-3876 neighbor 172.17.27.15 23876
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3876  0021.5970.7a75  DYNAMIC  Te0/0/3.Efp3876
+   3876  d46d.508d.5881  DYNAMIC  172.17.27.15, 23876
+
+Bridge-domain 3877 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 3877
+    vfi HVPLS-3877 neighbor 172.17.26.7 23877
+
+Bridge-domain 3878 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 3878
+    vfi HVPLS-3878 neighbor 172.17.27.10 23878
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3878  0021.5970.7a75  DYNAMIC  Te0/0/3.Efp3878
+   3878  3c08.f670.d292  DYNAMIC  172.17.27.10, 23878
+
+Bridge-domain 3879 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 3879
+    vfi HVPLS-3879 neighbor 172.17.27.2 23879
+
+Bridge-domain 3883 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 3883
+    vfi HVPLS-3883 neighbor 172.17.26.8 506388301
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3883  3c61.0433.b2f4  DYNAMIC  Te0/0/3.Efp3883
+   3883  4001.7a0d.2252  DYNAMIC  172.17.26.8, 506388301
+
+Bridge-domain 3887 (2 ports in all)
+State: UP                    Mac learning: Enabled
+Aging-Timer: 300 second(s)
+Maximum address limit: 16000
+    TenGigabitEthernet0/0/3 service instance 3887
+    vfi HVPLS-3887 neighbor 172.17.24.14 504388701
+
+   Nile Mac Address Entries
+
+   BD    mac addr        type     ports
+   ----------------------------------------------------------------------------------------------
+   3887  0021.5970.7a75  DYNAMIC  Te0/0/3.Efp3887
+   3887  503d.e560.c0d2  DYNAMIC  172.17.24.14, 504388701

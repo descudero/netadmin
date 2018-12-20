@@ -113,17 +113,13 @@ class Claro:
     def save_to_excel_list(self, list_data, file_name):
         workbook = xlwt.Workbook()
         worksheet = workbook.add_sheet("data")
-
-        rows_skipped = 1
+        rows_skipped = 0
 
         columns = list_data[0].keys()
         for colidx, column in enumerate(columns):
             worksheet.write(rows_skipped, colidx, column)
-
         for rowidx, row in enumerate(list_data):
-
             for colindex, col in enumerate(columns):
-
                 if (col in row):
                     try:
                         data = row[col]
@@ -136,203 +132,8 @@ class Claro:
 
         workbook.save(file_name + '.xls')
 
-    def create_ospf_area_graph(self, output_database):
 
-        '''\
-        split by Link
-          LS age:
-          split by  Link connected to:
-            index [0]
-            split by "\n
-                index[3].split "  Link State ID: " [1]
-                add collection id [node]=[]
-            index [0-3]
-            split by "\n"
-                
-        '''
-        routers = {}
-        link_states_entries = output_database.split("LS age:")[1:]
-        for router_lsa in link_states_entries:
-            ls_break_down = router_lsa.split("Link connected to:")
-            router_information = ls_break_down[0].split("\n")[3].split("Link State ID: ")[1]
-            print(router_information)
-            ip = router_information
-            routers[router_information] = {}
-            community = 'snmpUfi'
-            routers[router_information]["hostname"] = self.poll_snmp_hostname(ip, community)
-            if routers[router_information]["hostname"] == "no_snmp":
-                community = 'pnrw-med'
-                routers[router_information]["hostname"] = self.poll_snmp_hostname(ip, community)
-            router_interfaces = ls_break_down[1:]
-            routers[router_information]["plattform"] = self.poll_snmp_plattform(ip, community)
-            interfaces = []
-            for interface in router_interfaces:
-                interace_split = interface.split("\n")
-                interface_data = {}
-                interface_type = interace_split[0].replace(" a ", "").replace(" a", "a")
-                interface_data["interface_type"] = interface_type
-                if (interface_type == "Stub Network"):
-                    interface_data["interface_network"] = interace_split[1].split(": ")[1]
-                    interface_data["interface_mask"] = interace_split[2].split(": ")[1]
-                else:
-                    interface_data["neighbor_ip"] = interace_split[1].split(": ")[1]
-                    interface_data["interface_ip"] = interace_split[2].split(": ")[1]
-                    address = ipaddress.IPv4Interface(interface_data["interface_ip"] + "/30")
-                    interface_data["interface_network"] = str(address.network)
-                    interface_name = self.poll_snmp_interface_name_ip(router_information, community,
-                                                                      interface_data["interface_ip"])
-                    interface_name = CiscoIOS.get_normalize_interface_name(interface_name)
-                    interface_data["interface_name"] = interface_name
-                interface_data["cost"] = interace_split[4].split(": ")[1]
-                interfaces.append(interface_data)
-            routers[router_information]["interfaces"] = interfaces
-        stubs = {}
-        point_to_point = {}
-        pprint(routers)
-        for router, data in routers.items():
-            for interface in data["interfaces"]:
 
-                if interface["interface_type"] != "Stub Network":
-                    if not interface["interface_network"] in point_to_point:
-                        point_to_point[interface["interface_network"]] = [{"local_router": router,
-                                                                           "interface_ip": interface["interface_ip"],
-                                                                           "neighbor_ip": interface["neighbor_ip"],
-                                                                           "interface_name": interface[
-                                                                               "interface_name"],
-                                                                           "cost": interface["cost"]}]
-                    else:
-                        point_to_point[interface["interface_network"]].append({"local_router": router,
-                                                                               "interface_ip": interface[
-                                                                                   "interface_ip"],
-                                                                               "neighbor_ip": interface["neighbor_ip"],
-                                                                               "interface_name": interface[
-                                                                                   "interface_name"],
-                                                                               "cost": interface["cost"]})
-                else:
-                    if not interface["interface_network"] + "/30" in point_to_point:
-                        if not interface["interface_network"] in stubs:
-                            stubs[interface["interface_network"]] = [{"local_router": router}]
-                        else:
-                            stubs[interface["interface_network"]].append({"local_router": router})
-
-        return routers, point_to_point, stubs
-
-    def poll_snmp_plattform(self, ip, community):
-
-        platfforms = {"9K": "ASR9K", "ASR920": "ASR920", "900": "ASR900", "default": 'null'}
-        cmdGen = cmdgen.CommandGenerator()
-        oid = "	1.3.6.1.2.1.1.1"
-        errorIndication, errorStatus, errorIndex, varBinds = cmdGen.nextCmd(cmdgen.CommunityData(community),
-                                                                            cmdgen.UdpTransportTarget(
-                                                                                (ip, 161)),
-                                                                            oid
-                                                                            )
-        plattform = platfforms["default"]
-        snmp_value = "null"
-        for val in varBinds:
-            snmp_value = str(val[0][1]).split("\n")[0]
-
-        for pattern, plattform_name in platfforms.items():
-            if (snmp_value.find(pattern) > -1):
-                return plattform_name
-        return plattform
-
-    def poll_snmp_hostname(self, ip, community):
-        value = "1.3.6.1.2.1.1.5.0"
-        cmdGen = cmdgen.CommandGenerator()
-        errorIndication, errorStatus, errorIndex, varBinds = cmdGen.getCmd(cmdgen.CommunityData(community),
-                                                                           cmdgen.UdpTransportTarget(
-                                                                               (ip, 161)),
-                                                                           value
-                                                                           )
-        hostname = "no_snmp"
-        for name, val in varBinds:
-            hostname = str(val).split(".")[0]
-        return hostname
-
-    def poll_snmp_interface_index_ip(self, ip, community, ip_interface):
-        cmdGen = cmdgen.CommandGenerator()
-        oid = "1.3.6.1.2.1.4.20.1.2." + ip_interface
-        errorIndication, errorStatus, errorIndex, varBinds = cmdGen.getCmd(cmdgen.CommunityData(community),
-                                                                           cmdgen.UdpTransportTarget(
-                                                                               (ip, 161)),
-                                                                           oid
-
-                                                                           )
-        snmp_interface_index = "null"
-        for val in varBinds:
-            snmp_interface_index = str(val[1])
-        return snmp_interface_index
-
-    def poll_snmp_interface_name_index(self, ip, community, index):
-        cmdGen = cmdgen.CommandGenerator()
-        oid = "1.3.6.1.2.1.2.2.1.2." + index
-        errorIndication, errorStatus, errorIndex, varBinds = cmdGen.getCmd(cmdgen.CommunityData(community),
-                                                                           cmdgen.UdpTransportTarget(
-                                                                               (ip, 161)),
-                                                                           oid
-                                                                           )
-        interface_name = "null"
-        for val in varBinds:
-            interface_name = str(val[1])
-        return interface_name
-
-    def poll_snmp_interface_name_ip(self, ip, community, ip_interface):
-        index = self.poll_snmp_interface_index_ip(ip, community, ip_interface)
-        if index != "null":
-            interface_name = self.poll_snmp_interface_name_index(ip, community, index)
-            return interface_name
-        else:
-            return "null"
-
-    def generate_yed_ospf_area(self, output_database, file_name="prueba3"):
-        grid_width = 10
-        grid_x_counter = 0
-        grid_y_counter = 0
-        separation = 150
-        routers, point_to_point, stubs = self.create_ospf_area_graph(output_database)
-        g = pyyed.Graph()
-        node_colors = {"-CER": "#33ccff", "-AGG": "#66ff99", "-C": "#ff9966", "-ACC": "#cc99ff", "default": "#999966"}
-        interface_colors = {"Te": "#0099cc", "Gi": "#ff5050", "default": "#00cc99"}
-        plattform_shapes = {"ASR9K": "rectangle3d", "ASR920": "hexagon", "ASR900": "octagon", 'null': "diamond"}
-        '''
-        "rectangle", "rectangle3d", "roundrectangle", "diamond", "ellipse",
-        "fatarrow", "fatarrow2", "hexagon", "octagon", "parallelogram",
-        "parallelogram2", "star5", "star6", "star6", "star8", "trapezoid",
-        "trapezoid2", "triangle", "trapezoid2", "triangle"
-        '''
-        for router, data in routers.items():
-            bcolor = node_colors["default"]
-            shape = plattform_shapes[data["plattform"]]
-            for name, color in node_colors.items():
-                if (data["hostname"].find(name) > -1):
-                    bcolor = color
-
-            g.add_node(node_name=router, height=str(200), width=str(200), shape=shape,
-                       x=str(grid_x_counter * separation), y=str(grid_y_counter * separation), shape_fill=bcolor)
-
-            label_text = data["hostname"]
-            g.nodes[router].add_label(label_text)
-            if grid_x_counter == 9:
-                grid_x_counter = 0
-                grid_y_counter = grid_y_counter + 1
-            else:
-                grid_x_counter = grid_x_counter + 1
-
-        for id, edge in point_to_point.items():
-            if len(edge) > 1:
-                label = edge[0]["interface_name"] + " C:" + edge[0]["cost"]
-                label2 = edge[1]["interface_name"] + " C:" + edge[1]["cost"]
-                lcolor = interface_colors["default"]
-                for interface, color in interface_colors.items():
-                    if label.find(interface) > -1:
-                        lcolor = color
-
-                g.add_edge(edge[0]["local_router"], edge[1]["local_router"], id=str(id), label=label, label2=label2,
-                           color=lcolor, width="2.0")
-
-        file = open(file_name + ".graphml", "w")
-        file.write(g.get_graph())
 
     def search_recived_routers_ipt_advertise(self, ip_pe, display_name_pe, bgp_neigbor_description_filter,
                                              address_family="ipv4 unicast", print_on_screen=True, sep="|"):
@@ -624,16 +425,9 @@ class Claro:
         threads = []
         device_list = []
 
-        for device in devices:
-            t = th.Thread(target=device.set_snmp_community)
-            t.start()
-            threads.append(t)
-
-        for t in threads:
-            t.join()
 
         for device in devices:
-            t = th.Thread(target=device.set_snmp_plattform)
+            t = th.Thread(target=device.get_platform)
             t.start()
             threads.append(t)
 
@@ -700,6 +494,13 @@ class Claro:
             devices.append(device)
         return devices
 
+    def devices_from_ip_list(self, list_devices_ip):
+        devices = []
+        for ip in list_devices_ip:
+            device = CiscoIOS(ip, "ios", self.master)
+            devices.append(device)
+        return devices
+
     def devices_from_network(self, string_network, window=30):
         network = ipaddress.ip_network(string_network)
         hosts = network.hosts()
@@ -739,6 +540,17 @@ class Claro:
         for device in devices:
             interface_data = interface_data + device.get_interfaces_dict_data()
         self.save_to_excel_list(interface_data, file_name=filename + "_" + timestamp)
+
+    def get_service_instance_with_pseudowires(self, devices):
+        final_list = []
+
+        for device in devices:
+            final_list.extend([{**si_data, "parent_device_ip": device.ip} for si_data in
+                               device.get_vfis_interface_per_service_instance().values()])
+
+        return final_list
+
+
 
 """
     def display_qos_ipp(self):
