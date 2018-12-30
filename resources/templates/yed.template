@@ -1,0 +1,9 @@
+Value x ([-+]?\d+)
+Value y ([-+]?\d+)
+Value ip ((\d{1,3}\.){3}\d{1,3})
+Value hostame (\S+)
+
+Start
+  ^\s+<y:Geometry.*x\S\S$x.*y\S\S$y\..*
+  ^.*modelPosition\S\Sc.*>$ip<.*
+  ^.*modelPosition\S\Sn.*>$hostame<.* -> Record

@@ -14,7 +14,8 @@ class ospf_database:
         self.routers = isp.correct_device_platform(self.routers)
         self.routers = {router.ip: router for router in self.routers}
         self.p2p = {}
-        self.isp.excute_methods(methods={"set_interfaces": {}, "set_snmp_community": {}}, devices=self.routers.values())
+        self.isp.excute_methods(methods={"set_interfaces": {}, "set_snmp_community": {}, "set_yed_xy": {}},
+                                devices=self.routers.values())
         self.graph = Graph()
 
         for network, neighbors in p2p.items():

@@ -1,0 +1,39 @@
+BGP routing table entry for 190.115.14.0/24, Route Distinguisher: 52468:1
+Versions:
+  Process           bRIB/RIB  SendTblVer
+  Speaker          293298909   293298909
+Last Modified: Dec 23 22:35:32.622 for 4d22h
+Paths: (2 available, best #1)
+  Advertised to CE update-groups (with more than one peer):
+    0.2 0.7
+  Advertised to CE peers (in unique update groups):
+    186.148.111.254 103.4.97.142    172.29.2.2      190.115.7.254
+    193.251.254.225 89.221.41.152   208.76.14.223   186.148.111.46
+    193.251.254.125 62.115.46.41    186.148.96.6    186.148.111.2
+    186.148.111.54  186.148.111.58  186.148.111.62  72.14.214.144
+    186.148.111.203
+  Path #1: Received by speaker 0
+  Advertised to CE update-groups (with more than one peer):
+    0.2 0.7
+  Advertised to CE peers (in unique update groups):
+    186.148.111.254 103.4.97.142    172.29.2.2      190.115.7.254
+    193.251.254.225 89.221.41.152   208.76.14.223   186.148.111.46
+    193.251.254.125 62.115.46.41    186.148.96.6    186.148.111.2
+    186.148.111.54  186.148.111.58  186.148.111.62  72.14.214.144
+    186.148.111.203
+  Local, (received & used)
+    172.16.30.250 (metric 22) from 172.16.30.250 (172.16.30.250)
+      Received Label 740211
+      Origin IGP, metric 0, localpref 100, valid, internal, best, group-best, import-candidate, imported
+      Received Path ID 0, Local Path ID 0, version 293298909
+      Community: 52468:1502 52468:10000 52468:16667 52468:20118 52468:20128 52468:20148 52468:20418 52468:20428 52468:20518 52468:20528 52468:20538 52468:20618 52468:20628 52468:20729 52468:20849 52468:52468
+      Extended community: RT:52468:1
+      Source AFI: VPNv4 Unicast, Source VRF: INTERNET, Source Route Distinguisher: 52468:1
+  Path #2: Received by speaker 0
+  Not advertised to any peer
+  Local, (Received from a RR-client), (received & used)
+    190.115.7.254 from 190.115.7.254 (186.148.111.26)
+      Origin IGP, metric 0, localpref 95, valid, internal
+      Received Path ID 0, Local Path ID 0, version 0
+      Community: 52468:1502 52468:10000 52468:20118 52468:20128 52468:20148 52468:20418 52468:20428 52468:20518 52468:20528 52468:20538 52468:20618 52468:20628 52468:20729 52468:20849 52468:52468
+      Extended community: RT:52468:1

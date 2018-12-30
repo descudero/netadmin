@@ -1,0 +1,116 @@
+BGP routing table entry for 104.237.191.0/24, Route Distinguisher: 52468:1
+Versions:
+  Process           bRIB/RIB  SendTblVer
+  Speaker          293298865   293298865
+Last Modified: Dec 23 22:35:31.622 for 4d21h
+Paths: (13 available, best #8)
+  Advertised to CE update-groups (with more than one peer):
+    0.7
+  Advertised to CE peers (in unique update groups):
+    103.4.97.142    172.29.2.2      190.115.7.254   193.251.254.225
+    89.221.41.152   208.76.14.223   186.148.111.46  193.251.254.125
+    62.115.46.41    186.148.96.6    186.148.111.2   186.148.111.54
+    186.148.111.58  186.148.111.62  72.14.214.144   186.148.111.203
+  Path #1: Received by speaker 0
+  Not advertised to any peer
+  1299 36040, (aggregated by 36040 104.237.174.3)
+    62.115.46.41 from 62.115.46.41 (2.255.254.54)
+      Origin IGP, localpref 100, valid, external, group-best
+      Received Path ID 0, Local Path ID 0, version 0
+      Community: 1299:25000 52468:330
+      Extended community: RT:52468:1
+  Path #2: Received by speaker 0
+  Not advertised to any peer
+  1299 36040, (aggregated by 36040 104.237.174.3), (received-only)
+    62.115.46.41 from 62.115.46.41 (2.255.254.54)
+      Origin IGP, localpref 100, valid, external
+      Received Path ID 0, Local Path ID 0, version 0
+      Community: 1299:25000
+  Path #3: Received by speaker 0
+  Not advertised to any peer
+  15169 36040, (aggregated by 36040 208.117.253.3)
+    72.14.214.144 from 72.14.214.144 (108.170.234.52)
+      Origin IGP, metric 0, localpref 100, valid, external, group-best
+      Received Path ID 0, Local Path ID 0, version 0
+      Community: 52468:310
+      Extended community: RT:52468:1
+  Path #4: Received by speaker 0
+  Not advertised to any peer
+  15169 36040, (aggregated by 36040 208.117.253.3), (received-only)
+    72.14.214.144 from 72.14.214.144 (108.170.234.52)
+      Origin IGP, metric 0, localpref 100, valid, external
+      Received Path ID 0, Local Path ID 0, version 0
+  Path #5: Received by speaker 0
+  Not advertised to any peer
+  6762 36040, (aggregated by 36040 64.15.120.3)
+    89.221.41.152 from 89.221.41.152 (89.221.41.254)
+      Origin IGP, metric 100, localpref 100, valid, external, group-best
+      Received Path ID 0, Local Path ID 0, version 0
+      Community: 6762:1 6762:30 6762:40 6762:13900 52468:330
+      Extended community: RT:52468:1
+  Path #6: Received by speaker 0
+  Not advertised to any peer
+  6762 36040, (aggregated by 36040 64.15.120.3), (received-only)
+    89.221.41.152 from 89.221.41.152 (89.221.41.254)
+      Origin IGP, metric 100, localpref 100, valid, external
+      Received Path ID 0, Local Path ID 0, version 0
+      Community: 6762:1 6762:30 6762:40 6762:13900
+  Path #7: Received by speaker 0
+  Not advertised to any peer
+  1239 6762 36040, (aggregated by 36040 64.15.120.3), (received-only)
+    144.223.65.157 from 144.223.65.157 (144.228.241.140)
+      Origin IGP, metric 0, localpref 100, valid, external
+      Received Path ID 0, Local Path ID 0, version 0
+  Path #8: Received by speaker 0
+  Advertised to CE update-groups (with more than one peer):
+    0.7
+  Advertised to CE peers (in unique update groups):
+    103.4.97.142    172.29.2.2      190.115.7.254   193.251.254.225
+    89.221.41.152   208.76.14.223   186.148.111.46  193.251.254.125
+    62.115.46.41    186.148.96.6    186.148.111.2   186.148.111.54
+    186.148.111.58  186.148.111.62  72.14.214.144   186.148.111.203
+  36040, (aggregated by 36040 208.117.249.3), (received & used)
+    172.16.30.250 (metric 22) from 172.16.30.250 (172.16.30.250)
+      Received Label 210338
+      Origin IGP, localpref 100, valid, internal, best, group-best, import-candidate, imported
+      Received Path ID 0, Local Path ID 0, version 293298865
+      Community: 28469:52468 52468:1502 52468:10014 52468:16667 52468:20110 52468:20120 52468:20140 52468:20210 52468:20220 52468:20414 52468:20424 52468:20514 52468:20524 52468:20530 52468:20614 52468:20620 52468:20729
+      Extended community: RT:52468:1
+      Source AFI: VPNv4 Unicast, Source VRF: INTERNET, Source Route Distinguisher: 52468:1
+  Path #9: Received by speaker 0
+  Not advertised to any peer
+  36040, (aggregated by 36040 208.117.249.3), (Received from a RR-client), (received & used)
+    190.115.7.254 from 190.115.7.254 (186.148.111.26)
+      Origin IGP, localpref 95, valid, internal
+      Received Path ID 0, Local Path ID 0, version 0
+      Community: 28469:52468 52468:1502 52468:10014 52468:20110 52468:20120 52468:20140 52468:20210 52468:20220 52468:20414 52468:20424 52468:20514 52468:20524 52468:20530 52468:20614 52468:20620 52468:20729
+      Extended community: RT:52468:1
+  Path #10: Received by speaker 0
+  Not advertised to any peer
+  15169 36040, (aggregated by 36040 208.117.253.3)
+    206.41.108.12 from 206.41.108.4 (206.41.108.4)
+      Origin IGP, metric 0, localpref 100, valid, external
+      Received Path ID 0, Local Path ID 0, version 0
+      Community: 52468:320
+      Extended community: RT:52468:1
+  Path #11: Received by speaker 0
+  Not advertised to any peer
+  15169 36040, (aggregated by 36040 208.117.253.3), (received-only)
+    206.41.108.12 from 206.41.108.4 (206.41.108.4)
+      Origin IGP, metric 0, localpref 100, valid, external
+      Received Path ID 0, Local Path ID 0, version 0
+  Path #12: Received by speaker 0
+  Not advertised to any peer
+  6939 22773 36040, (aggregated by 36040 104.237.174.3)
+    206.41.108.23 from 206.41.108.23 (216.218.252.177)
+      Origin IGP, metric 0, localpref 100, valid, external, group-best
+      Received Path ID 0, Local Path ID 0, version 0
+      Community: 52468:320
+      Extended community: RT:52468:1
+  Path #13: Received by speaker 0
+  Not advertised to any peer
+  6939 22773 36040, (aggregated by 36040 104.237.174.3), (received-only)
+    206.41.108.23 from 206.41.108.23 (216.218.252.177)
+      Origin IGP, metric 0, localpref 100, valid, external
+      Received Path ID 0, Local Path ID 0, version 0
+RP/0/RSP0/CPU0:RO-NAP-COR9K-1#

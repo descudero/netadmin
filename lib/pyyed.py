@@ -225,9 +225,14 @@ class Node:
 
 class Edge:
     def __init__(self, node1, node2, label="", arrowhead="standard", arrowfoot="none",
-                 color="#000000", line_type="line", width="1.0", id="", label2="", additional_labels=[]):
+                 color="#000000", line_type="line", width="1.0", id="", label2="", additional_labels=[],
+                 sy="0", sx="0", tx="0", ty=""):
         self.node1 = node1
         self.node2 = node2
+        self.sy = sy
+        self.sx = sx
+        self.ty = ty
+        self.tx = tx
         self.additional_labels = additional_labels
         if (id == ""):
             self.edge_id = "%s_%s" % (node1, node2)
@@ -279,7 +284,7 @@ class Edge:
         edge = ET.Element("edge", id=self.edge_id, source=self.node1, target=self.node2)
         data = ET.SubElement(edge, "data", key="data_edge")
         poli_line = ET.SubElement(data, "y:PolyLineEdge")
-
+        ET.SubElement(poli_line, "y:Path", sx=self.sx, sy=self.sy, ty=self.ty, tx=self.tx)
         ET.SubElement(poli_line, "y:Arrows", source=self.arrowfoot, target=self.arrowhead)
         ET.SubElement(poli_line, "y:LineStyle", color=self.color, type=self.line_type,
                       width=self.width)

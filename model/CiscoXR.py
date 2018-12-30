@@ -782,6 +782,10 @@ class CiscoXR(Parent):
         pprint(self)
         super().set_interfaces(template_name=template_name)
 
+    def configure_snmp_location(self, text):
+        command = "configure terminal \n snmp-server location " + text + "\ncommit\nexit\n"
+        print(self.ip, command)
+        print(self.send_command(command=command, connection=self.connect()))
 
     """
     def get_kivy_policy_rate(self):

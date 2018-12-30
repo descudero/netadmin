@@ -1,0 +1,28 @@
+Value path_no (\d*)
+Value local (Local)
+Value as_path ((\d+\s?)+)
+Value as_origin (\d+)
+Value aggregator ((\d{1,3}\.){3}\d{1,3})
+Value next_hop ((\d{1,3}\.){3}\d{1,3})
+Value neighbor_ip ((\d{1,3}\.){3}\d{1,3})
+Value neighbor_id ((\d{1,3}\.){3}\d{1,3})
+Value received_only (\S+)
+Value origin (\w+)
+Value weight (\d+)
+Value local_preference (\d+)
+Value valid (\w+)
+Value eibgp (\w+)
+Value community (((\d+:\d+)\s?)+)
+Value extended_community (\d+:\d+)
+Value igp_metric (\d+)
+
+Start
+  ^\s+Path\s#$path_no:.+
+  ^\s+$local.*
+  ^\s+$as_path.*,\s+\(aggregated\sby\s$as_origin\s$aggregator.*
+  ^\s+$next_hop(\s\(metric\s$igp_metric\))?\sfrom\s$neighbor_ip\s\($neighbor_id\)(,\S$received_only)?
+  ^\s+Origin\s$origin(,\smetric\s$weight)?,\slocalpref\s$local_preference,\s$valid,\s$eibgp.*
+  ^\s+Community:\s$extended_community
+  ^\s+Extended\scommunity:\sRT:$extended_community* -> Record
+
+

@@ -22,6 +22,8 @@ class ospf_adjacency:
                 print("not interface found ", device, " ", neighbor["interface_ip"])
                 self.adj_neighbors[neighbor_key]["interface"] = "null"
             self.adj_neighbors[neighbor_key]["network_device"] = device
+        # self.adj_neighbors["s"]["network_device"].add_p2p_ospf(self,self.adj_neighbors["t"])
+        # self.adj_neighbors["t"]["network_device"].add_p2p_ospf(self,self.adj_neighbors["s"])
 
     def __repr__(self):
         return str(self.__class__) + " NET " + self.network_id + " " + self.network_type + " N " + str(
@@ -37,7 +39,15 @@ class ospf_adjacency:
         if "NAP" in self.adj_neighbors["s"]["network_device"].hostname or \
                 "NAP" in self.adj_neighbors["t"]["network_device"].hostname:
             line_type = "dashed"
+        sd = self.adj_neighbors["s"]["network_device"]
+        td = self.adj_neighbors["t"]["network_device"]
+        tx, ty, sx, sy = td.x, sd.y, sd.x, sd.y
 
+        t_dir = td.get_xy_direction(sx, sy)
+        s_dir = sd.get_xy_direction(sx, sy)
+
+        etx, ety = td.get_next_edge_point(sx, sy)
+        esx, esy = sd.get_next_edge_point(tx, ty)
         for key, neighbor in self.adj_neighbors.items():
             input_rate, output_rate = neighbor["interface"].util()
             color = colors[int(max(input_rate, output_rate))].hex
@@ -54,7 +64,7 @@ class ospf_adjacency:
                           node2=self.adj_neighbors['t']["router_id"],
                           id=self.network_id, line_type=line_type,
                           additional_labels=additional_labels, width=width,
-                          color=color
+                          color=color, sy=esy, sx=esx, tx=etx, ty=ety
                           )
 
         return edge

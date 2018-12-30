@@ -24,6 +24,12 @@ from model.BridgeDomain import BridgeDomain
 class CiscoIOS(Parent):
 
     def __init__(self, ip, display_name, master, platform="CiscoIOS", gateway="null"):
+        edge_step = 41
+        self.yed_edges_points = {"N": [(str(x), "125") for x in range(-135, 136, edge_step)],
+                                 "S": [(str(x), "-125") for x in range(-135, 136, edge_step)],
+                                 "E": [("125", str(y)) for y in range(-135, 136, edge_step)],
+                                 "W": [("-125", str(y)) for y in range(136, -136, -edge_step)]}
+
         super().__init__(ip, display_name, master, platform, gateway)
         self.pseudo_wire_class = dict()
         self.mpls_te_tunnels = dict()
@@ -40,6 +46,11 @@ class CiscoIOS(Parent):
         self.mpls_ldp_interfaces = dict()
         self.ospf_interfaces = dict()
         self.bridge_domains = dict()
+        self.add_p2p_ospf = dict()
+
+    def add_p2p_ospf(self, p2p, p2p_ospf):
+
+        self.add_p2p_ospf[p2p.network_id] = {"p2p": p2p, "neighbor": p2p_ospf}
 
     def send_command(self, connection, command, pattern="#", read=True, timeout=4):
         '''
@@ -1153,12 +1164,32 @@ class CiscoIOS(Parent):
         oid = ".1.3.6.1.2.1.1.1.0"
         a_device = (self.ip, self.community, 161)
         snmp_data = snmp_get_oid(a_device=a_device, oid=oid, display_errors=False)
-        snmp_text = snmp_extract(snmp_data)
+        try:
+            snmp_text = snmp_extract(snmp_data)
+        except:
+            print(self.ip, "unable to extract platform")
+            snmp_text = "default"
         for pattern, platform_name in platfforms.items():
             if pattern in snmp_text:
                 self.platform = platform_name
-                break
 
+    def set_snmp_location(self):
+
+        oid = ".1.3.6.1.2.1.1.6.0"
+        a_device = (self.ip, self.community, 161)
+        snmp_data = snmp_get_oid(a_device=a_device, oid=oid, display_errors=True)
+        snmp_text = snmp_extract(snmp_data)
+        self.snmp_location = snmp_text
+
+    def set_yed_xy(self):
+        self.set_snmp_location()
+        try:
+            self.x = self.snmp_location.split(",")[0].split(":")[1]
+            self.y = self.snmp_location.split(",")[1].split(":")[1]
+        except:
+            self.x = "0"
+            self.y = "0"
+            print(self.ip, self.snmp_location, " unable to split location ")
     def get_physical_interfaces(self):
         if self.interfaces is None:
             self.set_interfaces()
@@ -1231,6 +1262,7 @@ class CiscoIOS(Parent):
         trasnciever_data = parser.ParseText(output)
 
     def get_yed_node(self):
+
         shape = 'rectangle3d'
         shape_fill = '#442233'
         height = 275
@@ -1249,7 +1281,7 @@ class CiscoIOS(Parent):
                           shape_fill=shape_fill,
                           edge_color="#442233",
                           height=str(height), width=str(width), edge_width='8',
-                          shape=shape
+                          shape=shape, y=self.y, x=self.x
                           )
         return node
 
@@ -1319,3 +1351,29 @@ class CiscoIOS(Parent):
         for id_si, si in self.service_instances.items():
             if normalize_interface_name(si["interface"]) == interface and vlan_id == si["vlan"]:
                 return id_si, si
+
+    def configure_snmp_location(self, text):
+        command = "conf terminal \n snmp-server location " + text + "\n\nexit\nwr\n"
+        print(self.ip, command)
+        print(self.send_command(command=command, connection=self.connect()))
+
+    def get_xy_direction(self, x, y):
+        direction = ""
+        if int(self.x) < int(x) - 150:
+            direction += "E"
+        elif int(self.x) > int(x) + 150:
+            direction += "W"
+        if int(self.y) < int(y) - 150:
+            direction = "N"
+        elif int(self.y) > int(y) + 150:
+            direction += "S"
+        return direction
+
+    def get_next_edge_point(self, x, y, last=True):
+        index = -1 if last else 0
+        direction = self.get_xy_direction(x, y)
+        for letter in direction:
+            if (letter in self.yed_edges_points):
+                if (len(self.yed_edges_points[letter]) > 0):
+                    return self.yed_edges_points[letter].pop(index)
+        return ("0", "0")

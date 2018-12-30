@@ -529,13 +529,13 @@ class Claro:
             for ip in ip_devices:
                 device = CiscoIOS(ip, "ios", self.master)
                 devices.append(device)
-        devices = self.correct_device_platform(devices)
+            devices = self.correct_device_platform(devices)
         return devices, ip_devices
 
     def generate_report_consumption(self, network, filename="test", window=35):
         devices, ipdevices = self.devices_from_network(network, window)
         timestamp = datetime.datetime.fromtimestamp(time.time()).strftime('%Y%m%d_%H%M%S')
-        self.excute_methods(devices=devices, methods={"set_all_interfaces": {}, "set_snmp_community": {}})
+        self.excute_methods(devices=devices, methods={"set_interfaces": {}})
         interface_data = []
         for device in devices:
             interface_data = interface_data + device.get_interfaces_dict_data()
