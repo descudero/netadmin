@@ -2,6 +2,8 @@ import getpass;
 import logging
 from pymongo import MongoClient
 import base64
+import pymysql.cursors
+
 
 import ast
 import time
@@ -20,7 +22,10 @@ class Master:
             self.username = getpass._raw_input(prompt='username ')
             self.password = getpass.getpass(prompt='password ')
         self.debug = AdebugLevel
-        self.dbname = "boip.db"
+        self.dbname = "netadmin"
+        self.dbuser = "net_admin"
+        self.dbpasword = "ufinet_2010!"
+        self.dbhost = "192.168.10.132"
         self.logger = logging.getLogger(logg_name)
         self.logger_time = logging.getLogger("timer")
 
@@ -94,3 +99,11 @@ class Master:
             dec_c = chr((256 + ord(enc[i]) - ord(key_c)) % 256)
             dec.append(dec_c)
         return "".join(dec)
+
+    def db_connect(self):
+        return pymysql.connect(host=self.dbhost,
+                               user=self.dbuser,
+                               password=self.dbpasword,
+                               db=self.dbname,
+                               charset='utf8mb4',
+                               cursorclass=pymysql.cursors.DictCursor)

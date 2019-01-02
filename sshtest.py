@@ -46,19 +46,27 @@ print(no_responses)
 master = Master(password="zekto2014-", username="descuderor")
 test = CiscoIOS("172.17.28.192", "XR", master)
 test3 = CiscoIOS("172.17.28.110", "XR", master)
-test2 = CiscoXR("172.16.30.246", "IOS", master)
+test2 = CiscoXR("172.16.30.253", "IOS", master)
 # test2.set_snmp_community()
 # test2.set_yed_xy()
 # print(test2.x)
 claro.set_master(password="zekto2014-", username="descuderor")
 
+test2.hostname = 'RO-NAP-COR9K-1'
+test2.platform = 'CiscoXR'
+test2.set_interfaces()
+test2.interfaces['Te0/0/0/0'].save()
+# test2.set_interfaces()
+
+# interfaces=[interface for index,interface in test2.interfaces.items() if interface.l3_protocol=="BGP"]
+# pprint(interfaces)
 #pprint(claro.get_service_instance_with_pseudowires([test, test3]))
 # devices =claro.devices_from_network("172.16.30.128/25")
 # pprint(devices)
 
 # test.set_snmp_community()
 # test.set_snmp_plattform()
-claro.ospf_topology(ip_seed_router='172.16.30.5', process_id='1', area='0')
+#claro.ospf_topology(ip_seed_router='172.16.30.5', process_id='1', area='0')
 # print(test.set_arp_list(vrf="INTERNET"))
 
 

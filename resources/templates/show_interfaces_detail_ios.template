@@ -1,4 +1,4 @@
-Value Required INDEX (\w+\S+)
+Value Required IF_INDEX (\w+\S+)
 Value LINK_STATE (.+?)
 Value PROTOCOL_STATE (.+?)
 Value HARDWARE_TYPE (\S+)
@@ -35,7 +35,7 @@ Value PAUSE_OUTPUT (\d+)
 
 Start
   ^\S+\s+is\s+.+?,\s+line\s+protocol.*$$ -> Continue.Record
-  ^${INDEX}\s+is\s+${LINK_STATE},\s+line\s+protocol\s+is\s+${PROTOCOL_STATE}\s*$$
+  ^${IF_INDEX}\s+is\s+${LINK_STATE},\s+line\s+protocol\s+is\s+${PROTOCOL_STATE}\s*$$
   ^.*Hardware\s+is\s+${HARDWARE_TYPE}.+address\s+is\s+${MAC_ADDRESS}\s+\(bia\s+${BIA}\)\s*$$
   ^\s+Description:\s+${DESCRIPTION}\s*$$
   ^\s+Internet\saddress\sis\s${IP}\s*$$

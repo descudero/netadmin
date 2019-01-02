@@ -2,9 +2,9 @@ import ipaddress
 
 class InterfaceIOS(object):
     def __init__(self, parent_device, parse_data):
-        self.id = 0
+        self.uid = 0
         self.parent_device = parent_device
-        self.index = ""
+        self.if_index = ""
         self.link_state = "DOWN"
         self.protocol_state = "DOWN"
         self.hardware_type = "NA"
@@ -60,20 +60,22 @@ class InterfaceIOS(object):
         except:
             self.ip = ipaddress.ip_address("127.0.0.1")
             self.netmask = ipaddress.ip_interface("127.0.0.1/32").netmask
+        self.correct_bw()
 
+    def correct_bw(self):
+
+        self.bw = int(float(self.bw) * 1024)
+        if ("Hu" in self.if_index):
+            self.bw = 100000000000
+        if ("Te" in self.if_index):
+            self.bw = 10000000000
+        if ("Gi" in self.if_index):
+            self.bw = 1000000000
 
     def util(self):
 
-        real_bw = float(self.bw) * 1024
-        if ("Hu" in self.index):
-            real_bw = 100000000000
-        if ("Te" in self.index):
-            real_bw = 10000000000
-        if ("Gi" in self.index):
-            real_bw = 1000000000
-
-        util_in = round(float(self.input_rate) / real_bw * 100, 2)
-        util_out = round(float(self.output_rate) / real_bw * 100, 2)
+        util_in = round(float(self.input_rate) / self.bw * 100, 2)
+        util_out = round(float(self.output_rate) / self.bw * 100, 2)
         return util_in, util_out
 
     def get_interface_errors(self, filter="0"):
@@ -93,7 +95,7 @@ class InterfaceIOS(object):
 
         description = self.description[0:20] if len(self.description) > 21 else self.description
 
-        output = "|INT[" + self.index + "]"
+        output = "|INT[" + self.if_index + "]"
         if (status == False):
             output += "| phy [" + self.phy_state + "]| pro [" + self.protocol_state + "] "
         output += "|MTU[" + self.mtu + "]"
@@ -127,7 +129,9 @@ class InterfaceIOS(object):
         return interface_string
 
     def __str__(self):
-        return str(id(self)) + str(self.__class__) + self.index + " " + self.description + " " + self.link_state + " "
+        return str(id(self)) + str(
+            self.__class__) + self.if_index + " " + self.description + " " + self.link_state + " "
 
     def __repr__(self):
-        return str(id(self)) + str(self.__class__) + self.index + " " + self.description + " " + self.link_state + " "
+        return str(id(self)) + str(
+            self.__class__) + self.if_index + " " + self.description + " " + self.link_state + " "

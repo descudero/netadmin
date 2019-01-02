@@ -15,7 +15,7 @@ from pysnmp.entity.rfc3413.oneliner import cmdgen
 import lib.pyyed as pyyed
 from model.BaseDevice import BaseDevice as Parent
 from model.CiscoPart import CiscoPart
-from model.InterfaceIOS import InterfaceIOS
+from model.InterfaceUfinet import InterfaceUfinet
 from tools import normalize_interface_name
 from lib.snmp_helper import *
 from model.BridgeDomain import BridgeDomain
@@ -165,7 +165,6 @@ class CiscoIOS(Parent):
 
     def get_template_by_tunnel_id(self, tunnel_id):
         for name, template in self.template_type_pseudowires.items():
-
             if (template["interface"] == "Tunnel" + str(tunnel_id)):
                 return name
         return "null"
@@ -195,7 +194,6 @@ class CiscoIOS(Parent):
         template = self.get_template_by_tunnel_id(tunnel_id=tunnel_id)
         vfi = self.get_vfi_by_template(template_name=template)
         interfaces = self.get_interfaces_instance_by_vfi(vfi=vfi)
-
         service_instances = self.get_service_instance_by_interfaces(interfaces)
         return service_instances
 
@@ -209,8 +207,7 @@ class CiscoIOS(Parent):
             data = {}
             lines = template.split("\n")
             data["name"] = lines[0].replace(" ", "")
-
-            if (len(lines) > 2):
+            if len(lines) > 2:
                 data["interface"] = lines[2].replace(" preferred-path interface", "").replace(" ", "")
             else:
                 data["interface"] = "null"
@@ -243,14 +240,12 @@ class CiscoIOS(Parent):
 
         output = self.send_command_and_parse(template_name="show mpls l2transport vc detail ios.template",
                                              command="show mpls l2transport vc detail")
-        pseudowires = {row["vc_id"]: row for row in output}
-        self.pseudowires = pseudowires
+        self.pseudowires = {row["vc_id"]: row for row in output}
 
 
     def get_pw_class_by_tunnel_id(self, tunnel_id):
-        print(tunnel_id + " router " + self.ip)
         for name, pw_class in self.pseudo_wire_class.items():
-            if (pw_class["interface"] == "Tunnel" + str(tunnel_id)):
+            if pw_class["interface"] == "Tunnel" + str(tunnel_id):
                 return name
 
     def get_pseudowire_by_pw_class(self, pw_class):
@@ -333,7 +328,7 @@ class CiscoIOS(Parent):
             output += host_string
         print(output)
 
-    def set_conected_routes(self, vrf="default"):
+    def set_coneccted_routes(self, vrf="default"):
 
         command = "show ip route "
         command += (" vrf " + vrf + " ") if vrf != "default" else " "
@@ -755,7 +750,7 @@ class CiscoIOS(Parent):
             process id and vrf : "global"
 
         '''
-
+        # todo change to parse of textfsm
         command = "show ip ospf "
         process_list = {}
         connection = self.connect()
@@ -873,6 +868,7 @@ class CiscoIOS(Parent):
         return interfaces_dict
 
     def set_ip_bgp_neighbors(self, address_family="ipv4 unicast"):
+        # todo change to parse of textfsm
         '''
 
         :param address_family(string) default("ipv4 unicast"):
@@ -1130,9 +1126,9 @@ class CiscoIOS(Parent):
         interfaces = self.send_command_and_parse(command="show interfaces"
                                                  , template_name=template_name, timeout=15)
         for interface in interfaces:
-            interface["index"] = normalize_interface_name(interface["index"])
-            interface_object = InterfaceIOS(self, interface)
-            self.interfaces[interface["index"]] = interface_object
+            interface["if_index"] = normalize_interface_name(interface["if_index"])
+            interface_object = InterfaceUfinet(self, interface)
+            self.interfaces[interface["if_index"]] = interface_object
             self.interfaces_ip[str(interface_object.ip)] = interface_object
 
         return self.interfaces
@@ -1377,3 +1373,45 @@ class CiscoIOS(Parent):
                 if (len(self.yed_edges_points[letter]) > 0):
                     return self.yed_edges_points[letter].pop(index)
         return ("0", "0")
+
+    def uid_db(self):
+        try:
+            connection = self.master.db_connect()
+            with connection.cursor() as cursor:
+                sql = '''SELECT uid FROM network_devices WHERE ip=%s'''
+                cursor.execute(sql, (self.ip,))
+                result = cursor.fetchone()
+                if (result):
+                    self.uid = result['uid']
+                    connection.close()
+                    return self.uid
+                else:
+                    self.uid = 0
+                    connection.close()
+                    return 0
+        except Exception as e:
+            print(e)
+            connection.close()
+            return 0
+
+    def in_db(self):
+        if self.uid != 0:
+            return True
+        elif self.get_uid_db() == 0:
+            return False
+        else:
+            return True
+
+    def save(self):
+        try:
+            connection = self.master.db_connect()
+            with connection.cursor() as cursor:
+                sql = '''INSERT INTO network_devices(ip,hostname,platform)
+                VALUES (%s,%s,%s)'''
+                cursor.execute(sql, (self.ip, self.hostname, self.platform))
+                connection.commit()
+                self.uid = cursor.lastrowid
+            return self.uid
+        except Exception as e:
+            print(e)
+            return False
