@@ -553,11 +553,11 @@ class Claro:
 
         return final_list
 
-    def flujo_internet_ufinet(self):
-        plantilla = yaml.load(open("internet_ufinet.yml").read())
+    def save_interfaces_state_db(self, template='internet_ufinet.yml'):
+        template_data = yaml.load(open(template).read())
         interfaces = []
         methods = {'set_interfaces': {}}
-        for device_group, data in plantilla.items():
+        for device_group, data in template_data.items():
             devices = self.devices_from_ip_list(data['devices'])
             devices = self.correct_device_platform(devices)
             self.excute_methods(methods=methods, devices=devices)
