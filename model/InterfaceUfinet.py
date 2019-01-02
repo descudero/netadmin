@@ -1,4 +1,6 @@
 from model.InterfaceIOS import InterfaceIOS
+import time
+import datetime
 import re
 from itertools import islice
 
@@ -45,9 +47,9 @@ class InterfaceUfinet(InterfaceIOS):
         l3 = re.findall("L3:\w*", self.description)
         self.l3_protocol = "UNKNOWN"
         self.l3_protocol_attr = "UNKNOWN"
-        self.direction = "UNKNOWN"
+        self.data_flow = "UNKNOWN"
         if l3:
-            print(l3[0][3:6], " ", l3[0][6:])
+
             if (l3[0][3:6] == "MPL"):
                 self.l3_protocol = "MPLS"
             elif l3[0][3:6] == "BGP":
@@ -57,31 +59,43 @@ class InterfaceUfinet(InterfaceIOS):
         if direction:
             try:
                 self.data_flow = self.directions[direction[0].split(":")[1]]
-            except KeyError:
+            except KeyError as e:
+                print(e)
                 self.data_flow = "UNKNOWN"
 
         l1 = re.findall("L1:\S*", self.description)
         if l1:
-            l1_info = l1[0].split(":")[0].split()
+
+            l1_info = l1[0].split(":")[1].split()[0]
+
             try:
                 self.l1_protocol = self.l1_converter[l1_info[0]]["DATA"]
                 try:
-                    self.self.l1_protocol_attr = self.l1_converter[l1_info[0]][l1_info[1]]
-                except KeyError:
+
+                    self.l1_protocol_attr = self.l1_converter[l1_info[0]][l1_info[1]]
+                except KeyError as e:
+                    print(e)
                     self.l1_protocol_attr = "UNKNOWN"
-            except KeyError:
+            except KeyError as e:
+                print(e)
                 self.l1_protocol = "UNKNOWN"
                 self.l1_protocol_attr = "UNKNOWN"
         else:
             self.l1_protocol = "UNKNOWN"
             self.l1_protocol_attr = "UNKNOWN"
 
+    def __repr__(self):
+        return "{if_index} I:{util_in} O:{util_out} L3:{l3}{l3a} L1:{l1}{l1a}" \
+            .format(util_in=self.util_in, util_out=self.util_out, if_index=self.if_index,
+                    l3=self.l3_protocol, l3a=self.l3_protocol_attr,
+                    l1=self.l1_protocol, l1a=self.l1_protocol_attr)
+
     def uid_db(self):
 
         try:
             connection = self.parent_device.master.db_connect()
             with connection.cursor() as cursor:
-                sql = '''SELECT uid FROM interfaces WHERE if_index=%s AND net_device_iud =%s'''
+                sql = '''SELECT uid FROM interfaces WHERE if_index=%s AND net_device_uid =%s'''
                 cursor.execute(sql, (self.if_index, self.parent_device.uid_db()))
                 result = cursor.fetchone()
                 if (result):
@@ -94,16 +108,15 @@ class InterfaceUfinet(InterfaceIOS):
                     return 0
         except Exception as e:
             print(e)
-            connection.close()
             return 0
 
     def save(self):
         if self.parent_device.uid_db() == 0:
             self.parent_device.save()
-        print("parent uid ", self.parent_device.uid)
         try:
             connection = self.parent_device.master.db_connect()
             with connection.cursor() as cursor:
+
                 sql = '''INSERT INTO 
                 interfaces(if_index,
                 description,
@@ -113,7 +126,7 @@ class InterfaceUfinet(InterfaceIOS):
                 ,l1_protocol,
                 l1_protocol_attr,
                 data_flow,
-                net_device_iud)
+                net_device_uid)
                 VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)'''
 
                 cursor.execute(sql, (self.if_index,
@@ -135,7 +148,44 @@ class InterfaceUfinet(InterfaceIOS):
     def in_db(self):
         if self.uid != 0:
             return True
-        elif self.get_uid_db() == 0:
+        elif self.uid_db() == 0:
             return False
         else:
             return True
+
+    def save_state(self):
+        if not self.in_db():
+            self.save()
+        try:
+            connection = self.parent_device.master.db_connect()
+            with connection.cursor() as cursor:
+                timestamp = str(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+                sql = '''INSERT INTO 
+                interface_states(link_state,
+                protocol_state,
+                input_rate,
+                output_rate,
+                util_in ,
+                util_out ,
+                input_errors ,
+                output_errors ,
+                interface_uid ,
+                state_timestamp)
+                VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')'''.format(self.link_state,
+                                                                                               self.protocol_state,
+                                                                                               self.input_rate,
+                                                                                               self.output_rate,
+                                                                                               self.util_in,
+                                                                                               self.util_out,
+                                                                                               self.input_errors,
+                                                                                               self.output_errors,
+                                                                                               self.uid,
+                                                                                               timestamp)
+                cursor.execute(sql)
+                connection.commit()
+
+            return self.uid
+        except Exception as e:
+            connection.rollback()
+            print(e)
+            return False

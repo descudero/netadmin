@@ -24,8 +24,8 @@ class Master:
         self.debug = AdebugLevel
         self.dbname = "netadmin"
         self.dbuser = "net_admin"
-        self.dbpasword = "ufinet_2010!"
-        self.dbhost = "192.168.10.132"
+        self.dbpasword = "Ufinet_2010!"
+        self.dbhost = "localhost"
         self.logger = logging.getLogger(logg_name)
         self.logger_time = logging.getLogger("timer")
 

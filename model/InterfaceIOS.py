@@ -48,11 +48,12 @@ class InterfaceIOS(object):
         for key, value in parse_data.items():
             if not value == '':
                 setattr(self, key, value)
-
+        self.correct_bw()
         try:
             self.util_in, self.util_out = self.util()
         except:
             self.util_in = 0
+            self.util_out = 0
 
         try:
             self.ip = ipaddress.ip_interface(self.ip).ip
@@ -60,7 +61,6 @@ class InterfaceIOS(object):
         except:
             self.ip = ipaddress.ip_address("127.0.0.1")
             self.netmask = ipaddress.ip_interface("127.0.0.1/32").netmask
-        self.correct_bw()
 
     def correct_bw(self):
 
