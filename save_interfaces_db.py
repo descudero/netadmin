@@ -3,7 +3,7 @@ from model.claseClaro import Claro
 from config.Master import Master
 import argparse
 
-parser = argparse.ArguKmentParser(description='Interfaces report saver')
+parser = argparse.ArgumentParser(description='Interfaces report saver')
 parser.add_argument('template', type=str,
                     help='template yml')
 args = parser.parse_args()
