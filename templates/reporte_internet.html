@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<b>INTERNET</b>
+<table>
+
+    <thead>
+    <caption>Capacidades de INTERNET</caption>
+    {% for column in ipts[0].keys() %}
+    <th>{{column}}</th>
+    {% endfor %}
+    </thead>
+    <tbody>
+    {% for row in ipts %}
+    <tr>
+        {% for key,value in row.items() %}
+        <td>{{value}}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+
+    <tr>
+
+    </tr>
+
+    </tbody>
+</table>
+<table>
+
+    <thead>
+    <caption>Conexiones directas con otros ASN</caption>
+    {% for column in pnis[0].keys() %}
+    <th>{{column}}</th>
+    {% endfor %}
+    </thead>
+    <tbody>
+    {% for row in pnis %}
+    <tr>
+        {% for key,value in row.items() %}
+        <td>{{value}}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+
+    <tr>
+
+    </tr>
+
+    </tbody>
+</table>
+<table>
+
+    <thead>
+    <caption>Caches</caption>
+    {% for column in caches[0].keys() %}
+    <th>{{column}}</th>
+    {% endfor %}
+    </thead>
+    <tbody>
+    {% for row in caches %}
+    <tr>
+        {% for key,value in row.items() %}
+        <td>{{value}}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+
+    <tr>
+
+    </tr>
+
+    </tbody>
+</table>
+<table>
+
+    <thead>
+    <caption>Capacidades IBGP</caption>
+    {% for column in ibps[0].keys() %}
+    <th>{{column}}</th>
+    {% endfor %}
+    </thead>
+    <tbody>
+    {% for row in ibps %}
+    <tr>
+        {% for key,value in row.items() %}
+        <td>{{value}}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+
+    <tr>
+
+    </tr>
+
+    </tbody>
+</table>
+<table>
+
+    <thead>
+    <caption>Capacidades Submarinas de MPLs</caption>
+    {% for column in mpls_cm[0].keys() %}
+    <th>{{column}}</th>
+    {% endfor %}
+    </thead>
+    <tbody>
+    {% for row in mpls_cm %}
+    <tr>
+        {% for key,value in row.items() %}
+        <td>{{value}}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+
+    <tr>
+
+    </tr>
+
+    </tbody>
+</table>
+
+</body>
+</html>

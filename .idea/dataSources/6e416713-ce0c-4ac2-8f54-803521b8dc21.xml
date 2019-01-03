@@ -904,219 +904,292 @@
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <table id="226" parent="3" name="interface_state"/>
-    <table id="227" parent="3" name="interfaces"/>
-    <table id="228" parent="3" name="network_device"/>
-    <table id="229" parent="3" name="network_devices"/>
-    <column id="230" parent="226" name="uid">
+    <table id="227" parent="3" name="interface_states"/>
+    <table id="228" parent="3" name="interfaces"/>
+    <table id="229" parent="3" name="network_device"/>
+    <table id="230" parent="3" name="network_devices"/>
+    <column id="231" parent="226" name="uid">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="231" parent="226" name="input_rate">
+    <column id="232" parent="226" name="input_rate">
       <Position>2</Position>
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="232" parent="226" name="output_rate">
+    <column id="233" parent="226" name="output_rate">
       <Position>3</Position>
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="233" parent="226" name="input_errors">
+    <column id="234" parent="226" name="input_errors">
       <Position>4</Position>
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="234" parent="226" name="output_errors">
+    <column id="235" parent="226" name="output_errors">
       <Position>5</Position>
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="235" parent="226" name="crc">
+    <column id="236" parent="226" name="crc">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="236" parent="226" name="util_in">
+    <column id="237" parent="226" name="util_in">
       <Position>7</Position>
       <DataType>decimal(3,2 digit)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="237" parent="226" name="util_out">
+    <column id="238" parent="226" name="util_out">
       <Position>8</Position>
       <DataType>decimal(3,2 digit)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="238" parent="226" name="time">
+    <column id="239" parent="226" name="time">
       <Position>9</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="239" parent="226" name="interface_uid">
+    <column id="240" parent="226" name="interface_uid">
       <Position>10</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="240" parent="226" name="direction">
+    <column id="241" parent="226" name="direction">
       <Position>11</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="241" parent="226" name="interface_uid">
+    <index id="242" parent="226" name="interface_uid">
       <ColNames>interface_uid</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="242" parent="226" name="PRIMARY">
+    <key id="243" parent="226" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>uid</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="243" parent="226" name="interface_state_ibfk_1">
+    <foreign-key id="244" parent="226" name="interface_state_ibfk_1">
       <ColNames>interface_uid</ColNames>
       <RefSchemaName>netadmin</RefSchemaName>
       <RefTableName>interfaces</RefTableName>
       <RefColNames>uid</RefColNames>
     </foreign-key>
-    <column id="244" parent="227" name="uid">
+    <column id="245" parent="227" name="uid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="227" name="if_index">
+    <column id="246" parent="227" name="link_state">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="227" name="description">
+    <column id="247" parent="227" name="protocol_state">
       <Position>3</Position>
-      <DataType>varchar(200)|0s</DataType>
+      <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="227" name="bandwith">
+    <column id="248" parent="227" name="input_rate">
       <Position>4</Position>
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="227" name="l3_protocol">
+    <column id="249" parent="227" name="output_rate">
       <Position>5</Position>
-      <DataType>varchar(50)|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="249" parent="227" name="l3_protocol_attr">
+    <column id="250" parent="227" name="util_in">
       <Position>6</Position>
-      <DataType>varchar(50)|0s</DataType>
+      <DataType>decimal(10,2 digit)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="227" name="l1_protocol">
+    <column id="251" parent="227" name="util_out">
       <Position>7</Position>
-      <DataType>varchar(50)|0s</DataType>
+      <DataType>decimal(10,2 digit)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="227" name="l1_protocol_attr">
+    <column id="252" parent="227" name="input_errors">
       <Position>8</Position>
-      <DataType>varchar(50)|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="252" parent="227" name="data_flow">
+    <column id="253" parent="227" name="output_errors">
       <Position>9</Position>
-      <DataType>varchar(50)|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="253" parent="227" name="net_device_iud">
+    <column id="254" parent="227" name="interface_uid">
       <Position>10</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="254" parent="227" name="net_device_iud">
-      <ColNames>net_device_iud</ColNames>
+    <column id="255" parent="227" name="state_timestamp">
+      <Position>11</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="256" parent="227" name="interface_uid">
+      <ColNames>interface_uid</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="255" parent="227" name="PRIMARY">
+    <key id="257" parent="227" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>uid</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="256" parent="227" name="interfaces_ibfk_1">
-      <ColNames>net_device_iud</ColNames>
+    <foreign-key id="258" parent="227" name="interface_states_ibfk_1">
+      <ColNames>interface_uid</ColNames>
+      <RefSchemaName>netadmin</RefSchemaName>
+      <RefTableName>interfaces</RefTableName>
+      <RefColNames>uid</RefColNames>
+    </foreign-key>
+    <column id="259" parent="228" name="uid">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="260" parent="228" name="if_index">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="261" parent="228" name="description">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="262" parent="228" name="bandwith">
+      <Position>4</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="263" parent="228" name="l3_protocol">
+      <Position>5</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="264" parent="228" name="l3_protocol_attr">
+      <Position>6</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="265" parent="228" name="l1_protocol">
+      <Position>7</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="266" parent="228" name="l1_protocol_attr">
+      <Position>8</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="267" parent="228" name="data_flow">
+      <Position>9</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="268" parent="228" name="net_device_uid">
+      <Position>10</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="269" parent="228" name="net_device_uid">
+      <ColNames>net_device_uid</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="270" parent="228" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>uid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="271" parent="228" name="interfaces_ibfk_1">
+      <ColNames>net_device_uid</ColNames>
       <RefSchemaName>netadmin</RefSchemaName>
       <RefTableName>network_devices</RefTableName>
       <RefColNames>uid</RefColNames>
     </foreign-key>
-    <column id="257" parent="228" name="uid">
+    <column id="272" parent="229" name="uid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="258" parent="228" name="hostname">
+    <column id="273" parent="229" name="hostname">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="228" name="ip">
+    <column id="274" parent="229" name="ip">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="228" name="platform">
+    <column id="275" parent="229" name="platform">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="261" parent="228" name="PRIMARY">
+    <key id="276" parent="229" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>uid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="262" parent="229" name="uid">
+    <column id="277" parent="230" name="uid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="229" name="hostname">
+    <column id="278" parent="230" name="ip">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="264" parent="229" name="ip">
+    <column id="279" parent="230" name="hostname">
       <Position>3</Position>
-      <DataType>varchar(50)|0s</DataType>
+      <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="229" name="platform">
+    <column id="280" parent="230" name="platform">
       <Position>4</Position>
-      <DataType>varchar(50)|0s</DataType>
+      <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="266" parent="229" name="hostname">
-      <ColNames>hostname</ColNames>
-      <Unique>1</Unique>
-      <Type>btree</Type>
-    </index>
-    <index id="267" parent="229" name="ip">
+    <index id="281" parent="230" name="ip">
       <ColNames>ip</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="268" parent="229" name="PRIMARY">
+    <index id="282" parent="230" name="hostname">
+      <ColNames>hostname</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="283" parent="230" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>uid</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="269" parent="229" name="hostname">
-      <ColNames>hostname</ColNames>
-      <UnderlyingIndexName>hostname</UnderlyingIndexName>
-    </key>
-    <key id="270" parent="229" name="ip">
+    <key id="284" parent="230" name="ip">
       <ColNames>ip</ColNames>
       <UnderlyingIndexName>ip</UnderlyingIndexName>
+    </key>
+    <key id="285" parent="230" name="hostname">
+      <ColNames>hostname</ColNames>
+      <UnderlyingIndexName>hostname</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>

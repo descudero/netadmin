@@ -25,7 +25,7 @@ class Master:
         self.dbname = "netadmin"
         self.dbuser = "net_admin"
         self.dbpasword = "Ufinet_2010!"
-        self.dbhost = "localhost"
+        self.dbhost = "10.250.55.17"
         self.logger = logging.getLogger(logg_name)
         self.logger_time = logging.getLogger("timer")
 

@@ -26,7 +26,6 @@ create table interfaces
   foreign key (net_device_uid) references network_devices (uid)
 );
 
-
 set foreign_key_checks = 0;
 drop table interface_states;
 set foreign_key_checks = 1;
@@ -44,6 +43,4 @@ create table interface_states
   interface_uid   int,
   state_timestamp datetime,
   foreign key (interface_uid) references interfaces (uid)
-
-
 );
