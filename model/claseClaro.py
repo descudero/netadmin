@@ -14,6 +14,7 @@ import random
 from struct import pack, unpack
 from datetime import datetime as dt
 from model.ospf_database import ospf_database
+import yaml
 
 from pysnmp.entity.rfc3413.oneliner import cmdgen
 from pysnmp.proto.rfc1902 import Integer, IpAddress, OctetString
@@ -436,9 +437,11 @@ class Claro:
 
         for device in devices:
             platform = device.platform
+            hostname = device.hostname
             device = eval(device.platform)(device.ip, device.display_name, self.master)
             device_list.append(device)
             device.platform = platform
+            device.hostname = hostname
         return device_list
 
     def get_device_list(self, filename):
@@ -549,6 +552,20 @@ class Claro:
                                device.get_vfis_interface_per_service_instance().values()])
 
         return final_list
+
+    def save_interfaces_state_db(self, template='internet_ufinet.yml'):
+        template_data = yaml.load(open(template).read())
+        interfaces = []
+        methods = {'set_interfaces': {}}
+        for device_group, data in template_data.items():
+            devices = self.devices_from_ip_list(data['devices'])
+            devices = self.correct_device_platform(devices)
+            self.excute_methods(methods=methods, devices=devices)
+            for device in devices:
+                for filter in data['filters']:
+                    interfaces += device.get_interfaces_filtered(filters=filter)
+        for interface in interfaces:
+            interface.save_state()
 
 
 

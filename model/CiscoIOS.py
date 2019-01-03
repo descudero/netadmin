@@ -1397,7 +1397,7 @@ class CiscoIOS(Parent):
     def in_db(self):
         if self.uid != 0:
             return True
-        elif self.get_uid_db() == 0:
+        elif self.uid_db() == 0:
             return False
         else:
             return True
@@ -1415,3 +1415,12 @@ class CiscoIOS(Parent):
         except Exception as e:
             print(e)
             return False
+
+    def get_interfaces_filtered(self, filters):
+
+        interfaces = self.interfaces.values()
+        for attribute, filter in filters.items():
+            interfaces = [interface for interface in interfaces
+                          if filter in getattr(interface, attribute)]
+            print(self.ip, attribute, filter, interfaces)
+        return interfaces

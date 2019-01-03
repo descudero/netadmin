@@ -52,30 +52,39 @@ test2 = CiscoXR("172.16.30.253", "IOS", master)
 # print(test2.x)
 claro.set_master(password="zekto2014-", username="descuderor")
 
+claro.flujo_internet_ufinet()
+
 test2.hostname = 'RO-NAP-COR9K-1'
 test2.platform = 'CiscoXR'
-test2.set_interfaces()
-test2.interfaces['Te0/0/0/0'].save()
+# test2.set_interfaces()
+
+# interfaces = [interface for interface in test2.interfaces.values()
+#              if interface.l3_protocol == "BGP" and
+#             interface.l3_protocol_attr == "IPT"
+#              ]
+
+# for interface in interfaces:
+#    interface.save_state()
 # test2.set_interfaces()
 
 # interfaces=[interface for index,interface in test2.interfaces.items() if interface.l3_protocol=="BGP"]
 # pprint(interfaces)
-#pprint(claro.get_service_instance_with_pseudowires([test, test3]))
+# pprint(claro.get_service_instance_with_pseudowires([test, test3]))
 # devices =claro.devices_from_network("172.16.30.128/25")
 # pprint(devices)
 
 # test.set_snmp_community()
 # test.set_snmp_plattform()
-#claro.ospf_topology(ip_seed_router='172.16.30.5', process_id='1', area='0')
+# claro.ospf_topology(ip_seed_router='172.16.30.5', process_id='1', area='0')
 # print(test.set_arp_list(vrf="INTERNET"))
 
 
-#pprint(test.get_vfis_interface_per_service_instance())
-#test2.set_chassis()
-#print(test2.chassis)
-#test2.chassis.print_children()
+# pprint(test.get_vfis_interface_per_service_instance())
+# test2.set_chassis()
+# print(test2.chassis)
+# test2.chassis.print_children()
 
-#pprint(test2.get_ospf_area_adjacency_p2p())
+# pprint(test2.get_ospf_area_adjacency_p2p())
 
 # pprint(test2.set_physical_interfaces())
 # devices = claro.load_devices_csv("host.csv")

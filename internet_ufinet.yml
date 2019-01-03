@@ -1,0 +1,38 @@
+IPP:
+
+  devices:
+    - 172.16.30.253
+    - 172.16.30.254
+    - 172.16.30.246
+  filters:
+    - l3_protocol: BGP
+      l3_protocol_attr: IPT
+    - l3_protocol: BGP
+      l3_protocol_attr: PNI
+    - l3_protocol: BGP
+      l3_protocol_attr: IXP
+    - l3_protocol: BGP
+      l3_protocol_attr: IBP
+    - l3_protocol: MPLS
+      l3_protocol_attr: OSP
+      l1_protocol: CABLE_SUBMARINO
+      data_flow: DOWNSTREAM
+PE:
+  devices:
+    - 172.16.30.250
+    - 172.16.30.244
+  filters:
+    - l3_protocol: BGP
+      l3_protocol_attr: CDN
+    - l3_protocol: BGP
+      l3_protocol_attr: PNI
+
+RCE:
+  devices:
+    - 172.16.30.1
+    - 172.16.30.5
+  filters:
+    - l3_protocol: MPLS
+      l3_protocol_attr: OSP
+      l1_protocol: CABLE_SUBMARINO
+      data_flow: DOWNSTREAM
