@@ -17,7 +17,9 @@ def reporte_internet():
        d.hostname,i.uid,i.if_index,
        left(right(i.description,CHAR_LENGTH(i.description)-20),35) as description,i.l3_protocol,
        i.l3_protocol_attr,i.l1_protocol,i.l1_protocol_attr,
-       s.util_in as util_in,util_out as util_out,s.state_timestamp  
+       s.util_in as util_in,util_out as util_out,
+       (s.input_rate/1073741824) as input_rate_gbs ,(s.output_rate/1073741824) as output_rate_gbs
+       ,s.state_timestamp  
        from network_devices as d
        inner join interfaces as i on d.uid = i.net_device_uid 
        inner join interface_states as s on i.uid = interface_uid 
@@ -26,7 +28,9 @@ def reporte_internet():
     df = pd.read_sql(sql, con=mysql.connection)
     df2 = df[['hostname', 'uid', 'if_index', 'description', 'l3_protocol', 'l3_protocol_attr', 'l1_protocol',
               'l1_protocol_attr']].drop_duplicates(subset='uid', keep='first')
-    df_proceded = (df.groupby(by=['uid'])['util_out', 'util_in'].quantile(.95)).round(2).reset_index()
+    df_proceded = (
+        df.groupby(by=['uid'])['util_out', 'util_in', 'output_rate_gbs', 'input_rate_gbs'].quantile(.95)).round(
+        1).reset_index()
     df_merge = pd.merge(df_proceded, df2, on=['uid'], how='left').sort_values(ascending=False, by=['util_out'])
 
     ipts = df_merge[df_merge['l3_protocol_attr'] == 'IPT'].sort_values(by="util_in", ascending=False).to_dict(
