@@ -1,126 +1,147 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<b>INTERNET</b>
-<table>
+{% extends 'layout.html' %}
 
-    <thead>
-    <caption>Capacidades de INTERNET</caption>
-    {% for column in ipts[0].keys() %}
-    <th>{{column}}</th>
-    {% endfor %}
-    </thead>
-    <tbody>
-    {% for row in ipts %}
-    <tr>
-        {% for key,value in row.items() %}
-        <td>{{value}}</td>
-        {% endfor %}
-    </tr>
-    {% endfor %}
+{% block body %}
 
-    <tr>
+<div class="container">
 
-    </tr>
+    <h1>Reporte de Internet</h1>
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-bordered table-striped table-hover table-sm table-light">
 
-    </tbody>
-</table>
-<table>
+                <thead class="thead-dark">
+                <h2>Capacidades de INTERNET</h2>
+                {% for column in ipts[0].keys() %}
+                <th>{{column}}</th>
+                {% endfor %}
+                </thead>
+                <tbody>
+                {% for row in ipts %}
+                <tr>
+                    {% for key,value in row.items() %}
 
-    <thead>
-    <caption>Conexiones directas con otros ASN</caption>
-    {% for column in pnis[0].keys() %}
-    <th>{{column}}</th>
-    {% endfor %}
-    </thead>
-    <tbody>
-    {% for row in pnis %}
-    <tr>
-        {% for key,value in row.items() %}
-        <td>{{value}}</td>
-        {% endfor %}
-    </tr>
-    {% endfor %}
+                    <td>{{value}}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
 
-    <tr>
+                <tr>
 
-    </tr>
+                </tr>
 
-    </tbody>
-</table>
-<table>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
-    <thead>
-    <caption>Caches</caption>
-    {% for column in caches[0].keys() %}
-    <th>{{column}}</th>
-    {% endfor %}
-    </thead>
-    <tbody>
-    {% for row in caches %}
-    <tr>
-        {% for key,value in row.items() %}
-        <td>{{value}}</td>
-        {% endfor %}
-    </tr>
-    {% endfor %}
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-bordered table-striped table-hover table-sm table-light">
 
-    <tr>
+                <thead class="thead-dark">
+                <h2>Conexiones directas con otros ASN</h2>
+                {% for column in pnis[0].keys() %}
+                <th>{{column}}</th>
+                {% endfor %}
+                </thead>
+                <tbody>
+                {% for row in pnis %}
+                <tr>
+                    {% for key,value in row.items() %}
+                    <td>{{value}}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
 
-    </tr>
+                <tr>
 
-    </tbody>
-</table>
-<table>
+                </tr>
 
-    <thead>
-    <caption>Capacidades IBGP</caption>
-    {% for column in ibps[0].keys() %}
-    <th>{{column}}</th>
-    {% endfor %}
-    </thead>
-    <tbody>
-    {% for row in ibps %}
-    <tr>
-        {% for key,value in row.items() %}
-        <td>{{value}}</td>
-        {% endfor %}
-    </tr>
-    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-bordered table-striped table-hover table-sm table-light">
 
-    <tr>
+                <thead class="thead-dark">
+                <h2>Caches</h2>
+                {% for column in caches[0].keys() %}
+                <th>{{column}}</th>
+                {% endfor %}
+                </thead>
+                <tbody>
+                {% for row in caches %}
+                <tr>
+                    {% for key,value in row.items() %}
+                    <td>{{value}}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
 
-    </tr>
+                <tr>
 
-    </tbody>
-</table>
-<table>
+                </tr>
 
-    <thead>
-    <caption>Capacidades Submarinas de MPLs</caption>
-    {% for column in mpls_cm[0].keys() %}
-    <th>{{column}}</th>
-    {% endfor %}
-    </thead>
-    <tbody>
-    {% for row in mpls_cm %}
-    <tr>
-        {% for key,value in row.items() %}
-        <td>{{value}}</td>
-        {% endfor %}
-    </tr>
-    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-bordered table-striped table-hover table-sm table-light">
 
-    <tr>
+                <thead class="thead-dark">
+                <h2>Capacidades IBGP</h2>
+                {% for column in ibps[0].keys() %}
+                <th>{{column}}</th>
+                {% endfor %}
+                </thead>
+                <tbody>
+                {% for row in ibps %}
+                <tr>
+                    {% for key,value in row.items() %}
+                    <td>{{value}}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
 
-    </tr>
+                <tr>
 
-    </tbody>
-</table>
+                </tr>
 
-</body>
-</html>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-sm-12">
+            <table class="table table-bordered table-striped table-hover table-sm table-light">
+
+                <thead class="thead-dark">
+                <h2>Capacidades Submarinas de MPLs</h2>
+                {% for column in mpls_cm[0].keys() %}
+                <th>{{column}}</th>
+                {% endfor %}
+                </thead>
+                <tbody>
+                {% for row in mpls_cm %}
+                <tr>
+                    {% for key,value in row.items() %}
+                    <td>{{value}}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+
+                <tr>
+
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
