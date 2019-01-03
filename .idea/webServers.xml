@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b47de370-a91e-4dbf-b2d5-2a9eb65b86ef" name="192.168.10.132" url="http://192.168.10.132">
+        <fileTransfer host="192.168.10.132" port="21" rootFolder="/www/ufinet">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

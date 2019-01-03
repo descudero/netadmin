@@ -1,0 +1,3167 @@
+
+% Type "show ?" for a list of subcommands
+ROCOINTERNALSUBAA920#sho
+ROCOINTERNALSUBAA920#show et
+ROCOINTERNALSUBAA920#show ethern
+ROCOINTERNALSUBAA920#show ethernet ser
+ROCOINTERNALSUBAA920#show ethernet service ?
+  evc         Ethernet EVC
+  instance    Ethernet Service Instance
+  interface   Ethernet Service Interface
+  internal    internal commands
+  ipc         Ethernet Service IPC
+  mac-tunnel  Ethernet Mac-in-Mac tunnel
+
+ROCOINTERNALSUBAA920#show ethernet service ev
+ROCOINTERNALSUBAA920#show ethernet service evc ?
+  detail     Detail Info
+  id         EVC ID
+  interface  Interface configured
+  summary    Summary Info
+  |          Output modifiers
+  <cr>
+
+ROCOINTERNALSUBAA920#show ethernet service evc de
+ROCOINTERNALSUBAA920#show ethernet service evc detail
+ROCOINTERNALSUBAA920#show ethernet service in
+ROCOINTERNALSUBAA920#show ethernet service inst
+ROCOINTERNALSUBAA920#show ethernet service instance ?
+  detail        Detail Info
+  id            Ethernet Service Instance Identifier
+  interface     Interface configured
+  internal      Internal command
+  load-balance  EtherChannel load balancing info
+  mac           Display MAC Address data
+  platform      Platform specific info
+  policy-map    Ethernet Service Instance policymap
+  stats         Service Instance Statistics
+  summary       Summary Info
+  |             Output modifiers
+  <cr>
+
+ROCOINTERNALSUBAA920#show ethernet service instance de
+ROCOINTERNALSUBAA920#show ethernet service instance detail
+Service Instance ID: 10
+Service Instance Type: Static
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 10 vlan protocol type 0x8100
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+   7563371  646602506    7559457  646265982
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 10
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 99
+Service Instance Type: Static
+Description: GESTION_COLOMBIA
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 99 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+1404006099 249107569864 1337634286 183831909401
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 99
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3280
+Service Instance Type: Static
+Description: AT&T_SITEL_PANAMA_PACO00540229-ELine
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3280 vlan protocol type 0x8100
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+20899006912 8148959383053 23522673085 3409070406345
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3280
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3282
+Service Instance Type: Static
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3282 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 665500192 493858711615  626768249 178830051908
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3282
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3283
+Service Instance Type: Static
+Description: AT&T_IBEX_GLOBAL_NI-CO_NICO04460008
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3283 vlan protocol type 0x8100
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+         0          0          0          0
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3283
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3284
+Service Instance Type: Static
+Description: description AT&T_BIMBO_TRES_RIOS_CRCO00550042 - HVPLS
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3284 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+   5473435  511607217    6122186  628762726
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3284
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3285
+Service Instance Type: Static
+Description: VIRTELA_AXALTA_CARTAGENA(CO-US)_CO06830001
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3285 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+1213407125 397548734058 1476468661 1491621348279
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3285
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3286
+Service Instance Type: Static
+Description: COPA05190064_ATT_HEWLETT_PACKARD
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3286 vlan protocol type 0x8100
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+  75102983 13638250459   11201780 2079370844
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3287
+Service Instance Type: Static
+Description: COPA05190062_ATT_EXPERIAN_BOGOTA
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3287 vlan protocol type 0x8100
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+    279245   24344263     767927   55562189
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3288
+Service Instance Type: Static
+Description: AT&T_TYCOINT_CRCO00550051
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3288 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+   4918433  473576428    4892283  431563838
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3288
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3291
+Service Instance Type: Static
+Description: CRCO00550054_ATT_HP_ULTRAPARK_1
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3291 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+  20242796 8767986673   17367619 7992654960
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3291
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3292
+Service Instance Type: Static
+Description: COPA05190068_ATT_ESSO_COLOMBIA
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3292 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 851284953 573128215966  665875850 401925599903
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3293
+Service Instance Type: Static
+Description: COPA05190072_ATT_Ernst_Young_Medellmn
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3293 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 437843628 176885531005  517492605 424734375928
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3294
+Service Instance Type: Static
+Description: COPA02930321_ELECTRICARIBE_CPD_II_PISO_6_VSAT_CO-PA
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3294 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 203875694 14209981145  260922377 27101050032
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3517
+Service Instance Type: Static
+Description: MGMT-NOC-LATAM-CR
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3517 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+    704215  925105373     187230   13821066
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3540
+Service Instance Type: Static
+Description: COMUNICACIONES_INTERNAS_COLOMBIA-NAP_COUS03230126 - ELine
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3540 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 451249909 125264716250  478926844 183758792864
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3540
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3574
+Service Instance Type: Static
+Description: GESTION-OSS
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3574 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 548403036 141196195330  575583305 128453153682
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3575
+Service Instance Type: Static
+Description: GESTION-NOCLATAM-GT
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3575 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+  10339300 3191393552   20994897 2502021252
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3725
+Service Instance Type: Static
+Description: AT&T_SYKES_ENTERPRISE_COCR05190003
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3725 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+14598208839 4470315793591 17639826063 2903331800995
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3725
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3733
+Service Instance Type: Static
+Description: SYKES_ENTERPRISE-IDC_SUBA_BOGOTA(CO)|ATT_COSV05190002
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3733 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+         0          0          0          0
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3733
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3794
+Service Instance Type: Static
+Description: AT&T-KIMBERLY_BKP-COPA05190018
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3794 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+         0          0          0          0
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3794
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3826
+Service Instance Type: Static
+Description: RESPALDO_AT&T_COLOMBIA_INFOSYS_CRCO00550011 - ELine
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3826 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+  33055840 8011627019    2318032  370125486
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3826
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3863
+Service Instance Type: Static
+Description: AT&T-KIMBERLY_BARBOSA-COPA05190019
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3863 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+         0          0          0          0
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3863
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3864
+Service Instance Type: Static
+Description: CHIQUITA_MARGARITAS-AGN_COLOMBIA(BACKUP)|ATT_GTCO04510025
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3864 vlan protocol type 0x8100
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 262472820 154525847746  289363480 161211879274
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3864
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3866
+Service Instance Type: Static
+Description: RESPALDO_ATT_SITEL_ANTIGUA_EMBAJADA_AMERICANA_AGN_NICO04460003 - ELine
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3866 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+25456107555 11431245892895 23474357872 3774310842200
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3866
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3867
+Service Instance Type: Static
+Description: RESPALDO_AT&T_LOREAL_PANAMA_PACIFICO_BKP_PACO00540198-ELine
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3867 vlan protocol type 0x8100
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+   7500223  695254520    4694716  369112602
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3867
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3868
+Service Instance Type: Static
+Description: RESPALDO_SPRINT_INGRAM_COUS05960003
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3868 vlan protocol type 0x8100
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+  26666439 16871567906   18103737 4478451037
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3868
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3869
+Service Instance Type: Static
+Description: RESPALDO_AT&T_CHIQUITA_BRANDS_IDC_CWP_PACO00540192
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3869 vlan protocol type 0x8100
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+         0          0          0          0
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3869
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3870
+Service Instance Type: Static
+Description: RESPALDO_AT&T_CHIQUITA_BRANDS_CHANGUINOLA_ PACO00540190
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3870 vlan protocol type 0x8100
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+         0          0          0          0
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3870
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3871
+Service Instance Type: Static
+Description: GTCO04510028|ATT
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3871 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+         0          0          0          0
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3871
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3876
+Service Instance Type: Static
+Description: RESPALDO_AT&T_CHIQUITA_ALMIRANTE_PACO00540194
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3876 vlan protocol type 0x8100
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+    296394   22329869     187005   15346215
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3876
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3877
+Service Instance Type: Static
+Description: RESPALDO_AT&T_EVONIK_COLOMBIA_CRCO00550013 - ELine
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3877 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+   1848164  167782382          0          0
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3877
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3878
+Service Instance Type: Static
+Description: RESPALDO_AT&T_MERCK_PA-CO_PACO00540206
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3878 vlan protocol type 0x8100
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+1309808123 631931294391  941916150 493413624637
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3878
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3879
+Service Instance Type: Static
+Description: AT&T-GRAINER_HOWARD_PACO00540221
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3879 vlan protocol type 0x8100
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+         0          0          0          0
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3879
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3883
+Service Instance Type: Static
+Description: AT&T_COLOMBIA_CHIQUITA_BRANDS_CRCO00550012 - VPLS
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3883 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+3511639957 1123462157114 5286363027 7358749241036
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3883
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3887
+Service Instance Type: Static
+Description: RESPALDO_CHIQUITA_BRANDS_BACKUP(HN)-AGN_BOGOTA(CO)|ATT_HNCO05470003
+Associated Interface: TenGigabitEthernet0/0/3
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3887 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+    344530   31174738     335522   27280879
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3887
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 15
+Service Instance Type: Static
+Description: GESTION-UFINET-VLAN15
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 15 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+         0          0   19310942 4675864036
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 301
+Service Instance Type: Static
+Description: PAYPAL_AT&T_GTCO04510019-Path_1
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol forward cdp stp vtp pagp lldp lacp udld loam esmc elmi ptppd R4 R5 R6 R8 R9 RA RB RC RD RF
+CE-Vlans:
+Encapsulation: dot1q 301 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 133101640 9872304827  133074105 9870107556
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 302
+Service Instance Type: Static
+Description: PAYPAL_AT&T_GTCO04510019-Path_3
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol forward cdp stp vtp pagp lldp lacp udld loam esmc elmi ptppd R4 R5 R6 R8 R9 RA RB RC RD RF
+CE-Vlans:
+Encapsulation: dot1q 302 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 126015384 9345557592  125950747 9339479626
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 303
+Service Instance Type: Static
+Description: PAYPAL_AT&T_GTCO04510019-Path_7
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol forward cdp stp vtp pagp lldp lacp udld loam esmc elmi ptppd R4 R5 R6 R8 R9 RA RB RC RD RF
+CE-Vlans:
+Encapsulation: dot1q 303 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 130366088 9667639330  130324711 9663915806
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 304
+Service Instance Type: Static
+Description: PAYPAL_AT&T_GTCO04510019-Path_9
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol forward cdp stp vtp pagp lldp lacp udld loam esmc elmi ptppd R4 R5 R6 R8 R9 RA RB RC RD RF
+CE-Vlans:
+Encapsulation: dot1q 304 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 129808030 9626470052  129764831 9622657326
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 305
+Service Instance Type: Static
+Description: PAYPAL_AT&T_GTCO04510019-Path_5
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol forward cdp stp vtp pagp lldp lacp udld loam esmc elmi ptppd R4 R5 R6 R8 R9 RA RB RC RD RF
+CE-Vlans:
+Encapsulation: dot1q 305 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 124543260 9236772436  124479243 9230787210
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 306
+Service Instance Type: Static
+Description: PAYPAL_AT&T_GTCO04510019-Path_2
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol forward cdp stp vtp pagp lldp lacp udld loam esmc elmi ptppd R4 R5 R6 R8 R9 RA RB RC RD RF
+CE-Vlans:
+Encapsulation: dot1q 306 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 128727309 9546350926  128675479 9541591026
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 307
+Service Instance Type: Static
+Description: PAYPAL_AT&T_GTCO04510019-Path_6
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol forward cdp stp vtp pagp lldp lacp udld loam esmc elmi ptppd R4 R5 R6 R8 R9 RA RB RC RD RF
+CE-Vlans:
+Encapsulation: dot1q 307 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 118332639 8776954066  118230434 8767150478
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 308
+Service Instance Type: Static
+Description: PAYPAL_AT&T_GTCO04510019-Path_4
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol forward cdp stp vtp pagp lldp lacp udld loam esmc elmi ptppd R4 R5 R6 R8 R9 RA RB RC RD RF
+CE-Vlans:
+Encapsulation: dot1q 308 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 126368557 9371852662  126308373 9366271178
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 309
+Service Instance Type: Static
+Description: PAYPAL_AT&T_GTCO04510019-Path_8
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol forward cdp stp vtp pagp lldp lacp udld loam esmc elmi ptppd R4 R5 R6 R8 R9 RA RB RC RD RF
+CE-Vlans:
+Encapsulation: dot1q 309 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 129985125 9639605138  129943266 9635940742
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 501
+Service Instance Type: Static
+Description: HP_ULTRAPARK1|AT&T|CRCO00550054-Path_1
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol forward cdp stp vtp pagp lldp lacp udld loam esmc elmi ptppd R4 R5 R6 R8 R9 RA RB RC RD RF
+CE-Vlans:
+Encapsulation: dot1q 501 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 196047310 56384929124  200988499 30510773293
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 502
+Service Instance Type: Static
+Description: HP_ULTRAPARK1|AT&T|CRCO00550054-Path_2
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol forward cdp stp vtp pagp lldp lacp udld loam esmc elmi ptppd R4 R5 R6 R8 R9 RA RB RC RD RF
+CE-Vlans:
+Encapsulation: dot1q 502 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 127553795 9461539981  127499783 9455282005
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 503
+Service Instance Type: Static
+Description: HP_ULTRAPARK1|AT&T|CRCO00550054-Path_3
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol forward cdp stp vtp pagp lldp lacp udld loam esmc elmi ptppd R4 R5 R6 R8 R9 RA RB RC RD RF
+CE-Vlans:
+Encapsulation: dot1q 503 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 137458627 10194690686  137458078 10193766650
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 504
+Service Instance Type: Static
+Description: HP_ULTRAPARK1|AT&T|CRCO00550054-Path_4
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol forward cdp stp vtp pagp lldp lacp udld loam esmc elmi ptppd R4 R5 R6 R8 R9 RA RB RC RD RF
+CE-Vlans:
+Encapsulation: dot1q 504 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 127431173 9452454654  127377541 9446334554
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 505
+Service Instance Type: Static
+Description: HP_ULTRAPARK1|AT&T|CRCO00550054-Path_5
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol forward cdp stp vtp pagp lldp lacp udld loam esmc elmi ptppd R4 R5 R6 R8 R9 RA RB RC RD RF
+CE-Vlans:
+Encapsulation: dot1q 505 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 128927465 9562819116  128871888 9557141912
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 506
+Service Instance Type: Static
+Description: HP_ULTRAPARK1|AT&T|CRCO00550054-Path_6
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol forward cdp stp vtp pagp lldp lacp udld loam esmc elmi ptppd R4 R5 R6 R8 R9 RA RB RC RD RF
+CE-Vlans:
+Encapsulation: dot1q 506 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 123747091 9179246268  123667335 9171163334
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 507
+Service Instance Type: Static
+Description: HP_ULTRAPARK1|AT&T|CRCO00550054-Path_7
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol forward cdp stp vtp pagp lldp lacp udld loam esmc elmi ptppd R4 R5 R6 R8 R9 RA RB RC RD RF
+CE-Vlans:
+Encapsulation: dot1q 507 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 136785799 10144835994  136776931 10143247130
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 508
+Service Instance Type: Static
+Description: HP_ULTRAPARK1|AT&T|CRCO00550054-Path_8
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol forward cdp stp vtp pagp lldp lacp udld loam esmc elmi ptppd R4 R5 R6 R8 R9 RA RB RC RD RF
+CE-Vlans:
+Encapsulation: dot1q 508 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 132292945 9812279876  132261433 9808563318
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 509
+Service Instance Type: Static
+Description: HP_ULTRAPARK1|AT&T|CRCO00550054-Path_9
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol forward cdp stp vtp pagp lldp lacp udld loam esmc elmi ptppd R4 R5 R6 R8 R9 RA RB RC RD RF
+CE-Vlans:
+Encapsulation: dot1q 509 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 137466241 10195273506  137462397 10194066168
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 989
+Service Instance Type: Static
+Description: ECUSGTT10017796C|GTT|COCA_COLA_NNUU
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 989 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+         0          0     132186    8459904
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 1481
+Service Instance Type: Static
+Description: description COCOCR.10012818I|CRISP-PRUEBA
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 1481 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+         0          0          0          0
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 2305
+Service Instance Type: Static
+Description: COUSGTT10003425C|GTT|GTT-Smart_Cloud
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 2305 vlan protocol type 0x8100
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+   2685722  328215993    2282160  300381613
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 2500
+Service Instance Type: Static
+Description: COUS09820001|PGM|CALLZILLA_BOGOTA
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 2500 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+1111465932 246922987158 1105049963 263093275412
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3003
+Service Instance Type: Static
+Description: KIMBERLY_CLARK|ATT|GTCO04510042
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3003 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+         0          0          0          0
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3006
+Service Instance Type: Static
+Description: BIMBO_MERLIOT_SVCO|ATT|SVCO03770014
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3006 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+         0          0          0          0
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3007
+Service Instance Type: Static
+Description: ATT_KIMBERLY_CLARK_BELEN_CRCO00550066
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3007 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+         0          0          0          0
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3007
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3008
+Service Instance Type: Static
+Description: ATT_KIMBERLY_CLARK_PARQUE_NEJAPA
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3008 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 213917461 98085671381  218825718 87509541323
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3008
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3010
+Service Instance Type: Static
+Description: AT&T_HEWLETT_PACKARD_ULTRAPARK_I_CRCO00550061 vlan 2
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3010 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+    590301   54057984     284799   22912638
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3010
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3012
+Service Instance Type: Static
+Description: description  AT&T_HEWLETT PACKARD_ULTRAPARK_II_CRCO00550063
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3012 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+  28089617 6538189938   27757344 5473290066
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3012
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3015
+Service Instance Type: Static
+Description: ATT_LEIBERT_CRCO00550070
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3015 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+         0          0          0          0
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3015
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3027
+Service Instance Type: Static
+Description: CRCO00550074|AT&T|WIPRO
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3027 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 431621720 101164937444  438330393 203312138334
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3027
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3029
+Service Instance Type: Static
+Description: description  COSV05190095|ATT|HANESBRANDS_LOURDES
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3029 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 333900454 199930704623  311278390 86059272445
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3029
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3035
+Service Instance Type: Static
+Description: COPA05190096|ATT|IBM_MEDELLIN
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3035 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 436560165 152560108420  618427289 531427422201
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3037
+Service Instance Type: Static
+Description: COCRAT&10000751CA|BIMBO_VALENCIA
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3037 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 152180503 69292299253  152107829 113125152484
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3037
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3042
+Service Instance Type: Static
+Description: CONIAT&10002370C|NICO04460013|AT&T|IBEX_GLO_ED.INVERCASA
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3042 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+13300828724 6635392985826 11488729271 3167131345455
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3042
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3046
+Service Instance Type: Static
+Description: AT&T_HEWLETT_PACKARD_ULTRAPARK_I_CRCO00550061 vlan 3
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3046 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 614408836 406636217205  466409274 111640174852
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3046
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3047
+Service Instance Type: Static
+Description: AT&T_HEWLETT_PACKARD_ULTRAPARK_I_CRCO00550061 vlan 4
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3047 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+    518600   48564338      15888    1080384
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3047
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3048
+Service Instance Type: Static
+Description: AT&T_HEWLETT_PACKARD_ULTRAPARK_I_CRCO00550061 vlan 5
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3048 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+19126384872 16288113428225 14142787406 4214304896764
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3048
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3050
+Service Instance Type: Static
+Description: PACOAT&10004496C|ATT|Loreal
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3050 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+         0          0     132297    8467008
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3053
+Service Instance Type: Static
+Description: HNCO05470019|ATT|Hanesbrands_Zip_Villanueva
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3053 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 482690691 252178904821  451365907 119418166053
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3058
+Service Instance Type: Static
+Description: COPAAT&10010302C|AT&T|Owens_Illinois
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3058 vlan protocol type 0x8100
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+   5556848 1942685996    5337322 2026741065
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3059
+Service Instance Type: Static
+Description: COGTAT&10010534C|ATT|ABBOTT_GT
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3059 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 952877778 549885389930  854174257 315494094641
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3059
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3077
+Service Instance Type: Static
+Description: PACOAT&10013934C|AT&T_ADIDAS
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3077 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 383015460 88125221141  454246505 195036047187
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3078
+Service Instance Type: Static
+Description: COGTAT&10010534C|ATT|COPAAT&10013487C|Adidas_GT
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3078 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 442758986 100067403378  387992035 131979015219
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3078
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3080
+Service Instance Type: Static
+Description: COCRAT&10013486C|AT&T|SONY_CC
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3080 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+  65196597 49544839309   67033245 18796834180
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3080
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3087
+Service Instance Type: Static
+Description: COCRAT&10018953C|AT&T|EVONIK_CENTRO
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3087 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+  35401519 3198912627   34031050 3026180627
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3087
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3096
+Service Instance Type: Static
+Description: PACOAT&10012067C|AT&T|LOREAL
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3096 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+   2543029  213267077    6154831 1222309293
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3223
+Service Instance Type: Static
+Description: PACO00540278_AT&T_Evergreen-PACO
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3223 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+  55947196 50281035791   14743586 3968988871
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3228
+Service Instance Type: Static
+Description: COUS09650001|C3N|BANCO_BOGOTA
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3228 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+    762399  170286300     713257   76414756
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3229
+Service Instance Type: Static
+Description: COUS09650002|C3N|ANH_BOGOTA_COLOMBIA
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3229 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+   2856973  654301521    2649504  273414587
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3245
+Service Instance Type: Static
+Description: PACO00540261_ATT_Bimbo-Carrasquilla
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3245 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+   4527875 1592596135    5395290  875813687
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3289
+Service Instance Type: Static
+Description: CRCO00550046_AT&T_HEWLETT_PACKARD_ZFA_CR-CO
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3289 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+22448139273 23467801670637 14480579054 4789328015817
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3298
+Service Instance Type: Static
+Description: COPA05190075_ATT_SITEL_CALI_CO-PA
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3298 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+8363104672 1321288657983 7458456885 2792536482635
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3315
+Service Instance Type: Static
+Description: COPAAT&10001724C_AT&T_Chiquita-Brands-Changuinola
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3315 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 935218373 417126670995 1060128900 168565328153
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3387
+Service Instance Type: Static
+Description: PACOAT&10011843C|AT&T|METLIFE
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3387 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+2277383558 689608794144 2837080192 2338421878146
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3394
+Service Instance Type: Static
+Description: COUSVIR10011829C|VIRTELA|ALLFUNDS_BANK
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3394 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+   3463542  858373747    4560187 2302844355
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3396
+Service Instance Type: Static
+Description: PACOATT10024966C|ATTT|LOREAL
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3396 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+    492541  140140840     609650  147635856
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3399
+Service Instance Type: Static
+Description: COMXMEX10013307C|MEXICO_RED_DE_TELECOMUNICACIONES|OPERBES
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3399 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+  70587641 27201038101   56724672 35960084235
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3401
+Service Instance Type: Static
+Description: COPA05190079_ATT_HEWLETT_PACKARD_BOGOTA
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3401 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+  22035881 19605268210   10888516 1922363845
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3403
+Service Instance Type: Static
+Description: COPA05190086_ATT_SCHNEIDER_ELECTRIC_ZONA_INDUSTRIAL
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3403 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+1125290797 353085396806 1872196505 1407867283953
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3404
+Service Instance Type: Static
+Description: COPA05190092_ATT_EPSON_ZONA_INDUSTRIAL_BOGOTA_CO-PA
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3404 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+  48045377 9064938841   34717443 4370508699
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3406
+Service Instance Type: Static
+Description: COPA05190094|ATT|HEWLETT_PACKARD_ENTERPRISE_BOGOTA
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3406 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+  10790940  798106586   12235274  940282737
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3407
+Service Instance Type: Static
+Description: COPAAT&10005221C|AT&T|Estee_Lauder_Panama
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3407 vlan protocol type 0x8100
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+   4690230 1435252286  837070345 232982902096
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3417
+Service Instance Type: Static
+Description: COPAAT&10021693C|AT&T|Adidas|France|Field
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3417 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+   8613827 1196210471    2785106  644437643
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3426
+Service Instance Type: Static
+Description: COCRAT&10035329C|AT&T|CAPITAL_ONE
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3426 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+        13        884         13        884
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3426
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3493
+Service Instance Type: Static
+Description: XEROX_BUSINESS_SERVICES_LLC|ATT|GTCO04510039
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3493 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+    132291    8466624          0          0
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3495
+Service Instance Type: Static
+Description: COPA07040001_KIO_SURA_BOGOTA_CO-PA
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3495 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+         0          0          0          0
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3569
+Service Instance Type: Static
+Description: BGP_CR-COL_Submarino-L3
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3569 vlan protocol type 0x8100
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+1245422454 1115318763883   62652824 19984211630
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3665
+Service Instance Type: Static
+Description: AT&T_EATON_COCR05190073 - HVPLS
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3665 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+         0          0          0          0
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3665
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3687
+Service Instance Type: Static
+Description: COPA05190076_ATT_ESTEE_LAUDER_BOGOTACO-PA
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3687 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 298561381 71411613765  377145629 261346582101
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3732
+Service Instance Type: Static
+Description: AT&T_HEWLETT_PACKARD_ZFA_CRCO00550056
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3732 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 257856145 174548234651  284952147 206236475126
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3732
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3745
+Service Instance Type: Static
+Description: PACO07110001_CELSIA_TORRE_ARGOS_SANTA_MARIA_BUSINESS
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3745 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 297596565 124348195212  254900396 139144237437
+EFP Microblocks:
+****************
+Microblock type: Bridge-domain
+Bridge-domain: 3745
+
+Microblock type: L2Mcast
+L2 Multicast GID: 1
+
+Microblock type: dhcp_snoop
+L2 Multicast GID: 1
+
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3752
+Service Instance Type: Static
+Description: ENLACE_TEMPORAL_CR-CO|SESION_BGP|EDGAR_PORTILLO
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3752 vlan protocol type 0x8100
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+2737573249 2606398736111     890035   63126866
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3778
+Service Instance Type: Static
+Description: CRCO00550057_ATT_ACTAVIS_ALLERGAN_CR-CO
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3778 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+5534398108 3737348019319 4726819439 1181691683805
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3840
+Service Instance Type: Static
+Description: PACO00540275_ATT_Estee-Lauder-PACO
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3840 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 195170217 195275184792  416813456 376800346748
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3872
+Service Instance Type: Static
+Description: CRCORED10010632C|IREX|Redes_Integradas_Corp_Ltd|CR-CO
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3872 vlan protocol type 0x8100
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+   6458670 3027420438    4472607 1386331638
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+Service Instance ID: 3956
+Service Instance Type: Static
+Description: ECUSPUN10012772C|PUNTONET|PUNTONET_QUITO
+Associated Interface: TenGigabitEthernet0/0/4
+Associated EVC:
+L2protocol drop
+CE-Vlans:
+Encapsulation: dot1q 3956 vlan protocol type 0x8100
+Rewrite: ingress tag pop 1 symmetric
+Interface Dot1q Tunnel Ethertype: 0x8100
+State: Up
+EFP Statistics:
+   Pkts In   Bytes In   Pkts Out  Bytes Out
+ 990962225 361640021897  599888815 180627030862
+EFP Microblocks:
+****************
+Microblock type: PPPoE IA UBLOCK
+PPPoE IA info
+Enable: 0
+Format Type: 0
+cricuit id:
+remote id:
+
+
+ROCOINTERNALSUBAA920#show ethernet service instance detail
