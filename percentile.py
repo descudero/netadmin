@@ -33,3 +33,4 @@ with conection.cursor() as cursor:
     IPT = df_merge[df_merge['l3_protocol_attr'] == 'IPT'].to_dict(orient='records')
 
     pprint(len(IPT))
+

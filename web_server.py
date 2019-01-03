@@ -57,5 +57,43 @@ def reporte_internet():
     return render_template('reporte_internet.html', ipts=ipts, ibps=ibps, mpls_cm=mpls_cm, caches=caches, pnis=pnis)
 
 
+@app.route('/reportes/internet/actual')
+def reporte_internet_actual():
+    sql = '''select  
+           d.hostname as host,
+           i.if_index as inter,
+           left(right(i.description,CHAR_LENGTH(i.description)-20),35) as description,i.l3_protocol as l3p,
+           i.l3_protocol_attr as l3a ,
+           i.l1_protocol ,
+           i.l1_protocol_attr,
+           s.util_in as util_in,s.util_out as util_out,
+           (s.input_rate/1073741824) as in_gbs ,
+           (s.output_rate/1073741824) as out_gbs
+           ,s.state_timestamp  
+           from network_devices as d
+           inner join interfaces as i on d.uid = i.net_device_uid 
+           inner join interface_states as s on i.uid = interface_uid 
+           LEFT JOIN interface_states  AS s2
+           ON (s.interface_uid = s2.interface_uid  AND s.state_timestamp < s2.state_timestamp)
+           WHERE s2.state_timestamp IS NULL;
+           '''
+    df = pd.read_sql(sql, con=mysql.connection)
+
+    ipts = df[df['l3a'] == 'IPT'].sort_values(by="util_in", ascending=False).to_dict(
+        orient='records')
+    pnis = df[df['l3a'] == 'PNI'].sort_values(by="util_out", ascending=False).to_dict(
+        orient='records')
+    ibps = df[df['l3a'] == 'IBP'].sort_values(by="util_out", ascending=False).to_dict(
+        orient='records')
+    mpls_cm = df[
+        (df['l3p'] == 'MPLS') & (df['l1_protocol'] == "CABLE_SUBMARINO")].sort_values(
+        by="util_out", ascending=False).to_dict(
+        orient='records')
+    caches = df[df['l3a'] == 'CDN'].sort_values(by="util_in", ascending=False).to_dict(
+        orient='records')
+
+    return render_template('reporte_internet.html', ipts=ipts, ibps=ibps, mpls_cm=mpls_cm, caches=caches, pnis=pnis)
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1', debug=True)
+
