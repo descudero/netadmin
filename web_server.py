@@ -50,7 +50,7 @@ def reporte_internet():
        d.hostname as host,
        i.uid,
        i.if_index as inter,
-       left(right(i.description,CHAR_LENGTH(i.description)-20),35) as description,i.l3_protocol as l3p,
+       right(i.description,CHAR_LENGTH(i.description)-20) as description,i.l3_protocol as l3p,
        i.l3_protocol_attr as l3a ,
        i.l1_protocol ,
        i.l1_protocol_attr,
@@ -65,7 +65,7 @@ def reporte_internet():
        where s.state_timestamp >='{initial_date}' and s.state_timestamp <'{end_date}'
        '''.format(initial_date=initial_date, end_date=end_date)
     df = pd.read_sql(sql, con=mysql.connection)
-    print(df)
+
     df2 = df[['host', 'uid', 'inter', 'description', 'l3p', 'l3a', 'l1_protocol', 'data_flow',
               'l1_protocol_attr']].drop_duplicates(subset='uid', keep='first')
     df_proceded = (
@@ -78,7 +78,9 @@ def reporte_internet():
     sort_columns = {'CAPACIDADES_TRANSITO_INTERNET': 'util_in', 'CAPACIDADES_DIRECTOS_ASN': 'util_in',
                     'SERVIDORES_CACHE_TERCEROS': 'util_in',
                     'default': 'util_out'}
-    titulo = "REPORTE 95% POR FECHAS DE CAPACIDADES RELACIONADAS A INTERNET UFINET"
+    titulo = "Percentil {percentile}% de {fecha_inicial} a {fecha_final} DE CAPACIDADES RELACIONADAS A INTERNET UFINET" \
+        .format(percentile=round(percentile * 100, 2), fecha_inicial=initial_date.split(" ")[0],
+                fecha_final=end_date.split(" ")[0])
     return render_template('reporte_internet_percentile.html', titulo=titulo,
                            tables=filter_summary(df_merge, columns, sort_column=sort_columns))
 
@@ -92,7 +94,7 @@ def reporte_internet_actual():
     sql = '''select  
            d.hostname as host,
            i.if_index as inter,
-           left(right(i.description,CHAR_LENGTH(i.description)-20),35) as description,i.l3_protocol as l3p,
+           right(i.description,CHAR_LENGTH(i.description)-20)as description,i.l3_protocol as l3p,
            i.l3_protocol_attr as l3a ,
            i.l1_protocol ,
            i.l1_protocol_attr,i.data_flow,
