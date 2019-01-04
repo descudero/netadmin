@@ -16,25 +16,23 @@ app.config['MYSQL_DB'] = 'netadmin'
 mysql = MySQL(app)
 
 
-@app.route('/reportes/internet/', methods=['POST'])
+@app.route('/reportes/internet/', methods=['POST', 'GET'])
 def reporte_internet():
     percentile = .95
     month = datetime.date.today().month
     year = datetime.date.today().year
     last_day = calendar.monthrange(year, month)[1]
-    initial_date = ''
-    end_date = ''
+    initial_date = '{year}-{month}-{day} 00:00:00'.format(year=year, month=month, day=1)
+    end_date = '{year}-{month}-{day} 23:59:59'.format(year=year, month=month, day=last_day)
     if request.method == 'POST':
         if 'initial_date' in request.form:
-            initial_date = request.form['initial_date']
-            if initial_date == '':
+            if request.form['initial_date'] == '':
                 initial_date = '{year}-{month}-{day} 00:00:00'.format(year=year, month=month, day=1)
             else:
                 initial_date += ' 00:00:00'
 
         if 'end_date' in request.form:
-            end_date = request.form['end_date']
-            if end_date == '':
+            if request.form['end_date'] == '':
                 end_date = '{year}-{month}-{day} 23:59:59'.format(year=year, month=month, day=last_day)
             else:
                 end_date += ' 23:59:59'
@@ -67,6 +65,7 @@ def reporte_internet():
        where s.state_timestamp >='{initial_date}' and s.state_timestamp <'{end_date}'
        '''.format(initial_date=initial_date, end_date=end_date)
     df = pd.read_sql(sql, con=mysql.connection)
+    print(df)
     df2 = df[['host', 'uid', 'inter', 'description', 'l3p', 'l3a', 'l1_protocol', 'data_flow',
               'l1_protocol_attr']].drop_duplicates(subset='uid', keep='first')
     df_proceded = (

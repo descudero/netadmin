@@ -9,7 +9,6 @@
   <component name="ChangeListManager">
     <list default="true" id="462384ac-2f64-47a0-b6d2-b16ff1b36497" name="Default" comment="first3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/percentile.py" beforeDir="false" afterPath="$PROJECT_DIR$/percentile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_server.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,7 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/netadmin$percentile.coverage" NAME="percentile Coverage Results" MODIFIED="1546555193757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/netadmin$percentile.coverage" NAME="percentile Coverage Results" MODIFIED="1546636228677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/netadmin$ttextfsm_uf.coverage" NAME="ttextfsm_uf Coverage Results" MODIFIED="1546198064095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/resources/templates" />
     <SUITE FILE_PATH="coverage/netadmin$sshtest.coverage" NAME="sshtest Coverage Results" MODIFIED="1546404672584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -54,7 +53,7 @@
         <entry file="file://$PROJECT_DIR$/model/InterfaceIOS.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
-              <caret line="68" column="33" lean-forward="true" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
+              <caret line="68" column="33" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -62,8 +61,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/percentile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="767">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="-110">
+              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -74,20 +73,27 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web_server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="78" column="47" selection-start-line="78" selection-start-column="47" selection-end-line="78" selection-end-column="47" />
+            <state relative-caret-position="396">
+              <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#0#48#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://E:/progra/anaconda/Lib/calendar.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-11682" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+            <state relative-caret-position="132">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -96,16 +102,16 @@
         <entry file="file://$PROJECT_DIR$/save_interfaces_db.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
-              <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="66" />
+              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="66" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/reporte_internet.html">
+        <entry file="file://$PROJECT_DIR$/templates/reporte_internet_percentile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2684">
-              <caret line="122" column="41" selection-start-line="122" selection-start-column="41" selection-end-line="122" selection-end-column="41" />
+            <state relative-caret-position="110">
+              <caret line="5" column="71" lean-forward="true" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -114,7 +120,7 @@
         <entry file="file://$PROJECT_DIR$/static/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="66">
-              <caret line="3" column="149" selection-start-line="3" selection-start-column="149" selection-end-line="3" selection-end-column="149" />
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -127,22 +133,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/InterfaceUfinet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
+            <state relative-caret-position="3564">
               <caret line="166" column="27" selection-start-line="166" selection-start-column="16" selection-end-line="166" selection-end-column="27" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/Master.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="22" column="63" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -199,7 +193,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/core.py" />
         <option value="$PROJECT_DIR$/model/L3Path.py" />
         <option value="$PROJECT_DIR$/model/cisco_part.py" />
         <option value="$PROJECT_DIR$/model/CiscoPart.py" />
@@ -245,10 +238,11 @@
         <option value="$PROJECT_DIR$/resources/db/queries.sql" />
         <option value="$PROJECT_DIR$/model/InterfaceIOS.py" />
         <option value="$PROJECT_DIR$/save_interfaces_db.sh" />
+        <option value="$PROJECT_DIR$/percentile.py" />
+        <option value="$PROJECT_DIR$/templates/reporte_internet.html" />
         <option value="$PROJECT_DIR$/static/css/main.css" />
         <option value="$PROJECT_DIR$/templates/layout.html" />
-        <option value="$PROJECT_DIR$/templates/reporte_internet.html" />
-        <option value="$PROJECT_DIR$/percentile.py" />
+        <option value="$PROJECT_DIR$/templates/reporte_internet_percentile.html" />
         <option value="$PROJECT_DIR$/web_server.py" />
       </list>
     </option>
@@ -265,13 +259,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
               <item name="netadmin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
@@ -291,6 +295,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -306,19 +311,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\descudero\PycharmProjects\netadmin\resources\templates" />
-      <recent name="C:\Users\descudero\PycharmProjects\netadmin" />
-      <recent name="C:\Users\descudero\PycharmProjects\netadmin\scripts" />
-      <recent name="C:\Users\descudero\PycharmProjects\netadmin\config" />
-      <recent name="C:\Users\descudero\PycharmProjects\groups" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\descudero\PycharmProjects\netadmin" />
       <recent name="C:\Users\descudero\PycharmProjects\groups\model" />
       <recent name="C:\Users\descudero\PycharmProjects\groups\config" />
       <recent name="C:\Users\descudero\PycharmProjects\groups\cONFIG" />
       <recent name="C:\Users\descudero\PycharmProjects\groups" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\descudero\PycharmProjects\netadmin\templates" />
+      <recent name="C:\Users\descudero\PycharmProjects\netadmin\resources\templates" />
+      <recent name="C:\Users\descudero\PycharmProjects\netadmin" />
+      <recent name="C:\Users\descudero\PycharmProjects\netadmin\scripts" />
+      <recent name="C:\Users\descudero\PycharmProjects\netadmin\config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -484,8 +489,8 @@
       <item itemvalue="Python.test_textfsm" />
       <item itemvalue="Python.trasnciever_test" />
       <item itemvalue="Python.ttextfsm_uf" />
-      <item itemvalue="Python tests.Nosetests in ttextfsm_uf.py" />
       <item itemvalue="Python.percentile" />
+      <item itemvalue="Python tests.Nosetests in ttextfsm_uf.py" />
     </list>
     <recent_temporary>
       <list>
@@ -508,6 +513,7 @@
       <option name="presentableId" value="Default" />
       <updated>1501084297173</updated>
       <workItem from="1546444980627" duration="17027000" />
+      <workItem from="1546634974037" duration="3043000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1541432790229</created>
@@ -635,7 +641,28 @@
       <option name="project" value="LOCAL" />
       <updated>1546557029750</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="first3">
+      <created>1546558601327</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1546558601327</updated>
+    </task>
+    <task id="LOCAL-00020" summary="first3">
+      <created>1546621939896</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1546621939896</updated>
+    </task>
+    <task id="LOCAL-00021" summary="first3">
+      <created>1546637766763</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1546637766763</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -671,7 +698,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38953000" />
+    <option name="totallyTimeSpent" value="52718000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -686,7 +713,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.491358" visible="true" weight="0.14983888" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.491358" visible="true" weight="0.1519871" />
       <window_info id="Structure" order="1" sideWeight="0.512" side_tool="true" weight="0.16136725" />
       <window_info id="Favorites" order="2" sideWeight="0.50864196" side_tool="true" weight="0.16136725" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -840,16 +867,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/multireplace.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ospf_topolocy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pathl3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -1068,12 +1085,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/reporte_internet.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/64ab1a34-8529-4526-93b9-a2e1a4795eac/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/model/InterfaceUfinet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
+        <state relative-caret-position="3564">
           <caret line="166" column="27" selection-start-line="166" selection-start-column="16" selection-end-line="166" selection-end-column="27" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
@@ -1081,57 +1112,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/InterfaceIOS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="68" column="33" lean-forward="true" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="149" selection-start-line="3" selection-start-column="149" selection-end-line="3" selection-end-column="149" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/save_interfaces_db.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
-          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="66" />
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        <state relative-caret-position="132">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/reporte_internet.html">
+    <entry file="file://$PROJECT_DIR$/model/InterfaceIOS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2684">
-          <caret line="122" column="41" selection-start-line="122" selection-start-column="41" selection-end-line="122" selection-end-column="41" />
+        <state relative-caret-position="286">
+          <caret line="68" column="33" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/progra/anaconda/Lib/calendar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11682" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/percentile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="767">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="-110">
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/reporte_internet_percentile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="71" lean-forward="true" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web_server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="78" column="47" selection-start-line="78" selection-start-column="47" selection-end-line="78" selection-end-column="47" />
+        <state relative-caret-position="396">
+          <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
