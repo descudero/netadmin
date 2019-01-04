@@ -1,5 +1,7 @@
 from flask import Flask, render_template
 from flask_mysqldb import MySQL
+import socket
+
 import pandas as pd
 
 app = Flask(__name__)
@@ -21,6 +23,7 @@ def reporte_internet():
        i.l3_protocol_attr as l3a ,
        i.l1_protocol ,
        i.l1_protocol_attr,
+       i.data_flow,
        s.util_in as util_in,util_out as util_out,
        (s.input_rate/1073741824) as in_gbs ,
        (s.output_rate/1073741824) as out_gbs
@@ -31,30 +34,21 @@ def reporte_internet():
        where s.state_timestamp >='2019-01-01 00:00:00' and s.state_timestamp <'2019-01-31 00:00:00'
        '''
     df = pd.read_sql(sql, con=mysql.connection)
-    df2 = df[['host', 'uid', 'inter', 'description', 'l3p', 'l3a', 'l1_protocol',
+    df2 = df[['host', 'uid', 'inter', 'description', 'l3p', 'l3a', 'l1_protocol', 'data_flow',
               'l1_protocol_attr']].drop_duplicates(subset='uid', keep='first')
     df_proceded = (
         df.groupby(by=['uid'])['util_out', 'util_in', 'out_gbs', 'in_gbs'].quantile(.95)).round(
         1).reset_index()
     df_merge = pd.merge(df_proceded, df2, on=['uid'], how='left').sort_values(ascending=False, by=['util_out'])
     df_merge.drop(['uid'], axis=1, inplace=True)
-
-    ipts = df_merge[df_merge['l3a'] == 'IPT'].sort_values(by="util_in", ascending=False).to_dict(
-        orient='records')
-
-    pnis = df_merge[df_merge['l3a'] == 'PNI'].sort_values(by="util_out", ascending=False).to_dict(
-        orient='records')
-
-    ibps = df_merge[df_merge['l3a'] == 'IBP'].sort_values(by="util_out", ascending=False).to_dict(
-        orient='records')
-    mpls_cm = df_merge[
-        (df_merge['l3p'] == 'MPLS') & (df_merge['l1_protocol'] == "CABLE_SUBMARINO")].sort_values(
-        by="util_out", ascending=False).to_dict(
-        orient='records')
-    caches = df_merge[df_merge['l3a'] == 'CDN'].sort_values(by="util_in", ascending=False).to_dict(
-        orient='records')
-
-    return render_template('reporte_internet.html', ipts=ipts, ibps=ibps, mpls_cm=mpls_cm, caches=caches, pnis=pnis)
+    columns = ['host', 'inter', 'description', 'l1_protocol', 'l1_protocol_attr', 'util_in', 'util_out', 'in_gbs',
+               'out_gbs']
+    sort_columns = {'CAPACIDADES_TRANSITO_INTERNET': 'util_in', 'CAPACIDADES_DIRECTOS_ASN': 'util_in',
+                    'SERVIDORES_CACHE_TERCEROS': 'util_in',
+                    'default': 'util_out'}
+    titulo = "REPORTE 95% POR FECHAS DE CAPACIDADES RELACIONADAS A INTERNET UFINET"
+    return render_template('reporte_internet.html',
+                           tables=filter_summary(df_merge, columns, sort_column=sort_columns, titulo=titulo))
 
 
 @app.route('/reportes/internet/actual')
@@ -65,7 +59,7 @@ def reporte_internet_actual():
            left(right(i.description,CHAR_LENGTH(i.description)-20),35) as description,i.l3_protocol as l3p,
            i.l3_protocol_attr as l3a ,
            i.l1_protocol ,
-           i.l1_protocol_attr,
+           i.l1_protocol_attr,i.data_flow,
            s.util_in as util_in,s.util_out as util_out,
            (s.input_rate/1073741824) as in_gbs ,
            (s.output_rate/1073741824) as out_gbs
@@ -77,23 +71,44 @@ def reporte_internet_actual():
            ON (s.interface_uid = s2.interface_uid  AND s.state_timestamp < s2.state_timestamp)
            WHERE s2.state_timestamp IS NULL;
            '''
-    df = pd.read_sql(sql, con=mysql.connection)
+    columns = ['host', 'inter', 'description', 'l1_protocol', 'l1_protocol_attr', 'util_in', 'util_out', 'in_gbs',
+               'out_gbs']
+    sort_columns = {'CAPACIDADES_TRANSITO_INTERNET': 'util_in', 'CAPACIDADES_DIRECTOS_ASN': 'util_in',
+                    'SERVIDORES_CACHE_TERCEROS': 'util_in',
+                    'default': 'util_out'}
+    titulo = "ESTADO ACTUAL DE CAPACIDADES RELACIONADAS A INTERNET UFINET"
+    return render_template('reporte_internet.html', titulo=titulo,
+                           tables=filter_summary(pd.read_sql(sql, con=mysql.connection), columns, sort_columns))
 
-    ipts = df[df['l3a'] == 'IPT'].sort_values(by="util_in", ascending=False).to_dict(
-        orient='records')
-    pnis = df[df['l3a'] == 'PNI'].sort_values(by="util_out", ascending=False).to_dict(
-        orient='records')
-    ibps = df[df['l3a'] == 'IBP'].sort_values(by="util_out", ascending=False).to_dict(
-        orient='records')
-    mpls_cm = df[
-        (df['l3p'] == 'MPLS') & (df['l1_protocol'] == "CABLE_SUBMARINO")].sort_values(
-        by="util_out", ascending=False).to_dict(
-        orient='records')
-    caches = df[df['l3a'] == 'CDN'].sort_values(by="util_in", ascending=False).to_dict(
-        orient='records')
 
-    return render_template('reporte_internet.html', ipts=ipts, ibps=ibps, mpls_cm=mpls_cm, caches=caches, pnis=pnis)
+def filter_summary(sql_dataframe, columns, sort_column={}):
+    filter_keys = {'CAPACIDADES_TRANSITO_INTERNET': {'l3a': 'IPT'},
+                   'CAPACIDADES_DIRECTOS_ASN': {'l3a': 'PNI'},
+                   'BGPS_DIRECTOS_INTERNOS_DOWNSTREAM': {'l3a': 'IBP', 'data_flow': 'DOWNSTREAM'},
+                   'TRUNCALES_MPLS_DOWNSTREAM': {'l3p': 'MPLS',
+                                                 'l1_protocol': 'CABLE_SUBMARINO'
+                                                 },
+                   'SERVIDORES_CACHE_TERCEROS': {'l3a': 'CDN'}
+                   }
+    results = {}
+    for key, filters in filter_keys.items():
+        results[key] = sql_dataframe.copy()
+        for column, value in filters.items():
+            df = results[key]
+            df = df[df[column] == value]
+            results[key] = df
+        if (key in sort_column):
+            results[key] = results[key].sort_values(by=sort_column[key], ascending=False)
+        elif ('default' in sort_column):
+            results[key] = results[key].sort_values(by=sort_column['default'], ascending=False)
 
+        results[key] = results[key][columns].to_dict(orient='records')
+    return results
 if __name__ == '__main__':
-    app.run(port=8080, host='127.0.0.1', debug=True)
-
+    if socket.gethostname() == 'gu-app-labs':
+        port = 8080
+        host = '10.250.55.17'
+    else:
+        port = 8080
+        host = '127.0.0.1'
+    app.run(port=port, host=host, debug=True)

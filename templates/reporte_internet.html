@@ -4,19 +4,20 @@
 
 <div class="container">
 
-    <h1>Reporte de Internet</h1>
+    <h1>{{titulo}}</h1>
+    {% for group , table in tables.items() %}
     <div class="row">
         <div class="col-sm-12">
             <table class="table table-bordered table-striped table-hover table-sm table-light">
 
                 <thead class="thead-dark">
-                <h2>Capacidades de INTERNET</h2>
-                {% for column in ipts[0].keys() %}
+                <h2>{{group}}</h2>
+                {% for column in table[0].keys() %}
                 <th>{{column}}</th>
                 {% endfor %}
                 </thead>
                 <tbody>
-                {% for row in ipts %}
+                {% for row in table %}
                 <tr>
                     {% for key,value in row.items() %}
 
@@ -33,115 +34,8 @@
             </table>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-sm-12">
-            <table class="table table-bordered table-striped table-hover table-sm table-light">
-
-                <thead class="thead-dark">
-                <h2>Conexiones directas con otros ASN</h2>
-                {% for column in pnis[0].keys() %}
-                <th>{{column}}</th>
-                {% endfor %}
-                </thead>
-                <tbody>
-                {% for row in pnis %}
-                <tr>
-                    {% for key,value in row.items() %}
-                    <td>{{value}}</td>
-                    {% endfor %}
-                </tr>
-                {% endfor %}
-
-                <tr>
-
-                </tr>
-
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <table class="table table-bordered table-striped table-hover table-sm table-light">
-
-                <thead class="thead-dark">
-                <h2>Caches</h2>
-                {% for column in caches[0].keys() %}
-                <th>{{column}}</th>
-                {% endfor %}
-                </thead>
-                <tbody>
-                {% for row in caches %}
-                <tr>
-                    {% for key,value in row.items() %}
-                    <td>{{value}}</td>
-                    {% endfor %}
-                </tr>
-                {% endfor %}
-
-                <tr>
-
-                </tr>
-
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <table class="table table-bordered table-striped table-hover table-sm table-light">
-
-                <thead class="thead-dark">
-                <h2>Capacidades IBGP</h2>
-                {% for column in ibps[0].keys() %}
-                <th>{{column}}</th>
-                {% endfor %}
-                </thead>
-                <tbody>
-                {% for row in ibps %}
-                <tr>
-                    {% for key,value in row.items() %}
-                    <td>{{value}}</td>
-                    {% endfor %}
-                </tr>
-                {% endfor %}
-
-                <tr>
-
-                </tr>
-
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <div class="row">
-
-        <div class="col-sm-12">
-            <table class="table table-bordered table-striped table-hover table-sm table-light">
-
-                <thead class="thead-dark">
-                <h2>Capacidades Submarinas de MPLs</h2>
-                {% for column in mpls_cm[0].keys() %}
-                <th>{{column}}</th>
-                {% endfor %}
-                </thead>
-                <tbody>
-                {% for row in mpls_cm %}
-                <tr>
-                    {% for key,value in row.items() %}
-                    <td>{{value}}</td>
-                    {% endfor %}
-                </tr>
-                {% endfor %}
-
-                <tr>
-
-                </tr>
-
-                </tbody>
-            </table>
-        </div>
-    </div>
+    {% endfor %}
 </div>
+
+
 {% endblock %}
