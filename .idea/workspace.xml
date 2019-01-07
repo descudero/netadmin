@@ -503,11 +503,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.percentile" />
       <item itemvalue="Python.sshtest" />
       <item itemvalue="Python.test_textfsm" />
       <item itemvalue="Python.trasnciever_test" />
       <item itemvalue="Python.ttextfsm_uf" />
+      <item itemvalue="Python.percentile" />
       <item itemvalue="Python tests.Nosetests in ttextfsm_uf.py" />
     </list>
     <recent_temporary>
