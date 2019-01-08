@@ -10,6 +10,7 @@ $(document).ready(function () {
     function send_ajax_graph(group, date_start, date_end, suffix) {
         var layout = {
             title: group + " " + suffix + " max rate",
+            hovermode: 'closest',
             font: {
                 family: 'Raleway, sans-serif',
                 size: 14

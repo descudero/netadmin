@@ -165,7 +165,8 @@ def function_pivot(data_sql, grouping_index=0, column_index=1, value_index=2):
     for row in data_sql:
         data[str(row[grouping_index])][str(row[column_index])] = float(row[value_index])
     data2 = [
-        {'x': list(serie.keys()), 'y': list(serie.values()), 'name': serie_name, 'stackgroup': 'dos', 'fill': 'tonexty'}
+        {'x': list(serie.keys()), 'y': list(serie.values()), 'name': serie_name, 'stackgroup': 'dos',
+         'fill': 'tonexty', 'hoverlabel': {'namelength': -1}}
         for serie_name, serie in data.items()]
     return data2
 
@@ -184,7 +185,7 @@ def json_data_graph():
     sql_text = filter_sql(request.json['group'], apply_and=True, table_suffix="i.")
     pl = performance_log("json")
     sql = '''select  
-        CONCAT(d.hostname, " ", i.if_index) AS int_host ,
+        CONCAT(d.hostname, " > ", i.if_index) AS int_host ,
         DATE(s.state_timestamp) as date_poll,
         max((s.{3}_rate/1073741824)) as value ,
         left(right(i.description,CHAR_LENGTH(i.description)-20),20) as description
