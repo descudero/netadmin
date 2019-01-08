@@ -109,10 +109,8 @@ def reporte_internet_actual():
            ,s.state_timestamp  
            from network_devices as d
            inner join interfaces as i on d.uid = i.net_device_uid 
-           inner join interface_states as s on i.uid = interface_uid 
-           LEFT JOIN interface_states  AS s2
-           ON (s.interface_uid = s2.interface_uid  AND s.state_timestamp < s2.state_timestamp)
-           WHERE s2.state_timestamp IS NULL;
+	   inner join	(select * from interface_states where DATE(state_timestamp)=DATE(NOW())) as s on s.interface_uid= i.uid
+           inner join  (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid;
            '''
     columns = ['host', 'inter', 'description', 'l1_protocol', 'l1_protocol_attr', 'util_in', 'util_out', 'in_gbs',
                'out_gbs']
