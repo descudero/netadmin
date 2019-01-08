@@ -8,13 +8,13 @@
             <div class="input-group-prepend">
                 <div class="input-group-text">Fecha Inicial</div>
             </div>
-            <input class="form-control" name="initial_date" placeholder="Fecha inicial" type="date">
+            <input class="form-control" id="initial_date" name="initial_date" placeholder="Fecha inicial" type="date">
         </div>
         <div class="input-group mb-2 mr-sm-2">
             <div class="input-group-prepend">
                 <div class="input-group-text">Fecha Final</div>
             </div>
-            <input class="form-control" name="end_date" placeholder="Fecha Final" type="date">
+            <input class="form-control" id="end_date" name="end_date" placeholder="Fecha Final" type="date">
         </div>
         <div class="input-group mb-2 mr-sm-2">
             <div class="input-group-prepend">
@@ -32,10 +32,11 @@
 {% for group , table in tables.items() %}
 
 <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-8">
         <table class="table table-bordered table-striped table-hover table-sm table-light">
 
-            <thead class="thead-dark">
+            <thead class="thead-dark ">
+            <input class='group_name' type="hidden" value="{{group}}">
             <h2>{{group}}</h2>
             {% for column in table[0].keys() %}
             <th>{{column}}</th>
@@ -58,8 +59,18 @@
             </tbody>
         </table>
     </div>
+    <div class="col-sm-4">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="{{group}}_input" style="width: 100%;"></div>
+                <div id="{{group}}_output" style="width: 100%;"></div>
+            </div>
+        </div>
+    </div>
 </div>
-{% endfor %}
 
+{% endfor %}
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="{{ url_for('static', filename='js/graphs.js') }}"></script>
 
 {% endblock %}
