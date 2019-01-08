@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from flask_mysqldb import MySQL
 import socket
 import datetime
@@ -89,6 +89,11 @@ def reporte_internet():
 def css_test():
     return render_template('layout.html', titulo="prueba")
 
+
+@app.route('/reportes/graphs')
+def graph():
+    return render_template('graphs.html')
+
 @app.route('/reportes/internet/actual')
 def reporte_internet_actual():
     sql = '''select  
@@ -142,6 +147,8 @@ def filter_summary(sql_dataframe, columns, sort_column={}):
 
         results[key] = results[key][columns].to_dict(orient='records')
     return results
+
+
 if __name__ == '__main__':
     if socket.gethostname() == 'gu-app-labs':
         port = 8080

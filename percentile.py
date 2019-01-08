@@ -21,16 +21,14 @@ with conection.cursor() as cursor:
     where s.state_timestamp >='2019-01-01 00:00:00' and s.state_timestamp <'2019-01-31 00:00:00'
     '''
     df = pd.read_sql(sql, con=conection)
-    df2 = df[['uid', 'l3_protocol_attr', 'hostname', 'if_index', 'description']].drop_duplicates(subset='uid',
+    df['filter_special'] = df['state_timestamp'].apply(
+        lambda x: '{0}-{1}-{2}-{3}'.format(x.year, x.month, x.day, x.hour))
+    df['month'] = df['state_timestamp'].apply(lambda x: x.month)
+    df['day'] = df['state_timestamp'].apply(lambda x: x.day)
+    df['year'] = df['state_timestamp'].apply(lambda x: x.year)
+    df['day'] = df['state_timestamp'].apply(lambda x: x.day)
+
+    df2 = df[['uid', 'l3_protocol_attr', 'hostname', 'if_index', 'description', 'state_timestamp']].drop_duplicates(
+        subset='uid',
                                                                                                  keep='first')
-    print(df2.info())
-
-    df_proceded = (
-        df.groupby(by=['uid'])['util_out', 'util_in', 'input_rate_gbs', 'output_rate_gbs'].quantile(.95)).reset_index()
-    print(df_proceded.info())
-    df_merge = pd.merge(df_proceded, df2, on=['uid'], how='left').sort_values(
-        ascending=False, by=['util_out'])
-    IPT = df_merge[df_merge['l3_protocol_attr'] == 'IPT'].to_dict(orient='records')
-
-    pprint(len(IPT))
 
