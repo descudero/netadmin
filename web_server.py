@@ -72,8 +72,8 @@ def reporte_internet():
        i.l1_protocol_attr,
        i.data_flow,
        s.util_in as util_in,util_out as util_out,
-       (s.input_rate/1073741824) as in_gbs ,
-       (s.output_rate/1073741824) as out_gbs
+       (s.input_rate/1000000000) as in_gbs ,
+       (s.output_rate/1000000000) as out_gbs
        ,s.state_timestamp  
        from network_devices as d
        inner join interfaces as i on d.uid = i.net_device_uid 
@@ -124,8 +124,8 @@ def reporte_internet_actual():
            i.l1_protocol ,
            i.l1_protocol_attr,i.data_flow,
            s.util_in as util_in,s.util_out as util_out,
-           (s.input_rate/1073741824) as in_gbs ,
-           (s.output_rate/1073741824) as out_gbs
+           (s.input_rate/1000000000) as in_gbs ,
+           (s.output_rate/1000000000) as out_gbs
            ,s.state_timestamp  
            from network_devices as d
            inner join interfaces as i on d.uid = i.net_device_uid 
@@ -187,7 +187,7 @@ def json_data_graph():
     sql = '''select  
         CONCAT(d.hostname, " > ", i.if_index) AS int_host ,
         DATE(s.state_timestamp) as date_poll,
-        max((s.{3}_rate/1073741824)) as value ,
+        max((s.{3}_rate/1000000000)) as value_request ,
         left(right(i.description,CHAR_LENGTH(i.description)-20),20) as description
         ,i.l3_protocol,
         i.l3_protocol_attr,
@@ -198,7 +198,9 @@ def json_data_graph():
         inner join interface_states as s on i.uid = interface_uid 
         where s.state_timestamp >='{0}' and s.state_timestamp <='{1}' {2}
         group by d.hostname,i.uid,i.if_index,description,i.l3_protocol_attr,i.l1_protocol,i.l1_protocol_attr,i.l3_protocol,date_poll
-        order BY date_poll ASC;
+        order BY value_request DESC, date_poll ASC
+        
+        ;
         '''.format(date_start, date_end, sql_text, in_out)
     with mysql.connection.cursor() as cursor:
         cursor.execute(sql)
