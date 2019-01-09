@@ -27,6 +27,7 @@ def normalize_interface_name(interface_string):
 class performance_log():
 
     def __init__(self, name):
+        self.name = name
         self.flags = OrderedDict()
         self.flags["start"] = datetime.now()
 
@@ -57,7 +58,7 @@ class performance_log():
 
     def print_intervals(self):
         last_key = None
-        print("performance log")
+        print("performance log " + self.name)
         for key, time in self.flags.items():
             if last_key is None:
                 print("F:", key, tdm(time, self.end), "ms total time")
