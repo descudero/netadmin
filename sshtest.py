@@ -46,16 +46,21 @@ print(no_responses)
 master = Master(password="zekto2014-", username="descuderor")
 test = CiscoIOS("172.17.28.192", "XR", master)
 test3 = CiscoIOS("172.17.28.110", "XR", master)
-test2 = CiscoXR("172.16.30.253", "IOS", master)
+test2 = CiscoXR("172.16.30.253", "XR", master)
 # test2.set_snmp_community()
 # test2.set_yed_xy()
 # print(test2.x)
 claro.set_master(password="zekto2014-", username="descuderor")
 
-claro.flujo_internet_ufinet()
-
 test2.hostname = 'RO-NAP-COR9K-1'
 test2.platform = 'CiscoXR'
+
+test2.set_interfaces()
+pprint(test2.interfaces['Te0/1/0/0']
+       )
+test2.interfaces['Te0/1/0/0'].save_state()
+
+
 # test2.set_interfaces()
 
 # interfaces = [interface for interface in test2.interfaces.values()

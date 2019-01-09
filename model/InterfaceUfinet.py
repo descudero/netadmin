@@ -73,8 +73,9 @@ class InterfaceUfinet(InterfaceIOS):
                 try:
 
                     self.l1_protocol_attr = self.l1_converter[l1_info[0]][l1_info[1]]
-                except KeyError as e:
+                except (KeyError, IndexError) as e:
                     print(e)
+                    print(l1_info)
                     self.l1_protocol_attr = "UNKNOWN"
             except KeyError as e:
                 print(e)
@@ -181,6 +182,7 @@ class InterfaceUfinet(InterfaceIOS):
                                                                                                self.output_errors,
                                                                                                self.uid,
                                                                                                timestamp)
+                print(sql)
                 cursor.execute(sql)
                 connection.commit()
 
