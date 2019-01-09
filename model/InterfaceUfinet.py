@@ -182,7 +182,7 @@ class InterfaceUfinet(InterfaceIOS):
                                                                                                self.output_errors,
                                                                                                self.uid,
                                                                                                timestamp)
-                print(sql)
+
                 cursor.execute(sql)
                 connection.commit()
 
