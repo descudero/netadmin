@@ -231,7 +231,6 @@ def function_pivot(data_sql, grouping_index=0, column_index=1, value_index=2):
 @app.route('/utilidades/metodos/cisco_json', methods=['POST', 'GET'])
 def json_cisco_commands_tabulated():
     data = request.get_json()
-    print(data)
     ip = request.json['ip']
     method = request.json['method']
     ufinet = Claro()
@@ -239,9 +238,10 @@ def json_cisco_commands_tabulated():
 
     try:
         device = ufinet.correct_device_platform(ufinet.devices_from_ip_list([ip]))[0]
-        method_instatiated = getattr(device, method)
-        dict_table_data = method_instatiated()
-        return jsonify(dict_table_data)
+        method_instantiated = getattr(device, method)
+        dict_table_data = method_instantiated()
+        data_json = jsonify(dict_table_data)
+        return data_json
 
 
 

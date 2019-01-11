@@ -13,11 +13,11 @@
         <div class="form-group">
             <label for="method">Metodo para selecccion de informacion</label>
             <select class="form-control" id="method">
-                <option value="get_interface_dict_data"> interfaces</option>
-                <option value="set_pseudowires"> pseudiwire</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option value="get_interfaces_dict_data"> interfaces XE/XR</option>
+                <option value="set_pseudowires"> pseudiwire XE</option>
+                <option value="set_mpls_te_tunnels">mpls te Tunnels XE/XR</option>
+                <option value="set_service_instances">Service Instance XE</option>
+                <option value="get_vfis_interface_per_service_instance"> service instance with vfi XE</option>
             </select>
         </div>
 
@@ -26,7 +26,7 @@
 </div>
 
 <h1>{{titulo}}</h1>
-
+<img id="loading_json" src="http://thinkfuture.com/wp-content/uploads/2013/10/loading_spinner.gif"/>
 <div class="row">
     <div class="col-sm-12">
         <table id="device_data" class="table table-bordered table-striped table-hover table-sm table-light">

@@ -1,4 +1,5 @@
 import ipaddress
+from collections import OrderedDict
 
 class InterfaceIOS(object):
     def __init__(self, parent_device, parse_data):
@@ -137,3 +138,48 @@ class InterfaceIOS(object):
     def __repr__(self):
         return str(id(self)) + str(
             self.__class__) + self.if_index + " " + self.description + " " + self.link_state + " "
+
+    def dict_data(self):
+        return OrderedDict({'if_index ': self.if_index,
+                            'ip ': str(self.ip),
+                            'speed ': self.speed,
+                            'util_in': self.util_in,
+                            'util_out': self.util_out,
+                            'description ': self.description,
+                            'mtu ': self.mtu,
+                            'link_state ': self.link_state,
+                            'protocol_state ': self.protocol_state,
+                            'hardware_type ': self.hardware_type,
+                            'mac_address ': self.mac_address,
+                            'bia ': self.bia,
+                            'media_type ': self.media_type,
+
+                            'bw ': self.bw,
+                            'duplex ': self.duplex,
+                            'delay ': self.delay,
+                            'last_reset ': self.last_reset,
+                            'output_drops ': self.output_drops,
+                            'input_rate ': self.input_rate,
+                            'output_rate ': self.output_rate,
+                            'input_packets ': self.input_packets,
+                            'output_packets ': self.output_packets,
+                            'runts ': self.runts,
+                            'giants ': self.giants,
+                            'throttles ': self.throttles,
+                            'input_errors ': self.input_errors,
+                            'crc ': self.crc,
+                            'frame ': self.frame,
+                            'overrun ': self.overrun,
+                            'ignored ': self.ignored,
+                            'underruns ': self.underruns,
+                            'output_errors ': self.output_errors,
+                            'collisions ': self.collisions,
+                            'interfaces_resets ': self.interfaces_resets,
+                            'babbles ': self.babbles,
+                            'late_collision ': self.late_collision,
+                            'deferred ': self.deferred,
+                            'lost_carrier ': self.lost_carrier,
+                            'no_carrier ': self.no_carrier,
+                            'pause_output ': self.pause_output
+
+                            })

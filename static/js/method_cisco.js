@@ -1,12 +1,15 @@
 $(document).ready(function () {
+    $('#loading_json').hide()
 
     $('#request_json').click(function (e) {
-
-        var ip = $('#ip').val()
-        var method = $('#method').val()
+        $('#loading_json').show();
+        $("#device_data tbody").empty();
+        $("#device_data thead").empty()
+        var ip = $('#ip').val();
+        var method = $('#method').val();
         send_ajax_graph(ip, method)
 
-    })
+    });
 
 
     function add_table_header(table_data, table_id) {
@@ -42,7 +45,7 @@ $(document).ready(function () {
     }
 
     function send_ajax_graph(ip, method) {
-
+        ;
         $.ajax({
             type: 'POST',
             contentType: 'application/json;charset=UTF-8',
@@ -52,6 +55,7 @@ $(document).ready(function () {
             url: "/utilidades/metodos/cisco_json",
             success: function (traces) {
                 create_table_json_dict("#device_data", traces)
+                $('#loading_json').hide()
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 alert(xhr.status);

@@ -1,4 +1,5 @@
 from model.InterfaceIOS import InterfaceIOS
+from collections import OrderedDict
 import time
 import datetime
 import re
@@ -192,10 +193,3 @@ class InterfaceUfinet(InterfaceIOS):
             print(e)
             return False
 
-    def dict_data(self):
-        return {"if_index": self.if_index,
-                'description': self.description,
-                'util_in': self.util_in,
-                'util_out': self.util_out,
-
-                }

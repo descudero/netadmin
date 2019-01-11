@@ -46,7 +46,7 @@ print(no_responses)
 master = Master()
 test = CiscoIOS("172.17.28.192", "XR", master)
 test3 = CiscoIOS("172.17.28.110", "XR", master)
-test2 = CiscoXR("172.16.30.253", "XR", master)
+test2 = CiscoIOS("172.16.30.5", "XR", master)
 # test2.set_snmp_community()
 # test2.set_yed_xy()
 # print(test2.x)
@@ -56,10 +56,6 @@ test2.hostname = 'RO-NAP-COR9K-1'
 test2.platform = 'CiscoXR'
 
 test2.set_interfaces()
-pprint(test2.interfaces['Te0/1/0/0']
-       )
-test2.interfaces['Te0/1/0/0'].save_state()
-
 
 # test2.set_interfaces()
 

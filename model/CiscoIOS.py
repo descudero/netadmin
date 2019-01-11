@@ -150,6 +150,7 @@ class CiscoIOS(Parent):
                                          command=command)
 
         self.mpls_te_tunnels = {tunnel['tunnel']: tunnel for tunnel in te}
+        return self.mpls_te_tunnels
         # pprint(self.mpls_te_tunnels)
 
     def set_service_instances(self):
@@ -161,6 +162,8 @@ class CiscoIOS(Parent):
                                                         command=command)
         self.service_instances = {normalize_interface_name(row["interface"]) + ":" + row["id"]: row
                                   for row in service_instances}
+
+        return self.service_instances
 
 
     def get_template_by_tunnel_id(self, tunnel_id):
@@ -1246,12 +1249,10 @@ class CiscoIOS(Parent):
         self.set_interfaces()
         interface_data_list = []
         for interface_index, interface in self.interfaces.items():
-            print(interface)
             interface_dict = interface.dict_data()
             interface_dict["device"] = self.hostname
             interface_dict["ip_device"] = self.ip
             interface_data_list.append(interface_dict)
-
         return interface_data_list
 
     def set_interfaces_transciever_optics(self):
@@ -1333,7 +1334,7 @@ class CiscoIOS(Parent):
                     si["vfi"] = ""
                 si["pws_neighbor"] = pws[0]["destination_ip"]
                 si["pws_vcid"] = pws[0]["vc_id"]
-
+        pprint(temporal_service_instance)
         return temporal_service_instance
 
     def pseudowire_per_interface_vlan(self, interface, vlan):
