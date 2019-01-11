@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="row p-4">
+    <form action="" class="form-inline" method="POST">
+        <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+                <div class="input-group-text">Ip del equipo</div>
+            </div>
+            <input class="form-control" id='ip' name="initial_date" placeholder="Ip del equipo" type="text">
+        </div>
+        <div class="form-group">
+            <label for="method">Metodo para selecccion de informacion</label>
+            <select class="form-control" id="method">
+                <option value="get_interface_dict_data"> interfaces</option>
+                <option value="set_pseudowires"> pseudiwire</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+
+    </form>
+    <button class="btn btn-primary mb-2" id="request_json">Enviar</button>
+</div>
+
+<h1>{{titulo}}</h1>
+
+<div class="row">
+    <div class="col-sm-12">
+        <table id="device_data" class="table table-bordered table-striped table-hover table-sm table-light">
+
+            <thead class="thead-dark">
+            </thead>
+
+            <tbody></tbody>
+            >
+        </table>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/method_cisco.js') }}"></script>
+{% endblock %}
+
+

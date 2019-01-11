@@ -1,3 +1,4 @@
+
 from flask import Flask, render_template, request, jsonify
 from flask_mysqldb import MySQL
 import socket
@@ -10,6 +11,9 @@ import pymysql.cursors
 import pymysql
 from pprint import pprint
 from collections import defaultdict
+from config.Master import Master
+from model.claseClaro import Claro
+
 
 
 import pandas as pd
@@ -105,6 +109,7 @@ def reporte_internet():
                            tables=tables)
 
 
+
 @app.route('/test_css')
 def css_test():
     return render_template('layout.html', titulo="prueba")
@@ -142,6 +147,58 @@ def reporte_internet_actual():
                            tables=filter_summary(pd.read_sql(sql, con=mysql.connection), columns, sort_columns))
 
 
+@app.route("/prueba/json/grafica")
+def prueba_json():
+    return render_template("test_graficas.html")
+
+
+@app.route("/internet/isp/total/", methods=['POST', "GET"])
+def internet_total_json():
+    date_start = '2019-1-1'
+    date_end = '2019-1-31'
+    percentile = .95
+    sql = '''select  
+               d.hostname as host,
+               i.uid,
+               i.if_index as inter,
+               right(i.description,CHAR_LENGTH(i.description)-20) as description,i.l3_protocol as l3p,
+               i.l3_protocol_attr as l3a ,
+               i.l1_protocol ,
+               i.l1_protocol_attr,
+               i.data_flow,
+               s.util_in as util_in,util_out as util_out,
+               (s.input_rate/1073741824) as in_gbs ,
+               (s.output_rate/1073741824) as out_gbs
+               ,s.state_timestamp  
+               from network_devices as d
+               inner join interfaces as i on d.uid = i.net_device_uid 
+               inner join interface_states as s on i.uid = interface_uid 
+               where s.state_timestamp >='{initial_date}' and s.state_timestamp <'{end_date}'
+               '''.format(initial_date=date_start, end_date=date_end)
+    df = pd.read_sql(sql, con=mysql.connection)
+    df["day"] = df["state_timestamp"].apply(lambda x: x.day)
+
+    df2 = df[['host', 'uid', 'inter', 'description', 'l3p', 'l3a', 'l1_protocol', 'data_flow',
+              'l1_protocol_attr']].drop_duplicates(subset='uid', keep='first')
+    df_proceded = (
+        df.groupby(by=['uid', "day"])['util_out', 'util_in', 'out_gbs', 'in_gbs'].quantile(percentile)).round(
+        1).reset_index()
+    df_merge = pd.merge(df_proceded, df2, on=['uid'], how='left')
+
+    df_merge.drop(['uid'], axis=1, inplace=True)
+    df_merge["int_host"] = df_merge["host"] + df_merge["inter"]
+    df_merge["x"] = df_merge["day"]
+    df_merge["y1"] = df_merge["in_gbs"]
+    df_merge["y2"] = df_merge["out_gbs"]
+    sort_columns = {'CAPACIDADES_TRANSITO_INTERNET': 'util_in', 'CAPACIDADES_DIRECTOS_ASN': 'util_in',
+                    'SERVIDORES_CACHE_TERCEROS': 'util_in',
+                    'default': 'util_out'}
+
+    return jsonify(filter_summary(df_merge, ["int_host", "x", "y1", "y2"], sort_column=sort_columns))
+
+
+
+
 def filter_sql(filtro, apply_and=True, table_suffix=""):
     filter_keys = {'CAPACIDADES_TRANSITO_INTERNET': {'l3_protocol_attr': 'IPT'},
                    'CAPACIDADES_DIRECTOS_ASN': {'l3_protocol_attr': 'PNI'},
@@ -169,6 +226,35 @@ def function_pivot(data_sql, grouping_index=0, column_index=1, value_index=2):
          'fill': 'tonexty', 'hoverlabel': {'namelength': -1}}
         for serie_name, serie in data.items()]
     return data2
+
+
+@app.route('/utilidades/metodos/cisco_json', methods=['POST', 'GET'])
+def json_cisco_commands_tabulated():
+    data = request.get_json()
+    print(data)
+    ip = request.json['ip']
+    method = request.json['method']
+    ufinet = Claro()
+    ufinet.master = Master()
+
+    try:
+        device = ufinet.correct_device_platform(ufinet.devices_from_ip_list([ip]))[0]
+        method_instatiated = getattr(device, method)
+        dict_table_data = method_instatiated()
+        return jsonify(dict_table_data)
+
+
+
+    except Exception as e:
+        print(repr(e))
+
+
+@app.route('/utilidades/metodos/cisco')
+def tabulate_cisco_command():
+    return render_template('cisco_tabulated_method.html')
+
+
+
 
 
 @app.route('/reportes/json/interface_group_day/', methods=['POST', 'GET'])

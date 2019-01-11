@@ -7,11 +7,12 @@ import pymysql.cursors
 
 import ast
 import time
-
+import yaml
 
 class Master:
 
-    def __init__(self, AdebugLevel=0, password="", username="", logg_name="master"):
+    def __init__(self, AdebugLevel=0, password="", username="", logg_name="master",
+                 config_file="config/config_connection.yml"):
 
         self.communities = ["snmpUfi", "pnrw-med", "uFi08NeT", "pnrw-all"]
 
@@ -19,8 +20,15 @@ class Master:
             self.username = username
             self.password = password
         else:
-            self.username = getpass._raw_input(prompt='username ')
-            self.password = getpass.getpass(prompt='password ')
+            try:
+                config_data = yaml.load(open(config_file).read())
+                print(config_data)
+                self.username = Master.decode(**config_data['username'])
+                self.password = Master.decode(**config_data['password'])
+            except Exception as e:
+                print(repr(e))
+
+
         self.debug = AdebugLevel
         self.dbname = "netadmin"
         self.dbuser = "net_admin"
@@ -82,21 +90,21 @@ class Master:
                         msg=" usr " + self.username + " class " + str(type(originator).__name__) + " " + str(message))
 
     @staticmethod
-    def encode(key, clear):
+    def encode(key, hash):
         enc = []
-        for i in range(len(clear)):
+        for i in range(len(hash)):
             key_c = key[i % len(key)]
-            enc_c = chr((ord(clear[i]) + ord(key_c)) % 256)
+            enc_c = chr((ord(hash[i]) + ord(key_c)) % 256)
             enc.append(enc_c)
         return base64.urlsafe_b64encode("".join(enc).encode()).decode()
 
     @staticmethod
-    def decode(key, enc):
+    def decode(key, hash):
         dec = []
-        enc = base64.urlsafe_b64decode(enc).decode()
-        for i in range(len(enc)):
+        hash = base64.urlsafe_b64decode(hash).decode()
+        for i in range(len(hash)):
             key_c = key[i % len(key)]
-            dec_c = chr((256 + ord(enc[i]) - ord(key_c)) % 256)
+            dec_c = chr((256 + ord(hash[i]) - ord(key_c)) % 256)
             dec.append(dec_c)
         return "".join(dec)
 
