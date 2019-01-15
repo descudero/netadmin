@@ -15,6 +15,7 @@ from struct import pack, unpack
 from datetime import datetime as dt
 from model.ospf_database import ospf_database
 import yaml
+from tools import logged
 
 from pysnmp.entity.rfc3413.oneliner import cmdgen
 from pysnmp.proto.rfc1902 import Integer, IpAddress, OctetString
@@ -30,6 +31,7 @@ from pprint import pprint
 import ipaddress
 
 
+@logged
 class Claro:
 
     def __init__(self):
@@ -49,7 +51,6 @@ class Claro:
     def ospf_topology(self, ip_seed_router, process_id='1', area='0', filename="pruebayed"):
         ospf_db = ospf_database(ip_seed_router=ip_seed_router, isp=self, process_id=process_id, area=area)
         ospf_db.get_yed_file(filename=filename)
-
 
     def tabulate_mpls_traffic_tunnels(self, ip_lsr_router, filename="test_mpls"):
         lsr = CiscoIOS(master=self.master, ip=ip_lsr_router, display_name="lsr")
@@ -132,9 +133,6 @@ class Claro:
                         print(data)
 
         workbook.save(file_name + '.xls')
-
-
-
 
     def search_recived_routers_ipt_advertise(self, ip_pe, display_name_pe, bgp_neigbor_description_filter,
                                              address_family="ipv4 unicast", print_on_screen=True, sep="|"):
@@ -426,7 +424,6 @@ class Claro:
         threads = []
         device_list = []
 
-
         for device in devices:
             t = th.Thread(target=device.get_platform)
             t.start()
@@ -457,15 +454,18 @@ class Claro:
 
     def excute_methods(self, methods, devices):
         th.Thread()
-        ready_devices = []
-
         for method, variable in methods.items():
             threads = []
             for device in devices:
-                method_instantiated = getattr(device, method)
-                t = th.Thread(target=method_instantiated)
-                t.start()
-                threads.append(t)
+                self.dev.info("dev {0} excute method {1}".format(device, method))
+                self.verbose.info("dev {0} excute method {1}".format(device, method))
+                try:
+                    method_instantiated = getattr(device, method)
+                    t = th.Thread(target=method_instantiated)
+                    t.start()
+                    threads.append(t)
+                except Exception as e:
+                    self.verbose.warning("dev {0} excute method {1} error {2}".format(device, method, repr(e)))
             for t in threads:
                 t.join()
 
@@ -516,23 +516,24 @@ class Claro:
         while (len(host_string_ip) > 0):
             if (window > (len(host_string_ip))):
                 window = len(host_string_ip)
-            responses, no_responses = multi_ping(host_string_ip[0:window - 1], timeout=1, retry=5)
+            responses, no_responses = multi_ping(host_string_ip[0:window - 1], timeout=1, retry=2)
             # pprint(responses)
             if (window == len(host_string_ip)):
                 host_string_ip = []
-                print("no more hosts")
             else:
                 host_string_ip = host_string_ip[window:]
-                print("new ping window")
                 # pprint(host_string_ip)
-            pprint([*responses])
             ip_devices = ip_devices + [*responses]
+            self.verbose.info("responses {0}".format(len(str(responses.keys()))))
             final_responses = {**responses, **final_responses}
-            devices = []
-            for ip in ip_devices:
-                device = CiscoIOS(ip, "ios", self.master)
-                devices.append(device)
-            devices = self.correct_device_platform(devices)
+        devices = []
+        self.logger_connection.info("Devices up {0} in net {1}".format(len(ip_devices), string_network))
+        for ip in ip_devices:
+            device = CiscoIOS(ip, "ios", self.master)
+            devices.append(device)
+        self.verbose.debug("Devices created {0}".format(len(devices)))
+        devices = self.correct_device_platform(devices)
+        self.verbose.debug("devices corrected {0}".format(len(devices)))
         return devices, ip_devices
 
     def generate_report_consumption(self, network, filename="test", window=35):

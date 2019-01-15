@@ -9,8 +9,10 @@ import socket
 
 from platform import system as system_name  # Returns the system/OS name
 from subprocess import call   as system_call  # Execute a shell command
+from tools import logged
 
 
+@logged
 class BaseDevice(object):
 
     def __init__(self, ip, display_name, master, platform="CiscoIOS", gateway="null"):
@@ -38,9 +40,11 @@ class BaseDevice(object):
 
     def __str__(self):
         return self.display_name + " " + self.ip
-    def send_command(self, connection, command, pattern="#", read=True, timeout=1):
 
-        print(command)
+    def send_command(self, command, connection=None, pattern="#", read=True, timeout=1):
+        if (connection is None):
+            connection = self.connect()
+
         output = connection.send_command(command,
                                          expect_string=pattern,
                                          strip_command=False,
@@ -65,10 +69,6 @@ class BaseDevice(object):
                 print("contrasena o usuario incorrecto")
 
         return connection
-        self.send_command(connection, "terminal len 0", self.hostname)
-        self.set_hostname(connection)
-
-        return telnet
 
     def set_hostname(self, connection, AcommandHost="show config | i hostname"):
 
@@ -79,7 +79,9 @@ class BaseDevice(object):
         return hostname
 
     def close(self, connection):
+        self.logger_connection.info("{0} close() ".format(self.ip))
         connection.disconnect()
+
 
     def set_config(self, Acommand="show config"):
         connection = self.connect()
@@ -96,19 +98,33 @@ class BaseDevice(object):
     def load_template(self, template_name):
         if not "template" in template_name:
             template_name += ".template"
-        parser = textfsm.TextFSM(open("./resources/templates/" + template_name))
-        return parser
+
+        with open("./resources/templates/" + template_name) as template_text:
+            try:
+                parser = textfsm.TextFSM(template_text)
+                return parser
+            except Exception as e:
+                self.dev.error("unable to load template {0} err {1}".format(template_name, repr(e)))
+
+        return 0
+
 
     def send_command_and_parse(self, command, template_name, timeout=5, close_connection=True):
-        connection = self.connect()
         parser = self.load_template(template_name=template_name)
+        connection = self.connect()
+
         cli_output = self.send_command(connection=connection, command=command, timeout=timeout)
         connection.disconnect()
+        self.verbose.warning("cli output {0}".format(cli_output))
+        try:
+            fsm_results = parser.ParseText(cli_output)
+            header = [column.lower() for column in parser.header]
+            self.verbose.warning(" sin resultados {0}".format(fsm_results))
+            return [dict(zip(header, row)) for row in fsm_results]
+        except Exception as e:
+            self.dev.critical("{0} Unable to parse data {1} ".format(self.ip, repr(e)))
+            return []
 
-        fsm_results = parser.ParseText(cli_output)
-        header = [column.lower() for column in parser.header]
-
-        return [dict(zip(header, row)) for row in fsm_results]
 
     def set_jump_gateway(self, ip, protocol):
         self.jump_gateway = {"ip": ip, "protocol": protocol}

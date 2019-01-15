@@ -16,11 +16,13 @@ import lib.pyyed as pyyed
 from model.BaseDevice import BaseDevice as Parent
 from model.CiscoPart import CiscoPart
 from model.InterfaceUfinet import InterfaceUfinet
-from tools import normalize_interface_name
+from tools import normalize_interface_name, logged
 from lib.snmp_helper import *
 from model.BridgeDomain import BridgeDomain
+import sys
 
 
+@logged
 class CiscoIOS(Parent):
 
     def __init__(self, ip, display_name, master, platform="CiscoIOS", gateway="null"):
@@ -47,12 +49,15 @@ class CiscoIOS(Parent):
         self.ospf_interfaces = dict()
         self.bridge_domains = dict()
         self.add_p2p_ospf = dict()
+        self.dev.debug("device {0} INIT".format(self.ip))
+        self.device_type = "cisco_ios_"
 
     def add_p2p_ospf(self, p2p, p2p_ospf):
 
         self.add_p2p_ospf[p2p.network_id] = {"p2p": p2p, "neighbor": p2p_ospf}
 
-    def send_command(self, connection, command, pattern="#", read=True, timeout=4):
+    def send_command(self, connection, command="", pattern="#", read=True, timeout=4):
+
         '''
            metodo: send_comand
                Parametros:
@@ -68,7 +73,7 @@ class CiscoIOS(Parent):
 
            '''
 
-        self.master.log(20, "sent " + self.ip + " command " + command, self)
+        self.logger_connection.info(" {0} about to sen command {1}".format(self.ip, command))
         output = ""
         retry_counter = 0
         while output == "" and retry_counter < 3:
@@ -76,10 +81,13 @@ class CiscoIOS(Parent):
             try:
                 output = connection.send_command(command_string=command, delay_factor=timeout,
                                                  expect_string=pattern, max_loops=55550)
+                self.logger_connection.debug(" {0}  {1} output {2} ".format(self.ip, command, output))
             except OSError as e:
-                self.master.log(level=40, message="os error unable to send command " + self.ip, originator=self)
+                self.logger_connection.error(
+                    " {0} s error unable to send command {1} error {2}".format(self.ip, command, repr(e)))
+
                 output = ""
-        self.master.log(2, " RX " + self.ip + " output " + output, self)
+
         return output
 
     def internet_validation_arp(self, test_name, vrf):
@@ -125,12 +133,13 @@ class CiscoIOS(Parent):
             return 'null'
 
     def set_pseudo_wire_class(self):
+        # todo change to txtfsm
         command = "show run | s pseudowire-class"
         connection = self.connect()
         output = self.send_command(command=command, connection=connection)
         connection.disconnect()
         for pw_class in output.split("pseudowire-class ")[1:]:
-            # print(pw_class)
+
             lines = pw_class.split("\n")
             data = dict()
             data["encapsulation"] = lines[1].replace(" encapsulation ", "")
@@ -151,7 +160,6 @@ class CiscoIOS(Parent):
 
         self.mpls_te_tunnels = {tunnel['tunnel']: tunnel for tunnel in te}
         return self.mpls_te_tunnels
-        # pprint(self.mpls_te_tunnels)
 
     def set_service_instances(self):
         # todo change to textfsm template
@@ -379,8 +387,7 @@ class CiscoIOS(Parent):
         return prefix_interface
 
     def connect(self, username_pattern='username', password_pattern="password", pattern="#", device_type="cisco_ios_"):
-        if not hasattr(self, 'device_type'):
-            self.device_type = 'cisco_ios_'
+        self.logger_connection.info("Start of connection {0}".format(self.ip))
         '''
            Metodo : connect
                Parametros:
@@ -404,42 +411,35 @@ class CiscoIOS(Parent):
                     si no lo logra
                         retorna error y el objeto como string "null"
         '''
-        connection = "null"
+        connection = ""
 
         retry_counter = 0
 
         if not hasattr(self, "jump_gateway"):
             while type(connection) is str and retry_counter != 3:
                 retry_counter += 1
-                self.master.log(20, "conection ip " + self.ip + " # " + str(retry_counter), self)
                 try:
                     connection = ConnectHandler(device_type=self.device_type + "ssh"
                                                 , ip=self.ip,
                                                 username=self.master.username,
                                                 password=self.master.password)
-                    self.master.log(20, "ssh up " + " ip " + self.ip, self)
 
                 except (
                         AuthenticationException, NetMikoTimeoutException, EOFError, SSHException,
                         ConnectionAbortedError,
                         ValueError, ConnectionRefusedError) as e:
+                    self.logger_connection.warning(
+                        "UNABLE TO CONNECT  SSH {0} ERROR {1}".format(self.ip, str(repr(e))))
                     try:
-
                         connection = ConnectHandler(device_type=self.device_type + "telnet",
                                                     ip=self.ip, username=self.master.username,
                                                     password=self.master.password)
-                        self.master.log(20, "telnet up " + self.display_name + " ip " + self.ip, self)
-
-                    # try ssh
 
                     except (NetMikoAuthenticationException, SSHException, EOFError, ConnectionAbortedError, ValueError,
                             ConnectionRefusedError) as e:
-                        print(self.ip + " not able to connect")
-                        self.master.log(50, "unable to connect wrong user " + self.display_name, self)
+                        self.logger_connection.warning(
+                            "UNABLE TO CONNECT  TELNET {0} ERROR {1}".format(self.ip, str(repr(e))))
 
-                        # if(self.hostname=="#"):
-                        #    self.set_hostname(connection)
-                        # self.send_command(connection, "terminal len 0", self.hostname)
         else:
             # device has to hop another device
             gateway = CiscoIOS(self.jump_gateway["ip"], "gateway", self.master)
@@ -447,11 +447,13 @@ class CiscoIOS(Parent):
             command = "telnet " + self.ip + "\n"
             command += self.master.username + "\n"
             command += self.master.password + "\n"
-            print(gateway.send_command(connection, command, pattern='name:'))
+            gateway.send_command(connection, command, pattern='name:')
             if not connection == "":
-                self.master.log(50, "connected to  " + self.display_name + " via gateway :" + str(gateway) + self)
+                self.logger_connection.info("CONNECTED {0} VIA GTW {1}".format(self.ip, str(gateway)))
             else:
-                self.master.log(50, "not connected to  " + self.display_name + " via gateway :" + str(gateway) + self)
+                self.logger_connection.warning("UNABLE TO CONNECT {0}  VIA GTW {1}".format(self.ip, str(gateway)))
+        if connection != "":
+            self.logger_connection.info("Connected {0} via {1} ".format(self.ip, repr(connection)))
         return connection
 
     def set_hostname(self, connection, command_host="show run | i hostname"):
@@ -476,20 +478,11 @@ class CiscoIOS(Parent):
             if line.startswith("hostname"):
                 hostname = line.replace("hostname ", "")
                 self.hostname = hostname + "#"
-                # print(self.hostname + " este es el hostname" )
                 return self.hostname
                 break
         self.hostname = "#"
         return "#"
 
-    def close(self, connection):
-        """
-        metodo: close
-            :param connection (ConnectHandler): e0s la conexion al equipo
-            :return: nada
-            llama al metodo ConnectHandler.disconnect() para cerrar el pipeline hacia el equipo
-        """
-        connection.disconnect()
 
     def set_config(self, command="show config"):
         """
@@ -740,6 +733,7 @@ class CiscoIOS(Parent):
                     new_working_devices.append(
                         CiscoIOS(ospf_data["ospf_neighbor"], display_name=ospf_data["ospf_neighbor"],
                                  master=self.master))
+
         print("after rid" + self.ip + " working devices " + str(len(new_working_devices)))
 
     def get_ip_ospf_processes(self):
@@ -1080,6 +1074,7 @@ class CiscoIOS(Parent):
         return self.send_command_and_parse(command="show ip ospf " + process_id + " database router",
                                            template_name="show ip ospf database router.template")
 
+
     def ospf_area_adjacency_p2p(self, process_id='1', area='0'):
         ospf_database = self.ospf_database_router(process_id=process_id)
 
@@ -1099,7 +1094,7 @@ class CiscoIOS(Parent):
                 p2p_reduced[link['network']] = [link]
             else:
                 p2p_reduced[link['network']].append(link)
-
+        self.verbose.warning("{0}, {1}".format(p2p_reduced, routers))
         return p2p_reduced, routers
 
     def print_bgp_neighbors(self, address_family="ipv4 unicast"):
@@ -1144,7 +1139,10 @@ class CiscoIOS(Parent):
             self.community = community
             self.set_snmp_hostname()
             if self.hostname != "no_snmp":
+                self.logger_connection.info("{0} snmp community set".format(self.ip))
                 break
+        else:
+            self.logger_connection.info("{0} unable to set snmp community".format(self.ip))
 
     def set_snmp_hostname(self):
         oid = "1.3.6.1.2.1.1.5.0"
@@ -1168,25 +1166,29 @@ class CiscoIOS(Parent):
         try:
             snmp_text = snmp_extract(snmp_data)
         except:
-            print(self.ip, "unable to extract platform")
             snmp_text = "default"
         for pattern, platform_name in platfforms.items():
             if pattern in snmp_text:
                 self.platform = platform_name
+                break
 
     def set_snmp_location(self):
-
+        if (self.community == ""):
+            self.set_snmp_community()
         oid = ".1.3.6.1.2.1.1.6.0"
-        a_device = (self.ip, self.community, 161)
-        snmp_data = snmp_get_oid(a_device=a_device, oid=oid, display_errors=True)
-        snmp_text = snmp_extract(snmp_data)
-        self.snmp_location = snmp_text
+        try:
+            a_device = (self.ip, self.community, 161)
+            snmp_data = snmp_get_oid(a_device=a_device, oid=oid, display_errors=True)
+            snmp_text = snmp_extract(snmp_data)
+            self.snmp_location = snmp_text
+        except Exception as e:
+            self.logger_connection.error("unable to get snmp location {0} {1}".format(self.ip, repr(e)))
 
     def set_yed_xy(self):
         self.set_snmp_location()
         try:
-            self.x = self.snmp_location.split(",")[0].split(":")[1]
-            self.y = self.snmp_location.split(",")[1].split(":")[1]
+            self.x = str(int(self.snmp_location.split(",")[0].split(":")[1]))
+            self.y = str(int(self.snmp_location.split(",")[1].split(":")[1]))
         except:
             self.x = "0"
             self.y = "0"
@@ -1355,19 +1357,22 @@ class CiscoIOS(Parent):
 
     def configure_snmp_location(self, text):
         command = "conf terminal \n snmp-server location " + text + "\n\nexit\nwr\n"
-        print(self.ip, command)
-        print(self.send_command(command=command, connection=self.connect()))
+
+        self.send_command(command=command)
 
     def get_xy_direction(self, x, y):
-        direction = ""
-        if int(self.x) < int(x) - 150:
-            direction += "E"
-        elif int(self.x) > int(x) + 150:
-            direction += "W"
-        if int(self.y) < int(y) - 150:
-            direction = "N"
-        elif int(self.y) > int(y) + 150:
-            direction += "S"
+        direction = "E"
+        try:
+            if int(self.x) < int(x) - 150:
+                direction += "E"
+            elif int(self.x) > int(x) + 150:
+                direction += "W"
+            if int(self.y) < int(y) - 150:
+                direction = "N"
+            elif int(self.y) > int(y) + 150:
+                direction += "S"
+        except Exception as e:
+            pass
         return direction
 
     def get_next_edge_point(self, x, y, last=True):

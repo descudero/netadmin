@@ -6,12 +6,12 @@ from model.InterfaceIOS import InterfaceIOS
 from model.RoutePolicy import RoutePolicy
 from model.prefixSet import PrefixSet
 from pprint import pprint
-from tools import normalize_interface_name
+from tools import normalize_interface_name, logged
 
 # from kivy.uix.boxlayout import bgpBoxLayout
 # from LabelB import LabelB
 
-
+@logged
 class CiscoXR(Parent):
 
     def set_config(self):

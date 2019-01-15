@@ -52,7 +52,7 @@ class ospf_adjacency:
             input_rate, output_rate = neighbor["interface"].util()
             color = colors[int(max(input_rate, output_rate))].hex
             width = str(2 * int(max(input_rate, output_rate) / 10))
-            interface_rate_text = neighbor["interface"].index + "C:" + neighbor[
+            interface_rate_text = neighbor["interface"].if_index + "C:" + neighbor[
                 "metric"] + '\n' + str(output_rate) + "% "
             additional_labels.append(
                 {"text": interface_rate_text, "color": "#000000", "position": key + "center", "size": '20'})

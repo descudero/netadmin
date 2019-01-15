@@ -28,6 +28,7 @@ class ospf_database:
             self.graph.nodes[router.ip] = router.get_yed_node()
         for network, p2p in self.p2p.items():
             self.graph.edges[network] = p2p.yed_edge()
-
+        print(self.routers)
+        print(self.p2p)
         with open(filename + ".graphml", "w") as file:
             file.write(self.graph.get_graph())

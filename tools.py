@@ -1,6 +1,8 @@
-import re
+
 from datetime import datetime
 from collections import OrderedDict
+import logging
+import sys
 
 
 def tdm(start, end):
@@ -66,3 +68,12 @@ class performance_log():
             else:
                 print("F:", last_key, "->", key, tdm(time, self.flags[last_key]), "ms")
                 last_key = key
+
+
+def logged(class_):
+    class_.verbose = logging.getLogger("verbose." + class_.__qualname__)
+    class_.logger_audit = logging.getLogger("audit." + class_.__qualname__)
+    class_.logger_connection = logging.getLogger("connection." + class_.__qualname__)
+    class_.dev = logging.getLogger("dev." + class_.__qualname__)
+
+    return class_

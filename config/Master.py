@@ -1,18 +1,23 @@
 import getpass;
+
 import logging
 from pymongo import MongoClient
 import base64
 import pymysql.cursors
-
-
+import yaml
+import atexit
+import logging.config
+from tools import logged
 import ast
 import time
 import yaml
 
+
+@logged
 class Master:
 
     def __init__(self, AdebugLevel=0, password="", username="", logg_name="master",
-                 config_file="config/config_connection.yml"):
+                 config_file="config/config_connection.yml", config_log_file="config/config_log.yml"):
 
         self.communities = ["snmpUfi", "pnrw-med", "uFi08NeT", "pnrw-all"]
 
@@ -22,12 +27,10 @@ class Master:
         else:
             try:
                 config_data = yaml.load(open(config_file).read())
-                print(config_data)
                 self.username = Master.decode(**config_data['username'])
                 self.password = Master.decode(**config_data['password'])
             except Exception as e:
-                print(repr(e))
-
+                self.logger_dev.error(" UNABLE TO DECODE  CONFIG DATA {0}".format(repr(e)))
 
         self.debug = AdebugLevel
         self.dbname = "netadmin"
@@ -54,7 +57,9 @@ class Master:
         self.level_time_log = 20
         self.logger_time.addHandler(ch2)
         self.logger_time.setLevel(self.level_time_log)
-
+        logging_dic = yaml.load(open(config_log_file))
+        logging.config.dictConfig(logging_dic)
+        atexit.register(logging.shutdown)
 
     def get_password(self):
         return self.password
@@ -76,6 +81,7 @@ class Master:
         self.logger_time.log(level=level,
                              msg=" usr " + self.username + " class " + str(type(originator).__name__) + " " + str(
                                  message))
+
     def log(self, level, message, originator):
         '''
         logs level
