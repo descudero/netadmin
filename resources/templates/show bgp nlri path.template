@@ -10,7 +10,7 @@ Value received_only (\S+)
 Value origin (\w+)
 Value weight (\d+)
 Value local_preference (\d+)
-Value valid (\w+)
+Value valid (valid)
 Value eibgp (\w+)
 Value community (((\d+:\d+)\s?)+)
 Value extended_community (\d+:\d+)
@@ -19,10 +19,14 @@ Value igp_metric (\d+)
 Start
   ^\s+Path\s#$path_no:.+
   ^\s+$local.*
-  ^\s+$as_path.*,\s+\(aggregated\sby\s$as_origin\s$aggregator.*
+  ^.*,\s+\(aggregated\sby\s$as_origin\s$aggregator.* -> Continue
+  ^\s+$as_path.*-> Continue
   ^\s+$next_hop(\s\(metric\s$igp_metric\))?\sfrom\s$neighbor_ip\s\($neighbor_id\)(,\S$received_only)?
-  ^\s+Origin\s$origin(,\smetric\s$weight)?,\slocalpref\s$local_preference,\s$valid,\s$eibgp.*
-  ^\s+Community:\s$extended_community
+  ^\s+Origin\s$origin,.* -> Continue
+  ^\s+Origin.*metric\s$weight,.* -> Continue
+  ^\s+Origin.*localpref\s$local_preference,.* -> Continue
+  ^\s+Origin.*$valid,.* -> Continue
+  ^\s+Community:\s$community
   ^\s+Extended\scommunity:\sRT:$extended_community* -> Record
 
 

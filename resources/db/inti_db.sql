@@ -44,3 +44,6 @@ create table interface_states
   state_timestamp datetime,
   foreign key (interface_uid) references interfaces (uid)
 );
+
+
+

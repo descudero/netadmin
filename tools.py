@@ -1,4 +1,3 @@
-
 from datetime import datetime
 from collections import OrderedDict
 import logging
@@ -6,7 +5,15 @@ import sys
 
 
 def tdm(start, end):
+    '''
+
+    :param start:
+    :param end:
+    :return:
+    time in miliseconds
+    '''
     return (end - start).microseconds / 1000
+
 
 def normalize_interface_name(interface_string):
     '''
@@ -26,7 +33,16 @@ def normalize_interface_name(interface_string):
     return interface_string
 
 
-class performance_log():
+def replace(string_input, matches, replace_string=""):
+    for match in matches:
+        string_input = string_input.replace(match, replace_string)
+    return string_input
+
+
+class PerformanceLog():
+    '''
+    class for performance log
+    '''
 
     def __init__(self, name):
         self.name = name
@@ -69,11 +85,27 @@ class performance_log():
                 print("F:", last_key, "->", key, tdm(time, self.flags[last_key]), "ms")
                 last_key = key
 
+    def time_flag(self, end_flag="end", start_flag="start"):
+        return tdm(end=self.flags[end_flag], start=self.flags[start_flag])
+
+    def format_time_lapse(self, end_flag="end", start_flag="start"):
+        return self.name + " FROM: {0} {1} TO {2} {3} TIME LAPSED #{4}".format(start_flag,
+                                                                               self.flags[start_flag],
+                                                                               end_flag,
+                                                                               self.flags[end_flag],
+                                                                               self.time_flag(end_flag=end_flag,
+                                                                                              start_flag=start_flag))
+
 
 def logged(class_):
+    '''
+    :param class_:
+    class decorator for logs
+    '''
     class_.verbose = logging.getLogger("verbose." + class_.__qualname__)
     class_.logger_audit = logging.getLogger("audit." + class_.__qualname__)
     class_.logger_connection = logging.getLogger("connection." + class_.__qualname__)
     class_.dev = logging.getLogger("dev." + class_.__qualname__)
-
+    class_.per = logging.getLogger("per." + class_.__qualname__)
+    class_.log_db = logging.getLogger("db." + class_.__qualname__)
     return class_

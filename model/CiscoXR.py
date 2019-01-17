@@ -8,6 +8,7 @@ from model.prefixSet import PrefixSet
 from pprint import pprint
 from tools import normalize_interface_name, logged
 
+
 # from kivy.uix.boxlayout import bgpBoxLayout
 # from LabelB import LabelB
 
@@ -447,7 +448,8 @@ class CiscoXR(Parent):
                 if line_ldp_neighbor.find("Up time:") > -1:
                     uptime = line_ldp_neighbor.split(";")[0].replace("  Up time:", "").replace(" ", "")
             interfaces_neighbor_split = \
-            string_ldp_neighbor.split("LDP Discovery Sources:")[1].split("Addresses bound to this peer:")[0].split("\n")
+                string_ldp_neighbor.split("LDP Discovery Sources:")[1].split("Addresses bound to this peer:")[0].split(
+                    "\n")
 
             for interface_neighbor in interfaces_neighbor_split:
                 if (interface_neighbor.find("Targeted Hello") == -1):
@@ -779,7 +781,6 @@ class CiscoXR(Parent):
         return (bgp_recived_routes)
 
     def set_interfaces(self, template_name="show_interfaces_detail_ios.template"):
-        pprint(self)
         super().set_interfaces(template_name=template_name)
 
     def configure_snmp_location(self, text):
@@ -787,74 +788,45 @@ class CiscoXR(Parent):
         print(self.ip, command)
         print(self.send_command(command=command, connection=self.connect()))
 
-    """
-    def get_kivy_policy_rate(self):
-        summary_policy = self.get_summarize_rate()
-        keys ={}
-        keys["in"]= ["bw",
-                 "ENTRADAINTERNETTELGUA",
-                 "ENTRADAINTERNETSALVADOR",
-                 "ENTRADAINTERNET_COSTARICA",
-                 "ENTRADAINTERNETNICARAGUA",
-                 "ENTRADAINTERNETHONDURAS",
-                 "class-default",
-                 "total",
-                 "%"
-                 ]
-        keys["out"]=["bw",
-                 "SALIDAINTERNETTELGUA",
-                 "SALIDAINTERNETSALVADOR",
-                 "SALIDAINTERNETSERCOM",
-                 "SALIDAINTERNETNICARAGUA",
-                 "SALIDAINTERNETCOSTARICA",
-                 "class-default",
-                 "total",
-                 "%"
-                ]
-        connection = self.connect()
-        ipp_policy_layout= BoxLayout(orientation="vertical",spacing=2)
-        ipp_policy_layout.size_hint_x=1
-        self.set_internet_interfaces()
-        for index, interface in self.internet_interfaces.items():
-            interface_layout = interface.get_kivy_policy_rate(connection=connection, parent_device=self, keys=keys)
-            interface_layout.size_hint_x = 1
-            ipp_policy_layout.add_widget(interface_layout)
-        ipp_policy_layout.add_widget(self.get_kivy_summary_layout(keys=keys))
-        return ipp_policy_layout
+    @staticmethod
+    def devices(master, special_filter=""):
+        db_connection = master.db_connect()
+        sql = """ SELECT * FROM network_devices where platform like 'CiscoXR' """
 
-    def get_kivy_summary_layout(self, keys):
+        try:
 
-        summary_rate = self.get_summarize_rate()
-        summary_layout = BoxLayout(orientation="horizontal", spacing=2)
-        label_index = LabelB(text=self.display_name,
-                             font_size=12,
-                             bcolor=[0.5, 0.3, 0.2, 0.25],
-                             size_hint=(0.05, 1))
+            with db_connection.cursor() as cursor:
+                cursor.execute(sql)
+                result = cursor.fetchall()
+                db_connection.close()
+                devices = []
+                for row in result:
+                    device = CiscoXR(ip=row['ip'], display_name=row['hostname'], platform=row['platform'],
+                                     master=master)
+                    device.hostname = row['hostname']
+                    device.uid = row['uid']
+                    devices.append(device)
+                return devices
 
-        label_index.size_hint = (0.16, 1)
-        label_tag = LabelB(text="total", font_size=12, bcolor=[0.6, 0.3, 0.2, 0.25])
-        label_tag.size_hint = (0.14, 1)
-        summary_layout.add_widget(label_index)
-        summary_layout.add_widget(label_tag)
-        for direction, key_set in keys.items():
-            policy_direction_layout = BoxLayout(orientation="horizontal", spacing=2)
-            if direction in summary_rate:
 
-                for index in key_set:
-                    if index in summary_rate[direction]:
+        except Exception as e:
+            print(e)
+            db_connection.close()
+            return None
 
-                        values = summary_rate[direction][index]
-                        colors = Interface.get_kivy_label_usage_color(index=index,
-                                                                      value=values["transmited"],
-                                                                      bw=summary_rate[direction]["bw"]["transmited"],
-                                                                      total=summary_rate[direction]["total"]["transmited"],
-                                                                      opacity=.7)
 
-                        policy_direction_layout.add_widget(LabelB(text=str(round(values["transmited"], 2)),
-                                                                  font_size=12,
-                                                                  bcolor=colors["color"],
-                                                                  color=colors["font_color"]))
-
-            summary_layout.add_widget(policy_direction_layout)
-        return summary_layout
-        """
+'''
+    def set_inventory(self):
+        command = "admin show inventory"
+        template = "show inventory.template"
+        inventory = self.send_command_and_parse(template_name=template,
+                                                command=command)
+        inventory = [{'description': part['description'],
+                      'name': part['name'],
+                      'pid': "FAN",
+                      'sn': 'N/A',
+                      'vid': part['vid']}
+                     for part in inventory if "Generic Fan" in part["description"] and part["pid"] == '']  + [ part
+                    for part in inventory if "Generic Fan" not in part["description"] ]
+        return inventory
+'''

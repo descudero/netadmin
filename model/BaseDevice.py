@@ -115,14 +115,18 @@ class BaseDevice(object):
 
         cli_output = self.send_command(connection=connection, command=command, timeout=timeout)
         connection.disconnect()
-        self.verbose.warning("cli output {0}".format(cli_output))
+        self.verbose.debug("{0} comm {1} cli {2}".format(self.ip, template_name, cli_output))
         try:
             fsm_results = parser.ParseText(cli_output)
             header = [column.lower() for column in parser.header]
-            self.verbose.warning(" sin resultados {0}".format(fsm_results))
+            self.dev.debug(
+                "{0} comm {1} tem {2} con resultados {3} ".format(self.ip, command, template_name, fsm_results))
+            self.verbose.debug(
+                "{0} comm {1} tem {2} con resultados {3} ".format(self.ip, command, template_name, fsm_results))
             return [dict(zip(header, row)) for row in fsm_results]
         except Exception as e:
-            self.dev.critical("{0} Unable to parse data {1} ".format(self.ip, repr(e)))
+            self.dev.critical("{0} Unable to parse data {1} template (2) ".format(self.ip, repr(e), template_name))
+            self.verbose.critical("{0} Unable to parse data {1} template (2) ".format(self.ip, repr(e), template_name))
             return []
 
 

@@ -140,46 +140,45 @@ class InterfaceIOS(object):
             self.__class__) + self.if_index + " " + self.description + " " + self.link_state + " "
 
     def dict_data(self):
-        return OrderedDict({'if_index ': self.if_index,
-                            'ip ': str(self.ip),
-                            'speed ': self.speed,
-                            'util_in': self.util_in,
-                            'util_out': self.util_out,
-                            'description ': self.description,
-                            'mtu ': self.mtu,
-                            'link_state ': self.link_state,
-                            'protocol_state ': self.protocol_state,
-                            'hardware_type ': self.hardware_type,
-                            'mac_address ': self.mac_address,
-                            'bia ': self.bia,
-                            'media_type ': self.media_type,
+        interface_data = dict()
+        interface_data['ip '] = str(self.ip)
+        interface_data['speed '] = self.speed
+        interface_data['util_in'] = self.util_in
+        interface_data['util_out'] = self.util_out
+        interface_data['description '] = self.description
+        interface_data['mtu '] = self.mtu
+        interface_data['link_state '] = self.link_state
+        interface_data['protocol_state '] = self.protocol_state
+        interface_data['hardware_type '] = self.hardware_type
+        interface_data['mac_address '] = self.mac_address
+        interface_data['bia '] = self.bia
+        interface_data['media_type '] = self.media_type
+        interface_data['bw '] = self.bw
+        interface_data['duplex '] = self.duplex
+        interface_data['delay '] = self.delay
+        interface_data['last_reset '] = self.last_reset
+        interface_data['output_drops '] = self.output_drops
+        interface_data['input_rate '] = self.input_rate
+        interface_data['output_rate '] = self.output_rate
+        interface_data['input_packets '] = self.input_packets
+        interface_data['output_packets '] = self.output_packets
+        interface_data['runts '] = self.runts
+        interface_data['giants '] = self.giants
+        interface_data['throttles '] = self.throttles
+        interface_data['input_errors '] = self.input_errors
+        interface_data['crc '] = self.crc
+        interface_data['frame '] = self.frame
+        interface_data['overrun '] = self.overrun
+        interface_data['ignored '] = self.ignored
+        interface_data['underruns '] = self.underruns
+        interface_data['output_errors '] = self.output_errors
+        interface_data['collisions '] = self.collisions
+        interface_data['interfaces_resets '] = self.interfaces_resets
+        interface_data['babbles '] = self.babbles
+        interface_data['late_collision '] = self.late_collision
+        interface_data['deferred '] = self.deferred
+        interface_data['lost_carrier '] = self.lost_carrier
+        interface_data['no_carrier '] = self.no_carrier
+        interface_data['pause_output '] = self.pause_output
 
-                            'bw ': self.bw,
-                            'duplex ': self.duplex,
-                            'delay ': self.delay,
-                            'last_reset ': self.last_reset,
-                            'output_drops ': self.output_drops,
-                            'input_rate ': self.input_rate,
-                            'output_rate ': self.output_rate,
-                            'input_packets ': self.input_packets,
-                            'output_packets ': self.output_packets,
-                            'runts ': self.runts,
-                            'giants ': self.giants,
-                            'throttles ': self.throttles,
-                            'input_errors ': self.input_errors,
-                            'crc ': self.crc,
-                            'frame ': self.frame,
-                            'overrun ': self.overrun,
-                            'ignored ': self.ignored,
-                            'underruns ': self.underruns,
-                            'output_errors ': self.output_errors,
-                            'collisions ': self.collisions,
-                            'interfaces_resets ': self.interfaces_resets,
-                            'babbles ': self.babbles,
-                            'late_collision ': self.late_collision,
-                            'deferred ': self.deferred,
-                            'lost_carrier ': self.lost_carrier,
-                            'no_carrier ': self.no_carrier,
-                            'pause_output ': self.pause_output
-
-                            })
+        return interface_data

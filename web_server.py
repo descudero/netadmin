@@ -6,14 +6,15 @@ import datetime
 import calendar
 import time
 from collections import OrderedDict
-from tools import performance_log
+from tools import PerformanceLog
 import pymysql.cursors
 import pymysql
 from pprint import pprint
 from collections import defaultdict
 from config.Master import Master
 from model.claseClaro import Claro
-
+import logging
+from model.CiscoXR import CiscoXR
 
 
 import pandas as pd
@@ -25,7 +26,10 @@ app.config['MYSQL_USER'] = 'net_admin'
 app.config['MYSQL_PASSWORD'] = 'Ufinet_2010!'
 app.config['MYSQL_DB'] = 'netadmin'
 mysql = MySQL(app)
-
+master = Master()
+weblog = logging.getLogger("web.netadmin.app")
+per = logging.getLogger("performance.netadmin.app")
+verbose = logging.getLogger("verbose.netadmin.app")
 
 def connect_mysql():
     return pymysql.connect(host=app.config['MYSQL_HOST'],
@@ -37,25 +41,26 @@ def connect_mysql():
 
 @app.route('/reportes/internet/', methods=['POST', 'GET'])
 def reporte_internet():
-    pl = performance_log("json")
+    pl = PerformanceLog("json")
     percentile = .95
     month = datetime.date.today().month
     year = datetime.date.today().year
     last_day = calendar.monthrange(year, month)[1]
     initial_date = '{year}-{month}-{day} 00:00:00'.format(year=year, month=month, day=1)
     end_date = '{year}-{month}-{day} 23:59:59'.format(year=year, month=month, day=last_day)
+    weblog.debug(":Reporte_internet: calculated ID {0},ED {1}".format(initial_date, end_date))
     if request.method == 'POST':
         if 'initial_date' in request.form:
             if request.form['initial_date'] == '':
                 initial_date = '{year}-{month}-{day} 00:00:00'.format(year=year, month=month, day=1)
             else:
-                initial_date += ' 00:00:00'
+                initial_date = request.form['initial_date'] + ' 00:00:00'
 
         if 'end_date' in request.form:
             if request.form['end_date'] == '':
                 end_date = '{year}-{month}-{day} 23:59:59'.format(year=year, month=month, day=last_day)
             else:
-                end_date += ' 23:59:59'
+                end_date = request.form['end_date'] + ' 23:59:59'
 
         if 'percentile' in request.form:
             try:
@@ -64,6 +69,8 @@ def reporte_internet():
                 percentile = .95
     if percentile > .99999:
         percentile = .95
+    weblog.debug(":Reporte_internet: final ID {0}, ED {1}".format(initial_date, end_date))
+
     pl.flag("json data")
 
     sql = '''select  
@@ -84,6 +91,7 @@ def reporte_internet():
        inner join interface_states as s on i.uid = interface_uid 
        where s.state_timestamp >='{initial_date}' and s.state_timestamp <'{end_date}'
        '''.format(initial_date=initial_date, end_date=end_date)
+
     df = pd.read_sql(sql, con=mysql.connection)
     pl.flag("df sql")
     df2 = df[['host', 'uid', 'inter', 'description', 'l3p', 'l3a', 'l1_protocol', 'data_flow',
@@ -104,8 +112,14 @@ def reporte_internet():
                 fecha_final=end_date.split(" ")[0])
     tables = filter_summary(df_merge, columns, sort_column=sort_columns)
     pl.flag('filer tables')
-    pl.print_intervals()
-    return render_template('reporte_internet_percentile.html', titulo=titulo,
+    pl.flag('end')
+    if (pl.time_flag() > 2000):
+        per.warning("JSON_GRAPH TO MUCH TIME " + pl.format_time_lapse())
+    else:
+        per.debug("JSON_GRAPH " + pl.format_time_lapse())
+
+    return render_template('reporte_internet_percentile.html', percentile=percentile, titulo=titulo,
+                           end_date=end_date.split(" ")[0], initial_date=initial_date.split(" ")[0],
                            tables=tables)
 
 
@@ -118,6 +132,32 @@ def css_test():
 @app.route('/reportes/graphs')
 def graph():
     return render_template('graphs.html')
+
+
+@app.route('/reportes/inventario/xr')
+def reporte_inventario_xr():
+    master = Master()
+    devices = CiscoXR.devices(master=master)
+    devices_dict = [{"ip": device.ip, "hostname": device.hostname, "platform": device.platform} for device in devices]
+    weblog.info("reporte_inventario: {0} dispositivos".format(len(devices_dict)))
+    titulo = "Inventario de Equipos XR"
+
+    return render_template('inventario.html', titulo=titulo, devices=devices_dict
+                           )
+
+
+@app.route('/reportes/inventario/xr_json', methods=['POST'])
+def json_inventory_per_type():
+    request.get_json()
+    ip = request.json['ip']
+    attr = request.json['attr']
+    verbose.critical(ip)
+    device = CiscoXR(ip=ip, display_name="", master=master, platform="")
+    device.set_chassis(from_db=True)
+    return jsonify([getattr(device.chassis, attr)])
+
+
+
 
 @app.route('/reportes/internet/actual')
 def reporte_internet_actual():
@@ -269,7 +309,7 @@ def json_data_graph():
     if date_end == '': date_end = '{year}-{month}-{day}'.format(year=year, month=month, day=last_day)
     in_out = request.json.get('in_out', 'input')
     sql_text = filter_sql(request.json['group'], apply_and=True, table_suffix="i.")
-    pl = performance_log("json")
+    pl = PerformanceLog("json")
     sql = '''select  
         CONCAT(d.hostname, " > ", i.if_index) AS int_host ,
         DATE(s.state_timestamp) as date_poll,
@@ -297,6 +337,11 @@ def json_data_graph():
 
     jdata = jsonify(data)
     pl.new_flag("j data")
+    pl.new_flag("end")
+    if (pl.time_flag() > 2000):
+        per.warning("JSON_GRAPH TO MUCH TIME " + pl.format_time_lapse())
+    else:
+        per.debug("JSON_GRAPH " + pl.format_time_lapse())
     # pl.print_intervals()
     return jdata
 

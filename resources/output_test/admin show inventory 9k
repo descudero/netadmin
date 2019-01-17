@@ -1,0 +1,272 @@
+NAME: "module 0/RSP0/CPU0", DESCR: "ASR9K Route Switch Processor with 440G/slot Fabric and 6GB"
+PID: A9K-RSP440-TR, VID: V08, SN: FOC2012NMTC
+
+NAME: "module 0/RSP1/CPU0", DESCR: "ASR9K Route Switch Processor with 440G/slot Fabric and 6GB"
+PID: A9K-RSP440-TR, VID: V08, SN: FOC2012NMM3
+
+NAME: "fantray 0/FT0/SP", DESCR: "ASR 9010 Fan Tray Version 2"
+PID: ASR-9010-FAN-V2, VID: V03 , SN: FOC2044N50R
+
+NAME: "fan0 0/FT0/SP", DESCR: "ASR9K Generic Fan"
+PID:    , VID: N/A, SN:
+
+NAME: "fan1 0/FT0/SP", DESCR: "ASR9K Generic Fan"
+PID:    , VID: N/A, SN:
+
+NAME: "fan2 0/FT0/SP", DESCR: "ASR9K Generic Fan"
+PID:    , VID: N/A, SN:
+
+NAME: "fan3 0/FT0/SP", DESCR: "ASR9K Generic Fan"
+PID:    , VID: N/A, SN:
+
+NAME: "fan4 0/FT0/SP", DESCR: "ASR9K Generic Fan"
+PID:    , VID: N/A, SN:
+
+NAME: "fan5 0/FT0/SP", DESCR: "ASR9K Generic Fan"
+PID:    , VID: N/A, SN:
+
+NAME: "fan6 0/FT0/SP", DESCR: "ASR9K Generic Fan"
+PID:    , VID: N/A, SN:
+
+NAME: "fan7 0/FT0/SP", DESCR: "ASR9K Generic Fan"
+PID:    , VID: N/A, SN:
+
+NAME: "fan8 0/FT0/SP", DESCR: "ASR9K Generic Fan"
+PID:    , VID: N/A, SN:
+
+NAME: "fan9 0/FT0/SP", DESCR: "ASR9K Generic Fan"
+PID:    , VID: N/A, SN:
+
+NAME: "fan10 0/FT0/SP", DESCR: "ASR9K Generic Fan"
+PID:    , VID: N/A, SN:
+
+NAME: "fan11 0/FT0/SP", DESCR: "ASR9K Generic Fan"
+PID:    , VID: N/A, SN:
+
+NAME: "fantray 0/FT1/SP", DESCR: "ASR 9010 Fan Tray Version 2"
+PID: ASR-9010-FAN-V2, VID: V03 , SN: FOC2044N52L
+
+NAME: "fan0 0/FT1/SP", DESCR: "ASR9K Generic Fan"
+PID:    , VID: N/A, SN:
+
+NAME: "fan1 0/FT1/SP", DESCR: "ASR9K Generic Fan"
+PID:    , VID: N/A, SN:
+
+NAME: "fan2 0/FT1/SP", DESCR: "ASR9K Generic Fan"
+PID:    , VID: N/A, SN:
+
+NAME: "fan3 0/FT1/SP", DESCR: "ASR9K Generic Fan"
+PID:    , VID: N/A, SN:
+
+NAME: "fan4 0/FT1/SP", DESCR: "ASR9K Generic Fan"
+PID:    , VID: N/A, SN:
+
+NAME: "fan5 0/FT1/SP", DESCR: "ASR9K Generic Fan"
+PID:    , VID: N/A, SN:
+
+NAME: "fan6 0/FT1/SP", DESCR: "ASR9K Generic Fan"
+PID:    , VID: N/A, SN:
+
+NAME: "fan7 0/FT1/SP", DESCR: "ASR9K Generic Fan"
+PID:    , VID: N/A, SN:
+
+NAME: "fan8 0/FT1/SP", DESCR: "ASR9K Generic Fan"
+PID:    , VID: N/A, SN:
+
+NAME: "fan9 0/FT1/SP", DESCR: "ASR9K Generic Fan"
+PID:    , VID: N/A, SN:
+
+NAME: "fan10 0/FT1/SP", DESCR: "ASR9K Generic Fan"
+PID:    , VID: N/A, SN:
+
+NAME: "fan11 0/FT1/SP", DESCR: "ASR9K Generic Fan"
+PID:    , VID: N/A, SN:
+
+NAME: "module 0/0/CPU0", DESCR: "160G Modular Linecard, Packet Transport Optimized"
+PID: A9K-MOD160-TR, VID: V08, SN: FOC1950N03P
+
+NAME: "module 0/0/0", DESCR: "ASR 9000 8-port 10GE Modular Port Adapter"
+PID: A9K-MPA-8X10GE, VID: V04, SN: FOC2218P48E
+
+NAME: "module mau 0/0/0/0", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152518IL617
+
+NAME: "module mau 0/0/0/1", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152518IL616
+
+NAME: "module mau 0/0/0/2", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152518IL606
+
+NAME: "module mau 0/0/0/3", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152518IL607
+
+NAME: "module mau 0/0/0/4", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152518IL618
+
+NAME: "module mau 0/0/0/5", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152518IL608
+
+NAME: "module mau 0/0/0/6", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152518IL611
+
+NAME: "module 0/0/1", DESCR: "ASR 9000 8-port 10GE Modular Port Adapter"
+PID: A9K-MPA-8X10GE, VID: V03, SN: FOC2012N4RU
+
+NAME: "module mau 0/0/1/0", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152517GO276
+
+NAME: "module mau 0/0/1/1", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: V02 , SN: C1808289355
+
+NAME: "module mau 0/0/1/2", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152517GO280
+
+NAME: "module mau 0/0/1/3", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR-X        , VID: V01 , SN: N152517EO255
+
+NAME: "module mau 0/0/1/4", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR-X        , VID: V01 , SN: N152517EO361
+
+NAME: "module mau 0/0/1/5", DESCR: "10GBASE-ER 1550nm SMF 40KM"
+PID: SFP-10G-ER          , VID: V02 , SN: 3152912217
+
+NAME: "module mau 0/0/1/6", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152516FC050
+
+NAME: "module mau 0/0/1/7", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152518DS252
+
+NAME: "module 0/1/CPU0", DESCR: "160G Modular Linecard, Packet Transport Optimized"
+PID: A9K-MOD160-TR, VID: V08, SN: FOC2003N3M8
+
+NAME: "module 0/1/0", DESCR: "ASR 9000 8-port 10GE Modular Port Adapter"
+PID: A9K-MPA-8X10GE, VID: V03, SN: FOC2148N9YM
+
+NAME: "module mau 0/1/0/0", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152518DS077
+
+NAME: "module mau 0/1/0/1", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152518IL620
+
+NAME: "module mau 0/1/0/2", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152517GO278
+
+NAME: "module mau 0/1/0/3", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152518DS253
+
+NAME: "module mau 0/1/0/4", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152517IU691
+
+NAME: "module mau 0/1/0/5", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152518GA393
+
+NAME: "module mau 0/1/0/6", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152517GO275
+
+NAME: "module mau 0/1/0/7", DESCR: "10GBASE-ER 1550nm SMF 40KM"
+PID: SFP-10G-ER          , VID: N/A, SN: N084017H8120
+
+NAME: "module 0/1/1", DESCR: "ASR 9000 8-port 10GE Modular Port Adapter"
+PID: A9K-MPA-8X10GE, VID: V03, SN: FOC2012N4N9
+
+NAME: "module mau 0/1/1/0", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR-X        , VID: V01 , SN: N152517EO268
+
+NAME: "module mau 0/1/1/1", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR-X        , VID: V01 , SN: N152517EO257
+
+NAME: "module mau 0/1/1/2", DESCR: "10GBASE-ER 1550nm SMF 40KM"
+PID: SFP-10G-ER          , VID: V02 , SN: 3152912216
+
+NAME: "module mau 0/1/1/3", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR-X        , VID: V01 , SN: N152517EO266
+
+NAME: "module mau 0/1/1/4", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR-X        , VID: V01 , SN: SPC184701NN
+
+NAME: "module mau 0/1/1/5", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152517JL500
+
+NAME: "module mau 0/1/1/6", DESCR: "10GBASE-ER 1550nm SMF 40KM"
+PID: SFP-10G-ER          , VID: N/A, SN: N084017H8087
+
+NAME: "module mau 0/1/1/7", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152517GO289
+
+NAME: "module 0/2/CPU0", DESCR: "160G Modular Linecard, Packet Transport Optimized"
+PID: A9K-MOD160-TR, VID: V10, SN: FOC2137NPZ5
+
+NAME: "module 0/2/0", DESCR: "ASR 9000 8-port 10GE Modular Port Adapter"
+PID: A9K-MPA-8X10GE, VID: V04, SN: FOC2218P457
+
+NAME: "module mau 0/2/0/0", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152518IL621
+
+NAME: "module 0/7/CPU0", DESCR: "160G Modular Linecard, Packet Transport Optimized"
+PID: A9K-MOD160-TR, VID: V07, SN: FOC1932NN01
+
+NAME: "module 0/7/0", DESCR: "ASR 9000 8-port 10GE Modular Port Adapter"
+PID: A9K-MPA-8X10GE, VID: V03, SN: FOC2135N1AW
+
+NAME: "module mau 0/7/0/0", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: V02 , SN: VE163300675
+
+NAME: "module mau 0/7/0/1", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152517GO279
+
+NAME: "module mau 0/7/0/2", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR-X        , VID: V01 , SN: N152517EO359
+
+NAME: "module mau 0/7/0/3", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152518DR602
+
+NAME: "module mau 0/7/0/4", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: V02 , SN: C1808289348
+
+NAME: "module mau 0/7/0/5", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152518DS248
+
+NAME: "module mau 0/7/0/6", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152518IL609
+
+NAME: "module mau 0/7/0/7", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152518K1158
+
+NAME: "module 0/7/1", DESCR: "ASR 9000 8-port 10GE Modular Port Adapter"
+PID: A9K-MPA-8X10GE, VID: V03, SN: FOC1935NERY
+
+NAME: "module mau 0/7/1/0", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR-X        , VID: V01 , SN: N152517GQ214
+
+NAME: "module mau 0/7/1/1", DESCR: "10GBASE-ER 1550nm SMF 40KM"
+PID: SFP-10G-ER          , VID: N/A, SN: N084017H8083
+
+NAME: "module mau 0/7/1/2", DESCR: "10GBASE-ER 1550nm SMF 40KM"
+PID: SFP-10G-ER          , VID: N/A, SN: N084017H8084
+
+NAME: "module mau 0/7/1/3", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152517JL508
+
+NAME: "module mau 0/7/1/4", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152518DS251
+
+NAME: "module mau 0/7/1/6", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152518IL610
+
+NAME: "module mau 0/7/1/7", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: N/A, SN: N152517JL498
+
+NAME: "power-module 0/PM0/0/SP", DESCR: "2kW DC V2 Power Module"
+PID: PWR-2KW-DC-V2, VID: V01, SN: DTM164300YE
+
+NAME: "power-module 0/PM0/1/SP", DESCR: "2kW DC V2 Power Module"
+PID: PWR-2KW-DC-V2, VID: V01, SN: DTM16430127
+
+NAME: "power-module 0/PM1/0/SP", DESCR: "2kW DC V2 Power Module"
+PID: PWR-2KW-DC-V2, VID: V01, SN: DTM164300YF
+
+NAME: "power-module 0/PM1/1/SP", DESCR: "2kW DC V2 Power Module"
+PID: PWR-2KW-DC-V2, VID: V01, SN: DTM16400063
+
+NAME: "chassis ASR-9010-DC-V2", DESCR: "ASR 9010 8 Line Card Slot Chassis with V2 DC PEM"
+PID: ASR-9010-DC-V2, VID: V01, SN: FOX1639G7M6

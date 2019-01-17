@@ -1,24 +1,38 @@
+String.prototype.replaceAll = function (search, replacement) {
+    var target = this;
+    return target.split(search).join(replacement);
+};
+
 $(document).ready(function () {
-    $('#loading_json').hide()
+    $('.loading_json').hide()
+    update_tables($('#attr').val())
 
-    $('#request_json').click(function (e) {
-        $('#loading_json').show();
-        $("#device_data tbody").empty();
-        $("#device_data thead").empty();
-        var ip = $('#ip').val();
-        var method = $('#method').val();
-        send_ajax_graph(ip, method)
+    $('#attr').change(function (event) {
+        console.log("event ")
+        update_tables($('#attr').val())
 
-    });
+    })
 
+
+    function update_tables(attr) {
+        $(".device_ip").each(function () {
+            var ip = ($(this).val())
+
+            send_ajax_table(ip, attr)
+
+        });
+    }
 
     function add_table_header(table_data, table_id) {
         console.log("add table header")
         console.log('' + table_id + ' thead')
-        var row = table_data[Object.keys(table_data)[0]]
-        console.log(table_data);
-        var row_mark = $('' + table_id + ' thead').append($("<tr>"))
+        console.log('row')
+        var row = table_data[0]
+        console.log($('' + table_id + "head"));
+        var row_mark = $('' + table_id + " thead").append($("<tr>"))
+        console.log(row_mark)
         $.each(row, function (key, value) {
+            console.log(key);
             row_mark.append($("<th>").text(String(key)));
         });
     }
@@ -36,7 +50,8 @@ $(document).ready(function () {
     }
 
     function create_table_json_dict(table_id, table_data) {
-        console.log(table_data)
+        $(table_id + " tbody").empty();
+        $(table_id + " thead").empty();
         add_table_header(table_data, table_id);
         $.each(table_data, function (key, row) {
             add_row_data_table(table_id, row);
@@ -44,22 +59,23 @@ $(document).ready(function () {
 
     }
 
-    function send_ajax_graph(ip, method) {
+    function send_ajax_table(ip, attr) {
         ;
         $.ajax({
             type: 'POST',
             contentType: 'application/json;charset=UTF-8',
-            data: JSON.stringify({method: method, ip: ip, params: ''}),
+            data: JSON.stringify({ip: ip, attr: attr}),
             dataType: "json",
 
-            url: "/utilidades/metodos/cisco_json",
+            url: "/reportes/inventario/xr_json",
             success: function (traces) {
-                create_table_json_dict("#device_data", traces)
-                $('#loading_json').hide()
+
+                create_table_json_dict("#" + ip.replaceAll(".", ""), traces)
+                $('.loading_json').hide()
             },
             error: function (xhr, ajaxOptions, thrownError) {
-                alert(xhr.status);
-                alert(thrownError);
+                console.log(xhr.status);
+                console.log(thrownError);
             },
             complete: function () {
                 // Handle the complete event

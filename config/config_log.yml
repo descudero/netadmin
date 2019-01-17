@@ -20,6 +20,18 @@ handlers:
     class: logging.FileHandler
     filename: logs/dev.log
     formatter: basic
+  web_file:
+    class: logging.FileHandler
+    filename: logs/web.log
+    formatter: basic
+  performance_file:
+    class: logging.FileHandler
+    filename: logs/performance.log
+    formatter: basic
+  db_file:
+    class: logging.FileHandler
+    filename: logs/db.log
+    formatter: basic
 loggers:
   verbose:
     handlers: [console]
@@ -35,7 +47,19 @@ loggers:
     propagate: False
   dev:
     handlers: [dev_file]
-    level: DEBUG
+    level: INFO
+    propagate: False
+  web:
+    handlers: [web_file]
+    level: INFO
+    propagate: False
+  performance:
+    handlers: [performance_file]
+    level: INFO
+    propagate: False
+  db:
+    handlers: [db_file]
+    level: INFO
     propagate: False
 
 root:

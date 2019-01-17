@@ -16,7 +16,7 @@ import lib.pyyed as pyyed
 from model.BaseDevice import BaseDevice as Parent
 from model.CiscoPart import CiscoPart
 from model.InterfaceUfinet import InterfaceUfinet
-from tools import normalize_interface_name, logged
+from tools import normalize_interface_name, logged, replace
 from lib.snmp_helper import *
 from model.BridgeDomain import BridgeDomain
 import sys
@@ -41,7 +41,7 @@ class CiscoIOS(Parent):
         self.pseudowires = dict()
         self.static_routes = dict()
         self.inventory = dict()
-        self.platform = "CiscoIOS"
+        self.platform = platform
         self.community = ""
         self.interfaces_ip = dict()
         self.ldp_neighbors = dict()
@@ -469,19 +469,7 @@ class CiscoIOS(Parent):
                       no se obtine el hostname, string "#"
 
           '''
-        result = self.send_command(connection, command_host, "#")
-        # print(result)
-
-        lines = result.split("\n")
-        for line in lines:
-            # print(line + " esta es una linea")
-            if line.startswith("hostname"):
-                hostname = line.replace("hostname ", "")
-                self.hostname = hostname + "#"
-                return self.hostname
-                break
-        self.hostname = "#"
-        return "#"
+        self.set_snmp_community()
 
 
     def set_config(self, command="show config"):
@@ -1200,42 +1188,37 @@ class CiscoIOS(Parent):
                 if "." not in interface["description"]}
 
     def set_inventory(self):
+
+        replace_in_name = ["module", " mau ", "/CPU0", "TenGigE", 'GigE', "/SP"]
         command = "admin show inventory"
-        connection = self.connect()
-        admin_show_inventory = self.send_command(connection, command, self.hostname, timeout=5)[:-1]
-        parts = []
-        connection.disconnect()
-        for inventory_item in admin_show_inventory.split("\n\n"):
-            try:
-                part = {}
+        template = "show inventory.template"
+        inventory = self.send_command_and_parse(template_name=template,
+                                                command=command)
+        parts = [{'description': part['description'],
+                  'name': replace(part['name'], replace_in_name),
+                  'pid': "FAN",
+                  'sn': 'N/A',
+                  'vid': part['vid']}
+                 for part in inventory if "Generic Fan" in part["description"] and part["pid"] == ''] \
+                + \
+                [{'description': part['description'],
+                  'name': replace(part['name'], replace_in_name),
+                  'pid': part['pid'],
+                  'sn': part['sn'],
+                  'vid': part['vid']} for part in inventory if "Generic Fan" not in part["description"]]
 
-                lines = inventory_item.replace('"', "").split("\n")
 
-                if len(lines) > 2:
-                    lines = lines[len(lines) - 2:]
-                part["local_name"] = lines[0].split(",")[0].replace("NAME:", "") \
-                    .replace(" module", "") \
-                    .replace(" mau ", " ") \
-                    .replace("/CPU0", "") \
-                    .replace("TenGigE", "") \
-                    .replace("GigE", "") \
-                    .replace("/SP", "")
-                part["description"] = lines[0].split(",")[1].replace("DESCR:", "")
-                part["PID"] = lines[1].split(",")[0].replace("PID:", "").replace(" ", "")
-                part["VID"] = lines[1].split(",")[1].replace("VID:", "").replace(" ", "")
-
-                part["SN"] = lines[1].split(",")[2].replace("SN:", "").replace(" ", "")
-                parts.append(part)
-                pprint(parts)
-            except Exception:
-                self.master.log(20, message="unable to add line to inventory :" + self.ip + lines, originator=self)
-
-                pass
         self.inventory = parts
         return parts
 
-    def set_chassis(self):
-        CiscoPart.create_inventory_tree(self, self.set_inventory())
+    def set_chassis(self, from_db=False):
+        print("set _chassis")
+        if from_db:
+            print("set _chassis db")
+            self.verbose.warning("set_chassis:DB")
+            CiscoPart.chassis_from_db(self)
+        else:
+            CiscoPart.create_inventory_tree(self, self.set_inventory())
         return self.chassis
 
     def draw_device_hardware(self, x, y):
@@ -1413,6 +1396,7 @@ class CiscoIOS(Parent):
             return True
 
     def save(self):
+
         try:
             connection = self.master.db_connect()
             with connection.cursor() as cursor:

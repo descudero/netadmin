@@ -1,0 +1,12 @@
+Value name (.+)
+Value description (.+)
+Value pid (\S+)
+Value vid (\S+)
+Value sn (\S+)
+
+Start
+  ^NAME:\s+"$name",\s+DESCR:\s+"$description"
+  ^PID:\s$pid.* -> Continue
+  ^.*VID:\s$vid,.* -> Continue
+  ^.*VID:\s$vid\s,.* -> Continue
+  ^.*SN:(\s$sn)? -> Record

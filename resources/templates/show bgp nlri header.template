@@ -10,10 +10,10 @@ Start
   ^.*best\s\#$best_path\) -> Peers
 
 Peers
-  ^\s+$ce_peers\s?.* -> Continue
-  ^\s+\S+\s+$ce_peers\s.* -> Continue
-  ^\s+\S+\s+\S+\s+$ce_peers\s.* -> Continue
   ^\s+\S+\s+\S+\s+\S+\s+$ce_peers -> Continue
+  ^\s+\S+\s+\S+\s+$ce_peers -> Continue
+  ^\s+\S+\s+$ce_peers -> Continue
+  ^\s+$ce_peers -> Continue
   ^\s+Path.* -> EOF
 
 

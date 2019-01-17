@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<h1>{{titulo}}</h1>
+<div class="row p-4">
+    <form action="" class="form-inline" method="POST">
+
+        <div class="form-group">
+            <label for="attr">Vista Inventario</label>
+            <select class="form-control" id="attr">
+                <option value="type_brief" selected="selected"> Agrupado</option>
+                <option value="pid_brief"> por id de producto</option>
+            </select>
+        </div>
+
+    </form>
+</div>
+
+{% for device  in devices %}
+
+<div class="row">
+    <div class="col-sm-8">
+        <h3>{{device['hostname']}} IP {{device['ip']}} {{device['platform']}}</h3>
+        <img class="loading_json" src="http://thinkfuture.com/wp-content/uploads/2013/10/loading_spinner.gif"/>
+
+        <table id="{{device['ip'].replace('.','')}}"
+               class="table table-bordered table-striped table-hover table-sm table-light">
+            <input value="{{device['ip']}}" class='device_ip' type="hidden">
+            <thead class="thead-dark " id="{{device['ip']}}head">
+
+
+            </thead>
+            <tbody id="{{device['ip']}}body">
+
+            <tr>
+
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="col-sm-4">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="{{group}}_input" style="width: 100%;"></div>
+                <div id="{{group}}_output" style="width: 100%;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endfor %}
+
+<script src="{{ url_for('static', filename='js/inventory_xr.js') }}"></script>
+
+{% endblock %}

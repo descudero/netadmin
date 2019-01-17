@@ -7,32 +7,19 @@ from model.L3Path import L3Path
 from model.claseClaro import Claro
 from pprint import pprint
 from multiping import multi_ping
-from collections import Counter
+
 claro = Claro()
 
-final_counter = Counter()
 master = Master()
-# test = CiscoIOS("172.17.28.192", "XR", master)
-# test3 = CiscoIOS("172.17.28.110", "XR", master)
-test2 = CiscoXR("172.16.30.253", "XR", master)
-
+test = CiscoIOS("172.17.28.192", "XR", master)
+test3 = CiscoIOS("172.17.28.110", "XR", master)
+test2 = CiscoXR("172.16.30.244", "XR", master)
 # test2.set_snmp_community()
 # test2.set_yed_xy()
 # print(test2.x)
-# claro.master = master
-xrs = CiscoXR.devices(master)
+claro.master = master
+claro.ospf_topology("172.16.30.5", filename="ospf_regional")
 
-for xr in xrs:
-    xr.set_chassis(from_db=True)
-
-    final_counter = final_counter + xr.chassis.pid_brief
-
-pprint(final_counter)
-# pprint(test2.chassis.save())
-
-
-# devices = CiscoXR.devices(master)
-#pprint(devices)
 '''
 devices,ips = claro.devices_from_network("172.16.30.0/24")
 
