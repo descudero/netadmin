@@ -8,7 +8,6 @@ $(document).ready(function () {
     update_tables($('#attr').val())
 
     $('#attr').change(function (event) {
-        console.log("event ")
         update_tables($('#attr').val())
 
     })
@@ -24,13 +23,10 @@ $(document).ready(function () {
     }
 
     function add_table_header(table_data, table_id) {
-        console.log("add table header")
-        console.log('' + table_id + ' thead')
-        console.log('row')
+
         var row = table_data[0]
-        console.log($('' + table_id + "head"));
         var row_mark = $('' + table_id + " thead").append($("<tr>"))
-        console.log(row_mark)
+
         $.each(row, function (key, value) {
             console.log(key);
             row_mark.append($("<th>").text(String(key)));
