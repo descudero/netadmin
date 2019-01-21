@@ -4,8 +4,10 @@ import time
 import datetime
 import re
 from itertools import islice
+from tools import logged
 
 
+@logged
 class InterfaceUfinet(InterfaceIOS):
     '''
     This interface ins to accomodate the standard for clasificacion of the interface, and give some special attributtes via
@@ -61,7 +63,7 @@ class InterfaceUfinet(InterfaceIOS):
             try:
                 self.data_flow = self.directions[direction[0].split(":")[1]]
             except KeyError as e:
-                print(e)
+                self.dev.info(self.parent_device.ip + " DF if" + self.if_index + repr(e))
                 self.data_flow = "UNKNOWN"
 
         l1 = re.findall("L1:\S*", self.description)
@@ -75,11 +77,10 @@ class InterfaceUfinet(InterfaceIOS):
 
                     self.l1_protocol_attr = self.l1_converter[l1_info[0]][l1_info[1]]
                 except (KeyError, IndexError) as e:
-                    print(e)
-                    print(l1_info)
+                    self.dev.info(self.parent_device.ip + " l1 if" + self.if_index + repr(e))
                     self.l1_protocol_attr = "UNKNOWN"
             except KeyError as e:
-                print(e)
+                self.dev.info(self.parent_device.ip + " L1 if" + self.if_index + repr(e))
                 self.l1_protocol = "UNKNOWN"
                 self.l1_protocol_attr = "UNKNOWN"
         else:
@@ -100,7 +101,7 @@ class InterfaceUfinet(InterfaceIOS):
                 sql = '''SELECT uid FROM interfaces WHERE if_index=%s AND net_device_uid =%s'''
                 cursor.execute(sql, (self.if_index, self.parent_device.uid_db()))
                 result = cursor.fetchone()
-                if (result):
+                if result:
                     self.uid = result['uid']
                     connection.close()
                     return self.uid
@@ -109,7 +110,7 @@ class InterfaceUfinet(InterfaceIOS):
                     connection.close()
                     return 0
         except Exception as e:
-            print(e)
+            self.db_log.warning(self.parent_device.ip + " db" + self.if_index + repr(e))
             return 0
 
     def save(self):
@@ -190,6 +191,6 @@ class InterfaceUfinet(InterfaceIOS):
             return self.uid
         except Exception as e:
             connection.rollback()
-            print(e)
+            self.db_log.warning(self.parent_device.ip + " db" + self.if_index + repr(e))
             return False
 

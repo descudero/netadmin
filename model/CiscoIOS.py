@@ -51,6 +51,7 @@ class CiscoIOS(Parent):
         self.add_p2p_ospf = dict()
         self.dev.debug("device {0} INIT".format(self.ip))
         self.device_type = "cisco_ios_"
+        self.uid = 0
 
     def add_p2p_ospf(self, p2p, p2p_ospf):
 
@@ -73,21 +74,23 @@ class CiscoIOS(Parent):
 
            '''
 
-        self.logger_connection.info(" {0} about to sen command {1}".format(self.ip, command))
+
         output = ""
         retry_counter = 0
-        while output == "" and retry_counter < 3:
+        while output == "" and retry_counter < 1:
+            self.logger_connection.info(" {0} about to sen command {1} RC {2}".format(self.ip, command, retry_counter))
             retry_counter += 1
             try:
                 output = connection.send_command(command_string=command, delay_factor=timeout,
                                                  expect_string=pattern, max_loops=55550)
                 self.logger_connection.debug(" {0}  {1} output {2} ".format(self.ip, command, output))
-            except OSError as e:
+            except (OSError, AttributeError) as e:
                 self.logger_connection.error(
                     " {0} s error unable to send command {1} error {2}".format(self.ip, command, repr(e)))
 
                 output = ""
-
+        if output == "":
+            self.logger_connection.error(" {0} no output {1}".format(self.ip, command))
         return output
 
     def internet_validation_arp(self, test_name, vrf):
@@ -416,8 +419,9 @@ class CiscoIOS(Parent):
         retry_counter = 0
 
         if not hasattr(self, "jump_gateway"):
-            while type(connection) is str and retry_counter != 3:
+            while type(connection) is str and retry_counter < 2:
                 retry_counter += 1
+                self.verbose.warning("connect {0} RC {1}".format(self.ip, str(retry_counter)))
                 try:
                     connection = ConnectHandler(device_type=self.device_type + "ssh"
                                                 , ip=self.ip,
@@ -454,6 +458,10 @@ class CiscoIOS(Parent):
                 self.logger_connection.warning("UNABLE TO CONNECT {0}  VIA GTW {1}".format(self.ip, str(gateway)))
         if connection != "":
             self.logger_connection.info("Connected {0} via {1} ".format(self.ip, repr(connection)))
+
+        self.verbose.debug(" {ip} Connection created {connection} ".format(ip=self.ip, connection=connection))
+        if type(connection) is str:
+            self.verbose.critical(" {ip} unable to connect  ".format(ip=self.ip))
         return connection
 
     def set_hostname(self, connection, command_host="show run | i hostname"):
@@ -1082,7 +1090,7 @@ class CiscoIOS(Parent):
                 p2p_reduced[link['network']] = [link]
             else:
                 p2p_reduced[link['network']].append(link)
-        self.verbose.warning("{0}, {1}".format(p2p_reduced, routers))
+        self.verbose.debug("{0}, {1}".format(p2p_reduced, routers))
         return p2p_reduced, routers
 
     def print_bgp_neighbors(self, address_family="ipv4 unicast"):
@@ -1271,6 +1279,12 @@ class CiscoIOS(Parent):
                           )
         return node
 
+    def get_vs(self):
+        if self.uid_db() == 0:
+            self.save()
+        return {'id': self.uid, 'label': self.ip + '\n' + self.hostname,
+                'image': '../static/img/' + self.platform + '.png', 'shape': 'image'}
+
     def get_vfis_interface_per_service_instance(self):
         '''
         set service _instance
@@ -1395,6 +1409,11 @@ class CiscoIOS(Parent):
         else:
             return True
 
+    def get_uid_save(self):
+        if not self.in_db():
+            self.save(
+            )
+        return self.uid
     def save(self):
 
         try:
@@ -1405,6 +1424,7 @@ class CiscoIOS(Parent):
                 cursor.execute(sql, (self.ip, self.hostname, self.platform))
                 connection.commit()
                 self.uid = cursor.lastrowid
+                self.db_log(":SAVED uid:" + self.uid)
             return self.uid
         except Exception as e:
             print(e)

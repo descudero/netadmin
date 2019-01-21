@@ -16,6 +16,7 @@ from datetime import datetime as dt
 from model.ospf_database import ospf_database
 import yaml
 from tools import logged
+from flask import jsonify
 
 from pysnmp.entity.rfc3413.oneliner import cmdgen
 from pysnmp.proto.rfc1902 import Integer, IpAddress, OctetString
@@ -47,6 +48,17 @@ class Claro:
         self.dbpassword = 'epsilon123'
         self.max_threads = 50
         self.not_connected_devices = []
+
+    def ospf_topology_vs(self, ip_seed_router, process_id='1', area='0', filename="pruebayed", shelve_name="test_ospf",
+                         from_shelve=False):
+        with  shelve.open(shelve_name) as sh:
+            if from_shelve:
+                ospf_db = sh["db"]
+            else:
+                ospf_db = ospf_database(ip_seed_router=ip_seed_router, isp=self, process_id=process_id, area=area)
+                sh["db"] = ospf_db
+        dict_ospf = ospf_db.get_vs()
+        return dict_ospf
 
     def ospf_topology(self, ip_seed_router, process_id='1', area='0', filename="pruebayed"):
         ospf_db = ospf_database(ip_seed_router=ip_seed_router, isp=self, process_id=process_id, area=area)
@@ -452,22 +464,31 @@ class Claro:
             devices.append(device)
         return devices
 
-    def excute_methods(self, methods, devices):
+    def excute_methods(self, methods, devices, thread_window=100):
         th.Thread()
+        threads = []
         for method, variable in methods.items():
-            threads = []
+
             for device in devices:
                 self.dev.info("dev {0} excute method {1}".format(device, method))
                 self.verbose.info("dev {0} excute method {1}".format(device, method))
                 try:
-                    method_instantiated = getattr(device, method)
-                    t = th.Thread(target=method_instantiated)
-                    t.start()
-                    threads.append(t)
+                    if (len(threads) < thread_window):
+                        method_instantiated = getattr(device, method)
+                        t = th.Thread(target=method_instantiated)
+                        t.start()
+                        threads.append(t)
+                    else:
+                        self.dev.info("excute_methods: Window join ")
+                        self.verbose.info("excute_methods: Window join ")
+                        for t in threads:
+                            t.join()
+                        threads = []
+
                 except Exception as e:
                     self.verbose.warning("dev {0} excute method {1} error {2}".format(device, method, repr(e)))
-            for t in threads:
-                t.join()
+        for t in threads:
+            t.join()
 
         return devices
 

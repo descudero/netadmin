@@ -30,3 +30,6 @@ from device_parts as p1
                    from device_parts
                    where net_device_uid = 5) as t on p1.time_polled = max_time
 where net_device_uid = 5
+
+select *
+from network_devices;

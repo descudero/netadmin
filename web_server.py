@@ -129,9 +129,9 @@ def css_test():
     return render_template('layout.html', titulo="prueba")
 
 
-@app.route('/reportes/graphs')
-def graph():
-    return render_template('graphs.html')
+@app.route('/diagramas/prueba')
+def diagramas():
+    return render_template('diagramas.html')
 
 
 @app.route('/reportes/inventario/xr')

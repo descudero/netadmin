@@ -14,20 +14,15 @@ final_counter = Counter()
 master = Master()
 # test = CiscoIOS("172.17.28.192", "XR", master)
 # test3 = CiscoIOS("172.17.28.110", "XR", master)
-test2 = CiscoXR("172.16.30.253", "XR", master)
+# test2 = CiscoXR("172.16.30.253", "XR", master)
 
 # test2.set_snmp_community()
 # test2.set_yed_xy()
 # print(test2.x)
-# claro.master = master
-xrs = CiscoXR.devices(master)
+claro.master = master
+# xrs = CiscoXR.devices(master)
 
-for xr in xrs:
-    xr.set_chassis(from_db=True)
-
-    final_counter = final_counter + xr.chassis.pid_brief
-
-pprint(final_counter)
+pprint(claro.ospf_topology_vs(ip_seed_router="172.16.30.5", from_shelve=False, shelve_name="20100118shelve"))
 # pprint(test2.chassis.save())
 
 
