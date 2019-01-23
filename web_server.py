@@ -27,7 +27,7 @@ app.config['MYSQL_USER'] = 'net_admin'
 app.config['MYSQL_PASSWORD'] = 'Ufinet_2010!'
 app.config['MYSQL_DB'] = 'netadmin'
 master = Master()
-mysql = master.db_connect()
+mysql = master
 
 weblog = logging.getLogger("web.netadmin.app")
 per = logging.getLogger("performance.netadmin.app")

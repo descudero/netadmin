@@ -40,7 +40,7 @@ class Master:
         self.dbhost = "10.250.55.17"
         self.logger = logging.getLogger(logg_name)
         self.logger_time = logging.getLogger("timer")
-
+        self.connection = self.db_connect()
         ch = logging.FileHandler('boip.log')
         ch.setLevel(0)
         formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - @%(message)s @')
