@@ -1,6 +1,6 @@
 
 from flask import Flask, render_template, request, jsonify
-from flask_mysqldb import MySQL
+
 import socket
 import datetime
 import calendar
@@ -26,8 +26,9 @@ app.config['MYSQL_HOST'] = '10.250.55.17'
 app.config['MYSQL_USER'] = 'net_admin'
 app.config['MYSQL_PASSWORD'] = 'Ufinet_2010!'
 app.config['MYSQL_DB'] = 'netadmin'
-mysql = MySQL(app)
 master = Master()
+mysql = master.db_connect()
+
 weblog = logging.getLogger("web.netadmin.app")
 per = logging.getLogger("performance.netadmin.app")
 verbose = logging.getLogger("verbose.netadmin.app")
