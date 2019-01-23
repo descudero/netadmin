@@ -1282,7 +1282,7 @@ class CiscoIOS(Parent):
     def get_vs(self):
         if self.uid_db() == 0:
             self.save()
-        return {'id': self.uid, 'label': self.ip + '\n' + self.hostname,
+        return {'mass': 10, 'id': self.uid, 'label': self.ip + " " + self.hostname, 'font': {'size': '8'},
                 'image': '../static/img/' + self.platform + '.png', 'shape': 'image'}
 
     def get_vfis_interface_per_service_instance(self):

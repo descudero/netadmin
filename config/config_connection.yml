@@ -4,3 +4,5 @@ password:
 username:
   key: "pinf con vrf"
   hash: "w5fDjsOhw5rCicOSw50="
+threads:
+  device_connections: 15

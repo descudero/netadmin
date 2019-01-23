@@ -13,6 +13,7 @@ from pprint import pprint
 from collections import defaultdict
 from config.Master import Master
 from model.claseClaro import Claro
+from model.InternetServiceProvider import InternetServiceProvider as ISP
 import logging
 from model.CiscoXR import CiscoXR
 
@@ -129,9 +130,37 @@ def css_test():
     return render_template('layout.html', titulo="prueba")
 
 
-@app.route('/diagramas/prueba')
+@app.route('/diagramas/ospf')
 def diagramas():
     return render_template('diagramas.html')
+
+
+@app.route('/diagramas/prueba_json', methods=['POST'])
+def ospf_json_vs():
+    isp = ISP()
+    isp.master = master
+    request.get_json()
+    saved = request.json['saved']
+    date = request.json['date'].replace("-", "")
+    if (date == ""):
+        date = time.strftime("%Y%m%d")
+    network = request.json['date']
+    pl = PerformanceLog("json_diagram")
+    if saved == "actual":
+        data = isp.ospf_topology_vs(ip_seed_router="172.16.30.15", from_shelve=False,
+                                    shelve_name="shelves/" + time.strftime("%Y%m%d"))
+    else:
+        try:
+            data = isp.ospf_topology_dict_vs_date(date_string=date)
+        except Exception as e:
+            weblog.warning(repr(e))
+            data = {'nodes': {'id': 0, "label": "NO DATA DATE"}, 'edges': {}, "options": {}}
+
+    pl.flag("end")
+    per.info("OSPF JSON TIM " + str(pl.format_time_lapse()))
+    pprint(data)
+
+    return jsonify(data)
 
 
 @app.route('/reportes/inventario/xr')

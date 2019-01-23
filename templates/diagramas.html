@@ -3,6 +3,33 @@
 {% block body %}
 <script src="{{ url_for('static', filename='js/vis.js') }}"></script>
 <link href="{{ url_for('static', filename='css/vis.min.css') }}" rel="stylesheet" type="text/css"/>
+
+
+<div class="row p-4">
+    <form action="" class="form-inline" method="POST">
+        <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+                <div class="input-group-text">Fecha</div>
+            </div>
+            <input class="form-control" id='date' name="date" type="date">
+        </div>
+        <div class="form-group">
+            <label for="saved"></label>
+            <select class="form-control" id="network">
+                <option value="mpls_regional" selected> MPLS REGIONAL UFINET</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="saved"></label>
+            <select class="form-control" id="saved">
+                <option value="previous" selected> historico</option>
+                <option value="actual"> actual</option>
+            </select>
+        </div>
+
+    </form>
+    <button class="btn btn-primary mb-2" id="request_json">Enviar</button>
+</div>
 <style type="text/css">
     #mynetwork {
         width: 100%;

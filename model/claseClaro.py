@@ -49,13 +49,15 @@ class Claro:
         self.max_threads = 50
         self.not_connected_devices = []
 
-    def ospf_topology_vs(self, ip_seed_router, process_id='1', area='0', filename="pruebayed", shelve_name="test_ospf",
+    def ospf_topology_vs(self, ip_seed_router, process_id='1', area='0', shelve_name="test_ospf",
                          from_shelve=False):
-        with  shelve.open(shelve_name) as sh:
-            if from_shelve:
+        if from_shelve:
+            with shelve.open(shelve_name) as sh:
                 ospf_db = sh["db"]
-            else:
-                ospf_db = ospf_database(ip_seed_router=ip_seed_router, isp=self, process_id=process_id, area=area)
+        else:
+
+            ospf_db = ospf_database(ip_seed_router=ip_seed_router, isp=self, process_id=process_id, area=area)
+            with shelve.open(shelve_name) as sh:
                 sh["db"] = ospf_db
         dict_ospf = ospf_db.get_vs()
         return dict_ospf
@@ -588,7 +590,6 @@ class Claro:
                     interfaces += device.get_interfaces_filtered(filters=filter)
         for interface in interfaces:
             interface.save_state()
-
 
 
 """

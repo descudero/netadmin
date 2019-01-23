@@ -8,11 +8,13 @@ from model.claseClaro import Claro
 from pprint import pprint
 from multiping import multi_ping
 from collections import Counter
+
 claro = Claro()
 
 final_counter = Counter()
 master = Master()
-# test = CiscoIOS("172.17.28.192", "XR", master)
+test = CiscoIOS("10.242.55.5", "XR", master)
+test.set_jump_gateway("10.250.55.3", protocol="telnet")
 # test3 = CiscoIOS("172.17.28.110", "XR", master)
 # test2 = CiscoXR("172.16.30.253", "XR", master)
 
@@ -22,12 +24,10 @@ master = Master()
 claro.master = master
 # xrs = CiscoXR.devices(master)
 
-pprint(claro.ospf_topology_vs(ip_seed_router="172.16.30.5", from_shelve=False, shelve_name="20100122shelve"))
-# pprint(test2.chassis.save())
-
+test.create_file_nagios_arp()
 
 # devices = CiscoXR.devices(master)
-#pprint(devices)
+# pprint(devices)
 '''
 devices,ips = claro.devices_from_network("172.16.30.0/24")
 

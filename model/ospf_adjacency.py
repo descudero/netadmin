@@ -24,11 +24,11 @@ class ospf_adjacency:
             except KeyError:
                 self.adj_neighbors[neighbor_key]["interface"] = "null"
             self.adj_neighbors[neighbor_key]["network_device"] = device
-        pair_id = self.pair_id()
+        pair = self.pair_id()
 
-        self.ospf_database.neighbors_occurrences_count[pair_id] += 1
-        self.roundness = self.ospf_database.edge_roundness[self.ospf_database.neighbors_occurrences_count[pair_id]]
-        if self.ospf_database.neighbors_occurrences_count[pair_id] % 2 == 0:
+        self.ospf_database.neighbors_occurrences_count[pair] += 1
+        self.roundness = self.ospf_database.edge_roundness[self.ospf_database.neighbors_occurrences_count[pair]]
+        if self.ospf_database.neighbors_occurrences_count[pair] % 2 == 0:
             self.reversed = True
             self.adj_obj_list()
             self.verbose.critical(" net_id reversed ")
@@ -36,7 +36,8 @@ class ospf_adjacency:
             self.verbose.critical(" net_id not reversed ")
         # self.adj_neighbors["s"]["network_device"].add_p2p_ospf(self,self.adj_neighbors["t"])
         # self.adj_neighbors["t"]["network_device"].add_p2p_ospf(self,self.adj_neighbors["s"])
-        self.dev.info("adjacency " + pair_id + " inited")
+        self.dev.info("adjacency " + pair + " inited")
+        self.set_vs()
 
     def __repr__(self):
         return str(self.__class__) + " NET " + self.network_id + " " + self.network_type + " N " + str(
@@ -94,21 +95,33 @@ class ospf_adjacency:
             if_index = adj["interface"].if_index
         except AttributeError as e:
             if_index = "NA"
-        label = if_index + " R:" + str(output_rate) + " O:" + str(adj["metric"])
+        label = if_index + " R:" + str(output_rate) + "%" + " O:" + str(adj["metric"])
         return label
 
-    def get_vs(self):
+    def set_vs(self):
         green = Color("LawnGreen")
         yellow = Color("Yellow")
         red = Color("Red")
         source, target = self.neighbors()
+        if self.reversed:
+            source, target = target, source
+            self.vs = {'from': source.uid_db(), 'to': target.uid_db(),
+                       'label': '-',
+                       'font': {'size': '8'},
+                       'labelFrom': self.edge_label(orient='target'),
+                       'labelTo': self.edge_label(orient='source'),
+                       'smooth': {'type': 'curvedCW', 'roundness': self.roundness}}
+        else:
+            self.vs = {'from': source.uid_db(), 'to': target.uid_db(),
+                       'label': '-',
+                       'font': {'size': '8'},
+                       'labelFrom': self.edge_label(orient='source'),
+                       'labelTo': self.edge_label(orient='target'),
+                       'smooth': {'type': 'curvedCW', 'roundness': self.roundness}}
 
-        return {'from': source.uid_db(), 'to': target.uid_db(),
-                'label': '-',
-                'font': {'size': '8'},
-                'labelFrom': self.edge_label(orient='source'),
-                'labelTo': self.edge_label(orient='target'),
-                'smooth': {type: 'curvedCW', 'roundness': self.roundness}}
+
+    def get_vs(self):
+        return self.vs
 
     def adj_obj_list(self):
         neighbor_data = sorted([self.adj_neighbors["s"], self.adj_neighbors["t"]], key=lambda x: x["network_device"].ip)
@@ -125,7 +138,14 @@ class ospf_adjacency:
         return adj_list[0]["network_device"], adj_list[1]["network_device"]
 
     def pair_id(self):
+        if not hasattr(self, 'pair'):
+            source, target = self.neighbors()
+            self.pair = "".join(sorted([source.ip, target.ip]))
 
-        source, target = self.neighbors()
+        return self.pair
 
-        return "".join(sorted([source.ip, target.ip]))
+
+def add_ospf_adjacency(list_networks, network_id, ospf_database, neighbors,
+                       network_type):
+    list_networks.append(ospf_adjacency(network_id=network_id, ospf_database=ospf_database, neighbors=neighbors,
+                                        network_type=network_type))

@@ -20,7 +20,7 @@ class Master:
                  config_file="config/config_connection.yml", config_log_file="config/config_log.yml"):
 
         self.communities = ["snmpUfi", "pnrw-med", "uFi08NeT", "pnrw-all"]
-
+        self.device_connections = 20
         if password != "" and username != "":
             self.username = username
             self.password = password
@@ -29,8 +29,9 @@ class Master:
                 config_data = yaml.load(open(config_file).read())
                 self.username = Master.decode(**config_data['username'])
                 self.password = Master.decode(**config_data['password'])
+                self.device_connections = config_data['threads']['device_connections']
             except Exception as e:
-                self.logger_dev.error(" UNABLE TO DECODE  CONFIG DATA {0}".format(repr(e)))
+                self.dev.error(" UNABLE TO DECODE  CONFIG DATA {0}".format(repr(e)))
 
         self.debug = AdebugLevel
         self.dbname = "netadmin"
