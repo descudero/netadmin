@@ -94,7 +94,7 @@ def reporte_internet():
        where s.state_timestamp >='{initial_date}' and s.state_timestamp <'{end_date}'
        '''.format(initial_date=initial_date, end_date=end_date)
 
-    df = pd.read_sql(sql, con=mysql.connection)
+    df = pd.read_sql(sql, con=master.db_connect())
     pl.flag("df sql")
     df2 = df[['host', 'uid', 'inter', 'description', 'l3p', 'l3a', 'l1_protocol', 'data_flow',
               'l1_protocol_attr']].drop_duplicates(subset='uid', keep='first')
@@ -214,7 +214,7 @@ def reporte_internet_actual():
                     'default': 'util_out'}
     titulo = "ESTADO ACTUAL DE CAPACIDADES RELACIONADAS A INTERNET UFINET"
     return render_template('reporte_internet.html', titulo=titulo,
-                           tables=filter_summary(pd.read_sql(sql, con=mysql.connection), columns, sort_columns))
+                           tables=filter_summary(pd.read_sql(sql, con=master.db_connect()), columns, sort_columns))
 
 
 @app.route("/prueba/json/grafica")
@@ -245,7 +245,7 @@ def internet_total_json():
                inner join interface_states as s on i.uid = interface_uid 
                where s.state_timestamp >='{initial_date}' and s.state_timestamp <'{end_date}'
                '''.format(initial_date=date_start, end_date=date_end)
-    df = pd.read_sql(sql, con=mysql.connection)
+    df = pd.read_sql(sql, con=mysql.master.db_connect())
     df["day"] = df["state_timestamp"].apply(lambda x: x.day)
 
     df2 = df[['host', 'uid', 'inter', 'description', 'l3p', 'l3a', 'l1_protocol', 'data_flow',
@@ -358,7 +358,7 @@ def json_data_graph():
         
         ;
         '''.format(date_start, date_end, sql_text, in_out)
-    with mysql.connection.cursor() as cursor:
+    with master.db_connect().cursor() as cursor:
         cursor.execute(sql)
         data_sql = cursor.fetchall()
         pl.new_flag("load normal sql")
