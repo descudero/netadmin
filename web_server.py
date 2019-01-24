@@ -149,7 +149,7 @@ def ospf_json_vs():
     pl = PerformanceLog("json_diagram")
     if saved == "actual":
         data = isp.ospf_topology_vs(ip_seed_router="172.16.30.15", from_shelve=False,
-                                    shelve_name="shelves/" + time.strftime("%Y%m%d"))
+                                    shelve_name="shelves/" + time.strftime("%Y%m%d") + "_ospf_ufinet_regional")
     else:
         try:
             data = isp.ospf_topology_dict_vs_date(date_string=date)
@@ -290,7 +290,13 @@ def filter_sql(filtro, apply_and=True, table_suffix=""):
 def function_pivot(data_sql, grouping_index=0, column_index=1, value_index=2):
     data = defaultdict(OrderedDict)
     for row in data_sql:
-        data[str(row[grouping_index])][str(row[column_index])] = float(row[value_index])
+        row = list(row.values())
+        try:
+            data[str(row[grouping_index])][str(row[column_index])] = float(row[value_index])
+        except KeyError as e:
+            print("key " + repr(e))
+            print(row)
+            print(grouping_index, column_index, value_index)
     data2 = [
         {'x': list(serie.keys()), 'y': list(serie.values()), 'name': serie_name, 'stackgroup': 'dos',
          'fill': 'tonexty', 'hoverlabel': {'namelength': -1}}

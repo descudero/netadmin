@@ -53,15 +53,16 @@ class Claro:
                          from_shelve=False):
         if from_shelve:
             with shelve.open(shelve_name) as sh:
-                ospf_db = sh["db"]
-                sh.close()
+                dict_ospf = sh["db"]
+
         else:
 
             ospf_db = ospf_database(ip_seed_router=ip_seed_router, isp=self, process_id=process_id, area=area)
             with shelve.open(shelve_name) as sh:
-                sh["db"] = ospf_db
+                dict_ospf = ospf_db.get_vs()
+                sh["db"] = dict_ospf
                 sh.close()
-        dict_ospf = ospf_db.get_vs()
+
         return dict_ospf
 
     def ospf_topology(self, ip_seed_router, process_id='1', area='0', filename="pruebayed"):
