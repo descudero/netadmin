@@ -418,4 +418,4 @@ if __name__ == '__main__':
     else:
         port = 8080
         host = '127.0.0.1'
-    app.run(port=port, host=host, debug=True)
+    app.run(port=port, host=host, debug=True, threaded=True)
