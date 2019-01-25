@@ -112,14 +112,14 @@ class ospf_adjacency:
         source, target = self.neighbors()
         if self.reversed:
             source, target = target, source
-            self.vs = {"color": self.color(), 'from': source.uid_db(), 'to': target.uid_db(),
+            self.vs = {'from': source.uid_db(), 'to': target.uid_db(),
                        'label': '-',
                        'font': {'size': '8'},
                        'labelFrom': self.edge_label(orient='target'),
                        'labelTo': self.edge_label(orient='source'),
                        'smooth': {'type': 'curvedCW', 'roundness': self.roundness}}
         else:
-            self.vs = {"color": self.color(), 'from': source.uid_db(), 'to': target.uid_db(),
+            self.vs = {'from': source.uid_db(), 'to': target.uid_db(),
                        'label': '-',
                        'font': {'size': '8'},
                        'labelFrom': self.edge_label(orient='source'),

@@ -5,4 +5,4 @@ import time
 isp = ISP()
 isp.master = Master()
 
-print(isp.ospf_topology_dict_vs_today())
+print(isp.ospf_topology_dict_vs_date())

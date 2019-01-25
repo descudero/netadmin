@@ -98,8 +98,11 @@ class InterfaceUfinet(InterfaceIOS):
         try:
             connection = self.parent_device.master.db_connect()
             with connection.cursor() as cursor:
-                sql = '''SELECT uid FROM interfaces WHERE if_index=%s AND net_device_uid =%s'''
-                cursor.execute(sql, (self.if_index, self.parent_device.uid_db()))
+                sql = '''SELECT uid FROM interfaces WHERE if_index=%s AND net_device_uid =%s AND l3_protocol=%s
+                 AND l3_protocol_attr=%s AND l1_protocol=%s AND l1_protocol_attr=%s
+                '''
+                cursor.execute(sql, (self.if_index, self.parent_device.uid_db(), self.l3_protocol,
+                                     self.l3_protocol_attr, self.l1_protocol, self.l1_protocol_attr))
                 result = cursor.fetchone()
                 if result:
                     self.uid = result['uid']
@@ -193,4 +196,3 @@ class InterfaceUfinet(InterfaceIOS):
             connection.rollback()
             self.db_log.warning(self.parent_device.ip + " db" + self.if_index + repr(e))
             return False
-
