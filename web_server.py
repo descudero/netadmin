@@ -159,7 +159,6 @@ def ospf_json_vs():
 
     pl.flag("end")
     per.info("OSPF JSON TIM " + str(pl.format_time_lapse()))
-    pprint(data)
 
     return jsonify(data)
 

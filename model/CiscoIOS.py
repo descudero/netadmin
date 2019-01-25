@@ -1353,9 +1353,10 @@ class CiscoIOS(Parent):
                 return id_si, si
 
     def configure_snmp_location(self, text):
-        command = "conf terminal \n snmp-server location " + text + "\n\nexit\nwr\n"
-
-        self.send_command(command=command)
+        command = "configure terminal \n\n \n \n \n  snmp-server location " + text + "\n\nexit\nwr\n"
+        connection = self.connect()
+        self.verbose.warning("command " + self.ip + " + " + command)
+        self.verbose.warning("response:" + self.ip + " + " + self.send_command(connection=connection, command=command))
 
     def get_xy_direction(self, x, y):
         direction = "E"

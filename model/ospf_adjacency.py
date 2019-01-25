@@ -5,6 +5,13 @@ from tools import logged
 
 @logged
 class ospf_adjacency:
+    __l1 = {"CABLE_MAYA": "#228B22",
+            "LEVEL3": "#FF00FF",
+            "CENTURY": "#FF1493",
+            "TELXIUS": "#8B4513", "LANAUTILUS": "#BC8F8F", "DEF": "#00BFFF"
+
+            }
+
     def __init__(self, network_id, ospf_database, neighbors, network_type='p2p'):
         self.verbose.info("net " + network_id + " start init ")
         self.network_id = network_id
@@ -105,20 +112,44 @@ class ospf_adjacency:
         source, target = self.neighbors()
         if self.reversed:
             source, target = target, source
-            self.vs = {'from': source.uid_db(), 'to': target.uid_db(),
+            self.vs = {"color": self.color(), 'from': source.uid_db(), 'to': target.uid_db(),
                        'label': '-',
                        'font': {'size': '8'},
                        'labelFrom': self.edge_label(orient='target'),
                        'labelTo': self.edge_label(orient='source'),
                        'smooth': {'type': 'curvedCW', 'roundness': self.roundness}}
         else:
-            self.vs = {'from': source.uid_db(), 'to': target.uid_db(),
+            self.vs = {"color": self.color(), 'from': source.uid_db(), 'to': target.uid_db(),
                        'label': '-',
                        'font': {'size': '8'},
                        'labelFrom': self.edge_label(orient='source'),
                        'labelTo': self.edge_label(orient='target'),
                        'smooth': {'type': 'curvedCW', 'roundness': self.roundness}}
 
+    def color(self):
+        l1_key = ""
+        try:
+            l1_a_key = self.adj_ob[0]["interface"].l1_protocol_attr
+        except AttributeError as e:
+            l1_a_key = "UNKNOWN"
+        try:
+            l1_b_key = self.adj_ob[1]["interface"].l1_protocol_attr
+        except AttributeError as e:
+            l1_b_key = "UNKNOWN"
+
+        if l1_a_key != "UNKNOWN":
+            l1_key = l1_a_key
+        elif l1_b_key != "UNKNOWN":
+            l1_key = l1_b_key
+
+        if l1_key in ospf_adjacency.__l1:
+            self.verbose.info(l1_a_key)
+            self.verbose.info(l1_b_key)
+            _color = ospf_adjacency.__l1[l1_key]
+            self.verbose.info(_color)
+        else:
+            _color = ospf_adjacency.__l1["DEF"]
+        return ospf_adjacency.__l1.get(l1_key, ospf_adjacency.__l1["DEF"])
 
     def get_vs(self):
         return self.vs

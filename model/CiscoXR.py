@@ -784,7 +784,7 @@ class CiscoXR(Parent):
         super().set_interfaces(template_name=template_name)
 
     def configure_snmp_location(self, text):
-        command = "configure terminal \n snmp-server location " + text + "\ncommit\nexit\n"
+        command = "configure terminal \n \n \n \n snmp-server location " + text + "\ncommit\nyes\nexit\n"
         print(self.ip, command)
         print(self.send_command(command=command, connection=self.connect()))
 

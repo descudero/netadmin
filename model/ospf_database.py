@@ -8,7 +8,7 @@ from threading import Thread
 
 @logged
 class ospf_database:
-    edge_roundness = {1: .05, 2: .05, 3: .20, 4: .20, 5: .35, 6: .35, 7: .5, 8: .5}
+    edge_roundness = {1: .05, 2: .05, 3: .15, 4: .15, 5: .25, 6: .25, 7: .35, 8: .35}
 
     def __init__(self, ip_seed_router, isp, process_id='1', area='0'):
         seed_router = CiscoIOS(ip=ip_seed_router, display_name='seed', master=isp.master)

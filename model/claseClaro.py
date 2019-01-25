@@ -469,7 +469,7 @@ class Claro:
             devices.append(device)
         return devices
 
-    def excute_methods(self, methods, devices, thread_window=100):
+    def excute_methods(self, methods, devices, thread_window=100, dict_kwargs={}):
         th.Thread()
         threads = []
         for method, variable in methods.items():
@@ -480,7 +480,10 @@ class Claro:
                 try:
                     if (len(threads) < thread_window):
                         method_instantiated = getattr(device, method)
-                        t = th.Thread(target=method_instantiated)
+                        if (device.ip in dict_kwargs):
+                            t = th.Thread(target=method_instantiated, kwargs=dict_kwargs[device.ip])
+                        else:
+                            t = th.Thread(target=method_instantiated)
                         t.start()
                         threads.append(t)
                     else:
