@@ -24,7 +24,15 @@ import sys
 
 @logged
 class CiscoIOS(Parent):
+    images = {"GUATEMALA": "_GT",
+              "El_SALVADOR": "_SV",
+              "HONDURAS": "_HN",
+              "NICARAGUA": "_NC",
+              "COSTA_RICA": "_CR",
+              "PANAMA": "_PN", "COLOMBIA": "_CO",
+              "USA": "_US", "ARGENTINA": "_AR", "CHILE": "_CL",
 
+              }
     def __init__(self, ip, display_name, master, platform="CiscoIOS", gateway="null"):
         edge_step = 41
         self.yed_edges_points = {"N": [(str(x), "125") for x in range(-135, 136, edge_step)],
@@ -1168,10 +1176,27 @@ class CiscoIOS(Parent):
                 self.platform = platform_name
                 break
 
+    def set_snmp_location_attr(self):
+
+        self.set_snmp_location()
+
+        data = self.parse_txtfsm_template(template_name="snmp_location_attr_profile.template", text=self.snmp_location)
+        if data:
+            for attr, value in data[0].items():
+                try:
+                    value = value if value != "" else "0"
+                    setattr(self, attr, value)
+                    self.dev.info("snmp location atrubute ccheck " + self.ip + " " + attr + getattr(self, attr))
+                except AttributeError as e:
+                    self.dev.warning("set_snmp_location_attr ip" + self.ip + " err " + repr(e))
+
+
+
     def set_snmp_location(self):
         if (self.community == ""):
             self.set_snmp_community()
         oid = ".1.3.6.1.2.1.1.6.0"
+        self.snmp_location = ""
         try:
             a_device = (self.ip, self.community, 161)
             snmp_data = snmp_get_oid(a_device=a_device, oid=oid, display_errors=True)
@@ -1280,10 +1305,16 @@ class CiscoIOS(Parent):
         return node
 
     def get_vs(self):
+        try:
+            image = '../static/img/' + self.platform + CiscoIOS.images[self.country] + '.png'
+        except Exception as e:
+            image = '../static/img/' + self.platform + '.png'
+            self.verbose.warning("get_vs:" + self.ip + " err " + str(e))
+
         if self.uid_db() == 0:
             self.save()
         return {'mass': 10, 'id': self.uid, 'label': self.ip + " " + self.hostname, 'font': {'size': '8'},
-                'image': '../static/img/' + self.platform + '.png', 'shape': 'image'}
+                'image': image, 'shape': 'image'}
 
     def get_vfis_interface_per_service_instance(self):
         '''
@@ -1398,8 +1429,8 @@ class CiscoIOS(Parent):
                     connection.close()
                     return 0
         except Exception as e:
-            print(e)
-            connection.close()
+            self.log_db.warning(self.ip + " " + str(e))
+
             return 0
 
     def in_db(self):

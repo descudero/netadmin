@@ -20,9 +20,9 @@ class ospf_database:
         self.routers = {router.ip: router for router in self.routers}
 
         self.isp.excute_methods(methods={"set_interfaces": {}},
-                                devices=self.routers.values(), thread_window=self.isp.master.device_connections)
-        self.isp.excute_methods(methods={"set_snmp_community": {}, "get_uid_save": {}}, devices=self.routers.values())
-
+                                devices=self.routers.values(), thread_window=35)
+        self.isp.do_uni_methods(methods={"set_snmp_community": {}, "get_uid_save": {}}, devices=self.routers.values())
+        self.isp.do_uni_methods(methods={"set_snmp_location_attr": {}}, devices=self.routers.values())
         self.graph = Graph()
         self.neighbors_occurrences_count = defaultdict(int)
         self.verbose.warning("finish init  methods routers gone to edges")

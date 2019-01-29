@@ -108,26 +108,27 @@ class BaseDevice(object):
 
         return 0
 
-
-    def send_command_and_parse(self, command, template_name, timeout=5, close_connection=True):
+    def parse_txtfsm_template(self, template_name, text):
         parser = self.load_template(template_name=template_name)
-        connection = self.connect()
-
-        cli_output = self.send_command(connection=connection, command=command, timeout=timeout)
-        connection.disconnect()
-        self.verbose.debug("{0} comm {1} cli {2}".format(self.ip, template_name, cli_output))
         try:
-            fsm_results = parser.ParseText(cli_output)
+            fsm_results = parser.ParseText(text)
             header = [column.lower() for column in parser.header]
-            self.dev.debug(
-                "{0} comm {1} tem {2} con resultados {3} ".format(self.ip, command, template_name, fsm_results))
-            self.verbose.debug(
-                "{0} comm {1} tem {2} con resultados {3} ".format(self.ip, command, template_name, fsm_results))
             return [dict(zip(header, row)) for row in fsm_results]
         except Exception as e:
             self.dev.critical("{0} Unable to parse data {1} template (2) ".format(self.ip, repr(e), template_name))
             self.verbose.critical("{0} Unable to parse data {1} template (2) ".format(self.ip, repr(e), template_name))
             return []
+
+    def send_command_and_parse(self, command, template_name, timeout=5, close_connection=True):
+
+        connection = self.connect()
+
+        cli_output = self.send_command(connection=connection, command=command, timeout=timeout)
+        connection.disconnect()
+        self.verbose.debug("{0} comm {1} cli {2}".format(self.ip, template_name, cli_output))
+
+        return self.parse_txtfsm_template(template_name=template_name, text=cli_output)
+
 
 
     def set_jump_gateway(self, ip, protocol):

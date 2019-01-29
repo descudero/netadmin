@@ -13,7 +13,7 @@ class ospf_adjacency:
             }
 
     def __init__(self, network_id, ospf_database, neighbors, network_type='p2p'):
-        self.verbose.info("net " + network_id + " start init ")
+        self.verbose.debug("net " + network_id + " start init ")
         self.network_id = network_id
         self.network_type = network_type
         self.ospf_database = ospf_database
@@ -38,9 +38,9 @@ class ospf_adjacency:
         if self.ospf_database.neighbors_occurrences_count[pair] % 2 == 0:
             self.reversed = True
             self.adj_obj_list()
-            self.verbose.critical(" net_id reversed ")
+            self.verbose.debug(" net_id reversed ")
         else:
-            self.verbose.critical(" net_id not reversed ")
+            self.verbose.debug(" net_id not reversed ")
         # self.adj_neighbors["s"]["network_device"].add_p2p_ospf(self,self.adj_neighbors["t"])
         # self.adj_neighbors["t"]["network_device"].add_p2p_ospf(self,self.adj_neighbors["s"])
         self.dev.info("adjacency " + pair + " inited")

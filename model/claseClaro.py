@@ -469,6 +469,37 @@ class Claro:
             devices.append(device)
         return devices
 
+    def do_uni_methods(self, methods, devices, thread_window=100, dict_kwargs={}):
+        th.Thread()
+        threads = []
+
+        for device in devices:
+            for method, variable in methods.items():
+                self.dev.info("dev {0} excute method {1}".format(device, method))
+                self.verbose.info("dev {0} excute method {1}".format(device, method))
+                try:
+                    if (len(threads) < thread_window):
+                        method_instantiated = getattr(device, method)
+                        if (device.ip in dict_kwargs):
+                            t = th.Thread(target=method_instantiated, kwargs=dict_kwargs[device.ip])
+                        else:
+                            t = th.Thread(target=method_instantiated)
+                        t.start()
+                        threads.append(t)
+                    else:
+                        self.dev.info("excute_methods: Window join ")
+                        self.verbose.info("excute_methods: Window join ")
+                        for t in threads:
+                            t.join()
+                        threads = []
+
+                except Exception as e:
+                    self.verbose.warning("dev {0} excute method {1} error {2}".format(device, method, repr(e)))
+        for t in threads:
+            t.join()
+
+        return devices
+
     def excute_methods(self, methods, devices, thread_window=100, dict_kwargs={}):
         th.Thread()
         threads = []
