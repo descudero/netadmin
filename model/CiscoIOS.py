@@ -19,6 +19,8 @@ from model.InterfaceUfinet import InterfaceUfinet
 from tools import normalize_interface_name, logged, replace
 from lib.snmp_helper import *
 from model.BridgeDomain import BridgeDomain
+from model.IpExplicitPath import IpExplicitPath
+from model.MplsTeTunnel import MplsTeTunnel
 import sys
 
 
@@ -33,6 +35,7 @@ class CiscoIOS(Parent):
               "USA": "_US", "ARGENTINA": "_AR", "CHILE": "_CL",
 
               }
+
     def __init__(self, ip, display_name, master, platform="CiscoIOS", gateway="null"):
         edge_step = 41
         self.yed_edges_points = {"N": [(str(x), "125") for x in range(-135, 136, edge_step)],
@@ -81,7 +84,6 @@ class CiscoIOS(Parent):
                retorno (string): regresa el output del comando sin el comando.
 
            '''
-
 
         output = ""
         retry_counter = 0
@@ -169,8 +171,10 @@ class CiscoIOS(Parent):
         te = self.send_command_and_parse(template_name=template,
                                          command=command)
 
-        self.mpls_te_tunnels = {tunnel['tunnel']: tunnel for tunnel in te}
-        return self.mpls_te_tunnels
+        mpls_te_tunnels = {tunnel['tunnel']: tunnel for tunnel in te}
+        self.mpls_te_tunnels = {tunnel['tunnel']: MplsTeTunnel(txtfsmdata=tunnel, parent=self) for tunnel in te}
+
+        return mpls_te_tunnels
 
     def set_service_instances(self):
         # todo change to textfsm template
@@ -183,7 +187,6 @@ class CiscoIOS(Parent):
                                   for row in service_instances}
 
         return self.service_instances
-
 
     def get_template_by_tunnel_id(self, tunnel_id):
         for name, template in self.template_type_pseudowires.items():
@@ -220,7 +223,7 @@ class CiscoIOS(Parent):
         return service_instances
 
     def set_template_type_pseudowires(self, ):
-        #todo change to textfsm
+        # todo change to textfsm
         command = "show run | s template type"
         connection = self.connect()
         output = self.send_command(command=command, connection=connection)
@@ -265,7 +268,6 @@ class CiscoIOS(Parent):
         self.pseudowires = {row["vc_id"]: row for row in output}
 
         return self.pseudowires
-
 
     def get_pw_class_by_tunnel_id(self, tunnel_id):
         for name, pw_class in self.pseudo_wire_class.items():
@@ -486,7 +488,6 @@ class CiscoIOS(Parent):
 
           '''
         self.set_snmp_community()
-
 
     def set_config(self, command="show config"):
         """
@@ -774,7 +775,7 @@ class CiscoIOS(Parent):
         return self.self_ospf_process_list
 
     def set_ip_ospf_interfaces(self, as_ospf="14754"):
-        #todo text fsm
+        # todo text fsm
         '''
         :param as_ospf (string):  este es un parametro para definir el sistema autionomo o el numero de proceso
          que se tendra en el output, se trabaja con ese como el global.
@@ -947,7 +948,7 @@ class CiscoIOS(Parent):
         return self.bgp_neighbors
 
     def set_mpls_ldp_interfaces(self, address_family="ipv4 unicast"):
-        #todo change to parse of textfsm
+        # todo change to parse of textfsm
         connection = self.connect()
         command = "show mpls interfaces"
         show_mpls_interface = self.send_command(connection, command, self.hostname, timeout=5)
@@ -1012,7 +1013,7 @@ class CiscoIOS(Parent):
         return self.platform
 
     def set_pim_interfaces(self):
-        #todo parse textfsm.. not user for the moment
+        # todo parse textfsm.. not user for the moment
         connection = self.connect()
         command = "show "
         command2 = 'show ip pim neighbor | b Add'
@@ -1055,7 +1056,6 @@ class CiscoIOS(Parent):
 
         return interfaces, pim_neighbors
 
-
     def get_interfaces_stats(self, interfaces_index=[]):
         output = "";
         for index in interfaces_index:
@@ -1064,7 +1064,7 @@ class CiscoIOS(Parent):
         return output
 
     def set_log(self, filter=""):
-        #todo parse log per hour and class log_line to check time
+        # todo parse log per hour and class log_line to check time
         connection = self.connect()
         command = "show logging " + ("" if filter == "" else " | i " + filter)
 
@@ -1077,7 +1077,6 @@ class CiscoIOS(Parent):
     def ospf_database_router(self, process_id='1'):
         return self.send_command_and_parse(command="show ip ospf " + process_id + " database router",
                                            template_name="show ip ospf database router.template")
-
 
     def ospf_area_adjacency_p2p(self, process_id='1', area='0'):
         ospf_database = self.ospf_database_router(process_id=process_id)
@@ -1153,7 +1152,7 @@ class CiscoIOS(Parent):
         cmd_gen = cmdgen.CommandGenerator()
         error_indication, error_status, error_index, var_binds = cmd_gen.getCmd(cmdgen.CommunityData(self.community),
                                                                                 cmdgen.UdpTransportTarget(
-                                                                               (self.ip, 161)),
+                                                                                    (self.ip, 161)),
                                                                                 oid
                                                                                 )
         hostname = "no_snmp"
@@ -1190,8 +1189,6 @@ class CiscoIOS(Parent):
                 except AttributeError as e:
                     self.dev.warning("set_snmp_location_attr ip" + self.ip + " err " + repr(e))
 
-
-
     def set_snmp_location(self):
         if (self.community == ""):
             self.set_snmp_community()
@@ -1214,6 +1211,7 @@ class CiscoIOS(Parent):
             self.x = "0"
             self.y = "0"
             print(self.ip, self.snmp_location, " unable to split location ")
+
     def get_physical_interfaces(self):
         if self.interfaces is None:
             self.set_interfaces()
@@ -1239,7 +1237,6 @@ class CiscoIOS(Parent):
                   'pid': part['pid'],
                   'sn': part['sn'],
                   'vid': part['vid']} for part in inventory if "Generic Fan" not in part["description"]]
-
 
         self.inventory = parts
         return parts
@@ -1446,6 +1443,7 @@ class CiscoIOS(Parent):
             self.save(
             )
         return self.uid
+
     def save(self):
 
         try:
@@ -1470,3 +1468,23 @@ class CiscoIOS(Parent):
                           if filter in getattr(interface, attribute)]
             print(self.ip, attribute, filter, interfaces)
         return interfaces
+
+    def ip_explicit_paths(self, template_name="ip explicit-path ios.template"):
+        list_of_hops = self.send_command_and_parse(command="show run | s ip explicit-path", template_name=template_name)
+        path_names = {hop['name'] for hop in list_of_hops}
+        self.explicit_paths = {}
+        for path_name in path_names:
+            self.explicit_paths[path_name] = IpExplicitPath(name=path_name, hops=[hop for hop in list_of_hops if
+                                                                                  hop["name"] == path_name],
+                                                            parent_device=self)
+
+        return self.ip_explicit_paths
+
+    def add_hop_ip_explicit_paths(self, hop, ip_reference_hop, index_way="before"):
+        self.ip_explicit_paths()
+        new_paths = []
+
+        for path in [path_ for key, path_ in self.explicit_paths.items() if path_.ip_on_path(ip=ip_reference_hop)]:
+            new_paths.append(path.copy_path_new_hop(ip_reference_hop=ip_reference_hop, hop=hop, index_way=index_way))
+
+        return new_paths

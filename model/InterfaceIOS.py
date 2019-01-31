@@ -141,7 +141,8 @@ class InterfaceIOS(object):
 
     def dict_data(self):
         interface_data = dict()
-        interface_data['ip '] = str(self.ip)
+        interface_data['if_index'] = self.if_index
+        interface_data['ip'] = str(self.ip)
         interface_data['speed '] = self.speed
         interface_data['util_in'] = self.util_in
         interface_data['util_out'] = self.util_out

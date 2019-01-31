@@ -1,0 +1,676 @@
+ip explicit-path PATH_NAP4-NAP2-PLI-ESC enable
+ next-address 172.16.20.130
+ next-address 172.16.20.17
+ next-address 172.16.26.77
+record
+ip explicit-path PATH_NAP4-NAP2-PCO-PLI-ESC enable
+ next-address 172.16.20.134
+ next-address 172.16.20.10
+ next-address 172.16.20.14
+ next-address 172.16.26.77
+record
+ip explicit-path PATH_NAP3-NAP1-PCO-SUM enable
+ next-address 172.16.20.134
+ next-address 172.16.20.10
+ next-address 172.16.24.69
+ next-address 172.16.24.66
+record
+ip explicit-path PATH_NAP3-NAP2-NAP1-PCO-PLI-ESC-SUM enable
+ next-address 172.16.20.134
+ next-address 172.16.20.10
+ next-address 172.16.20.14
+ next-address 172.16.26.77
+ next-address 172.16.26.81
+ next-address 172.16.25.65
+record
+ip explicit-path PATH_NAP3-NAP1-NAP2-PLI-ESC-SUM enable
+ next-address 172.16.20.130
+ next-address 172.16.20.17
+ next-address 172.16.26.77
+ next-address 172.16.26.81
+ next-address 172.16.25.65
+record
+ip explicit-path PATH_NAP3-NAP2-PLI-ESC enable
+ next-address 172.16.20.17
+ next-address 172.16.26.69
+record
+ip explicit-path PATH_NAP3-PCO-ESC enable
+ next-address 172.16.20.134
+ next-address 172.16.20.10
+ next-address 172.16.24.69
+ next-address 172.16.24.66
+ next-address 172.16.25.66
+record
+ip explicit-path PATH_NAP3-PLI-ESC enable
+ next-address 172.16.20.130
+ next-address 172.16.20.17
+ next-address 172.16.26.69
+record
+ip explicit-path PATH_NAP3_NAP1_NAP2_CRZ_VPL_ESC_SUM_TAL enable
+ next-address 172.16.20.66
+ next-address 172.16.27.1
+ next-address 172.16.27.9
+ next-address 172.16.26.65
+ next-address 172.16.25.65
+ next-address 172.16.25.5
+ next-address 172.16.24.74
+record
+ip explicit-path PATH_NAP3_NAP1_NAP2_CRZ_VPL_ESC_SUM2_TAL enable
+ next-address 172.16.20.66
+ next-address 172.16.27.1
+ next-address 172.16.27.9
+ next-address 172.16.26.65
+ next-address 172.16.25.69
+ next-address 172.16.25.5
+ next-address 172.16.24.74
+record
+ip explicit-path PATH_NAP3-NAP2-PLI-ESC-ESC_C1-ESCACC1 enable
+ next-address 172.16.20.130
+ next-address 172.16.20.17
+ next-address 172.16.26.69
+ next-address loose 172.20.96.2
+record
+ip explicit-path PATH_NAP3_NAP1_NAP2_CRZ_VPL_ESC_SUM_SMA_TAL enable
+ next-address 172.16.20.66
+ next-address 172.16.27.1
+ next-address 172.16.27.9
+ next-address 172.16.26.65
+ next-address 172.16.25.65
+ next-address 172.16.23.65
+ next-address 172.16.23.74
+ next-address 172.16.23.2
+record
+ip explicit-path PATH_NAP3_NAP1_NAP2_CRZ2_VPL_ESC_SUM2_SMA_TAL enable
+ next-address 172.16.20.66
+ next-address 172.16.27.5
+ next-address 172.16.27.9
+ next-address 172.16.26.65
+ next-address 172.16.25.69
+ next-address 172.16.23.65
+ next-address 172.16.23.74
+ next-address 172.16.23.2
+record
+ip explicit-path PATH_NAP3_NAP1_NAP2_CRZ_VPL_PLI2_ESC_SUM2_TAL enable
+ next-address 172.16.20.66
+ next-address 172.16.27.1
+ next-address 172.16.26.73
+ next-address 172.16.26.77
+ next-address 172.16.26.81
+ next-address 172.16.25.69
+ next-address 172.16.25.5
+ next-address 172.16.24.74
+record
+ip explicit-path PATH_NAP3_NAP1_NAP2_CRZ2_VPL_PLI_ESC_SUM_SMA_TAL enable
+ next-address 172.16.20.66
+ next-address 172.16.27.5
+ next-address 172.16.26.73
+ next-address 172.16.26.77
+ next-address 172.16.26.81
+ next-address 172.16.25.65
+ next-address 172.16.23.65
+ next-address 172.16.23.74
+ next-address 172.16.23.2
+record
+ip explicit-path NAP3-NAP2-PLI-ESC-EZUC1 enable
+ next-address 172.16.20.66
+ next-address loose 172.17.26.1
+record
+ip explicit-path PATH_NAP3_NAP1_NAP2_CRZ_VPL_PLI2_ESC2_SUM2_TAL enable
+ next-address 172.16.20.66
+ next-address 172.16.27.1
+ next-address 172.16.26.73
+ next-address 172.16.26.69
+ next-address 172.16.25.69
+ next-address 172.16.25.5
+ next-address 172.16.24.74
+record
+ip explicit-path PATH_NAP3_NAP1_NAP2_CRZ2_VPL_PLI_PCO_TAL enable
+ next-address 172.16.20.66
+ next-address 172.16.27.5
+ next-address 172.16.26.73
+ next-address 172.16.20.13
+ next-address 172.16.24.69
+record
+ip explicit-path PATH_NAP2-NAP1-PCO-TAL enable
+ next-address 172.16.20.42
+ next-address 172.16.20.41
+ next-address 172.16.24.77
+record
+ip explicit-path PATH_NAP3_NAP1_NAP2_CRZ_VPL_PLI2_ESC_SUM2 enable
+ next-address 172.16.20.66
+ next-address 172.16.27.1
+ next-address 172.16.26.73
+ next-address 172.16.26.77
+ next-address 172.16.25.69
+record
+ip explicit-path PATH_NAP3_NAP1_NAP2_CRZ2_VPL_PLI2_ESC_SUM1 enable
+ next-address 172.16.20.66
+ next-address 172.16.27.5
+ next-address 172.16.26.73
+ next-address 172.16.26.77
+ next-address 172.16.25.65
+record
+ip explicit-path PATH_NAP3_NAP1_NAP2_PLI2_ESC_SUM1 enable
+ next-address 172.16.20.134
+ next-address 172.16.20.29
+ next-address 172.16.20.17
+ next-address 172.16.26.77
+ next-address 172.16.25.65
+record
+ip explicit-path PATH_NAP2-NAP1-PCO-GUY-SMA-TAL enable
+ next-address 172.16.20.130
+ next-address 172.16.20.30
+ next-address 172.16.20.10
+ next-address 172.16.22.73
+ next-address 172.16.22.66
+ next-address 172.16.23.70
+record
+ip explicit-path PATH_NAP3-CRZ-ESCACC1 enable
+ next-address 172.16.20.41
+ next-address 172.16.20.74
+ next-address loose 172.19.24.1
+record
+ip explicit-path PATH_NAP3-NAP2-CRZ-VPLZ-HUB-ESC-ESCACC1 enable
+ next-address 172.16.20.66
+ next-address 172.16.27.1
+ next-address 172.16.27.13
+ next-address 172.16.26.89
+ next-address loose 172.19.24.1
+record
+ip explicit-path PATH_NAP3_NAP1_NAP2_CRZ2_VPL2_HUB2_ESC2_SUM_SMA enable
+ next-address 172.16.20.66
+ next-address 172.16.27.5
+ next-address 172.16.27.13
+ next-address 172.16.26.89
+ next-address 172.16.25.69
+ next-address 172.16.23.65
+record
+ip explicit-path PATH_NAP3_NAP1_NAP2_CRZ2_VPL2_HUB2_ESC2_SUM_TAL_SMA enable
+ next-address 172.16.20.66
+ next-address 172.16.27.5
+ next-address 172.16.27.13
+ next-address 172.16.26.89
+ next-address 172.16.25.69
+ next-address 172.16.25.5
+ next-address 172.16.24.74
+ next-address 172.16.23.69
+record
+ip explicit-path PATH_NAP3_NAP1_NAP2_CRZ2_VPL2_PLI2_SPE_ESC2_SUM_SMA enable
+ next-address 172.16.20.66
+ next-address 172.16.27.5
+ next-address 172.16.27.18
+ next-address 172.16.26.85
+ next-address 172.16.26.81
+ next-address 172.16.25.69
+ next-address 172.16.23.65
+record
+ip explicit-path PATH_NAP3_NAP1_NAP2_CRZ2_VPL2_PLI2_SPE_ESC2_SUM_TAL_SMA enable
+ next-address 172.16.20.66
+ next-address 172.16.27.5
+ next-address 172.16.27.18
+ next-address 172.16.26.85
+ next-address 172.16.26.81
+ next-address 172.16.25.69
+ next-address 172.16.25.5
+ next-address 172.16.24.74
+ next-address 172.16.23.69
+record
+ip explicit-path PATH_NAP3-CRZ-ESC enable
+ next-address 172.16.20.66
+ next-address loose 172.16.30.42
+record
+ip explicit-path PATH_AGG1-NAP1-PCO-TAL-SUM-ESC enable
+ next-address 172.16.20.10
+ next-address 172.16.24.69
+ next-address 172.16.24.66
+ next-address 172.16.25.66
+record
+ip explicit-path PATH_AGG1-NAP1-PCO-GUY-SMA-SUM-ESC enable
+ next-address 172.16.20.10
+ next-address 172.16.22.73
+ next-address 172.16.22.70
+ next-address 172.16.23.66
+ next-address 172.16.25.70
+record
+ip explicit-path PATH_NAP3-CRZ-SPE enable
+ next-address 172.16.20.66
+ next-address loose 172.16.30.43
+record
+ip explicit-path PATH_NAP3_NAP1_NAP2_CRZ_VPL_ESC2_SUM_TAL enable
+ next-address 172.16.20.66
+ next-address 172.16.27.1
+ next-address 172.16.27.9
+ next-address 172.16.26.89
+ next-address 172.16.25.65
+ next-address 172.16.25.5
+ next-address 172.16.24.74
+record
+ip explicit-path TEMP_TICA enable
+ next-address 172.16.20.66
+ next-address 172.16.27.5
+ next-address 172.16.27.9
+ next-address 172.16.26.65
+record
+ip explicit-path PATH_NAP3-NAP4-PCO-TEG enable
+ next-address 172.16.20.41
+ next-address 172.16.20.53
+ next-address loose 172.16.30.38
+record
+ip explicit-path CMY3_PCO_TAL_PIN_SUM_ESC enable
+ next-address 172.16.20.57
+ next-address 172.16.24.77
+ next-address 172.16.24.73
+ next-address 172.16.25.18
+ next-address 172.16.25.70
+ next-address 172.18.24.66
+ next-address 172.20.96.2
+record
+ip explicit-path PATH_CMY3_PCO_ESC enable
+ next-address 172.16.20.57
+ next-address loose 172.19.24.1
+record
+ip explicit-path PATH_NAP3-NAP4-PCO-SUM enable
+ next-address 172.16.20.41
+ next-address 172.16.20.53
+ next-address loose 172.16.30.40
+record
+ip explicit-path PATH_NAP3-NAP4-PCO-PE_CASAVISION enable
+ next-address 172.16.20.41
+ next-address 172.16.20.10
+ next-address 172.16.22.77
+ next-address 172.16.22.70
+ next-address loose 172.19.20.9
+record
+ip explicit-path PATH_NAP3_CRZ_TAL enable
+ next-address 172.16.20.66
+ index 3 next-address loose 172.16.30.38
+record
+ip explicit-path CR-TDT enable
+ next-address 172.16.20.57
+ next-address 172.16.22.77
+ index 5 next-address loose 172.19.24.24
+record
+ip explicit-path MIA_PCO_GUY enable
+ index 2 next-address 172.16.20.57
+ next-address loose 172.16.30.34
+record
+ip explicit-path MIA_PCO_LOOSE_CR disable
+ next-address 172.16.20.69
+ next-address 172.16.20.10
+ next-address loose 172.16.30.42
+record
+ip explicit-path MIA_PCO_LOOSE_SPE-CR enable
+ next-address 172.16.20.69
+ next-address 172.16.20.10
+ next-address 172.16.20.110
+ next-address loose 172.16.30.43
+record
+ip explicit-path NI-HN-NAP1 enable
+ next-address 172.16.20.69
+ next-address 172.16.20.74
+ next-address 172.16.24.69
+ next-address 172.16.24.73
+ next-address loose 172.18.20.170
+record
+ip explicit-path NI-HN-NAP2 enable
+ next-address 172.16.20.69
+ next-address 172.16.20.10
+ next-address 172.16.22.73
+ next-address 172.16.22.66
+ next-address 172.16.23.10
+ next-address 172.16.24.73
+ next-address loose 172.18.20.170
+record
+ip explicit-path NI-CR-NAP enable
+ next-address 172.16.20.66
+ next-address 172.16.27.5
+ next-address 172.16.26.73
+ next-address 172.16.26.77
+ next-address 172.16.25.13
+ next-address loose 172.19.20.49
+record
+ip explicit-path NAP-CMY3-BNQ-AGG1-1 enable
+ next-address 172.16.20.41
+ next-address 172.16.20.74
+ next-address 172.16.27.25
+ next-address loose 172.18.9.149
+ next-address 172.17.22.60
+record
+ip explicit-path NAP-CMY3-BNQ-AGG1-2 enable
+ next-address 172.16.20.57
+ next-address 172.16.27.25
+ next-address loose 172.18.9.145
+ next-address 172.17.22.60
+record
+ip explicit-path NAP-CMY3-BNQ-AGG1-3 enable
+ next-address 172.16.20.57
+ next-address 172.16.22.25
+ next-address loose 172.18.9.141
+ next-address 172.17.22.60
+record
+ip explicit-path LUMINET enable
+ next-address 172.16.20.69
+ next-address 172.16.20.74
+ next-address 172.16.20.110
+ next-address 172.16.26.85
+ next-address loose 172.16.26.81
+ next-address 172.16.24.66
+ next-address 172.18.24.34
+record
+ip explicit-path MIA_PCO_LOOSE_FORUMCYBERFUEL enable
+ next-address 172.16.20.41
+ next-address 172.16.20.10
+ next-address 172.16.24.77
+ next-address loose 172.16.30.42
+ next-address loose 172.17.26.22
+record
+ip explicit-path CYBERFUELPRIMARY enable
+ next-address 172.16.20.57
+ next-address 172.16.20.14
+ next-address 172.16.26.85
+ next-address loose 172.16.26.81
+ next-address 172.18.24.66
+ next-address 172.18.24.57
+ next-address 172.18.25.78
+record
+ip explicit-path CYBERFUELSEC enable
+ next-address 172.16.20.57
+ next-address 172.16.24.69
+ next-address 172.16.24.81
+ next-address 172.16.24.66
+ next-address loose 172.16.25.66
+ next-address 172.18.24.66
+ next-address 172.18.24.57
+ next-address 172.18.25.78
+record
+ip explicit-path MIA_CRZ_LOOSE_CR enable
+ next-address 172.16.20.66
+ next-address loose 172.16.30.42
+record
+ip explicit-path FROM-MIACMY3-TO-CRZ-VPL-CGA-WBP2 enable
+ next-address 172.16.20.66
+ next-address 172.16.27.1
+ next-address 172.16.27.18
+ next-address loose 172.16.30.14
+record
+ip explicit-path FROM-MIACMY3-TOL-TO-WBP2 enable
+ next-address 172.16.20.85
+ next-address loose 172.16.30.14
+record
+ip explicit-path PATH_NAP3-NAP4-PCO-PE_CASAVISION_ enable
+ next-address 172.16.20.41
+ next-address 172.16.20.74
+ next-address 172.16.24.69
+ next-address 172.16.24.73
+ next-address 172.16.25.18
+ next-address loose 172.18.20.130
+ next-address 172.18.20.13
+ next-address 172.18.20.154
+ next-address 172.20.80.22
+record
+ip explicit-path NAP-CV-PRI enable
+ next-address 172.16.20.41
+ next-address 172.16.20.74
+ next-address 172.16.24.69
+ next-address 172.16.24.73
+ next-address loose 172.19.20.9
+record
+ip explicit-path NAP-CV-BKP enable
+ next-address 172.16.20.41
+ next-address 172.16.20.10
+ next-address 172.16.24.69
+ next-address 172.16.24.81
+ next-address 172.16.24.62
+ next-address loose 172.19.20.9
+record
+ip explicit-path FROM-TELECABLE-CR_TO-NAP-US enable
+ next-address 172.16.20.66
+ index 5 next-address loose 172.18.24.69
+record
+ip explicit-path NAP-IFX-PRIMARY enable
+ next-address 172.16.20.85
+ next-address 172.16.20.82
+record
+ip explicit-path NAP-IFX-BACKUP enable
+ next-address 172.16.20.69
+ next-address 172.16.20.105
+ next-address 172.16.20.94
+ next-address 172.16.20.97
+record
+ip explicit-path PATH_CGA_CASAVISION enable
+ next-address 172.16.20.57
+ next-address 172.16.20.14
+ next-address loose 172.19.20.9
+record
+ip explicit-path MIA_PCO_LOOSE_CR2 enable
+ next-address 172.16.20.57
+ next-address 172.16.22.73
+ next-address 172.16.22.70
+ next-address 172.16.23.73
+ next-address loose 172.16.30.42
+record
+ip explicit-path CR-TDT-32 enable
+ next-address 172.16.20.41
+ next-address 172.16.20.74
+ next-address 172.16.22.73
+ next-address 172.16.22.70
+ next-address loose 172.19.24.24
+record
+ip explicit-path CYBERFUELSECONDARY2 enable
+ next-address 172.16.20.57
+ next-address 172.16.20.110
+ next-address 172.16.26.85
+ next-address loose 172.18.24.70
+ next-address 172.18.24.1
+ next-address 172.18.24.57
+ next-address 172.18.25.78
+record
+ip explicit-path CRC-TDT-2 enable
+ next-address 172.16.20.57
+ next-address 172.16.20.14
+ next-address 172.16.26.85
+ next-address loose 172.18.24.70
+ next-address 172.18.24.1
+ next-address loose 172.19.24.24
+record
+ip explicit-path TDT-NAP-vmaPTY enable
+ next-address 172.16.30.9
+ next-address 172.16.27.5
+ next-address 172.16.27.18
+ next-address 172.16.26.85
+ next-address 172.16.26.81
+ next-address loose 172.18.24.66
+ next-address 172.18.24.57
+ next-address 172.18.24.142
+ next-address 172.18.24.133
+ next-address 172.18.24.126
+ next-address 172.20.96.154
+record
+ip explicit-path FROM-TELECABLE-CR_TO-NAP-US-1 enable
+ next-address 172.16.20.66
+ next-address 172.16.27.5
+ next-address 172.16.27.18
+ next-address 172.16.26.85
+record
+ip explicit-path FROM-TELECABLE-CR_TO-NAP-US-2 enable
+ next-address 172.16.20.66
+ next-address loose 172.16.30.43
+record
+ip explicit-path MIA_TOL_CGA_LOO_ESC disable
+ next-address 172.16.20.85
+ next-address 172.16.20.78
+ next-address loose 172.16.30.42
+record
+ip explicit-path CMY3-CMY4-LOOSEHN enable
+ next-address 172.16.20.69
+ next-address 172.16.20.74
+ next-address loose 172.16.30.38
+ next-address loose 172.18.16.193
+record
+ip explicit-path CRC-TDT enable
+ next-address 172.16.20.57
+ index 3 next-address loose 172.16.30.42
+ next-address loose 172.18.24.66
+ next-address loose 172.19.24.24
+record
+ip explicit-path CMY3-CGA-SPE-BARR-TDT_GRECIA enable
+ next-address 172.16.20.57
+ next-address 172.16.20.14
+ next-address 172.16.26.85
+ next-address loose 172.18.24.70
+ next-address 172.18.24.14
+ next-address 172.18.25.170
+record
+ip explicit-path CMY3-LOOSE_20C-SMA-NAC-SUM-ESC-COY-NAR_TDT_GRECIA enable
+ next-address 172.16.20.41
+ next-address 172.16.20.10
+ next-address loose 172.16.30.35
+ next-address 172.16.22.10
+ next-address 172.16.23.66
+ next-address 172.16.24.66
+ next-address 172.16.25.70
+ next-address loose 172.18.24.66
+ next-address 172.18.24.10
+ next-address 172.18.24.138
+ next-address 172.20.96.154
+record
+ip explicit-path CMY3-CRZ_ESC2-ESC1-NAC-SUM-ESC-COY-NAR_TDT_GRECIA enable
+ next-address loose 172.16.30.44
+ next-address 172.16.27.9
+ next-address 172.16.26.65
+ next-address loose 172.18.24.66
+ next-address 172.18.24.138
+ next-address 172.20.96.154
+record
+ip explicit-path FROM-CMY3-CMY4-CRZ-VPL-CGA-SPE-ESC-TDT enable
+ next-address 172.16.20.69
+ next-address 172.16.20.174
+ next-address 172.16.27.42
+ next-address 172.16.26.73
+ next-address 172.16.26.85
+ next-address loose 172.18.24.70
+ next-address 172.18.24.14
+ next-address 172.18.25.170
+record
+ip explicit-path ALDEA-CRZ-NAP enable
+ next-address 172.16.20.66
+ next-address 172.16.27.1
+record
+ip explicit-path FROM-CMY3-CMY4-CRZ-VPL-CGA-SPE-ESC-GRE-TDT enable
+ next-address 172.16.20.41
+ next-address 172.16.20.174
+ next-address 172.16.27.42
+ next-address 172.16.26.73
+ next-address 172.16.26.77
+ next-address loose 172.16.26.81
+ next-address 172.18.25.133
+ next-address 172.18.24.10
+ next-address 172.18.24.138
+ next-address 172.18.25.225
+ next-address 172.20.96.154
+record
+ip explicit-path FROM-CMY3-CRZ-SAC-VPL-CGA-SPE-ESC-GRE-TDT enable
+ next-address 172.16.20.66
+ next-address 172.16.27.42
+ next-address 172.16.26.73
+ next-address 172.16.26.77
+ next-address loose 172.16.26.81
+ next-address 172.18.25.133
+ next-address 172.18.24.10
+ next-address 172.18.24.138
+ next-address 172.18.25.225
+ next-address 172.20.96.154
+record
+ip explicit-path CMY3-CMY4-PCO-CGA-SPE-BARR-TDT_GRECIA enable
+ next-address 172.16.20.41
+ next-address 172.16.20.74
+ next-address 172.16.20.14
+ next-address 172.16.26.77
+ next-address loose 172.18.24.70
+ next-address 172.18.24.14
+ next-address 172.18.25.170
+record
+ip explicit-path CYBERFUELSECONDARY2-CMY4 enable
+ next-address 172.16.20.41
+ next-address 172.16.20.74
+ next-address 172.16.20.110
+ next-address 172.16.26.85
+ next-address loose 172.18.24.70
+ next-address 172.18.24.1
+ next-address 172.18.24.57
+ next-address 172.18.25.78
+record
+ip explicit-path IFX_NAP_TOL_SAL_WBP2 enable
+ next-address 172.16.20.85
+ next-address 172.16.20.90
+ next-address 172.16.20.94
+ next-address 172.16.20.97
+record
+ip explicit-path CMY3-CMY4-PCO-CGA-ESC2_1-COY-NAR-GRE-TDT enable
+ next-address 172.16.20.41
+ next-address 172.16.20.10
+ next-address 172.16.20.14
+ next-address 172.16.26.209
+ next-address 172.16.26.169
+ next-address loose 172.18.24.66
+ next-address 172.18.24.10
+ next-address 172.18.24.138
+ next-address 172.18.25.225
+ next-address 172.20.96.154
+record
+ip explicit-path CMY3_CMY4_CRZ_VPL_SPE_TDT_GRECIA enable
+ next-address 172.16.20.41
+ next-address 172.16.20.174
+ next-address 172.16.27.5
+ next-address 172.16.27.18
+ next-address 172.16.26.77
+ next-address 172.16.26.13
+record
+ip explicit-path CMY3-CMY4-PCO-CGA-SPE_TDT_SECUNDARIO enable
+ next-address 172.16.20.41
+ next-address 172.16.20.74
+ next-address 172.16.20.14
+ next-address 172.16.26.77
+ next-address 172.16.26.13
+record
+ip explicit-path CMY3-CGA-SPE-BARR-TDT_GRECIA_SECUNDARI enable
+ next-address 172.16.20.57
+ next-address 172.16.20.141
+ next-address 172.16.26.85
+ next-address 172.16.26.13
+record
+ip explicit-path LUMINET2 enable
+ next-address 172.16.20.57
+ next-address 172.16.20.14
+ next-address 172.16.26.85
+ next-address loose 172.16.30.42
+ next-address 172.18.24.66
+ next-address 172.18.24.34
+record
+ip explicit-path CMY3-CMY4-PCO-TGU-PIN-SPE enable
+ next-address 172.16.20.69
+ next-address 172.16.20.74
+ next-address 172.16.24.77
+ next-address 172.16.24.2
+ next-address 172.16.25.14
+ next-address loose 172.16.30.248
+record
+ip explicit-path MIA_CMY4-PCO_LOOSE_CR2 enable
+ip explicit-path CMY3-CRZ-LOOSETAL enable
+ next-address 172.16.20.66
+ next-address loose 172.16.30.38
+ next-address loose 172.18.16.193
+record
+ip explicit-path CMY3-PCO-LOOSEHN enable
+ next-address 172.16.20.57
+ next-address loose 172.16.30.38
+ next-address loose 172.18.16.193
+record
+ip explicit-path CMY3_CMY4_PCO_GT_BET enable
+ next-address 172.16.20.69
+ next-address 172.16.20.74
+ next-address 172.16.22.25
+ next-address 172.16.22.66
+ next-address loose 172.16.30.38
+ next-address loose 172.18.16.193
+record
