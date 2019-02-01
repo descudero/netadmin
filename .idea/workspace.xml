@@ -10,7 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="462384ac-2f64-47a0-b6d2-b16ff1b36497" name="Default" comment="first3">
-      <change beforePath="$PROJECT_DIR$/common_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/common_script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/CiscoIOS_NC - Copy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/CiscoIOS_US.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/CiscoIOS_US.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/CiscoXR - Copy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/CiscoXR_CL - Copy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/CiscoXR_US.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,8 +68,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/common_script.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+            <state relative-caret-position="88">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -72,7 +77,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
+            <state relative-caret-position="31922">
               <caret line="1474" column="7" selection-start-line="1474" selection-start-column="7" selection-end-line="1474" selection-end-column="7" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
@@ -84,7 +89,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/MplsTeTunnel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
+            <state relative-caret-position="1122">
               <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
             </state>
           </provider>
@@ -102,7 +107,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/InterfaceIOS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
+            <state relative-caret-position="3080">
               <caret line="141" column="17" selection-start-line="141" selection-start-column="8" selection-end-line="141" selection-end-column="17" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
@@ -114,7 +119,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://E:/progra/anaconda/Lib/site-packages/IPython/core/interactiveshell.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
+            <state relative-caret-position="63580">
               <caret line="2963" column="47" selection-start-line="2963" selection-start-column="47" selection-end-line="2963" selection-end-column="47" />
             </state>
           </provider>
@@ -123,7 +128,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/IpExplicitPath.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
+            <state relative-caret-position="946">
               <caret line="43" selection-start-line="43" selection-end-line="43" />
             </state>
           </provider>
@@ -132,7 +137,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/claseClaro.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
+            <state relative-caret-position="2310">
               <caret line="136" selection-start-line="136" selection-end-line="136" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -144,7 +149,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/templates/ttextfsm_uf.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
+            <state relative-caret-position="242">
               <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -290,13 +295,7 @@
             <path>
               <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
               <item name="netadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="shelves" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
@@ -529,12 +528,12 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.common_script" />
-      <item itemvalue="Python.common_test" />
-      <item itemvalue="Python.nagios" />
-      <item itemvalue="Python.save_interfaces_db" />
       <item itemvalue="Python.sshtest" />
       <item itemvalue="Python.ttextfsm_uf" />
+      <item itemvalue="Python.nagios" />
+      <item itemvalue="Python.common_test" />
+      <item itemvalue="Python.common_script" />
+      <item itemvalue="Python.save_interfaces_db" />
     </list>
     <recent_temporary>
       <list>
@@ -571,6 +570,7 @@
       <workItem from="1548770827168" duration="633000" />
       <workItem from="1548856931434" duration="3058000" />
       <workItem from="1548943795567" duration="15259000" />
+      <workItem from="1549052456712" duration="1842000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1541432790229</created>
@@ -894,7 +894,21 @@
       <option name="project" value="LOCAL" />
       <updated>1548969575601</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="first3">
+      <created>1549052469875</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1549052469875</updated>
+    </task>
+    <task id="LOCAL-00048" summary="first3">
+      <created>1549052536113</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1549052536113</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -930,7 +944,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="231504000" />
+    <option name="totallyTimeSpent" value="233346000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -943,9 +957,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7057728" visible="true" weight="0.25832438" />
-      <window_info id="Structure" order="1" sideWeight="0.29422718" side_tool="true" visible="true" weight="0.25832438" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7040441" visible="true" weight="0.26208377" />
+      <window_info id="Structure" order="1" sideWeight="0.2959559" side_tool="true" visible="true" weight="0.26208377" />
       <window_info id="Favorites" order="2" sideWeight="0.50864196" side_tool="true" weight="0.16136725" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4977778" weight="0.3277592" />
@@ -955,8 +970,8 @@
       <window_info anchor="bottom" id="Run" order="5" sideWeight="0.60042965" weight="0.4347826" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946293" weight="0.32664436" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.39957035" side_tool="true" weight="0.2419175" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49462944" weight="0.393534" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="9" sideWeight="0.49875" visible="true" weight="0.4013378" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49462944" visible="true" weight="0.393534" />
+      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.49875" weight="0.4013378" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49841017" weight="0.24526198" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32960895" />
       <window_info anchor="bottom" id="Database Console" order="12" sideWeight="0.49946293" weight="0.50501674" />
@@ -1446,33 +1461,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/ttextfsm_uf.py">
+    <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        <state relative-caret-position="31922">
+          <caret line="1474" column="7" selection-start-line="1474" selection-start-column="7" selection-end-line="1474" selection-end-column="7" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#0#16#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/IpExplicitPath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/progra/anaconda/Lib/site-packages/IPython/core/interactiveshell.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="2963" column="47" selection-start-line="2963" selection-start-column="47" selection-end-line="2963" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/MplsTeTunnel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
+        <state relative-caret-position="1122">
           <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
         </state>
       </provider>
@@ -1486,7 +1487,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/InterfaceIOS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
+        <state relative-caret-position="3080">
           <caret line="141" column="17" selection-start-line="141" selection-start-column="8" selection-end-line="141" selection-end-column="17" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
@@ -1494,19 +1495,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
+    <entry file="file://E:/progra/anaconda/Lib/site-packages/IPython/core/interactiveshell.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="1474" column="7" selection-start-line="1474" selection-start-column="7" selection-end-line="1474" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="63580">
+          <caret line="2963" column="47" selection-start-line="2963" selection-start-column="47" selection-end-line="2963" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/IpExplicitPath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="946">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/claseClaro.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="2310">
           <caret line="136" selection-start-line="136" selection-end-line="136" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
@@ -1514,10 +1519,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/templates/ttextfsm_uf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/common_script.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+        <state relative-caret-position="88">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>

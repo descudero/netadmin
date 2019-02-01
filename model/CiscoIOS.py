@@ -1303,7 +1303,7 @@ class CiscoIOS(Parent):
 
     def get_vs(self):
         try:
-            image = '../static/img/' + self.platform + CiscoIOS.images[self.country] + '.png'
+            image = '../static/img/' + "CiscoIOS" + '.png'
         except Exception as e:
             image = '../static/img/' + self.platform + '.png'
             self.verbose.warning("get_vs:" + self.ip + " err " + str(e))
