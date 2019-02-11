@@ -1,0 +1,28 @@
+Value name (\S*)
+Value tunnel (\d+)
+Value destination_ip ((\d{1,3}\.){3}\d{1,3})
+Value source_ip ((\d{1,3}\.){3}\d{1,3})
+Value tunnel_instance (\d+)
+Value interface_in (\S+)
+Value label_in (\S+)
+Value prev_hop ((\d{1,3}\.){3}\d{1,3})
+Value interface_out (\S+)
+Value label_out (\S+)
+Value next_hop ((\d{1,3}\.){3}\d{1,3})
+Value my_address ((\d{1,3}\.){3}\d{1,3})
+
+Start
+  ^LSP\sTunnel\s$name\s -> Active
+
+Active
+  ^\s+InLabel\s+:\s+$interface_in,\s+$label_in
+  ^\s+Pre.*:\s+$prev_hop
+  ^\s+OutLabel\s+:\s+$interface_out,\s+$label_out
+  ^\s+Next.*:\s+$next_hop
+  ^\s+Src\s$source_ip,\s+Dst\s$destination_ip,\sTun_Id\s+$tunnel,\s+Tun_Instance\s+$tunnel_instance
+  ^\s+My\sAddress:\s$my_address -> Record
+  ^\s+RSVP\sResv\s.* -> Start
+
+
+
+

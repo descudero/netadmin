@@ -27,7 +27,7 @@ import sys
 @logged
 class CiscoIOS(Parent):
     images = {"GUATEMALA": "_GT",
-              "El_SALVADOR": "_SV",
+              "EL_SALVADOR": "_SV",
               "HONDURAS": "_HN",
               "NICARAGUA": "_NC",
               "COSTA_RICA": "_CR",
@@ -162,6 +162,38 @@ class CiscoIOS(Parent):
                     data["interface"] = lines[2].replace(" preferred-path interface ", "").replace(" ", "").replace(
                         "disable-fallback", "")
             self.pseudo_wire_class[lines[0]] = data
+
+    def set_mpls_te_tunnels_mid_point(self):
+        command = "show mpls traffic-eng tunnels detail"
+        template = "show mpls traffic-eng tunnels detail signaled.template"
+        te = self.send_command_and_parse(template_name=template,
+                                         command=command)
+
+        mpls_te_tunnels = {tunnel['tunnel']: tunnel for tunnel in te}
+
+        self.mpls_te_tunnels_mid_point = {tunnel['tunnel_instance']: MplsTeTunnel(txtfsmdata=tunnel, parent=self) for
+                                          tunnel in te}
+
+        return mpls_te_tunnels
+
+    def complete_mpls_te_mid_point_source_device(self, isp):
+        device_ip = list({tunnel.source_ip for ins, tunnel in self.mpls_te_tunnels_mid_point.items()})
+        devices = isp.correct_device_platform(isp.devices_from_ip_list(device_ip))
+        devices = {device.ip: device for device in devices}
+        isp.excute_methods(devices=devices.values(), methods={"set_mpls_te_tunnels": {}, "ip_explicit_paths": {}})
+        self.mpls_te_tunnels_mid_point = {key: tunnel.complete_mid_point_te(devices[tunnel.source_ip]) for
+                                          key, tunnel in self.mpls_te_tunnels_mid_point.items()}
+
+        return list(devices.values())
+
+    def head_te_add_hop_ip_explicit_paths(self, hop, ip_reference_hop, index_way_path="before", index_way_tunnel="",
+                                          suffix_path="NEW"):
+        command = ""
+        for tunnel in self.mpls_te_tunnels.values():
+            command += tunnel.add_hop_ip_explicit_paths(hop=hop, ip_reference_hop=ip_reference_hop,
+                                                        index_way_path=index_way_path,
+                                                        index_way_tunnel=index_way_tunnel, suffix_path=suffix_path)
+        return command
 
     def set_mpls_te_tunnels(self):
         # todo change to textfsm template, template listo solo falta el methodo
@@ -1303,7 +1335,7 @@ class CiscoIOS(Parent):
 
     def get_vs(self):
         try:
-            image = '../static/img/' + "CiscoIOS" + '.png'
+            image = '../static/img/' + "CiscoIOS" + CiscoIOS.images[self.country] + '.png'
         except Exception as e:
             image = '../static/img/' + self.platform + '.png'
             self.verbose.warning("get_vs:" + self.ip + " err " + str(e))
