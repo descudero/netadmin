@@ -35278,3 +35278,7 @@ Ufinet18_
 2019-02-18 17:17:43,933:INFO:connection.CiscoIOS:172.16.30.232 snmp community set
 2019-02-18 17:17:44,734:INFO:connection.CiscoIOS:172.16.30.39 snmp community set
 2019-02-18 17:17:56,391:ERROR:connection.CiscoIOS:unable to get snmp location 172.16.30.9 TypeError("object of type 'NoneType' has no len()")
+2019-02-18 17:50:35,170:INFO:connection.CiscoIOS:172.17.26.2 snmp community set
+2019-02-18 17:50:35,400:INFO:connection.CiscoIOS:Start of connection 172.17.26.2
+2019-02-18 17:50:41,491:INFO:connection.CiscoIOS:Connected 172.17.26.2 via <netmiko.cisco.cisco_ios.CiscoIosSSH object at 0x00000192BBEC7828> 
+2019-02-18 17:50:41,491:INFO:connection.CiscoIOS: 172.17.26.2 about to sen command show ip ospf 506 database router RC 0

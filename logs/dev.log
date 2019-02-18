@@ -30030,3 +30030,4 @@ INFO:dev.Claro:dev 172.16.30.248 172.16.30.248 excute method set_interfaces
 2019-02-18 17:17:56,428:INFO:dev.ospf_adjacency:adjacency 172.16.30.253172.16.30.254 inited
 2019-02-18 17:17:56,428:INFO:dev.ospf_adjacency:adjacency 172.16.30.253172.16.30.254 inited
 2019-02-18 17:18:00,279:INFO:dev.ospf_database:OSPF DATABASE INIT FINISH
+2019-02-18 17:50:49,696:INFO:dev.ospf_database:OSPF DATABASE INIT FINISH
