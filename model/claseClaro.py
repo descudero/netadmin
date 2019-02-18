@@ -30,6 +30,7 @@ from model.CiscoXR import CiscoXR
 
 from pprint import pprint
 import ipaddress
+import os
 
 
 @logged
@@ -51,10 +52,14 @@ class Claro:
 
     def ospf_topology_vs(self, ip_seed_router, process_id='1', area='0', shelve_name="test_ospf",
                          from_shelve=False):
+        self.verbose.warning(f"shelve_name {shelve_name}")
         if from_shelve:
-            with shelve.open(shelve_name) as sh:
-                dict_ospf = sh["db"]
-
+            if os.path.isfile(f"{shelve_name}.dat"):
+                with shelve.open(shelve_name) as sh:
+                    dict_ospf = sh["db"]
+                    return dict_ospf
+            else:
+                return {"label": "no_data_in_date"}
         else:
 
             ospf_db = ospf_database(ip_seed_router=ip_seed_router, isp=self, process_id=process_id, area=area)
@@ -62,8 +67,9 @@ class Claro:
                 dict_ospf = ospf_db.get_vs()
                 sh["db"] = dict_ospf
                 sh.close()
+                return dict_ospf
 
-        return dict_ospf
+
 
     def ospf_topology(self, ip_seed_router, process_id='1', area='0', filename="pruebayed"):
         ospf_db = ospf_database(ip_seed_router=ip_seed_router, isp=self, process_id=process_id, area=area)

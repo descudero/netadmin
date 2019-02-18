@@ -137,33 +137,54 @@ def diagramas():
 
 @app.route('/diagramas/prueba_json', methods=['POST'])
 def ospf_json_vs():
-    datos_red = {"mpls_regional": {
-        "ip_seed_router": "172.16.30.15", "from_shelve": False,
-        "shelve_name": "shelves/" + time.strftime("%Y%m%d") + "_ospf_ufinet_regional"
-    }, "guatemala": {
-        "ip_seed_router": "172.17.22.52", "from_shelve": False,
-        "shelve_name": "shelves/" + time.strftime("%Y%m%d") + "_ospf_ufinet_regional",
-        "process_id": '502', "area": '502008'
-    }
-
-    }
-
     isp = ISP()
     isp.master = master
     request.get_json()
     saved = request.json['saved']
     date = request.json['date'].replace("-", "")
-    parameters = datos_red[request.json['date']]
-    if (date == ""):
+
+    if date == "" and saved != "actual":
         date = time.strftime("%Y%m%d")
     pl = PerformanceLog("json_diagram")
+
+    datos_red = {"_ospf_ufinet_regional": {
+        "ip_seed_router": "172.16.30.15", "from_shelve": False,
+        "shelve_name": "shelves/" + date + "_ospf_ufinet_regional"
+    }, "guatemala": {
+        "ip_seed_router": "172.17.22.52", "from_shelve": False,
+        "shelve_name": "shelves/" + date + "guatemala",
+        "process_id": '502', "area": '502008'
+    }, "el_salvador": {
+        "ip_seed_router": "172.17.23.11", "from_shelve": False,
+        "shelve_name": "shelves/" + date + "el_salvador",
+        "process_id": '503', "area": '503001'
+    }, "nicaragua": {
+        "ip_seed_router": "172.17.25.1", "from_shelve": False,
+        "shelve_name": "shelves/" + date + "nicaragua",
+        "process_id": '505', "area": '505001'
+    }, "honduras": {
+        "ip_seed_router": "172.17.24.5", "from_shelve": False,
+        "shelve_name": "shelves/" + date + "honduras",
+        "process_id": '506', "area": '506001'
+    }, "costa_rica": {
+        "ip_seed_router": "172.17.26.2", "from_shelve": False,
+        "shelve_name": "shelves/" + date + "costa_rica",
+        "process_id": '506', "area": '506001'
+    }
+        , "panama": {
+            "ip_seed_router": "172.17.27.1", "from_shelve": False,
+            "shelve_name": "shelves/" + date + "guatemala",
+            "process_id": '507', "area": '507001'
+        }
+
+    }
+    parameters = datos_red[request.json['network']]
+    verbose.warning(parameters)
     if saved == "actual":
         data = isp.ospf_topology_vs(**parameters)
     else:
         try:
             parameters["from_shelve"] = True
-            parameters["date_string"] = date
-            del parameters["shelve_name"]
             data = isp.ospf_topology_vs(**parameters)
         except Exception as e:
             weblog.warning(repr(e))

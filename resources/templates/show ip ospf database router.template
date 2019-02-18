@@ -17,5 +17,6 @@ Lsa
   ^\s+\(Link\sID\).+:\s+${link_id}$$
   ^\s+\(Link\sData\).+:\s+${link_data}$$
   ^\s+TOS.+:\s+${metric}$$ -> Record
+  ^\s+Router\sLink\sStates\s\(Area\s${area}.* -> Start
   ^\s+LS\sage:.* -> Start
 

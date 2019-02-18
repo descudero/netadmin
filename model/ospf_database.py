@@ -14,6 +14,7 @@ class ospf_database:
         seed_router = CiscoIOS(ip=ip_seed_router, display_name='seed', master=isp.master)
         seed_router = isp.correct_device_platform([seed_router])[0]
         p2p, self.routers = seed_router.ospf_area_adjacency_p2p(process_id=process_id, area=area)
+        self.verbose.warning(f"_INIT_ p2p :{len(p2p)} rourters {len(self.routers)}")
         self.isp = isp
         self.routers = [CiscoIOS(ip=router, display_name=router, master=self.isp.master) for router in self.routers]
         self.routers = isp.correct_device_platform(self.routers)

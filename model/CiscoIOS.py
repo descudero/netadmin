@@ -569,7 +569,7 @@ class CiscoIOS(Parent):
     def set_ospf_neighbors(self):
         pass
 
-    def set_ospf_database(self, process):
+    def set_ospf_database(self, process, area="0"):
         command = "show ip ospf " + process + " database router topology"
         connection = self.connect()
         output = self.send_command(connection, command, self.hostname, timeout=10)
@@ -1302,6 +1302,7 @@ class CiscoIOS(Parent):
         mainloop()
 
     def get_interfaces_dict_data(self):
+        getattr(self, "interfaces", default=self.set_interfaces())
         interface_data_list = []
         for interface_index, interface in self.interfaces.items():
             interface_dict = interface.dict_data()

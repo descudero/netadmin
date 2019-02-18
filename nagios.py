@@ -11,16 +11,18 @@ parser.add_argument('ip_device', type=str,
                     help='ip del dipositivo')
 parser.add_argument('ip_gateway', type=str,
                     help='ip para hacerle salto')
+parser.add_argument('vrf', type=str,
+                    help='vrf')
 
-parser.add_argument('filename', process_id='502', area='502008', action="store_true",
-                    help='display interface stats')
+parser.add_argument('filename', type=str,
+                    help='nombre del archivo')
 
 claro = Claro()
 
-final_counter = Counter()
 master = Master()
 test = CiscoIOS("10.242.55.5", "XR", master)
 test.set_jump_gateway("10.250.55.3", protocol="telnet")
+
 # test3 = CiscoIOS("172.17.28.110", "XR", master)
 # test2 = CiscoXR("172.16.30.253", "XR", master)
 
