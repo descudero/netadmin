@@ -1,4 +1,3 @@
-
 from flask import Flask, render_template, request, jsonify
 
 import socket
@@ -17,7 +16,6 @@ from model.InternetServiceProvider import InternetServiceProvider as ISP
 import logging
 from model.CiscoXR import CiscoXR
 
-
 import pandas as pd
 
 app = Flask(__name__)
@@ -33,6 +31,7 @@ weblog = logging.getLogger("web.netadmin.app")
 per = logging.getLogger("performance.netadmin.app")
 verbose = logging.getLogger("verbose.netadmin.app")
 
+
 def connect_mysql():
     return pymysql.connect(host=app.config['MYSQL_HOST'],
                            user=app.config['MYSQL_USER'],
@@ -40,6 +39,7 @@ def connect_mysql():
                            db=['MYSQL_DB'],
                            charset='utf8mb4',
                            cursorclass=pymysql.cursors.DictCursor)
+
 
 @app.route('/reportes/internet/', methods=['POST', 'GET'])
 def reporte_internet():
@@ -125,7 +125,6 @@ def reporte_internet():
                            tables=tables)
 
 
-
 @app.route('/test_css')
 def css_test():
     return render_template('layout.html', titulo="prueba")
@@ -138,21 +137,34 @@ def diagramas():
 
 @app.route('/diagramas/prueba_json', methods=['POST'])
 def ospf_json_vs():
+    datos_red = {"mpls_regional": {
+        "ip_seed_router": "172.16.30.15", "from_shelve": False,
+        "shelve_name": "shelves/" + time.strftime("%Y%m%d") + "_ospf_ufinet_regional"
+    }, "guatemala": {
+        "ip_seed_router": "172.17.22.52", "from_shelve": False,
+        "shelve_name": "shelves/" + time.strftime("%Y%m%d") + "_ospf_ufinet_regional",
+        "process_id": '502', "area": '502008'
+    }
+
+    }
+
     isp = ISP()
     isp.master = master
     request.get_json()
     saved = request.json['saved']
     date = request.json['date'].replace("-", "")
+    parameters = datos_red[request.json['date']]
     if (date == ""):
         date = time.strftime("%Y%m%d")
-    network = request.json['date']
     pl = PerformanceLog("json_diagram")
     if saved == "actual":
-        data = isp.ospf_topology_vs(ip_seed_router="172.16.30.15", from_shelve=False,
-                                    shelve_name="shelves/" + time.strftime("%Y%m%d") + "_ospf_ufinet_regional")
+        data = isp.ospf_topology_vs(**parameters)
     else:
         try:
-            data = isp.ospf_topology_dict_vs_date(date_string=date)
+            parameters["from_shelve"] = True
+            parameters["date_string"] = date
+            del parameters["shelve_name"]
+            data = isp.ospf_topology_vs(**parameters)
         except Exception as e:
             weblog.warning(repr(e))
             data = {'nodes': {'id': 0, "label": "NO DATA DATE"}, 'edges': {}, "options": {}}
@@ -184,8 +196,6 @@ def json_inventory_per_type():
     device = CiscoXR(ip=ip, display_name="", master=master, platform="")
     device.set_chassis(from_db=True)
     return jsonify([getattr(device.chassis, attr)])
-
-
 
 
 @app.route('/reportes/internet/actual')
@@ -266,8 +276,6 @@ def internet_total_json():
     return jsonify(filter_summary(df_merge, ["int_host", "x", "y1", "y2"], sort_column=sort_columns))
 
 
-
-
 def filter_sql(filtro, apply_and=True, table_suffix=""):
     filter_keys = {'CAPACIDADES_TRANSITO_INTERNET': {'l3_protocol_attr': 'IPT'},
                    'CAPACIDADES_DIRECTOS_ASN': {'l3_protocol_attr': 'PNI'},
@@ -329,9 +337,6 @@ def tabulate_cisco_command():
     return render_template('cisco_tabulated_method.html')
 
 
-
-
-
 @app.route('/reportes/json/interface_group_day/', methods=['POST', 'GET'])
 def json_data_graph():
     request.get_json()
@@ -384,6 +389,7 @@ def json_data_graph():
 @app.route('/favicon.ico')
 def flour():
     return ""
+
 
 def filter_summary(sql_dataframe, columns, sort_column={}):
     filter_keys = {'CAPACIDADES_TRANSITO_INTERNET': {'l3a': 'IPT'},

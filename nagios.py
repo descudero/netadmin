@@ -2,12 +2,18 @@ from __future__ import print_function
 
 from config.Master import Master
 from model.CiscoIOS import CiscoIOS
-from model.CiscoXR import CiscoXR
-from model.L3Path import L3Path
 from model.claseClaro import Claro
-from pprint import pprint
-from multiping import multi_ping
 from collections import Counter
+import argparse
+
+parser = argparse.ArgumentParser(description='Generador de Check hosts Nagios')
+parser.add_argument('ip_device', type=str,
+                    help='ip del dipositivo')
+parser.add_argument('ip_gateway', type=str,
+                    help='ip para hacerle salto')
+
+parser.add_argument('filename', process_id='502', area='502008', action="store_true",
+                    help='display interface stats')
 
 claro = Claro()
 
@@ -17,6 +23,7 @@ test = CiscoIOS("10.242.55.5", "XR", master)
 test.set_jump_gateway("10.250.55.3", protocol="telnet")
 # test3 = CiscoIOS("172.17.28.110", "XR", master)
 # test2 = CiscoXR("172.16.30.253", "XR", master)
+
 
 # test2.set_snmp_community()
 # test2.set_yed_xy()

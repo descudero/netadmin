@@ -1302,7 +1302,6 @@ class CiscoIOS(Parent):
         mainloop()
 
     def get_interfaces_dict_data(self):
-        self.set_interfaces()
         interface_data_list = []
         for interface_index, interface in self.interfaces.items():
             interface_dict = interface.dict_data()
