@@ -51,7 +51,7 @@ class MplsTeTunnel:
                                                                 index_way=index_way_tunnel)
                 except KeyError as e:
                     self.verbose.warning(
-                        "add_hop_ip_explicit_paths dev{0} no P{1}".format(self.parent.ip, path["name"]))
+                        "add_hop_ip_explicit_paths dev{0} no P {1}".format(self.parent.ip, path["name"]))
 
 
         for index, path in new_paths.items():

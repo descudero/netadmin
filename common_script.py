@@ -9,12 +9,16 @@ isp.master = Master()
 
 # print(isp.ospf_topology_vs(ip_seed_router="172.16.30.5"))
 
-cisco = CiscoIOS(ip="172.16.30.1", display_name="", master=isp.master)
-
+cisco = CiscoIOS(ip="172.19.8.21", display_name="", master=isp.master)
+print(cisco.set_ip_explicit_paths())
+# print(isp.replace_loose_mpls_te_paths(abr_ip="172.16.30.34", new_abr_ip="172.16.30.250",
+#                                devices=["172.16.30.35","172.16.30.34","172.16.30.50"], suffix_path="_GUY_9K"))
+'''
 print(isp.add_new_paths_mpls_te(ip_a="172.16.20.65", ip_b="172.16.20.66",
                                 ip_a_new_hop={"next_hop": "1.1.1.1", "loose": ""},
                                 ip_b_new_hop={"next_hop": "2.2.2.2", "loose": ""}
-                                , ip_source_device="172.16.30.1", suffix_path="MIG_CMYs"))
+                                , devices=["172.16.30.1"], suffix_path="_MIG_CMYs"))
+'''
 '''
 cisco.set_mpls_te_tunnels()
 cisco.set_mpls_te_tunnels_mid_point()

@@ -1,8 +1,8 @@
 import textfsm
 from pprint import pprint
 
-fsm = textfsm.TextFSM(open("show mpls traffic-eng tunnels detail signaled.template"))
-file_data = open("../output_test/show mpls traffic-eng tunnels detail.ios.txt").read()
+fsm = textfsm.TextFSM(open("ip explicit-path ios.template"))
+file_data = open("../output_test/show run s ip explicit-path ios.txt").read()
 fsm_results = fsm.ParseText(file_data, )
 
 print(fsm.header)

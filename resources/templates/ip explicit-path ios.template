@@ -4,4 +4,4 @@ Value next_hop (((\d{1,3}\.){3}\d{1,3}))
 
 Start
   ^ip\sexplicit-path\sname\s$name
-  ^\s+next-address\s($loose\s)?$next_hop -> Record
+  ^\s+.*next-address\s($loose\s)?(strict\s)?$next_hop -> Record

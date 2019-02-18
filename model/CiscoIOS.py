@@ -163,7 +163,20 @@ class CiscoIOS(Parent):
                         "disable-fallback", "")
             self.pseudo_wire_class[lines[0]] = data
 
-    def set_mpls_te_tunnels_mid_point(self):
+    def set_mpls_te_tunnels(self):
+        # todo change to textfsm template, template listo solo falta el methodo
+        # todo create mpls te tunnel
+        command = "show mpls traffic-eng tunnels detail"
+        template = "show mpls traffic-eng tunnels detail.template"
+        te = self.send_command_and_parse(template_name=template,
+                                         command=command)
+
+        mpls_te_tunnels = {tunnel['tunnel']: tunnel for tunnel in te}
+        self.mpls_te_tunnels = {tunnel['tunnel']: MplsTeTunnel(txtfsmdata=tunnel, parent=self) for tunnel in te}
+
+        return mpls_te_tunnels
+
+    def set_mpls_te_tunnels_mid_point(self) -> dict:
         command = "show mpls traffic-eng tunnels detail"
         template = "show mpls traffic-eng tunnels detail signaled.template"
         te = self.send_command_and_parse(template_name=template,
@@ -176,7 +189,14 @@ class CiscoIOS(Parent):
 
         return mpls_te_tunnels
 
-    def complete_mpls_te_mid_point_source_device(self, isp):
+    def get_te_head_ip_set(self, ) -> set:
+        actual_mid_head_set = {te.source_ip for te_id, te in self.mpls_te_tunnels_mid_point.items()}
+        actual_mid_destination_set = {te.destination_ip for te_id, te in self.mpls_te_tunnels_mid_point.items()}
+        actual_local_set = {te.destination_ip for te_id, te in self.mpls_te_tunnels.items()}
+        devices_ip = actual_local_set | actual_mid_head_set | actual_mid_destination_set
+        return devices_ip
+
+    def complete_mpls_te_mid_point_source_device(self, isp, devices={}):
         device_ip = list({tunnel.source_ip for ins, tunnel in self.mpls_te_tunnels_mid_point.items()})
         devices = isp.correct_device_platform(isp.devices_from_ip_list(device_ip))
         devices = {device.ip: device for device in devices}
@@ -195,18 +215,7 @@ class CiscoIOS(Parent):
                                                         index_way_tunnel=index_way_tunnel, suffix_path=suffix_path)
         return command
 
-    def set_mpls_te_tunnels(self):
-        # todo change to textfsm template, template listo solo falta el methodo
-        # todo create mpls te tunnel
-        command = "show mpls traffic-eng tunnels detail"
-        template = "show mpls traffic-eng tunnels detail.template"
-        te = self.send_command_and_parse(template_name=template,
-                                         command=command)
 
-        mpls_te_tunnels = {tunnel['tunnel']: tunnel for tunnel in te}
-        self.mpls_te_tunnels = {tunnel['tunnel']: MplsTeTunnel(txtfsmdata=tunnel, parent=self) for tunnel in te}
-
-        return mpls_te_tunnels
 
     def set_service_instances(self):
         # todo change to textfsm template
@@ -1501,16 +1510,18 @@ class CiscoIOS(Parent):
             print(self.ip, attribute, filter, interfaces)
         return interfaces
 
-    def ip_explicit_paths(self, template_name="ip explicit-path ios.template"):
+    def set_ip_explicit_paths(self, template_name="ip explicit-path ios.template"):
         list_of_hops = self.send_command_and_parse(command="show run | s ip explicit-path", template_name=template_name)
         path_names = {hop['name'] for hop in list_of_hops}
         self.explicit_paths = {}
+        pprint(list_of_hops)
+        pprint(path_names)
         for path_name in path_names:
             self.explicit_paths[path_name] = IpExplicitPath(name=path_name, hops=[hop for hop in list_of_hops if
                                                                                   hop["name"] == path_name],
                                                             parent_device=self)
 
-        return self.ip_explicit_paths
+        return self.explicit_paths
 
     def add_hop_ip_explicit_paths(self, hop, ip_reference_hop, index_way="before"):
         self.ip_explicit_paths()

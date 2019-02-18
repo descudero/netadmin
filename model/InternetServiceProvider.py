@@ -26,13 +26,41 @@ class InternetServiceProvider(Claro):
 
         return result
 
-    def add_new_paths_mpls_te(self, ip_a, ip_b, ip_a_new_hop, ip_b_new_hop, ip_source_device, suffix_path="NEW"):
-        initial_device = CiscoIOS(ip=ip_source_device, master=self.master, display_name=ip_source_device)
-        initial_device.ip_explicit_paths()
-        initial_device.set_mpls_te_tunnels()
-        initial_device.set_mpls_te_tunnels_mid_point()
-        devices = initial_device.complete_mpls_te_mid_point_source_device(isp=self)
-        devices.append(initial_device)
+    def get_mpls_te_end_points(self, devices=[]) -> list:
+        devices_set = set(devices)
+        devices = self.correct_device_platform(self.devices_from_ip_list(devices))
+        self.excute_methods(methods={"set_mpls_te_tunnels_mid_point": {}, "set_mpls_te_tunnels": {}}, devices=devices)
+        for device in devices:
+            devices_set = devices_set | device.get_te_head_ip_set()
+            print(devices_set)
+            print(len(devices_set))
+        devices = self.correct_device_platform(self.devices_from_ip_list(devices_set))
+        return devices
+
+    def replace_loose_mpls_te_paths(self, abr_ip, new_abr_ip, devices=[],
+                                    suffix_path="NEW"):
+        devices = self.get_mpls_te_end_points(devices=devices)
+        self.excute_methods(methods={"set_mpls_te_tunnels": {}, "set_ip_explicit_paths": {}}, devices=devices)
+        devices = sorted(devices, key=lambda o: o.ip)
+
+        print([device.ip for device in devices])
+        final_command = f"\n---------------------------------------------\ntotal devices {len(devices)} \n"
+
+        for index, device in enumerate(devices):
+            command = device.head_te_add_hop_ip_explicit_paths(hop={"next_hop": new_abr_ip, "loose": "loose"},
+                                                               ip_reference_hop=abr_ip,
+                                                               index_way_path="replace", index_way_tunnel="before",
+                                                               suffix_path=suffix_path)
+            if command != "":
+                final_command += f" no {index} next_device {device.ip} \n {command}"
+
+        return final_command
+
+    def add_interface_mpls_te_paths(self, ip_a: str, ip_b: str, ip_a_new_hop: dict, ip_b_new_hop: dict, devices=[],
+                                    suffix_path="NEW"):
+        devices = self.get_mpls_te_end_points(devices=devices)
+
+        self.excute_methods(methods={"set_mpls_te_tunnels": {}, "set_ip_explicit_paths": {}}, devices=devices)
         devices = sorted(devices, key=lambda o: o.ip)
 
         final_command = ""

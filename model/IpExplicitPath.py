@@ -36,11 +36,15 @@ class IpExplicitPath:
 
     @property
     def command(self):
-        command_string = " ip explicit-path name " + self.name + " enable\n"
+        command_string = f" ip explicit-path name  {self.name}  enable\n"
         for hop in self:
-            command_string += "next-address " + hop["loose"] + " " + hop["next_hop"] + "\n"
+            command_string += f" next-address {hop['loose']}  {hop['next_hop']} \n"
 
         return command_string
 
     def __iter__(self):
         return iter(self.hops)
+
+    def __repr__(self):
+        data = f"{self.name} " + "|".join([hop["next_address"] for hop in self])
+        return data
