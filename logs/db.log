@@ -1,0 +1,1632 @@
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'sn'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'sn'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'sn'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'sn'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'sn'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'sn'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'sn'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'sn'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'sn'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'sn'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'sn'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'sn'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'sn'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'sn'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'sn'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'sn'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'sn'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'sn'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'sn'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'sn'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'sn'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'sn'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'sn'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'sn'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due IndexError('tuple index out of range')
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due IndexError('tuple index out of range')
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due IndexError('tuple index out of range')
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due IndexError('tuple index out of range')
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due IndexError('tuple index out of range')
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due IndexError('tuple index out of range')
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due IndexError('tuple index out of range')
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due IndexError('tuple index out of range')
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due IndexError('tuple index out of range')
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due IndexError('tuple index out of range')
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'uid'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'uid'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'uid'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'uid'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'uid'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'uid'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due AttributeError("'CiscoPart' object has no attribute 'uid'")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VALUES ('8','FOX2139P8TU','V02','ASR-9910,','ASR 9910 8 Line Card Slot Chassis',' at line 3")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VALUES ('8','FOC2131NMBH','V01','A99-SFC-S,','ASR 9910 Switch Fabric Card','0/FC' at line 3")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VALUES ('8','FOC2131NMEG','V01','A99-SFC-S,','ASR 9910 Switch Fabric Card','0/FC' at line 3")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VALUES ('8','FOC2131NMET','V01','A99-SFC-S,','ASR 9910 Switch Fabric Card','0/FC' at line 3")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VALUES ('8','FOC2131NME3','V01','A99-SFC-S,','ASR 9910 Switch Fabric Card','0/FC' at line 3")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VALUES ('8','FOC2131NMFK','V01','A99-SFC-S,','ASR 9910 Switch Fabric Card','0/FC' at line 3")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VALUES ('8','DTM2141027C','V02','PWR-4.4KW-DC-V3,','4.4kW DC V3 Power Module','p' at line 3")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VALUES ('8','DTM214201XF','V02','PWR-4.4KW-DC-V3,','4.4kW DC V3 Power Module','p' at line 3")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VALUES ('8','DTM213900L0','V02','PWR-4.4KW-DC-V3,','4.4kW DC V3 Power Module','p' at line 3")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VALUES ('8','DTM214201X4','V02','PWR-4.4KW-DC-V3,','4.4kW DC V3 Power Module','p' at line 3")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VALUES ('8','DTM213900KG','V02','PWR-4.4KW-DC-V3,','4.4kW DC V3 Power Module','p' at line 3")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VALUES ('8','FOC2148NA0R','V03','A9K-MPA-8X10GE,','ASR 9000 8-port 10GE Modular ' at line 3")
+INFO:db.CiscoPart:saved: PART SAVED UID 1
+INFO:db.CiscoPart:saved: PART SAVED UID 2
+INFO:db.CiscoPart:saved: PART SAVED UID 3
+INFO:db.CiscoPart:saved: PART SAVED UID 4
+INFO:db.CiscoPart:saved: PART SAVED UID 5
+INFO:db.CiscoPart:saved: PART SAVED UID 6
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+INFO:db.CiscoPart:saved: PART SAVED UID 7
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+INFO:db.CiscoPart:saved: PART SAVED UID 8
+INFO:db.CiscoPart:saved: PART SAVED UID 9
+INFO:db.CiscoPart:saved: PART SAVED UID 10
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+INFO:db.CiscoPart:saved: PART SAVED UID 11
+INFO:db.CiscoPart:saved: PART SAVED UID 12
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+INFO:db.CiscoPart:saved: PART SAVED UID 13
+INFO:db.CiscoPart:saved: PART SAVED UID 14
+INFO:db.CiscoPart:saved: PART SAVED UID 15
+INFO:db.CiscoPart:saved: PART SAVED UID 16
+INFO:db.CiscoPart:saved: PART SAVED UID 17
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+DEBUG:db.CiscoPart:saved: |chassis ASR-9910 ASR-9910, S:10 N: 0 sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 18
+DEBUG:db.CiscoPart:saved: |0/FC4 A99-SFC-S, S:0 N: 0 sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 19
+DEBUG:db.CiscoPart:saved: |0/FC3 A99-SFC-S, S:0 N: 0 sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 20
+DEBUG:db.CiscoPart:saved: |0/FC2 A99-SFC-S, S:0 N: 0 sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 21
+DEBUG:db.CiscoPart:saved: |0/FC1 A99-SFC-S, S:0 N: 0 sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 22
+DEBUG:db.CiscoPart:saved: |0/FC0 A99-SFC-S, S:0 N: 0 sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 23
+DEBUG:db.CiscoPart:saved: |power- 0/PS1/M1 PWR-4.4KW-DC-V3, S:0 N: 0 sql 0
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+DEBUG:db.CiscoPart:saved: |power- 0/PS1/M0 PWR-4.4KW-DC-V3, S:0 N: 0 sql 0
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+DEBUG:db.CiscoPart:saved: |power- 0/PS0/M2 PWR-4.4KW-DC-V3, S:0 N: 0 sql 0
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+DEBUG:db.CiscoPart:saved: |power- 0/PS0/M1 PWR-4.4KW-DC-V3, S:0 N: 0 sql 0
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+DEBUG:db.CiscoPart:saved: |power- 0/PS0/M0 PWR-4.4KW-DC-V3, S:0 N: 0 sql 0
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+DEBUG:db.CiscoPart:saved: |0/1 A9K-MOD200-TR, S:2 N: 1 sql 0
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+DEBUG:db.CiscoPart:saved: |0/1/1 A9K-MPA-8X10GE, S:8 N: 1 sql 0
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+DEBUG:db.CiscoPart:saved: |0/1/1/1 SFP-10G-LR-DHD, S:0 N: 1 sql 0
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+DEBUG:db.CiscoPart:saved: |0/1/1/0 SFP-10G-ER S:0 N: 0 sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 24
+DEBUG:db.CiscoPart:saved: |0/1/0 A9K-MPA-8X10GE, S:8 N: 0 sql 0
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+DEBUG:db.CiscoPart:saved: |0/1/0/4 SFP-10G-LR, S:0 N: 4 sql 0
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+DEBUG:db.CiscoPart:saved: |0/1/0/3 SFP-10G-LR S:0 N: 3 sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 25
+DEBUG:db.CiscoPart:saved: |0/1/0/2 SFP-10G-LR S:0 N: 2 sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 26
+DEBUG:db.CiscoPart:saved: |0/1/0/1 SFP-10G-LR S:0 N: 1 sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 27
+DEBUG:db.CiscoPart:saved: |0/0 A9K-MOD200-TR, S:2 N: 0 sql 0
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+DEBUG:db.CiscoPart:saved: |0/0/1 A9K-MPA-8X10GE, S:8 N: 1 sql 0
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+DEBUG:db.CiscoPart:saved: |0/0/1/1 SFP-10G-LR S:0 N: 1 sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 28
+DEBUG:db.CiscoPart:saved: |0/0/1/0 SFP-10G-LR S:0 N: 0 sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 29
+DEBUG:db.CiscoPart:saved: |0/0/0 A9K-MPA-8X10GE, S:8 N: 0 sql 0
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+DEBUG:db.CiscoPart:saved: |0/0/0/5 SFP-10G-LR S:0 N: 5 sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 30
+DEBUG:db.CiscoPart:saved: |0/0/0/4 SFP-10G-LR S:0 N: 4 sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 31
+DEBUG:db.CiscoPart:saved: |0/0/0/3 SFP-10G-LR S:0 N: 3 sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 32
+DEBUG:db.CiscoPart:saved: |0/0/0/2 SFP-10G-LR S:0 N: 2 sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 33
+DEBUG:db.CiscoPart:saved: |0/0/0/1 SFP-10G-LR S:0 N: 1 sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 34
+DEBUG:db.CiscoPart:saved: |0/0/0/0 USFP+-192/S1, S:0 N: 0 sql 0
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+DEBUG:db.CiscoPart:saved: |fantray 0/FT1 ASR-9910-FAN, S:0 N: 0 sql 0
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+DEBUG:db.CiscoPart:saved: |fantray 0/FT0 ASR-9910-FAN, S:0 N: 0 sql 0
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+DEBUG:db.CiscoPart:saved: |0/RSP1 A99-RSP-TR, S:0 N: 9 sql 0
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+DEBUG:db.CiscoPart:saved: |0/RSP0 A99-RSP-TR, S:0 N: 8 sql 0
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'pid' at row 1")
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOX2139P8TU','V02','ASR-9910,','ASR 9910 8 Line Card Slot Chassis','chassis ASR-9910','2019-01-16 15:28:37') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 35
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2131NMBH','V01','A99-SFC-S,','ASR 9910 Switch Fabric Card','0/FC4','2019-01-16 15:28:38') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 36
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2131NMEG','V01','A99-SFC-S,','ASR 9910 Switch Fabric Card','0/FC3','2019-01-16 15:28:39') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 37
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2131NMET','V01','A99-SFC-S,','ASR 9910 Switch Fabric Card','0/FC2','2019-01-16 15:28:40') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 38
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2131NME3','V01','A99-SFC-S,','ASR 9910 Switch Fabric Card','0/FC1','2019-01-16 15:28:41') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 39
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2131NMFK','V01','A99-SFC-S,','ASR 9910 Switch Fabric Card','0/FC0','2019-01-16 15:28:42') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 40
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','DTM2141027C','V02','PWR-4.4KW-DC-V3,','4.4kW DC V3 Power Module','power- 0/PS1/M1','2019-01-16 15:28:44') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 41
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','DTM214201XF','V02','PWR-4.4KW-DC-V3,','4.4kW DC V3 Power Module','power- 0/PS1/M0','2019-01-16 15:28:45') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 42
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','DTM213900L0','V02','PWR-4.4KW-DC-V3,','4.4kW DC V3 Power Module','power- 0/PS0/M2','2019-01-16 15:28:46') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 43
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','DTM214201X4','V02','PWR-4.4KW-DC-V3,','4.4kW DC V3 Power Module','power- 0/PS0/M1','2019-01-16 15:28:47') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 44
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','DTM213900KG','V02','PWR-4.4KW-DC-V3,','4.4kW DC V3 Power Module','power- 0/PS0/M0','2019-01-16 15:28:48') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 45
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2146NK21','V04','A9K-MOD200-TR,','200G Modular Linecard, Packet Transport Optimized','0/1','2019-01-16 15:28:49') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 46
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2148NA0R','V03','A9K-MPA-8X10GE,','ASR 9000 8-port 10GE Modular Port Adapter','0/1/1','2019-01-16 15:28:50') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 47
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','N152518D4110','V03','SFP-10G-LR-DHD,','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/1/1/1','2019-01-16 15:28:51') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 48
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','ONT183100G1','V02','SFP-10G-ER','10GBASE-ER 1550nm SMF 40KM','0/1/1/0','2019-01-16 15:28:52') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 49
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2148N9X9','V03','A9K-MPA-8X10GE,','ASR 9000 8-port 10GE Modular Port Adapter','0/1/0','2019-01-16 15:28:54') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 50
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','J1822100031','N/A','SFP-10G-LR,','Non-Cisco Carritech Ltd SFP+ 10G Pluggable Optics Module','0/1/0/4','2019-01-16 15:28:55') sql 0
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'name' at row 1")
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','GT2D1081','V01','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/1/0/3','2019-01-16 15:28:56') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 51
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','GT2D1082','V01','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/1/0/2','2019-01-16 15:28:57') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 52
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','GT2D1084','V01','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/1/0/1','2019-01-16 15:28:58') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 53
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2146NK4R','V04','A9K-MOD200-TR,','200G Modular Linecard, Packet Transport Optimized','0/0','2019-01-16 15:28:59') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 54
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2148N9VT','V03','A9K-MPA-8X10GE,','ASR 9000 8-port 10GE Modular Port Adapter','0/0/1','2019-01-16 15:29:00') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 55
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','GT2D1083','V01','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/1/1','2019-01-16 15:29:01') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 56
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','GT2D1080','V01','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/1/0','2019-01-16 15:29:02') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 57
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2148N9VY','V03','A9K-MPA-8X10GE,','ASR 9000 8-port 10GE Modular Port Adapter','0/0/0','2019-01-16 15:29:03') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 58
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','GT2D1079','V01','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/0/5','2019-01-16 15:29:04') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 59
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','GT2D1078','V01','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/0/4','2019-01-16 15:29:06') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 60
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','GT2D1077','V01','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/0/3','2019-01-16 15:29:07') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 61
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','GT2D1076','V01','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/0/2','2019-01-16 15:29:08') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 62
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','GT2D1075','V01','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/0/1','2019-01-16 15:29:09') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 63
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','INFBD0310249','1B','USFP+-192/S1,','Non-Cisco Raisecom SFP+ 10G Pluggable Optics Module','0/0/0/0','2019-01-16 15:29:10') sql 0
+CRITICAL:db.CiscoPart:saved:172.16.30.3 unable to save sql  due DataError(1406, "Data too long for column 'name' at row 1")
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2136NEAC','V01','ASR-9910-FAN,','ASR-9910 Fan Tray','fantray 0/FT1','2019-01-16 15:29:11') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 64
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2136NEDS','V01','ASR-9910-FAN,','ASR-9910 Fan Tray','fantray 0/FT0','2019-01-16 15:29:12') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 65
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2144NCZP','V02','A99-RSP-TR,','ASR 9910 Route Processor for Transport','0/RSP1','2019-01-16 15:29:13') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 66
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2133NMNH','V02','A99-RSP-TR,','ASR 9910 Route Processor for Transport','0/RSP0','2019-01-16 15:29:14') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 67
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOX2139P8TU','V02','ASR-9910','ASR 9910 8 Line Card Slot Chassis','chassis ASR-9910','2019-01-16 15:32:33') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 68
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2131NMBH','V01','A99-SFC-S','ASR 9910 Switch Fabric Card','0/FC4','2019-01-16 15:32:34') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 69
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2131NMEG','V01','A99-SFC-S','ASR 9910 Switch Fabric Card','0/FC3','2019-01-16 15:32:36') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 70
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2131NMET','V01','A99-SFC-S','ASR 9910 Switch Fabric Card','0/FC2','2019-01-16 15:32:37') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 71
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2131NME3','V01','A99-SFC-S','ASR 9910 Switch Fabric Card','0/FC1','2019-01-16 15:32:38') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 72
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2131NMFK','V01','A99-SFC-S','ASR 9910 Switch Fabric Card','0/FC0','2019-01-16 15:32:39') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 73
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','DTM2141027C','V02','PWR-4.4KW-DC-V3','4.4kW DC V3 Power Module','power- 0/PS1/M1','2019-01-16 15:32:40') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 74
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','DTM214201XF','V02','PWR-4.4KW-DC-V3','4.4kW DC V3 Power Module','power- 0/PS1/M0','2019-01-16 15:32:41') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 75
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','DTM213900L0','V02','PWR-4.4KW-DC-V3','4.4kW DC V3 Power Module','power- 0/PS0/M2','2019-01-16 15:32:42') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 76
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','DTM214201X4','V02','PWR-4.4KW-DC-V3','4.4kW DC V3 Power Module','power- 0/PS0/M1','2019-01-16 15:32:43') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 77
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','DTM213900KG','V02','PWR-4.4KW-DC-V3','4.4kW DC V3 Power Module','power- 0/PS0/M0','2019-01-16 15:32:44') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 78
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2146NK21','V04','A9K-MOD200-TR','200G Modular Linecard, Packet Transport Optimized','0/1','2019-01-16 15:32:45') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 79
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2148NA0R','V03','A9K-MPA-8X10GE','ASR 9000 8-port 10GE Modular Port Adapter','0/1/1','2019-01-16 15:32:47') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 80
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','N152518D4110','V03','SFP-10G-LR-DHD','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/1/1/1','2019-01-16 15:32:48') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 81
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','ONT183100G1','V02','SFP-10G-ER','10GBASE-ER 1550nm SMF 40KM','0/1/1/0','2019-01-16 15:32:49') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 82
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2148N9X9','V03','A9K-MPA-8X10GE','ASR 9000 8-port 10GE Modular Port Adapter','0/1/0','2019-01-16 15:32:50') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 83
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','J1822100031','N/A','SFP-10G-LR','Non-Cisco Carritech Ltd SFP+ 10G Pluggable Optics Module','0/1/0/4','2019-01-16 15:32:51') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 84
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','GT2D1081','V01','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/1/0/3','2019-01-16 15:32:52') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 85
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','GT2D1082','V01','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/1/0/2','2019-01-16 15:32:53') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 86
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','GT2D1084','V01','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/1/0/1','2019-01-16 15:32:54') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 87
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2146NK4R','V04','A9K-MOD200-TR','200G Modular Linecard, Packet Transport Optimized','0/0','2019-01-16 15:32:55') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 88
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2148N9VT','V03','A9K-MPA-8X10GE','ASR 9000 8-port 10GE Modular Port Adapter','0/0/1','2019-01-16 15:32:57') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 89
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','GT2D1083','V01','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/1/1','2019-01-16 15:32:58') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 90
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','GT2D1080','V01','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/1/0','2019-01-16 15:32:59') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 91
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2148N9VY','V03','A9K-MPA-8X10GE','ASR 9000 8-port 10GE Modular Port Adapter','0/0/0','2019-01-16 15:33:00') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 92
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','GT2D1079','V01','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/0/5','2019-01-16 15:33:01') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 93
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','GT2D1078','V01','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/0/4','2019-01-16 15:33:02') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 94
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','GT2D1077','V01','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/0/3','2019-01-16 15:33:03') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 95
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','GT2D1076','V01','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/0/2','2019-01-16 15:33:04') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 96
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','GT2D1075','V01','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/0/1','2019-01-16 15:33:05') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 97
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','INFBD0310249','1B','USFP+-192/S1','Non-Cisco Raisecom SFP+ 10G Pluggable Optics Module','0/0/0/0','2019-01-16 15:33:06') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 98
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2136NEAC','V01','ASR-9910-FAN','ASR-9910 Fan Tray','fantray 0/FT1','2019-01-16 15:33:07') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 99
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2136NEDS','V01','ASR-9910-FAN','ASR-9910 Fan Tray','fantray 0/FT0','2019-01-16 15:33:09') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 100
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2144NCZP','V02','A99-RSP-TR','ASR 9910 Route Processor for Transport','0/RSP1','2019-01-16 15:33:10') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 101
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('8','FOC2133NMNH','V02','A99-RSP-TR','ASR 9910 Route Processor for Transport','0/RSP0','2019-01-16 15:33:11') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 102
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOX2139P070','V02','ASR-9910','ASR 9910 8 Line Card Slot Chassis','chassis ASR-9910','2019-01-16 15:34:31') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 103
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2134N03Z','V01','A99-SFC-S','ASR 9910 Switch Fabric Card','0/FC4','2019-01-16 15:34:32') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 104
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2134N08W','V01','A99-SFC-S','ASR 9910 Switch Fabric Card','0/FC3','2019-01-16 15:34:33') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 105
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2131NM8V','V01','A99-SFC-S','ASR 9910 Switch Fabric Card','0/FC2','2019-01-16 15:34:34') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 106
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2134N08E','V01','A99-SFC-S','ASR 9910 Switch Fabric Card','0/FC1','2019-01-16 15:34:35') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 107
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2137NYHA','V01','A99-SFC-S','ASR 9910 Switch Fabric Card','0/FC0','2019-01-16 15:34:36') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 108
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','DTM21410279','V02','PWR-4.4KW-DC-V3','4.4kW DC V3 Power Module','power- 0/PS1/M1','2019-01-16 15:34:37') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 109
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','DTM214102CB','V02','PWR-4.4KW-DC-V3','4.4kW DC V3 Power Module','power- 0/PS1/M0','2019-01-16 15:34:38') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 110
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','DTM2141027B','V02','PWR-4.4KW-DC-V3','4.4kW DC V3 Power Module','power- 0/PS0/M2','2019-01-16 15:34:39') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 111
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','DTM214102CG','V02','PWR-4.4KW-DC-V3','4.4kW DC V3 Power Module','power- 0/PS0/M1','2019-01-16 15:34:41') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 112
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','DTM2141027H','V02','PWR-4.4KW-DC-V3','4.4kW DC V3 Power Module','power- 0/PS0/M0','2019-01-16 15:34:42') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 113
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2215NPPU','V06','A9K-MOD200-TR','200G Modular Linecard, Packet Transport Optimized','0/2','2019-01-16 15:34:43') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 114
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2219NCNN','V03','A9K-MPA-1X100GE','ASR 9000 1-port 100GE Modular Port Adapter','0/2/0','2019-01-16 15:34:44') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 115
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2146NK53','V04','A9K-MOD200-TR','200G Modular Linecard, Packet Transport Optimized','0/1','2019-01-16 15:34:45') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 116
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2148N9ZY','V03','A9K-MPA-8X10GE','ASR 9000 8-port 10GE Modular Port Adapter','0/1/0','2019-01-16 15:34:46') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 117
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','N098518DA031','V01','SFP-10G-LR-X','10GBASE-LR Ext Temp SFP+ Module for SMF','0/1/0/7','2019-01-16 15:34:47') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 118
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','N098518DA038','V01','SFP-10G-LR-X','10GBASE-LR Ext Temp SFP+ Module for SMF','0/1/0/6','2019-01-16 15:34:48') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 119
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','N098518DA022','V01','SFP-10G-LR-X','10GBASE-LR Ext Temp SFP+ Module for SMF','0/1/0/5','2019-01-16 15:34:49') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 120
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','N098518DA023','V01','SFP-10G-LR-X','10GBASE-LR Ext Temp SFP+ Module for SMF','0/1/0/4','2019-01-16 15:34:51') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 121
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','N152518F0594','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/1/0/3','2019-01-16 15:34:52') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 122
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','N098518DA032','V01','SFP-10G-LR-X','10GBASE-LR Ext Temp SFP+ Module for SMF','0/1/0/2','2019-01-16 15:34:53') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 123
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','N098518DA029','V01','SFP-10G-LR-X','10GBASE-LR Ext Temp SFP+ Module for SMF','0/1/0/1','2019-01-16 15:34:54') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 124
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','N152518D4106','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/1/0/0','2019-01-16 15:34:55') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 125
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2146NK1H','V04','A9K-MOD200-TR','200G Modular Linecard, Packet Transport Optimized','0/0','2019-01-16 15:34:56') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 126
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2218P58H','V03','A9K-MPA-1X100GE','ASR 9000 1-port 100GE Modular Port Adapter','0/0/1','2019-01-16 15:34:57') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 127
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','N188018IJ005','V01','CFP2-100G-ER4','100GBASE-ER4 CFP2 Module for SMF (<40 km)','0/0/1/0','2019-01-16 15:34:58') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 128
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2148NA14','V03','A9K-MPA-8X10GE','ASR 9000 8-port 10GE Modular Port Adapter','0/0/0','2019-01-16 15:34:59') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 129
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','N089818B9144','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/0/5','2019-01-16 15:35:00') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 130
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','N089817HO096','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/0/4','2019-01-16 15:35:01') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 131
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOX2139P070','V02','ASR-9910','ASR 9910 8 Line Card Slot Chassis','chassis ASR-9910','2019-01-16 15:36:40') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 132
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2134N03Z','V01','A99-SFC-S','ASR 9910 Switch Fabric Card','0/FC4','2019-01-16 15:36:41') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 133
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2134N08W','V01','A99-SFC-S','ASR 9910 Switch Fabric Card','0/FC3','2019-01-16 15:36:42') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 134
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2131NM8V','V01','A99-SFC-S','ASR 9910 Switch Fabric Card','0/FC2','2019-01-16 15:36:43') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 135
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2134N08E','V01','A99-SFC-S','ASR 9910 Switch Fabric Card','0/FC1','2019-01-16 15:36:44') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 136
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2137NYHA','V01','A99-SFC-S','ASR 9910 Switch Fabric Card','0/FC0','2019-01-16 15:36:45') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 137
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','DTM21410279','V02','PWR-4.4KW-DC-V3','4.4kW DC V3 Power Module','power- 0/PS1/M1','2019-01-16 15:36:46') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 138
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','DTM214102CB','V02','PWR-4.4KW-DC-V3','4.4kW DC V3 Power Module','power- 0/PS1/M0','2019-01-16 15:36:48') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 139
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','DTM2141027B','V02','PWR-4.4KW-DC-V3','4.4kW DC V3 Power Module','power- 0/PS0/M2','2019-01-16 15:36:49') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 140
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','DTM214102CG','V02','PWR-4.4KW-DC-V3','4.4kW DC V3 Power Module','power- 0/PS0/M1','2019-01-16 15:36:50') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 141
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','DTM2141027H','V02','PWR-4.4KW-DC-V3','4.4kW DC V3 Power Module','power- 0/PS0/M0','2019-01-16 15:36:51') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 142
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2215NPPU','V06','A9K-MOD200-TR','200G Modular Linecard, Packet Transport Optimized','0/2','2019-01-16 15:36:52') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 143
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2219NCNN','V03','A9K-MPA-1X100GE','ASR 9000 1-port 100GE Modular Port Adapter','0/2/0','2019-01-16 15:36:53') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 144
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2146NK53','V04','A9K-MOD200-TR','200G Modular Linecard, Packet Transport Optimized','0/1','2019-01-16 15:36:54') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 145
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2148N9ZY','V03','A9K-MPA-8X10GE','ASR 9000 8-port 10GE Modular Port Adapter','0/1/0','2019-01-16 15:36:55') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 146
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','N098518DA031','V01','SFP-10G-LR-X','10GBASE-LR Ext Temp SFP+ Module for SMF','0/1/0/7','2019-01-16 15:36:57') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 147
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','N098518DA038','V01','SFP-10G-LR-X','10GBASE-LR Ext Temp SFP+ Module for SMF','0/1/0/6','2019-01-16 15:36:58') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 148
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','N098518DA022','V01','SFP-10G-LR-X','10GBASE-LR Ext Temp SFP+ Module for SMF','0/1/0/5','2019-01-16 15:36:59') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 149
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','N098518DA023','V01','SFP-10G-LR-X','10GBASE-LR Ext Temp SFP+ Module for SMF','0/1/0/4','2019-01-16 15:37:00') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 150
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','N152518F0594','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/1/0/3','2019-01-16 15:37:01') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 151
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','N098518DA032','V01','SFP-10G-LR-X','10GBASE-LR Ext Temp SFP+ Module for SMF','0/1/0/2','2019-01-16 15:37:02') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 152
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','N098518DA029','V01','SFP-10G-LR-X','10GBASE-LR Ext Temp SFP+ Module for SMF','0/1/0/1','2019-01-16 15:37:03') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 153
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','N152518D4106','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/1/0/0','2019-01-16 15:37:04') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 154
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2146NK1H','V04','A9K-MOD200-TR','200G Modular Linecard, Packet Transport Optimized','0/0','2019-01-16 15:37:05') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 155
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2218P58H','V03','A9K-MPA-1X100GE','ASR 9000 1-port 100GE Modular Port Adapter','0/0/1','2019-01-16 15:37:06') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 156
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','N188018IJ005','V01','CFP2-100G-ER4','100GBASE-ER4 CFP2 Module for SMF (<40 km)','0/0/1/0','2019-01-16 15:37:07') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 157
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2148NA14','V03','A9K-MPA-8X10GE','ASR 9000 8-port 10GE Modular Port Adapter','0/0/0','2019-01-16 15:37:08') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 158
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','N089818B9144','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/0/5','2019-01-16 15:37:10') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 159
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','N089817HO096','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/0/4','2019-01-16 15:37:11') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 160
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','N152518D4109','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/0/2','2019-01-16 15:37:12') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 161
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','N098518DA034','V01','SFP-10G-LR-X','10GBASE-LR Ext Temp SFP+ Module for SMF','0/0/0/1','2019-01-16 15:37:13') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 162
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','N168018AJ109','N/A','SFP-10G-ER','10GBASE-ER 1550nm SMF 40KM','0/0/0/0','2019-01-16 15:37:14') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 163
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2136NEDL','V01','ASR-9910-FAN','ASR-9910 Fan Tray','fantray 0/FT1','2019-01-16 15:37:15') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 164
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2136NE52','V01','ASR-9910-FAN','ASR-9910 Fan Tray','fantray 0/FT0','2019-01-16 15:37:16') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 165
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2144ND1L','V02','A99-RSP-TR','ASR 9910 Route Processor for Transport','0/RSP1','2019-01-16 15:37:17') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 166
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('3','FOC2144NCWJ','V02','A99-RSP-TR','ASR 9910 Route Processor for Transport','0/RSP0','2019-01-16 15:37:18') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 167
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','FOX1639G7M6','V01','ASR-9010-DC-V2','ASR 9010 8 Line Card Slot Chassis with V2 DC PEM','chassis ASR-9010-DC-V2','2019-01-16 15:38:24') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 168
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','DTM16400063','V01','PWR-2KW-DC-V2','2kW DC V2 Power Module','power- 0/PM1/1','2019-01-16 15:38:25') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 169
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','DTM164300YF','V01','PWR-2KW-DC-V2','2kW DC V2 Power Module','power- 0/PM1/0','2019-01-16 15:38:26') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 170
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','DTM16430127','V01','PWR-2KW-DC-V2','2kW DC V2 Power Module','power- 0/PM0/1','2019-01-16 15:38:27') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 171
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','DTM164300YE','V01','PWR-2KW-DC-V2','2kW DC V2 Power Module','power- 0/PM0/0','2019-01-16 15:38:28') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 172
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','FOC1932NN01','V07','A9K-MOD160-TR','160G Modular Linecard, Packet Transport Optimized','0/7','2019-01-16 15:38:29') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 173
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','FOC1935NERY','V03','A9K-MPA-8X10GE','ASR 9000 8-port 10GE Modular Port Adapter','0/7/1','2019-01-16 15:38:30') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 174
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152517JL498','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/7/1/7','2019-01-16 15:38:32') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 175
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152518IL610','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/7/1/6','2019-01-16 15:38:33') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 176
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152518DS251','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/7/1/4','2019-01-16 15:38:34') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 177
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152517JL508','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/7/1/3','2019-01-16 15:38:35') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 178
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N084017H8084','N/A','SFP-10G-ER','10GBASE-ER 1550nm SMF 40KM','0/7/1/2','2019-01-16 15:38:36') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 179
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N084017H8083','N/A','SFP-10G-ER','10GBASE-ER 1550nm SMF 40KM','0/7/1/1','2019-01-16 15:38:37') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 180
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152517GQ214','V01','SFP-10G-LR-X','10GBASE-LR SFP+ Module for SMF','0/7/1/0','2019-01-16 15:38:38') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 181
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','FOC2135N1AW','V03','A9K-MPA-8X10GE','ASR 9000 8-port 10GE Modular Port Adapter','0/7/0','2019-01-16 15:38:39') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 182
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152518K1158','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/7/0/7','2019-01-16 15:38:41') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 183
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152518IL609','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/7/0/6','2019-01-16 15:38:42') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 184
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152518DS248','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/7/0/5','2019-01-16 15:38:43') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 185
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','C1808289348','V02','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/7/0/4','2019-01-16 15:38:44') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 186
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152518DR602','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/7/0/3','2019-01-16 15:38:45') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 187
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152517EO359','V01','SFP-10G-LR-X','10GBASE-LR SFP+ Module for SMF','0/7/0/2','2019-01-16 15:38:46') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 188
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152517GO279','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/7/0/1','2019-01-16 15:38:47') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 189
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','VE163300675','V02','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/7/0/0','2019-01-16 15:38:48') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 190
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','FOC2137NPZ5','V10','A9K-MOD160-TR','160G Modular Linecard, Packet Transport Optimized','0/2','2019-01-16 15:38:49') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 191
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','FOC2218P457','V04','A9K-MPA-8X10GE','ASR 9000 8-port 10GE Modular Port Adapter','0/2/0','2019-01-16 15:38:50') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 192
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152518IL621','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/2/0/0','2019-01-16 15:38:51') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 193
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','FOC2003N3M8','V08','A9K-MOD160-TR','160G Modular Linecard, Packet Transport Optimized','0/1','2019-01-16 15:38:53') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 194
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','FOC2012N4N9','V03','A9K-MPA-8X10GE','ASR 9000 8-port 10GE Modular Port Adapter','0/1/1','2019-01-16 15:38:54') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 195
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152517GO289','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/1/1/7','2019-01-16 15:38:55') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 196
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N084017H8087','N/A','SFP-10G-ER','10GBASE-ER 1550nm SMF 40KM','0/1/1/6','2019-01-16 15:38:56') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 197
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152517JL500','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/1/1/5','2019-01-16 15:38:57') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 198
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','SPC184701NN','V01','SFP-10G-LR-X','10GBASE-LR SFP+ Module for SMF','0/1/1/4','2019-01-16 15:38:58') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 199
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152517EO266','V01','SFP-10G-LR-X','10GBASE-LR SFP+ Module for SMF','0/1/1/3','2019-01-16 15:38:59') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 200
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','3152912216','V02','SFP-10G-ER','10GBASE-ER 1550nm SMF 40KM','0/1/1/2','2019-01-16 15:39:00') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 201
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152517EO257','V01','SFP-10G-LR-X','10GBASE-LR SFP+ Module for SMF','0/1/1/1','2019-01-16 15:39:01') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 202
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152517EO268','V01','SFP-10G-LR-X','10GBASE-LR SFP+ Module for SMF','0/1/1/0','2019-01-16 15:39:02') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 203
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','FOC2148N9YM','V03','A9K-MPA-8X10GE','ASR 9000 8-port 10GE Modular Port Adapter','0/1/0','2019-01-16 15:39:04') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 204
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N084017H8120','N/A','SFP-10G-ER','10GBASE-ER 1550nm SMF 40KM','0/1/0/7','2019-01-16 15:39:05') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 205
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152517GO275','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/1/0/6','2019-01-16 15:39:06') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 206
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152518GA393','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/1/0/5','2019-01-16 15:39:07') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 207
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152517IU691','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/1/0/4','2019-01-16 15:39:08') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 208
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152518DS253','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/1/0/3','2019-01-16 15:39:09') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 209
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152517GO278','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/1/0/2','2019-01-16 15:39:10') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 210
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152518IL620','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/1/0/1','2019-01-16 15:39:11') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 211
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152518DS077','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/1/0/0','2019-01-16 15:39:12') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 212
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','FOC1950N03P','V08','A9K-MOD160-TR','160G Modular Linecard, Packet Transport Optimized','0/0','2019-01-16 15:39:13') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 213
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','FOC2012N4RU','V03','A9K-MPA-8X10GE','ASR 9000 8-port 10GE Modular Port Adapter','0/0/1','2019-01-16 15:39:15') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 214
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152518DS252','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/1/7','2019-01-16 15:39:16') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 215
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152516FC050','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/1/6','2019-01-16 15:39:17') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 216
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','3152912217','V02','SFP-10G-ER','10GBASE-ER 1550nm SMF 40KM','0/0/1/5','2019-01-16 15:39:18') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 217
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152517EO361','V01','SFP-10G-LR-X','10GBASE-LR SFP+ Module for SMF','0/0/1/4','2019-01-16 15:39:19') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 218
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152517EO255','V01','SFP-10G-LR-X','10GBASE-LR SFP+ Module for SMF','0/0/1/3','2019-01-16 15:39:20') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 219
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152517GO280','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/1/2','2019-01-16 15:39:21') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 220
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','C1808289355','V02','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/1/1','2019-01-16 15:39:22') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 221
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152517GO276','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/1/0','2019-01-16 15:39:23') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 222
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','FOC2218P48E','V04','A9K-MPA-8X10GE','ASR 9000 8-port 10GE Modular Port Adapter','0/0/0','2019-01-16 15:39:24') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 223
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152518IL611','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/0/6','2019-01-16 15:39:25') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 224
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152518IL608','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/0/5','2019-01-16 15:39:27') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 225
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152518IL618','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/0/4','2019-01-16 15:39:28') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 226
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152518IL607','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/0/3','2019-01-16 15:39:29') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 227
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152518IL606','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/0/2','2019-01-16 15:39:30') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 228
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152518IL616','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/0/1','2019-01-16 15:39:31') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 229
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N152518IL617','N/A','SFP-10G-LR','10GBASE-LR SFP+ Module for SMF','0/0/0/0','2019-01-16 15:39:32') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 230
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','FOC2044N52L','V03','ASR-9010-FAN-V2','ASR 9010 Fan Tray Version 2','fantray 0/FT1','2019-01-16 15:39:33') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 231
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','FOC2044N50R','V03','ASR-9010-FAN-V2','ASR 9010 Fan Tray Version 2','fantray 0/FT0','2019-01-16 15:39:34') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 232
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','FOC2012NMM3','V08','A9K-RSP440-TR','ASR9K Route Switch Processor with 440G/slot Fabric and 6GB','0/RSP1','2019-01-16 15:39:35') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 233
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','FOC2012NMTC','V08','A9K-RSP440-TR','ASR9K Route Switch Processor with 440G/slot Fabric and 6GB','0/RSP0','2019-01-16 15:39:36') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 234
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N/A','N/A','FAN','ASR9K Generic Fan','fan11 0/FT1','2019-01-16 15:39:37') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 235
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N/A','N/A','FAN','ASR9K Generic Fan','fan10 0/FT1','2019-01-16 15:39:39') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 236
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N/A','N/A','FAN','ASR9K Generic Fan','fan9 0/FT1','2019-01-16 15:39:40') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 237
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N/A','N/A','FAN','ASR9K Generic Fan','fan8 0/FT1','2019-01-16 15:39:41') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 238
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N/A','N/A','FAN','ASR9K Generic Fan','fan7 0/FT1','2019-01-16 15:39:42') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 239
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N/A','N/A','FAN','ASR9K Generic Fan','fan6 0/FT1','2019-01-16 15:39:43') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 240
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N/A','N/A','FAN','ASR9K Generic Fan','fan5 0/FT1','2019-01-16 15:39:44') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 241
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N/A','N/A','FAN','ASR9K Generic Fan','fan4 0/FT1','2019-01-16 15:39:45') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 242
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N/A','N/A','FAN','ASR9K Generic Fan','fan3 0/FT1','2019-01-16 15:39:46') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 243
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N/A','N/A','FAN','ASR9K Generic Fan','fan2 0/FT1','2019-01-16 15:39:47') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 244
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N/A','N/A','FAN','ASR9K Generic Fan','fan1 0/FT1','2019-01-16 15:39:48') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 245
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N/A','N/A','FAN','ASR9K Generic Fan','fan0 0/FT1','2019-01-16 15:39:50') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 246
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N/A','N/A','FAN','ASR9K Generic Fan','fan11 0/FT0','2019-01-16 15:39:51') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 247
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N/A','N/A','FAN','ASR9K Generic Fan','fan10 0/FT0','2019-01-16 15:39:52') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 248
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N/A','N/A','FAN','ASR9K Generic Fan','fan9 0/FT0','2019-01-16 15:39:53') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 249
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N/A','N/A','FAN','ASR9K Generic Fan','fan8 0/FT0','2019-01-16 15:39:54') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 250
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N/A','N/A','FAN','ASR9K Generic Fan','fan7 0/FT0','2019-01-16 15:39:55') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 251
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N/A','N/A','FAN','ASR9K Generic Fan','fan6 0/FT0','2019-01-16 15:39:56') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 252
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N/A','N/A','FAN','ASR9K Generic Fan','fan5 0/FT0','2019-01-16 15:39:57') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 253
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N/A','N/A','FAN','ASR9K Generic Fan','fan4 0/FT0','2019-01-16 15:39:58') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 254
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N/A','N/A','FAN','ASR9K Generic Fan','fan3 0/FT0','2019-01-16 15:39:59') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 255
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N/A','N/A','FAN','ASR9K Generic Fan','fan2 0/FT0','2019-01-16 15:40:00') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 256
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N/A','N/A','FAN','ASR9K Generic Fan','fan1 0/FT0','2019-01-16 15:40:02') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 257
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('5','N/A','N/A','FAN','ASR9K Generic Fan','fan0 0/FT0','2019-01-16 15:40:03') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 258
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','FOX2135P5RM','V02','ASR-9010-DC-V2','ASR 9010 8 Line Card Slot Chassis with V2 DC PEM','chassis ASR-9010-DC-V2','2019-01-16 15:40:38') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 259
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','DTM21090057','V03','PWR-2KW-DC-V2','2kW DC V2 Power Module','power- 0/PS1/M1','2019-01-16 15:40:39') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 260
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','DTM2109002D','V03','PWR-2KW-DC-V2','2kW DC V2 Power Module','power- 0/PS1/M0','2019-01-16 15:40:40') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 261
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','DTM2109005J','V03','PWR-2KW-DC-V2','2kW DC V2 Power Module','power- 0/PS0/M1','2019-01-16 15:40:41') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 262
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','DTM2109005E','V03','PWR-2KW-DC-V2','2kW DC V2 Power Module','power- 0/PS0/M0','2019-01-16 15:40:43') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 263
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','FOC1635N53U','V02','A9K-MOD160-TR','160G Modular Linecard, Packet Transport Optimized','0/1','2019-01-16 15:40:44') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 264
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','FOC2205NELV','V03','A9K-MPA-8X10GE','ASR 9000 8-port 10GE Modular Port Adapter','0/1/1','2019-01-16 15:40:45') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 265
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152518GA045','V03','SFP-10G-LR-DHD','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/1/1/7','2019-01-16 15:40:46') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 266
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152518D3687','V03','SFP-10G-LR-DHD-V','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/1/1/6','2019-01-16 15:40:47') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 267
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152518D4342','V03','SFP-10G-LR-DHD-V','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/1/1/5','2019-01-16 15:40:48') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 268
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152518BN679','V03','SFP-10G-LR-DHD','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/1/1/3','2019-01-16 15:40:49') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 269
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152517GQ206','V03','SFP-10G-LR-X-DHD','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/1/1/2','2019-01-16 15:40:50') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 270
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152517EO053','V03','SFP-10G-LR-X-DHD','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/1/1/1','2019-01-16 15:40:51') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 271
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','FOC2021NBAG','V03','A9K-MPA-8X10GE','ASR 9000 8-port 10GE Modular Port Adapter','0/1/0','2019-01-16 15:40:52') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 272
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152518BN678','V03','SFP-10G-LR-DHD','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/1/0/7','2019-01-16 15:40:53') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 273
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152518BN676','V03','SFP-10G-LR-DHD','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/1/0/6','2019-01-16 15:40:54') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 274
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152516FA513','V03','SFP-10G-LR-X-DHD','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/1/0/5','2019-01-16 15:40:56') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 275
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152518BO172','V03','SFP-10G-LR-DHD','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/1/0/4','2019-01-16 15:40:57') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 276
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152518BO167','V03','SFP-10G-LR-DHD','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/1/0/3','2019-01-16 15:40:58') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 277
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152517HT881','V03','SFP-10G-LR-X-DHD','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/1/0/2','2019-01-16 15:40:59') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 278
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152517HT887','V03','SFP-10G-LR-X-DHD','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/1/0/1','2019-01-16 15:41:00') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 279
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152517HT886','V03','SFP-10G-LR-X-DHD','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/1/0/0','2019-01-16 15:41:01') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 280
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','FOC2134NQJG','V10','A9K-MOD160-TR','160G Modular Linecard, Packet Transport Optimized','0/0','2019-01-16 15:41:02') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 281
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','FOC2205NEU2','V03','A9K-MPA-8X10GE','ASR 9000 8-port 10GE Modular Port Adapter','0/0/1','2019-01-16 15:41:03') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 282
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152518D4341','V03','SFP-10G-LR-DHD-V','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/0/1/6','2019-01-16 15:41:04') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 283
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152518G9389','V03','SFP-10G-LR-DHD','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/0/1/5','2019-01-16 15:41:05') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 284
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152518BN680','V03','SFP-10G-LR-DHD','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/0/1/3','2019-01-16 15:41:06') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 285
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152517EO062','V03','SFP-10G-LR-X-DHD','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/0/1/2','2019-01-16 15:41:08') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 286
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152517EO054','V03','SFP-10G-LR-X-DHD','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/0/1/1','2019-01-16 15:41:09') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 287
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152518BN682','V03','SFP-10G-LR-DHD','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/0/1/0','2019-01-16 15:41:10') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 288
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','FOC2131P2X1','V03','A9K-MPA-8X10GE','ASR 9000 8-port 10GE Modular Port Adapter','0/0/0','2019-01-16 15:41:11') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 289
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152518BO176','V03','SFP-10G-LR-DHD','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/0/0/7','2019-01-16 15:41:12') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 290
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152518BO171','V03','SFP-10G-LR-DHD','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/0/0/6','2019-01-16 15:41:13') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 291
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152517BS365','V03','SFP-10G-LR-X-DHD','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/0/0/5','2019-01-16 15:41:14') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 292
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152517BS373','V03','SFP-10G-LR-X-DHD','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/0/0/4','2019-01-16 15:41:15') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 293
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152517HT883','V03','SFP-10G-LR-X-DHD','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/0/0/3','2019-01-16 15:41:16') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 294
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152517HT885','V03','SFP-10G-LR-X-DHD','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/0/0/2','2019-01-16 15:41:17') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 295
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','N152517HT884','V03','SFP-10G-LR-X-DHD','Non-Cisco OEM SFP+ 10G Pluggable Optics Module','0/0/0/1','2019-01-16 15:41:18') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 296
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','SPC184302X8','V01','SFP-10G-LR-X','10GBASE-LR Ext Temp SFP+ Module for SMF','0/0/0/0','2019-01-16 15:41:20') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 297
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','FOC2136NCZB','V03','ASR-9010-FAN-V2','ASR 9010 Fan Tray Version 2','fantray 0/FT1','2019-01-16 15:41:21') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 298
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','FOC2136ND2C','V03','ASR-9010-FAN-V2','ASR 9010 Fan Tray Version 2','fantray 0/FT0','2019-01-16 15:41:22') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 299
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','FOC2051N5GX','V04','A9K-RSP880-TR','ASR9K Route Switch Processor with 880G/slot Fabric and 16GB','0/RSP1','2019-01-16 15:41:23') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 300
+DEBUG:db.CiscoPart:saved: INSERT INTO 
+                   device_parts(net_device_uid,serial_number,vid,pid,name,local_name,time_polled)
+                   VALUES ('1','FOC2133NEFC','V04','A9K-RSP880-TR','ASR9K Route Switch Processor with 880G/slot Fabric and 16GB','0/RSP0','2019-01-16 15:41:24') sql 0
+INFO:db.CiscoPart:saved: PART SAVED UID 301
+INFO:db.CiscoPart:saved: PART SAVED UID 302
+INFO:db.CiscoPart:saved: PART SAVED UID 303
+INFO:db.CiscoPart:saved: PART SAVED UID 304
+INFO:db.CiscoPart:saved: PART SAVED UID 305
+INFO:db.CiscoPart:saved: PART SAVED UID 306
+INFO:db.CiscoPart:saved: PART SAVED UID 307
+INFO:db.CiscoPart:saved: PART SAVED UID 308
+INFO:db.CiscoPart:saved: PART SAVED UID 309
+INFO:db.CiscoPart:saved: PART SAVED UID 310
+INFO:db.CiscoPart:saved: PART SAVED UID 311
+INFO:db.CiscoPart:saved: PART SAVED UID 312
+INFO:db.CiscoPart:saved: PART SAVED UID 313
+INFO:db.CiscoPart:saved: PART SAVED UID 314
+INFO:db.CiscoPart:saved: PART SAVED UID 315
+INFO:db.CiscoPart:saved: PART SAVED UID 316
+INFO:db.CiscoPart:saved: PART SAVED UID 317
+INFO:db.CiscoPart:saved: PART SAVED UID 318
+INFO:db.CiscoPart:saved: PART SAVED UID 319
+INFO:db.CiscoPart:saved: PART SAVED UID 320
+INFO:db.CiscoPart:saved: PART SAVED UID 321
+INFO:db.CiscoPart:saved: PART SAVED UID 322
+INFO:db.CiscoPart:saved: PART SAVED UID 323
+INFO:db.CiscoPart:saved: PART SAVED UID 324
+INFO:db.CiscoPart:saved: PART SAVED UID 325
+INFO:db.CiscoPart:saved: PART SAVED UID 326
+INFO:db.CiscoPart:saved: PART SAVED UID 327
+INFO:db.CiscoPart:saved: PART SAVED UID 328
+INFO:db.CiscoPart:saved: PART SAVED UID 329
+INFO:db.CiscoPart:saved: PART SAVED UID 330
+INFO:db.CiscoPart:saved: PART SAVED UID 331
+INFO:db.CiscoPart:saved: PART SAVED UID 332
+INFO:db.CiscoPart:saved: PART SAVED UID 333
+INFO:db.CiscoPart:saved: PART SAVED UID 334
+INFO:db.CiscoPart:saved: PART SAVED UID 335
+INFO:db.CiscoPart:saved: PART SAVED UID 336
+INFO:db.CiscoPart:saved: PART SAVED UID 337
+INFO:db.CiscoPart:saved: PART SAVED UID 338
+CRITICAL:db.CiscoPart:saved:172.16.30.247 unable to save sql  due IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`device_parts`, CONSTRAINT `device_parts_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))')
+CRITICAL:db.CiscoPart:saved:172.16.30.247 unable to save sql  due IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`device_parts`, CONSTRAINT `device_parts_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))')
+CRITICAL:db.CiscoPart:saved:172.16.30.247 unable to save sql  due IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`device_parts`, CONSTRAINT `device_parts_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))')
+CRITICAL:db.CiscoPart:saved:172.16.30.247 unable to save sql  due IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`device_parts`, CONSTRAINT `device_parts_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))')
+CRITICAL:db.CiscoPart:saved:172.16.30.247 unable to save sql  due IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`device_parts`, CONSTRAINT `device_parts_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))')
+CRITICAL:db.CiscoPart:saved:172.16.30.247 unable to save sql  due IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`device_parts`, CONSTRAINT `device_parts_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))')
+CRITICAL:db.CiscoPart:saved:172.16.30.247 unable to save sql  due IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`device_parts`, CONSTRAINT `device_parts_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))')
+CRITICAL:db.CiscoPart:saved:172.16.30.247 unable to save sql  due IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`device_parts`, CONSTRAINT `device_parts_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))')
+CRITICAL:db.CiscoPart:saved:172.16.30.247 unable to save sql  due IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`device_parts`, CONSTRAINT `device_parts_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))')
+CRITICAL:db.CiscoPart:saved:172.16.30.247 unable to save sql  due IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`device_parts`, CONSTRAINT `device_parts_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))')
+CRITICAL:db.CiscoPart:saved:172.16.30.247 unable to save sql  due IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`device_parts`, CONSTRAINT `device_parts_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))')
+CRITICAL:db.CiscoPart:saved:172.16.30.247 unable to save sql  due IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`device_parts`, CONSTRAINT `device_parts_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))')
+CRITICAL:db.CiscoPart:saved:172.16.30.247 unable to save sql  due IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`device_parts`, CONSTRAINT `device_parts_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))')
+CRITICAL:db.CiscoPart:saved:172.16.30.247 unable to save sql  due IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`device_parts`, CONSTRAINT `device_parts_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))')
+CRITICAL:db.CiscoPart:saved:172.16.30.247 unable to save sql  due IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`device_parts`, CONSTRAINT `device_parts_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))')
+CRITICAL:db.CiscoPart:saved:172.16.30.247 unable to save sql  due IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`device_parts`, CONSTRAINT `device_parts_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))')
+INFO:db.CiscoPart:saved: PART SAVED UID 355
+INFO:db.CiscoPart:saved: PART SAVED UID 356
+INFO:db.CiscoPart:saved: PART SAVED UID 357
+INFO:db.CiscoPart:saved: PART SAVED UID 358
+INFO:db.CiscoPart:saved: PART SAVED UID 359
+INFO:db.CiscoPart:saved: PART SAVED UID 360
+INFO:db.CiscoPart:saved: PART SAVED UID 361
+INFO:db.CiscoPart:saved: PART SAVED UID 362
+INFO:db.CiscoPart:saved: PART SAVED UID 363
+INFO:db.CiscoPart:saved: PART SAVED UID 364
+INFO:db.CiscoPart:saved: PART SAVED UID 365
+INFO:db.CiscoPart:saved: PART SAVED UID 366
+INFO:db.CiscoPart:saved: PART SAVED UID 367
+INFO:db.CiscoPart:saved: PART SAVED UID 368
+INFO:db.CiscoPart:saved: PART SAVED UID 369
+INFO:db.CiscoPart:saved: PART SAVED UID 370
+INFO:db.CiscoPart:saved: PART SAVED UID 371
+INFO:db.CiscoPart:saved: PART SAVED UID 372
+INFO:db.CiscoPart:saved: PART SAVED UID 373
+INFO:db.CiscoPart:saved: PART SAVED UID 374
+INFO:db.CiscoPart:saved: PART SAVED UID 375
+INFO:db.CiscoPart:saved: PART SAVED UID 376
+INFO:db.CiscoPart:saved: PART SAVED UID 377
+INFO:db.CiscoPart:saved: PART SAVED UID 378
+INFO:db.CiscoPart:saved: PART SAVED UID 379
+INFO:db.CiscoPart:saved: PART SAVED UID 380
+INFO:db.CiscoPart:saved: PART SAVED UID 381
+INFO:db.CiscoPart:saved: PART SAVED UID 382
+INFO:db.CiscoPart:saved: PART SAVED UID 383
+INFO:db.CiscoPart:saved: PART SAVED UID 384
+INFO:db.CiscoPart:saved: PART SAVED UID 385
+INFO:db.CiscoPart:saved: PART SAVED UID 386
+INFO:db.CiscoPart:saved: PART SAVED UID 387
+INFO:db.CiscoPart:saved: PART SAVED UID 388
+INFO:db.CiscoPart:saved: PART SAVED UID 389
+INFO:db.CiscoPart:saved: PART SAVED UID 390
+INFO:db.CiscoPart:saved: PART SAVED UID 391
+INFO:db.CiscoPart:saved: PART SAVED UID 392
+INFO:db.CiscoPart:saved: PART SAVED UID 393
+INFO:db.CiscoPart:saved: PART SAVED UID 394
+INFO:db.CiscoPart:saved: PART SAVED UID 395
+INFO:db.CiscoPart:saved: PART SAVED UID 396
+INFO:db.CiscoPart:saved: PART SAVED UID 397
+INFO:db.CiscoPart:saved: PART SAVED UID 398
+INFO:db.CiscoPart:saved: PART SAVED UID 399
+INFO:db.CiscoPart:saved: PART SAVED UID 400
+INFO:db.CiscoPart:saved: PART SAVED UID 401
+INFO:db.CiscoPart:saved: PART SAVED UID 402
+INFO:db.CiscoPart:saved: PART SAVED UID 403
+INFO:db.CiscoPart:saved: PART SAVED UID 404
+INFO:db.CiscoPart:saved: PART SAVED UID 405
+INFO:db.CiscoPart:saved: PART SAVED UID 406
+INFO:db.CiscoPart:saved: PART SAVED UID 407
+INFO:db.CiscoPart:saved: PART SAVED UID 408
+INFO:db.CiscoPart:saved: PART SAVED UID 409
+INFO:db.CiscoPart:saved: PART SAVED UID 410
+INFO:db.CiscoPart:saved: PART SAVED UID 411
+INFO:db.CiscoPart:saved: PART SAVED UID 412
+INFO:db.CiscoPart:saved: PART SAVED UID 413
+INFO:db.CiscoPart:saved: PART SAVED UID 414
+INFO:db.CiscoPart:saved: PART SAVED UID 415
+INFO:db.CiscoPart:saved: PART SAVED UID 416
+INFO:db.CiscoPart:saved: PART SAVED UID 417
+INFO:db.CiscoPart:saved: PART SAVED UID 418
+INFO:db.CiscoPart:saved: PART SAVED UID 419
+INFO:db.CiscoPart:saved: PART SAVED UID 420
+INFO:db.CiscoPart:saved: PART SAVED UID 421
+INFO:db.CiscoPart:saved: PART SAVED UID 422
+INFO:db.CiscoPart:saved: PART SAVED UID 423
+INFO:db.CiscoPart:saved: PART SAVED UID 424
+INFO:db.CiscoPart:saved: PART SAVED UID 425
+INFO:db.CiscoPart:saved: PART SAVED UID 426
+INFO:db.CiscoPart:saved: PART SAVED UID 427
+INFO:db.CiscoPart:saved: PART SAVED UID 428
+INFO:db.CiscoPart:saved: PART SAVED UID 429
+INFO:db.CiscoPart:saved: PART SAVED UID 430
+INFO:db.CiscoPart:saved: PART SAVED UID 431
+INFO:db.CiscoPart:saved: PART SAVED UID 432
+INFO:db.CiscoPart:saved: PART SAVED UID 433
+INFO:db.CiscoPart:saved: PART SAVED UID 434
+INFO:db.CiscoPart:saved: PART SAVED UID 435
+INFO:db.CiscoPart:saved: PART SAVED UID 436
+INFO:db.CiscoPart:saved: PART SAVED UID 437
+INFO:db.CiscoPart:saved: PART SAVED UID 438
+INFO:db.CiscoPart:saved: PART SAVED UID 439
+INFO:db.CiscoPart:saved: PART SAVED UID 440
+INFO:db.CiscoPart:saved: PART SAVED UID 441
+INFO:db.CiscoPart:saved: PART SAVED UID 442
+INFO:db.CiscoPart:saved: PART SAVED UID 443
+INFO:db.CiscoPart:saved: PART SAVED UID 444
+INFO:db.CiscoPart:saved: PART SAVED UID 445
+INFO:db.CiscoPart:saved: PART SAVED UID 446
+INFO:db.CiscoPart:saved: PART SAVED UID 447
+INFO:db.CiscoPart:saved: PART SAVED UID 448
+INFO:db.CiscoPart:saved: PART SAVED UID 449
+INFO:db.CiscoPart:saved: PART SAVED UID 450
+INFO:db.CiscoPart:saved: PART SAVED UID 451
+INFO:db.CiscoPart:saved: PART SAVED UID 452
+INFO:db.CiscoPart:saved: PART SAVED UID 453
+INFO:db.CiscoPart:saved: PART SAVED UID 454
+INFO:db.CiscoPart:saved: PART SAVED UID 455
+INFO:db.CiscoPart:saved: PART SAVED UID 456
+INFO:db.CiscoPart:saved: PART SAVED UID 457
+INFO:db.CiscoPart:saved: PART SAVED UID 458
+INFO:db.CiscoPart:saved: PART SAVED UID 459
+INFO:db.CiscoPart:saved: PART SAVED UID 460
+INFO:db.CiscoPart:saved: PART SAVED UID 461
+INFO:db.CiscoPart:saved: PART SAVED UID 462
+INFO:db.CiscoPart:saved: PART SAVED UID 463
+INFO:db.CiscoPart:saved: PART SAVED UID 464
+INFO:db.CiscoPart:saved: PART SAVED UID 465
+INFO:db.CiscoPart:saved: PART SAVED UID 466
+INFO:db.CiscoPart:saved: PART SAVED UID 467
+INFO:db.CiscoPart:saved: PART SAVED UID 468
+INFO:db.CiscoPart:saved: PART SAVED UID 469
+INFO:db.CiscoPart:saved: PART SAVED UID 470
+INFO:db.CiscoPart:saved: PART SAVED UID 471
+INFO:db.CiscoPart:saved: PART SAVED UID 472
+INFO:db.CiscoPart:saved: PART SAVED UID 473
+INFO:db.CiscoPart:saved: PART SAVED UID 474
+INFO:db.CiscoPart:saved: PART SAVED UID 475
+INFO:db.CiscoPart:saved: PART SAVED UID 476
+INFO:db.CiscoPart:saved: PART SAVED UID 477
+INFO:db.CiscoPart:saved: PART SAVED UID 478
+INFO:db.CiscoPart:saved: PART SAVED UID 479
+INFO:db.CiscoPart:saved: PART SAVED UID 480
+INFO:db.CiscoPart:saved: PART SAVED UID 481
+INFO:db.CiscoPart:saved: PART SAVED UID 482
+INFO:db.CiscoPart:saved: PART SAVED UID 483
+INFO:db.CiscoPart:saved: PART SAVED UID 484
+INFO:db.CiscoPart:saved: PART SAVED UID 485
+INFO:db.CiscoPart:saved: PART SAVED UID 486
+INFO:db.CiscoPart:saved: PART SAVED UID 487
+INFO:db.CiscoPart:saved: PART SAVED UID 488
+INFO:db.CiscoPart:saved: PART SAVED UID 489
+INFO:db.CiscoPart:saved: PART SAVED UID 490
+INFO:db.CiscoPart:saved: PART SAVED UID 491
+INFO:db.CiscoPart:saved: PART SAVED UID 492
+INFO:db.CiscoPart:saved: PART SAVED UID 493
+INFO:db.CiscoPart:saved: PART SAVED UID 494
+INFO:db.CiscoPart:saved: PART SAVED UID 495
+CRITICAL:db.CiscoPart:saved:172.16.30.244 unable to save sql  due ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''5','FOX1639G7M6','V01','ASR-9010-DC-V2','ASR 9010 8 Line Card Slot Chassis with' at line 2")
+CRITICAL:db.CiscoPart:saved:172.16.30.244 unable to save sql  due ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''5','FOX1639G7M6','V01','ASR-9010-DC-V2','ASR 9010 8 Line Card Slot Chassis with' at line 2")
+CRITICAL:db.CiscoPart:saved:172.16.30.244 unable to save sql  due ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''5','FOX1639G7M6','V01','ASR-9010-DC-V2','ASR 9010 8 Line Card Slot Chassis with' at line 2")
+CRITICAL:db.CiscoPart:saved:172.16.30.244 unable to save sql  due ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''5','FOX1639G7M6','V01','ASR-9010-DC-V2','ASR 9010 8 Line Card Slot Chassis with' at line 2")
+CRITICAL:db.CiscoPart:saved:172.16.30.244 unable to save sql  due ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''5','FOX1639G7M6','V01','ASR-9010-DC-V2','ASR 9010 8 Line Card Slot Chassis with' at line 2")
+CRITICAL:db.CiscoPart:saved:172.16.30.244 unable to save sql  due ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''5','FOX1639G7M6','V01','ASR-9010-DC-V2','ASR 9010 8 Line Card Slot Chassis with' at line 2")
+INFO:db.CiscoPart:saved: PART SAVED UID 496
+INFO:db.CiscoPart:saved: PART SAVED UID 587
+INFO:db.CiscoPart:saved: PART SAVED UID 630
+INFO:db.CiscoPart:saved: PART SAVED UID 710
+INFO:db.CiscoPart:saved: PART SAVED UID 826
+INFO:db.CiscoPart:saved: PART SAVED UID 974
+INFO:db.CiscoPart:saved: PART SAVED UID 1213
+INFO:db.CiscoPart:saved: PART SAVED UID 1487
+INFO:db.CiscoPart:saved: PART SAVED UID 1817
+2019-02-01 15:31:40,399:WARNING:db.CiscoIOS:172.16.30.130 (1040, 'Too many connections')
+2019-02-01 15:31:40,400:WARNING:db.CiscoIOS:172.16.30.129 (1040, 'Too many connections')
+2019-02-01 15:31:40,400:WARNING:db.CiscoIOS:172.16.30.128 (1040, 'Too many connections')
+2019-02-01 15:31:40,400:WARNING:db.CiscoIOS:172.16.30.42 (1040, 'Too many connections')
+2019-02-01 15:31:40,400:WARNING:db.CiscoIOS:172.16.30.45 (1040, 'Too many connections')
+2019-02-01 15:31:40,400:WARNING:db.CiscoIOS:172.16.30.130 (1040, 'Too many connections')
+2019-02-01 15:31:40,400:WARNING:db.CiscoXR:172.16.30.248 (1040, 'Too many connections')
+2019-02-01 15:31:40,401:WARNING:db.CiscoIOS:172.16.30.245 (1040, 'Too many connections')
+2019-02-01 15:31:40,401:WARNING:db.CiscoIOS:172.16.30.129 (1040, 'Too many connections')
+2019-02-01 15:31:40,401:WARNING:db.CiscoIOS:172.16.30.43 (1040, 'Too many connections')
+2019-02-01 15:31:40,401:WARNING:db.CiscoIOS:172.16.30.242 (1040, 'Too many connections')
+2019-02-01 15:31:40,401:WARNING:db.CiscoIOS:172.16.30.42 (1040, 'Too many connections')
+2019-02-01 15:31:40,413:WARNING:db.CiscoXR:172.16.30.246 (1040, 'Too many connections')
+2019-02-01 15:31:40,414:WARNING:db.CiscoXR:172.16.30.247 (1040, 'Too many connections')
+2019-02-01 15:31:40,414:WARNING:db.CiscoIOS:172.16.30.44 (1040, 'Too many connections')
+2019-02-01 15:31:40,414:WARNING:db.CiscoIOS:172.16.30.243 (1040, 'Too many connections')
+2019-02-01 15:31:40,414:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,415:WARNING:db.CiscoIOS:172.16.30.243 (1040, 'Too many connections')
+2019-02-01 15:31:40,415:WARNING:db.CiscoIOS:172.16.30.50 (1040, 'Too many connections')
+2019-02-01 15:31:40,415:WARNING:db.CiscoIOS:172.16.30.45 (1040, 'Too many connections')
+2019-02-01 15:31:40,419:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,420:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,420:WARNING:db.CiscoIOS:172.16.30.44 (1040, 'Too many connections')
+2019-02-01 15:31:40,423:WARNING:db.CiscoIOS:172.16.30.129 (1040, 'Too many connections')
+2019-02-01 15:31:40,423:WARNING:db.CiscoIOS:172.16.30.243 (1040, 'Too many connections')
+2019-02-01 15:31:40,423:WARNING:db.CiscoIOS:172.16.30.242 (1040, 'Too many connections')
+2019-02-01 15:31:40,423:WARNING:db.CiscoIOS:172.16.30.130 (1040, 'Too many connections')
+2019-02-01 15:31:40,424:WARNING:db.CiscoXR:172.16.30.254 (1040, 'Too many connections')
+2019-02-01 15:31:40,424:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,424:WARNING:db.CiscoXR:172.16.30.253 (1040, 'Too many connections')
+2019-02-01 15:31:40,424:WARNING:db.CiscoIOS:172.16.30.129 (1040, 'Too many connections')
+2019-02-01 15:31:40,424:WARNING:db.CiscoIOS:172.16.30.130 (1040, 'Too many connections')
+2019-02-01 15:31:40,425:WARNING:db.CiscoIOS:172.16.30.243 (1040, 'Too many connections')
+2019-02-01 15:31:40,425:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,442:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,442:WARNING:db.CiscoIOS:172.16.30.243 (1040, 'Too many connections')
+2019-02-01 15:31:40,443:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,444:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,444:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,444:WARNING:db.CiscoXR:172.16.30.254 (1040, 'Too many connections')
+2019-02-01 15:31:40,444:WARNING:db.CiscoIOS:172.16.30.243 (1040, 'Too many connections')
+2019-02-01 15:31:40,445:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,448:WARNING:db.CiscoIOS:172.16.30.243 (1040, 'Too many connections')
+2019-02-01 15:31:40,448:WARNING:db.CiscoIOS:172.16.30.243 (1040, 'Too many connections')
+2019-02-01 15:31:40,448:WARNING:db.CiscoXR:172.16.30.246 (1040, 'Too many connections')
+2019-02-01 15:31:40,449:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,449:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,449:WARNING:db.CiscoXR:172.16.30.253 (1040, 'Too many connections')
+2019-02-01 15:31:40,450:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,450:WARNING:db.CiscoXR:172.16.30.254 (1040, 'Too many connections')
+2019-02-01 15:31:40,453:WARNING:db.CiscoXR:172.16.30.254 (1040, 'Too many connections')
+2019-02-01 15:31:40,454:WARNING:db.CiscoXR:172.16.30.246 (1040, 'Too many connections')
+2019-02-01 15:31:40,564:WARNING:db.CiscoIOS:172.16.30.42 (1040, 'Too many connections')
+2019-02-01 15:31:40,564:WARNING:db.CiscoIOS:172.16.30.42 (1040, 'Too many connections')
+2019-02-01 15:31:40,564:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,564:WARNING:db.CiscoIOS:172.16.30.128 (1040, 'Too many connections')
+2019-02-01 15:31:40,565:WARNING:db.CiscoIOS:172.16.30.43 (1040, 'Too many connections')
+2019-02-01 15:31:40,572:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,572:WARNING:db.CiscoIOS:172.16.30.50 (1040, 'Too many connections')
+2019-02-01 15:31:40,573:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,573:WARNING:db.CiscoIOS:172.16.30.44 (1040, 'Too many connections')
+2019-02-01 15:31:40,577:WARNING:db.CiscoXR:172.16.30.247 (1040, 'Too many connections')
+2019-02-01 15:31:40,578:WARNING:db.CiscoIOS:172.16.30.43 (1040, 'Too many connections')
+2019-02-01 15:31:40,579:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,579:WARNING:db.CiscoIOS:172.16.30.128 (1040, 'Too many connections')
+2019-02-01 15:31:40,579:WARNING:db.CiscoIOS:172.16.30.243 (1040, 'Too many connections')
+2019-02-01 15:31:40,579:WARNING:db.CiscoIOS:172.16.30.243 (1040, 'Too many connections')
+2019-02-01 15:31:40,580:WARNING:db.CiscoIOS:172.16.30.45 (1040, 'Too many connections')
+2019-02-01 15:31:40,580:WARNING:db.CiscoIOS:172.16.30.243 (1040, 'Too many connections')
+2019-02-01 15:31:40,581:WARNING:db.CiscoXR:172.16.30.254 (1040, 'Too many connections')
+2019-02-01 15:31:40,581:WARNING:db.CiscoIOS:172.16.30.243 (1040, 'Too many connections')
+2019-02-01 15:31:40,581:WARNING:db.CiscoXR:172.16.30.246 (1040, 'Too many connections')
+2019-02-01 15:31:40,582:WARNING:db.CiscoXR:172.16.30.253 (1040, 'Too many connections')
+2019-02-01 15:31:40,593:WARNING:db.CiscoXR:172.16.30.254 (1040, 'Too many connections')
+2019-02-01 15:31:40,593:WARNING:db.CiscoIOS:172.16.30.243 (1040, 'Too many connections')
+2019-02-01 15:31:40,594:WARNING:db.CiscoIOS:172.16.30.242 (1040, 'Too many connections')
+2019-02-01 15:31:40,595:WARNING:db.CiscoXR:172.16.30.253 (1040, 'Too many connections')
+2019-02-01 15:31:40,595:WARNING:db.CiscoXR:172.16.30.246 (1040, 'Too many connections')
+2019-02-01 15:31:40,595:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,599:WARNING:db.CiscoIOS:172.16.30.243 (1040, 'Too many connections')
+2019-02-01 15:31:40,599:WARNING:db.CiscoXR:172.16.30.253 (1040, 'Too many connections')
+2019-02-01 15:31:40,600:WARNING:db.CiscoIOS:172.16.30.243 (1040, 'Too many connections')
+2019-02-01 15:31:40,600:WARNING:db.CiscoIOS:172.16.30.232 (1040, 'Too many connections')
+2019-02-01 15:31:40,602:WARNING:db.CiscoXR:172.16.30.253 (1040, 'Too many connections')
+2019-02-01 15:31:40,602:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,602:WARNING:db.CiscoXR:172.16.30.248 (1040, 'Too many connections')
+2019-02-01 15:31:40,609:WARNING:db.CiscoIOS:172.16.30.243 (1040, 'Too many connections')
+2019-02-01 15:31:40,609:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,610:WARNING:db.CiscoXR:172.16.30.253 (1040, 'Too many connections')
+2019-02-01 15:31:40,616:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,618:WARNING:db.CiscoXR:172.16.30.254 (1040, 'Too many connections')
+2019-02-01 15:31:40,630:WARNING:db.CiscoXR:172.16.30.246 (1040, 'Too many connections')
+2019-02-01 15:31:40,630:WARNING:db.CiscoIOS:172.16.30.8 (1040, 'Too many connections')
+2019-02-01 15:31:40,630:WARNING:db.CiscoIOS:172.16.30.243 (1040, 'Too many connections')
+2019-02-01 15:31:40,630:WARNING:db.CiscoXR:172.16.30.246 (1040, 'Too many connections')
+2019-02-01 15:31:40,631:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,633:WARNING:db.CiscoIOS:172.16.30.243 (1040, 'Too many connections')
+2019-02-01 15:31:40,708:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,714:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,790:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,932:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,938:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,938:WARNING:db.CiscoIOS:172.16.30.243 (1040, 'Too many connections')
+2019-02-01 15:31:40,939:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,942:WARNING:db.CiscoXR:172.16.30.254 (1040, 'Too many connections')
+2019-02-01 15:31:40,945:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,946:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,949:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,950:WARNING:db.CiscoXR:172.16.30.248 (1040, 'Too many connections')
+2019-02-01 15:31:40,951:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:40,954:WARNING:db.CiscoIOS:172.16.30.243 (1040, 'Too many connections')
+2019-02-01 15:31:40,961:WARNING:db.CiscoXR:172.16.30.253 (1040, 'Too many connections')
+2019-02-01 15:31:42,558:WARNING:db.CiscoIOS:172.16.30.128 (1040, 'Too many connections')
+2019-02-01 15:31:42,561:WARNING:db.CiscoIOS:172.16.30.243 (1040, 'Too many connections')
+2019-02-01 15:31:51,930:WARNING:db.CiscoIOS:172.16.30.9 (1040, 'Too many connections')
+2019-02-01 15:31:51,930:WARNING:db.CiscoIOS:172.16.30.13 (1040, 'Too many connections')
+2019-02-01 15:31:51,930:WARNING:db.CiscoIOS:172.16.30.9 (1040, 'Too many connections')
+2019-02-01 15:31:51,930:WARNING:db.CiscoIOS:172.16.30.7 (1040, 'Too many connections')
+2019-02-01 15:31:51,931:WARNING:db.CiscoIOS:172.16.30.12 (1040, 'Too many connections')
+2019-02-01 15:31:51,931:WARNING:db.CiscoIOS:172.16.30.14 (1040, 'Too many connections')
+2019-02-01 15:31:51,931:WARNING:db.CiscoXR:172.16.30.250 (1040, 'Too many connections')
+2019-02-01 15:31:51,931:WARNING:db.CiscoIOS:172.16.30.35 (1040, 'Too many connections')
+2019-02-01 15:31:51,931:WARNING:db.CiscoIOS:172.16.30.44 (1040, 'Too many connections')
+2019-02-01 15:31:51,932:WARNING:db.CiscoIOS:172.16.30.12 (1040, 'Too many connections')
+2019-02-01 15:31:51,932:WARNING:db.CiscoIOS:172.16.30.44 (1040, 'Too many connections')
+2019-02-01 15:31:51,932:WARNING:db.CiscoIOS:172.16.30.37 (1040, 'Too many connections')
+2019-02-01 15:31:51,932:WARNING:db.CiscoIOS:172.16.30.35 (1040, 'Too many connections')
+2019-02-01 15:31:51,933:WARNING:db.CiscoIOS:172.16.30.13 (1040, 'Too many connections')
+2019-02-01 15:31:51,933:WARNING:db.CiscoIOS:172.16.30.34 (1040, 'Too many connections')
+2019-02-01 15:31:51,933:WARNING:db.CiscoIOS:172.16.30.34 (1040, 'Too many connections')
+2019-02-01 15:31:51,933:WARNING:db.CiscoIOS:172.16.30.12 (1040, 'Too many connections')
+2019-02-01 15:31:51,935:WARNING:db.CiscoIOS:172.16.30.41 (1040, 'Too many connections')
+2019-02-01 15:31:51,935:WARNING:db.CiscoIOS:172.16.30.39 (1040, 'Too many connections')
+2019-02-01 15:31:51,936:WARNING:db.CiscoIOS:172.16.30.40 (1040, 'Too many connections')
+2019-02-01 15:31:51,936:WARNING:db.CiscoIOS:172.16.30.39 (1040, 'Too many connections')
+2019-02-01 15:31:51,940:WARNING:db.CiscoIOS:172.16.30.243 (1040, 'Too many connections')
+2019-02-01 15:31:51,958:WARNING:db.CiscoXR:172.16.30.254 (1040, 'Too many connections')
+2019-02-01 15:31:51,958:WARNING:db.CiscoIOS:172.16.30.243 (1040, 'Too many connections')
+2019-02-01 15:31:51,958:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:51,958:WARNING:db.CiscoXR:172.16.30.253 (1040, 'Too many connections')
+2019-02-01 15:31:51,959:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:51,959:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:51,959:WARNING:db.CiscoXR:172.16.30.253 (1040, 'Too many connections')
+2019-02-01 15:31:51,959:WARNING:db.CiscoXR:172.16.30.254 (1040, 'Too many connections')
+2019-02-01 15:31:51,959:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:51,960:WARNING:db.CiscoXR:172.16.30.246 (1040, 'Too many connections')
+2019-02-01 15:31:51,960:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:51,960:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:51,960:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:51,961:WARNING:db.CiscoXR:172.16.30.248 (1040, 'Too many connections')
+2019-02-01 15:31:51,961:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:51,961:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:51,961:WARNING:db.CiscoXR:172.16.30.246 (1040, 'Too many connections')
+2019-02-01 15:31:51,961:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:51,961:WARNING:db.CiscoXR:172.16.30.254 (1040, 'Too many connections')
+2019-02-01 15:31:52,100:WARNING:db.CiscoIOS:172.16.30.44 (1040, 'Too many connections')
+2019-02-01 15:31:52,100:WARNING:db.CiscoXR:172.16.30.3 (1040, 'Too many connections')
+2019-02-01 15:31:52,100:WARNING:db.CiscoIOS:172.16.30.15 (1040, 'Too many connections')
+2019-02-01 15:31:52,100:WARNING:db.CiscoIOS:172.16.30.8 (1040, 'Too many connections')
+2019-02-01 15:31:52,100:WARNING:db.CiscoIOS:172.16.30.38 (1040, 'Too many connections')
+2019-02-01 15:31:52,101:WARNING:db.CiscoIOS:172.16.30.36 (1040, 'Too many connections')
+2019-02-01 15:31:52,101:WARNING:db.CiscoIOS:172.16.30.13 (1040, 'Too many connections')
+2019-02-01 15:31:52,101:WARNING:db.CiscoIOS:172.16.30.34 (1040, 'Too many connections')
+2019-02-01 15:31:52,101:WARNING:db.CiscoIOS:172.16.30.37 (1040, 'Too many connections')
+2019-02-01 15:31:52,102:WARNING:db.CiscoIOS:172.16.30.9 (1040, 'Too many connections')
+2019-02-01 15:31:52,102:WARNING:db.CiscoXR:172.16.30.247 (1040, 'Too many connections')
+2019-02-01 15:31:52,102:WARNING:db.CiscoIOS:172.16.30.40 (1040, 'Too many connections')
+2019-02-01 15:31:52,102:WARNING:db.CiscoIOS:172.17.28.192 (1040, 'Too many connections')
+2019-02-01 15:31:52,102:WARNING:db.CiscoIOS:172.16.30.34 (1040, 'Too many connections')
+2019-02-01 15:31:52,102:WARNING:db.CiscoIOS:172.16.30.15 (1040, 'Too many connections')
+2019-02-01 15:31:52,102:WARNING:db.CiscoIOS:172.16.30.50 (1040, 'Too many connections')
+2019-02-01 15:31:52,103:WARNING:db.CiscoIOS:172.16.30.34 (1040, 'Too many connections')
+2019-02-01 15:31:52,103:WARNING:db.CiscoIOS:172.16.30.38 (1040, 'Too many connections')
+2019-02-01 15:31:52,103:WARNING:db.CiscoIOS:172.16.30.38 (1040, 'Too many connections')
+2019-02-01 15:31:52,103:WARNING:db.CiscoIOS:172.16.30.9 (1040, 'Too many connections')
+2019-02-01 15:31:52,103:WARNING:db.CiscoIOS:172.16.30.34 (1040, 'Too many connections')
+2019-02-01 15:31:52,103:WARNING:db.CiscoXR:172.16.30.254 (1040, 'Too many connections')
+2019-02-01 15:31:52,103:WARNING:db.CiscoIOS:172.16.30.39 (1040, 'Too many connections')
+2019-02-01 15:31:52,104:WARNING:db.CiscoIOS:172.16.30.35 (1040, 'Too many connections')
+2019-02-01 15:31:52,104:WARNING:db.CiscoXR:172.16.30.246 (1040, 'Too many connections')
+2019-02-01 15:31:52,104:WARNING:db.CiscoIOS:172.16.30.243 (1040, 'Too many connections')
+2019-02-01 15:31:52,117:WARNING:db.CiscoIOS:172.16.30.243 (1040, 'Too many connections')
+2019-02-01 15:31:52,117:WARNING:db.CiscoXR:172.16.30.248 (1040, 'Too many connections')
+2019-02-01 15:31:52,117:WARNING:db.CiscoXR:172.16.30.254 (1040, 'Too many connections')
+2019-02-01 15:31:52,118:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:52,217:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-02-01 15:31:52,226:WARNING:db.CiscoXR:172.16.30.246 (1040, 'Too many connections')
+2019-02-01 15:31:52,226:WARNING:db.CiscoXR:172.16.30.254 (1040, 'Too many connections')
+2019-02-01 15:31:52,227:WARNING:db.CiscoXR:172.16.30.253 (1040, 'Too many connections')

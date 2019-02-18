@@ -1,0 +1,91 @@
+INFO:web.app.netadmin.algo_mas::Reporte_internet: calculated ID2019-1-1 00:00:00,ED2019-1-31 23:59:59
+INFO:web.app.netadmin.algo_mas::Reporte_internet: final ID2019-1-1 00:00:00 00:00:00,ED2019-1-31 23:59:59 23:59:59
+INFO:web.app.netadmin.algo_mas::Reporte_internet: calculated ID2019-1-1 00:00:00,ED2019-1-31 23:59:59
+INFO:web.app.netadmin.algo_mas::Reporte_internet: final ID2019-01-15 00:00:00,ED2019-01-15 23:59:59
+INFO:web.app.netadmin.algo_mas::Reporte_internet: calculated ID2019-1-1 00:00:00,ED2019-1-31 23:59:59
+INFO:web.app.netadmin.algo_mas::Reporte_internet: final ID2019-01-01 00:00:00,ED2019-01-16 23:59:59
+INFO:web.app.netadmin.algo_mas::Reporte_internet: calculated ID2019-1-1 00:00:00,ED2019-1-31 23:59:59
+INFO:web.app.netadmin.algo_mas::Reporte_internet: final ID2019-01-01 00:00:00,ED2019-01-16 23:59:59
+INFO:web.app.netadmin.algo_mas::Reporte_internet: calculated ID2019-1-1 00:00:00,ED2019-1-31 23:59:59
+INFO:web.app.netadmin.algo_mas::Reporte_internet: final ID2019-01-05 00:00:00,ED2019-01-16 23:59:59
+DEBUG:web.netadmin.app::Reporte_internet: calculated ID2019-1-1 00:00:00,ED2019-1-31 23:59:59
+DEBUG:web.netadmin.app::Reporte_internet: final ID2019-01-08 00:00:00,ED2019-01-16 23:59:59
+DEBUG:web.netadmin.app::Reporte_internet: calculated ID 2019-1-1 00:00:00,ED 2019-1-31 23:59:59
+DEBUG:web.netadmin.app::Reporte_internet: final ID 2019-01-08 00:00:00, ED 2019-01-16 23:59:59
+DEBUG:web.netadmin.app::Reporte_internet: calculated ID 2019-1-1 00:00:00,ED 2019-1-31 23:59:59
+DEBUG:web.netadmin.app::Reporte_internet: final ID 2019-01-08 00:00:00, ED 2019-01-16 23:59:59
+DEBUG:web.netadmin.app::Reporte_internet: calculated ID 2019-1-1 00:00:00,ED 2019-1-31 23:59:59
+DEBUG:web.netadmin.app::Reporte_internet: final ID 2019-01-08 00:00:00, ED 2019-01-16 23:59:59
+DEBUG:web.netadmin.app::Reporte_internet: calculated ID 2019-1-1 00:00:00,ED 2019-1-31 23:59:59
+DEBUG:web.netadmin.app::Reporte_internet: final ID 2019-01-08 00:00:00, ED 2019-01-16 23:59:59
+DEBUG:web.netadmin.app::Reporte_internet: calculated ID 2019-1-1 00:00:00,ED 2019-1-31 23:59:59
+DEBUG:web.netadmin.app::Reporte_internet: final ID 2019-01-08 00:00:00, ED 2019-01-16 23:59:59
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
+2019-01-23 14:54:28,039:WARNING:web.netadmin.app:KeyError(b'db')
+2019-01-23 14:55:06,096:WARNING:web.netadmin.app:KeyError(b'db')
+2019-01-23 15:16:51,738:WARNING:web.netadmin.app:KeyError(b'db')
+2019-01-23 17:54:54,251:WARNING:web.netadmin.app:KeyError(b'db')
+2019-01-23 17:55:13,273:WARNING:web.netadmin.app:KeyError(b'db')
+2019-01-23 17:55:17,171:WARNING:web.netadmin.app:KeyError(b'db')
+2019-01-23 17:57:20,525:WARNING:web.netadmin.app:KeyError(b'db')
+2019-01-23 17:57:25,171:WARNING:web.netadmin.app:KeyError(b'db')
+2019-01-23 17:57:45,443:WARNING:web.netadmin.app:KeyError(b'db')
+2019-01-23 17:58:05,610:WARNING:web.netadmin.app:KeyError(b'db')
+2019-01-23 18:00:58,439:WARNING:web.netadmin.app:KeyError(b'db')
+2019-02-18 11:43:19,836:WARNING:web.netadmin.app:TypeError("ospf_topology_vs() got an unexpected keyword argument 'date_string'")
+2019-02-18 11:44:02,016:WARNING:web.netadmin.app:TypeError("ospf_topology_vs() got an unexpected keyword argument 'date_string'")
+2019-02-18 11:44:14,354:WARNING:web.netadmin.app:TypeError("ospf_topology_vs() got an unexpected keyword argument 'date_string'")
+2019-02-18 15:07:39,208:WARNING:web.netadmin.app:TypeError("ospf_topology_vs() got an unexpected keyword argument 'date_string'")
+2019-02-18 15:16:31,130:WARNING:web.netadmin.app:TypeError("ospf_topology_vs() got an unexpected keyword argument 'date_string'")
+2019-02-18 15:16:34,266:WARNING:web.netadmin.app:TypeError("ospf_topology_vs() got an unexpected keyword argument 'date_string'")
+2019-02-18 15:16:47,583:WARNING:web.netadmin.app:TypeError("ospf_topology_vs() got an unexpected keyword argument 'date_string'")
+2019-02-18 15:16:54,802:WARNING:web.netadmin.app:TypeError("ospf_topology_vs() got an unexpected keyword argument 'date_string'")
+2019-02-18 15:17:01,736:WARNING:web.netadmin.app:TypeError("ospf_topology_vs() got an unexpected keyword argument 'date_string'")
+2019-02-18 15:17:49,008:WARNING:web.netadmin.app:TypeError("ospf_topology_vs() got an unexpected keyword argument 'date_string'")
+2019-02-18 15:21:09,110:WARNING:web.netadmin.app:TypeError("ospf_topology_vs() got an unexpected keyword argument 'date_string'")
+2019-02-18 15:22:37,958:WARNING:web.netadmin.app:TypeError("ospf_topology_vs() got an unexpected keyword argument 'date_string'")
+2019-02-18 15:22:44,258:WARNING:web.netadmin.app:TypeError("ospf_topology_vs() got an unexpected keyword argument 'date_string'")
+2019-02-18 15:26:52,479:WARNING:web.netadmin.app:KeyError(b'db')
+2019-02-18 15:29:49,138:WARNING:web.netadmin.app:UnboundLocalError("local variable 'dict_ospf' referenced before assignment")
+2019-02-18 15:30:12,352:WARNING:web.netadmin.app:UnboundLocalError("local variable 'dict_ospf' referenced before assignment")
