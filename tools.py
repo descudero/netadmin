@@ -107,6 +107,6 @@ def logged(class_):
     class_.logger_connection = logging.getLogger("connection." + class_.__qualname__)
     class_.dev = logging.getLogger("dev." + class_.__qualname__)
     class_.per = logging.getLogger("per." + class_.__qualname__)
-    class_.db_lo = class_.log_db = logging.getLogger("db." + class_.__qualname__)
+    class_.db_log = class_.log_db = logging.getLogger("db." + class_.__qualname__)
 
     return class_

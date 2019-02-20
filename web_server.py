@@ -161,15 +161,15 @@ def ospf_json_vs():
     }, "nicaragua": {
         "ip_seed_router": "172.17.25.1", "from_shelve": False,
         "shelve_name": "shelves/" + date + "nicaragua",
-        "process_id": '505', "area": '505001'
+        "process_id": '1', "area": '50501'
     }, "honduras": {
         "ip_seed_router": "172.17.24.5", "from_shelve": False,
         "shelve_name": "shelves/" + date + "honduras",
-        "process_id": '504', "area": '504001'
+        "process_id": '504', "area": '504002'
     }, "costa_rica": {
         "ip_seed_router": "172.17.26.2", "from_shelve": False,
         "shelve_name": "shelves/" + date + "costa_rica",
-        "process_id": '506', "area": '506001'
+        "process_id": '1', "area": '506001'
     }
         , "panama": {
             "ip_seed_router": "172.17.27.1", "from_shelve": False,
