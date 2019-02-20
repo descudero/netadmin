@@ -451,22 +451,26 @@ class CiscoIOS(Parent):
                    '3_destination': tunnel.destination_ip,
                    "3_destination_name": destination_dev.hostname, "04_tunnel": tunnel.tunnel,
                    "interface_des": "", "id_des": "", "desc_des": "", "interface_or": "", "id_or": "", "desc_or": ""}
+            try:
+                mpls_preffered_interface1 = {si["preferred_path"].replace("Tunnel", ""): si for si in
+                                             getattr(origin_dev, "bd_mpls_vc", {}).values()
+                                             if
+                                             si["preferred_path"] != "na" and si["preferred_path"] != "not configured"}
+                mpls_preffered_interface2 = {si["pws_vcid"]: si for si in
+                                             getattr(destination_dev, "bd_mpls_vc", {}).values()
+                                             }
+            except KeyError as e:
+                self.verbose.critical(f"get_origin_interface_mid_tunnels error {repr(e)}")
 
-            mpls_preffered_interface1 = {si["preferred_path"].replace("Tunnel", ""): si for si in
-                                         getattr(origin_dev, "bd_mpls_vc", {}).values()
-                                         if si["preferred_path"] != "na" and si["preferred_path"] != "not configured"}
-            mpls_preffered_interface2 = {si["preferred_path"].replace("Tunnel", ""): si for si in
-                                         getattr(destination_dev, "bd_mpls_vc", {}).values()
-                                         if si["preferred_path"] != "na" and si["preferred_path"] != "not configured"}
             if tunnel.tunnel in mpls_preffered_interface1:
                 row["desc_or"] = mpls_preffered_interface1[tunnel.tunnel]["description"]
                 row["id_or"] = mpls_preffered_interface1[tunnel.tunnel]["id"]
                 row["interface_or"] = mpls_preffered_interface1[tunnel.tunnel]["interface"]
-                row["vcid_or"] = mpls_preffered_interface1[tunnel.tunnel]["vcid"]
-            if tunnel.tunnel in mpls_preffered_interface2:
-                row["desc_des"] = mpls_preffered_interface2[tunnel.tunnel]["description"]
-                row["id_des"] = mpls_preffered_interface2[tunnel.tunnel]["id"]
-                row["interface_des"] = mpls_preffered_interface2[tunnel.tunnel]["interface"]
+                row["pws_vcid"] = mpls_preffered_interface1[tunnel.tunnel]["pws_vcid"]
+                if row["pws_vcid"] in mpls_preffered_interface2:
+                    row["desc_des"] = mpls_preffered_interface2[row["pws_vcid"]]["description"]
+                    row["id_des"] = mpls_preffered_interface2[row["pws_vcid"]]["id"]
+                    row["interface_des"] = mpls_preffered_interface2[row["pws_vcid"]]["interface"]
             if row["interface_des"] != "" or row["interface_or"] != "":
                 tabulated_data.append(row)
         return tabulated_data
@@ -1432,6 +1436,9 @@ class CiscoIOS(Parent):
             index_interface = normalize_interface_name(si["interface"])
             bd = self.bridge_domain_per_interface_si(interface=index_interface, si=si["id"])
             si['preferred_path'] = "na"
+            si["pws_neighbor"] = ""
+            si["pws_vcid"] = ""
+            si["vfi"] = ""
             if bd is not None:
                 si["pws_neighbor"] = ""
                 si["pws_vcid"] = ""
