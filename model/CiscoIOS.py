@@ -215,8 +215,6 @@ class CiscoIOS(Parent):
                                                         index_way_tunnel=index_way_tunnel, suffix_path=suffix_path)
         return command
 
-
-
     def set_service_instances(self):
         # todo change to textfsm template
 
@@ -430,6 +428,48 @@ class CiscoIOS(Parent):
             return self.get_interface_route(address=next_hop, connection=connection, vrf=vrf)
         network = output.split("Routing entry for ")[1].split("\n")[0].replace(" ", "")
         return network, interface
+
+    def get_origin_interface_mid_tunnels(self):
+        self.set_mpls_te_tunnels_mid_point()
+        mpls_te_data = self.mpls_te_tunnels_mid_point
+        cisco_sources = {tunnel.source_ip for tunnel in mpls_te_data.values()}
+        cisco_sources_dest = {tunnel.destination_ip for tunnel in mpls_te_data.values()}
+        cisco_sources = self.isp.devices_from_ip_list(cisco_sources)
+        cisco_sources_dest = self.isp.devices_from_ip_list(cisco_sources_dest)
+        cisco_sources.extend(cisco_sources_dest)
+        methods = {"get_vfis_interface_per_service_instance": {}, "set_snmp_community": {}
+                   }
+        self.isp.excute_methods(methods=methods, devices=cisco_sources)
+        tabulated_data = []
+        cisco_sources = {cisco.ip: cisco for cisco in cisco_sources}
+        for tunnel_instance, tunnel in mpls_te_data.items():
+
+            origin_dev = cisco_sources[tunnel.source_ip]
+            destination_dev = cisco_sources[tunnel.destination_ip]
+            row = {'0_interface_in': tunnel.interface_in, '0_interface_out': tunnel.interface_out,
+                   '2_origin': tunnel.source_ip, "2_origin_name": origin_dev.hostname,
+                   '3_destination': tunnel.destination_ip,
+                   "3_destination_name": destination_dev.hostname, "04_tunnel": tunnel.tunnel,
+                   "interface_des": "", "id_des": "", "desc_des": "", "interface_or": "", "id_or": "", "desc_or": ""}
+
+            mpls_preffered_interface1 = {si["preferred_path"].replace("Tunnel", ""): si for si in
+                                         getattr(origin_dev, "bd_mpls_vc", {}).values()
+                                         if si["preferred_path"] != "na" and si["preferred_path"] != "not configured"}
+            mpls_preffered_interface2 = {si["preferred_path"].replace("Tunnel", ""): si for si in
+                                         getattr(destination_dev, "bd_mpls_vc", {}).values()
+                                         if si["preferred_path"] != "na" and si["preferred_path"] != "not configured"}
+            if tunnel.tunnel in mpls_preffered_interface1:
+                row["desc_or"] = mpls_preffered_interface1[tunnel.tunnel]["description"]
+                row["id_or"] = mpls_preffered_interface1[tunnel.tunnel]["id"]
+                row["interface_or"] = mpls_preffered_interface1[tunnel.tunnel]["interface"]
+                row["vcid_or"] = mpls_preffered_interface1[tunnel.tunnel]["vcid"]
+            if tunnel.tunnel in mpls_preffered_interface2:
+                row["desc_des"] = mpls_preffered_interface2[tunnel.tunnel]["description"]
+                row["id_des"] = mpls_preffered_interface2[tunnel.tunnel]["id"]
+                row["interface_des"] = mpls_preffered_interface2[tunnel.tunnel]["interface"]
+            if row["interface_des"] != "" or row["interface_or"] != "":
+                tabulated_data.append(row)
+        return tabulated_data
 
     def get_interfaces_address(self, list_address, vrf="default"):
         prefix_interface = {}
@@ -1391,10 +1431,12 @@ class CiscoIOS(Parent):
         for index, si in temporal_service_instance.items():
             index_interface = normalize_interface_name(si["interface"])
             bd = self.bridge_domain_per_interface_si(interface=index_interface, si=si["id"])
+            si['preferred_path'] = "na"
             if bd is not None:
                 si["pws_neighbor"] = ""
                 si["pws_vcid"] = ""
                 si["vfi"] = bd.get_string_vfi()
+
             pws = self.pseudowire_per_interface_vlan(interface=index_interface, vlan=si["vlan"])
 
             if len(pws) > 0:
@@ -1402,7 +1444,8 @@ class CiscoIOS(Parent):
                     si["vfi"] = ""
                 si["pws_neighbor"] = pws[0]["destination_ip"]
                 si["pws_vcid"] = pws[0]["vc_id"]
-        pprint(temporal_service_instance)
+                si['preferred_path'] = pws[0]["preferred_path"]
+        self.bd_mpls_vc = temporal_service_instance
         return temporal_service_instance
 
     def pseudowire_per_interface_vlan(self, interface, vlan):

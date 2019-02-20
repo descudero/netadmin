@@ -342,6 +342,7 @@ def json_cisco_commands_tabulated():
 
     try:
         device = ufinet.correct_device_platform(ufinet.devices_from_ip_list([ip]))[0]
+        device.isp = ufinet
         method_instantiated = getattr(device, method)
         dict_table_data = method_instantiated()
         data_json = jsonify(dict_table_data)

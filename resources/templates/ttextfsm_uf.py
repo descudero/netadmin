@@ -1,8 +1,8 @@
 import textfsm
 from pprint import pprint
 
-fsm = textfsm.TextFSM(open("show ip ospf database router.template"))
-file_data = open("../output_test/show ip ospf database router").read()
+fsm = textfsm.TextFSM(open("show mpls l2transport vc detail ios.template"))
+file_data = open("../output_test/show mpls l2transport vc detail ios").read()
 fsm_results = fsm.ParseText(file_data, )
 
 print(fsm.header)
