@@ -21,7 +21,7 @@ class ospf_database:
         self.routers = {router.ip: router for router in self.routers}
 
         self.isp.excute_methods(methods={"set_interfaces": {}},
-                                devices=self.routers.values(), thread_window=35)
+                                devices=self.routers.values(), thread_window=200)
         self.isp.do_uni_methods(methods={"set_snmp_community": {}, "get_uid_save": {}}, devices=self.routers.values())
         self.isp.do_uni_methods(methods={"set_snmp_location_attr": {}}, devices=self.routers.values())
         self.graph = Graph()

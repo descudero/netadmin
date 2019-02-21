@@ -145,6 +145,9 @@ def ospf_json_vs():
 
     if date == "" and saved != "actual":
         date = time.strftime("%Y%m%d")
+    elif saved == "actual":
+        date = time.strftime("%Y%m%d")
+
     pl = PerformanceLog("json_diagram")
 
     datos_red = {"_ospf_ufinet_regional": {
