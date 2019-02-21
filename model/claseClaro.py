@@ -54,7 +54,7 @@ class Claro:
                          from_shelve=False):
         self.verbose.warning(f"shelve_name {shelve_name}")
         if from_shelve:
-            if os.path.isfile(f"{shelve_name}.dat"):
+            if os.path.isfile(f"{shelve_name}"):
                 with shelve.open(shelve_name) as sh:
                     dict_ospf = sh["db"]
                     return dict_ospf
@@ -65,6 +65,7 @@ class Claro:
             ospf_db = ospf_database(ip_seed_router=ip_seed_router, isp=self, process_id=process_id, area=area)
             with shelve.open(shelve_name) as sh:
                 dict_ospf = ospf_db.get_vs()
+                sh.clear()
                 sh["db"] = dict_ospf
                 sh.close()
                 return dict_ospf
