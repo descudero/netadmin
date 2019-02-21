@@ -5,16 +5,16 @@
     <bookmark url="file://$PROJECT_DIR$/model/claseClaro.py" />
     <bookmark url="file://$PROJECT_DIR$/model/claseClaro.py" line="605" />
     <bookmark url="file://$PROJECT_DIR$/resources/templates/transciever_ios.template" line="5" mnemonic="6" />
-    <bookmark url="file://$PROJECT_DIR$/web_server.py" line="222" />
+    <bookmark url="file://$PROJECT_DIR$/web_server.py" line="225" />
     <bookmark url="file://$PROJECT_DIR$/static/js/graphs.js" line="57" />
     <bookmark url="file://$PROJECT_DIR$/model/CiscoIOS.py" line="393" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="462384ac-2f64-47a0-b6d2-b16ff1b36497" name="Default" comment="first3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/connections.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/connections.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/CiscoIOS.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/CiscoIOS.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/performance.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/performance.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/claseClaro.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/claseClaro.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/ospf_database.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/ospf_database.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,11 +55,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="302">
-              <caret line="476" column="66" selection-start-line="476" selection-start-column="66" selection-end-line="476" selection-end-column="66" />
+              <caret line="477" column="66" selection-start-line="477" selection-start-column="66" selection-end-line="477" selection-end-column="66" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -94,12 +94,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/ospf_database.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="374">
+              <caret line="23" column="79" selection-start-line="23" selection-start-column="79" selection-end-line="23" selection-end-column="79" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/claseClaro.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="369">
+              <caret line="61" column="51" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -117,23 +130,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/te_tunnel_tabulate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/templates/ttextfsm_uf.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="132">
+              <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -150,8 +148,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web_server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="341" selection-start-line="341" selection-end-line="341" />
+            <state relative-caret-position="236">
+              <caret line="186" column="28" selection-start-line="186" selection-start-column="28" selection-end-line="186" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -169,7 +167,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mpls</find>
       <find>mpl</find>
       <find>exc</find>
       <find>mpls_te</find>
@@ -199,6 +196,7 @@
       <find>mpls_vc</find>
       <find>mpls_te_tunnels_mid_point</find>
       <find>get_vfis_interface_per_service_instance</find>
+      <find>diagrama</find>
     </findStrings>
     <replaceStrings>
       <replace>type</replace>
@@ -249,20 +247,20 @@
         <option value="$PROJECT_DIR$/resources/templates/ip explicit-path ios.template" />
         <option value="$PROJECT_DIR$/common_script.py" />
         <option value="$PROJECT_DIR$/model/IpExplicitPath.py" />
-        <option value="$PROJECT_DIR$/model/ospf_database.py" />
         <option value="$PROJECT_DIR$/resources/output_test/show ip ospf database router" />
         <option value="$PROJECT_DIR$/resources/templates/show ip ospf database router.template" />
         <option value="$PROJECT_DIR$/templates/diagramas.html" />
-        <option value="$PROJECT_DIR$/model/claseClaro.py" />
         <option value="$PROJECT_DIR$/logs/web.log" />
         <option value="$PROJECT_DIR$/tools.py" />
         <option value="$PROJECT_DIR$/nagios.py" />
         <option value="$PROJECT_DIR$/scripts/nagios.sh" />
-        <option value="$PROJECT_DIR$/web_server.py" />
         <option value="$PROJECT_DIR$/resources/templates/ttextfsm_uf.py" />
         <option value="$PROJECT_DIR$/resources/templates/show mpls l2transport vc detail ios.template" />
         <option value="$PROJECT_DIR$/templates/cisco_tabulated_method.html" />
         <option value="$PROJECT_DIR$/model/CiscoIOS.py" />
+        <option value="$PROJECT_DIR$/web_server.py" />
+        <option value="$PROJECT_DIR$/model/claseClaro.py" />
+        <option value="$PROJECT_DIR$/model/ospf_database.py" />
       </list>
     </option>
   </component>
@@ -294,27 +292,6 @@
               <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
               <item name="netadmin" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
@@ -598,21 +575,7 @@
       <workItem from="1550108750453" duration="350000" />
       <workItem from="1550243940514" duration="8059000" />
       <workItem from="1550507478510" duration="14987000" />
-      <workItem from="1550675912686" duration="12916000" />
-    </task>
-    <task id="LOCAL-00009" summary="first3">
-      <created>1542923961396</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1542923961396</updated>
-    </task>
-    <task id="LOCAL-00010" summary="first3">
-      <created>1542926752934</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1542926752934</updated>
+      <workItem from="1550675912686" duration="16665000" />
     </task>
     <task id="LOCAL-00011" summary="first3">
       <created>1544536176319</created>
@@ -943,7 +906,21 @@
       <option name="project" value="LOCAL" />
       <updated>1550701336597</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="first3">
+      <created>1550702872845</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1550702872845</updated>
+    </task>
+    <task id="LOCAL-00059" summary="first3">
+      <created>1550707896317</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1550707896317</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -979,7 +956,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="290817000" />
+    <option name="totallyTimeSpent" value="294566000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -994,7 +971,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.83516484" visible="true" weight="0.2244898" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.83516484" visible="true" weight="0.2244898" />
       <window_info id="Structure" order="1" sideWeight="0.16483517" side_tool="true" visible="true" weight="0.2244898" />
       <window_info id="Favorites" order="2" sideWeight="0.50864196" side_tool="true" weight="0.16136725" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1005,7 +982,7 @@
       <window_info anchor="bottom" id="Run" order="5" sideWeight="0.60042965" weight="0.4347826" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946293" weight="0.32664436" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.39957035" side_tool="true" weight="0.2419175" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49462944" visible="true" weight="0.39130434" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49462944" visible="true" weight="0.39130434" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49841017" weight="0.24526198" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32960895" />
       <window_info anchor="bottom" id="Database Console" order="11" sideWeight="0.49946293" weight="0.50501674" />
@@ -1122,12 +1099,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model/CiscoIOS.py</url>
-          <line>1285</line>
+          <line>1286</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model/CiscoIOS.py</url>
-          <line>1296</line>
+          <line>1297</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1142,22 +1119,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model/CiscoIOS.py</url>
-          <line>1286</line>
+          <line>1287</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/web_server.py</url>
-          <line>222</line>
+          <line>225</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/web_server.py</url>
-          <line>255</line>
+          <line>258</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/web_server.py</url>
-          <line>362</line>
+          <line>365</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
@@ -1470,23 +1447,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/claseClaro.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="125" column="30" selection-start-line="78" selection-start-column="7" selection-end-line="125" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="341" selection-start-line="341" selection-end-line="341" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/templates/ttextfsm_uf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -1501,25 +1461,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
           <caret line="473" selection-start-line="473" selection-end-line="473" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/te_tunnel_tabulate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/ospf_database.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1554,9 +1495,43 @@
     <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
-          <caret line="476" column="66" selection-start-line="476" selection-start-column="66" selection-end-line="476" selection-end-column="66" />
+          <caret line="477" column="66" selection-start-line="477" selection-start-column="66" selection-end-line="477" selection-end-column="66" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/te_tunnel_tabulate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="186" column="28" selection-start-line="186" selection-start-column="28" selection-end-line="186" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/claseClaro.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="61" column="51" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/ospf_database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="23" column="79" selection-start-line="23" selection-start-column="79" selection-end-line="23" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>

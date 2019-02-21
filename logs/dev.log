@@ -38027,3 +38027,503 @@ INFO:dev.Claro:dev 172.16.30.248 172.16.30.248 excute method set_interfaces
 2019-02-20 18:09:47,462:INFO:dev.ospf_adjacency:adjacency 172.16.30.253172.16.30.254 inited
 2019-02-20 18:09:47,462:INFO:dev.ospf_adjacency:adjacency 172.16.30.253172.16.30.254 inited
 2019-02-20 18:09:51,252:INFO:dev.ospf_database:OSPF DATABASE INIT FINISH
+2019-02-20 18:14:43,481:INFO:dev.Claro:dev 172.16.30.4 172.16.30.4 excute method set_interfaces
+2019-02-20 18:14:43,482:INFO:dev.Claro:dev 172.16.30.11 172.16.30.11 excute method set_interfaces
+2019-02-20 18:14:43,483:INFO:dev.Claro:dev 172.16.30.247 172.16.30.247 excute method set_interfaces
+2019-02-20 18:14:43,483:INFO:dev.Claro:dev 172.16.30.50 172.16.30.50 excute method set_interfaces
+2019-02-20 18:14:43,484:INFO:dev.Claro:dev 172.16.30.245 172.16.30.245 excute method set_interfaces
+2019-02-20 18:14:43,485:INFO:dev.Claro:dev 172.16.30.8 172.16.30.8 excute method set_interfaces
+2019-02-20 18:14:43,485:INFO:dev.Claro:dev 172.16.30.10 172.16.30.10 excute method set_interfaces
+2019-02-20 18:14:43,486:INFO:dev.Claro:dev 172.16.30.40 172.16.30.40 excute method set_interfaces
+2019-02-20 18:14:43,486:INFO:dev.Claro:dev 172.16.30.37 172.16.30.37 excute method set_interfaces
+2019-02-20 18:14:43,487:INFO:dev.Claro:dev 172.16.30.251 172.16.30.251 excute method set_interfaces
+2019-02-20 18:14:43,487:INFO:dev.Claro:dev 172.16.30.45 172.16.30.45 excute method set_interfaces
+2019-02-20 18:14:43,488:INFO:dev.Claro:dev 172.16.30.246 172.16.30.246 excute method set_interfaces
+2019-02-20 18:14:43,488:INFO:dev.Claro:dev 172.16.30.9 172.16.30.9 excute method set_interfaces
+2019-02-20 18:14:43,488:INFO:dev.Claro:dev 172.16.30.130 172.16.30.130 excute method set_interfaces
+2019-02-20 18:14:43,489:INFO:dev.Claro:dev 172.16.30.3 172.16.30.3 excute method set_interfaces
+2019-02-20 18:14:43,489:INFO:dev.Claro:dev 172.16.30.12 172.16.30.12 excute method set_interfaces
+2019-02-20 18:14:43,490:INFO:dev.Claro:dev 172.16.30.13 172.16.30.13 excute method set_interfaces
+2019-02-20 18:14:43,490:INFO:dev.Claro:dev 172.16.30.41 172.16.30.41 excute method set_interfaces
+2019-02-20 18:14:43,491:INFO:dev.Claro:dev 172.16.30.15 172.16.30.15 excute method set_interfaces
+2019-02-20 18:14:43,491:INFO:dev.Claro:dev 172.16.30.6 172.16.30.6 excute method set_interfaces
+2019-02-20 18:14:43,491:INFO:dev.Claro:dev 172.16.30.5 172.16.30.5 excute method set_interfaces
+2019-02-20 18:14:43,492:INFO:dev.Claro:dev 172.16.30.248 172.16.30.248 excute method set_interfaces
+2019-02-20 18:14:43,492:INFO:dev.Claro:dev 172.16.30.36 172.16.30.36 excute method set_interfaces
+2019-02-20 18:14:43,492:INFO:dev.Claro:dev 172.17.28.192 172.17.28.192 excute method set_interfaces
+2019-02-20 18:14:43,493:INFO:dev.Claro:dev 172.16.30.129 172.16.30.129 excute method set_interfaces
+2019-02-20 18:14:43,493:INFO:dev.Claro:dev 172.16.30.2 172.16.30.2 excute method set_interfaces
+2019-02-20 18:14:43,494:INFO:dev.Claro:dev 172.16.30.14 172.16.30.14 excute method set_interfaces
+2019-02-20 18:14:43,494:INFO:dev.Claro:dev 172.16.30.250 172.16.30.250 excute method set_interfaces
+2019-02-20 18:14:43,494:INFO:dev.Claro:dev 172.16.30.1 172.16.30.1 excute method set_interfaces
+2019-02-20 18:14:43,495:INFO:dev.Claro:dev 172.17.26.68 172.17.26.68 excute method set_interfaces
+2019-02-20 18:14:43,495:INFO:dev.Claro:dev 172.16.30.232 172.16.30.232 excute method set_interfaces
+2019-02-20 18:14:43,495:INFO:dev.Claro:dev 172.16.30.7 172.16.30.7 excute method set_interfaces
+2019-02-20 18:14:43,496:INFO:dev.Claro:dev 172.16.30.254 172.16.30.254 excute method set_interfaces
+2019-02-20 18:14:43,496:INFO:dev.Claro:dev 172.16.30.43 172.16.30.43 excute method set_interfaces
+2019-02-20 18:14:43,497:INFO:dev.Claro:dev 172.16.30.253 172.16.30.253 excute method set_interfaces
+2019-02-20 18:14:43,497:INFO:dev.Claro:dev 172.16.30.34 172.16.30.34 excute method set_interfaces
+2019-02-20 18:14:43,497:INFO:dev.Claro:dev 172.16.30.38 172.16.30.38 excute method set_interfaces
+2019-02-20 18:14:43,498:INFO:dev.Claro:dev 172.16.30.35 172.16.30.35 excute method set_interfaces
+2019-02-20 18:14:43,498:INFO:dev.Claro:dev 172.16.30.42 172.16.30.42 excute method set_interfaces
+2019-02-20 18:14:43,499:INFO:dev.Claro:dev 172.16.30.44 172.16.30.44 excute method set_interfaces
+2019-02-20 18:14:43,499:INFO:dev.Claro:dev 172.16.30.128 172.16.30.128 excute method set_interfaces
+2019-02-20 18:14:43,499:INFO:dev.Claro:dev 172.16.30.242 172.16.30.242 excute method set_interfaces
+2019-02-20 18:14:43,500:INFO:dev.Claro:dev 172.16.30.244 172.16.30.244 excute method set_interfaces
+2019-02-20 18:14:43,500:INFO:dev.Claro:dev 172.16.30.39 172.16.30.39 excute method set_interfaces
+2019-02-20 18:15:06,678:INFO:dev.InterfaceUfinet:172.16.30.42 DF ifGi0/0/3KeyError('')
+2019-02-20 18:15:06,679:INFO:dev.InterfaceUfinet:172.16.30.42 DF ifTe0/4/1KeyError('2006248021')
+2019-02-20 18:15:07,068:INFO:dev.InterfaceUfinet:172.16.30.246 DF ifHu0/0/1/0KeyError('FO')
+2019-02-20 18:15:07,068:INFO:dev.InterfaceUfinet:172.16.30.246 DF ifTe0/1/0/1KeyError('FO')
+2019-02-20 18:15:07,069:INFO:dev.InterfaceUfinet:172.16.30.246 DF ifTe0/1/0/4KeyError('PT')
+2019-02-20 18:15:07,069:INFO:dev.InterfaceUfinet:172.16.30.246 DF ifTe0/1/0/5KeyError('PT')
+2019-02-20 18:15:07,070:INFO:dev.InterfaceUfinet:172.16.30.246 DF ifTe0/1/0/6KeyError('PT')
+2019-02-20 18:15:07,070:INFO:dev.InterfaceUfinet:172.16.30.246 DF ifTe0/1/0/7KeyError('PT')
+2019-02-20 18:15:07,563:INFO:dev.InterfaceUfinet:172.16.30.253 l1 ifTe0/0/0/2.4000IndexError('string index out of range')
+2019-02-20 18:15:09,032:INFO:dev.InterfaceUfinet:172.16.30.129 DF ifTe0/3/0KeyError('ALL')
+2019-02-20 18:15:09,032:INFO:dev.InterfaceUfinet:172.16.30.129 DF ifTe0/3/1KeyError('3008')
+2019-02-20 18:15:19,603:INFO:dev.InterfaceUfinet:172.16.30.244 DF ifTe0/1/1/1.1558KeyError('PENDIENTE')
+2019-02-20 18:15:19,618:INFO:dev.Claro:dev 172.16.30.4 172.16.30.4 excute method set_snmp_community
+2019-02-20 18:15:19,619:INFO:dev.Claro:dev 172.16.30.4 172.16.30.4 excute method get_uid_save
+2019-02-20 18:15:19,619:INFO:dev.Claro:dev 172.16.30.11 172.16.30.11 excute method set_snmp_community
+2019-02-20 18:15:19,620:INFO:dev.Claro:dev 172.16.30.11 172.16.30.11 excute method get_uid_save
+2019-02-20 18:15:19,620:INFO:dev.Claro:dev 172.16.30.247 172.16.30.247 excute method set_snmp_community
+2019-02-20 18:15:19,621:INFO:dev.Claro:dev 172.16.30.247 172.16.30.247 excute method get_uid_save
+2019-02-20 18:15:19,622:INFO:dev.Claro:dev 172.16.30.50 172.16.30.50 excute method set_snmp_community
+2019-02-20 18:15:19,622:INFO:dev.Claro:dev 172.16.30.50 172.16.30.50 excute method get_uid_save
+2019-02-20 18:15:19,623:INFO:dev.Claro:dev 172.16.30.245 172.16.30.245 excute method set_snmp_community
+2019-02-20 18:15:19,623:INFO:dev.Claro:dev 172.16.30.245 172.16.30.245 excute method get_uid_save
+2019-02-20 18:15:19,624:INFO:dev.Claro:dev 172.16.30.8 172.16.30.8 excute method set_snmp_community
+2019-02-20 18:15:19,630:INFO:dev.Claro:dev 172.16.30.8 172.16.30.8 excute method get_uid_save
+2019-02-20 18:15:19,631:INFO:dev.Claro:dev 172.16.30.10 172.16.30.10 excute method set_snmp_community
+2019-02-20 18:15:19,634:INFO:dev.Claro:dev 172.16.30.10 172.16.30.10 excute method get_uid_save
+2019-02-20 18:15:19,635:INFO:dev.Claro:dev 172.16.30.40 172.16.30.40 excute method set_snmp_community
+2019-02-20 18:15:19,635:INFO:dev.Claro:dev 172.16.30.40 172.16.30.40 excute method get_uid_save
+2019-02-20 18:15:19,636:INFO:dev.Claro:dev 172.16.30.37 172.16.30.37 excute method set_snmp_community
+2019-02-20 18:15:19,636:INFO:dev.Claro:dev 172.16.30.37 172.16.30.37 excute method get_uid_save
+2019-02-20 18:15:19,637:INFO:dev.Claro:dev 172.16.30.251 172.16.30.251 excute method set_snmp_community
+2019-02-20 18:15:19,637:INFO:dev.Claro:dev 172.16.30.251 172.16.30.251 excute method get_uid_save
+2019-02-20 18:15:19,638:INFO:dev.Claro:dev 172.16.30.45 172.16.30.45 excute method set_snmp_community
+2019-02-20 18:15:19,639:INFO:dev.Claro:dev 172.16.30.45 172.16.30.45 excute method get_uid_save
+2019-02-20 18:15:19,639:INFO:dev.Claro:dev 172.16.30.246 172.16.30.246 excute method set_snmp_community
+2019-02-20 18:15:19,640:INFO:dev.Claro:dev 172.16.30.246 172.16.30.246 excute method get_uid_save
+2019-02-20 18:15:19,643:INFO:dev.Claro:dev 172.16.30.9 172.16.30.9 excute method set_snmp_community
+2019-02-20 18:15:19,644:INFO:dev.Claro:dev 172.16.30.9 172.16.30.9 excute method get_uid_save
+2019-02-20 18:15:19,648:INFO:dev.Claro:dev 172.16.30.130 172.16.30.130 excute method set_snmp_community
+2019-02-20 18:15:19,651:INFO:dev.Claro:dev 172.16.30.130 172.16.30.130 excute method get_uid_save
+2019-02-20 18:15:19,652:INFO:dev.Claro:dev 172.16.30.3 172.16.30.3 excute method set_snmp_community
+2019-02-20 18:15:19,652:INFO:dev.Claro:dev 172.16.30.3 172.16.30.3 excute method get_uid_save
+2019-02-20 18:15:19,653:INFO:dev.Claro:dev 172.16.30.12 172.16.30.12 excute method set_snmp_community
+2019-02-20 18:15:19,657:INFO:dev.Claro:dev 172.16.30.12 172.16.30.12 excute method get_uid_save
+2019-02-20 18:15:19,660:INFO:dev.Claro:dev 172.16.30.13 172.16.30.13 excute method set_snmp_community
+2019-02-20 18:15:19,662:INFO:dev.Claro:dev 172.16.30.13 172.16.30.13 excute method get_uid_save
+2019-02-20 18:15:19,663:INFO:dev.Claro:dev 172.16.30.41 172.16.30.41 excute method set_snmp_community
+2019-02-20 18:15:19,666:INFO:dev.Claro:dev 172.16.30.41 172.16.30.41 excute method get_uid_save
+2019-02-20 18:15:19,669:INFO:dev.Claro:dev 172.16.30.15 172.16.30.15 excute method set_snmp_community
+2019-02-20 18:15:19,669:INFO:dev.Claro:dev 172.16.30.15 172.16.30.15 excute method get_uid_save
+2019-02-20 18:15:19,673:INFO:dev.Claro:dev 172.16.30.6 172.16.30.6 excute method set_snmp_community
+2019-02-20 18:15:19,674:INFO:dev.Claro:dev 172.16.30.6 172.16.30.6 excute method get_uid_save
+2019-02-20 18:15:19,676:INFO:dev.Claro:dev 172.16.30.5 172.16.30.5 excute method set_snmp_community
+2019-02-20 18:15:19,680:INFO:dev.Claro:dev 172.16.30.5 172.16.30.5 excute method get_uid_save
+2019-02-20 18:15:19,680:INFO:dev.Claro:dev 172.16.30.248 172.16.30.248 excute method set_snmp_community
+2019-02-20 18:15:19,681:INFO:dev.Claro:dev 172.16.30.248 172.16.30.248 excute method get_uid_save
+2019-02-20 18:15:19,682:INFO:dev.Claro:dev 172.16.30.36 172.16.30.36 excute method set_snmp_community
+2019-02-20 18:15:19,728:INFO:dev.Claro:dev 172.16.30.36 172.16.30.36 excute method get_uid_save
+2019-02-20 18:15:19,731:INFO:dev.Claro:dev 172.17.28.192 172.17.28.192 excute method set_snmp_community
+2019-02-20 18:15:19,731:INFO:dev.Claro:dev 172.17.28.192 172.17.28.192 excute method get_uid_save
+2019-02-20 18:15:19,738:INFO:dev.Claro:dev 172.16.30.129 172.16.30.129 excute method set_snmp_community
+2019-02-20 18:15:19,739:INFO:dev.Claro:dev 172.16.30.129 172.16.30.129 excute method get_uid_save
+2019-02-20 18:15:19,740:INFO:dev.Claro:dev 172.16.30.2 172.16.30.2 excute method set_snmp_community
+2019-02-20 18:15:19,741:INFO:dev.Claro:dev 172.16.30.2 172.16.30.2 excute method get_uid_save
+2019-02-20 18:15:19,751:INFO:dev.Claro:dev 172.16.30.14 172.16.30.14 excute method set_snmp_community
+2019-02-20 18:15:19,755:INFO:dev.Claro:dev 172.16.30.14 172.16.30.14 excute method get_uid_save
+2019-02-20 18:15:19,755:INFO:dev.Claro:dev 172.16.30.250 172.16.30.250 excute method set_snmp_community
+2019-02-20 18:15:19,756:INFO:dev.Claro:dev 172.16.30.250 172.16.30.250 excute method get_uid_save
+2019-02-20 18:15:19,758:INFO:dev.Claro:dev 172.16.30.1 172.16.30.1 excute method set_snmp_community
+2019-02-20 18:15:19,759:INFO:dev.Claro:dev 172.16.30.1 172.16.30.1 excute method get_uid_save
+2019-02-20 18:15:19,762:INFO:dev.Claro:dev 172.17.26.68 172.17.26.68 excute method set_snmp_community
+2019-02-20 18:15:19,767:INFO:dev.Claro:dev 172.17.26.68 172.17.26.68 excute method get_uid_save
+2019-02-20 18:15:19,768:INFO:dev.Claro:dev 172.16.30.232 172.16.30.232 excute method set_snmp_community
+2019-02-20 18:15:19,772:INFO:dev.Claro:dev 172.16.30.232 172.16.30.232 excute method get_uid_save
+2019-02-20 18:15:19,774:INFO:dev.Claro:dev 172.16.30.7 172.16.30.7 excute method set_snmp_community
+2019-02-20 18:15:19,775:INFO:dev.Claro:dev 172.16.30.7 172.16.30.7 excute method get_uid_save
+2019-02-20 18:15:19,785:INFO:dev.Claro:dev 172.16.30.254 172.16.30.254 excute method set_snmp_community
+2019-02-20 18:15:19,786:INFO:dev.Claro:dev 172.16.30.254 172.16.30.254 excute method get_uid_save
+2019-02-20 18:15:19,786:INFO:dev.Claro:dev 172.16.30.43 172.16.30.43 excute method set_snmp_community
+2019-02-20 18:15:19,787:INFO:dev.Claro:dev 172.16.30.43 172.16.30.43 excute method get_uid_save
+2019-02-20 18:15:19,788:INFO:dev.Claro:dev 172.16.30.253 172.16.30.253 excute method set_snmp_community
+2019-02-20 18:15:19,790:INFO:dev.Claro:dev 172.16.30.253 172.16.30.253 excute method get_uid_save
+2019-02-20 18:15:19,799:INFO:dev.Claro:dev 172.16.30.34 172.16.30.34 excute method set_snmp_community
+2019-02-20 18:15:19,803:INFO:dev.Claro:dev 172.16.30.34 172.16.30.34 excute method get_uid_save
+2019-02-20 18:15:19,803:INFO:dev.Claro:dev 172.16.30.38 172.16.30.38 excute method set_snmp_community
+2019-02-20 18:15:19,804:INFO:dev.Claro:dev 172.16.30.38 172.16.30.38 excute method get_uid_save
+2019-02-20 18:15:19,812:INFO:dev.Claro:dev 172.16.30.35 172.16.30.35 excute method set_snmp_community
+2019-02-20 18:15:19,813:INFO:dev.Claro:dev 172.16.30.35 172.16.30.35 excute method get_uid_save
+2019-02-20 18:15:19,824:INFO:dev.Claro:dev 172.16.30.42 172.16.30.42 excute method set_snmp_community
+2019-02-20 18:15:19,833:INFO:dev.Claro:dev 172.16.30.42 172.16.30.42 excute method get_uid_save
+2019-02-20 18:15:19,842:INFO:dev.Claro:dev 172.16.30.44 172.16.30.44 excute method set_snmp_community
+2019-02-20 18:15:19,844:INFO:dev.Claro:dev 172.16.30.44 172.16.30.44 excute method get_uid_save
+2019-02-20 18:15:19,847:INFO:dev.Claro:dev 172.16.30.128 172.16.30.128 excute method set_snmp_community
+2019-02-20 18:15:19,848:INFO:dev.Claro:dev 172.16.30.128 172.16.30.128 excute method get_uid_save
+2019-02-20 18:15:19,868:INFO:dev.Claro:dev 172.16.30.242 172.16.30.242 excute method set_snmp_community
+2019-02-20 18:15:19,871:INFO:dev.Claro:dev 172.16.30.242 172.16.30.242 excute method get_uid_save
+2019-02-20 18:15:19,890:INFO:dev.Claro:dev 172.16.30.244 172.16.30.244 excute method set_snmp_community
+2019-02-20 18:15:19,892:INFO:dev.Claro:dev 172.16.30.244 172.16.30.244 excute method get_uid_save
+2019-02-20 18:15:19,893:INFO:dev.Claro:dev 172.16.30.39 172.16.30.39 excute method set_snmp_community
+2019-02-20 18:15:19,905:INFO:dev.Claro:dev 172.16.30.39 172.16.30.39 excute method get_uid_save
+2019-02-20 18:15:44,790:INFO:dev.Claro:dev 172.16.30.4 172.16.30.4 excute method set_snmp_location_attr
+2019-02-20 18:15:44,790:INFO:dev.Claro:dev 172.16.30.11 172.16.30.11 excute method set_snmp_location_attr
+2019-02-20 18:15:44,791:INFO:dev.Claro:dev 172.16.30.247 172.16.30.247 excute method set_snmp_location_attr
+2019-02-20 18:15:44,791:INFO:dev.Claro:dev 172.16.30.50 172.16.30.50 excute method set_snmp_location_attr
+2019-02-20 18:15:44,792:INFO:dev.Claro:dev 172.16.30.245 172.16.30.245 excute method set_snmp_location_attr
+2019-02-20 18:15:44,793:INFO:dev.Claro:dev 172.16.30.8 172.16.30.8 excute method set_snmp_location_attr
+2019-02-20 18:15:44,796:INFO:dev.Claro:dev 172.16.30.10 172.16.30.10 excute method set_snmp_location_attr
+2019-02-20 18:15:44,797:INFO:dev.Claro:dev 172.16.30.40 172.16.30.40 excute method set_snmp_location_attr
+2019-02-20 18:15:44,798:INFO:dev.Claro:dev 172.16.30.37 172.16.30.37 excute method set_snmp_location_attr
+2019-02-20 18:15:44,804:INFO:dev.Claro:dev 172.16.30.251 172.16.30.251 excute method set_snmp_location_attr
+2019-02-20 18:15:44,805:INFO:dev.Claro:dev 172.16.30.45 172.16.30.45 excute method set_snmp_location_attr
+2019-02-20 18:15:44,806:INFO:dev.Claro:dev 172.16.30.246 172.16.30.246 excute method set_snmp_location_attr
+2019-02-20 18:15:44,806:INFO:dev.Claro:dev 172.16.30.9 172.16.30.9 excute method set_snmp_location_attr
+2019-02-20 18:15:44,807:INFO:dev.Claro:dev 172.16.30.130 172.16.30.130 excute method set_snmp_location_attr
+2019-02-20 18:15:44,808:INFO:dev.Claro:dev 172.16.30.3 172.16.30.3 excute method set_snmp_location_attr
+2019-02-20 18:15:44,808:INFO:dev.Claro:dev 172.16.30.12 172.16.30.12 excute method set_snmp_location_attr
+2019-02-20 18:15:44,812:INFO:dev.Claro:dev 172.16.30.13 172.16.30.13 excute method set_snmp_location_attr
+2019-02-20 18:15:44,813:INFO:dev.Claro:dev 172.16.30.41 172.16.30.41 excute method set_snmp_location_attr
+2019-02-20 18:15:44,813:INFO:dev.Claro:dev 172.16.30.15 172.16.30.15 excute method set_snmp_location_attr
+2019-02-20 18:15:44,817:INFO:dev.Claro:dev 172.16.30.6 172.16.30.6 excute method set_snmp_location_attr
+2019-02-20 18:15:44,818:INFO:dev.Claro:dev 172.16.30.5 172.16.30.5 excute method set_snmp_location_attr
+2019-02-20 18:15:44,821:INFO:dev.Claro:dev 172.16.30.248 172.16.30.248 excute method set_snmp_location_attr
+2019-02-20 18:15:44,822:INFO:dev.Claro:dev 172.16.30.36 172.16.30.36 excute method set_snmp_location_attr
+2019-02-20 18:15:44,822:INFO:dev.Claro:dev 172.17.28.192 172.17.28.192 excute method set_snmp_location_attr
+2019-02-20 18:15:44,826:INFO:dev.Claro:dev 172.16.30.129 172.16.30.129 excute method set_snmp_location_attr
+2019-02-20 18:15:44,826:INFO:dev.Claro:dev 172.16.30.2 172.16.30.2 excute method set_snmp_location_attr
+2019-02-20 18:15:44,833:INFO:dev.Claro:dev 172.16.30.14 172.16.30.14 excute method set_snmp_location_attr
+2019-02-20 18:15:44,838:INFO:dev.Claro:dev 172.16.30.250 172.16.30.250 excute method set_snmp_location_attr
+2019-02-20 18:15:44,839:INFO:dev.Claro:dev 172.16.30.1 172.16.30.1 excute method set_snmp_location_attr
+2019-02-20 18:15:44,841:INFO:dev.Claro:dev 172.17.26.68 172.17.26.68 excute method set_snmp_location_attr
+2019-02-20 18:15:44,842:INFO:dev.Claro:dev 172.16.30.232 172.16.30.232 excute method set_snmp_location_attr
+2019-02-20 18:15:44,847:INFO:dev.Claro:dev 172.16.30.7 172.16.30.7 excute method set_snmp_location_attr
+2019-02-20 18:15:44,848:INFO:dev.Claro:dev 172.16.30.254 172.16.30.254 excute method set_snmp_location_attr
+2019-02-20 18:15:44,852:INFO:dev.Claro:dev 172.16.30.43 172.16.30.43 excute method set_snmp_location_attr
+2019-02-20 18:15:44,853:INFO:dev.Claro:dev 172.16.30.253 172.16.30.253 excute method set_snmp_location_attr
+2019-02-20 18:15:44,853:INFO:dev.Claro:dev 172.16.30.34 172.16.30.34 excute method set_snmp_location_attr
+2019-02-20 18:15:44,868:INFO:dev.Claro:dev 172.16.30.38 172.16.30.38 excute method set_snmp_location_attr
+2019-02-20 18:15:44,872:INFO:dev.Claro:dev 172.16.30.35 172.16.30.35 excute method set_snmp_location_attr
+2019-02-20 18:15:44,874:INFO:dev.Claro:dev 172.16.30.42 172.16.30.42 excute method set_snmp_location_attr
+2019-02-20 18:15:44,876:INFO:dev.Claro:dev 172.16.30.44 172.16.30.44 excute method set_snmp_location_attr
+2019-02-20 18:15:44,877:INFO:dev.Claro:dev 172.16.30.128 172.16.30.128 excute method set_snmp_location_attr
+2019-02-20 18:15:44,877:INFO:dev.Claro:dev 172.16.30.242 172.16.30.242 excute method set_snmp_location_attr
+2019-02-20 18:15:44,878:INFO:dev.Claro:dev 172.16.30.244 172.16.30.244 excute method set_snmp_location_attr
+2019-02-20 18:15:44,884:INFO:dev.Claro:dev 172.16.30.39 172.16.30.39 excute method set_snmp_location_attr
+2019-02-20 18:15:46,343:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.247 countryCOSTA_RICA
+2019-02-20 18:15:46,343:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.247 areaCERRO_GARRON
+2019-02-20 18:15:46,343:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.247 roll[LSR]
+2019-02-20 18:15:46,343:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.247 x5217
+2019-02-20 18:15:46,343:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.247 y1802
+2019-02-20 18:15:46,415:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.11 countryUSA
+2019-02-20 18:15:46,416:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.11 areaNAP
+2019-02-20 18:15:46,416:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.11 roll[LSR,PE]
+2019-02-20 18:15:46,416:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.11 x2699
+2019-02-20 18:15:46,416:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.11 y-1021
+2019-02-20 18:15:46,886:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.45 countryPANAMA
+2019-02-20 18:15:46,886:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.45 areaHUB
+2019-02-20 18:15:46,886:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.45 roll[LSR]
+2019-02-20 18:15:46,886:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.45 x5463
+2019-02-20 18:15:46,886:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.45 y2456
+2019-02-20 18:15:46,921:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.245 countryCOSTA_RICA
+2019-02-20 18:15:46,921:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.245 areaESCAZU
+2019-02-20 18:15:46,927:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.245 roll[LSR]
+2019-02-20 18:15:46,933:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.245 x4442
+2019-02-20 18:15:46,948:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.245 y2652
+2019-02-20 18:15:47,190:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.50 countryGUATEMALA
+2019-02-20 18:15:47,191:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.50 areaPUERTO_BARRIOS_VIEJO
+2019-02-20 18:15:47,191:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.50 roll[LSR]
+2019-02-20 18:15:47,191:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.50 x2335
+2019-02-20 18:15:47,191:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.50 y2402
+2019-02-20 18:15:47,331:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.9 countryPANAMA
+2019-02-20 18:15:47,331:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.9 areaCOROZAL
+2019-02-20 18:15:47,331:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.9 roll[LSR]
+2019-02-20 18:15:47,331:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.9 x4311
+2019-02-20 18:15:47,331:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.9 y923
+2019-02-20 18:15:47,367:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.36 countryEL_SALVADOR
+2019-02-20 18:15:47,367:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.36 areaSMART_CENTER
+2019-02-20 18:15:47,367:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.36 roll[LSR]
+2019-02-20 18:15:47,367:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.36 x5685
+2019-02-20 18:15:47,367:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.36 y5101
+2019-02-20 18:15:47,478:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.130 countryGUATEMALA
+2019-02-20 18:15:47,478:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.130 areaPUERTO_BARRIOS_LANDING
+2019-02-20 18:15:47,479:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.130 roll[LSR]
+2019-02-20 18:15:47,488:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.130 x1914
+2019-02-20 18:15:47,489:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.130 y1634
+2019-02-20 18:15:47,715:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.1 countryUSA
+2019-02-20 18:15:47,715:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.1 areaNAP
+2019-02-20 18:15:47,715:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.1 roll[LSR,PE]
+2019-02-20 18:15:47,715:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.1 x1643
+2019-02-20 18:15:47,715:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.1 y34
+2019-02-20 18:15:47,751:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.13 countryCOLOMBIA
+2019-02-20 18:15:47,751:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.13 areaWORLD_BUSSINES_PORT
+2019-02-20 18:15:47,751:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.13 roll[LSR]
+2019-02-20 18:15:47,757:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.13 x7836
+2019-02-20 18:15:47,757:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.13 y-540
+2019-02-20 18:15:47,834:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.37 countryEL_SALVADOR
+2019-02-20 18:15:47,834:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.37 areaBETHOVEN
+2019-02-20 18:15:47,834:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.37 roll[LSR]
+2019-02-20 18:15:47,834:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.37 x5048
+2019-02-20 18:15:47,834:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.37 y4498
+2019-02-20 18:15:48,153:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.251 countryPANAMA
+2019-02-20 18:15:48,153:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.251 areaVICTORIA_PLAZA
+2019-02-20 18:15:48,153:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.251 roll[LSR,PE]
+2019-02-20 18:15:48,153:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.251 x5217
+2019-02-20 18:15:48,153:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.251 y1802
+2019-02-20 18:15:48,354:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.5 countryUSA
+2019-02-20 18:15:48,354:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.5 areaNAP
+2019-02-20 18:15:48,354:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.5 roll[LSR,PE]
+2019-02-20 18:15:48,354:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.5 x4229
+2019-02-20 18:15:48,354:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.5 y139
+2019-02-20 18:15:48,529:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.15 countryCOLOMBIA
+2019-02-20 18:15:48,529:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.15 areaSALGAR
+2019-02-20 18:15:48,529:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.15 roll[LSR]
+2019-02-20 18:15:48,529:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.15 x6483
+2019-02-20 18:15:48,529:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.15 y198
+2019-02-20 18:15:48,589:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.34 countryGUATEMALA
+2019-02-20 18:15:48,589:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.34 areaGUAYACAN
+2019-02-20 18:15:48,589:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.34 roll[LSR]
+2019-02-20 18:15:48,596:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.244 countryCOSTA_RICA
+2019-02-20 18:15:48,644:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.34 x4494
+2019-02-20 18:15:48,668:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.244 areaESCAZU
+2019-02-20 18:15:48,677:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.34 y3859
+2019-02-20 18:15:48,695:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.244 roll[LSR,PE]
+2019-02-20 18:15:48,699:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.244 x3628
+2019-02-20 18:15:48,717:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.244 y3298
+2019-02-20 18:15:48,841:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.38 countryHONDURAS
+2019-02-20 18:15:48,865:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.38 areaTEGUCIGALPA
+2019-02-20 18:15:48,865:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.38 roll[LSR]
+2019-02-20 18:15:48,865:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.38 x5467
+2019-02-20 18:15:48,865:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.38 y3919
+2019-02-20 18:15:48,872:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.7 countryUSA
+2019-02-20 18:15:48,872:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.7 areaNAP
+2019-02-20 18:15:48,872:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.7 roll[LSR,PE]
+2019-02-20 18:15:48,872:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.7 x3696
+2019-02-20 18:15:48,872:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.7 y-1558
+2019-02-20 18:15:48,967:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.3 countryHONDURAS
+2019-02-20 18:15:48,967:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.3 areaPUERTO_CORTES
+2019-02-20 18:15:48,967:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.3 roll[LSR]
+2019-02-20 18:15:48,967:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.3 x3817
+2019-02-20 18:15:48,967:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.3 y1900
+2019-02-20 18:15:49,193:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.232 countryCHILE
+2019-02-20 18:15:49,193:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.232 areaBOS
+2019-02-20 18:15:49,193:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.232 roll[LSR,ASBR]
+2019-02-20 18:15:49,193:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.232 x8055
+2019-02-20 18:15:49,193:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.232 y-1143
+2019-02-20 18:15:49,193:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.40 countryNICARAGUA
+2019-02-20 18:15:49,193:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.40 areaSUMAGRO
+2019-02-20 18:15:49,193:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.40 roll[LSR]
+2019-02-20 18:15:49,205:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.40 x6548
+2019-02-20 18:15:49,205:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.40 y3870
+2019-02-20 18:15:49,245:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.42 countryCOSTA_RICA
+2019-02-20 18:15:49,303:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.42 areaESCAZU
+2019-02-20 18:15:49,303:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.42 roll[LSR]
+2019-02-20 18:15:49,303:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.42 x5073
+2019-02-20 18:15:49,303:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.42 y3034
+2019-02-20 18:15:49,306:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.44 countryPANAMA
+2019-02-20 18:15:49,306:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.44 areaVICTORIA_PLAZA
+2019-02-20 18:15:49,306:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.44 roll[LSR]
+2019-02-20 18:15:49,307:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.44 x4274
+2019-02-20 18:15:49,307:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.44 y1653
+2019-02-20 18:15:49,363:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.39 countryHONDURAS
+2019-02-20 18:15:49,363:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.39 areaNACAHOME
+2019-02-20 18:15:49,363:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.39 roll[LSR]
+2019-02-20 18:15:49,363:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.39 x6162
+2019-02-20 18:15:49,363:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.39 y4498
+2019-02-20 18:15:49,393:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.8 countryUSA
+2019-02-20 18:15:49,393:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.8 areaNAP
+2019-02-20 18:15:49,393:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.8 roll[LSR,PE]
+2019-02-20 18:15:49,393:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.8 x2655
+2019-02-20 18:15:49,393:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.8 y-1558
+2019-02-20 18:15:49,484:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.246 countryGUATEMALA
+2019-02-20 18:15:49,484:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.246 areaPUERTO_BARRIOS_NUEVO
+2019-02-20 18:15:49,484:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.246 roll[LSR,PE,IPP]
+2019-02-20 18:15:49,484:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.246 x1492
+2019-02-20 18:15:49,484:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.246 y2829
+2019-02-20 18:15:49,596:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.35 countryGUATEMALA
+2019-02-20 18:15:49,596:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.35 area20_CALLE
+2019-02-20 18:15:49,596:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.35 roll[LSR]
+2019-02-20 18:15:49,596:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.35 x4513
+2019-02-20 18:15:49,596:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.35 y4683
+2019-02-20 18:15:49,730:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.129 countryARGENTINA
+2019-02-20 18:15:49,730:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.129 areaBELGRANO
+2019-02-20 18:15:49,730:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.129 roll[LSR,ASBR]
+2019-02-20 18:15:49,749:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.129 x6847
+2019-02-20 18:15:49,749:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.129 y-1143
+2019-02-20 18:15:49,807:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.242 countryPANAMA
+2019-02-20 18:15:49,807:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.242 areaIDC_CIUDAD_PANAMA
+2019-02-20 18:15:49,807:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.242 roll[LSR]
+2019-02-20 18:15:49,807:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.242 x3692
+2019-02-20 18:15:49,807:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.242 y4272
+2019-02-20 18:15:49,808:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.254 countryUSA
+2019-02-20 18:15:49,808:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.254 areaNAP
+2019-02-20 18:15:49,808:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.254 roll[LSR,PE,IPP]
+2019-02-20 18:15:49,808:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.254 x4024
+2019-02-20 18:15:49,808:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.254 y-685
+2019-02-20 18:15:49,819:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.12 countryCOLOMBIA
+2019-02-20 18:15:49,819:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.12 areaTOLU
+2019-02-20 18:15:49,819:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.12 roll[LSR]
+2019-02-20 18:15:49,819:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.12 x6175
+2019-02-20 18:15:49,819:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.12 y-485
+2019-02-20 18:15:49,820:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.14 countryCOLOMBIA
+2019-02-20 18:15:49,820:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.14 areaWORLD_BUSSINES_PORT
+2019-02-20 18:15:49,820:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.14 roll[LSR]
+2019-02-20 18:15:49,821:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.14 x7187
+2019-02-20 18:15:49,821:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.14 y198
+2019-02-20 18:15:49,993:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.250 countryGUATEMALA
+2019-02-20 18:15:49,993:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.250 areaGUAYACAN
+2019-02-20 18:15:49,993:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.250 roll[LSR,PE]
+2019-02-20 18:15:49,993:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.250 x2560
+2019-02-20 18:15:49,993:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.250 y4015
+2019-02-20 18:15:50,002:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.253 countryUSA
+2019-02-20 18:15:50,003:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.253 areaNAP
+2019-02-20 18:15:50,003:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.253 roll[LSR,PE,IPP]
+2019-02-20 18:15:50,003:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.253 x1877
+2019-02-20 18:15:50,003:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.253 y-685
+2019-02-20 18:15:50,003:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.2 countryUSA
+2019-02-20 18:15:50,003:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.2 areaNAP
+2019-02-20 18:15:50,003:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.2 roll[LSR,PE]
+2019-02-20 18:15:50,003:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.2 x3597
+2019-02-20 18:15:50,003:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.2 y-1021
+2019-02-20 18:15:50,009:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.43 countryCOSTA_RICA
+2019-02-20 18:15:50,009:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.43 areaSAN_PEDRO
+2019-02-20 18:15:50,009:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.43 roll[LSR]
+2019-02-20 18:15:50,009:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.43 x6273
+2019-02-20 18:15:50,009:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.43 y2606
+2019-02-20 18:15:50,046:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.248 countryCOSTA_RICA
+2019-02-20 18:15:50,046:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.248 areaSAN_PEDRO
+2019-02-20 18:15:50,046:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.248 roll[LSR,PE]
+2019-02-20 18:15:50,046:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.248 x7187
+2019-02-20 18:15:50,046:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.248 y2709
+2019-02-20 18:15:50,084:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.128 countryUSA
+2019-02-20 18:15:50,084:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.128 areaNAP
+2019-02-20 18:15:50,084:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.128 roll[LSR,PE]
+2019-02-20 18:15:50,084:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.128 x4984
+2019-02-20 18:15:50,084:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.128 y-142
+2019-02-20 18:15:50,085:INFO:dev.ospf_adjacency:adjacency 172.16.30.1172.16.30.254 inited
+2019-02-20 18:15:50,085:INFO:dev.ospf_adjacency:adjacency 172.16.30.1172.16.30.128 inited
+2019-02-20 18:15:50,086:INFO:dev.ospf_adjacency:adjacency 172.16.30.1172.16.30.11 inited
+2019-02-20 18:15:50,086:INFO:dev.ospf_adjacency:adjacency 172.16.30.1172.16.30.12 inited
+2019-02-20 18:15:50,086:INFO:dev.ospf_adjacency:adjacency 172.16.30.1172.16.30.2 inited
+2019-02-20 18:15:50,087:INFO:dev.ospf_adjacency:adjacency 172.16.30.1172.16.30.5 inited
+2019-02-20 18:15:50,087:INFO:dev.ospf_adjacency:adjacency 172.16.30.1172.16.30.9 inited
+2019-02-20 18:15:50,088:INFO:dev.ospf_adjacency:adjacency 172.16.30.1172.16.30.3 inited
+2019-02-20 18:15:50,088:INFO:dev.ospf_adjacency:adjacency 172.16.30.1172.16.30.5 inited
+2019-02-20 18:15:50,089:INFO:dev.ospf_adjacency:adjacency 172.16.30.2172.16.30.8 inited
+2019-02-20 18:15:50,089:INFO:dev.ospf_adjacency:adjacency 172.16.30.2172.16.30.7 inited
+2019-02-20 18:15:50,089:INFO:dev.ospf_adjacency:adjacency 172.16.30.247172.16.30.3 inited
+2019-02-20 18:15:50,090:INFO:dev.ospf_adjacency:adjacency 172.16.30.3172.16.30.34 inited
+2019-02-20 18:15:50,091:INFO:dev.ospf_adjacency:adjacency 172.16.30.3172.16.30.38 inited
+2019-02-20 18:15:50,091:INFO:dev.ospf_adjacency:adjacency 172.16.30.3172.16.30.50 inited
+2019-02-20 18:15:50,092:INFO:dev.ospf_adjacency:adjacency 172.16.30.253172.16.30.3 inited
+2019-02-20 18:15:50,092:INFO:dev.ospf_adjacency:adjacency 172.16.30.3172.16.30.34 inited
+2019-02-20 18:15:50,093:INFO:dev.ospf_adjacency:adjacency 172.16.30.3172.16.30.5 inited
+2019-02-20 18:15:50,093:INFO:dev.ospf_adjacency:adjacency 172.16.30.248172.16.30.3 inited
+2019-02-20 18:15:50,093:INFO:dev.ospf_adjacency:adjacency 172.16.30.247172.16.30.3 inited
+2019-02-20 18:15:50,093:INFO:dev.ospf_adjacency:adjacency 172.16.30.3172.16.30.34 inited
+2019-02-20 18:15:50,094:INFO:dev.ospf_adjacency:adjacency 172.16.30.3172.16.30.38 inited
+2019-02-20 18:15:50,094:INFO:dev.ospf_adjacency:adjacency 172.16.30.3172.16.30.5 inited
+2019-02-20 18:15:50,094:INFO:dev.ospf_adjacency:adjacency 172.16.30.250172.16.30.3 inited
+2019-02-20 18:15:50,094:INFO:dev.ospf_adjacency:adjacency 172.16.30.247172.16.30.4 inited
+2019-02-20 18:15:50,095:INFO:dev.ospf_adjacency:adjacency 172.16.30.5172.16.30.9 inited
+2019-02-20 18:15:50,095:INFO:dev.ospf_adjacency:adjacency 172.16.30.15172.16.30.5 inited
+2019-02-20 18:15:50,095:INFO:dev.ospf_adjacency:adjacency 172.16.30.11172.16.30.5 inited
+2019-02-20 18:15:50,095:INFO:dev.ospf_adjacency:adjacency 172.16.30.10172.16.30.5 inited
+2019-02-20 18:15:50,136:INFO:dev.ospf_adjacency:adjacency 172.16.30.15172.16.30.6 inited
+2019-02-20 18:15:50,137:INFO:dev.ospf_adjacency:adjacency 172.16.30.7172.16.30.8 inited
+2019-02-20 18:15:50,137:INFO:dev.ospf_adjacency:adjacency 172.16.30.44172.16.30.9 inited
+2019-02-20 18:15:50,138:INFO:dev.ospf_adjacency:adjacency 172.16.30.44172.16.30.9 inited
+2019-02-20 18:15:50,172:INFO:dev.ospf_adjacency:adjacency 172.16.30.44172.16.30.9 inited
+2019-02-20 18:15:50,174:INFO:dev.ospf_adjacency:adjacency 172.16.30.44172.16.30.9 inited
+2019-02-20 18:15:50,175:INFO:dev.ospf_adjacency:adjacency 172.16.30.12172.16.30.15 inited
+2019-02-20 18:15:50,175:INFO:dev.ospf_adjacency:adjacency 172.16.30.12172.16.30.13 inited
+2019-02-20 18:15:50,175:INFO:dev.ospf_adjacency:adjacency 172.16.30.12172.16.30.247 inited
+2019-02-20 18:15:50,175:INFO:dev.ospf_adjacency:adjacency 172.16.30.13172.17.28.192 inited
+2019-02-20 18:15:50,176:INFO:dev.ospf_adjacency:adjacency 172.16.30.13172.16.30.14 inited
+2019-02-20 18:15:50,176:INFO:dev.ospf_adjacency:adjacency 172.16.30.14172.16.30.15 inited
+2019-02-20 18:15:50,176:INFO:dev.ospf_adjacency:adjacency 172.16.30.250172.16.30.34 inited
+2019-02-20 18:15:50,176:INFO:dev.ospf_adjacency:adjacency 172.16.30.34172.16.30.35 inited
+2019-02-20 18:15:50,177:INFO:dev.ospf_adjacency:adjacency 172.16.30.34172.16.30.35 inited
+2019-02-20 18:15:50,177:INFO:dev.ospf_adjacency:adjacency 172.16.30.34172.16.30.37 inited
+2019-02-20 18:15:50,177:INFO:dev.ospf_adjacency:adjacency 172.16.30.34172.16.30.37 inited
+2019-02-20 18:15:50,178:INFO:dev.ospf_adjacency:adjacency 172.16.30.35172.16.30.36 inited
+2019-02-20 18:15:50,178:INFO:dev.ospf_adjacency:adjacency 172.16.30.35172.16.30.36 inited
+2019-02-20 18:15:50,178:INFO:dev.ospf_adjacency:adjacency 172.16.30.36172.17.26.68 inited
+2019-02-20 18:15:50,178:INFO:dev.ospf_adjacency:adjacency 172.16.30.36172.16.30.37 inited
+2019-02-20 18:15:50,179:INFO:dev.ospf_adjacency:adjacency 172.16.30.36172.16.30.39 inited
+2019-02-20 18:15:50,179:INFO:dev.ospf_adjacency:adjacency 172.16.30.36172.16.30.39 inited
+2019-02-20 18:15:50,179:INFO:dev.ospf_adjacency:adjacency 172.16.30.36172.16.30.37 inited
+2019-02-20 18:15:50,179:INFO:dev.ospf_adjacency:adjacency 172.16.30.37172.16.30.38 inited
+2019-02-20 18:15:50,180:INFO:dev.ospf_adjacency:adjacency 172.16.30.37172.16.30.38 inited
+2019-02-20 18:15:50,180:INFO:dev.ospf_adjacency:adjacency 172.16.30.38172.16.30.39 inited
+2019-02-20 18:15:50,180:INFO:dev.ospf_adjacency:adjacency 172.16.30.38172.16.30.41 inited
+2019-02-20 18:15:50,180:INFO:dev.ospf_adjacency:adjacency 172.16.30.38172.16.30.39 inited
+2019-02-20 18:15:50,181:INFO:dev.ospf_adjacency:adjacency 172.16.30.38172.16.30.41 inited
+2019-02-20 18:15:50,181:INFO:dev.ospf_adjacency:adjacency 172.16.30.39172.16.30.40 inited
+2019-02-20 18:15:50,181:INFO:dev.ospf_adjacency:adjacency 172.16.30.39172.16.30.40 inited
+2019-02-20 18:15:50,182:INFO:dev.ospf_adjacency:adjacency 172.16.30.40172.16.30.42 inited
+2019-02-20 18:15:50,182:INFO:dev.ospf_adjacency:adjacency 172.16.30.40172.16.30.42 inited
+2019-02-20 18:15:50,182:INFO:dev.ospf_adjacency:adjacency 172.16.30.40172.16.30.41 inited
+2019-02-20 18:15:50,182:INFO:dev.ospf_adjacency:adjacency 172.16.30.40172.16.30.41 inited
+2019-02-20 18:15:50,183:INFO:dev.ospf_adjacency:adjacency 172.16.30.41172.16.30.43 inited
+2019-02-20 18:15:50,183:INFO:dev.ospf_adjacency:adjacency 172.16.30.41172.16.30.43 inited
+2019-02-20 18:15:50,183:INFO:dev.ospf_adjacency:adjacency 172.16.30.42172.17.28.192 inited
+2019-02-20 18:15:50,183:INFO:dev.ospf_adjacency:adjacency 172.16.30.245172.16.30.42 inited
+2019-02-20 18:15:50,184:INFO:dev.ospf_adjacency:adjacency 172.16.30.42172.16.30.43 inited
+2019-02-20 18:15:50,184:INFO:dev.ospf_adjacency:adjacency 172.16.30.42172.16.30.45 inited
+2019-02-20 18:15:50,184:INFO:dev.ospf_adjacency:adjacency 172.16.30.42172.16.30.43 inited
+2019-02-20 18:15:50,185:INFO:dev.ospf_adjacency:adjacency 172.16.30.42172.16.30.45 inited
+2019-02-20 18:15:50,185:INFO:dev.ospf_adjacency:adjacency 172.16.30.248172.16.30.43 inited
+2019-02-20 18:15:50,185:INFO:dev.ospf_adjacency:adjacency 172.16.30.247172.16.30.43 inited
+2019-02-20 18:15:50,185:INFO:dev.ospf_adjacency:adjacency 172.16.30.247172.16.30.43 inited
+2019-02-20 18:15:50,186:INFO:dev.ospf_adjacency:adjacency 172.16.30.44172.16.30.45 inited
+2019-02-20 18:15:50,186:INFO:dev.ospf_adjacency:adjacency 172.16.30.247172.16.30.44 inited
+2019-02-20 18:15:50,186:INFO:dev.ospf_adjacency:adjacency 172.16.30.247172.16.30.44 inited
+2019-02-20 18:15:50,186:INFO:dev.ospf_adjacency:adjacency 172.16.30.44172.16.30.45 inited
+2019-02-20 18:15:50,187:INFO:dev.ospf_adjacency:adjacency 172.16.30.246172.16.30.50 inited
+2019-02-20 18:15:50,187:INFO:dev.ospf_adjacency:adjacency 172.16.30.246172.16.30.50 inited
+2019-02-20 18:15:50,187:INFO:dev.ospf_adjacency:adjacency 172.16.30.128172.16.30.129 inited
+2019-02-20 18:15:50,187:INFO:dev.ospf_adjacency:adjacency 172.16.30.128172.16.30.129 inited
+2019-02-20 18:15:50,188:INFO:dev.ospf_adjacency:adjacency 172.16.30.129172.16.30.232 inited
+2019-02-20 18:15:50,188:INFO:dev.ospf_adjacency:adjacency 172.16.30.130172.16.30.253 inited
+2019-02-20 18:15:50,188:INFO:dev.ospf_adjacency:adjacency 172.16.30.130172.16.30.246 inited
+2019-02-20 18:15:50,189:INFO:dev.ospf_adjacency:adjacency 172.16.30.242172.16.30.244 inited
+2019-02-20 18:15:50,189:INFO:dev.ospf_adjacency:adjacency 172.16.30.242172.16.30.244 inited
+2019-02-20 18:15:50,189:INFO:dev.ospf_adjacency:adjacency 172.16.30.244172.16.30.246 inited
+2019-02-20 18:15:50,189:INFO:dev.ospf_adjacency:adjacency 172.16.30.244172.16.30.251 inited
+2019-02-20 18:15:50,190:INFO:dev.ospf_adjacency:adjacency 172.16.30.244172.16.30.251 inited
+2019-02-20 18:15:50,190:INFO:dev.ospf_adjacency:adjacency 172.16.30.244172.16.30.251 inited
+2019-02-20 18:15:50,190:INFO:dev.ospf_adjacency:adjacency 172.16.30.244172.16.30.251 inited
+2019-02-20 18:15:50,190:INFO:dev.ospf_adjacency:adjacency 172.16.30.244172.16.30.254 inited
+2019-02-20 18:15:50,191:INFO:dev.ospf_adjacency:adjacency 172.16.30.244172.16.30.248 inited
+2019-02-20 18:15:50,191:INFO:dev.ospf_adjacency:adjacency 172.16.30.244172.16.30.254 inited
+2019-02-20 18:15:50,191:INFO:dev.ospf_adjacency:adjacency 172.16.30.244172.16.30.254 inited
+2019-02-20 18:15:50,191:INFO:dev.ospf_adjacency:adjacency 172.16.30.244172.16.30.251 inited
+2019-02-20 18:15:50,192:INFO:dev.ospf_adjacency:adjacency 172.16.30.244172.16.30.253 inited
+2019-02-20 18:15:50,192:INFO:dev.ospf_adjacency:adjacency 172.16.30.244172.16.30.251 inited
+2019-02-20 18:15:50,192:INFO:dev.ospf_adjacency:adjacency 172.16.30.244172.16.30.253 inited
+2019-02-20 18:15:50,192:INFO:dev.ospf_adjacency:adjacency 172.16.30.244172.16.30.248 inited
+2019-02-20 18:15:50,193:INFO:dev.ospf_adjacency:adjacency 172.16.30.244172.16.30.248 inited
+2019-02-20 18:15:50,193:INFO:dev.ospf_adjacency:adjacency 172.16.30.244172.16.30.246 inited
+2019-02-20 18:15:50,193:INFO:dev.ospf_adjacency:adjacency 172.16.30.244172.16.30.246 inited
+2019-02-20 18:15:50,194:INFO:dev.ospf_adjacency:adjacency 172.16.30.244172.16.30.246 inited
+2019-02-20 18:15:50,194:INFO:dev.ospf_adjacency:adjacency 172.16.30.244172.16.30.254 inited
+2019-02-20 18:15:50,194:INFO:dev.ospf_adjacency:adjacency 172.16.30.244172.16.30.251 inited
+2019-02-20 18:15:50,194:INFO:dev.ospf_adjacency:adjacency 172.16.30.244172.16.30.253 inited
+2019-02-20 18:15:50,195:INFO:dev.ospf_adjacency:adjacency 172.16.30.244172.16.30.245 inited
+2019-02-20 18:15:50,195:INFO:dev.ospf_adjacency:adjacency 172.16.30.244172.16.30.251 inited
+2019-02-20 18:15:50,195:INFO:dev.ospf_adjacency:adjacency 172.16.30.244172.16.30.254 inited
+2019-02-20 18:15:50,195:INFO:dev.ospf_adjacency:adjacency 172.16.30.245172.16.30.247 inited
+2019-02-20 18:15:50,196:INFO:dev.ospf_adjacency:adjacency 172.16.30.246172.16.30.250 inited
+2019-02-20 18:15:50,196:INFO:dev.ospf_adjacency:adjacency 172.16.30.251172.16.30.253 inited
+2019-02-20 18:15:50,196:INFO:dev.ospf_adjacency:adjacency 172.16.30.251172.16.30.254 inited
+2019-02-20 18:15:50,196:INFO:dev.ospf_adjacency:adjacency 172.16.30.251172.16.30.253 inited
+2019-02-20 18:15:50,197:INFO:dev.ospf_adjacency:adjacency 172.16.30.251172.16.30.254 inited
+2019-02-20 18:15:50,197:INFO:dev.ospf_adjacency:adjacency 172.16.30.253172.16.30.254 inited
+2019-02-20 18:15:50,197:INFO:dev.ospf_adjacency:adjacency 172.16.30.253172.16.30.254 inited
+2019-02-20 18:15:53,968:INFO:dev.ospf_database:OSPF DATABASE INIT FINISH
