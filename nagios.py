@@ -5,25 +5,25 @@ from model.CiscoIOS import CiscoIOS
 from model.claseClaro import Claro
 from collections import Counter
 import argparse
-
+'''
 parser = argparse.ArgumentParser(description='Generador de Check hosts Nagios')
 parser.add_argument('ip_device', type=str,
                     help='ip del dipositivo')
-parser.add_argument('ip_gateway', default='', type=str,
+parser.add_argument('ip_gateway', type=str,
                     help='ip para hacerle salto')
-parser.add_argument('vrf', default='default', type=str,
+parser.add_argument('--vrf', type=str,nargs='?',
                     help='vrf')
+parser.add_argument('--ig', type=str,nargs='?', help='jump gateway')
+
 parser.add_argument('filename', type=str,
                     help='nombre del archivo')
-args = parser.parse_args()
-print(args)
+'''
 claro = Claro()
-
+#args = parser.parse_args()
 master = Master()
+test = CiscoIOS("192.168.205.55", "XR", master)
 
-cisco = CiscoIOS(args.ip_device, "XR", master)
-if args.ip_gateway != '':
-    cisco.set_jump_gateway(args.ip_gateway, protocol="telnet")
+test.set_jump_gateway("10.250.55.3", protocol="telnet")
 
 # test3 = CiscoIOS("172.17.28.110", "XR", master)
 # test2 = CiscoXR("172.16.30.253", "XR", master)
@@ -35,9 +35,7 @@ if args.ip_gateway != '':
 claro.master = master
 # xrs = CiscoXR.devices(master)
 
-
-with open(args.filename, "w") as f:
-    f.write(cisco.create_file_nagios_arp(vrf=args.vrf))
+test.create_file_nagios_arp()
 
 # devices = CiscoXR.devices(master)
 # pprint(devices)

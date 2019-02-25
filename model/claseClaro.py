@@ -25,7 +25,6 @@ import psycopg2 as pmsql
 import xlwt
 
 from config.Master import Master
-from model.CiscoIOS import CiscoIOS
 from model.CiscoXR import CiscoXR
 
 from pprint import pprint
