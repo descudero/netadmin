@@ -9,11 +9,13 @@ isp.master = Master()
 
 # print(isp.ospf_topology_vs(ip_seed_router="172.16.30.5"))
 
-cisco = CiscoIOS(ip="172.19.8.21", display_name="", master=isp.master)
-print(cisco.set_ip_explicit_paths())
-# print(isp.replace_loose_mpls_te_paths(abr_ip="172.16.30.34", new_abr_ip="172.16.30.250",
-#                                devices=["172.16.30.35","172.16.30.34","172.16.30.50"], suffix_path="_GUY_9K"))
-'''
+with open("loose_vpl.txt", "w") as f:
+    data = isp.replace_loose_mpls_te_paths(abr_ip="172.16.30.44", new_abr_ip="172.16.30.251",
+                                           devices=["172.16.30.44", "172.16.30.45"],
+                                           suffix_path="_MIG_CER_VPL")
+
+    f.write(data)
+    '''
 print(isp.add_new_paths_mpls_te(ip_a="172.16.20.65", ip_b="172.16.20.66",
                                 ip_a_new_hop={"next_hop": "1.1.1.1", "loose": ""},
                                 ip_b_new_hop={"next_hop": "2.2.2.2", "loose": ""}

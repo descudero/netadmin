@@ -20,7 +20,33 @@ class MplsTeTunnel:
                     name = path_data.split("explicit")[1].replace(" ", "")
                     type_path = "explicit"
                 self.paths[index] = {"index": index, "path_type": type_path, "name": name}
+        self.protected_paths = {}
+        if hasattr(self, "path_protected_option"):
+            for path in self.paths_protected_option:
+                index = path.split(",")[0]
+                path_data = path.split(",")[1].replace("type", " ")
+                if "dynamic" in path_data:
+                    type_path = "dynamic"
+                    name = ""
+                else:
+                    name = path_data.split("explicit")[1].replace(" ", "")
+                    type_path = "explicit"
+                self.protected_paths[index] = {"index": index, "path_type": type_path, "name": name}
+
         self.indexes = list(self.paths.keys())
+
+        self.indexes_protected = list(self.protected_paths.keys())
+
+    def get_new_index_protected_path(self, index, index_way="after"):
+        index = int(index)
+        while str(index) in self.indexes:
+            if index_way == "after":
+                index += 1
+            else:
+                index -= 1
+            if index < 1:
+                return self.get_new_index_protected_path(index=index, index_way="after")
+        return str(index)
 
     def get_new_index_path(self, index, index_way="after"):
         index = int(index)
@@ -36,6 +62,7 @@ class MplsTeTunnel:
     def add_hop_ip_explicit_paths(self, hop, ip_reference_hop, index_way_path="before", index_way_tunnel="",
                                   suffix_path="NEW"):
         new_paths = {}
+        new_protected_paths = {}
         command_path = ""
         comand_tunnel = ""
         for index, path in self.paths.items():

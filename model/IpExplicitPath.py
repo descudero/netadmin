@@ -46,5 +46,5 @@ class IpExplicitPath:
         return iter(self.hops)
 
     def __repr__(self):
-        data = f"{self.name} " + "|".join([hop["next_address"] for hop in self])
+        data = f"{self.name} " + "|".join([hop["next_hop"] for hop in self])
         return data

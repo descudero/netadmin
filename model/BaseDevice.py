@@ -144,7 +144,7 @@ class BaseDevice(object):
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         result = sock.connect_ex((self.ip, 23))
         self.able_telnet = result == 0
-        return self.able_telne
+        return self.able_telnet
 
     def check_able_connect(self):
         self.able_connect = (self.check_device_up() and (

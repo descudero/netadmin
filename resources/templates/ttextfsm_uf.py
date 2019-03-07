@@ -1,8 +1,8 @@
 import textfsm
 from pprint import pprint
 
-fsm = textfsm.TextFSM(open("show mpls l2transport vc detail ios.template"))
-file_data = open("../output_test/show mpls l2transport vc detail ios").read()
+fsm = textfsm.TextFSM(open("show mpls traffic-eng tunnels detail.template"))
+file_data = open("../output_test/show mpls traffic-eng tunnels detail.ios.txt").read()
 fsm_results = fsm.ParseText(file_data, )
 
 print(fsm.header)

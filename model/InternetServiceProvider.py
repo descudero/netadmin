@@ -40,10 +40,14 @@ class InternetServiceProvider(Claro):
     def replace_loose_mpls_te_paths(self, abr_ip, new_abr_ip, devices=[],
                                     suffix_path="NEW"):
         devices = self.get_mpls_te_end_points(devices=devices)
-        self.excute_methods(methods={"set_mpls_te_tunnels": {}, "set_ip_explicit_paths": {}}, devices=devices)
         devices = sorted(devices, key=lambda o: o.ip)
+        with open("dev_loose.txt", "w") as fs:
+            for device in devices:
+                fs.write(f'{device.ip}\n')
+        self.excute_methods(
+            methods={"set_mpls_te_tunnels": {}, "set_mpls_te_tunnels_mid_point": {}, "set_ip_explicit_paths": {}},
+            devices=devices)
 
-        print([device.ip for device in devices])
         final_command = f"\n---------------------------------------------\ntotal devices {len(devices)} \n"
 
         for index, device in enumerate(devices):
@@ -52,7 +56,7 @@ class InternetServiceProvider(Claro):
                                                                index_way_path="replace", index_way_tunnel="before",
                                                                suffix_path=suffix_path)
             if command != "":
-                final_command += f" no {index} next_device {device.ip} \n {command}"
+                final_command += f"********************** \n {index} device {device.ip}********************** \n {command}"
 
         return final_command
 

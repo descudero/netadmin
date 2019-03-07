@@ -38527,3 +38527,995 @@ INFO:dev.Claro:dev 172.16.30.248 172.16.30.248 excute method set_interfaces
 2019-02-20 18:15:50,197:INFO:dev.ospf_adjacency:adjacency 172.16.30.253172.16.30.254 inited
 2019-02-20 18:15:50,197:INFO:dev.ospf_adjacency:adjacency 172.16.30.253172.16.30.254 inited
 2019-02-20 18:15:53,968:INFO:dev.ospf_database:OSPF DATABASE INIT FINISH
+2019-02-27 10:36:13,856:INFO:dev.Claro:dev ios 172.16.30.35 excute method set_mpls_te_tunnels_mid_point
+2019-02-27 10:36:13,857:INFO:dev.Claro:dev ios 172.16.30.34 excute method set_mpls_te_tunnels_mid_point
+2019-02-27 10:36:13,857:INFO:dev.Claro:dev ios 172.16.30.50 excute method set_mpls_te_tunnels_mid_point
+2019-02-27 10:36:13,858:INFO:dev.Claro:dev ios 172.16.30.35 excute method set_mpls_te_tunnels
+2019-02-27 10:36:13,858:INFO:dev.Claro:dev ios 172.16.30.34 excute method set_mpls_te_tunnels
+2019-02-27 10:36:13,859:INFO:dev.Claro:dev ios 172.16.30.50 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,079:INFO:dev.Claro:dev ios 172.17.27.5 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,080:INFO:dev.Claro:dev ios 172.16.30.36 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,080:INFO:dev.Claro:dev ios 172.16.30.7 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,081:INFO:dev.Claro:dev ios 172.16.30.5 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,082:INFO:dev.Claro:dev ios 172.17.23.1 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,083:INFO:dev.Claro:dev ios 172.19.24.4 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,083:INFO:dev.Claro:dev ios 172.16.30.245 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,084:INFO:dev.Claro:dev ios 172.16.30.34 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,084:INFO:dev.Claro:dev ios 172.16.30.38 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,085:INFO:dev.Claro:dev ios 172.17.27.6 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,085:INFO:dev.Claro:dev ios 172.16.30.11 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,086:INFO:dev.Claro:dev ios 172.16.30.50 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,087:INFO:dev.Claro:dev ios 172.17.28.192 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,087:INFO:dev.Claro:dev ios 172.19.12.1 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,088:INFO:dev.Claro:dev ios 172.16.30.2 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,088:INFO:dev.Claro:dev ios 172.17.25.2 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,089:INFO:dev.Claro:dev ios 172.17.22.79 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,089:INFO:dev.Claro:dev ios 172.17.26.1 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,090:INFO:dev.Claro:dev ios 172.17.23.2 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,090:INFO:dev.Claro:dev ios 172.16.30.35 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,091:INFO:dev.Claro:dev ios 172.19.24.25 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,091:INFO:dev.Claro:dev ios 172.17.22.60 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,092:INFO:dev.Claro:dev ios 172.19.8.9 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,092:INFO:dev.Claro:dev ios 172.17.22.55 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,092:INFO:dev.Claro:dev ios 172.16.30.42 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,093:INFO:dev.Claro:dev ios 172.19.8.56 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,093:INFO:dev.Claro:dev ios 172.16.30.37 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,094:INFO:dev.Claro:dev ios 172.19.24.1 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,094:INFO:dev.Claro:dev ios 172.17.24.24 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,095:INFO:dev.Claro:dev ios 172.17.24.12 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,095:INFO:dev.Claro:dev ios 172.19.24.20 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,096:INFO:dev.Claro:dev ios 172.19.28.21 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,096:INFO:dev.Claro:dev ios 172.16.26.230 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,096:INFO:dev.Claro:dev ios 172.17.23.9 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,097:INFO:dev.Claro:dev ios 172.16.30.1 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,097:INFO:dev.Claro:dev ios 172.17.22.69 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,098:INFO:dev.Claro:dev ios 172.17.22.54 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,098:INFO:dev.Claro:dev ios 172.19.16.21 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,099:INFO:dev.Claro:dev ios 172.17.24.7 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,099:INFO:dev.Claro:dev ios 172.16.30.246 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,099:INFO:dev.Claro:dev ios 172.17.24.4 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,100:INFO:dev.Claro:dev ios 172.17.22.50 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,100:INFO:dev.Claro:dev ios 172.16.30.3 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,100:INFO:dev.Claro:dev ios 172.17.22.73 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,101:INFO:dev.Claro:dev ios 172.16.30.10 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,101:INFO:dev.Claro:dev ios 172.17.22.53 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,102:INFO:dev.Claro:dev ios 172.16.30.39 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,102:INFO:dev.Claro:dev ios 172.17.20.5 excute method set_mpls_te_tunnels
+2019-02-27 10:37:12,103:INFO:dev.Claro:dev ios 172.17.27.5 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,103:INFO:dev.Claro:dev ios 172.16.30.36 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,104:INFO:dev.Claro:dev ios 172.16.30.7 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,105:INFO:dev.Claro:dev ios 172.16.30.5 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,106:INFO:dev.Claro:dev ios 172.17.23.1 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,108:INFO:dev.Claro:dev ios 172.19.24.4 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,108:INFO:dev.Claro:dev ios 172.16.30.245 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,109:INFO:dev.Claro:dev ios 172.16.30.34 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,110:INFO:dev.Claro:dev ios 172.16.30.38 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,110:INFO:dev.Claro:dev ios 172.17.27.6 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,111:INFO:dev.Claro:dev ios 172.16.30.11 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,112:INFO:dev.Claro:dev ios 172.16.30.50 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,112:INFO:dev.Claro:dev ios 172.17.28.192 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,113:INFO:dev.Claro:dev ios 172.19.12.1 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,113:INFO:dev.Claro:dev ios 172.16.30.2 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,114:INFO:dev.Claro:dev ios 172.17.25.2 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,114:INFO:dev.Claro:dev ios 172.17.22.79 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,114:INFO:dev.Claro:dev ios 172.17.26.1 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,115:INFO:dev.Claro:dev ios 172.17.23.2 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,115:INFO:dev.Claro:dev ios 172.16.30.35 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,116:INFO:dev.Claro:dev ios 172.19.24.25 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,116:INFO:dev.Claro:dev ios 172.17.22.60 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,117:INFO:dev.Claro:dev ios 172.19.8.9 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,117:INFO:dev.Claro:dev ios 172.17.22.55 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,118:INFO:dev.Claro:dev ios 172.16.30.42 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,118:INFO:dev.Claro:dev ios 172.19.8.56 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,119:INFO:dev.Claro:dev ios 172.16.30.37 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,119:INFO:dev.Claro:dev ios 172.19.24.1 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,120:INFO:dev.Claro:dev ios 172.17.24.24 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,120:INFO:dev.Claro:dev ios 172.17.24.12 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,120:INFO:dev.Claro:dev ios 172.19.24.20 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,121:INFO:dev.Claro:dev ios 172.19.28.21 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,121:INFO:dev.Claro:dev ios 172.16.26.230 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,122:INFO:dev.Claro:dev ios 172.17.23.9 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,122:INFO:dev.Claro:dev ios 172.16.30.1 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,123:INFO:dev.Claro:dev ios 172.17.22.69 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,123:INFO:dev.Claro:dev ios 172.17.22.54 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,123:INFO:dev.Claro:dev ios 172.19.16.21 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,124:INFO:dev.Claro:dev ios 172.17.24.7 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,124:INFO:dev.Claro:dev ios 172.16.30.246 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,125:INFO:dev.Claro:dev ios 172.17.24.4 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,125:INFO:dev.Claro:dev ios 172.17.22.50 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,126:INFO:dev.Claro:dev ios 172.16.30.3 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,126:INFO:dev.Claro:dev ios 172.17.22.73 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,126:INFO:dev.Claro:dev ios 172.16.30.10 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,127:INFO:dev.Claro:dev ios 172.17.22.53 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,127:INFO:dev.Claro:dev ios 172.16.30.39 excute method set_ip_explicit_paths
+2019-02-27 10:37:12,128:INFO:dev.Claro:dev ios 172.17.20.5 excute method set_ip_explicit_paths
+2019-02-27 10:43:14,947:INFO:dev.Claro:dev ios 172.16.30.35 excute method set_mpls_te_tunnels_mid_point
+2019-02-27 10:43:14,948:INFO:dev.Claro:dev ios 172.16.30.34 excute method set_mpls_te_tunnels_mid_point
+2019-02-27 10:43:14,948:INFO:dev.Claro:dev ios 172.16.30.50 excute method set_mpls_te_tunnels_mid_point
+2019-02-27 10:43:14,949:INFO:dev.Claro:dev ios 172.16.30.35 excute method set_mpls_te_tunnels
+2019-02-27 10:43:14,949:INFO:dev.Claro:dev ios 172.16.30.34 excute method set_mpls_te_tunnels
+2019-02-27 10:43:14,949:INFO:dev.Claro:dev ios 172.16.30.50 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,560:INFO:dev.Claro:dev ios 172.17.27.5 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,561:INFO:dev.Claro:dev ios 172.17.27.6 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,561:INFO:dev.Claro:dev ios 172.17.20.5 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,562:INFO:dev.Claro:dev ios 172.16.30.36 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,562:INFO:dev.Claro:dev ios 172.19.24.4 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,563:INFO:dev.Claro:dev ios 172.17.25.2 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,564:INFO:dev.Claro:dev ios 172.17.26.1 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,564:INFO:dev.Claro:dev ios 172.16.30.246 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,565:INFO:dev.Claro:dev ios 172.16.30.245 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,565:INFO:dev.Claro:dev ios 172.19.24.1 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,566:INFO:dev.Claro:dev ios 172.16.30.39 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,566:INFO:dev.Claro:dev ios 172.16.30.38 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,567:INFO:dev.Claro:dev ios 172.19.16.21 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,567:INFO:dev.Claro:dev ios 172.16.30.3 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,568:INFO:dev.Claro:dev ios 172.17.24.24 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,568:INFO:dev.Claro:dev ios 172.19.24.20 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,568:INFO:dev.Claro:dev ios 172.16.30.5 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,569:INFO:dev.Claro:dev ios 172.16.30.11 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,569:INFO:dev.Claro:dev ios 172.17.22.54 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,570:INFO:dev.Claro:dev ios 172.17.24.7 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,570:INFO:dev.Claro:dev ios 172.17.24.12 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,571:INFO:dev.Claro:dev ios 172.17.24.4 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,571:INFO:dev.Claro:dev ios 172.17.23.1 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,571:INFO:dev.Claro:dev ios 172.17.22.73 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,572:INFO:dev.Claro:dev ios 172.17.23.9 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,572:INFO:dev.Claro:dev ios 172.16.30.37 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,573:INFO:dev.Claro:dev ios 172.17.28.192 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,573:INFO:dev.Claro:dev ios 172.19.24.25 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,573:INFO:dev.Claro:dev ios 172.17.22.69 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,574:INFO:dev.Claro:dev ios 172.16.30.2 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,574:INFO:dev.Claro:dev ios 172.16.30.50 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,575:INFO:dev.Claro:dev ios 172.16.30.34 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,575:INFO:dev.Claro:dev ios 172.16.30.10 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,576:INFO:dev.Claro:dev ios 172.19.8.9 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,576:INFO:dev.Claro:dev ios 172.16.30.42 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,576:INFO:dev.Claro:dev ios 172.17.22.79 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,577:INFO:dev.Claro:dev ios 172.19.8.56 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,577:INFO:dev.Claro:dev ios 172.17.22.55 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,578:INFO:dev.Claro:dev ios 172.19.28.21 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,578:INFO:dev.Claro:dev ios 172.17.22.50 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,578:INFO:dev.Claro:dev ios 172.16.26.230 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,579:INFO:dev.Claro:dev ios 172.17.23.2 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,579:INFO:dev.Claro:dev ios 172.17.22.53 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,580:INFO:dev.Claro:dev ios 172.16.30.35 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,580:INFO:dev.Claro:dev ios 172.17.22.60 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,580:INFO:dev.Claro:dev ios 172.16.30.7 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,581:INFO:dev.Claro:dev ios 172.16.30.1 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,581:INFO:dev.Claro:dev ios 172.19.12.1 excute method set_mpls_te_tunnels
+2019-02-27 10:44:24,582:INFO:dev.Claro:dev ios 172.17.27.5 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,582:INFO:dev.Claro:dev ios 172.17.27.6 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,582:INFO:dev.Claro:dev ios 172.17.20.5 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,583:INFO:dev.Claro:dev ios 172.16.30.36 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,583:INFO:dev.Claro:dev ios 172.19.24.4 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,584:INFO:dev.Claro:dev ios 172.17.25.2 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,584:INFO:dev.Claro:dev ios 172.17.26.1 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,585:INFO:dev.Claro:dev ios 172.16.30.246 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,585:INFO:dev.Claro:dev ios 172.16.30.245 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,585:INFO:dev.Claro:dev ios 172.19.24.1 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,586:INFO:dev.Claro:dev ios 172.16.30.39 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,587:INFO:dev.Claro:dev ios 172.16.30.38 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,587:INFO:dev.Claro:dev ios 172.19.16.21 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,588:INFO:dev.Claro:dev ios 172.16.30.3 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,588:INFO:dev.Claro:dev ios 172.17.24.24 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,589:INFO:dev.Claro:dev ios 172.19.24.20 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,589:INFO:dev.Claro:dev ios 172.16.30.5 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,589:INFO:dev.Claro:dev ios 172.16.30.11 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,590:INFO:dev.Claro:dev ios 172.17.22.54 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,590:INFO:dev.Claro:dev ios 172.17.24.7 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,591:INFO:dev.Claro:dev ios 172.17.24.12 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,591:INFO:dev.Claro:dev ios 172.17.24.4 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,591:INFO:dev.Claro:dev ios 172.17.23.1 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,592:INFO:dev.Claro:dev ios 172.17.22.73 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,592:INFO:dev.Claro:dev ios 172.17.23.9 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,593:INFO:dev.Claro:dev ios 172.16.30.37 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,593:INFO:dev.Claro:dev ios 172.17.28.192 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,594:INFO:dev.Claro:dev ios 172.19.24.25 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,594:INFO:dev.Claro:dev ios 172.17.22.69 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,594:INFO:dev.Claro:dev ios 172.16.30.2 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,595:INFO:dev.Claro:dev ios 172.16.30.50 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,595:INFO:dev.Claro:dev ios 172.16.30.34 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,596:INFO:dev.Claro:dev ios 172.16.30.10 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,596:INFO:dev.Claro:dev ios 172.19.8.9 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,597:INFO:dev.Claro:dev ios 172.16.30.42 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,597:INFO:dev.Claro:dev ios 172.17.22.79 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,597:INFO:dev.Claro:dev ios 172.19.8.56 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,598:INFO:dev.Claro:dev ios 172.17.22.55 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,598:INFO:dev.Claro:dev ios 172.19.28.21 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,599:INFO:dev.Claro:dev ios 172.17.22.50 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,599:INFO:dev.Claro:dev ios 172.16.26.230 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,599:INFO:dev.Claro:dev ios 172.17.23.2 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,600:INFO:dev.Claro:dev ios 172.17.22.53 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,600:INFO:dev.Claro:dev ios 172.16.30.35 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,601:INFO:dev.Claro:dev ios 172.17.22.60 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,601:INFO:dev.Claro:dev ios 172.16.30.7 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,602:INFO:dev.Claro:dev ios 172.16.30.1 excute method set_ip_explicit_paths
+2019-02-27 10:44:24,602:INFO:dev.Claro:dev ios 172.19.12.1 excute method set_ip_explicit_paths
+2019-02-27 10:46:18,641:INFO:dev.Claro:dev ios 172.16.30.35 excute method set_mpls_te_tunnels_mid_point
+2019-02-27 10:46:18,642:INFO:dev.Claro:dev ios 172.16.30.34 excute method set_mpls_te_tunnels_mid_point
+2019-02-27 10:46:18,643:INFO:dev.Claro:dev ios 172.16.30.50 excute method set_mpls_te_tunnels_mid_point
+2019-02-27 10:46:18,643:INFO:dev.Claro:dev ios 172.16.30.35 excute method set_mpls_te_tunnels
+2019-02-27 10:46:18,644:INFO:dev.Claro:dev ios 172.16.30.34 excute method set_mpls_te_tunnels
+2019-02-27 10:46:18,644:INFO:dev.Claro:dev ios 172.16.30.50 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,928:INFO:dev.Claro:dev ios 172.16.30.34 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,929:INFO:dev.Claro:dev ios 172.17.24.24 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,929:INFO:dev.Claro:dev ios 172.16.30.10 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,930:INFO:dev.Claro:dev ios 172.17.22.69 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,930:INFO:dev.Claro:dev ios 172.17.24.7 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,931:INFO:dev.Claro:dev ios 172.17.22.73 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,931:INFO:dev.Claro:dev ios 172.16.30.42 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,932:INFO:dev.Claro:dev ios 172.19.8.9 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,932:INFO:dev.Claro:dev ios 172.17.27.5 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,932:INFO:dev.Claro:dev ios 172.16.30.39 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,933:INFO:dev.Claro:dev ios 172.19.24.25 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,933:INFO:dev.Claro:dev ios 172.17.24.4 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,934:INFO:dev.Claro:dev ios 172.16.30.38 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,934:INFO:dev.Claro:dev ios 172.17.22.53 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,935:INFO:dev.Claro:dev ios 172.17.22.54 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,935:INFO:dev.Claro:dev ios 172.17.24.12 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,936:INFO:dev.Claro:dev ios 172.16.30.2 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,936:INFO:dev.Claro:dev ios 172.17.22.79 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,937:INFO:dev.Claro:dev ios 172.16.30.37 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,937:INFO:dev.Claro:dev ios 172.19.24.1 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,937:INFO:dev.Claro:dev ios 172.17.23.9 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,938:INFO:dev.Claro:dev ios 172.19.24.4 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,938:INFO:dev.Claro:dev ios 172.17.23.1 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,939:INFO:dev.Claro:dev ios 172.17.28.192 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,939:INFO:dev.Claro:dev ios 172.19.28.21 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,939:INFO:dev.Claro:dev ios 172.17.20.5 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,940:INFO:dev.Claro:dev ios 172.16.30.7 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,940:INFO:dev.Claro:dev ios 172.19.24.20 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,941:INFO:dev.Claro:dev ios 172.17.27.6 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,941:INFO:dev.Claro:dev ios 172.16.30.50 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,941:INFO:dev.Claro:dev ios 172.16.30.3 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,942:INFO:dev.Claro:dev ios 172.17.26.1 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,942:INFO:dev.Claro:dev ios 172.16.30.5 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,943:INFO:dev.Claro:dev ios 172.17.25.2 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,943:INFO:dev.Claro:dev ios 172.16.30.1 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,944:INFO:dev.Claro:dev ios 172.17.22.50 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,944:INFO:dev.Claro:dev ios 172.17.23.2 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,944:INFO:dev.Claro:dev ios 172.16.26.230 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,945:INFO:dev.Claro:dev ios 172.16.30.11 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,945:INFO:dev.Claro:dev ios 172.19.8.56 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,946:INFO:dev.Claro:dev ios 172.17.22.55 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,946:INFO:dev.Claro:dev ios 172.16.30.246 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,946:INFO:dev.Claro:dev ios 172.19.16.21 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,947:INFO:dev.Claro:dev ios 172.16.30.35 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,947:INFO:dev.Claro:dev ios 172.16.30.245 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,948:INFO:dev.Claro:dev ios 172.19.12.1 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,948:INFO:dev.Claro:dev ios 172.17.22.60 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,949:INFO:dev.Claro:dev ios 172.16.30.36 excute method set_mpls_te_tunnels
+2019-02-27 10:47:10,949:INFO:dev.Claro:dev ios 172.16.30.34 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,950:INFO:dev.Claro:dev ios 172.17.24.24 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,950:INFO:dev.Claro:dev ios 172.16.30.10 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,950:INFO:dev.Claro:dev ios 172.17.22.69 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,951:INFO:dev.Claro:dev ios 172.17.24.7 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,951:INFO:dev.Claro:dev ios 172.17.22.73 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,952:INFO:dev.Claro:dev ios 172.16.30.42 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,952:INFO:dev.Claro:dev ios 172.19.8.9 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,953:INFO:dev.Claro:dev ios 172.17.27.5 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,953:INFO:dev.Claro:dev ios 172.16.30.39 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,954:INFO:dev.Claro:dev ios 172.19.24.25 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,954:INFO:dev.Claro:dev ios 172.17.24.4 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,955:INFO:dev.Claro:dev ios 172.16.30.38 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,955:INFO:dev.Claro:dev ios 172.17.22.53 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,956:INFO:dev.Claro:dev ios 172.17.22.54 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,956:INFO:dev.Claro:dev ios 172.17.24.12 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,957:INFO:dev.Claro:dev ios 172.16.30.2 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,957:INFO:dev.Claro:dev ios 172.17.22.79 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,957:INFO:dev.Claro:dev ios 172.16.30.37 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,958:INFO:dev.Claro:dev ios 172.19.24.1 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,958:INFO:dev.Claro:dev ios 172.17.23.9 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,959:INFO:dev.Claro:dev ios 172.19.24.4 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,959:INFO:dev.Claro:dev ios 172.17.23.1 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,960:INFO:dev.Claro:dev ios 172.17.28.192 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,961:INFO:dev.Claro:dev ios 172.19.28.21 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,961:INFO:dev.Claro:dev ios 172.17.20.5 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,962:INFO:dev.Claro:dev ios 172.16.30.7 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,962:INFO:dev.Claro:dev ios 172.19.24.20 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,963:INFO:dev.Claro:dev ios 172.17.27.6 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,963:INFO:dev.Claro:dev ios 172.16.30.50 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,963:INFO:dev.Claro:dev ios 172.16.30.3 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,964:INFO:dev.Claro:dev ios 172.17.26.1 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,964:INFO:dev.Claro:dev ios 172.16.30.5 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,965:INFO:dev.Claro:dev ios 172.17.25.2 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,965:INFO:dev.Claro:dev ios 172.16.30.1 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,965:INFO:dev.Claro:dev ios 172.17.22.50 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,966:INFO:dev.Claro:dev ios 172.17.23.2 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,966:INFO:dev.Claro:dev ios 172.16.26.230 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,967:INFO:dev.Claro:dev ios 172.16.30.11 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,967:INFO:dev.Claro:dev ios 172.19.8.56 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,968:INFO:dev.Claro:dev ios 172.17.22.55 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,968:INFO:dev.Claro:dev ios 172.16.30.246 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,969:INFO:dev.Claro:dev ios 172.19.16.21 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,969:INFO:dev.Claro:dev ios 172.16.30.35 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,970:INFO:dev.Claro:dev ios 172.16.30.245 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,970:INFO:dev.Claro:dev ios 172.19.12.1 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,970:INFO:dev.Claro:dev ios 172.17.22.60 excute method set_ip_explicit_paths
+2019-02-27 10:47:10,971:INFO:dev.Claro:dev ios 172.16.30.36 excute method set_ip_explicit_paths
+2019-02-27 11:13:27,122:INFO:dev.Claro:dev  172.16.30.34 excute method set_mpls_te_tunnels
+2019-02-27 11:13:27,123:INFO:dev.Claro:dev  172.16.30.34 excute method set_ip_explicit_paths
+2019-02-27 11:16:46,876:INFO:dev.Claro:dev  172.16.30.35 excute method set_mpls_te_tunnels
+2019-02-27 11:16:46,876:INFO:dev.Claro:dev  172.16.30.35 excute method set_ip_explicit_paths
+2019-02-27 11:17:25,294:INFO:dev.Claro:dev  172.16.30.36 excute method set_mpls_te_tunnels
+2019-02-27 11:17:25,295:INFO:dev.Claro:dev  172.16.30.36 excute method set_ip_explicit_paths
+2019-02-27 11:18:11,170:INFO:dev.Claro:dev  172.16.30.37 excute method set_mpls_te_tunnels
+2019-02-27 11:18:11,171:INFO:dev.Claro:dev  172.16.30.37 excute method set_ip_explicit_paths
+2019-02-27 11:19:04,297:INFO:dev.Claro:dev  172.16.30.38 excute method set_mpls_te_tunnels
+2019-02-27 11:19:04,298:INFO:dev.Claro:dev  172.16.30.38 excute method set_ip_explicit_paths
+2019-02-27 11:19:49,189:INFO:dev.Claro:dev  172.16.30.39 excute method set_mpls_te_tunnels
+2019-02-27 11:19:49,190:INFO:dev.Claro:dev  172.16.30.39 excute method set_ip_explicit_paths
+2019-02-27 11:20:26,941:INFO:dev.Claro:dev  172.16.30.42 excute method set_mpls_te_tunnels
+2019-02-27 11:20:26,941:INFO:dev.Claro:dev  172.16.30.42 excute method set_ip_explicit_paths
+2019-02-27 11:21:03,517:INFO:dev.Claro:dev  172.16.30.5 excute method set_mpls_te_tunnels
+2019-02-27 11:21:03,518:INFO:dev.Claro:dev  172.16.30.5 excute method set_ip_explicit_paths
+2019-02-27 11:22:09,477:INFO:dev.Claro:dev  172.16.30.50 excute method set_mpls_te_tunnels
+2019-02-27 11:22:09,478:INFO:dev.Claro:dev  172.16.30.50 excute method set_ip_explicit_paths
+2019-02-27 11:22:59,823:INFO:dev.Claro:dev  172.16.30.7 excute method set_mpls_te_tunnels
+2019-02-27 11:22:59,823:INFO:dev.Claro:dev  172.16.30.7 excute method set_ip_explicit_paths
+2019-02-27 11:24:57,223:INFO:dev.Claro:dev  172.17.20.5 excute method set_mpls_te_tunnels
+2019-02-27 11:24:57,223:INFO:dev.Claro:dev  172.17.20.5 excute method set_ip_explicit_paths
+2019-02-27 11:30:15,245:INFO:dev.Claro:dev  172.17.20.50 excute method set_mpls_te_tunnels
+2019-02-27 11:30:15,245:INFO:dev.Claro:dev  172.17.20.50 excute method set_ip_explicit_paths
+2019-02-27 11:31:36,148:INFO:dev.Claro:dev  172.17.22.50 excute method set_mpls_te_tunnels
+2019-02-27 11:31:36,149:INFO:dev.Claro:dev  172.17.22.50 excute method set_ip_explicit_paths
+2019-02-27 11:35:04,882:INFO:dev.Claro:dev  172.17.22.53 excute method set_mpls_te_tunnels
+2019-02-27 11:35:04,883:INFO:dev.Claro:dev  172.17.22.53 excute method set_ip_explicit_paths
+2019-02-27 11:36:00,991:INFO:dev.Claro:dev  172.17.22.54 excute method set_mpls_te_tunnels
+2019-02-27 11:36:00,991:INFO:dev.Claro:dev  172.17.22.54 excute method set_ip_explicit_paths
+2019-02-27 11:36:48,356:INFO:dev.Claro:dev  172.17.22.55 excute method set_mpls_te_tunnels
+2019-02-27 11:36:48,356:INFO:dev.Claro:dev  172.17.22.55 excute method set_ip_explicit_paths
+2019-02-27 11:37:40,110:INFO:dev.Claro:dev  172.17.22.60 excute method set_mpls_te_tunnels
+2019-02-27 11:37:40,111:INFO:dev.Claro:dev  172.17.22.60 excute method set_ip_explicit_paths
+2019-02-27 11:38:28,529:INFO:dev.Claro:dev  172.17.22.69 excute method set_mpls_te_tunnels
+2019-02-27 11:38:28,530:INFO:dev.Claro:dev  172.17.22.69 excute method set_ip_explicit_paths
+2019-02-27 11:40:08,455:INFO:dev.Claro:dev  172.17.22.73 excute method set_mpls_te_tunnels
+2019-02-27 11:40:08,455:INFO:dev.Claro:dev  172.17.22.73 excute method set_ip_explicit_paths
+2019-02-27 11:40:58,442:INFO:dev.Claro:dev  172.17.22.79 excute method set_mpls_te_tunnels
+2019-02-27 11:40:58,443:INFO:dev.Claro:dev  172.17.22.79 excute method set_ip_explicit_paths
+2019-03-05 17:18:45,212:INFO:dev.Claro:dev ios 172.16.30.44 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 17:18:45,213:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 17:18:45,214:INFO:dev.Claro:dev ios 172.16.30.44 excute method set_mpls_te_tunnels
+2019-03-05 17:18:45,214:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_mpls_te_tunnels
+2019-03-05 17:18:59,415:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\path_protect_option.*'. Line: 38.")
+2019-03-05 17:18:59,415:CRITICAL:dev.CiscoIOS:172.16.30.45 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:18:59,660:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\path_protect_option.*'. Line: 38.")
+2019-03-05 17:18:59,660:CRITICAL:dev.CiscoIOS:172.16.30.44 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:20:12,345:INFO:dev.Claro:dev ios 172.16.30.44 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 17:20:12,345:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 17:20:12,346:INFO:dev.Claro:dev ios 172.16.30.44 excute method set_mpls_te_tunnels
+2019-03-05 17:20:12,346:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_mpls_te_tunnels
+2019-03-05 17:20:26,724:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:20:26,724:CRITICAL:dev.CiscoIOS:172.16.30.45 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:20:26,838:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:20:26,838:CRITICAL:dev.CiscoIOS:172.16.30.44 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:39:38,105:INFO:dev.Claro:dev ios 172.16.30.44 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 17:39:38,105:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 17:39:38,106:INFO:dev.Claro:dev ios 172.16.30.44 excute method set_mpls_te_tunnels
+2019-03-05 17:39:38,106:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_mpls_te_tunnels
+2019-03-05 17:39:52,310:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:39:52,310:CRITICAL:dev.CiscoIOS:172.16.30.45 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:39:52,577:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:39:52,577:CRITICAL:dev.CiscoIOS:172.16.30.44 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:32,694:INFO:dev.Claro:dev ios 172.16.20.65 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,694:INFO:dev.Claro:dev ios 172.16.30.1 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,695:INFO:dev.Claro:dev ios 172.16.30.10 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,696:INFO:dev.Claro:dev ios 172.16.30.11 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,696:INFO:dev.Claro:dev ios 172.16.30.13 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,696:INFO:dev.Claro:dev ios 172.16.30.247 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,697:INFO:dev.Claro:dev ios 172.16.30.248 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,697:INFO:dev.Claro:dev ios 172.16.30.34 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,698:INFO:dev.Claro:dev ios 172.16.30.36 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,699:INFO:dev.Claro:dev ios 172.16.30.38 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,699:INFO:dev.Claro:dev ios 172.16.30.4 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,700:INFO:dev.Claro:dev ios 172.16.30.42 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,700:INFO:dev.Claro:dev ios 172.16.30.43 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,701:INFO:dev.Claro:dev ios 172.16.30.44 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,701:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,702:INFO:dev.Claro:dev ios 172.16.30.5 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,702:INFO:dev.Claro:dev ios 172.16.30.7 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,703:INFO:dev.Claro:dev ios 172.16.30.9 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,703:INFO:dev.Claro:dev ios 172.17.20.5 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,704:INFO:dev.Claro:dev ios 172.17.22.53 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,704:INFO:dev.Claro:dev ios 172.17.22.54 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,705:INFO:dev.Claro:dev ios 172.17.22.55 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,705:INFO:dev.Claro:dev ios 172.17.22.79 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,706:INFO:dev.Claro:dev ios 172.17.23.1 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,706:INFO:dev.Claro:dev ios 172.17.23.2 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,706:INFO:dev.Claro:dev ios 172.17.26.1 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,707:INFO:dev.Claro:dev ios 172.17.26.10 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,707:INFO:dev.Claro:dev ios 172.17.26.26 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,708:INFO:dev.Claro:dev ios 172.17.26.3 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,708:INFO:dev.Claro:dev ios 172.17.26.39 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,708:INFO:dev.Claro:dev ios 172.17.26.9 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,709:INFO:dev.Claro:dev ios 172.17.27.5 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,709:INFO:dev.Claro:dev ios 172.17.27.51 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,710:INFO:dev.Claro:dev ios 172.17.27.54 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,710:INFO:dev.Claro:dev ios 172.17.27.6 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,711:INFO:dev.Claro:dev ios 172.17.28.192 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,711:INFO:dev.Claro:dev ios 172.19.12.1 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,711:INFO:dev.Claro:dev ios 172.19.24.1 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,712:INFO:dev.Claro:dev ios 172.19.24.20 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,712:INFO:dev.Claro:dev ios 172.19.24.25 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,713:INFO:dev.Claro:dev ios 172.19.24.44 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,713:INFO:dev.Claro:dev ios 172.19.24.48 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,713:INFO:dev.Claro:dev ios 172.19.28.1 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,714:INFO:dev.Claro:dev ios 172.19.28.20 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,714:INFO:dev.Claro:dev ios 172.19.28.21 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,715:INFO:dev.Claro:dev ios 172.19.28.41 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,715:INFO:dev.Claro:dev ios 172.19.28.9 excute method set_mpls_te_tunnels
+2019-03-05 17:40:32,715:INFO:dev.Claro:dev ios 172.16.20.65 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,716:INFO:dev.Claro:dev ios 172.16.30.1 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,716:INFO:dev.Claro:dev ios 172.16.30.10 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,717:INFO:dev.Claro:dev ios 172.16.30.11 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,717:INFO:dev.Claro:dev ios 172.16.30.13 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,717:INFO:dev.Claro:dev ios 172.16.30.247 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,718:INFO:dev.Claro:dev ios 172.16.30.248 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,718:INFO:dev.Claro:dev ios 172.16.30.34 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,719:INFO:dev.Claro:dev ios 172.16.30.36 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,719:INFO:dev.Claro:dev ios 172.16.30.38 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,719:INFO:dev.Claro:dev ios 172.16.30.4 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,720:INFO:dev.Claro:dev ios 172.16.30.42 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,720:INFO:dev.Claro:dev ios 172.16.30.43 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,721:INFO:dev.Claro:dev ios 172.16.30.44 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,721:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,721:INFO:dev.Claro:dev ios 172.16.30.5 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,722:INFO:dev.Claro:dev ios 172.16.30.7 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,722:INFO:dev.Claro:dev ios 172.16.30.9 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,723:INFO:dev.Claro:dev ios 172.17.20.5 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,723:INFO:dev.Claro:dev ios 172.17.22.53 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,723:INFO:dev.Claro:dev ios 172.17.22.54 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,724:INFO:dev.Claro:dev ios 172.17.22.55 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,724:INFO:dev.Claro:dev ios 172.17.22.79 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,725:INFO:dev.Claro:dev ios 172.17.23.1 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,725:INFO:dev.Claro:dev ios 172.17.23.2 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,725:INFO:dev.Claro:dev ios 172.17.26.1 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,726:INFO:dev.Claro:dev ios 172.17.26.10 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,726:INFO:dev.Claro:dev ios 172.17.26.26 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,727:INFO:dev.Claro:dev ios 172.17.26.3 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,727:INFO:dev.Claro:dev ios 172.17.26.39 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,727:INFO:dev.Claro:dev ios 172.17.26.9 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,728:INFO:dev.Claro:dev ios 172.17.27.5 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,728:INFO:dev.Claro:dev ios 172.17.27.51 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,729:INFO:dev.Claro:dev ios 172.17.27.54 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,729:INFO:dev.Claro:dev ios 172.17.27.6 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,729:INFO:dev.Claro:dev ios 172.17.28.192 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,730:INFO:dev.Claro:dev ios 172.19.12.1 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,730:INFO:dev.Claro:dev ios 172.19.24.1 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,731:INFO:dev.Claro:dev ios 172.19.24.20 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,731:INFO:dev.Claro:dev ios 172.19.24.25 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,731:INFO:dev.Claro:dev ios 172.19.24.44 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,732:INFO:dev.Claro:dev ios 172.19.24.48 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,732:INFO:dev.Claro:dev ios 172.19.28.1 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,733:INFO:dev.Claro:dev ios 172.19.28.20 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,733:INFO:dev.Claro:dev ios 172.19.28.21 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,733:INFO:dev.Claro:dev ios 172.19.28.41 excute method set_ip_explicit_paths
+2019-03-05 17:40:32,734:INFO:dev.Claro:dev ios 172.19.28.9 excute method set_ip_explicit_paths
+2019-03-05 17:40:47,939:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:47,939:CRITICAL:dev.CiscoIOS:172.16.30.34 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:47,989:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:47,990:CRITICAL:dev.CiscoIOS:172.17.22.55 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:47,995:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:47,995:CRITICAL:dev.CiscoIOS:172.16.30.36 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:48,036:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:48,036:CRITICAL:dev.CiscoIOS:172.17.22.53 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:48,184:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:48,184:CRITICAL:dev.CiscoIOS:172.16.30.1 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:48,217:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:48,217:CRITICAL:dev.CiscoIOS:172.17.26.9 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:48,600:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:48,600:CRITICAL:dev.CiscoIOS:172.16.30.11 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:48,802:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:48,802:CRITICAL:dev.CiscoIOS:172.16.30.45 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:48,853:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:48,853:CRITICAL:dev.CiscoIOS:172.17.22.54 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:48,864:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:48,864:CRITICAL:dev.CiscoIOS:172.17.22.79 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:48,928:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:48,928:CRITICAL:dev.CiscoIOS:172.17.23.1 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:49,206:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:49,207:CRITICAL:dev.CiscoIOS:172.17.23.2 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:49,434:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:49,434:CRITICAL:dev.CiscoIOS:172.19.12.1 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:49,722:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:49,722:CRITICAL:dev.CiscoIOS:172.16.30.5 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:49,737:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:49,737:CRITICAL:dev.CiscoIOS:172.16.30.42 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:49,790:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:49,790:CRITICAL:dev.CiscoIOS:172.19.24.48 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:49,845:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:49,845:CRITICAL:dev.CiscoIOS:172.17.20.5 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:50,099:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:50,099:CRITICAL:dev.CiscoIOS:172.17.26.3 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:50,198:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:50,198:CRITICAL:dev.CiscoIOS:172.16.30.10 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:50,229:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:50,229:CRITICAL:dev.CiscoIOS:172.16.30.43 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:50,367:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:50,367:CRITICAL:dev.CiscoIOS:172.16.30.38 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:50,458:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:50,458:CRITICAL:dev.CiscoIOS:172.17.26.26 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:50,783:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:50,783:CRITICAL:dev.CiscoIOS:172.16.30.4 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:50,810:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:50,810:CRITICAL:dev.CiscoIOS:172.19.28.21 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:50,815:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:50,816:CRITICAL:dev.CiscoIOS:172.19.28.1 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:50,945:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:50,945:CRITICAL:dev.CiscoIOS:172.16.30.9 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:51,084:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:51,084:CRITICAL:dev.CiscoIOS:172.17.28.192 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:51,232:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:51,232:CRITICAL:dev.CiscoIOS:172.17.26.10 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:51,253:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:51,254:CRITICAL:dev.CiscoIOS:172.19.28.20 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:51,261:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:51,261:CRITICAL:dev.CiscoIOS:172.17.27.6 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:51,292:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:51,292:CRITICAL:dev.CiscoIOS:172.19.28.41 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:51,298:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:51,298:CRITICAL:dev.CiscoIOS:172.16.30.44 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:51,335:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:51,335:CRITICAL:dev.CiscoIOS:172.16.30.13 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:51,468:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:51,468:CRITICAL:dev.CiscoIOS:172.19.28.9 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:51,470:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:51,471:CRITICAL:dev.CiscoIOS:172.19.24.1 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:51,509:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:51,509:CRITICAL:dev.CiscoIOS:172.17.27.54 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:51,531:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:51,531:CRITICAL:dev.CiscoIOS:172.17.26.1 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:51,631:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:51,631:CRITICAL:dev.CiscoIOS:172.19.24.25 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:51,634:ERROR:dev.CiscoXR:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:51,635:CRITICAL:dev.CiscoXR:172.16.30.248 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:51,652:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:51,652:CRITICAL:dev.CiscoIOS:172.17.27.51 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:51,846:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:51,846:CRITICAL:dev.CiscoIOS:172.17.26.39 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:51,869:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:51,869:CRITICAL:dev.CiscoIOS:172.19.24.44 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:51,946:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:51,946:CRITICAL:dev.CiscoIOS:172.17.27.5 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:52,407:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:52,407:CRITICAL:dev.CiscoIOS:172.19.24.20 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:53,028:ERROR:dev.CiscoXR:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:53,028:CRITICAL:dev.CiscoXR:172.16.30.247 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:40:53,545:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:40:53,545:CRITICAL:dev.CiscoIOS:172.16.30.7 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:44:58,976:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 17:44:58,977:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_mpls_te_tunnels
+2019-03-05 17:45:13,296:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:45:13,297:CRITICAL:dev.CiscoIOS:172.16.30.45 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:48:06,471:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 17:48:06,471:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_mpls_te_tunnels
+2019-03-05 17:48:18,783:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:48:18,783:CRITICAL:dev.CiscoIOS:172.16.30.45 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:48:42,068:INFO:dev.Claro:dev ios 172.16.30.44 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 17:48:42,069:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 17:48:42,069:INFO:dev.Claro:dev ios 172.16.30.44 excute method set_mpls_te_tunnels
+2019-03-05 17:48:42,070:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_mpls_te_tunnels
+2019-03-05 17:48:48,144:INFO:dev.Claro:dev ios 172.16.30.10 excute method set_mpls_te_tunnels
+2019-03-05 17:48:48,145:INFO:dev.Claro:dev ios 172.16.30.11 excute method set_mpls_te_tunnels
+2019-03-05 17:48:48,146:INFO:dev.Claro:dev ios 172.16.30.34 excute method set_mpls_te_tunnels
+2019-03-05 17:48:48,146:INFO:dev.Claro:dev ios 172.16.30.42 excute method set_mpls_te_tunnels
+2019-03-05 17:48:48,147:INFO:dev.Claro:dev ios 172.16.30.44 excute method set_mpls_te_tunnels
+2019-03-05 17:48:48,147:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_mpls_te_tunnels
+2019-03-05 17:48:48,148:INFO:dev.Claro:dev ios 172.17.23.1 excute method set_mpls_te_tunnels
+2019-03-05 17:48:48,148:INFO:dev.Claro:dev ios 172.17.23.2 excute method set_mpls_te_tunnels
+2019-03-05 17:48:48,149:INFO:dev.Claro:dev ios 172.17.26.10 excute method set_mpls_te_tunnels
+2019-03-05 17:48:48,149:INFO:dev.Claro:dev ios 172.17.26.26 excute method set_mpls_te_tunnels
+2019-03-05 17:48:48,150:INFO:dev.Claro:dev ios 172.17.26.3 excute method set_mpls_te_tunnels
+2019-03-05 17:48:48,150:INFO:dev.Claro:dev ios 172.17.26.9 excute method set_mpls_te_tunnels
+2019-03-05 17:48:48,151:INFO:dev.Claro:dev ios 172.17.27.51 excute method set_mpls_te_tunnels
+2019-03-05 17:48:48,151:INFO:dev.Claro:dev ios 172.17.27.6 excute method set_mpls_te_tunnels
+2019-03-05 17:48:48,151:INFO:dev.Claro:dev ios 172.19.24.1 excute method set_mpls_te_tunnels
+2019-03-05 17:48:48,152:INFO:dev.Claro:dev ios 172.19.28.21 excute method set_mpls_te_tunnels
+2019-03-05 17:48:48,152:INFO:dev.Claro:dev ios 172.19.28.41 excute method set_mpls_te_tunnels
+2019-03-05 17:48:48,153:INFO:dev.Claro:dev ios 172.16.30.10 excute method set_ip_explicit_paths
+2019-03-05 17:48:48,153:INFO:dev.Claro:dev ios 172.16.30.11 excute method set_ip_explicit_paths
+2019-03-05 17:48:48,154:INFO:dev.Claro:dev ios 172.16.30.34 excute method set_ip_explicit_paths
+2019-03-05 17:48:48,154:INFO:dev.Claro:dev ios 172.16.30.42 excute method set_ip_explicit_paths
+2019-03-05 17:48:48,154:INFO:dev.Claro:dev ios 172.16.30.44 excute method set_ip_explicit_paths
+2019-03-05 17:48:48,155:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_ip_explicit_paths
+2019-03-05 17:48:48,155:INFO:dev.Claro:dev ios 172.17.23.1 excute method set_ip_explicit_paths
+2019-03-05 17:48:48,156:INFO:dev.Claro:dev ios 172.17.23.2 excute method set_ip_explicit_paths
+2019-03-05 17:48:48,156:INFO:dev.Claro:dev ios 172.17.26.10 excute method set_ip_explicit_paths
+2019-03-05 17:48:48,156:INFO:dev.Claro:dev ios 172.17.26.26 excute method set_ip_explicit_paths
+2019-03-05 17:48:48,157:INFO:dev.Claro:dev ios 172.17.26.3 excute method set_ip_explicit_paths
+2019-03-05 17:48:48,157:INFO:dev.Claro:dev ios 172.17.26.9 excute method set_ip_explicit_paths
+2019-03-05 17:48:48,158:INFO:dev.Claro:dev ios 172.17.27.51 excute method set_ip_explicit_paths
+2019-03-05 17:48:48,158:INFO:dev.Claro:dev ios 172.17.27.6 excute method set_ip_explicit_paths
+2019-03-05 17:48:48,159:INFO:dev.Claro:dev ios 172.19.24.1 excute method set_ip_explicit_paths
+2019-03-05 17:48:48,159:INFO:dev.Claro:dev ios 172.19.28.21 excute method set_ip_explicit_paths
+2019-03-05 17:48:48,160:INFO:dev.Claro:dev ios 172.19.28.41 excute method set_ip_explicit_paths
+2019-03-05 17:48:56,289:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:48:56,289:CRITICAL:dev.CiscoIOS:172.16.30.45 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:48:56,521:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:48:56,521:CRITICAL:dev.CiscoIOS:172.16.30.44 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:49:01,280:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:49:01,280:CRITICAL:dev.CiscoIOS:172.16.30.34 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:49:01,348:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:49:01,348:CRITICAL:dev.CiscoIOS:172.17.23.2 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:49:01,362:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:49:01,362:CRITICAL:dev.CiscoIOS:172.17.23.1 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:49:01,622:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:49:01,623:CRITICAL:dev.CiscoIOS:172.16.30.10 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:49:01,695:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:49:01,695:CRITICAL:dev.CiscoIOS:172.17.26.3 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:49:02,180:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:49:02,180:CRITICAL:dev.CiscoIOS:172.17.26.10 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:49:02,970:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:49:02,970:CRITICAL:dev.CiscoIOS:172.16.30.11 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:49:03,081:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:49:03,081:CRITICAL:dev.CiscoIOS:172.16.30.42 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:49:03,677:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:49:03,677:CRITICAL:dev.CiscoIOS:172.17.26.26 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:49:03,709:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:49:03,709:CRITICAL:dev.CiscoIOS:172.17.26.9 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:49:03,744:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:49:03,745:CRITICAL:dev.CiscoIOS:172.16.30.45 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:49:03,749:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:49:03,749:CRITICAL:dev.CiscoIOS:172.19.24.1 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:49:03,887:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:49:03,887:CRITICAL:dev.CiscoIOS:172.17.27.6 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:49:03,996:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:49:03,996:CRITICAL:dev.CiscoIOS:172.16.30.44 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:49:04,083:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:49:04,084:CRITICAL:dev.CiscoIOS:172.19.28.41 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:49:04,200:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:49:04,200:CRITICAL:dev.CiscoIOS:172.19.28.21 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:49:04,322:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:49:04,322:CRITICAL:dev.CiscoIOS:172.17.27.51 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:49:39,759:INFO:dev.Claro:dev ios 172.16.30.10 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,760:INFO:dev.Claro:dev ios 172.16.30.11 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,760:INFO:dev.Claro:dev ios 172.16.30.247 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,761:INFO:dev.Claro:dev ios 172.16.30.248 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,762:INFO:dev.Claro:dev ios 172.16.30.34 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,763:INFO:dev.Claro:dev ios 172.16.30.36 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,763:INFO:dev.Claro:dev ios 172.16.30.38 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,764:INFO:dev.Claro:dev ios 172.16.30.4 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,764:INFO:dev.Claro:dev ios 172.16.30.42 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,765:INFO:dev.Claro:dev ios 172.16.30.43 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,765:INFO:dev.Claro:dev ios 172.16.30.44 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,765:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,766:INFO:dev.Claro:dev ios 172.16.30.5 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,766:INFO:dev.Claro:dev ios 172.16.30.7 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,767:INFO:dev.Claro:dev ios 172.16.30.9 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,767:INFO:dev.Claro:dev ios 172.17.20.5 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,768:INFO:dev.Claro:dev ios 172.17.22.54 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,768:INFO:dev.Claro:dev ios 172.17.23.2 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,769:INFO:dev.Claro:dev ios 172.17.26.1 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,769:INFO:dev.Claro:dev ios 172.17.26.10 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,770:INFO:dev.Claro:dev ios 172.17.26.3 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,770:INFO:dev.Claro:dev ios 172.17.26.39 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,771:INFO:dev.Claro:dev ios 172.17.26.9 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,771:INFO:dev.Claro:dev ios 172.17.27.5 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,771:INFO:dev.Claro:dev ios 172.17.27.51 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,772:INFO:dev.Claro:dev ios 172.17.27.6 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,772:INFO:dev.Claro:dev ios 172.17.28.192 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,773:INFO:dev.Claro:dev ios 172.19.12.1 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,773:INFO:dev.Claro:dev ios 172.19.24.20 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,773:INFO:dev.Claro:dev ios 172.19.24.44 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,774:INFO:dev.Claro:dev ios 172.19.24.48 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,774:INFO:dev.Claro:dev ios 172.19.28.1 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,775:INFO:dev.Claro:dev ios 172.19.28.20 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,775:INFO:dev.Claro:dev ios 172.19.28.21 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,776:INFO:dev.Claro:dev ios 172.19.28.41 excute method set_mpls_te_tunnels
+2019-03-05 17:49:39,776:INFO:dev.Claro:dev ios 172.16.30.10 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,776:INFO:dev.Claro:dev ios 172.16.30.11 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,777:INFO:dev.Claro:dev ios 172.16.30.247 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,777:INFO:dev.Claro:dev ios 172.16.30.248 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,778:INFO:dev.Claro:dev ios 172.16.30.34 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,778:INFO:dev.Claro:dev ios 172.16.30.36 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,778:INFO:dev.Claro:dev ios 172.16.30.38 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,779:INFO:dev.Claro:dev ios 172.16.30.4 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,779:INFO:dev.Claro:dev ios 172.16.30.42 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,780:INFO:dev.Claro:dev ios 172.16.30.43 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,780:INFO:dev.Claro:dev ios 172.16.30.44 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,781:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,781:INFO:dev.Claro:dev ios 172.16.30.5 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,782:INFO:dev.Claro:dev ios 172.16.30.7 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,782:INFO:dev.Claro:dev ios 172.16.30.9 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,783:INFO:dev.Claro:dev ios 172.17.20.5 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,783:INFO:dev.Claro:dev ios 172.17.22.54 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,783:INFO:dev.Claro:dev ios 172.17.23.2 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,784:INFO:dev.Claro:dev ios 172.17.26.1 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,784:INFO:dev.Claro:dev ios 172.17.26.10 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,785:INFO:dev.Claro:dev ios 172.17.26.3 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,785:INFO:dev.Claro:dev ios 172.17.26.39 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,785:INFO:dev.Claro:dev ios 172.17.26.9 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,786:INFO:dev.Claro:dev ios 172.17.27.5 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,786:INFO:dev.Claro:dev ios 172.17.27.51 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,787:INFO:dev.Claro:dev ios 172.17.27.6 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,787:INFO:dev.Claro:dev ios 172.17.28.192 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,788:INFO:dev.Claro:dev ios 172.19.12.1 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,788:INFO:dev.Claro:dev ios 172.19.24.20 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,788:INFO:dev.Claro:dev ios 172.19.24.44 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,789:INFO:dev.Claro:dev ios 172.19.24.48 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,789:INFO:dev.Claro:dev ios 172.19.28.1 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,790:INFO:dev.Claro:dev ios 172.19.28.20 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,790:INFO:dev.Claro:dev ios 172.19.28.21 excute method set_ip_explicit_paths
+2019-03-05 17:49:39,790:INFO:dev.Claro:dev ios 172.19.28.41 excute method set_ip_explicit_paths
+2019-03-05 17:49:57,932:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:49:57,932:CRITICAL:dev.CiscoIOS:172.17.23.2 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:49:58,018:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:49:58,018:CRITICAL:dev.CiscoIOS:172.17.22.54 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:49:58,467:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:49:58,467:CRITICAL:dev.CiscoIOS:172.19.24.44 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:49:59,903:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:49:59,903:CRITICAL:dev.CiscoIOS:172.19.12.1 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:00,018:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:00,019:CRITICAL:dev.CiscoIOS:172.19.28.41 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:00,024:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:00,024:CRITICAL:dev.CiscoIOS:172.19.28.1 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:00,213:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:00,213:CRITICAL:dev.CiscoIOS:172.16.30.10 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:00,314:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:00,314:CRITICAL:dev.CiscoIOS:172.16.30.7 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:01,194:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:01,194:CRITICAL:dev.CiscoIOS:172.19.24.20 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:01,839:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:01,839:CRITICAL:dev.CiscoIOS:172.19.24.48 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:01,861:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:01,861:CRITICAL:dev.CiscoIOS:172.17.26.9 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:01,862:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:01,862:CRITICAL:dev.CiscoIOS:172.17.26.39 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:01,968:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:01,968:CRITICAL:dev.CiscoIOS:172.17.27.51 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:02,317:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:02,317:CRITICAL:dev.CiscoIOS:172.17.26.10 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:02,318:ERROR:dev.CiscoXR:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:02,319:CRITICAL:dev.CiscoXR:172.16.30.248 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:02,637:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:02,637:CRITICAL:dev.CiscoIOS:172.19.28.20 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:02,676:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:02,676:CRITICAL:dev.CiscoIOS:172.17.26.1 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:03,811:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:03,811:CRITICAL:dev.CiscoIOS:172.16.30.34 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:03,885:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:03,885:CRITICAL:dev.CiscoIOS:172.16.30.36 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:04,516:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:04,516:CRITICAL:dev.CiscoIOS:172.16.30.4 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:04,676:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:04,676:CRITICAL:dev.CiscoIOS:172.16.30.45 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:05,990:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:05,990:CRITICAL:dev.CiscoIOS:172.17.27.6 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:06,320:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:06,320:CRITICAL:dev.CiscoIOS:172.17.20.5 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:06,939:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:06,939:CRITICAL:dev.CiscoIOS:172.16.30.11 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:08,310:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:08,310:CRITICAL:dev.CiscoIOS:172.17.26.3 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:08,661:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:08,661:CRITICAL:dev.CiscoIOS:172.19.28.21 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:08,984:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:08,984:CRITICAL:dev.CiscoIOS:172.16.30.43 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:09,068:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:09,068:CRITICAL:dev.CiscoIOS:172.16.30.5 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:09,074:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:09,074:CRITICAL:dev.CiscoIOS:172.16.30.42 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:09,265:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:09,265:CRITICAL:dev.CiscoIOS:172.17.27.5 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:09,417:ERROR:dev.CiscoXR:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:09,417:CRITICAL:dev.CiscoXR:172.16.30.247 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:10,320:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:10,320:CRITICAL:dev.CiscoIOS:172.16.30.38 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:11,594:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:11,594:CRITICAL:dev.CiscoIOS:172.16.30.44 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:12,440:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:12,440:CRITICAL:dev.CiscoIOS:172.16.30.9 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:50:25,891:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:50:25,892:CRITICAL:dev.CiscoIOS:172.17.28.192 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:52:04,330:INFO:dev.Claro:dev ios 172.16.30.44 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 17:52:04,330:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 17:52:04,331:INFO:dev.Claro:dev ios 172.16.30.44 excute method set_mpls_te_tunnels
+2019-03-05 17:52:04,332:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_mpls_te_tunnels
+2019-03-05 17:52:11,304:INFO:dev.Claro:dev  172.16.30.44 excute method set_mpls_te_tunnels
+2019-03-05 17:52:11,305:INFO:dev.Claro:dev  172.16.30.44 excute method set_ip_explicit_paths
+2019-03-05 17:52:18,622:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:52:18,622:CRITICAL:dev.CiscoIOS:172.16.30.45 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:52:18,809:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:52:18,809:CRITICAL:dev.CiscoIOS:172.16.30.44 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:52:25,784:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:52:25,785:CRITICAL:dev.CiscoIOS:172.16.30.44 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:03,093:INFO:dev.Claro:dev ios 172.16.30.1 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,094:INFO:dev.Claro:dev ios 172.16.30.10 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,094:INFO:dev.Claro:dev ios 172.16.30.11 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,095:INFO:dev.Claro:dev ios 172.16.30.13 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,096:INFO:dev.Claro:dev ios 172.16.30.248 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,096:INFO:dev.Claro:dev ios 172.16.30.36 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,097:INFO:dev.Claro:dev ios 172.16.30.38 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,097:INFO:dev.Claro:dev ios 172.16.30.4 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,098:INFO:dev.Claro:dev ios 172.16.30.42 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,098:INFO:dev.Claro:dev ios 172.16.30.44 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,098:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,099:INFO:dev.Claro:dev ios 172.16.30.5 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,099:INFO:dev.Claro:dev ios 172.16.30.9 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,100:INFO:dev.Claro:dev ios 172.17.20.5 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,100:INFO:dev.Claro:dev ios 172.17.22.53 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,101:INFO:dev.Claro:dev ios 172.17.22.54 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,101:INFO:dev.Claro:dev ios 172.17.22.55 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,102:INFO:dev.Claro:dev ios 172.17.23.1 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,102:INFO:dev.Claro:dev ios 172.17.26.1 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,102:INFO:dev.Claro:dev ios 172.17.26.10 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,103:INFO:dev.Claro:dev ios 172.17.26.26 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,103:INFO:dev.Claro:dev ios 172.17.26.3 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,104:INFO:dev.Claro:dev ios 172.17.26.39 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,104:INFO:dev.Claro:dev ios 172.17.26.9 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,104:INFO:dev.Claro:dev ios 172.17.27.54 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,105:INFO:dev.Claro:dev ios 172.17.27.6 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,105:INFO:dev.Claro:dev ios 172.17.28.192 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,106:INFO:dev.Claro:dev ios 172.19.12.1 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,106:INFO:dev.Claro:dev ios 172.19.24.1 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,106:INFO:dev.Claro:dev ios 172.19.24.20 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,107:INFO:dev.Claro:dev ios 172.19.24.25 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,107:INFO:dev.Claro:dev ios 172.19.24.44 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,108:INFO:dev.Claro:dev ios 172.19.24.48 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,108:INFO:dev.Claro:dev ios 172.19.28.1 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,109:INFO:dev.Claro:dev ios 172.19.28.20 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,109:INFO:dev.Claro:dev ios 172.19.28.21 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,109:INFO:dev.Claro:dev ios 172.19.28.41 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,110:INFO:dev.Claro:dev ios 172.19.28.9 excute method set_mpls_te_tunnels
+2019-03-05 17:53:03,110:INFO:dev.Claro:dev ios 172.16.30.1 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,111:INFO:dev.Claro:dev ios 172.16.30.10 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,111:INFO:dev.Claro:dev ios 172.16.30.11 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,111:INFO:dev.Claro:dev ios 172.16.30.13 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,112:INFO:dev.Claro:dev ios 172.16.30.248 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,112:INFO:dev.Claro:dev ios 172.16.30.36 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,113:INFO:dev.Claro:dev ios 172.16.30.38 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,113:INFO:dev.Claro:dev ios 172.16.30.4 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,114:INFO:dev.Claro:dev ios 172.16.30.42 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,114:INFO:dev.Claro:dev ios 172.16.30.44 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,114:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,115:INFO:dev.Claro:dev ios 172.16.30.5 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,115:INFO:dev.Claro:dev ios 172.16.30.9 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,116:INFO:dev.Claro:dev ios 172.17.20.5 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,116:INFO:dev.Claro:dev ios 172.17.22.53 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,117:INFO:dev.Claro:dev ios 172.17.22.54 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,117:INFO:dev.Claro:dev ios 172.17.22.55 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,118:INFO:dev.Claro:dev ios 172.17.23.1 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,118:INFO:dev.Claro:dev ios 172.17.26.1 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,118:INFO:dev.Claro:dev ios 172.17.26.10 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,119:INFO:dev.Claro:dev ios 172.17.26.26 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,119:INFO:dev.Claro:dev ios 172.17.26.3 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,120:INFO:dev.Claro:dev ios 172.17.26.39 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,120:INFO:dev.Claro:dev ios 172.17.26.9 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,120:INFO:dev.Claro:dev ios 172.17.27.54 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,121:INFO:dev.Claro:dev ios 172.17.27.6 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,121:INFO:dev.Claro:dev ios 172.17.28.192 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,122:INFO:dev.Claro:dev ios 172.19.12.1 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,122:INFO:dev.Claro:dev ios 172.19.24.1 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,122:INFO:dev.Claro:dev ios 172.19.24.20 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,123:INFO:dev.Claro:dev ios 172.19.24.25 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,123:INFO:dev.Claro:dev ios 172.19.24.44 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,124:INFO:dev.Claro:dev ios 172.19.24.48 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,124:INFO:dev.Claro:dev ios 172.19.28.1 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,124:INFO:dev.Claro:dev ios 172.19.28.20 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,125:INFO:dev.Claro:dev ios 172.19.28.21 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,125:INFO:dev.Claro:dev ios 172.19.28.41 excute method set_ip_explicit_paths
+2019-03-05 17:53:03,126:INFO:dev.Claro:dev ios 172.19.28.9 excute method set_ip_explicit_paths
+2019-03-05 17:53:17,585:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:17,585:CRITICAL:dev.CiscoIOS:172.17.22.55 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:17,631:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:17,631:CRITICAL:dev.CiscoIOS:172.17.22.53 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:17,658:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:17,658:CRITICAL:dev.CiscoIOS:172.16.30.36 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:17,727:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:17,727:CRITICAL:dev.CiscoIOS:172.19.12.1 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:17,737:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:17,737:CRITICAL:dev.CiscoIOS:172.16.30.38 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:17,841:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:17,841:CRITICAL:dev.CiscoIOS:172.17.22.54 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:17,864:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:17,864:CRITICAL:dev.CiscoIOS:172.16.30.10 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:17,975:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:17,975:CRITICAL:dev.CiscoIOS:172.17.20.5 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:18,169:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:18,169:CRITICAL:dev.CiscoIOS:172.17.26.9 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:18,237:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:18,237:CRITICAL:dev.CiscoIOS:172.16.30.4 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:18,253:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:18,253:CRITICAL:dev.CiscoIOS:172.17.23.1 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:18,260:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:18,260:CRITICAL:dev.CiscoIOS:172.19.24.1 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:18,285:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:18,285:CRITICAL:dev.CiscoIOS:172.19.24.25 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:18,289:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:18,289:CRITICAL:dev.CiscoIOS:172.17.26.39 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:18,305:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:18,305:CRITICAL:dev.CiscoIOS:172.19.24.20 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:18,527:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:18,527:CRITICAL:dev.CiscoIOS:172.16.30.42 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:19,216:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:19,216:CRITICAL:dev.CiscoIOS:172.16.30.11 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:19,261:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:19,261:CRITICAL:dev.CiscoIOS:172.16.30.1 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:19,367:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:19,367:CRITICAL:dev.CiscoIOS:172.17.26.26 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:19,496:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:19,496:CRITICAL:dev.CiscoIOS:172.16.30.5 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:19,574:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:19,574:CRITICAL:dev.CiscoIOS:172.19.24.48 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:19,712:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:19,712:CRITICAL:dev.CiscoIOS:172.19.24.44 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:20,099:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:20,099:CRITICAL:dev.CiscoIOS:172.17.26.3 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:20,138:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:20,138:CRITICAL:dev.CiscoIOS:172.19.28.9 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:20,242:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:20,242:CRITICAL:dev.CiscoIOS:172.17.27.54 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:20,289:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:20,289:CRITICAL:dev.CiscoIOS:172.17.26.1 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:20,316:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:20,316:CRITICAL:dev.CiscoIOS:172.16.30.45 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:20,326:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:20,326:CRITICAL:dev.CiscoIOS:172.19.28.41 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:20,335:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:20,335:CRITICAL:dev.CiscoIOS:172.17.26.10 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:20,427:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:20,428:CRITICAL:dev.CiscoIOS:172.19.28.20 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:20,479:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:20,479:CRITICAL:dev.CiscoIOS:172.17.27.6 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:20,605:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:20,605:CRITICAL:dev.CiscoIOS:172.16.30.9 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:20,607:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:20,609:CRITICAL:dev.CiscoIOS:172.19.28.1 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:20,669:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:20,669:CRITICAL:dev.CiscoIOS:172.19.28.21 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:20,934:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:20,934:CRITICAL:dev.CiscoIOS:172.16.30.13 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:21,096:ERROR:dev.CiscoXR:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:21,096:CRITICAL:dev.CiscoXR:172.16.30.248 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:21,353:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:21,353:CRITICAL:dev.CiscoIOS:172.17.28.192 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:53:22,406:ERROR:dev.CiscoIOS:unable to load template show mpls traffic-eng tunnels detail.template err TextFSMTemplateError("Invalid regular expression: '^\\s+path\\sprotect\\soption\\(?P<path_protect_option>\\d+,\\s\\S+\\s\\S+(\\s\\S+)?).*'. Line: 38.")
+2019-03-05 17:53:22,406:CRITICAL:dev.CiscoIOS:172.16.30.44 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'") template (2) 
+2019-03-05 17:54:56,590:INFO:dev.Claro:dev  172.16.30.44 excute method set_mpls_te_tunnels
+2019-03-05 17:54:56,591:INFO:dev.Claro:dev  172.16.30.44 excute method set_ip_explicit_paths
+2019-03-05 17:55:15,144:INFO:dev.Claro:dev  172.16.30.44 excute method set_mpls_te_tunnels
+2019-03-05 17:55:15,145:INFO:dev.Claro:dev  172.16.30.44 excute method set_ip_explicit_paths
+2019-03-05 17:56:04,224:INFO:dev.Claro:dev ios 172.16.30.44 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 17:56:04,225:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 17:56:04,225:INFO:dev.Claro:dev ios 172.16.30.44 excute method set_mpls_te_tunnels
+2019-03-05 17:56:04,226:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_mpls_te_tunnels
+2019-03-05 17:57:46,539:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 17:57:46,540:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_mpls_te_tunnels
+2019-03-05 17:59:29,553:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 17:59:29,554:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_mpls_te_tunnels
+2019-03-05 18:00:08,865:INFO:dev.Claro:dev ios 172.16.30.34 excute method set_mpls_te_tunnels
+2019-03-05 18:00:08,865:INFO:dev.Claro:dev ios 172.16.30.42 excute method set_mpls_te_tunnels
+2019-03-05 18:00:08,866:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_mpls_te_tunnels
+2019-03-05 18:00:08,867:INFO:dev.Claro:dev ios 172.17.26.10 excute method set_mpls_te_tunnels
+2019-03-05 18:00:08,867:INFO:dev.Claro:dev ios 172.17.26.26 excute method set_mpls_te_tunnels
+2019-03-05 18:00:08,868:INFO:dev.Claro:dev ios 172.17.26.3 excute method set_mpls_te_tunnels
+2019-03-05 18:00:08,868:INFO:dev.Claro:dev ios 172.17.26.39 excute method set_mpls_te_tunnels
+2019-03-05 18:00:08,869:INFO:dev.Claro:dev ios 172.17.27.51 excute method set_mpls_te_tunnels
+2019-03-05 18:00:08,870:INFO:dev.Claro:dev ios 172.17.27.6 excute method set_mpls_te_tunnels
+2019-03-05 18:00:08,870:INFO:dev.Claro:dev ios 172.19.24.1 excute method set_mpls_te_tunnels
+2019-03-05 18:00:08,871:INFO:dev.Claro:dev ios 172.19.28.21 excute method set_mpls_te_tunnels
+2019-03-05 18:00:08,871:INFO:dev.Claro:dev ios 172.19.28.41 excute method set_mpls_te_tunnels
+2019-03-05 18:00:08,872:INFO:dev.Claro:dev ios 172.16.30.34 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 18:00:08,872:INFO:dev.Claro:dev ios 172.16.30.42 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 18:00:08,873:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 18:00:08,873:INFO:dev.Claro:dev ios 172.17.26.10 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 18:00:08,874:INFO:dev.Claro:dev ios 172.17.26.26 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 18:00:08,874:INFO:dev.Claro:dev ios 172.17.26.3 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 18:00:08,875:INFO:dev.Claro:dev ios 172.17.26.39 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 18:00:08,875:INFO:dev.Claro:dev ios 172.17.27.51 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 18:00:08,876:INFO:dev.Claro:dev ios 172.17.27.6 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 18:00:08,876:INFO:dev.Claro:dev ios 172.19.24.1 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 18:00:08,877:INFO:dev.Claro:dev ios 172.19.28.21 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 18:00:08,877:INFO:dev.Claro:dev ios 172.19.28.41 excute method set_mpls_te_tunnels_mid_point
+2019-03-05 18:00:08,877:INFO:dev.Claro:dev ios 172.16.30.34 excute method set_ip_explicit_paths
+2019-03-05 18:00:08,878:INFO:dev.Claro:dev ios 172.16.30.42 excute method set_ip_explicit_paths
+2019-03-05 18:00:08,878:INFO:dev.Claro:dev ios 172.16.30.45 excute method set_ip_explicit_paths
+2019-03-05 18:00:08,879:INFO:dev.Claro:dev ios 172.17.26.10 excute method set_ip_explicit_paths
+2019-03-05 18:00:08,879:INFO:dev.Claro:dev ios 172.17.26.26 excute method set_ip_explicit_paths
+2019-03-05 18:00:08,879:INFO:dev.Claro:dev ios 172.17.26.3 excute method set_ip_explicit_paths
+2019-03-05 18:00:08,880:INFO:dev.Claro:dev ios 172.17.26.39 excute method set_ip_explicit_paths
+2019-03-05 18:00:08,880:INFO:dev.Claro:dev ios 172.17.27.51 excute method set_ip_explicit_paths
+2019-03-05 18:00:08,881:INFO:dev.Claro:dev ios 172.17.27.6 excute method set_ip_explicit_paths
+2019-03-05 18:00:08,881:INFO:dev.Claro:dev ios 172.19.24.1 excute method set_ip_explicit_paths
+2019-03-05 18:00:08,881:INFO:dev.Claro:dev ios 172.19.28.21 excute method set_ip_explicit_paths
+2019-03-05 18:00:08,882:INFO:dev.Claro:dev ios 172.19.28.41 excute method set_ip_explicit_paths

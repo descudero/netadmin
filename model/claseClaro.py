@@ -463,7 +463,7 @@ class Claro:
             device_list.append(device)
             device.platform = platform
             device.hostname = hostname
-        return device_list
+        return self.clean_list_devices(device_list)
 
     def get_device_list(self, filename):
         device_list = self.read_file(filename=filename)
