@@ -11,17 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="462384ac-2f64-47a0-b6d2-b16ff1b36497" name="Default" comment="first3">
-      <change afterPath="$PROJECT_DIR$/new_loose_ip.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/common_script.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/connections.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/connections.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/BaseDevice.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/BaseDevice.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/InternetServiceProvider.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/InternetServiceProvider.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/IpExplicitPath.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/IpExplicitPath.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/MplsTeTunnel.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/MplsTeTunnel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/claseClaro.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/claseClaro.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/show mpls traffic-eng tunnels detail.template" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/show mpls traffic-eng tunnels detail.template" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/output_test/show run s ip explicit-path ios.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/output_test/show run s ip explicit-path ios.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/templates/ttextfsm_uf.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/ttextfsm_uf.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +29,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/netadmin$new_loose_ip.coverage" NAME="new_loose_ip Coverage Results" MODIFIED="1551286904512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/netadmin$percentile.coverage" NAME="percentile Coverage Results" MODIFIED="1546967712388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/netadmin$ttextfsm_uf.coverage" NAME="ttextfsm_uf Coverage Results" MODIFIED="1551830082623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/resources/templates" />
+    <SUITE FILE_PATH="coverage/netadmin$ttextfsm_uf.coverage" NAME="ttextfsm_uf Coverage Results" MODIFIED="1552080879621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/resources/templates" />
     <SUITE FILE_PATH="coverage/netadmin$test_textfsm.coverage" NAME="test_textfsm Coverage Results" MODIFIED="1547657044051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/resources/templates" />
     <SUITE FILE_PATH="coverage/netadmin$sshtest.coverage" NAME="sshtest Coverage Results" MODIFIED="1548197571769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -77,21 +73,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/new_loose_ip.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
-              <folding>
-                <element signature="e#0#72#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/templates/show mpls traffic-eng tunnels detail.template">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="682">
+            <state relative-caret-position="748">
               <caret line="34" selection-start-line="34" selection-end-line="34" />
             </state>
           </provider>
@@ -100,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/templates/ttextfsm_uf.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="86" selection-start-line="4" selection-start-column="86" selection-end-line="5" selection-end-column="40" />
+            <state relative-caret-position="66">
+              <caret line="3" column="57" selection-start-line="3" selection-start-column="57" selection-end-line="3" selection-end-column="57" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -110,22 +94,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/ospf_adjacency.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="141" column="35" selection-start-line="141" selection-start-column="35" selection-end-line="141" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/MplsTeTunnel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-440">
-              <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+            <state relative-caret-position="307">
+              <caret line="83" column="17" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -134,10 +106,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/output_test/show run s ip explicit-path ios.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="444">
+              <caret line="89" selection-start-line="89" selection-end-line="89" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common_script.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+            <state relative-caret-position="286">
+              <caret line="67" column="40" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
               <folding>
                 <element signature="e#0#72#0" expanded="true" />
               </folding>
@@ -146,10 +127,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logs/connections.log">
+          <provider selected="true" editor-type-id="LogFileEditorProvider">
+            <state relative-caret-position="-2379">
+              <caret line="59121" column="74" selection-start-line="59121" selection-start-column="74" selection-end-line="59121" selection-end-column="85" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/InternetServiceProvider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="46" column="63" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
+            <state relative-caret-position="153">
+              <caret line="76" column="55" selection-start-line="76" selection-start-column="55" selection-end-line="76" selection-end-column="55" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -160,7 +150,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/BaseDevice.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1790">
+            <state relative-caret-position="3014">
               <caret line="148" column="33" selection-start-line="148" selection-start-column="33" selection-end-line="148" selection-end-column="33" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
@@ -172,7 +162,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/claseClaro.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
+            <state relative-caret-position="11176">
               <caret line="540" column="8" selection-start-line="540" selection-start-column="8" selection-end-line="540" selection-end-column="8" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -194,7 +184,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mpls_te</find>
       <find>ip_ex</find>
       <find>172.17.20.5</find>
       <find>172.17.22.54</find>
@@ -224,6 +213,7 @@
       <find>diagrama</find>
       <find>path_option</find>
       <find>cle</find>
+      <find>add_new_paths_mpls_te</find>
     </findStrings>
     <replaceStrings>
       <replace>type</replace>
@@ -265,7 +255,6 @@
         <option value="$PROJECT_DIR$/model/ospf_adjacency.py" />
         <option value="$PROJECT_DIR$/model/InterfaceIOS.py" />
         <option value="$PROJECT_DIR$/resources/output_test/show mpls traffic-eng tunnels detail.ios.txt" />
-        <option value="$PROJECT_DIR$/resources/output_test/show run s ip explicit-path ios.txt" />
         <option value="$PROJECT_DIR$/resources/templates/ip explicit-path ios.template" />
         <option value="$PROJECT_DIR$/resources/output_test/show ip ospf database router" />
         <option value="$PROJECT_DIR$/resources/templates/show ip ospf database router.template" />
@@ -280,14 +269,15 @@
         <option value="$PROJECT_DIR$/model/ospf_database.py" />
         <option value="$PROJECT_DIR$/model/IpExplicitPath.py" />
         <option value="$PROJECT_DIR$/model/CiscoIOS.py" />
-        <option value="$PROJECT_DIR$/model/MplsTeTunnel.py" />
         <option value="$PROJECT_DIR$/model/claseClaro.py" />
         <option value="$PROJECT_DIR$/new_loose_ip.py" />
-        <option value="$PROJECT_DIR$/resources/templates/ttextfsm_uf.py" />
         <option value="$PROJECT_DIR$/resources/templates/show mpls traffic-eng tunnels detail.template" />
+        <option value="$PROJECT_DIR$/model/BaseDevice.py" />
+        <option value="$PROJECT_DIR$/resources/output_test/show run s ip explicit-path ios.txt" />
+        <option value="$PROJECT_DIR$/resources/templates/ttextfsm_uf.py" />
+        <option value="$PROJECT_DIR$/model/MplsTeTunnel.py" />
         <option value="$PROJECT_DIR$/common_script.py" />
         <option value="$PROJECT_DIR$/model/InternetServiceProvider.py" />
-        <option value="$PROJECT_DIR$/model/BaseDevice.py" />
       </list>
     </option>
   </component>
@@ -303,6 +293,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -323,6 +314,12 @@
             </path>
             <path>
               <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
             <path>
@@ -334,7 +331,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -377,7 +373,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.new_loose_ip">
+  <component name="RunManager" selected="Python.common_script">
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -423,6 +419,9 @@
       <module name="groups" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -464,6 +463,9 @@
       <module name="groups" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -556,8 +558,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.common_script" />
-        <item itemvalue="Python.new_loose_ip" />
         <item itemvalue="Python.ttextfsm_uf" />
+        <item itemvalue="Python.new_loose_ip" />
         <item itemvalue="Python.save_interfaces_db" />
         <item itemvalue="Python.common_test" />
       </list>
@@ -599,14 +601,8 @@
       <workItem from="1550507478510" duration="14987000" />
       <workItem from="1550675912686" duration="18080000" />
       <workItem from="1551284641504" duration="5939000" />
-      <workItem from="1551799279254" duration="6605000" />
-    </task>
-    <task id="LOCAL-00013" summary="first3">
-      <created>1544716604577</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1544716604577</updated>
+      <workItem from="1551799279254" duration="6622000" />
+      <workItem from="1552078053175" duration="7362000" />
     </task>
     <task id="LOCAL-00014" summary="first3">
       <created>1546469819603</created>
@@ -944,7 +940,14 @@
       <option name="project" value="LOCAL" />
       <updated>1550709080431</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="first3">
+      <created>1551969803417</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1551969803417</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -980,7 +983,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="308525000" />
+    <option name="totallyTimeSpent" value="315904000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -995,8 +998,8 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.825" visible="true" weight="0.26100966" />
-      <window_info id="Structure" order="1" sideWeight="0.175" side_tool="true" visible="true" weight="0.26100966" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8230769" visible="true" weight="0.26476908" />
+      <window_info id="Structure" order="1" sideWeight="0.17692308" side_tool="true" visible="true" weight="0.26476908" />
       <window_info id="Favorites" order="2" sideWeight="0.50864196" side_tool="true" weight="0.16136725" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4977778" weight="0.3277592" />
@@ -1269,24 +1272,10 @@
         <state relative-caret-position="-269" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logs/connections.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="589710">
-          <caret line="26805" column="29" selection-start-line="26805" selection-start-column="29" selection-end-line="26805" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/templates/ip explicit-path ios.template">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/output_test/show run s ip explicit-path ios.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -1469,19 +1458,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/claseClaro.py">
+    <entry file="file://$PROJECT_DIR$/new_loose_ip.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="540" column="8" selection-start-line="540" selection-start-column="8" selection-end-line="540" selection-end-column="8" />
+        <state relative-caret-position="286">
+          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#72#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/ospf_adjacency.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
+        <state relative-caret-position="3058">
           <caret line="141" column="35" selection-start-line="141" selection-start-column="35" selection-end-line="141" selection-end-column="35" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
@@ -1489,12 +1478,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/MplsTeTunnel.py">
+    <entry file="file://$PROJECT_DIR$/model/BaseDevice.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-440">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        <state relative-caret-position="3014">
+          <caret line="148" column="33" selection-start-line="148" selection-start-column="33" selection-end-line="148" selection-end-column="33" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/claseClaro.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11176">
+          <caret line="540" column="8" selection-start-line="540" selection-start-column="8" selection-end-line="540" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1509,30 +1508,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/logs/connections.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="-2379">
+          <caret line="59121" column="74" selection-start-line="59121" selection-start-column="74" selection-end-line="59121" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/templates/ttextfsm_uf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="86" selection-start-line="4" selection-start-column="86" selection-end-line="5" selection-end-column="40" />
+        <state relative-caret-position="66">
+          <caret line="3" column="57" selection-start-line="3" selection-start-column="57" selection-end-line="3" selection-end-column="57" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/new_loose_ip.py">
+    <entry file="file://$PROJECT_DIR$/resources/templates/show mpls traffic-eng tunnels detail.template">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+        <state relative-caret-position="748">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/output_test/show run s ip explicit-path ios.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/MplsTeTunnel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="83" column="17" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
           <folding>
-            <element signature="e#0#72#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common_script.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+        <state relative-caret-position="286">
+          <caret line="67" column="40" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
           <folding>
             <element signature="e#0#72#0" expanded="true" />
           </folding>
@@ -1541,28 +1561,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/InternetServiceProvider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="46" column="63" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
+        <state relative-caret-position="153">
+          <caret line="76" column="55" selection-start-line="76" selection-start-column="55" selection-end-line="76" selection-end-column="55" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/BaseDevice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1790">
-          <caret line="148" column="33" selection-start-line="148" selection-start-column="33" selection-end-line="148" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/show mpls traffic-eng tunnels detail.template">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>

@@ -60,7 +60,7 @@ class InternetServiceProvider(Claro):
 
         return final_command
 
-    def add_interface_mpls_te_paths(self, ip_a: str, ip_b: str, ip_a_new_hop: dict, ip_b_new_hop: dict, devices=[],
+    def add_interface_mpls_te_paths(self, hops_data, devices=[],
                                     suffix_path="NEW"):
         devices = self.get_mpls_te_end_points(devices=devices)
 
@@ -70,13 +70,21 @@ class InternetServiceProvider(Claro):
         final_command = ""
 
         for device in devices:
-            command = device.head_te_add_hop_ip_explicit_paths(hop=ip_b_new_hop, ip_reference_hop=ip_b,
-                                                               index_way_path="before", index_way_tunnel="before",
-                                                               suffix_path=suffix_path)
-            command += device.head_te_add_hop_ip_explicit_paths(hop=ip_a_new_hop, ip_reference_hop=ip_a,
-                                                                index_way_path="after", index_way_tunnel="before",
-                                                                suffix_path=suffix_path)
+            command = ""
+            for hop in hops_data:
+                command += device.head_te_add_hop_ip_explicit_paths(hop=hop['ip_b_new_hop'],
+                                                                    ip_reference_hop=hop['ip_b'],
+                                                                    index_way_path="before", index_way_tunnel="before",
+                                                                    suffix_path=suffix_path)
+                command += device.head_te_add_hop_ip_explicit_paths(hop=hop['ip_a_new_hop'],
+                                                                    ip_reference_hop=hop['ip_a'],
+                                                                    index_way_path="after", index_way_tunnel="before",
+                                                                    suffix_path=suffix_path)
             if command != "":
-                final_command += device.ip + "\n" + command
+                final_command += f"--------------------------\n{device.ip}\n-------------"
+                final_command += f"hop {hop['ip_b_new_hop']} {hop['ip_b']} {hop['ip_a_new_hop']} {hop['ip_a']}" \
+                    f"\n-------------" \
+                    f" \n {command}"
+
 
         return final_command

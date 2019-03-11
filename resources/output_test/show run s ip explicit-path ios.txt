@@ -1,22 +1,89 @@
-ip explicit-path name TIWS-BNQ-AGG1-1 enable
- index 1 next-address loose 172.17.22.60
-ip explicit-path name TIWS-BNQ-AGG1-2 enable
- index 1 next-address loose 172.17.22.20
- index 2 next-address 172.18.9.122
- index 3 next-address 172.18.9.145
- index 4 next-address loose 172.17.22.60
-ip explicit-path name TIWS-BNQ-AGG1-3 enable
- index 1 next-address loose 172.17.22.20
- index 2 next-address 172.18.9.122
- index 3 next-address 172.16.27.26
- index 4 next-address 172.16.22.25
- index 5 next-address 172.18.9.141
- index 6 next-address loose 172.17.22.60
-ip explicit-path name AT&T-10G-SERV1_TIWS_GUY enable
- index 1 next-address 172.18.9.210
-ip explicit-path name AT&T-10G-SERV1-BCKUP_TIWS_GUY enable
- index 1 next-address 172.18.9.226
-ip explicit-path name AT&T-10G-SERV2_TIWS_GUY enable
- index 1 next-address 172.18.9.214
-ip explicit-path name AT&T-10G-SERV2-BCKUP_TIWS_GUY enable
- index 1 next-address 172.18.9.233
+ip explicit-path name GUA-CLH-via-PBA enable
+ next-address loose 172.16.30.34
+ next-address 172.18.9.141
+ next-address loose 172.18.9.150
+ next-address 172.16.27.26
+ next-address 172.16.20.73
+ next-address 172.16.20.46
+ next-address loose 172.17.20.5
+ip explicit-path name GUA-CLH-via-20C enable
+ next-address loose 172.16.30.35
+ next-address 172.16.22.18
+ next-address 172.16.23.6
+ next-address 172.16.23.2
+ next-address 172.16.24.70
+ next-address 172.16.20.9
+ next-address 172.16.20.46
+ next-address loose 172.17.20.5
+ip explicit-path name GUA-CLH-via-GUY enable
+ next-address loose 172.16.30.34
+ next-address 172.16.22.74
+ next-address 172.16.20.73
+ next-address 172.16.20.46
+ next-address loose 172.17.20.5
+ip explicit-path name GUY1-PCO1-NAP4-NPA2-BTCHL enable
+ next-address loose 172.16.30.34
+ next-address 172.16.22.74
+ next-address 172.16.20.9
+ next-address 172.16.20.46
+ next-address loose 172.17.20.5
+ip explicit-path name 20C1-SMA1-NAC1-TGU1-PCO1-NAP3-NAP4-NPA2-BTCHL enable
+ next-address loose 172.16.30.35
+ next-address 172.16.22.10
+ next-address 172.16.23.66
+ next-address 172.16.24.82
+ next-address 172.16.24.70
+ next-address 172.16.20.58
+ next-address 172.16.20.41
+ next-address 172.16.20.46
+ next-address loose 172.17.20.5
+ip explicit-path name GUY1-BET1-TGU1-PIN1-SPE1-CGA9-PCO1-NAP3-NAP4-NPA2-BTCHL enable
+ next-address loose 172.16.30.34
+ next-address 172.16.22.66
+ next-address 172.16.23.2
+ next-address 172.16.24.2
+ next-address 172.16.25.10
+ next-address 172.16.26.78
+ next-address 172.16.20.13
+ next-address 172.16.20.58
+ next-address 172.16.20.41
+ next-address 172.16.20.46
+ next-address loose 172.17.20.5
+ip explicit-path name 20C1-SMA1-NAC1-SUM1-ESC1-HUB1-VPL1-CRZ1-NAP3-NAP4-NPA2-BTCHL enable
+ next-address loose 172.16.30.35
+ next-address 172.16.22.10
+ next-address 172.16.23.66
+ next-address 172.16.24.62
+ next-address 172.16.25.66
+ next-address 172.16.26.66
+ next-address 172.16.27.10
+ next-address 172.16.27.2
+ next-address 172.16.20.65
+ next-address 172.16.20.41
+ next-address 172.16.20.46
+ next-address loose 172.17.20.5
+ip explicit-path name 20C1-SMA1-NAC1-SUM1-ESC1-SPE1-CGA9-PCO1-NAP4-NPA2-BTCHL enable
+ next-address loose 172.16.30.35
+ next-address 172.16.22.10
+ next-address 172.16.23.66
+ next-address 172.16.24.62
+ next-address 172.16.25.66
+ next-address 172.16.26.82
+ next-address 172.16.26.78
+ next-address 172.16.20.13
+ next-address 172.16.20.9
+ next-address 172.16.20.46
+ next-address loose 172.17.20.5
+ip explicit-path name GUY1-BET1-TGU1-PIN1-SPE1-CGA9-VPL1-CRZ1-NAP3-NAP4-NPA2-BTCHL enable
+ next-address loose 172.16.30.34
+ next-address 172.16.22.66
+ next-address 172.16.23.2
+ next-address 172.16.24.2
+ next-address 172.16.25.10
+ next-address 172.16.26.78
+ next-address 172.16.26.74
+ next-address 172.16.27.6
+ next-address 172.16.20.65
+ next-address 172.16.20.41
+ next-address 172.16.20.46
+ next-address loose 172.17.20.5

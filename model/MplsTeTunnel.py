@@ -76,10 +76,13 @@ class MplsTeTunnel:
                             ip_reference_hop=ip_reference_hop, hop=hop, index_way=index_way_path, suffix=suffix_path)
                         comand_tunnel += self.add_explicit_path(index, name=new_paths[index].name,
                                                                 index_way=index_way_tunnel)
+                        self.parent.explicit_paths[new_paths[index].name] = new_paths[index]
                 except KeyError as e:
                     self.verbose.warning(
                         "add_hop_ip_explicit_paths dev{0} no P {1}".format(self.parent.ip, path["name"]))
-
+        self.paths = {**self.paths, **{
+            index: {"index": index, "path_type": "explicit", "name": path.name} for index, path in new_paths.items()}}
+        self.indexes = list(self.paths.keys())
 
         for index, path in new_paths.items():
             command_path += path.command
@@ -90,7 +93,7 @@ class MplsTeTunnel:
         index = self.get_new_index_path(index, index_way=index_way)
         if index is not None:
             self.indexes.append(index)
-            return " tunnel mpls traffic-eng path-option " + index + " explicit " + name + "\n"
+            return " tunnel mpls traffic-eng path-option " + index + " explicit name " + name + "\n"
         else:
             return ""
 
