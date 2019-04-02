@@ -13,11 +13,10 @@ suffix_path = "VPL9K_MIG"
 cisco = CiscoIOS(ip=ip, display_name="", master=isp.master)
 isp.excute_methods({"set_mpls_te_tunnels": {}, "set_ip_explicit_paths": {}}, devices=[cisco])
 
+data2 = isp.replace_loose_mpls_te_paths(abr_ip=abr_ip, new_abr_ip=new_abr_ip, devices=["172.16.30.44", "172.16.30.45"],
+                                        suffix_path=suffix_path)
+
 with open(f"{cisco.ip}_loose.txt", "w") as f:
     data = f'------------------\n{cisco.ip}\n'
-    data += cisco.head_te_add_hop_ip_explicit_paths(hop={"next_hop": new_abr_ip, "loose": "loose"},
-                                                    ip_reference_hop=abr_ip,
-                                                    index_way_path="replace", index_way_tunnel="before",
-                                                    suffix_path=suffix_path)
-
+    data += data2
     f.write(data)

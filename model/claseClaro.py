@@ -17,7 +17,7 @@ from model.ospf_database import ospf_database
 import yaml
 from tools import logged
 from flask import jsonify
-
+from model.CiscoIOS import CiscoIOS
 from pysnmp.entity.rfc3413.oneliner import cmdgen
 from pysnmp.proto.rfc1902 import Integer, IpAddress, OctetString
 
@@ -462,7 +462,7 @@ class Claro:
             device_list.append(device)
             device.platform = platform
             device.hostname = hostname
-        return self.clean_list_devices(device_list)
+        return device_list
 
     def get_device_list(self, filename):
         device_list = self.read_file(filename=filename)

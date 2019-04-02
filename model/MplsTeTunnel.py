@@ -48,6 +48,23 @@ class MplsTeTunnel:
                 return self.get_new_index_protected_path(index=index, index_way="after")
         return str(index)
 
+    def get_explicit_paths(self, ips, mode='any', excludes=[]):
+        paths = []
+        for index, path in self.paths.items():
+
+            if path["path_type"] == "explicit":
+                try:
+
+                    explicit_path = self.parent.explicit_paths[path["name"]]
+                    if not any([exclude in explicit_path.name for exclude in excludes]):
+                        if explicit_path.ips_on_path(ips=ips, mode=mode):
+                            paths.append({'index': index, 'name': explicit_path})
+                except KeyError as e:
+                    pass
+        return paths
+
+
+
     def get_new_index_path(self, index, index_way="after"):
         index = int(index)
         while str(index) in self.indexes:
@@ -72,14 +89,24 @@ class MplsTeTunnel:
                     if self.parent.explicit_paths[path["name"]].ip_on_path(ip=ip_reference_hop):
                         comand_tunnel += " interface tunnel " + self.tunnel + "\n"
                         explicit_path = self.parent.explicit_paths[path["name"]]
-                        new_paths[index] = explicit_path.copy_path_new_hop(
-                            ip_reference_hop=ip_reference_hop, hop=hop, index_way=index_way_path, suffix=suffix_path)
-                        comand_tunnel += self.add_explicit_path(index, name=new_paths[index].name,
+                        if not explicit_path.name + suffix_path in self.parent.explicit_paths:
+                            new_paths[index] = explicit_path.copy_path_new_hop(
+                                ip_reference_hop=ip_reference_hop, hop=hop, index_way=index_way_path,
+                                suffix=suffix_path)
+                            self.parent.explicit_paths[new_paths[index].name] = new_paths[index]
+                            new_path = new_paths[index]
+                        else:
+                            new_path = self.parent.explicit_paths[explicit_path.name + suffix_path]
+                        comand_tunnel += self.add_explicit_path(index, name=new_path.name,
                                                                 index_way=index_way_tunnel)
-                        self.parent.explicit_paths[new_paths[index].name] = new_paths[index]
+
                 except KeyError as e:
                     self.verbose.warning(
                         "add_hop_ip_explicit_paths dev{0} no P {1}".format(self.parent.ip, path["name"]))
+                except AttributeError as e:
+                    self.verbose.warning(
+                        "add_hop_ip_explicit_paths dev{0} no explicit paths".format(self.parent.ip, path["name"]))
+
         self.paths = {**self.paths, **{
             index: {"index": index, "path_type": "explicit", "name": path.name} for index, path in new_paths.items()}}
         self.indexes = list(self.paths.keys())

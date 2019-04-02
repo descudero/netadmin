@@ -11,7 +11,6 @@ from netmiko import NetMikoTimeoutException
 from paramiko import AuthenticationException
 from paramiko import SSHException
 from pysnmp.entity.rfc3413.oneliner import cmdgen
-from model.InternetServiceProvider import InternetServiceProvider
 
 import lib.pyyed as pyyed
 from model.BaseDevice import BaseDevice as Parent
@@ -164,6 +163,15 @@ class CiscoIOS(Parent):
                         "disable-fallback", "")
             self.pseudo_wire_class[lines[0]] = data
 
+    def check_tunnels_paths(self, complex_ips, mode='all', excludes=[]):
+        tunnels = []
+        for index, tunnel in self.mpls_te_tunnels.items():
+            for ips in complex_ips:
+                paths = tunnel.get_explicit_paths(ips=ips, mode=mode, excludes=excludes)
+                if (paths):
+                    tunnels.append({'index': index, 'paths': paths})
+        return tunnels
+
     def set_mpls_te_tunnels(self):
         # todo change to textfsm template, template listo solo falta el methodo
         # todo create mpls te tunnel
@@ -219,16 +227,12 @@ class CiscoIOS(Parent):
     def mpls_traffic_tunnels_interfaces(self):
 
         self.set_mpls_te_tunnels_mid_point()
-        devices = { te_tunnel.source_ip for
-                    te_tunnel in  self.mpls_te_tunnels_mid_point.values()}
+        devices = {te_tunnel.source_ip for
+                   te_tunnel in self.mpls_te_tunnels_mid_point.values()}
 
         isp = InternetServiceProvider()
-        isp.master =  self.master
+        isp.master = self.master
         isp.excute_methods()
-
-
-
-
 
     def set_service_instances(self):
         # todo change to textfsm template
@@ -341,7 +345,6 @@ class CiscoIOS(Parent):
 
     def get_service_instance_by_tunnel_id(self, tunnel_id):
         if (not hasattr(self, 'service_instances')):
-            print(self.ip + " set_service_intances ")
             self.set_service_instances()
 
             # print(self.service_instances.keys())
@@ -1415,7 +1418,7 @@ class CiscoIOS(Parent):
                     si["vfi"] = ""
                 si["pws_neighbor"] = pws[0]["destination_ip"]
                 si["pws_vcid"] = pws[0]["vc_id"]
-        pprint(temporal_service_instance)
+
         return temporal_service_instance
 
     def pseudowire_per_interface_vlan(self, interface, vlan):
@@ -1527,8 +1530,6 @@ class CiscoIOS(Parent):
         list_of_hops = self.send_command_and_parse(command="show run | s ip explicit-path", template_name=template_name)
         path_names = {hop['name'] for hop in list_of_hops}
         self.explicit_paths = {}
-        pprint(list_of_hops)
-        pprint(path_names)
         for path_name in path_names:
             self.explicit_paths[path_name] = IpExplicitPath(name=path_name, hops=[hop for hop in list_of_hops if
                                                                                   hop["name"] == path_name],

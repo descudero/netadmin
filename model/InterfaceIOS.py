@@ -139,6 +139,10 @@ class InterfaceIOS(object):
         return str(id(self)) + str(
             self.__class__) + self.if_index + " " + self.description + " " + self.link_state + " "
 
+    @property
+    def dict(self):
+        return self.dict_data()
+
     def dict_data(self):
         interface_data = dict()
         interface_data['if_index'] = self.if_index

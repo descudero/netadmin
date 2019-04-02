@@ -60,6 +60,19 @@ class InternetServiceProvider(Claro):
 
         return final_command
 
+    def check_interfaces_te_tunnels(self, complex_hops, devices, mode='all', excludes=[]) -> list:
+        devices = self.get_mpls_te_end_points(devices=devices)
+        self.excute_methods(methods={"set_mpls_te_tunnels": {}, "set_ip_explicit_paths": {}}, devices=devices)
+        devices = sorted(devices, key=lambda o: o.ip)
+        check = []
+        for device in devices:
+
+            tunnels = device.check_tunnels_paths(complex_hops, mode=mode, excludes=excludes)
+            if (tunnels):
+                check.append({"ip": device.ip, 'tunnels': tunnels})
+
+        return check
+
     def add_interface_mpls_te_paths(self, hops_data, devices=[],
                                     suffix_path="NEW"):
         devices = self.get_mpls_te_end_points(devices=devices)
