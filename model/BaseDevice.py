@@ -164,6 +164,7 @@ class BaseDevice(object):
         param2 = '-w' if system_name().lower() == 'windows' else '-W'
         # Building the command. Ex: "ping -c 1 google.com"
         command = ['ping', param2, '200', param1, '1', self.ip]
+        print(f'ping -w 200 -c 2 {self.ip}')
         self.device_up = system_call(command, shell=True) == 0
         # Pinging
         return self.device_up
