@@ -6,7 +6,7 @@ from netmiko import NetMikoAuthenticationException
 import time
 import textfsm
 import socket
-
+import os
 from platform import system as system_name  # Returns the system/OS name
 from subprocess import call   as system_call  # Execute a shell command
 from tools import logged
@@ -164,9 +164,11 @@ class BaseDevice(object):
         param2 = '-w' if system_name().lower() == 'windows' else '-W'
         # Building the command. Ex: "ping -c 1 google.com"
         command = ['ping', param2, '200', param1, '1', self.ip]
-        print(command)
-        print(f'ping -w 200 -c 2 {self.ip}')
-        self.device_up = system_call(command, shell=True) == 0
+
+        if system_name().lower() == 'windows':
+            self.device_up = system_call(command, shell=True) == 0
+        else:
+            self.device_up = os.system(f"ping -c 2  -W 200 {self.ip} ") == 0
         # Pinging
         return self.device_up
 
