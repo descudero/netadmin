@@ -168,7 +168,7 @@ class BaseDevice(object):
         if system_name().lower() == 'windows':
             self.device_up = system_call(command, shell=True) == 0
         else:
-            self.device_up = os.system(f"ping -c 2  -W 200 {self.ip} ") == 0
+            self.device_up = os.system(f"ping -c 2  -W 1 {self.ip} ") == 0
         # Pinging
         return self.device_up
 
