@@ -1,0 +1,17 @@
+router bgp $ASN_BGP
+ bgp router-id $LOCAL_IP
+ bgp log-neighbor-changes
+ bgp graceful-restart
+ no bgp default ipv4-unicast
+
+neighbor $ABR_IP remote-as $ASN_BGP
+ neighbor $ABR_IP description $ABR_DESCRIPTION
+ neighbor $ABR_IP update-source $SOURCE_LOOPBACK
+address-family ipv4
+  bgp dampening
+  bgp additional-paths install
+  bgp nexthop trigger delay 0
+  network $LOCAL_IP mask 255.255.255.255
+  neighbor $ABR_IP activate
+  neighbor $ABR_IP send-label
+ exit-address-family

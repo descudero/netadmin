@@ -1,0 +1,94 @@
+interface $ospf_mpls_loopback_index
+description MPLS_OSPF_ADMIN
+ipv4 address $ospf_mpls_address/32
+
+router ospf $ospf_proccess
+spf prefix-priority route-policy PREFIX_PRIORITY
+log adjacency changes
+router-id $ospf_mpls_address
+network point-to-point
+timers throttle lsa all 0 20 5000
+timers throttle spf 50 50 5000
+timers lsa min-arrival 15
+timers pacing flood 15
+auto-cost reference-bandwidth 100000
+nsr
+nsf ietf
+fast-reroute per-prefix
+fast-reroute per-prefix remote-lfa tunnel mpls-ldp
+bfd minimum-interval 50
+bfd multiplier 3
+
+
+microloop avoidance rib-update-delay 60000
+microloop avoidance protected
+fast-reroute per-prefix priority-limit medium
+
+address-family ipv4 unicast
+area $area_id
+mpls traffic-eng
+mpls traffic-eng router-id $ospf_mpls_loopback_index
+bfd fast-detectx
+
+ !
+ interface $ospf_mpls_loopback_index
+ passive enable
+ !
+!
+route-policy PREFIX_PRIORITY
+  if destination in FFR_PRIORITY then
+    set spf-priority critical
+  endif
+end-policy
+!
+prefix-set FFR_PRIORITY
+  0.0.0.0/0 le 32
+end-set
+!
+
+
+mpls oam
+!
+mpls ldp
+igp sync delay on-proc-restart 60
+router-id $ospf_mpls_loopback_index
+discovery targeted-hello holdtime 90
+discovery targeted-hello interval 10
+session protection
+mpls ldp
+discovery targeted-hello accept
+nsr
+graceful-restart
+address-family ipv4
+ discovery targeted-hello accept
+!
+label
+ local
+ allocate for MPLS_LDP
+!
+log
+ neighbor
+ adjacency
+!
+
+
+prefix-set MPLS_LDP
+  10.0.0.0/8 le 32,
+  172.16.0.0/16 le 32,
+  172.17.0.0/16 le 32,
+  172.18.0.0/16 le 32,
+  172.19.0.0/16 le 32,
+  172.20.0.0/16 le 32,
+  172.21.0.0/16 le 32
+end-set
+!
+
+
+
+rsvp
+signalling graceful-restart
+
+
+bfd
+echo disable
+!

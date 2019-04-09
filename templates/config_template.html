@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="row p-4">
+    <form action="" class="form-inline" method="POST">
+        <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+                <div class="input-group-text">Ip del equipo</div>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label for="device_type">Plantillas Para</label>
+            <select class="form-control" id="device_type">
+                <option selected value="xr"> Cisco IOSXR</option>
+                <option value="xe"> Cisco IOSXE</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="config_template">Plantillas Para</label>
+            <select class="form-control" id="config_template">
+
+            </select>
+        </div>
+
+    </form>
+    <button class="btn btn-primary mb-2" id="request_fields">Enviar</button>
+</div>
+
+<h1>{{titulo}}</h1>
+<img id="loading_json" src="http://thinkfuture.com/wp-content/uploads/2013/10/loading_spinner.gif"/>
+<div class="row">
+
+    <div class="col-sm-10">
+        <form id="template_form" action="" method="POST">
+
+        </form>
+        <button class="btn btn-primary mb-2" id="render_config_template">Cargar template</button>
+    </div>
+
+</div>
+<div class="row">
+
+    <div class="col-sm-10" id="config">
+
+    </div>
+
+</div>
+<script src="{{ url_for('static', filename='js/config_template.js') }}"></script>
+{% endblock %}
+
+

@@ -28,11 +28,7 @@ PE:
       l3_protocol_attr: PNI
 
 RCE:
-  devices:
-    - 172.16.30.1
-    - 172.16.30.5
+  network: 172.16.30.0/24
   filters:
     - l3_protocol: MPLS
       l3_protocol_attr: OSP
-      l1_protocol: CABLE_SUBMARINO
-      data_flow: DOWNSTREAM

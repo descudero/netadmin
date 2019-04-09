@@ -1,0 +1,16 @@
+router bgp $ASN_BGP
+ bgp router-id $LOCAL_IP
+ bgp log-neighbor-changes
+ bgp graceful-restart
+ no bgp default ipv4-unicast
+
+ bgp log-neighbor-changes
+ neighbor $PE_IP remote-as $ASN_BGP
+ neighbor $PE_IP update-source $UPDATE_SOURCE_INTERFACE
+ !
+ address-family ipv4
+  neighbor $PE_IP send-community
+  neighbor $PE_IP route-reflector-client
+  neighbor $PE_IP next-hop-self all
+  neighbor $PE_IP send-label
+  neighbor $PE_IP activate

@@ -89,3 +89,136 @@ INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
 2019-02-18 15:26:52,479:WARNING:web.netadmin.app:KeyError(b'db')
 2019-02-18 15:29:49,138:WARNING:web.netadmin.app:UnboundLocalError("local variable 'dict_ospf' referenced before assignment")
 2019-02-18 15:30:12,352:WARNING:web.netadmin.app:UnboundLocalError("local variable 'dict_ospf' referenced before assignment")
+2019-04-08 16:10:14,977:WARNING:web.netadmin.app:None
+2019-04-08 16:11:28,820:WARNING:web.netadmin.app:xr
+2019-04-08 17:59:31,171:WARNING:web.netadmin.app:
+2019-04-08 18:00:46,547:WARNING:web.netadmin.app:
+2019-04-08 18:01:10,315:WARNING:web.netadmin.app:
+2019-04-08 18:01:28,507:WARNING:web.netadmin.app:
+2019-04-08 18:01:34,718:WARNING:web.netadmin.app:
+2019-04-08 18:02:03,266:WARNING:web.netadmin.app:
+2019-04-08 18:03:15,146:WARNING:web.netadmin.app:
+2019-04-08 18:03:47,476:WARNING:web.netadmin.app:[]
+2019-04-08 18:09:55,908:WARNING:web.netadmin.app:[]
+2019-04-08 18:10:06,996:WARNING:web.netadmin.app:[]
+2019-04-08 18:10:43,332:WARNING:web.netadmin.app:[]
+2019-04-08 18:13:36,469:WARNING:web.netadmin.app:[]
+2019-04-08 18:18:16,244:WARNING:web.netadmin.app:[]
+2019-04-08 18:22:07,036:WARNING:web.netadmin.app:[]
+2019-04-08 18:23:13,677:WARNING:web.netadmin.app:[]
+2019-04-08 18:23:53,477:WARNING:web.netadmin.app:[]
+2019-04-08 18:24:59,203:WARNING:web.netadmin.app:{'ospf_mpls_loopback_index': '23', 'ospf_mpls_address': '23', 'ospf_proccess': '23', 'area_id': '23'}
+2019-04-08 18:26:01,475:WARNING:web.netadmin.app:{'ospf_mpls_loopback_index': '233', 'ospf_mpls_address': '23', 'ospf_proccess': '23', 'area_id': '23'}
+2019-04-08 18:27:39,650:WARNING:web.netadmin.app:{'ospf_mpls_loopback_index': '23', 'ospf_mpls_address': '23', 'ospf_proccess': '23', 'area_id': '23'}
+2019-04-08 18:28:03,539:WARNING:web.netadmin.app:{'ospf_mpls_loopback_index': '23', 'ospf_mpls_address': '23', 'ospf_proccess': '231', 'area_id': '12313'}
+2019-04-08 18:28:39,643:WARNING:web.netadmin.app:{'ospf_mpls_loopback_index': '2344234', 'ospf_mpls_address': '234242', 'ospf_proccess': '242432', 'area_id': '242424'}
+2019-04-08 18:29:03,490:WARNING:web.netadmin.app:{'ospf_mpls_loopback_index': '23', 'ospf_mpls_address': '13', 'ospf_proccess': '13', 'area_id': '123'}
+2019-04-08 18:29:34,371:WARNING:web.netadmin.app:{'ospf_mpls_loopback_index': '23', 'ospf_mpls_address': '23', 'ospf_proccess': '23', 'area_id': '23'}
+2019-04-08 18:29:34,371:WARNING:web.netadmin.app:interface 23
+description MPLS_OSPF_ADMIN
+ipv4 address 23/32
+
+router ospf 23
+spf prefix-priority route-policy PREFIX_PRIORITY
+log adjacency changes
+router-id 23
+network point-to-point
+timers throttle lsa all 0 20 5000
+timers throttle spf 50 50 5000
+timers lsa min-arrival 15
+timers pacing flood 15
+auto-cost reference-bandwidth 100000
+nsr
+nsf ietf
+fast-reroute per-prefix
+fast-reroute per-prefix remote-lfa tunnel mpls-ldp
+bfd minimum-interval 50
+bfd multiplier 3
+
+
+microloop avoidance rib-update-delay 60000
+microloop avoidance protected
+fast-reroute per-prefix priority-limit medium
+
+address-family ipv4 unicast
+area 23
+mpls traffic-eng
+mpls traffic-eng router-id 23
+bfd fast-detectx
+
+ !
+ interface 23
+ passive enable
+ !
+!
+route-policy PREFIX_PRIORITY
+  if destination in FFR_PRIORITY then
+    set spf-priority critical
+  endif
+end-policy
+!
+prefix-set FFR_PRIORITY
+  0.0.0.0/0 le 32
+end-set
+!
+
+
+mpls oam
+!
+mpls ldp
+igp sync delay on-proc-restart 60
+router-id 23
+discovery targeted-hello holdtime 90
+discovery targeted-hello interval 10
+session protection
+mpls ldp
+discovery targeted-hello accept
+nsr
+graceful-restart
+address-family ipv4
+ discovery targeted-hello accept
+!
+label
+ local
+ allocate for MPLS_LDP
+!
+log
+ neighbor
+ adjacency
+!
+
+
+prefix-set MPLS_LDP
+  10.0.0.0/8 le 32,
+  172.16.0.0/16 le 32,
+  172.17.0.0/16 le 32,
+  172.18.0.0/16 le 32,
+  172.19.0.0/16 le 32,
+  172.20.0.0/16 le 32,
+  172.21.0.0/16 le 32
+end-set
+!
+
+
+
+rsvp
+signalling graceful-restart
+
+
+bfd
+echo disable
+!
+2019-04-08 18:30:46,100:WARNING:web.netadmin.app:{'ospf_mpls_loopback_index': '23', 'ospf_mpls_address': '23', 'ospf_proccess': '23', 'area_id': '23'}
+2019-04-08 18:30:46,100:WARNING:web.netadmin.app:interface 23<br/>description MPLS_OSPF_ADMIN<br/>ipv4 address 23/32<br/><br/>router ospf 23<br/>spf prefix-priority route-policy PREFIX_PRIORITY<br/>log adjacency changes<br/>router-id 23<br/>network point-to-point<br/>timers throttle lsa all 0 20 5000<br/>timers throttle spf 50 50 5000<br/>timers lsa min-arrival 15<br/>timers pacing flood 15<br/>auto-cost reference-bandwidth 100000<br/>nsr<br/>nsf ietf<br/>fast-reroute per-prefix<br/>fast-reroute per-prefix remote-lfa tunnel mpls-ldp<br/>bfd minimum-interval 50<br/>bfd multiplier 3<br/><br/><br/>microloop avoidance rib-update-delay 60000<br/>microloop avoidance protected<br/>fast-reroute per-prefix priority-limit medium<br/><br/>address-family ipv4 unicast<br/>area 23<br/>mpls traffic-eng<br/>mpls traffic-eng router-id 23<br/>bfd fast-detectx<br/><br/> !<br/> interface 23<br/> passive enable<br/> !<br/>!<br/>route-policy PREFIX_PRIORITY<br/>  if destination in FFR_PRIORITY then<br/>    set spf-priority critical<br/>  endif<br/>end-policy<br/>!<br/>prefix-set FFR_PRIORITY<br/>  0.0.0.0/0 le 32<br/>end-set<br/>!<br/><br/><br/>mpls oam<br/>!<br/>mpls ldp<br/>igp sync delay on-proc-restart 60<br/>router-id 23<br/>discovery targeted-hello holdtime 90<br/>discovery targeted-hello interval 10<br/>session protection<br/>mpls ldp<br/>discovery targeted-hello accept<br/>nsr<br/>graceful-restart<br/>address-family ipv4<br/> discovery targeted-hello accept<br/>!<br/>label<br/> local<br/> allocate for MPLS_LDP<br/>!<br/>log<br/> neighbor<br/> adjacency<br/>!<br/><br/><br/>prefix-set MPLS_LDP<br/>  10.0.0.0/8 le 32,<br/>  172.16.0.0/16 le 32,<br/>  172.17.0.0/16 le 32,<br/>  172.18.0.0/16 le 32,<br/>  172.19.0.0/16 le 32,<br/>  172.20.0.0/16 le 32,<br/>  172.21.0.0/16 le 32<br/>end-set<br/>!<br/><br/><br/><br/>rsvp<br/>signalling graceful-restart<br/><br/><br/>bfd<br/>echo disable<br/>!
+2019-04-08 18:35:38,787:WARNING:web.netadmin.app:{'ospf_mpls_loopback_index': '23', 'ospf_mpls_address': '23', 'ospf_proccess': '23', 'area_id': '23'}
+2019-04-08 18:35:38,787:WARNING:web.netadmin.app:interface 23<br/>description MPLS_OSPF_ADMIN<br/>ipv4 address 23/32<br/><br/>router ospf 23<br/>spf prefix-priority route-policy PREFIX_PRIORITY<br/>log adjacency changes<br/>router-id 23<br/>network point-to-point<br/>timers throttle lsa all 0 20 5000<br/>timers throttle spf 50 50 5000<br/>timers lsa min-arrival 15<br/>timers pacing flood 15<br/>auto-cost reference-bandwidth 100000<br/>nsr<br/>nsf ietf<br/>fast-reroute per-prefix<br/>fast-reroute per-prefix remote-lfa tunnel mpls-ldp<br/>bfd minimum-interval 50<br/>bfd multiplier 3<br/><br/><br/>microloop avoidance rib-update-delay 60000<br/>microloop avoidance protected<br/>fast-reroute per-prefix priority-limit medium<br/><br/>address-family ipv4 unicast<br/>area 23<br/>mpls traffic-eng<br/>mpls traffic-eng router-id 23<br/>bfd fast-detectx<br/><br/> !<br/> interface 23<br/> passive enable<br/> !<br/>!<br/>route-policy PREFIX_PRIORITY<br/>  if destination in FFR_PRIORITY then<br/>    set spf-priority critical<br/>  endif<br/>end-policy<br/>!<br/>prefix-set FFR_PRIORITY<br/>  0.0.0.0/0 le 32<br/>end-set<br/>!<br/><br/><br/>mpls oam<br/>!<br/>mpls ldp<br/>igp sync delay on-proc-restart 60<br/>router-id 23<br/>discovery targeted-hello holdtime 90<br/>discovery targeted-hello interval 10<br/>session protection<br/>mpls ldp<br/>discovery targeted-hello accept<br/>nsr<br/>graceful-restart<br/>address-family ipv4<br/> discovery targeted-hello accept<br/>!<br/>label<br/> local<br/> allocate for MPLS_LDP<br/>!<br/>log<br/> neighbor<br/> adjacency<br/>!<br/><br/><br/>prefix-set MPLS_LDP<br/>  10.0.0.0/8 le 32,<br/>  172.16.0.0/16 le 32,<br/>  172.17.0.0/16 le 32,<br/>  172.18.0.0/16 le 32,<br/>  172.19.0.0/16 le 32,<br/>  172.20.0.0/16 le 32,<br/>  172.21.0.0/16 le 32<br/>end-set<br/>!<br/><br/><br/><br/>rsvp<br/>signalling graceful-restart<br/><br/><br/>bfd<br/>echo disable<br/>!
+2019-04-08 18:37:31,850:WARNING:web.netadmin.app:{'ABR_DESCRIPTION': 'WPL RGIONAL 3 ', 'SOURCE_LOOPBACK': 'lo1', 'LOCAL_IP': '172.17.28.240', 'ASN_BGP': '52468', 'ABR_IP': '172.17.28.230'}
+2019-04-08 18:37:31,850:WARNING:web.netadmin.app:router bgp 52468<br/> bgp router-id 172.17.28.240<br/> bgp log-neighbor-changes<br/> bgp graceful-restart<br/> no bgp default ipv4-unicast<br/>neighbor 172.17.28.230 remote-as 52468<br/> neighbor 172.17.28.230 description WPL RGIONAL 3 <br/> neighbor 172.17.28.230 update-source lo1<br/>address-family ipv4<br/>  bgp dampening<br/>  bgp additional-paths install<br/>  bgp nexthop trigger delay 0<br/>  network 172.17.28.240 mask 255.255.255.255<br/>  neighbor 172.17.28.230 activate<br/>  neighbor 172.17.28.230 send-label<br/> exit-address-family<br/>
+2019-04-08 18:45:56,770:WARNING:web.netadmin.app:{'UPDATE_SOURCE_INTERFACE': 'loopback57', 'LOCAL_IP': '172.17.24.210', 'ASN_BGP': '52468', 'PE_IP': '172.17.24.240'}
+2019-04-08 18:45:56,770:WARNING:web.netadmin.app:router bgp 52468<br/> bgp router-id 172.17.24.210<br/> bgp log-neighbor-changes<br/> bgp graceful-restart<br/> no bgp default ipv4-unicast<br/><br/> bgp log-neighbor-changes<br/> neighbor 172.17.24.240 remote-as 52468<br/> neighbor 172.17.24.240 update-source loopback57<br/> !<br/> address-family ipv4<br/>  neighbor 172.17.24.240 send-community<br/>  neighbor 172.17.24.240 route-reflector-client<br/>  neighbor 172.17.24.240 next-hop-self all<br/>  neighbor 172.17.24.240 send-label<br/>  neighbor 172.17.24.240 activate
+2019-04-08 18:48:33,309:WARNING:web.netadmin.app:{'UPDATE_SOURCE_INTERFACE': '12', 'LOCAL_IP': '213', 'ASN_BGP': '123', 'PE_IP': '13'}
+2019-04-08 18:48:33,309:WARNING:web.netadmin.app:router bgp 123<br/> bgp router-id 213<br/> bgp log-neighbor-changes<br/> bgp graceful-restart<br/> no bgp default ipv4-unicast<br/><br/> bgp log-neighbor-changes<br/> neighbor 13 remote-as 123<br/> neighbor 13 update-source 12<br/> !<br/> address-family ipv4<br/>  neighbor 13 send-community<br/>  neighbor 13 route-reflector-client<br/>  neighbor 13 next-hop-self all<br/>  neighbor 13 send-label<br/>  neighbor 13 activate
+2019-04-08 18:52:29,341:WARNING:web.netadmin.app:{'ospf_mpls_loopback_index': '12', 'ospf_mpls_address': '122', 'ospf_proccess': '123', 'area_id': '123'}
+2019-04-08 18:52:29,342:WARNING:web.netadmin.app:interface 12<br/>description MPLS_OSPF_ADMIN<br/>ip address 122 255.255.255.255<br/><br/>ip prefix-list LFA-FRR-LOOPBACKS seq 5 permit 0.0.0.0/0 ge 32<br/>!<br/>route-map RM-LFA-FRR permit 10<br/>match ip address prefix-list LFA-FRR-LOOPBACKS<br/>!<br/><br/>ip cef<br/>mpls ldp router-id 12 force<br/>mpls label protocol ldp<br/>mpls ldp session protection<br/>mpls ldp igp sync holddown 1000<br/>mpls ldp label<br/>allocate global host-routes<br/>mpls ldp graceful-restart<br/>!<br/>mpls traffic-eng tunnels<br/>!<br/><br/>router ospf 123<br/>router-id 122<br/>ispf<br/>nsf ietf<br/>fast-reroute per-prefix enable  prefix-priority high<br/>fast-reroute per-prefix remote-lfa area 123 tunnel mpls-ldp<br/>fast-reroute keep-all-paths<br/>fast-reroute per-prefix remote-lfa tunnel mpls-ldp<br/>fast-reroute per-prefix tie-break srlg required index 10<br/>fast-reroute per-prefix tie-break primary-path index 20<br/>fast-reroute per-prefix tie-break interface-disjoint index 30<br/>fast-reroute per-prefix tie-break lowest-metric index 40<br/>fast-reroute per-prefix tie-break linecard-disjoint index 50<br/>fast-reroute per-prefix tie-break node-protecting index 60<br/>fast-reroute per-prefix tie-break broadcast-interface-disjoint index 70<br/><br/>microloop avoidance protected<br/>microloop avoidance rib-update-delay 60000<br/>bfd all-interfaces<br/><br/>auto-cost reference-bandwidth 100000<br/>prefix-priority high route-map RM-LFA-FRR<br/>timers throttle spf 50 50 5000<br/>timers throttle lsa 0 20 5000<br/>timers lsa arrival 15<br/>timers pacing flood 15<br/>passive-interface default<br/>mpls ldp sync<br/>mpls traffic-eng router-id 12<br/>mpls traffic-eng area 0<br/>mpls ldp discovery targeted-hello accept<br/>!<br/><br/><br/><br/>!
+2019-04-08 18:56:35,747:WARNING:web.netadmin.app:{'neighbor_interface': '123', 'other_description': '13', '1_interface_index': '13', 'neighbor_name': '13', '2_ip_address': '13', 'l1_attribute': '123', 'l3_attribute': '123', 'l3_protocol': '13', 'l1_protocol': '13', 'direction': '13', '3_mtu': '13', 'mask': '13'}
+2019-04-08 18:56:35,747:WARNING:web.netadmin.app:interface 13<br/>description L3:13123 D:13 L1:13123 13 123 13<br/>ip address 13 13<br/>no ip arp cache<br/>ip mtu 13<br/>no ip redirects<br/>dampening 30 75 2000 240<br/> load-interval 30<br/> carrier-delay up 2<br/> carrier-delay down msec<br/> cdp enable<br/> mpls ip<br/> mpls label protocol ldp<br/> mpls ldp igp sync delay 60<br/> mpls traffic-eng tunnels<br/> bfd interval 50 min_rx 50 multiplier 3<br/> cdp enable<br/> ip rsvp bandwidth percent 95<br/> ip rsvp signalling hello bfd<br/> ip rsvp signalling hello refresh misses 10<br/>

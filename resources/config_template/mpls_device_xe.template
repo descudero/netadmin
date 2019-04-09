@@ -1,0 +1,58 @@
+interface $ospf_mpls_loopback_index
+description MPLS_OSPF_ADMIN
+ip address $ospf_mpls_address 255.255.255.255
+
+ip prefix-list LFA-FRR-LOOPBACKS seq 5 permit 0.0.0.0/0 ge 32
+!
+route-map RM-LFA-FRR permit 10
+match ip address prefix-list LFA-FRR-LOOPBACKS
+!
+
+ip cef
+mpls ldp router-id $ospf_mpls_loopback_index force
+mpls label protocol ldp
+mpls ldp session protection
+mpls ldp igp sync holddown 1000
+mpls ldp label
+allocate global host-routes
+mpls ldp graceful-restart
+!
+mpls traffic-eng tunnels
+!
+
+router ospf $ospf_proccess
+router-id $ospf_mpls_address
+ispf
+nsf ietf
+fast-reroute per-prefix enable  prefix-priority high
+fast-reroute per-prefix remote-lfa area $area_id tunnel mpls-ldp
+fast-reroute keep-all-paths
+fast-reroute per-prefix remote-lfa tunnel mpls-ldp
+fast-reroute per-prefix tie-break srlg required index 10
+fast-reroute per-prefix tie-break primary-path index 20
+fast-reroute per-prefix tie-break interface-disjoint index 30
+fast-reroute per-prefix tie-break lowest-metric index 40
+fast-reroute per-prefix tie-break linecard-disjoint index 50
+fast-reroute per-prefix tie-break node-protecting index 60
+fast-reroute per-prefix tie-break broadcast-interface-disjoint index 70
+
+microloop avoidance protected
+microloop avoidance rib-update-delay 60000
+bfd all-interfaces
+
+auto-cost reference-bandwidth 100000
+prefix-priority high route-map RM-LFA-FRR
+timers throttle spf 50 50 5000
+timers throttle lsa 0 20 5000
+timers lsa arrival 15
+timers pacing flood 15
+passive-interface default
+mpls ldp sync
+mpls traffic-eng router-id $ospf_mpls_loopback_index
+mpls traffic-eng area 0
+mpls ldp discovery targeted-hello accept
+!
+
+
+
+!

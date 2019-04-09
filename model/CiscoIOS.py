@@ -63,6 +63,7 @@ class CiscoIOS(Parent):
         self.dev.debug("device {0} INIT".format(self.ip))
         self.device_type = "cisco_ios_"
         self.uid = 0
+        self.country = "NA"
 
     def add_p2p_ospf(self, p2p, p2p_ospf):
 
@@ -1237,6 +1238,8 @@ class CiscoIOS(Parent):
         self.set_snmp_location()
 
         data = self.parse_txtfsm_template(template_name="snmp_location_attr_profile.template", text=self.snmp_location)
+        self.verbose.warning(f"set_snmp_location_attr location {self.set_snmp_location()}")
+        self.verbose.warning(f"set_snmp_location_attr data {data}")
         if data:
             for attr, value in data[0].items():
                 try:
@@ -1467,6 +1470,19 @@ class CiscoIOS(Parent):
                     return self.yed_edges_points[letter].pop(index)
         return ("0", "0")
 
+    def duplicate_db(self):
+        self.duplicate = False
+        try:
+            connection = self.master.db_connect()
+            with connection.cursor() as cursor:
+                sql = '''SELECT uid FROM network_devices WHERE hostname=%s'''
+                cursor.execute(sql, (self.hostname,))
+                result = cursor.fetchone()
+                self.duplicate = result['ip'] != self.ip
+        except Exception as e:
+            self.log_db.warning(self.ip + " " + str(e))
+
+
     def uid_db(self):
         try:
             connection = self.master.db_connect()
@@ -1516,6 +1532,11 @@ class CiscoIOS(Parent):
         except Exception as e:
             print(e)
             return False
+
+    def save_interfaces_states(self, filters={}):
+        interfaces = self.get_interfaces_filtered(filters=filters)
+        for interface in interfaces:
+            interface.save()
 
     def get_interfaces_filtered(self, filters):
 

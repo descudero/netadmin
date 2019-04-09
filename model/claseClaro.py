@@ -20,6 +20,7 @@ from flask import jsonify
 from model.CiscoIOS import CiscoIOS
 from pysnmp.entity.rfc3413.oneliner import cmdgen
 from pysnmp.proto.rfc1902 import Integer, IpAddress, OctetString
+from model.Devices import Devices
 
 import psycopg2 as pmsql
 import xlwt
@@ -68,8 +69,6 @@ class Claro:
                 sh["db"] = dict_ospf
                 sh.close()
                 return dict_ospf
-
-
 
     def ospf_topology(self, ip_seed_router, process_id='1', area='0', filename="pruebayed"):
         ospf_db = ospf_database(ip_seed_router=ip_seed_router, isp=self, process_id=process_id, area=area)
@@ -622,17 +621,18 @@ class Claro:
 
     def save_interfaces_state_db(self, template='internet_ufinet.yml'):
         template_data = yaml.load(open(template).read())
-        interfaces = []
-        methods = {'set_interfaces': {}}
+        methods = ['set_interfaces']
         for device_group, data in template_data.items():
-            devices = self.devices_from_ip_list(data['devices'])
-            devices = self.correct_device_platform(devices)
-            self.excute_methods(methods=methods, devices=devices)
-            for device in devices:
-                for filter in data['filters']:
-                    interfaces += device.get_interfaces_filtered(filters=filter)
-        for interface in interfaces:
-            interface.save_state()
+            if 'network' in data:
+                devices = Devices(self.master, network=data['network'])
+            else:
+                devices = Devices(self.master, ip_list=data['devices'])
+            devices.remove_duplicates_db()
+            devices.execute(methods=methods)
+            for filter in data['filters']:
+                devices.execute(methods=["save_interfaces_states"],
+                                kwargs={ip: {"save_interfaces_states": {'filters': filter}} for ip in
+                                        devices.keys()})
 
 
 """

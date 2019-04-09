@@ -1,0 +1,21 @@
+interface $1_interface_index
+description L3:$l3_protocol$l3_attribute D:$direction L1:$l1_protocol$l1_attribute $neighbor_name $neighbor_interface $other_description
+ip address $2_ip_address $mask
+ip ospf network point-to-point
+no ip arp cache
+mtu $3_mtu
+no ip redirects
+dampening 30 75 2000 240
+ load-interval 30
+ carrier-delay up 2
+ carrier-delay down msec
+ cdp enable
+ mpls ip
+ mpls label protocol ldp
+ mpls ldp igp sync delay 60
+ mpls traffic-eng tunnels
+ bfd interval 50 min_rx 50 multiplier 3
+ cdp enable
+ ip rsvp bandwidth percent 95
+ ip rsvp signalling hello bfd
+ ip rsvp signalling hello refresh misses 10

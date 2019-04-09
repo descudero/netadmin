@@ -15,7 +15,7 @@ from model.claseClaro import Claro
 from model.InternetServiceProvider import InternetServiceProvider as ISP
 import logging
 from model.CiscoXR import CiscoXR
-
+from support.ConfigTemplate import ConfigTemplate
 import pandas as pd
 
 app = Flask(__name__)
@@ -253,6 +253,48 @@ def reporte_internet_actual():
 @app.route("/prueba/json/grafica")
 def prueba_json():
     return render_template("test_graficas.html")
+
+
+@app.route("/utilidades/plantillas_configuracion")
+def config_templates():
+    return render_template("config_template.html")
+
+
+@app.route("/utilidades/plantillas_disponibles", methods=['POST', "GET"])
+def config_templates_filter():
+    device_type = request.json['device_type']
+    try:
+        return jsonify([template for template in ConfigTemplate.get_all_templates_names() if device_type in template])
+    except Exception as e:
+        weblog.warning(f"error config_templates_filter {e}")
+        return jsonify(list())
+
+
+@app.route("/utilidades/template_fields", methods=['POST', "GET"])
+def json_template_names():
+    template_name = request.json['template_name']
+    template = ConfigTemplate(template_name=template_name)
+
+    try:
+        return jsonify(template.fields)
+    except Exception as e:
+        weblog.warning(f"error json_template_names {e}")
+        return jsonify(list())
+
+
+@app.route("/utilidades/render_config_template", methods=['POST', "GET"])
+def reder_config_template():
+    template_name = request.json['template_name']
+    form_data = request.json['form_data']
+    template = ConfigTemplate(template_name=template_name)
+    weblog.warning(form_data)
+    text = template.render_html(values=form_data)
+    weblog.warning(text)
+    try:
+        return jsonify({'config': text})
+    except Exception as e:
+        weblog.warning(f"error json_template_names {e}")
+        return jsonify(list())
 
 
 @app.route("/internet/isp/total/", methods=['POST', "GET"])
