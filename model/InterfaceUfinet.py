@@ -190,7 +190,7 @@ class InterfaceUfinet(InterfaceIOS):
 
                 cursor.execute(sql)
                 connection.commit()
-            self.db_log.warning(f'{self.parent_device.ip} saved interface_state {self.uid}')
+            self.db_log.info(f'{self.parent_device.ip} saved interface_state {self.uid}')
             return self.uid
         except Exception as e:
             connection.rollback()

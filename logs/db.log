@@ -1871,3 +1871,64 @@ INFO:db.CiscoPart:saved: PART SAVED UID 1817
 2019-04-09 18:55:53,938:WARNING:db.CiscoXR:172.16.30.253 'ip'
 2019-04-09 18:55:53,938:WARNING:db.CiscoXR:172.16.30.246 'ip'
 2019-04-09 18:55:53,938:WARNING:db.CiscoXR:172.16.30.254 'ip'
+2019-04-09 18:57:47,255:WARNING:db.CiscoXR:172.16.30.253 'ip'
+2019-04-09 18:57:47,271:WARNING:db.CiscoXR:172.16.30.246 'ip'
+2019-04-09 18:57:47,271:WARNING:db.CiscoXR:172.16.30.254 'ip'
+2019-04-09 18:58:11,079:WARNING:db.InterfaceUfinet:172.16.30.246 saved interface_state 59
+2019-04-09 18:58:11,104:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 1
+2019-04-09 18:58:11,104:WARNING:db.InterfaceUfinet:172.16.30.254 saved interface_state 34
+2019-04-09 18:58:12,179:WARNING:db.InterfaceUfinet:172.16.30.246 saved interface_state 60
+2019-04-09 18:58:12,212:WARNING:db.InterfaceUfinet:172.16.30.254 saved interface_state 35
+2019-04-09 18:58:12,246:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 2
+2019-04-09 18:58:13,337:WARNING:db.InterfaceUfinet:172.16.30.246 saved interface_state 61
+2019-04-09 18:58:13,395:WARNING:db.InterfaceUfinet:172.16.30.254 saved interface_state 36
+2019-04-09 18:58:13,429:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 3
+2019-04-09 18:58:15,004:WARNING:db.InterfaceUfinet:172.16.30.246 saved interface_state 62
+2019-04-09 18:58:15,038:WARNING:db.InterfaceUfinet:172.16.30.254 saved interface_state 37
+2019-04-09 18:58:15,038:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 5
+2019-04-09 18:58:16,154:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 6
+2019-04-09 18:58:18,096:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 8
+2019-04-09 18:58:18,138:WARNING:db.InterfaceUfinet:172.16.30.254 saved interface_state 38
+2019-04-09 18:58:19,213:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 9
+2019-04-09 18:58:19,246:WARNING:db.InterfaceUfinet:172.16.30.254 saved interface_state 39
+2019-04-09 18:58:21,722:WARNING:db.InterfaceUfinet:172.16.30.254 saved interface_state 96
+2019-04-09 18:58:23,206:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 10
+2019-04-09 18:58:24,388:WARNING:db.InterfaceUfinet:172.16.30.254 saved interface_state 93
+2019-04-09 18:58:24,422:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 104
+2019-04-09 18:58:26,847:WARNING:db.InterfaceUfinet:172.16.30.254 saved interface_state 95
+2019-04-09 18:58:26,922:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 88
+2019-04-09 18:58:28,031:WARNING:db.InterfaceUfinet:172.16.30.254 saved interface_state 44
+2019-04-09 18:58:28,098:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 90
+2019-04-09 18:58:30,139:WARNING:db.InterfaceUfinet:172.16.30.254 saved interface_state 46
+2019-04-09 18:58:30,214:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 11
+2019-04-09 18:58:31,298:WARNING:db.InterfaceUfinet:172.16.30.254 saved interface_state 47
+2019-04-09 18:58:31,382:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 17
+2019-04-09 18:58:33,190:WARNING:db.InterfaceUfinet:172.16.30.254 saved interface_state 48
+2019-04-09 18:58:33,908:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 18
+2019-04-09 18:58:34,324:WARNING:db.InterfaceUfinet:172.16.30.254 saved interface_state 76
+2019-04-09 18:58:35,082:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 86
+2019-04-09 18:58:35,508:WARNING:db.InterfaceUfinet:172.16.30.254 saved interface_state 77
+2019-04-09 18:58:37,067:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 20
+2019-04-09 18:58:38,365:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 21
+2019-04-09 18:58:40,058:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 22
+2019-04-09 18:58:41,266:WARNING:db.InterfaceUfinet:172.16.30.254 saved interface_state 100
+2019-04-09 18:58:41,266:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 28
+2019-04-09 18:58:42,399:WARNING:db.InterfaceUfinet:172.16.30.254 saved interface_state 83
+2019-04-09 18:58:42,399:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 29
+2019-04-09 18:58:43,925:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 97
+2019-04-09 18:58:44,016:WARNING:db.InterfaceUfinet:172.16.30.254 saved interface_state 101
+2019-04-09 18:58:45,066:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 30
+2019-04-09 18:58:45,133:WARNING:db.InterfaceUfinet:172.16.30.254 saved interface_state 55
+2019-04-09 18:58:46,750:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 98
+2019-04-09 18:58:46,842:WARNING:db.InterfaceUfinet:172.16.30.254 saved interface_state 56
+2019-04-09 18:58:47,891:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 31
+2019-04-09 18:58:47,966:WARNING:db.InterfaceUfinet:172.16.30.254 saved interface_state 57
+2019-04-09 18:58:50,050:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 82
+2019-04-09 18:58:50,117:WARNING:db.InterfaceUfinet:172.16.30.254 saved interface_state 84
+2019-04-09 18:58:51,200:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 32
+2019-04-09 18:58:51,942:WARNING:db.InterfaceUfinet:172.16.30.254 saved interface_state 58
+2019-04-09 18:58:52,326:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 99
+2019-04-09 18:58:54,059:WARNING:db.InterfaceUfinet:172.16.30.254 saved interface_state 85
+2019-04-09 18:58:54,175:WARNING:db.InterfaceUfinet:172.16.30.253 saved interface_state 33
+2019-04-09 18:58:55,218:WARNING:db.InterfaceUfinet:172.16.30.254 saved interface_state 102
+2019-04-09 18:58:56,325:WARNING:db.InterfaceUfinet:172.16.30.254 saved interface_state 103
