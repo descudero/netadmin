@@ -1,0 +1,28 @@
+connect to $DEVICE_A_NAME $IP_DEVICE_A
+
+interface $INTERFACE_INDEX_A
+
+ service instance $SERVICE_INSTANCE_ID ethernet
+  description TO_$DEVICE_B_NAME$OTHER_DESCRIPTION
+  encapsulation dot1q $SERVICE_INSTANCE_ID
+  service-policy input $LIMIT_BW_POLICY_NAME
+  service-policy output $LIMIT_BW_POLICY_NAME
+  rewrite ingress tag pop 1 symmetric
+  xconnect $IP_DEVICE_B $VCID encapsulation mpls
+  mtu 9180
+
+
+connect to $DEVICE_B_NAME $IP_DEVICE_B
+
+interface $INTERFACE_INDEX_B
+
+ service instance $SERVICE_INSTANCE_ID ethernet
+  description TO_$DEVICE_A_NAME$OTHER_DESCRIPTION
+  encapsulation dot1q $SERVICE_INSTANCE_ID
+  service-policy input $LIMIT_BW_POLICY_NAME
+  service-policy output $LIMIT_BW_POLICY_NAME
+  rewrite ingress tag pop 1 symmetric
+  xconnect $IP_DEVICE_A $VCID encapsulation mpls
+  mtu 9180
+
+

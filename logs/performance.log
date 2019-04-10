@@ -147,3 +147,5 @@ INFO:performance.netadmin.app:reporte_internet:pf:json FROM: start 2019-01-15 15
 2019-02-20 18:25:07,964:INFO:performance.netadmin.app:OSPF JSON TIM json_diagram FROM: start 2019-02-20 18:25:07.958182 TO end 2019-02-20 18:25:07.964166 TIME LAPSED #5.984
 2019-04-08 16:01:53,923:INFO:performance.netadmin.app:OSPF JSON TIM json_diagram FROM: start 2019-04-08 16:01:53.923464 TO end 2019-04-08 16:01:53.923464 TIME LAPSED #0.0
 2019-04-08 16:03:06,880:INFO:performance.netadmin.app:OSPF JSON TIM json_diagram FROM: start 2019-04-08 16:03:06.880048 TO end 2019-04-08 16:03:06.880048 TIME LAPSED #0.0
+2019-04-09 13:30:40,495:INFO:performance.netadmin.app:OSPF JSON TIM json_diagram FROM: start 2019-04-09 13:30:40.494305 TO end 2019-04-09 13:30:40.495330 TIME LAPSED #1.025
+2019-04-09 14:19:45,077:INFO:performance.netadmin.app:OSPF JSON TIM json_diagram FROM: start 2019-04-09 14:19:45.077762 TO end 2019-04-09 14:19:45.077762 TIME LAPSED #0.0

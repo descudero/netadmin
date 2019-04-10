@@ -1536,7 +1536,7 @@ class CiscoIOS(Parent):
     def save_interfaces_states(self, filters={}):
         interfaces = self.get_interfaces_filtered(filters=filters)
         for interface in interfaces:
-            interface.save()
+            interface.save_state()
 
     def get_interfaces_filtered(self, filters):
 
