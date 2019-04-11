@@ -14668,6 +14668,8 @@
              * An edge connects two nodes and has a specific direction.
              */
 
+
+
             var Edge = function () {
                 /**
                  * @param {Object} options        values specific to this edge, must contain at least 'from' and 'to'
@@ -14697,6 +14699,8 @@
                     this.selected = false;
                     this.hover = false;
                     this.labelDirty = true;
+                    this.ip_from = undefined
+                    this.ip_to = undefined
 
                     this.baseWidth = this.options.width;
                     this.baseFontSize = this.options.font.size;
@@ -14739,6 +14743,12 @@
                         }
                         if (options.title !== undefined) {
                             this.title = options.title;
+                        }
+                        if (options.ip_from !== undefined) {
+                            this.ip_from = options.ip_from;
+                        }
+                        if (options.ip_to !== undefined) {
+                            this.ip_to = options.ip_to;
                         }
                         if (options.value !== undefined) {
                             options.value = parseFloat(options.value);

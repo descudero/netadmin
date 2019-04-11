@@ -26,7 +26,6 @@ class ospf_database:
         self.isp.do_uni_methods(methods={"set_snmp_location_attr": {}}, devices=self.routers.values())
         self.graph = Graph()
         self.neighbors_occurrences_count = defaultdict(int)
-        self.verbose.warning("finish init  methods routers gone to edges")
         threads = []
         result_p2p = []
         for network, neighbors in p2p.items():

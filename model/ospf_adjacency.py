@@ -14,11 +14,11 @@ class ospf_adjacency:
 
     def __init__(self, network_id, ospf_database, neighbors, network_type='p2p'):
         self.verbose.debug("net " + network_id + " start init ")
-        self.network_id = network_id
         self.network_type = network_type
         self.ospf_database = ospf_database
         self.adj_neighbors = {}
         self.reversed = False
+        self.neighbors_dict = {neighbor["router_id"]: neighbor for neighbor in neighbors}
         for neighbor in neighbors:
             neighbor_key = "s"
             if 's' in self.adj_neighbors:
@@ -28,8 +28,13 @@ class ospf_adjacency:
             self.adj_neighbors[neighbor_key] = neighbor
             try:
                 self.adj_neighbors[neighbor_key]["interface"] = device.interfaces_ip[neighbor["interface_ip"]]
+                try:
+                    setattr(self, f'{neighbor_key}_ip', self.adj_neighbors[neighbor_key]["interface"].ip)
+                except Exception as e:
+                    self.dev.warning(f'ops_adjacenfy __init__  no ip {neighbor_key}_ip')
             except KeyError:
                 self.adj_neighbors[neighbor_key]["interface"] = "null"
+                self.dev.warning(f'ospf_adjacncy no interface ip')
             self.adj_neighbors[neighbor_key]["network_device"] = device
         pair = self.pair_id()
 
@@ -113,11 +118,13 @@ class ospf_adjacency:
         if self.reversed:
             source, target = target, source
             self.vs = {'from': source.uid_db(), 'to': target.uid_db(),
+
                        'label': '-',
                        'font': {'size': '8'},
                        'labelFrom': self.edge_label(orient='target'),
                        'labelTo': self.edge_label(orient='source'),
                        'smooth': {'type': 'curvedCW', 'roundness': self.roundness}}
+
         else:
             self.vs = {'from': source.uid_db(), 'to': target.uid_db(),
                        'label': '-',
@@ -125,30 +132,32 @@ class ospf_adjacency:
                        'labelFrom': self.edge_label(orient='source'),
                        'labelTo': self.edge_label(orient='target'),
                        'smooth': {'type': 'curvedCW', 'roundness': self.roundness}}
+        try:
+            self.vs['ip_source'] = self.neighbors_dict[source.ip]['interface_ip']
+        except Exception as e:
+            self.dev.warning(f' error vs no ip source {e}')
+            self.vs['ip_target'] = "NA"
+        try:
+            self.vs['ip_to'] = self.neighbors_dict[target.ip]['interface_ip']
+        except Exception as e:
+            self.dev.warning(f' error vs no ip target {e}')
+            self.vs['ip_to'] = "NA"
 
+        try:
+            self.vs['color'] = {'color': '#ff0000'}
+        except Exception as e:
+            pass
+
+    @property
     def color(self):
-        l1_key = ""
         try:
-            l1_a_key = self.adj_ob[0]["interface"].l1_protocol_attr
+            l1_key = self.adj_ob[0]["interface"].l1_protocol_attr
         except AttributeError as e:
-            l1_a_key = "UNKNOWN"
-        try:
-            l1_b_key = self.adj_ob[1]["interface"].l1_protocol_attr
-        except AttributeError as e:
-            l1_b_key = "UNKNOWN"
+            try:
+                l1_key = self.adj_ob[1]["interface"].l1_protocol_attr
+            except:
+                l1_key = "UNKNOWN"
 
-        if l1_a_key != "UNKNOWN":
-            l1_key = l1_a_key
-        elif l1_b_key != "UNKNOWN":
-            l1_key = l1_b_key
-
-        if l1_key in ospf_adjacency.__l1:
-            self.verbose.info(l1_a_key)
-            self.verbose.info(l1_b_key)
-            _color = ospf_adjacency.__l1[l1_key]
-            self.verbose.info(_color)
-        else:
-            _color = ospf_adjacency.__l1["DEF"]
         return ospf_adjacency.__l1.get(l1_key, ospf_adjacency.__l1["DEF"])
 
     def get_vs(self):
