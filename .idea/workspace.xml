@@ -3,19 +3,28 @@
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/sshtest.py" line="40" mnemonic="9" />
     <bookmark url="file://$PROJECT_DIR$/model/claseClaro.py" />
-    <bookmark url="file://$PROJECT_DIR$/model/claseClaro.py" line="604" />
+    <bookmark url="file://$PROJECT_DIR$/model/claseClaro.py" line="596" />
     <bookmark url="file://$PROJECT_DIR$/resources/templates/transciever_ios.template" line="5" mnemonic="6" />
-    <bookmark url="file://$PROJECT_DIR$/web_server.py" line="225" />
+    <bookmark url="file://$PROJECT_DIR$/web_server.py" line="253" />
     <bookmark url="file://$PROJECT_DIR$/static/js/graphs.js" line="57" />
     <bookmark url="file://$PROJECT_DIR$/model/CiscoIOS.py" line="412" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="462384ac-2f64-47a0-b6d2-b16ff1b36497" name="Default" comment="first3">
-      <change beforePath="$PROJECT_DIR$/.idea/groups.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/groups.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/path.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/path_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/db.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/db.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/InterfaceUfinet.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/InterfaceUfinet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/connections.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/connections.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dev.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/performance.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/performance.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/CiscoIOS.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/CiscoIOS.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/claseClaro.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/claseClaro.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/ospf_adjacency.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/ospf_adjacency.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/ospf_database.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/ospf_database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/diagramas.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/diagramas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/vis.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/vis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/diagramas.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/diagramas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_server.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,78 +68,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/internet_ufinet.yml">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/js/diagramas.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/config_template/ip_interface_xe.template">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/config_template/l2vpn_l2_xe_xe.template">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/Master.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1473">
-              <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="38" />
+            <state relative-caret-position="309">
+              <caret line="136" column="38" lean-forward="true" selection-start-line="136" selection-start-column="38" selection-end-line="136" selection-end-column="38" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#2149#2784#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
+        <entry file="file://$PROJECT_DIR$/model/ospf_adjacency.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="1538" column="34" lean-forward="true" selection-start-line="1538" selection-start-column="34" selection-end-line="1538" selection-end-column="34" />
+            <state relative-caret-position="1458">
+              <caret line="140" column="28" selection-start-line="140" selection-start-column="28" selection-end-line="140" selection-end-column="28" />
               <folding>
-                <element signature="e#0#16#0" expanded="true" />
+                <element signature="e#0#25#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/save_interfaces_db.py">
+        <entry file="file://$PROJECT_DIR$/templates/diagramas.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+            <state relative-caret-position="1232">
+              <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/config_template/routed_l2vpn_xe_xe.template">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/templates/config_template.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="39" column="10" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="39" selection-end-column="10" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/claseClaro.py">
+        <entry file="file://$PROJECT_DIR$/path_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="633" column="68" selection-start-line="633" selection-start-column="46" selection-end-line="633" selection-end-column="68" />
+            <state relative-caret-position="265">
+              <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#0#27#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,26 +125,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web_server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="837">
-              <caret line="291" column="23" selection-start-line="291" selection-start-column="23" selection-end-line="291" selection-end-column="23" />
+            <state relative-caret-position="139">
+              <caret line="162" column="54" lean-forward="true" selection-start-line="162" selection-start-column="54" selection-end-line="162" selection-end-column="54" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
-                <element signature="e#1321#5227#0" />
-                <element signature="e#7791#8206#0" />
-                <element signature="e#8305#8570#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/model/InterfaceUfinet.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://E:/progra/anaconda/Lib/site-packages/werkzeug/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="192" column="28" selection-start-line="192" selection-start-column="28" selection-end-line="192" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="192">
+              <caret line="922" selection-start-line="922" selection-end-line="922" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://E:/progra/anaconda/Lib/site-packages/werkzeug/wrappers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="920" selection-start-line="920" selection-end-line="920" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://E:/progra/anaconda/Lib/site-packages/flask/app.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1057">
+              <caret line="2308" selection-start-line="2308" selection-end-line="2308" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://E:/progra/anaconda/Lib/site-packages/flask/_compat.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
@@ -176,36 +183,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>set_mpls_te_tunnels</find>
-      <find>vfi</find>
-      <find>with_vf</find>
-      <find>pseudowire_</find>
-      <find>get_origin_interface_mid_tunnels</find>
-      <find>bd_mpls_vc</find>
-      <find>set_snmp</find>
-      <find>mpls_vc</find>
-      <find>mpls_te_tunnels_mid_point</find>
-      <find>get_vfis_interface_per_service_instance</find>
-      <find>diagrama</find>
-      <find>path_option</find>
-      <find>add_new_paths_mpls_te</find>
-      <find>set_snmp_community</find>
-      <find>get_dev</find>
-      <find>set_snmp_location</find>
-      <find>cle</find>
-      <find>able_connect</find>
-      <find>save+</find>
-      <find>network</find>
-      <find>_Claro__remove_duplicates_db</find>
-      <find>__repr__</find>
-      <find>get_interfaces_filtered</find>
-      <find>loopback_index</find>
-      <find>ospf_mpls_loopback_inde</find>
-      <find>template_form</find>
       <find>fields</find>
       <find>able_</find>
       <find>system_call</find>
       <find>save_interfaces_states</find>
+      <find>set_snmp_location_attr</find>
+      <find>dict_ospf</find>
+      <find>network</find>
+      <find>edg</find>
+      <find>setOptions</find>
+      <find>20190411_ospf_ufinet_regional</find>
+      <find>network_id</find>
+      <find>diagrama</find>
+      <find>diagram</find>
+      <find>createClass</find>
+      <find>mergeOptions</find>
+      <find>addEdge</find>
+      <find>parseAttributeList</find>
+      <find>edgesHandler</find>
+      <find>parseOptions</find>
+      <find>Network(</find>
+      <find>Edge(</find>
+      <find>update(</find>
+      <find>ip_from</find>
+      <find>fields = [</find>
+      <find>get_vs</find>
+      <find>&quot;from_shelve&quot;: False,</find>
+      <find>Node(</find>
+      <find>head</find>
+      <find>edge</find>
+      <find>selected_edges</find>
     </findStrings>
     <replaceStrings>
       <replace>type</replace>
@@ -219,23 +226,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/Master.py" />
-        <option value="$PROJECT_DIR$/resources/templates/snmp_location_attr_profile.template" />
-        <option value="$PROJECT_DIR$/model/CiscoXR.py" />
-        <option value="$PROJECT_DIR$/model/ospf_adjacency.py" />
-        <option value="$PROJECT_DIR$/model/InterfaceIOS.py" />
-        <option value="$PROJECT_DIR$/resources/output_test/show mpls traffic-eng tunnels detail.ios.txt" />
         <option value="$PROJECT_DIR$/resources/templates/ip explicit-path ios.template" />
         <option value="$PROJECT_DIR$/resources/output_test/show ip ospf database router" />
         <option value="$PROJECT_DIR$/resources/templates/show ip ospf database router.template" />
-        <option value="$PROJECT_DIR$/templates/diagramas.html" />
         <option value="$PROJECT_DIR$/logs/web.log" />
         <option value="$PROJECT_DIR$/tools.py" />
         <option value="$PROJECT_DIR$/nagios.py" />
         <option value="$PROJECT_DIR$/scripts/nagios.sh" />
         <option value="$PROJECT_DIR$/resources/templates/show mpls l2transport vc detail ios.template" />
         <option value="$PROJECT_DIR$/templates/cisco_tabulated_method.html" />
-        <option value="$PROJECT_DIR$/model/ospf_database.py" />
         <option value="$PROJECT_DIR$/model/IpExplicitPath.py" />
         <option value="$PROJECT_DIR$/new_loose_ip.py" />
         <option value="$PROJECT_DIR$/resources/templates/show mpls traffic-eng tunnels detail.template" />
@@ -248,7 +247,6 @@
         <option value="$PROJECT_DIR$/scripts/test_devices.py" />
         <option value="$PROJECT_DIR$/script_new_dev.py" />
         <option value="$PROJECT_DIR$/model/Devices.py" />
-        <option value="$PROJECT_DIR$/model/claseClaro.py" />
         <option value="$PROJECT_DIR$/resources/templates/separator.template" />
         <option value="$PROJECT_DIR$/web/CiscoConfigTemplate.py" />
         <option value="$PROJECT_DIR$/resources/config_template/ip_interface_ios.template" />
@@ -258,7 +256,6 @@
         <option value="$PROJECT_DIR$/templates/layout.html" />
         <option value="$PROJECT_DIR$/resources/config_template/mpls_device_xe.template" />
         <option value="$PROJECT_DIR$/templates/config_template.html" />
-        <option value="$PROJECT_DIR$/web_server.py" />
         <option value="$PROJECT_DIR$/support/ConfigTemplate.py" />
         <option value="$PROJECT_DIR$/resources/config_template/umpls_pe_xe.template" />
         <option value="$PROJECT_DIR$/resources/config_template/umpls_asbr_xe.template" />
@@ -267,9 +264,19 @@
         <option value="$PROJECT_DIR$/resources/config_template/ip_interface_xe.template" />
         <option value="$PROJECT_DIR$/model/BaseDevice.py" />
         <option value="$PROJECT_DIR$/resources/config_template/l2vpn_l2_xe_xe.template" />
-        <option value="$PROJECT_DIR$/model/CiscoIOS.py" />
         <option value="$PROJECT_DIR$/internet_ufinet.yml" />
         <option value="$PROJECT_DIR$/model/InterfaceUfinet.py" />
+        <option value="$PROJECT_DIR$/save_interfaces_db.py" />
+        <option value="$PROJECT_DIR$/model/claseClaro.py" />
+        <option value="$PROJECT_DIR$/model/ospf_database.py" />
+        <option value="$PROJECT_DIR$/static/js/vis.js" />
+        <option value="$PROJECT_DIR$/model/CiscoIOS.py" />
+        <option value="$PROJECT_DIR$/model/path.py" />
+        <option value="$PROJECT_DIR$/path_test.py" />
+        <option value="$PROJECT_DIR$/model/ospf_adjacency.py" />
+        <option value="$PROJECT_DIR$/web_server.py" />
+        <option value="$PROJECT_DIR$/templates/diagramas.html" />
+        <option value="$PROJECT_DIR$/static/js/diagramas.js" />
       </list>
     </option>
   </component>
@@ -285,7 +292,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -296,34 +302,7 @@
             <path>
               <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
               <item name="netadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="config_template" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
@@ -352,6 +331,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -394,7 +374,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.script_template_test">
+  <component name="RunManager" selected="Python.path_test">
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -428,6 +408,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="path_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="groups" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/path_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -506,6 +505,9 @@
       <module name="groups" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -543,37 +545,21 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Nosetests in script_new_dev.py" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
-      <module name="groups" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_regexPattern" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/script_new_dev.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.sshtest" />
       <item itemvalue="Python.script_new_dev" />
       <item itemvalue="Python.script_new_dev (1)" />
       <item itemvalue="Python.save_interfaces_db" />
       <item itemvalue="Python.script_template_test" />
-      <item itemvalue="Python tests.Nosetests in script_new_dev.py" />
+      <item itemvalue="Python.path_test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.path_test" />
         <item itemvalue="Python.script_template_test" />
         <item itemvalue="Python.save_interfaces_db" />
         <item itemvalue="Python.script_new_dev (1)" />
         <item itemvalue="Python.script_new_dev" />
-        <item itemvalue="Python tests.Nosetests in script_new_dev.py" />
       </list>
     </recent_temporary>
   </component>
@@ -618,6 +604,7 @@
       <workItem from="1553014731063" duration="10238000" />
       <workItem from="1554305033925" duration="12440000" />
       <workItem from="1554756391691" duration="19155000" />
+      <workItem from="1555002629915" duration="27224000" />
     </task>
     <task id="LOCAL-00021" summary="first3">
       <created>1546637766763</created>
@@ -998,7 +985,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="357737000" />
+    <option name="totallyTimeSpent" value="384961000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1013,8 +1000,8 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8192308" visible="true" weight="0.27604726" />
-      <window_info id="Structure" order="1" sideWeight="0.18076923" side_tool="true" weight="0.27228788" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.81639344" visible="true" weight="0.2803437" />
+      <window_info id="Structure" order="1" sideWeight="0.18360655" side_tool="true" visible="true" weight="0.2803437" />
       <window_info id="Favorites" order="2" sideWeight="0.50864196" side_tool="true" weight="0.16136725" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4977778" weight="0.3277592" />
@@ -1024,7 +1011,7 @@
       <window_info anchor="bottom" id="Run" order="5" sideWeight="0.60042965" weight="0.4347826" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946293" weight="0.32664436" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.39957035" side_tool="true" weight="0.2419175" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49462944" visible="true" weight="0.3199554" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49462944" visible="true" weight="0.3199554" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49841017" weight="0.24526198" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32960895" />
       <window_info anchor="bottom" id="Database Console" order="11" sideWeight="0.49946293" weight="0.50501674" />
@@ -1039,7 +1026,7 @@
       <window_info anchor="right" id="SciView" order="5" weight="0.32975295" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8192308" visible="true" weight="0.27228788" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8192308" weight="0.2803437" />
       <window_info id="Structure" order="1" sideWeight="0.18076923" side_tool="true" weight="0.27228788" />
       <window_info id="Favorites" order="2" sideWeight="0.50864196" side_tool="true" weight="0.16136725" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1141,12 +1128,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model/CiscoIOS.py</url>
-          <line>1261</line>
+          <line>1260</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model/CiscoIOS.py</url>
-          <line>1272</line>
+          <line>1271</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1161,27 +1148,27 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model/CiscoIOS.py</url>
-          <line>1262</line>
+          <line>1261</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/web_server.py</url>
-          <line>225</line>
+          <line>253</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/web_server.py</url>
-          <line>300</line>
+          <line>328</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/web_server.py</url>
-          <line>407</line>
+          <line>435</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/web_server.py</url>
-          <line>205</line>
+          <line>233</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
@@ -1200,153 +1187,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/model/ospf_database.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="23" column="79" selection-start-line="23" selection-start-column="79" selection-end-line="23" selection-end-column="79" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/cisco_tabulated_method.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="70" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/te_tunnel_tabulate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/progra/anaconda/Lib/site-packages/textfsm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10362">
-          <caret line="473" selection-start-line="473" selection-end-line="473" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/BridgeDomain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/IpExplicitPath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="48" column="56" selection-start-line="48" selection-start-column="56" selection-end-line="48" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/new_loose_ip.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#72#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/ospf_adjacency.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3058">
-          <caret line="141" column="35" selection-start-line="141" selection-start-column="35" selection-end-line="141" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/show mpls traffic-eng tunnels detail.template">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/ttextfsm_uf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="3" column="57" selection-start-line="3" selection-start-column="57" selection-end-line="3" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/output_test/show run s ip explicit-path ios.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1958">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/MplsTeTunnel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="83" column="17" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/snmp_location_attr_profile.template">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/host_name_script.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common_script.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1386">
-          <caret line="67" column="40" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#72#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/InternetServiceProvider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/499041304/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2016">
-          <caret line="2841" column="8" selection-start-line="2841" selection-start-column="8" selection-end-line="2841" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script_new_dev.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/config_connection.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -1436,13 +1276,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logs/web.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-368">
-          <caret line="99" column="49" lean-forward="true" selection-start-line="99" selection-start-column="49" selection-end-line="99" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/config_template.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -1454,13 +1287,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/config_template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -1505,28 +1331,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web_server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
-          <caret line="291" column="23" selection-start-line="291" selection-start-column="23" selection-end-line="291" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-            <element signature="e#1321#5227#0" />
-            <element signature="e#7791#8206#0" />
-            <element signature="e#8305#8570#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/config_template/ip_interface_xe.template">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
+        <state relative-caret-position="66">
           <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/config_template/routed_l2vpn_xe_xe.template">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/config_template/l2vpn_l2_xe_xe.template">
       <provider selected="true" editor-type-id="text-editor">
@@ -1535,36 +1345,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/claseClaro.py">
+    <entry file="file://$PROJECT_DIR$/model/InterfaceUfinet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="633" column="68" selection-start-line="633" selection-start-column="46" selection-end-line="633" selection-end-column="68" />
+        <state relative-caret-position="314">
+          <caret line="192" column="28" selection-start-line="192" selection-start-column="28" selection-end-line="192" selection-end-column="28" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/save_interfaces_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/internet_ufinet.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="1538" column="34" lean-forward="true" selection-start-line="1538" selection-start-column="34" selection-end-line="1538" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
+            <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1579,12 +1365,201 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/InterfaceUfinet.py">
+    <entry file="file://$PROJECT_DIR$/internet_ufinet.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="192" column="28" selection-start-line="192" selection-start-column="28" selection-end-line="192" selection-end-column="28" />
+        <state relative-caret-position="374">
+          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/dev.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="347">
+          <caret line="47784" selection-start-line="47784" selection-end-line="47786" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/web.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="446">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/claseClaro.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="60" column="32" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/config_template/routed_l2vpn_xe_xe.template">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="3191" column="4" selection-start-line="3191" selection-start-column="4" selection-end-line="3191" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/ospf_database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="20" column="69" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/vis.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172062">
+          <caret line="7717" column="20" selection-start-line="7717" selection-start-column="20" selection-end-line="7717" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="1362" column="21" selection-start-line="1362" selection-start-column="21" selection-end-line="1362" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/save_interfaces_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/progra/anaconda/Lib/site-packages/networkx/algorithms/shortest_paths/generic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3270">
+          <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/progra/anaconda/Lib/site-packages/networkx/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-331">
+          <caret line="31" column="18" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_umd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="197" selection-start-line="197" selection-end-line="197" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/progra/anaconda/Lib/site-packages/networkx/classes/graph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-696">
+          <caret line="840" column="8" selection-start-line="840" selection-start-column="8" selection-end-line="840" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/path.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/progra/anaconda/Lib/site-packages/werkzeug/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="922" selection-start-line="922" selection-end-line="922" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/progra/anaconda/Lib/site-packages/werkzeug/wrappers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="920" selection-start-line="920" selection-end-line="920" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/progra/anaconda/Lib/site-packages/flask/_compat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/progra/anaconda/Lib/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1057">
+          <caret line="2308" selection-start-line="2308" selection-end-line="2308" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="162" column="54" lean-forward="true" selection-start-line="162" selection-start-column="54" selection-end-line="162" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/config_template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="39" column="10" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="39" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/ospf_adjacency.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1458">
+          <caret line="140" column="28" selection-start-line="140" selection-start-column="28" selection-end-line="140" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/diagramas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1232">
+          <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/diagramas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="136" column="38" lean-forward="true" selection-start-line="136" selection-start-column="38" selection-end-line="136" selection-end-column="38" />
+          <folding>
+            <element signature="e#2149#2784#0" />
           </folding>
         </state>
       </provider>

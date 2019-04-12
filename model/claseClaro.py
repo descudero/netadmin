@@ -50,25 +50,15 @@ class Claro:
         self.max_threads = 50
         self.not_connected_devices = []
 
-    def ospf_topology_vs(self, ip_seed_router, process_id='1', area='0', shelve_name="test_ospf",
-                         from_shelve=False):
+    def ospf_topology_vs(self, ip_seed_router, process_id='1', area='0', shelve_name="test_ospf"):
         self.verbose.warning(f"shelve_name {shelve_name}")
-        if from_shelve:
-            if os.path.isfile(f"{shelve_name}"):
-                with shelve.open(shelve_name) as sh:
-                    dict_ospf = sh["db"]
-                    return dict_ospf
-            else:
-                return {"label": "no_data_in_date"}
-        else:
-
-            ospf_db = ospf_database(ip_seed_router=ip_seed_router, isp=self, process_id=process_id, area=area)
-            with shelve.open(shelve_name) as sh:
-                dict_ospf = ospf_db.get_vs()
-                sh.clear()
-                sh["db"] = dict_ospf
-                sh.close()
-                return dict_ospf
+        ospf_db = ospf_database(ip_seed_router=ip_seed_router, isp=self, process_id=process_id, area=area)
+        with shelve.open(shelve_name) as sh:
+            dict_ospf = ospf_db.get_vs()
+            sh.clear()
+            sh["db"] = dict_ospf
+            sh.close()
+            return dict_ospf
 
     def ospf_topology(self, ip_seed_router, process_id='1', area='0', filename="pruebayed"):
         ospf_db = ospf_database(ip_seed_router=ip_seed_router, isp=self, process_id=process_id, area=area)

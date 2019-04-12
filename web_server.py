@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-
+import networkx as nx
 import socket
 import datetime
 import calendar
@@ -17,6 +17,7 @@ import logging
 from model.CiscoXR import CiscoXR
 from support.ConfigTemplate import ConfigTemplate
 import pandas as pd
+from model.ospf_database import ospf_database
 
 app = Flask(__name__)
 
@@ -135,6 +136,31 @@ def diagramas():
     return render_template('diagramas.html')
 
 
+@app.route('/diagramas/te_json', methods=['POST'])
+def te_json():
+    request.get_json()
+    data = request.json['data']
+    print(data)
+    nodes = {edge['from_id'] for edge in data} | {edge['to_id'] for edge in data}
+    G = nx.Graph()
+    G.add_nodes_from(nodes)
+    print(nodes)
+    for edge in data:
+        G.add_edge(edge['to_id'], edge['from_id'])
+        G.edges[edge['to_id'], edge['from_id']]['attr'] = {str(edge['to_id']) + 'ip': edge['to_ip'],
+                                                           str(edge['from_id']) + 'ip': edge['from_ip']}
+    final = [node for node in G.nodes if len(G.edges(node)) == 1]
+    print(f'final nodes {final}')
+    shortest = nx.shortest_path(G, source=final[0], target=final[1])
+    print(f'path {shortest}')
+    ip_go = []
+    ip_return = []
+    for index in range(len(shortest) - 1):
+        ip_return.append(G.edges[shortest[index], shortest[index + 1]]['attr'][f'{shortest[index]}ip'])
+        ip_go.append(G.edges[shortest[index], shortest[index + 1]]['attr'][f'{shortest[index + 1]}ip'])
+
+    return jsonify({"a-b": ip_go, 'b-a': list(reversed(ip_return)), "a": final[0], "b": final[1]})
+
 @app.route('/diagramas/prueba_json', methods=['POST'])
 def ospf_json_vs():
     isp = ISP()
@@ -151,31 +177,31 @@ def ospf_json_vs():
     pl = PerformanceLog("json_diagram")
 
     datos_red = {"_ospf_ufinet_regional": {
-        "ip_seed_router": "172.16.30.15", "from_shelve": False,
+        "ip_seed_router": "172.16.30.15", 
         "shelve_name": "shelves/" + date + "_ospf_ufinet_regional"
     }, "guatemala": {
-        "ip_seed_router": "172.17.22.52", "from_shelve": False,
+        "ip_seed_router": "172.17.22.52", 
         "shelve_name": "shelves/" + date + "guatemala",
         "process_id": '502', "area": '502008'
     }, "el_salvador": {
-        "ip_seed_router": "172.17.23.11", "from_shelve": False,
+        "ip_seed_router": "172.17.23.11", 
         "shelve_name": "shelves/" + date + "el_salvador",
         "process_id": '503', "area": '503001'
     }, "nicaragua": {
-        "ip_seed_router": "172.17.25.1", "from_shelve": False,
+        "ip_seed_router": "172.17.25.1", 
         "shelve_name": "shelves/" + date + "nicaragua",
         "process_id": '1', "area": '50501'
     }, "honduras": {
-        "ip_seed_router": "172.17.24.5", "from_shelve": False,
+        "ip_seed_router": "172.17.24.5", 
         "shelve_name": "shelves/" + date + "honduras",
         "process_id": '504', "area": '504002'
     }, "costa_rica": {
-        "ip_seed_router": "172.17.26.2", "from_shelve": False,
+        "ip_seed_router": "172.17.26.2", 
         "shelve_name": "shelves/" + date + "costa_rica",
         "process_id": '1', "area": '506001'
     }
         , "panama": {
-            "ip_seed_router": "172.17.27.1", "from_shelve": False,
+            "ip_seed_router": "172.17.27.1", 
             "shelve_name": "shelves/" + date + "guatemala",
             "process_id": '507', "area": '507001'
         }
@@ -184,13 +210,16 @@ def ospf_json_vs():
     parameters = datos_red[request.json['network']]
     verbose.warning(parameters)
     if saved == "actual":
+        verbose.warning(parameters)
         data = isp.ospf_topology_vs(**parameters)
     else:
         try:
-            parameters["from_shelve"] = True
-            data = isp.ospf_topology_vs(**parameters)
+            verbose.warning(parameters)
+            data = ospf_database.get_vs_from_shelve(shelve_name=parameters["shelve_name"])
+            verbose.warning(data)
         except Exception as e:
-            weblog.warning(repr(e))
+            weblog.warning(f'ospf_json_vs  date {date} {e}')
+            verbose.warning(f'ospf_json_vs  date {date} {e}')
             data = {'nodes': {'id': 0, "label": "NO DATA DATE"}, 'edges': {}, "options": {}}
 
     pl.flag("end")

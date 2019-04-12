@@ -7548,6 +7548,7 @@
                     // state options
                     this.x = undefined;
                     this.y = undefined;
+                    this.ip = undefined;
                     this.baseSize = this.options.size;
                     this.baseFontSize = this.options.font.size;
                     this.predefinedPosition = false; // used to check if initial fit should just take the range or approximate
@@ -7615,6 +7616,11 @@
 
                         // set these options locally
                         // clear x and y positions
+                        if (options.ip !== undefined) {
+                            if (options.ip === null) {
+
+                            }
+                        }
                         if (options.x !== undefined) {
                             if (options.x === null) {
                                 this.x = undefined;
@@ -15383,7 +15389,7 @@
                         var globalOptions = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
                         var copyFromGlobals = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : false;
 
-                        var fields = ['arrowStrikethrough', 'id', 'from', 'hidden', 'hoverWidth', 'labelHighlightBold', 'length', 'line', 'opacity', 'physics', 'scaling', 'selectionWidth', 'selfReferenceSize', 'to', 'title', 'value', 'width', 'font', 'chosen', 'widthConstraint'];
+                        var fields = ['arrowStrikethrough', 'ip_from', 'ip_to', 'id', 'from', 'hidden', 'hoverWidth', 'labelHighlightBold', 'length', 'line', 'opacity', 'physics', 'scaling', 'selectionWidth', 'selfReferenceSize', 'to', 'title', 'value', 'width', 'font', 'chosen', 'widthConstraint'];
 
                         // only deep extend the items in the field array. These do not have shorthand.
                         util.selectiveDeepExtend(fields, parentOptions, newOptions, allowDeletion);

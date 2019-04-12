@@ -1238,8 +1238,6 @@ class CiscoIOS(Parent):
         self.set_snmp_location()
 
         data = self.parse_txtfsm_template(template_name="snmp_location_attr_profile.template", text=self.snmp_location)
-        self.verbose.warning(f"set_snmp_location_attr location {self.set_snmp_location()}")
-        self.verbose.warning(f"set_snmp_location_attr data {data}")
         if data:
             for attr, value in data[0].items():
                 try:
@@ -1248,7 +1246,8 @@ class CiscoIOS(Parent):
                     self.dev.info("snmp location atrubute ccheck " + self.ip + " " + attr + getattr(self, attr))
                 except AttributeError as e:
                     self.dev.warning("set_snmp_location_attr ip" + self.ip + " err " + repr(e))
-
+        else:
+            self.dev.warning("set_snmp_location_attr ip" + self.ip + " err no snmp location data")
     def set_snmp_location(self):
         if (self.community == ""):
             self.set_snmp_community()
@@ -1371,7 +1370,7 @@ class CiscoIOS(Parent):
         if self.uid_db() == 0:
             self.save()
         return {'mass': 10, 'id': self.uid, 'label': self.ip + " " + self.hostname, 'font': {'size': '8'},
-                'image': image, 'shape': 'image'}
+                'image': image, 'shape': 'image', 'ip': self.ip}
 
     def get_vfis_interface_per_service_instance(self):
         '''

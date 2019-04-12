@@ -4,7 +4,7 @@ from lib.pyyed import *
 from collections import defaultdict
 from tools import logged
 from threading import Thread
-
+import os, shelve
 
 @logged
 class ospf_database:
@@ -74,3 +74,13 @@ class ospf_database:
         layout = {'randomSeed': 4444}
 
         return {'physics': physics, 'edges': edges, 'layout': layout}
+
+    @staticmethod
+    def get_vs_from_shelve(shelve_name):
+        with shelve.open(shelve_name) as sh:
+            try:
+                dict_ospf = sh["db"]
+                return dict_ospf
+            except Exception as e:
+                print("no able lo load shelve")
+        return {"label": "no_data_in_date"}

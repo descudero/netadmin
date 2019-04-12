@@ -1,19 +1,23 @@
 import lib.pyyed as pyyed
 from colour import Color
 from tools import logged
-
+import os
+import shelve
 
 @logged
 class ospf_adjacency:
-    __l1 = {"CABLE_MAYA": "#228B22",
+    __l1 = {"MAYA": "#228B22",
             "LEVEL3": "#FF00FF",
             "CENTURY": "#FF1493",
-            "TELXIUS": "#8B4513", "LANAUTILUS": "#BC8F8F", "DEF": "#00BFFF"
+            "TELXIUS": "#8B4513",
+            "LANAUTILUS": "#BC8F8F",
+            "DEF": "#00BFFF"
 
             }
 
     def __init__(self, network_id, ospf_database, neighbors, network_type='p2p'):
         self.verbose.debug("net " + network_id + " start init ")
+        self.network_id = network_id
         self.network_type = network_type
         self.ospf_database = ospf_database
         self.adj_neighbors = {}
@@ -111,15 +115,13 @@ class ospf_adjacency:
         return label
 
     def set_vs(self):
-        green = Color("LawnGreen")
-        yellow = Color("Yellow")
-        red = Color("Red")
+
         source, target = self.neighbors()
         if self.reversed:
             source, target = target, source
             self.vs = {'from': source.uid_db(), 'to': target.uid_db(),
 
-                       'label': '-',
+                       'label': self.l1,
                        'font': {'size': '8'},
                        'labelFrom': self.edge_label(orient='target'),
                        'labelTo': self.edge_label(orient='source'),
@@ -127,16 +129,16 @@ class ospf_adjacency:
 
         else:
             self.vs = {'from': source.uid_db(), 'to': target.uid_db(),
-                       'label': '-',
+                       'label': self.l1,
                        'font': {'size': '8'},
                        'labelFrom': self.edge_label(orient='source'),
                        'labelTo': self.edge_label(orient='target'),
                        'smooth': {'type': 'curvedCW', 'roundness': self.roundness}}
         try:
-            self.vs['ip_source'] = self.neighbors_dict[source.ip]['interface_ip']
+            self.vs['ip_from'] = self.neighbors_dict[source.ip]['interface_ip']
         except Exception as e:
             self.dev.warning(f' error vs no ip source {e}')
-            self.vs['ip_target'] = "NA"
+            self.vs['ip_from'] = "NA"
         try:
             self.vs['ip_to'] = self.neighbors_dict[target.ip]['interface_ip']
         except Exception as e:
@@ -144,12 +146,11 @@ class ospf_adjacency:
             self.vs['ip_to'] = "NA"
 
         try:
-            self.vs['color'] = {'color': '#ff0000'}
+            self.vs['color'] = {'color': self.color}
         except Exception as e:
             pass
-
     @property
-    def color(self):
+    def l1(self):
         try:
             l1_key = self.adj_ob[0]["interface"].l1_protocol_attr
         except AttributeError as e:
@@ -157,8 +158,11 @@ class ospf_adjacency:
                 l1_key = self.adj_ob[1]["interface"].l1_protocol_attr
             except:
                 l1_key = "UNKNOWN"
+        return l1_key
 
-        return ospf_adjacency.__l1.get(l1_key, ospf_adjacency.__l1["DEF"])
+    @property
+    def color(self):
+        return ospf_adjacency.__l1.get(self.l1, ospf_adjacency.__l1["DEF"])
 
     def get_vs(self):
         return self.vs
