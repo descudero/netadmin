@@ -622,7 +622,7 @@ class Claro:
             for filter in data['filters']:
                 devices.execute(methods=["save_interfaces_states"],
                                 kwargs={ip: {"save_interfaces_states": {'filters': filter}} for ip in
-                                        devices.keys()})
+                                        devices.keys()}, thread_window=3)
 
 
 """

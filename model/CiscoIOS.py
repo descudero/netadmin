@@ -1534,8 +1534,7 @@ class CiscoIOS(Parent):
 
     def save_interfaces_states(self, filters={}):
         interfaces = self.get_interfaces_filtered(filters=filters)
-        for interface in interfaces:
-            interface.save_state()
+        return InterfaceUfinet.save_bulk_states(device=self, interfaces=interfaces)
 
     def get_interfaces_filtered(self, filters):
 
@@ -1543,11 +1542,11 @@ class CiscoIOS(Parent):
         for attribute, filter in filters.items():
             interfaces = [interface for interface in interfaces
                           if filter in getattr(interface, attribute)]
-            print(self.ip, attribute, filter, interfaces)
         return interfaces
 
     def set_ip_explicit_paths(self, template_name="ip explicit-path ios.template"):
-        list_of_hops = self.send_command_and_parse(command="show run | s ip explicit-path", template_name=template_name)
+        list_of_hops = self.send_command_and_parse(command="show run | s ip explicit-path", \
+                                                   template_name=template_name)
         path_names = {hop['name'] for hop in list_of_hops}
         self.explicit_paths = {}
         for path_name in path_names:

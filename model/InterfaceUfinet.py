@@ -15,6 +15,17 @@ class InterfaceUfinet(InterfaceIOS):
     l3_rotocol
     L1_conection
     '''
+    _sql_state_columns = ['link_state',
+                          'protocol_state',
+                          'input_rate',
+                          'output_rate',
+                          'util_in',
+                          'util_out',
+                          'input_errors',
+                          'output_errors',
+                          'interface_uid',
+                          'state_timestamp']
+
     directions = {"D": "DOWNSTREAM",
                   "U": "UPSTREAM",
                   "B": "BOTH"}
@@ -92,6 +103,70 @@ class InterfaceUfinet(InterfaceIOS):
             .format(util_in=self.util_in, util_out=self.util_out, if_index=self.if_index,
                     l3=self.l3_protocol, l3a=self.l3_protocol_attr,
                     l1=self.l1_protocol, l1a=self.l1_protocol_attr)
+
+    @staticmethod
+    def interfaces_uid(device, interfaces):
+        if device.in_db():
+            try:
+                connection = device.master.db_connect()
+                with connection.cursor() as cursor:
+                    sql = f'''SELECT uid,if_index,l3_protocol,l3_protocol_attr,l1_protocol,l1_protocol_attr FROM                                    interfaces WHERE   net_device_uid ={device.uid} '''
+                    cursor.execute(sql)
+                    data_interfaces = cursor.fetchall()
+                    data_interfaces = {data['if_index']: data for data in data_interfaces}
+                    print(data_interfaces.keys())
+                    for interface in interfaces:
+                        if interface.if_index in data_interfaces:
+                            data_sql = data_interfaces[interface.if_index]
+                            if interface.l3_protocol == data_sql['l3_protocol'] and \
+                                    interface.l3_protocol_attr == data_sql['l3_protocol_attr'] and \
+                                    interface.l1_protocol == data_sql['l1_protocol'] and \
+                                    interface.l1_protocol == data_sql['l1_protocol_attr']:
+                                interface.uid = data_sql['uid']
+                    return 1
+            except Exception as e:
+                device.db_log.warning(f'sql not able to get data {repr(e)}')
+                return 0
+        else:
+            return 0
+
+    @staticmethod
+    def save_bulk_states(device, interfaces):
+        if len(interfaces) > 0:
+            InterfaceUfinet.interfaces_uid(device=device, interfaces=interfaces)
+            sql = InterfaceUfinet.bulk_sql_state(interfaces=interfaces)
+            try:
+                connection = device.master.db_connect()
+                with connection.cursor() as cursor:
+                    cursor.execute(sql)
+                    connection.commit()
+                    return 1
+            except Exception as e:
+                device.db_log.warning(f"{device.ip} error en bulk save {repr(e)} {sql}")
+                return 0
+        else:
+            return 0
+
+    @staticmethod
+    def bulk_sql_state(interfaces) -> str:
+        columns_sql = ",\n".join(InterfaceUfinet._sql_state_columns)
+        interfaces_data = ",\n".join([interface.sql_state for interface in interfaces])
+        return f'INSERT INTO \ninterface_states({columns_sql}) VALUES {interfaces_data}'
+
+    @property
+    def sql_state(self) -> str:
+        if self.uid_save() == 0:
+            return ""
+        else:
+            timestamp = str(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+            return f"('{self.link_state}','{self.protocol_state}','{self.input_rate}'," \
+                f"'{self.output_rate}','{self.util_in}','{self.util_out}'," \
+                f"'{self.input_errors}','{self.output_errors}','{self.uid}','{timestamp}')"
+
+    def uid_save(self):
+        if not self.in_db():
+            self.save()
+        return self.uid
 
     def uid_db(self):
 

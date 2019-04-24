@@ -1630,3 +1630,253 @@ INFO:db.CiscoPart:saved: PART SAVED UID 1817
 2019-02-01 15:31:52,226:WARNING:db.CiscoXR:172.16.30.246 (1040, 'Too many connections')
 2019-02-01 15:31:52,226:WARNING:db.CiscoXR:172.16.30.254 (1040, 'Too many connections')
 2019-02-01 15:31:52,227:WARNING:db.CiscoXR:172.16.30.253 (1040, 'Too many connections')
+2019-04-24 08:42:10,588:WARNING:db.CiscoXR:172.16.30.253 'ip'
+2019-04-24 08:42:10,588:WARNING:db.CiscoXR:172.16.30.254 'ip'
+2019-04-24 08:42:10,588:WARNING:db.CiscoXR:172.16.30.246 'ip'
+2019-04-24 08:42:35,097:INFO:db.InterfaceUfinet:172.16.30.254 saved interface_state 34
+2019-04-24 08:42:35,123:INFO:db.InterfaceUfinet:172.16.30.246 saved interface_state 59
+2019-04-24 08:42:35,123:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 1
+2019-04-24 08:42:36,297:INFO:db.InterfaceUfinet:172.16.30.254 saved interface_state 35
+2019-04-24 08:42:36,331:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 2
+2019-04-24 08:42:36,331:INFO:db.InterfaceUfinet:172.16.30.246 saved interface_state 60
+2019-04-24 08:42:37,497:INFO:db.InterfaceUfinet:172.16.30.254 saved interface_state 36
+2019-04-24 08:42:37,556:INFO:db.InterfaceUfinet:172.16.30.246 saved interface_state 61
+2019-04-24 08:42:37,598:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 3
+2019-04-24 08:42:38,722:INFO:db.InterfaceUfinet:172.16.30.254 saved interface_state 37
+2019-04-24 08:42:38,764:INFO:db.InterfaceUfinet:172.16.30.246 saved interface_state 62
+2019-04-24 08:42:38,798:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 5
+2019-04-24 08:42:39,989:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 6
+2019-04-24 08:42:41,215:INFO:db.InterfaceUfinet:172.16.30.254 saved interface_state 38
+2019-04-24 08:42:41,215:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 8
+2019-04-24 08:42:42,399:INFO:db.InterfaceUfinet:172.16.30.254 saved interface_state 39
+2019-04-24 08:42:42,432:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 9
+2019-04-24 08:42:43,582:INFO:db.InterfaceUfinet:172.16.30.254 saved interface_state 96
+2019-04-24 08:42:44,799:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 10
+2019-04-24 08:42:45,999:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 104
+2019-04-24 08:42:46,033:INFO:db.InterfaceUfinet:172.16.30.254 saved interface_state 93
+2019-04-24 08:42:47,233:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 88
+2019-04-24 08:42:47,332:INFO:db.InterfaceUfinet:172.16.30.254 saved interface_state 95
+2019-04-24 08:42:48,442:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 90
+2019-04-24 08:42:48,541:INFO:db.InterfaceUfinet:172.16.30.254 saved interface_state 44
+2019-04-24 08:42:49,775:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 11
+2019-04-24 08:42:49,799:INFO:db.InterfaceUfinet:172.16.30.254 saved interface_state 46
+2019-04-24 08:42:50,975:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 17
+2019-04-24 08:42:50,999:INFO:db.InterfaceUfinet:172.16.30.254 saved interface_state 47
+2019-04-24 08:42:52,166:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 18
+2019-04-24 08:42:52,208:INFO:db.InterfaceUfinet:172.16.30.254 saved interface_state 48
+2019-04-24 08:42:53,368:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 86
+2019-04-24 08:42:53,409:INFO:db.InterfaceUfinet:172.16.30.254 saved interface_state 76
+2019-04-24 08:42:54,567:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 20
+2019-04-24 08:42:54,592:INFO:db.InterfaceUfinet:172.16.30.254 saved interface_state 77
+2019-04-24 08:42:55,759:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 21
+2019-04-24 08:42:56,976:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 22
+2019-04-24 08:42:58,218:INFO:db.InterfaceUfinet:172.16.30.254 saved interface_state 100
+2019-04-24 08:42:58,243:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 28
+2019-04-24 08:42:59,401:INFO:db.InterfaceUfinet:172.16.30.254 saved interface_state 83
+2019-04-24 08:42:59,443:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 29
+2019-04-24 08:43:00,601:INFO:db.InterfaceUfinet:172.16.30.254 saved interface_state 101
+2019-04-24 08:43:00,635:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 97
+2019-04-24 08:43:01,869:INFO:db.InterfaceUfinet:172.16.30.254 saved interface_state 55
+2019-04-24 08:43:01,902:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 30
+2019-04-24 08:43:03,102:INFO:db.InterfaceUfinet:172.16.30.254 saved interface_state 56
+2019-04-24 08:43:03,168:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 98
+2019-04-24 08:43:04,310:INFO:db.InterfaceUfinet:172.16.30.254 saved interface_state 57
+2019-04-24 08:43:04,369:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 31
+2019-04-24 08:43:05,495:INFO:db.InterfaceUfinet:172.16.30.254 saved interface_state 84
+2019-04-24 08:43:05,544:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 82
+2019-04-24 08:43:06,696:INFO:db.InterfaceUfinet:172.16.30.254 saved interface_state 58
+2019-04-24 08:43:06,737:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 32
+2019-04-24 08:43:07,919:INFO:db.InterfaceUfinet:172.16.30.254 saved interface_state 85
+2019-04-24 08:43:07,953:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 99
+2019-04-24 08:43:09,145:INFO:db.InterfaceUfinet:172.16.30.254 saved interface_state 102
+2019-04-24 08:43:09,296:INFO:db.InterfaceUfinet:172.16.30.253 saved interface_state 33
+2019-04-24 08:43:10,439:INFO:db.InterfaceUfinet:172.16.30.254 saved interface_state 103
+2019-04-24 08:43:23,982:WARNING:db.CiscoXR:172.16.30.250 'ip'
+2019-04-24 08:43:23,982:WARNING:db.CiscoXR:172.16.30.244 'ip'
+2019-04-24 08:44:14,668:INFO:db.InterfaceUfinet:172.16.30.250 saved interface_state 63
+2019-04-24 08:44:14,668:INFO:db.InterfaceUfinet:172.16.30.244 saved interface_state 66
+2019-04-24 08:44:15,943:INFO:db.InterfaceUfinet:172.16.30.250 saved interface_state 64
+2019-04-24 08:44:15,964:INFO:db.InterfaceUfinet:172.16.30.244 saved interface_state 81
+2019-04-24 08:44:17,151:INFO:db.InterfaceUfinet:172.16.30.244 saved interface_state 75
+2019-04-24 08:44:18,334:INFO:db.InterfaceUfinet:172.16.30.244 saved interface_state 67
+2019-04-24 08:44:19,510:INFO:db.InterfaceUfinet:172.16.30.250 saved interface_state 65
+2019-04-24 08:45:46,303:WARNING:db.CiscoIOS:172.16.30.2 'ip'
+2019-04-24 08:45:46,309:WARNING:db.CiscoIOS:172.16.30.5 'ip'
+2019-04-24 08:45:46,309:WARNING:db.CiscoXR:172.16.30.3 'ip'
+2019-04-24 08:45:46,309:WARNING:db.CiscoIOS:172.16.30.4 'ip'
+2019-04-24 08:45:46,313:WARNING:db.CiscoIOS:172.16.30.6 'ip'
+2019-04-24 08:45:46,323:WARNING:db.CiscoIOS:172.16.30.10 'ip'
+2019-04-24 08:45:46,323:WARNING:db.CiscoIOS:172.16.30.7 'ip'
+2019-04-24 08:45:46,323:WARNING:db.CiscoIOS:172.16.30.11 'ip'
+2019-04-24 08:45:46,323:WARNING:db.CiscoIOS:172.16.30.13 'ip'
+2019-04-24 08:45:46,324:WARNING:db.CiscoIOS:172.16.30.8 'ip'
+2019-04-24 08:45:46,325:WARNING:db.CiscoIOS:172.16.30.12 'ip'
+2019-04-24 08:45:46,334:WARNING:db.CiscoIOS:172.16.30.15 'ip'
+2019-04-24 08:45:46,354:WARNING:db.CiscoIOS:172.16.30.16 'ip'
+2019-04-24 08:45:46,354:WARNING:db.CiscoIOS:172.16.30.40 'ip'
+2019-04-24 08:45:46,417:WARNING:db.CiscoIOS:172.16.30.37 'ip'
+2019-04-24 08:45:46,417:WARNING:db.CiscoXR:172.16.30.34 'ip'
+2019-04-24 08:45:46,418:WARNING:db.CiscoXR:172.16.30.248 'ip'
+2019-04-24 08:45:46,418:WARNING:db.CiscoIOS:172.16.30.43 'ip'
+2019-04-24 08:45:46,418:WARNING:db.CiscoIOS:172.16.30.231 'ip'
+2019-04-24 08:45:46,418:WARNING:db.CiscoIOS:172.16.30.14 'ip'
+2019-04-24 08:45:46,418:WARNING:db.CiscoIOS:172.16.30.41 'ip'
+2019-04-24 08:45:46,419:WARNING:db.CiscoXR:172.16.30.244 'ip'
+2019-04-24 08:45:46,419:WARNING:db.CiscoIOS:172.16.30.209 'ip'
+2019-04-24 08:45:46,419:WARNING:db.CiscoIOS:172.16.30.45 'ip'
+2019-04-24 08:45:46,419:WARNING:db.CiscoXR:172.16.30.254 'ip'
+2019-04-24 08:45:46,419:WARNING:db.CiscoIOS:172.16.30.36 'ip'
+2019-04-24 08:45:46,419:WARNING:db.CiscoIOS:172.16.30.230 'ip'
+2019-04-24 08:45:46,419:WARNING:db.CiscoIOS:172.16.30.241 'ip'
+2019-04-24 08:45:46,419:WARNING:db.CiscoIOS:172.16.30.245 'ip'
+2019-04-24 08:45:46,419:WARNING:db.CiscoXR:172.16.30.225 'ip'
+2019-04-24 08:45:46,420:WARNING:db.CiscoIOS:172.16.30.42 'ip'
+2019-04-24 08:45:46,420:WARNING:db.CiscoXR:172.16.30.250 'ip'
+2019-04-24 08:45:46,420:WARNING:db.CiscoIOS:172.16.30.226 'ip'
+2019-04-24 08:45:46,420:WARNING:db.CiscoIOS:172.16.30.228 'ip'
+2019-04-24 08:45:46,420:WARNING:db.CiscoIOS:172.16.30.130 'ip'
+2019-04-24 08:45:46,420:WARNING:db.CiscoXR:172.16.30.246 'ip'
+2019-04-24 08:45:46,420:WARNING:db.CiscoIOS:172.16.30.35 'ip'
+2019-04-24 08:45:46,420:WARNING:db.CiscoXR:172.16.30.247 'ip'
+2019-04-24 08:45:46,420:WARNING:db.CiscoXR:172.16.30.251 'ip'
+2019-04-24 08:45:46,420:WARNING:db.CiscoIOS:172.16.30.44 'ip'
+2019-04-24 08:45:46,421:WARNING:db.CiscoIOS:172.16.30.232 'ip'
+2019-04-24 08:45:46,421:WARNING:db.CiscoXR:172.16.30.253 'ip'
+2019-04-24 08:45:46,421:WARNING:db.CiscoIOS:172.16.30.65 'ip'
+2019-04-24 08:45:46,421:WARNING:db.CiscoIOS:172.16.30.242 'ip'
+2019-04-24 08:45:46,421:WARNING:db.CiscoIOS:172.16.30.50 'ip'
+2019-04-24 08:45:46,421:WARNING:db.CiscoIOS:172.16.30.39 'ip'
+2019-04-24 08:45:46,421:WARNING:db.CiscoIOS:172.16.30.38 'ip'
+2019-04-24 08:45:46,421:WARNING:db.CiscoIOS:172.16.30.240 'ip'
+2019-04-24 09:51:12,074:WARNING:db.CiscoXR:sql not able to get data ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND net_device_uid =1' at line 1")
+2019-04-24 10:16:10,116:WARNING:db.CiscoXR:172.16.30.254 'ip'
+2019-04-24 10:16:10,122:WARNING:db.CiscoXR:172.16.30.253 'ip'
+2019-04-24 10:16:10,137:WARNING:db.CiscoXR:172.16.30.246 'ip'
+2019-04-24 10:17:27,126:WARNING:db.CiscoXR:172.16.30.250 'ip'
+2019-04-24 10:19:49,109:WARNING:db.CiscoXR:172.16.30.253 'ip'
+2019-04-24 10:19:49,129:WARNING:db.CiscoXR:172.16.30.254 'ip'
+2019-04-24 10:20:26,295:WARNING:db.CiscoXR:172.16.30.254 error en bulk save ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 11") INSERT INTO 
+interface_states(link_state,
+protocol_state,
+input_rate,
+output_rate,
+util_in,
+util_out,
+input_errors,
+output_errors,
+interface_uid,
+state_timestamp) VALUES 
+2019-04-24 10:21:32,720:WARNING:db.CiscoXR:172.16.30.250 'ip'
+2019-04-24 10:21:32,720:WARNING:db.CiscoXR:172.16.30.244 'ip'
+2019-04-24 10:22:20,828:WARNING:db.CiscoXR:172.16.30.244 error en bulk save ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 11") INSERT INTO 
+interface_states(link_state,
+protocol_state,
+input_rate,
+output_rate,
+util_in,
+util_out,
+input_errors,
+output_errors,
+interface_uid,
+state_timestamp) VALUES 
+2019-04-24 10:24:22,199:WARNING:db.CiscoXR:172.16.30.250 'ip'
+2019-04-24 10:24:22,199:WARNING:db.CiscoXR:172.16.30.244 'ip'
+2019-04-24 10:26:57,558:WARNING:db.CiscoXR:172.16.30.246 'ip'
+2019-04-24 10:26:57,559:WARNING:db.CiscoXR:172.16.30.253 'ip'
+2019-04-24 10:26:57,559:WARNING:db.CiscoXR:172.16.30.254 'ip'
+2019-04-24 10:28:09,940:WARNING:db.CiscoXR:172.16.30.244 'ip'
+2019-04-24 10:28:09,940:WARNING:db.CiscoXR:172.16.30.250 'ip'
+2019-04-24 10:29:33,944:WARNING:db.CiscoIOS:172.16.30.6 'ip'
+2019-04-24 10:29:33,951:WARNING:db.CiscoIOS:172.16.30.11 'ip'
+2019-04-24 10:29:33,952:WARNING:db.CiscoIOS:172.16.30.37 'ip'
+2019-04-24 10:29:33,952:WARNING:db.CiscoIOS:172.16.30.35 'ip'
+2019-04-24 10:29:33,952:WARNING:db.CiscoIOS:172.16.30.15 'ip'
+2019-04-24 10:29:33,969:WARNING:db.CiscoIOS:172.16.30.38 'ip'
+2019-04-24 10:29:33,969:WARNING:db.CiscoXR:172.16.30.34 'ip'
+2019-04-24 10:29:33,970:WARNING:db.CiscoIOS:172.16.30.232 'ip'
+2019-04-24 10:29:33,970:WARNING:db.CiscoIOS:172.16.30.43 'ip'
+2019-04-24 10:29:33,970:WARNING:db.CiscoIOS:172.16.30.40 'ip'
+2019-04-24 10:29:33,970:WARNING:db.CiscoIOS:172.16.30.39 'ip'
+2019-04-24 10:29:33,984:WARNING:db.CiscoIOS:172.16.30.228 'ip'
+2019-04-24 10:29:33,984:WARNING:db.CiscoIOS:172.16.30.231 'ip'
+2019-04-24 10:29:33,984:WARNING:db.CiscoIOS:172.16.30.245 'ip'
+2019-04-24 10:29:33,984:WARNING:db.CiscoIOS:172.16.30.209 'ip'
+2019-04-24 10:29:33,985:WARNING:db.CiscoIOS:172.16.30.41 'ip'
+2019-04-24 10:29:33,985:WARNING:db.CiscoIOS:172.16.30.44 'ip'
+2019-04-24 10:29:33,985:WARNING:db.CiscoIOS:172.16.30.14 'ip'
+2019-04-24 10:29:33,985:WARNING:db.CiscoIOS:172.16.30.16 'ip'
+2019-04-24 10:29:33,985:WARNING:db.CiscoIOS:172.16.30.65 'ip'
+2019-04-24 10:29:33,985:WARNING:db.CiscoXR:172.16.30.246 'ip'
+2019-04-24 10:29:33,985:WARNING:db.CiscoIOS:172.16.30.36 'ip'
+2019-04-24 10:29:33,990:WARNING:db.CiscoXR:172.16.30.244 'ip'
+2019-04-24 10:29:33,990:WARNING:db.CiscoIOS:172.16.30.50 'ip'
+2019-04-24 10:29:33,990:WARNING:db.CiscoIOS:172.16.30.230 'ip'
+2019-04-24 10:29:33,990:WARNING:db.CiscoIOS:172.16.30.242 'ip'
+2019-04-24 10:29:33,991:WARNING:db.CiscoIOS:172.16.30.240 'ip'
+2019-04-24 10:29:33,991:WARNING:db.CiscoIOS:172.16.30.13 'ip'
+2019-04-24 10:29:33,991:WARNING:db.CiscoIOS:172.16.30.45 'ip'
+2019-04-24 10:29:33,991:WARNING:db.CiscoXR:172.16.30.247 'ip'
+2019-04-24 10:29:33,991:WARNING:db.CiscoIOS:172.16.30.241 'ip'
+2019-04-24 10:29:33,991:WARNING:db.CiscoXR:172.16.30.225 'ip'
+2019-04-24 10:29:33,991:WARNING:db.CiscoXR:172.16.30.250 'ip'
+2019-04-24 10:29:33,991:WARNING:db.CiscoIOS:172.16.30.42 'ip'
+2019-04-24 10:29:33,992:WARNING:db.CiscoIOS:172.16.30.226 'ip'
+2019-04-24 10:29:33,992:WARNING:db.CiscoXR:172.16.30.251 'ip'
+2019-04-24 10:29:34,246:WARNING:db.CiscoXR:172.16.30.253 'ip'
+2019-04-24 10:29:34,247:WARNING:db.CiscoXR:172.16.30.248 'ip'
+2019-04-24 10:29:34,247:WARNING:db.CiscoXR:172.16.30.254 'ip'
+2019-04-24 10:31:36,005:WARNING:db.CiscoIOS:172.16.30.226 error en bulk save ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\n,\n,\n,\n,\n,\n,' at line 11") INSERT INTO 
+interface_states(link_state,
+protocol_state,
+input_rate,
+output_rate,
+util_in,
+util_out,
+input_errors,
+output_errors,
+interface_uid,
+state_timestamp) VALUES ,
+,
+,
+,
+,
+,
+,
+
+2019-04-24 10:31:41,359:WARNING:db.CiscoXR:172.16.30.225 error en bulk save ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\n,\n,\n,\n,\n,\n,\n,\n,\n,' at line 11") INSERT INTO 
+interface_states(link_state,
+protocol_state,
+input_rate,
+output_rate,
+util_in,
+util_out,
+input_errors,
+output_errors,
+interface_uid,
+state_timestamp) VALUES ,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+
+2019-04-24 10:31:52,924:WARNING:db.CiscoIOS:172.16.30.231 error en bulk save ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\n,\n,\n,\n,' at line 11") INSERT INTO 
+interface_states(link_state,
+protocol_state,
+input_rate,
+output_rate,
+util_in,
+util_out,
+input_errors,
+output_errors,
+interface_uid,
+state_timestamp) VALUES ,
+,
+,
+,
+,
+
