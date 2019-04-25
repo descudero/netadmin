@@ -11,19 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="462384ac-2f64-47a0-b6d2-b16ff1b36497" name="Default" comment="first3">
-      <change afterPath="$PROJECT_DIR$/static/js/interfaces_regionales.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/interfaces_regionales.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/filtered_interfaces.py" beforeDir="false" afterPath="$PROJECT_DIR$/filtered_interfaces.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/connections.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/connections.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/db.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/db.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/performance.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/performance.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/web.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/web.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/InterfaceUfinet.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/InterfaceUfinet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/claseClaro.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/claseClaro.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_server.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,22 +60,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/filtered_interfaces.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="58" />
-              <folding>
-                <element signature="e#0#72#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/interfaces_regionales.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="793">
-              <caret line="58" column="56" selection-start-line="58" selection-start-column="56" selection-end-line="58" selection-end-column="56" />
+              <caret line="63" column="56" selection-start-line="63" selection-start-column="56" selection-end-line="63" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -139,11 +119,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/claseClaro.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
-              <caret line="620" column="60" selection-start-line="620" selection-start-column="60" selection-end-line="620" selection-end-column="60" />
+              <caret line="620" column="61" selection-start-line="620" selection-start-column="61" selection-end-line="620" selection-end-column="61" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -151,11 +131,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="1484" column="8" selection-start-line="1484" selection-start-column="8" selection-end-line="1484" selection-end-column="8" />
+            <state relative-caret-position="-15">
+              <caret line="1448" column="23" lean-forward="true" selection-start-line="1448" selection-start-column="23" selection-end-line="1448" selection-end-column="23" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -164,13 +144,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/InterfaceUfinet.py">
+        <entry file="file://$PROJECT_DIR$/model/Devices.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6511">
-              <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+            <state relative-caret-position="360">
+              <caret line="80" column="35" selection-start-line="80" selection-start-column="35" selection-end-line="80" selection-end-column="35" />
               <folding>
-                <element signature="e#0#43#0" expanded="true" />
+                <element signature="e#0#35#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://E:/progra/anaconda/Lib/threading.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="1035" column="53" selection-start-line="1035" selection-start-column="53" selection-end-line="1035" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -248,7 +237,6 @@
         <option value="$PROJECT_DIR$/host_name_script.py" />
         <option value="$PROJECT_DIR$/scripts/test_devices.py" />
         <option value="$PROJECT_DIR$/script_new_dev.py" />
-        <option value="$PROJECT_DIR$/model/Devices.py" />
         <option value="$PROJECT_DIR$/resources/templates/separator.template" />
         <option value="$PROJECT_DIR$/web/CiscoConfigTemplate.py" />
         <option value="$PROJECT_DIR$/resources/config_template/ip_interface_ios.template" />
@@ -281,6 +269,7 @@
         <option value="$PROJECT_DIR$/web_server.py" />
         <option value="$PROJECT_DIR$/static/js/interfaces_regionales.js" />
         <option value="$PROJECT_DIR$/templates/interfaces_regionales.html" />
+        <option value="$PROJECT_DIR$/model/Devices.py" />
         <option value="$PROJECT_DIR$/model/claseClaro.py" />
       </list>
     </option>
@@ -634,14 +623,7 @@
       <workItem from="1554756391691" duration="19155000" />
       <workItem from="1555002629915" duration="28603000" />
       <workItem from="1555105055401" duration="600000" />
-      <workItem from="1555969157896" duration="17353000" />
-    </task>
-    <task id="LOCAL-00024" summary="first3">
-      <created>1546963612613</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1546963612613</updated>
+      <workItem from="1555969157896" duration="18862000" />
     </task>
     <task id="LOCAL-00025" summary="first3">
       <created>1546987511164</created>
@@ -979,7 +961,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556123748379</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="first3">
+      <created>1556209848481</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1556209848481</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1015,7 +1004,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="404293000" />
+    <option name="totallyTimeSpent" value="405802000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1028,6 +1017,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.81311476" visible="true" weight="0.28893661" />
       <window_info id="Structure" order="1" sideWeight="0.18688525" side_tool="true" visible="true" weight="0.28893661" />
@@ -1216,13 +1206,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/js/inventory_xr.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="6" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/config_template.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -1430,16 +1413,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/Devices.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="53" column="55" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common_script.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-792">
@@ -1559,7 +1532,7 @@
     <entry file="file://$PROJECT_DIR$/static/js/interfaces_regionales.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="793">
-          <caret line="58" column="56" selection-start-line="58" selection-start-column="56" selection-end-line="58" selection-end-column="56" />
+          <caret line="63" column="56" selection-start-line="63" selection-start-column="56" selection-end-line="63" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -1590,22 +1563,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/claseClaro.py">
+    <entry file="file://E:/progra/anaconda/Lib/threading.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="620" column="60" selection-start-line="620" selection-start-column="60" selection-end-line="620" selection-end-column="60" />
+        <state relative-caret-position="324">
+          <caret line="1035" column="53" selection-start-line="1035" selection-start-column="53" selection-end-line="1035" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Devices.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="80" column="35" selection-start-line="80" selection-start-column="35" selection-end-line="80" selection-end-column="35" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="1484" column="8" selection-start-line="1484" selection-start-column="8" selection-end-line="1484" selection-end-column="8" />
+        <state relative-caret-position="-15">
+          <caret line="1448" column="23" lean-forward="true" selection-start-line="1448" selection-start-column="23" selection-end-line="1448" selection-end-column="23" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/claseClaro.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="620" column="61" selection-start-line="620" selection-start-column="61" selection-end-line="620" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>

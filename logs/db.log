@@ -1965,3 +1965,114 @@ state_timestamp) VALUES ,
 2019-04-25 10:28:39,019:WARNING:db.CiscoXR:172.16.30.253 'ip'
 2019-04-25 10:28:39,020:WARNING:db.CiscoXR:172.16.30.254 'ip'
 2019-04-25 10:28:39,025:WARNING:db.CiscoXR:172.16.30.246 'ip'
+2019-04-25 10:31:07,291:WARNING:db.CiscoIOS:172.16.30.2 'ip'
+2019-04-25 10:31:07,291:WARNING:db.CiscoIOS:172.16.30.1 'ip'
+2019-04-25 10:31:07,307:WARNING:db.CiscoIOS:172.16.30.6 'ip'
+2019-04-25 10:31:07,307:WARNING:db.CiscoXR:172.16.30.3 'ip'
+2019-04-25 10:31:07,307:WARNING:db.CiscoIOS:172.16.30.12 'ip'
+2019-04-25 10:31:07,307:WARNING:db.CiscoIOS:172.16.30.7 'ip'
+2019-04-25 10:31:07,325:WARNING:db.CiscoIOS:172.16.30.8 'ip'
+2019-04-25 10:31:07,325:WARNING:db.CiscoIOS:172.16.30.11 'ip'
+2019-04-25 10:31:07,325:WARNING:db.CiscoIOS:172.16.30.4 'ip'
+2019-04-25 10:31:07,325:WARNING:db.CiscoIOS:172.16.30.9 'ip'
+2019-04-25 10:31:07,325:WARNING:db.CiscoIOS:172.16.30.5 'ip'
+2019-04-25 10:31:07,325:WARNING:db.CiscoIOS:172.16.30.10 'ip'
+2019-04-25 10:31:07,326:WARNING:db.CiscoIOS:172.16.30.13 'ip'
+2019-04-25 10:31:07,326:WARNING:db.CiscoIOS:172.16.30.14 'ip'
+2019-04-25 10:31:07,344:WARNING:db.CiscoIOS:172.16.30.40 'ip'
+2019-04-25 10:31:07,345:WARNING:db.CiscoIOS:172.16.30.50 'ip'
+2019-04-25 10:31:07,345:WARNING:db.CiscoIOS:172.16.30.41 'ip'
+2019-04-25 10:31:07,345:WARNING:db.CiscoIOS:172.16.30.42 'ip'
+2019-04-25 10:31:07,346:WARNING:db.CiscoIOS:172.16.30.43 'ip'
+2019-04-25 10:31:07,346:WARNING:db.CiscoIOS:172.16.30.16 'ip'
+2019-04-25 10:31:07,346:WARNING:db.CiscoIOS:172.16.30.65 'ip'
+2019-04-25 10:31:07,346:WARNING:db.CiscoIOS:172.16.30.39 'ip'
+2019-04-25 10:31:07,347:WARNING:db.CiscoIOS:172.16.30.15 'ip'
+2019-04-25 10:31:07,347:WARNING:db.CiscoIOS:172.16.30.38 'ip'
+2019-04-25 10:31:07,347:WARNING:db.CiscoIOS:172.16.30.44 'ip'
+2019-04-25 10:31:07,350:WARNING:db.CiscoIOS:172.16.30.45 'ip'
+2019-04-25 10:31:07,350:WARNING:db.CiscoIOS:172.16.30.232 'ip'
+2019-04-25 10:31:07,351:WARNING:db.CiscoXR:172.16.30.34 'ip'
+2019-04-25 10:31:07,351:WARNING:db.CiscoXR:172.16.30.225 'ip'
+2019-04-25 10:31:07,351:WARNING:db.CiscoIOS:172.16.30.36 'ip'
+2019-04-25 10:31:07,351:WARNING:db.CiscoIOS:172.16.30.129 'ip'
+2019-04-25 10:31:07,351:WARNING:db.CiscoIOS:172.16.30.35 'ip'
+2019-04-25 10:31:07,351:WARNING:db.CiscoIOS:172.16.30.37 'ip'
+2019-04-25 10:31:07,361:WARNING:db.CiscoIOS:172.16.30.228 'ip'
+2019-04-25 10:31:07,361:WARNING:db.CiscoIOS:172.16.30.231 'ip'
+2019-04-25 10:31:07,361:WARNING:db.CiscoXR:172.16.30.246 'ip'
+2019-04-25 10:31:07,362:WARNING:db.CiscoIOS:172.16.30.240 'ip'
+2019-04-25 10:31:07,362:WARNING:db.CiscoIOS:172.16.30.230 'ip'
+2019-04-25 10:31:07,362:WARNING:db.CiscoXR:172.16.30.254 'ip'
+2019-04-25 10:31:07,362:WARNING:db.CiscoIOS:172.16.30.226 'ip'
+2019-04-25 10:31:07,363:WARNING:db.CiscoXR:172.16.30.244 'ip'
+2019-04-25 10:31:07,363:WARNING:db.CiscoXR:172.16.30.247 'ip'
+2019-04-25 10:31:07,363:WARNING:db.CiscoXR:172.16.30.248 'ip'
+2019-04-25 10:31:07,363:WARNING:db.CiscoIOS:172.16.30.209 'ip'
+2019-04-25 10:31:07,363:WARNING:db.CiscoIOS:172.16.30.242 'ip'
+2019-04-25 10:31:07,363:WARNING:db.CiscoXR:172.16.30.253 'ip'
+2019-04-25 10:31:07,363:WARNING:db.CiscoXR:172.16.30.251 'ip'
+2019-04-25 10:31:07,363:WARNING:db.CiscoXR:172.16.30.250 'ip'
+2019-04-25 10:31:07,364:WARNING:db.CiscoIOS:172.16.30.241 'ip'
+2019-04-25 10:31:07,364:WARNING:db.CiscoIOS:172.16.30.130 'ip'
+2019-04-25 10:31:07,364:WARNING:db.CiscoIOS:172.16.30.245 'ip'
+2019-04-25 10:33:49,914:WARNING:db.CiscoIOS:172.16.30.226 error en bulk save ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\n,\n,\n,\n,\n,\n,' at line 11") INSERT INTO 
+interface_states(link_state,
+protocol_state,
+input_rate,
+output_rate,
+util_in,
+util_out,
+input_errors,
+output_errors,
+interface_uid,
+state_timestamp) VALUES ,
+,
+,
+,
+,
+,
+,
+
+2019-04-25 10:33:55,165:WARNING:db.CiscoXR:172.16.30.225 error en bulk save ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\n,\n,\n,\n,\n,\n,\n,\n,\n,' at line 11") INSERT INTO 
+interface_states(link_state,
+protocol_state,
+input_rate,
+output_rate,
+util_in,
+util_out,
+input_errors,
+output_errors,
+interface_uid,
+state_timestamp) VALUES ,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+
+2019-04-25 10:34:06,540:WARNING:db.CiscoIOS:172.16.30.231 error en bulk save ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\n,\n,\n,\n,' at line 11") INSERT INTO 
+interface_states(link_state,
+protocol_state,
+input_rate,
+output_rate,
+util_in,
+util_out,
+input_errors,
+output_errors,
+interface_uid,
+state_timestamp) VALUES ,
+,
+,
+,
+,
+
+2019-04-25 10:53:24,229:WARNING:db.CiscoXR:172.16.30.254 'ip'
+2019-04-25 10:53:24,229:WARNING:db.CiscoXR:172.16.30.246 'ip'
+2019-04-25 10:53:24,234:WARNING:db.CiscoXR:172.16.30.253 'ip'
+2019-04-25 10:54:34,350:WARNING:db.CiscoXR:172.16.30.250 'ip'
+2019-04-25 10:54:34,354:WARNING:db.CiscoXR:172.16.30.244 'ip'
