@@ -18,6 +18,7 @@ from model.CiscoXR import CiscoXR
 from support.ConfigTemplate import ConfigTemplate
 import pandas as pd
 from model.ospf_database import ospf_database
+from model.InterfaceUfinet import InterfaceUfinet
 
 app = Flask(__name__)
 
@@ -40,6 +41,33 @@ def connect_mysql():
                            db=['MYSQL_DB'],
                            charset='utf8mb4',
                            cursorclass=pymysql.cursors.DictCursor)
+
+
+@app.route('/reportes/interfaces/regionales/')
+def interfaces_regionales():
+    return render_template('interfaces_regionales.html')
+
+
+@app.route('/reportes/interfaces/regionales/json', methods=['POST'])
+def json_interfaces_cisco():
+    request.get_json()
+    month = datetime.date.today().month
+    year = datetime.date.today().year
+    last_day = calendar.monthrange(year, month)[1]
+    initial_date = '{year}-{month}-{day} 00:00:00'.format(year=year, month=month, day=1) \
+        if request.json['initial_date'] == '' else request.json['initial_date'] + ' 00:00:00'
+    end_date = '{year}-{month}-{day} 23:59:59'.format(year=year, month=month, day=last_day) \
+        if request.json['end_date'] == '' else request.json['end_date'] + ' 00:00:00'
+
+    cantidad_interfaces = int(request.json['cantidad_interfaces'])
+    grupo_interfaces = request.json['grupo_interfaces']
+    weblog.warning(f'InterfaceUfinet.FILTERS_GROUP[grupo_interfaces] {InterfaceUfinet.FILTERS_GROUP[grupo_interfaces]}')
+    data = InterfaceUfinet.interface_states_data_by_date(master=master, initial_date=initial_date, end_date=end_date,
+                                                         filter_keys=InterfaceUfinet.FILTERS_GROUP[grupo_interfaces])
+    data_grupo = data[grupo_interfaces]
+    cantidad_interfaces = cantidad_interfaces - 1 if len(data_grupo) >= cantidad_interfaces else len(
+        cantidad_interfaces) - 1
+    return jsonify(data_grupo[0:cantidad_interfaces])
 
 
 @app.route('/reportes/internet/', methods=['POST', 'GET'])
@@ -161,6 +189,7 @@ def te_json():
 
     return jsonify({"a-b": ip_go, 'b-a': list(reversed(ip_return)), "a": final[0], "b": final[1]})
 
+
 @app.route('/diagramas/prueba_json', methods=['POST'])
 def ospf_json_vs():
     isp = ISP()
@@ -177,31 +206,31 @@ def ospf_json_vs():
     pl = PerformanceLog("json_diagram")
 
     datos_red = {"_ospf_ufinet_regional": {
-        "ip_seed_router": "172.16.30.15", 
+        "ip_seed_router": "172.16.30.15",
         "shelve_name": "shelves/" + date + "_ospf_ufinet_regional"
     }, "guatemala": {
-        "ip_seed_router": "172.17.22.52", 
+        "ip_seed_router": "172.17.22.52",
         "shelve_name": "shelves/" + date + "guatemala",
         "process_id": '502', "area": '502008'
     }, "el_salvador": {
-        "ip_seed_router": "172.17.23.11", 
+        "ip_seed_router": "172.17.23.11",
         "shelve_name": "shelves/" + date + "el_salvador",
         "process_id": '503', "area": '503001'
     }, "nicaragua": {
-        "ip_seed_router": "172.17.25.1", 
+        "ip_seed_router": "172.17.25.1",
         "shelve_name": "shelves/" + date + "nicaragua",
         "process_id": '1', "area": '50501'
     }, "honduras": {
-        "ip_seed_router": "172.17.24.5", 
+        "ip_seed_router": "172.17.24.5",
         "shelve_name": "shelves/" + date + "honduras",
         "process_id": '504', "area": '504002'
     }, "costa_rica": {
-        "ip_seed_router": "172.17.26.2", 
+        "ip_seed_router": "172.17.26.2",
         "shelve_name": "shelves/" + date + "costa_rica",
         "process_id": '1', "area": '506001'
     }
         , "panama": {
-            "ip_seed_router": "172.17.27.1", 
+            "ip_seed_router": "172.17.27.1",
             "shelve_name": "shelves/" + date + "guatemala",
             "process_id": '507', "area": '507001'
         }

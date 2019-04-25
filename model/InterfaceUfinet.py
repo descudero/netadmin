@@ -5,7 +5,9 @@ import datetime
 import re
 from itertools import islice
 from tools import logged
-
+import pandas as pd
+import pymysql.cursors
+import pymysql
 
 @logged
 class InterfaceUfinet(InterfaceIOS):
@@ -15,6 +17,7 @@ class InterfaceUfinet(InterfaceIOS):
     l3_rotocol
     L1_conection
     '''
+    FILTERS_GROUP = {'OSPF_MPLS': {'OSPF_MPLS': {'l3p': 'MPLS', 'l3a': 'OSP'}}}
     _sql_state_columns = ['link_state',
                           'protocol_state',
                           'input_rate',
@@ -271,3 +274,59 @@ class InterfaceUfinet(InterfaceIOS):
             connection.rollback()
             self.db_log.warning(self.parent_device.ip + " db" + self.if_index + repr(e))
             return False
+
+    @staticmethod
+    def interface_states_data_by_date(master, initial_date, end_date, filter_keys):
+        sql = '''select  
+               d.hostname as host,
+               i.uid,
+               i.if_index as inter,
+               right(i.description,CHAR_LENGTH(i.description)-20) as description,i.l3_protocol as l3p,
+               i.l3_protocol_attr as l3a ,
+               i.l1_protocol ,
+               i.l1_protocol_attr,
+               i.data_flow,
+               s.util_in as util_in,util_out as util_out,
+               (s.input_rate/1000000000) as in_gbs ,
+               (s.output_rate/1000000000) as out_gbs
+               ,s.state_timestamp  
+               from network_devices as d
+               inner join interfaces as i on d.uid = i.net_device_uid 
+               inner join interface_states as s on i.uid = interface_uid 
+               where s.state_timestamp >='{initial_date}' and s.state_timestamp <'{end_date}'
+               '''.format(initial_date=initial_date, end_date=end_date)
+
+        df = pd.read_sql(sql, con=master.db_connect())
+
+        df2 = df[['host', 'uid', 'inter', 'description', 'l3p', 'l3a', 'l1_protocol', 'data_flow',
+                  'l1_protocol_attr']].drop_duplicates(subset='uid', keep='first')
+        df_proceded = (
+            df.groupby(by=['uid'])['util_out', 'util_in', 'out_gbs', 'in_gbs'].quantile(.95)).round(
+            1).reset_index()
+
+        df_merge = pd.merge(df_proceded, df2, on=['uid'], how='left').sort_values(ascending=False, by=['util_out'])
+        df_merge.drop(['uid'], axis=1, inplace=True)
+        columns = ['host', 'inter', 'description', 'l1_protocol', 'l1_protocol_attr', 'util_in', 'util_out', 'in_gbs',
+                   'out_gbs']
+
+        sort_columns = {'default': 'util_out'}
+        tables = filter_summary(df_merge, columns, sort_column=sort_columns, filter_keys=filter_keys)
+
+        return tables
+
+
+def filter_summary(sql_dataframe, columns, sort_column={}, filter_keys={}):
+    results = {}
+    for key, filters in filter_keys.items():
+        results[key] = sql_dataframe.copy()
+        for column, value in filters.items():
+            df = results[key]
+            df = df[df[column] == value]
+            results[key] = df
+        if (key in sort_column):
+            results[key] = results[key].sort_values(by=sort_column[key], ascending=False)
+        elif ('default' in sort_column):
+            results[key] = results[key].sort_values(by=sort_column['default'], ascending=False)
+
+        results[key] = results[key][columns].to_dict(orient='records')
+    return results

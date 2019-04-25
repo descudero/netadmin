@@ -89,3 +89,14 @@ INFO:web.netadmin.app:reporte_inventario: 8 dispositivos
 2019-02-18 15:26:52,479:WARNING:web.netadmin.app:KeyError(b'db')
 2019-02-18 15:29:49,138:WARNING:web.netadmin.app:UnboundLocalError("local variable 'dict_ospf' referenced before assignment")
 2019-02-18 15:30:12,352:WARNING:web.netadmin.app:UnboundLocalError("local variable 'dict_ospf' referenced before assignment")
+2019-04-25 09:56:05,973:WARNING:web.netadmin.app:InterfaceUfinet.FILTERS_GROUP[grupo_interfaces] {'l3p': 'MPLS', 'l3a': 'OSP'}
+2019-04-25 09:56:31,720:WARNING:web.netadmin.app:InterfaceUfinet.FILTERS_GROUP[grupo_interfaces] {'l3p': 'MPLS', 'l3a': 'OSP'}
+2019-04-25 09:56:48,918:WARNING:web.netadmin.app:InterfaceUfinet.FILTERS_GROUP[grupo_interfaces] {'l3p': 'MPLS', 'l3a': 'OSP'}
+2019-04-25 09:58:25,134:WARNING:web.netadmin.app:InterfaceUfinet.FILTERS_GROUP[grupo_interfaces] {'OSPF_MPLS': {'l3p': 'MPLS', 'l3a': 'OSP'}}
+2019-04-25 09:59:31,870:WARNING:web.netadmin.app:InterfaceUfinet.FILTERS_GROUP[grupo_interfaces] {'OSPF_MPLS': {'l3p': 'MPLS', 'l3a': 'OSP'}}
+2019-04-25 10:02:20,982:WARNING:web.netadmin.app:InterfaceUfinet.FILTERS_GROUP[grupo_interfaces] {'OSPF_MPLS': {'l3p': 'MPLS', 'l3a': 'OSP'}}
+2019-04-25 10:02:38,230:WARNING:web.netadmin.app:InterfaceUfinet.FILTERS_GROUP[grupo_interfaces] {'OSPF_MPLS': {'l3p': 'MPLS', 'l3a': 'OSP'}}
+2019-04-25 10:07:28,638:WARNING:web.netadmin.app:InterfaceUfinet.FILTERS_GROUP[grupo_interfaces] {'OSPF_MPLS': {'l3p': 'MPLS', 'l3a': 'OSP'}}
+2019-04-25 10:09:46,559:WARNING:web.netadmin.app:InterfaceUfinet.FILTERS_GROUP[grupo_interfaces] {'OSPF_MPLS': {'l3p': 'MPLS', 'l3a': 'OSP'}}
+2019-04-25 10:10:46,350:WARNING:web.netadmin.app:InterfaceUfinet.FILTERS_GROUP[grupo_interfaces] {'OSPF_MPLS': {'l3p': 'MPLS', 'l3a': 'OSP'}}
+2019-04-25 10:11:52,863:WARNING:web.netadmin.app:InterfaceUfinet.FILTERS_GROUP[grupo_interfaces] {'OSPF_MPLS': {'l3p': 'MPLS', 'l3a': 'OSP'}}

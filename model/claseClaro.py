@@ -618,11 +618,11 @@ class Claro:
             else:
                 devices = Devices(self.master, ip_list=data['devices'])
             devices.remove_duplicates_db()
-            devices.execute(methods=methods)
-            for filter in data['filters']:
+            devices.execute(methods=methods, thread_window=25)
+            for filter_ in data['filters']:
                 devices.execute(methods=["save_interfaces_states"],
-                                kwargs={ip: {"save_interfaces_states": {'filters': filter}} for ip in
-                                        devices.keys()}, thread_window=3)
+                                kwargs={ip: {"save_interfaces_states": {'filters': filter_}} for ip in
+                                        devices.keys()}, thread_window=5)
 
 
 """
