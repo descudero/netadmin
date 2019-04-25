@@ -12,10 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="462384ac-2f64-47a0-b6d2-b16ff1b36497" name="Default" comment="first3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/connections.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/connections.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/db.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/db.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/claseClaro.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/claseClaro.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/BaseDevice.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/BaseDevice.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,15 +84,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/layout.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="36" column="56" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web_server.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="7">
@@ -119,10 +107,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/claseClaro.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
+            <state relative-caret-position="4680">
               <caret line="620" column="61" selection-start-line="620" selection-start-column="61" selection-end-line="620" selection-end-column="61" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -134,10 +122,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-15">
-              <caret line="1448" column="23" lean-forward="true" selection-start-line="1448" selection-start-column="23" selection-end-line="1448" selection-end-column="23" />
+            <state relative-caret-position="299">
+              <caret line="1188" column="28" selection-start-line="1188" selection-start-column="28" selection-end-line="1188" selection-end-column="28" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model/BaseDevice.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="127" column="27" lean-forward="true" selection-start-line="127" selection-start-column="27" selection-end-line="127" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -177,7 +177,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>setOptions</find>
       <find>20190411_ospf_ufinet_regional</find>
       <find>network_id</find>
       <find>diagrama</find>
@@ -207,6 +206,7 @@
       <find>mysql</find>
       <find>create_table_json_dict</find>
       <find>get_uid</find>
+      <find>set_interfaces</find>
     </findStrings>
     <replaceStrings>
       <replace>type</replace>
@@ -251,7 +251,6 @@
         <option value="$PROJECT_DIR$/resources/config_template/umpls_bgp_asbr_xe.template" />
         <option value="$PROJECT_DIR$/static/js/config_template.js" />
         <option value="$PROJECT_DIR$/resources/config_template/ip_interface_xe.template" />
-        <option value="$PROJECT_DIR$/model/BaseDevice.py" />
         <option value="$PROJECT_DIR$/resources/config_template/l2vpn_l2_xe_xe.template" />
         <option value="$PROJECT_DIR$/save_interfaces_db.py" />
         <option value="$PROJECT_DIR$/model/ospf_database.py" />
@@ -271,6 +270,7 @@
         <option value="$PROJECT_DIR$/templates/interfaces_regionales.html" />
         <option value="$PROJECT_DIR$/model/Devices.py" />
         <option value="$PROJECT_DIR$/model/claseClaro.py" />
+        <option value="$PROJECT_DIR$/model/BaseDevice.py" />
       </list>
     </option>
   </component>
@@ -623,14 +623,7 @@
       <workItem from="1554756391691" duration="19155000" />
       <workItem from="1555002629915" duration="28603000" />
       <workItem from="1555105055401" duration="600000" />
-      <workItem from="1555969157896" duration="18862000" />
-    </task>
-    <task id="LOCAL-00025" summary="first3">
-      <created>1546987511164</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1546987511164</updated>
+      <workItem from="1555969157896" duration="19404000" />
     </task>
     <task id="LOCAL-00026" summary="first3">
       <created>1546988923090</created>
@@ -968,7 +961,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556209848481</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="first3">
+      <created>1556211929441</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1556211929441</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1004,7 +1004,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="405802000" />
+    <option name="totallyTimeSpent" value="406344000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1248,16 +1248,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
           <caret line="295" column="4" selection-start-line="295" selection-start-column="4" selection-end-line="295" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/BaseDevice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="168" column="66" selection-start-line="168" selection-start-column="66" selection-end-line="168" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1580,22 +1570,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/model/claseClaro.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4680">
+          <caret line="620" column="61" selection-start-line="620" selection-start-column="61" selection-end-line="620" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="1448" column="23" lean-forward="true" selection-start-line="1448" selection-start-column="23" selection-end-line="1448" selection-end-column="23" />
+        <state relative-caret-position="299">
+          <caret line="1188" column="28" selection-start-line="1188" selection-start-column="28" selection-end-line="1188" selection-end-column="28" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/claseClaro.py">
+    <entry file="file://$PROJECT_DIR$/model/BaseDevice.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="620" column="61" selection-start-line="620" selection-start-column="61" selection-end-line="620" selection-end-column="61" />
+        <state relative-caret-position="271">
+          <caret line="127" column="27" lean-forward="true" selection-start-line="127" selection-start-column="27" selection-end-line="127" selection-end-column="27" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>

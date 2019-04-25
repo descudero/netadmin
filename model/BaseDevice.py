@@ -67,6 +67,7 @@ class BaseDevice(object):
                                             password=self.master.password)
                 print("ssh conected " + self.display_name)
             except NetMikoAuthenticationException:
+                connection = None
                 print("contrasena o usuario incorrecto")
 
         return connection
@@ -123,9 +124,11 @@ class BaseDevice(object):
     def send_command_and_parse(self, command, template_name, timeout=5, close_connection=True):
 
         connection = self.connect()
-
-        cli_output = self.send_command(connection=connection, command=command, timeout=timeout)
-        connection.disconnect()
+        if connection is None:
+            cli_output = ""
+        else:
+            cli_output = self.send_command(connection=connection, command=command, timeout=timeout)
+            connection.disconnect()
         self.verbose.debug("{0} comm {1} cli {2}".format(self.ip, template_name, cli_output))
 
         return self.parse_txtfsm_template(template_name=template_name, text=cli_output)
