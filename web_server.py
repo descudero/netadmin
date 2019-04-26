@@ -522,11 +522,12 @@ def filter_summary(sql_dataframe, columns, sort_column={}):
                    'CAPACIDADES_DIRECTOS_ASN': {'l3a': 'PNI'},
                    'BGPS_DIRECTOS_INTERNOS_DOWNSTREAM': {'l3a': 'IBP', 'data_flow': 'DOWNSTREAM'},
                    'TRUNCALES_MPLS_DOWNSTREAM': {'l3p': 'MPLS',
-                                                 'l1_protocol': 'CABLE_SUBMARINO'
+                                                 'l1_protocol': 'CABLE_SUBMARINO', 'data_flow': 'DOWNSTREAM'
                                                  },
                    'SERVIDORES_CACHE_TERCEROS': {'l3a': 'CDN'}
                    }
     results = {}
+    verbose.warning(f'columns dataframe {sql_dataframe.columns}')
     for key, filters in filter_keys.items():
         results[key] = sql_dataframe.copy()
         for column, value in filters.items():

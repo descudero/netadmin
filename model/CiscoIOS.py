@@ -500,8 +500,8 @@ class CiscoIOS(Parent):
                         AuthenticationException, NetMikoTimeoutException, EOFError, SSHException,
                         ConnectionAbortedError,
                         ValueError, ConnectionRefusedError) as e:
-                    self.logger_connection.warning(
-                        "UNABLE TO CONNECT  SSH {0} ERROR {1}".format(self.ip, str(repr(e))))
+                    self.logger_connection.warning(f"UNABLE TO CONNECT  SSH {self.ip} ERROR {repr(
+                        e)} {self.master.username} {self.master.password}")
                     try:
                         connection = ConnectHandler(device_type=self.device_type + "telnet",
                                                     ip=self.ip, username=self.master.username,
@@ -509,8 +509,8 @@ class CiscoIOS(Parent):
 
                     except (NetMikoAuthenticationException, SSHException, EOFError, ConnectionAbortedError, ValueError,
                             ConnectionRefusedError) as e:
-                        self.logger_connection.warning(
-                            "UNABLE TO CONNECT  TELNET {0} ERROR {1}".format(self.ip, str(repr(e))))
+                        self.logger_connection.warning(f"UNABLE TO CONNECT  telnet {self.ip} ERROR {repr(
+                            e)} {self.master.username} {self.master.password}")
 
         else:
             # device has to hop another device
@@ -529,7 +529,7 @@ class CiscoIOS(Parent):
 
         self.verbose.debug(" {ip} Connection created {connection} ".format(ip=self.ip, connection=connection))
         if type(connection) is str:
-            self.verbose.critical(" {ip} unable to connect  ".format(ip=self.ip))
+            self.verbose.critical(f"{self.ip} unable to connect  {self.master.password} {self.master.username}")
         return connection
 
     def set_hostname(self, connection, command_host="show run | i hostname"):

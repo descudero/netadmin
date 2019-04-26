@@ -113,7 +113,7 @@ class InterfaceUfinet(InterfaceIOS):
             try:
                 connection = device.master.db_connect()
                 with connection.cursor() as cursor:
-                    sql = f'''SELECT uid,if_index,l3_protocol,l3_protocol_attr,l1_protocol,l1_protocol_attr FROM                                    interfaces WHERE   net_device_uid ={device.uid} '''
+                    sql = f'''SELECT uid,if_index,l3_protocol,l3_protocol_attr,l1_protocol,l1_protocol_attr,data_flow FROM                                    interfaces WHERE   net_device_uid ={device.uid} '''
                     cursor.execute(sql)
                     data_interfaces = cursor.fetchall()
                     data_interfaces = {data['if_index']: data for data in data_interfaces}
@@ -124,7 +124,8 @@ class InterfaceUfinet(InterfaceIOS):
                             if interface.l3_protocol == data_sql['l3_protocol'] and \
                                     interface.l3_protocol_attr == data_sql['l3_protocol_attr'] and \
                                     interface.l1_protocol == data_sql['l1_protocol'] and \
-                                    interface.l1_protocol == data_sql['l1_protocol_attr']:
+                                    interface.l1_protocol_attr == data_sql['l1_protocol_attr'] and \
+                                    interface.data_flow == data_sql['data_flow']:
                                 interface.uid = data_sql['uid']
                     return 1
             except Exception as e:
@@ -177,10 +178,10 @@ class InterfaceUfinet(InterfaceIOS):
             connection = self.parent_device.master.db_connect()
             with connection.cursor() as cursor:
                 sql = '''SELECT uid FROM interfaces WHERE if_index=%s AND net_device_uid =%s AND l3_protocol=%s
-                 AND l3_protocol_attr=%s AND l1_protocol=%s AND l1_protocol_attr=%s
+                 AND l3_protocol_attr=%s AND l1_protocol=%s AND l1_protocol_attr=%s AND data_flow=%s
                 '''
                 cursor.execute(sql, (self.if_index, self.parent_device.uid_db(), self.l3_protocol,
-                                     self.l3_protocol_attr, self.l1_protocol, self.l1_protocol_attr))
+                                     self.l3_protocol_attr, self.l1_protocol, self.l1_protocol_attr, self.data_flow))
                 result = cursor.fetchone()
                 if result:
                     self.uid = result['uid']

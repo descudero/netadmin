@@ -54,6 +54,7 @@ class Master:
         ch2 = logging.FileHandler('timestamps.log')
         ch2.setLevel(0)
         formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - @%(message)s @')
+
         ch2.setFormatter(formatter)
         self.level_time_log = 20
         self.logger_time.addHandler(ch2)
@@ -61,6 +62,7 @@ class Master:
         logging_dic = yaml.load(open(config_log_file))
         logging.config.dictConfig(logging_dic)
         atexit.register(logging.shutdown)
+        self.logger_connection.warning(f'username {self.username} password {self.password}')
 
     def get_password(self):
         return self.password
