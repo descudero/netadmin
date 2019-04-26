@@ -500,8 +500,8 @@ class CiscoIOS(Parent):
                         AuthenticationException, NetMikoTimeoutException, EOFError, SSHException,
                         ConnectionAbortedError,
                         ValueError, ConnectionRefusedError) as e:
-                    self.logger_connection.warning(f"UNABLE TO CONNECT  SSH {self.ip} ERROR {repr(
-                        e)} {self.master.username} {self.master.password}")
+                    self.logger_connection.warning(
+                        f"UNABLE TO CONNECT  SSH {self.ip}  {self.master.username} {self.master.password}")
                     try:
                         connection = ConnectHandler(device_type=self.device_type + "telnet",
                                                     ip=self.ip, username=self.master.username,
@@ -509,9 +509,8 @@ class CiscoIOS(Parent):
 
                     except (NetMikoAuthenticationException, SSHException, EOFError, ConnectionAbortedError, ValueError,
                             ConnectionRefusedError) as e:
-                        self.logger_connection.warning(f"UNABLE TO CONNECT  telnet {self.ip} ERROR {repr(
-                            e)} {self.master.username} {self.master.password}")
-
+                        self.logger_connection.warning(
+                            f"UNABLE TO CONNECT  telnet {self.ip}  {self.master.username} {self.master.password}")
         else:
             # device has to hop another device
             gateway = CiscoIOS(self.jump_gateway["ip"], "gateway", self.master)
@@ -1225,8 +1224,6 @@ class CiscoIOS(Parent):
             self.bgp_snmp_neighbors[add] = BGPNeighbor.factory_snmp(device=self, community=special_community,
                                                                     address_family=add)
 
-
-
     def set_snmp_plattform(self):
 
         platfforms = {"9K": "CiscoXR", "ASR920": "CiscoIOS", "900": "CiscoIOS", "default": 'CiscoIOS'}
@@ -1257,6 +1254,7 @@ class CiscoIOS(Parent):
                     self.dev.warning("set_snmp_location_attr ip" + self.ip + " err " + repr(e))
         else:
             self.dev.warning("set_snmp_location_attr ip" + self.ip + " err no snmp location data")
+
     def set_snmp_location(self):
         if (self.community == ""):
             self.set_snmp_community()
@@ -1489,7 +1487,6 @@ class CiscoIOS(Parent):
                 self.duplicate = result['ip'] != self.ip
         except Exception as e:
             self.log_db.warning(self.ip + " " + str(e))
-
 
     def uid_db(self):
         try:
