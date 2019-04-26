@@ -48,9 +48,9 @@ real_oid = '1.3.6.1.2.1.31.1.1.1.6'
 community = 'INTERNET_UFINET'
 # device = CiscoXR(ip=host, display_name='a', master=isp.master)
 # device.set_snmp_bgp_neighbors(special_community="INTERNET_UFINET",address_family=['ipv4','ipv6'])
-
-data1 = get_bulk_real_auto(target=host, oid=real_oid, credentials=community)
 time1 = time.time()
+data1 = get_bulk_real_auto(target=host, oid=real_oid, credentials=community)
+
 time.sleep(15)
 data2 = get_bulk_real_auto(target=host, oid=real_oid, credentials=community)
 time2 = time.time()
