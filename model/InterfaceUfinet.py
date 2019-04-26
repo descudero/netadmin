@@ -8,6 +8,10 @@ from tools import logged
 import pandas as pd
 import pymysql.cursors
 import pymysql
+from tools import get_bulk_real_auto, get_oid_size, get_bulk
+from pprint import pprint
+import time
+
 
 @logged
 class InterfaceUfinet(InterfaceIOS):
@@ -314,6 +318,64 @@ class InterfaceUfinet(InterfaceIOS):
         tables = filter_summary(df_merge, columns, sort_column=sort_columns, filter_keys=filter_keys)
 
         return tables
+
+    _OID_IP = '1.3.6.1.2.1.4.20.1.2'
+
+    _OID_RATES = {'input_rate': '1.3.6.1.2.1.31.1.1.1.6',
+                  'output_rate': '1.3.6.1.2.1.31.1.1.1.10'}
+
+    _OID = {'description': "1.3.6.1.2.1.31.1.1.1.18",
+
+            'if_index': '1.3.6.1.2.1.2.2.1.2',
+            'mtu': '1.3.6.1.2.1.2.2.1.4',
+            'bw': '1.3.6.1.2.1.31.1.1.1.15',
+            'link_state': '1.3.6.1.2.1.2.2.1.7',
+            'protocol_state': '1.3.6.1.2.1.2.2.1.8',
+            'output_errors': '1.3.6.1.2.1.2.2.1.20',
+            'input_errors': '1.3.6.1.2.1.2.2.1.14'}
+
+    @staticmethod
+    def bulk_snmp_data_interfaces(device):
+        count_interfaces = get_oid_size(target=device.ip, credentials=device.community, oid='1.3.6.1.2.1.31.1.1.1.18')
+        interface_data = {}
+        for attr, oid in InterfaceUfinet._OID.items():
+            oid_data = get_bulk(target=device.ip, credentials=device.community, oids=[oid], count=count_interfaces)
+            for register in oid_data:
+                snmp_ip = register[0].replace(oid + ".", "")
+                interface_data.setdefault(snmp_ip, {})[attr] = register[1]
+        oid_data = get_bulk_real_auto(target=device.ip, credentials=device.community, oid=InterfaceUfinet._OID_IP,
+                                      window_size=500)
+        for register in oid_data:
+            snmp_ip = str(register[1])
+            ip = register[0].replace(InterfaceUfinet._OID_IP + ".", "")
+            interface_data.setdefault(snmp_ip, {})['ip'] = ip
+        for attr, oid in InterfaceUfinet._OID_RATES.items():
+            oid_data = InterfaceUfinet.delta_oid(device=device, count=count_interfaces, oid=oid)
+            for register in oid_data:
+                snmp_ip = register[0].replace(oid + ".", "")
+                interface_data.setdefault(snmp_ip, {})[attr] = register[1]
+
+        return interface_data
+
+    @staticmethod
+    def delta_oid(device, count, oid, multiplier=8, sleep_time=20):
+        time1 = time.time()
+        data_before = get_bulk(target=device.ip, credentials=device.community, oids=[oid], count=count)
+        time.sleep(sleep_time)
+        time_lapse = time.time() - time1
+        data_after = get_bulk(target=device.ip, credentials=device.community, oids=[oid], count=count)
+        final_data = [[register[0], int(calculate_delta(new_counter=register[1],
+                                                        old_counter=data_before[index][1],
+                                                        timelapse=time_lapse)) * multiplier]
+                      for index, register in enumerate(data_after)]
+        return final_data
+
+        pass
+
+
+def calculate_delta(old_counter, new_counter, timelapse):
+    new_counter = new_counter if new_counter >= old_counter else new_counter + 18446744073709551616
+    return (new_counter - old_counter) / timelapse
 
 
 def filter_summary(sql_dataframe, columns, sort_column={}, filter_keys={}):

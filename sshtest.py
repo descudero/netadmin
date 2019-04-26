@@ -1,12 +1,13 @@
 from pprint import pprint
 from pysnmp import hlapi
-from tools import get_bulk_real_auto
+from tools import get_bulk_real_auto, get_oid_size
 from model.InternetServiceProvider import InternetServiceProvider as ISP
 from config.Master import Master
 from model.CiscoIOS import CiscoIOS
 from model.CiscoXR import CiscoXR
 from model.BGPNeigbor import BGPNeighbor
 import time
+from model.InterfaceUfinet import InterfaceUfinet
 
 '''if_index,
                 description,
@@ -30,33 +31,41 @@ link_state = {1: 'up',
               2: 'down',
               3: 'testing'}
 
-_sql_state_columns = {'link_state': '1.3.6.1.2.1.2.2.1.7',
-                      'protocol_state': '1.3.6.1.2.1.2.2.1.8',
-                      'input_rate': '1.3.6.1.2.1.31.1.1.1.6',
-                      'output_rate': '1.3.6.1.2.1.31.1.1.1.10',
-                      'input_errors': '1.3.6.1.2.1.2.2.1.14',
-                      'output_errors': '1.3.6.1.2.1.2.2.1.20'}
-
-interface_description = "1.3.6.1.2.1.31.1.1.1.18"
-interface_ip = '1.3.6.1.2.1.4.20.1.2'
-interface_index = '1.3.6.1.2.1.2.2.1.2'
-mtu = '1.3.6.1.2.1.2.2.1.4'
-bandwidth = '1.3.6.1.2.1.31.1.1.1.15'
 
 host = '172.16.30.250'
+
+'''
+
 real_oid = '1.3.6.1.2.1.31.1.1.1.6'
 community = 'INTERNET_UFINET'
+oid_64 = get_oid_size(target=host,  credentials=community,oid='1.3.6.1.2.1.31.1.1.1.6')
+oid_32 = get_oid_size(target=host,  credentials=community,oid='1.3.6.1.2.1.2.2.1.7')
+print(f'64 {oid_64} 32 {oid_32}')
+'''
+isp = ISP()
+isp.master = Master()
+device = CiscoXR(ip=host, display_name='a', master=isp.master)
+device.set_snmp_community()
+
+data = InterfaceUfinet.bulk_snmp_data_interfaces(device=device)
+pprint(data)
+community = 'INTERNET_UFINET'
+# pprint( get_bulk_real_auto(target=host, oid='1.3.6.1.2.1.4.20.1.2', credentials=community))
+
+'''
 # device = CiscoXR(ip=host, display_name='a', master=isp.master)
 # device.set_snmp_bgp_neighbors(special_community="INTERNET_UFINET",address_family=['ipv4','ipv6'])
 time1 = time.time()
 data1 = get_bulk_real_auto(target=host, oid=real_oid, credentials=community)
-
-time.sleep(15)
-data2 = get_bulk_real_auto(target=host, oid=real_oid, credentials=community)
+time.sleep(25)
 time2 = time.time()
 timelapse = float(time2 - time1)
-print(timelapse)
-
+data3 = [[registro[0], calculate_delta(new_counter=registro[1],
+                                       old_counter=data1[index][1],
+                                       timelapse=timelapse) * 8]
+         for index, registro in enumerate(data2)]
+         
+pprint(data3[1])
 
 def calculate_delta(old_counter, new_counter, timelapse):
     print(old_counter)
@@ -66,8 +75,5 @@ def calculate_delta(old_counter, new_counter, timelapse):
     return (new_counter - old_counter) / timelapse
 
 
-data3 = [[registro[0], calculate_delta(new_counter=registro[1],
-                                       old_counter=data1[index][1],
-                                       timelapse=timelapse) * 8]
-         for index, registro in enumerate(data2)]
-pprint(data3[1])
+
+'''
