@@ -11,7 +11,7 @@ from netmiko import NetMikoTimeoutException
 from paramiko import AuthenticationException
 from paramiko import SSHException
 from pysnmp.entity.rfc3413.oneliner import cmdgen
-
+from model.BGPNeigbor import BGPNeighbor
 import lib.pyyed as pyyed
 from model.BaseDevice import BaseDevice as Parent
 from model.CiscoPart import CiscoPart
@@ -1218,6 +1218,15 @@ class CiscoIOS(Parent):
             hostname = str(val).split(".")[0]
         self.hostname = hostname
 
+    def set_snmp_bgp_neighbors(self, special_community=None, address_family=['ipv4']):
+
+        self.bgp_snmp_neighbors = {}
+        for add in address_family:
+            self.bgp_snmp_neighbors[add] = BGPNeighbor.factory_snmp(device=self, community=special_community,
+                                                                    address_family=add)
+
+
+
     def set_snmp_plattform(self):
 
         platfforms = {"9K": "CiscoXR", "ASR920": "CiscoIOS", "900": "CiscoIOS", "default": 'CiscoIOS'}
@@ -1564,3 +1573,10 @@ class CiscoIOS(Parent):
             new_paths.append(path.copy_path_new_hop(ip_reference_hop=ip_reference_hop, hop=hop, index_way=index_way))
 
         return new_paths
+
+    def save_bgp_neighbors_states(self, special_comnunity=None):
+        if not hasattr(self, 'snmp_bgp_neighbors'):
+            self.set_snmp_bgp_neighbors(special_community=special_comnunity)
+
+        for add, neighbors in self.bgp_snmp_neighbors.items():
+            BGPNeighbor.save_bulk_states(device=self, neighbors=neighbors.values())

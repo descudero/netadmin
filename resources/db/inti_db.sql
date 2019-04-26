@@ -29,21 +29,32 @@ create table interfaces
 set foreign_key_checks = 0;
 drop table interface_states;
 set foreign_key_checks = 1;
-create table interface_states
+
+create table bgp_neighbors
 (
-  uid             int auto_increment primary key,
-  link_state      varchar(50),
-  protocol_state  varchar(50),
-  input_rate      bigint,
-  output_rate     bigint,
-  util_in         decimal(10, 2),
-  util_out        decimal(10, 2),
-  input_errors    bigint,
-  output_errors   bigint,
-  interface_uid   int,
-  state_timestamp datetime,
-  foreign key (interface_uid) references interfaces (uid)
+  uid            int auto_increment primary key,
+  ip             varchar(50),
+  asn            int,
+  address_family varchar(50),
+  net_device_uid int,
+  foreign key (net_device_uid) references network_devices (uid)
 );
 
 
+set foreign_key_checks = 0;
+drop table bgp_neighbor_states;
+set foreign_key_checks = 1;
+create table bgp_neighbor_states
+(
+  uid                 int auto_increment primary key,
+  state               VARCHAR(50),
+  last_error          VARCHAR(50),
+  advertised_prefixes int,
+  accepted_prefixes   int,
+  state_timestamp     datetime,
+  bgp_neighbor_uid    int,
+  foreign key (bgp_neighbor_uid) references bgp_neighbors (uid)
+);
 
+select *
+from bgp_neighbor_states

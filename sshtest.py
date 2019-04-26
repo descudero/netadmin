@@ -1,40 +1,60 @@
-from __future__ import print_function
-
+from pprint import pprint
+from pysnmp import hlapi
+from tools import get_bulk_real_auto
+from model.InternetServiceProvider import InternetServiceProvider as ISP
 from config.Master import Master
 from model.CiscoIOS import CiscoIOS
 from model.CiscoXR import CiscoXR
-from model.L3Path import L3Path
-from model.claseClaro import Claro
-from pprint import pprint
-from multiping import multi_ping
-from collections import Counter
-claro = Claro()
+from model.BGPNeigbor import BGPNeighbor
+import time
 
-final_counter = Counter()
-master = Master()
-# test = CiscoIOS("172.17.28.192", "XR", master)
-# test3 = CiscoIOS("172.17.28.110", "XR", master)
-# test2 = CiscoXR("172.16.30.253", "XR", master)
+'''if_index,
+                description,
+                bandwith,
+                l3_protocol,
+                l3_protocol_attr
+                ,l1_protocol,
+                l1_protocol_attr,
+                data_flow,
+                net_device_uid'''
 
-# test2.set_snmp_community()
-# test2.set_yed_xy()
-# print(test2.x)
-claro.master = master
-# xrs = CiscoXR.devices(master)
+protocol_states = {1: 'up',
+                   2: 'down',
+                   3: 'testing',
+                   4: 'unknown',
+                   5: 'dormant',
+                   6: 'notPresent',
+                   7: 'lowerLayerDown'}
 
-pprint(claro.ospf_topology_vs(ip_seed_router="172.16.30.5", from_shelve=False, shelve_name="20100122shelve"))
-# pprint(test2.chassis.save())
+link_state = {1: 'up',
+              2: 'down',
+              3: 'testing'}
+
+_sql_state_columns = {'link_state': '1.3.6.1.2.1.2.2.1.7',
+                      'protocol_state': '1.3.6.1.2.1.2.2.1.8',
+                      'input_rate': '1.3.6.1.2.1.2.2.1.10',
+                      'output_rate': '1.3.6.1.2.1.2.2.1.16',
+                      'input_errors': '1.3.6.1.2.1.2.2.1.14',
+                      'output_errors': '1.3.6.1.2.1.2.2.1.20'}
+
+interface_description = "1.3.6.1.2.1.31.1.1.1.18"
+interface_ip = '1.3.6.1.2.1.4.20.1.2'
+interface_index = '1.3.6.1.2.1.2.2.1.2'
+mtu = '1.3.6.1.2.1.2.2.1.4'
+bandwidth = '1.3.6.1.2.1.31.1.1.1.15'
+
+isp = ISP()
+isp.master = Master()
+host = '172.16.30.250'
+real_oid = '1.3.6.1.2.1.2.2.1.10'
+community = 'INTERNET_UFINET'
+device = CiscoXR(ip=host, display_name='a', master=isp.master)
+# device.set_snmp_bgp_neighbors(special_community="INTERNET_UFINET",address_family=['ipv4','ipv6'])
+
+# data =get_bulk_real_auto(target=host,oid=real_oid,credentials=community)
+# pprint(data)
 
 
-# devices = CiscoXR.devices(master)
-#pprint(devices)
-'''
-devices,ips = claro.devices_from_network("172.16.30.0/24")
-
-claro.excute_methods(methods={"set_snmp_location":{}},devices=devices)
-
-pprint(len(devices))
-data = [{"ip":device.ip,"hostname":device.hostname, "snmp_location":device.snmp_location} for device in devices]
-
-claro.save_to_excel_list(data,file_name="snmp_location")
-'''
+print(isp.master.password)
+print(isp.master.username)
+print(Master.encode(key='pinf con vrf', hash='Ufinet18_2'))

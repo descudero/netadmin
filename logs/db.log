@@ -2076,3 +2076,538 @@ state_timestamp) VALUES ,
 2019-04-25 10:53:24,234:WARNING:db.CiscoXR:172.16.30.253 'ip'
 2019-04-25 10:54:34,350:WARNING:db.CiscoXR:172.16.30.250 'ip'
 2019-04-25 10:54:34,354:WARNING:db.CiscoXR:172.16.30.244 'ip'
+2019-04-25 11:15:02,141:WARNING:db.CiscoXR:172.16.30.250 'ip'
+2019-04-25 11:15:02,150:WARNING:db.CiscoXR:172.16.30.244 'ip'
+2019-04-25 11:17:07,505:WARNING:db.CiscoIOS:172.16.30.1 'ip'
+2019-04-25 11:17:07,526:WARNING:db.CiscoXR:172.16.30.3 'ip'
+2019-04-25 11:17:07,550:WARNING:db.CiscoIOS:172.16.30.13 'ip'
+2019-04-25 11:17:07,550:WARNING:db.CiscoIOS:172.16.30.7 'ip'
+2019-04-25 11:17:07,551:WARNING:db.CiscoIOS:172.16.30.6 'ip'
+2019-04-25 11:17:07,551:WARNING:db.CiscoIOS:172.16.30.8 'ip'
+2019-04-25 11:17:07,551:WARNING:db.CiscoIOS:172.16.30.9 'ip'
+2019-04-25 11:17:07,551:WARNING:db.CiscoIOS:172.16.30.11 'ip'
+2019-04-25 11:17:07,551:WARNING:db.CiscoIOS:172.16.30.12 'ip'
+2019-04-25 11:17:07,551:WARNING:db.CiscoIOS:172.16.30.14 'ip'
+2019-04-25 11:17:07,552:WARNING:db.CiscoIOS:172.16.30.4 'ip'
+2019-04-25 11:17:07,552:WARNING:db.CiscoIOS:172.16.30.10 'ip'
+2019-04-25 11:17:07,553:WARNING:db.CiscoIOS:172.16.30.5 'ip'
+2019-04-25 11:17:07,562:WARNING:db.CiscoIOS:172.16.30.39 'ip'
+2019-04-25 11:17:07,563:WARNING:db.CiscoIOS:172.16.30.16 'ip'
+2019-04-25 11:17:07,563:WARNING:db.CiscoIOS:172.16.30.42 'ip'
+2019-04-25 11:17:07,563:WARNING:db.CiscoIOS:172.16.30.40 'ip'
+2019-04-25 11:17:07,563:WARNING:db.CiscoXR:172.16.30.34 'ip'
+2019-04-25 11:17:07,563:WARNING:db.CiscoIOS:172.16.30.45 'ip'
+2019-04-25 11:17:07,564:WARNING:db.CiscoIOS:172.16.30.41 'ip'
+2019-04-25 11:17:07,564:WARNING:db.CiscoIOS:172.16.30.35 'ip'
+2019-04-25 11:17:07,564:WARNING:db.CiscoIOS:172.16.30.130 'ip'
+2019-04-25 11:17:07,564:WARNING:db.CiscoIOS:172.16.30.50 'ip'
+2019-04-25 11:17:07,564:WARNING:db.CiscoIOS:172.16.30.209 'ip'
+2019-04-25 11:17:07,564:WARNING:db.CiscoIOS:172.16.30.37 'ip'
+2019-04-25 11:17:07,564:WARNING:db.CiscoIOS:172.16.30.15 'ip'
+2019-04-25 11:17:07,564:WARNING:db.CiscoIOS:172.16.30.226 'ip'
+2019-04-25 11:17:07,564:WARNING:db.CiscoIOS:172.16.30.36 'ip'
+2019-04-25 11:17:07,567:WARNING:db.CiscoIOS:172.16.30.43 'ip'
+2019-04-25 11:17:07,567:WARNING:db.CiscoIOS:172.16.30.231 'ip'
+2019-04-25 11:17:07,568:WARNING:db.CiscoIOS:172.16.30.242 'ip'
+2019-04-25 11:17:07,568:WARNING:db.CiscoXR:172.16.30.244 'ip'
+2019-04-25 11:17:07,568:WARNING:db.CiscoXR:172.16.30.248 'ip'
+2019-04-25 11:17:07,568:WARNING:db.CiscoIOS:172.16.30.228 'ip'
+2019-04-25 11:17:07,568:WARNING:db.CiscoIOS:172.16.30.241 'ip'
+2019-04-25 11:17:07,568:WARNING:db.CiscoXR:172.16.30.247 'ip'
+2019-04-25 11:17:07,569:WARNING:db.CiscoIOS:172.16.30.245 'ip'
+2019-04-25 11:17:07,569:WARNING:db.CiscoXR:172.16.30.225 'ip'
+2019-04-25 11:17:07,569:WARNING:db.CiscoIOS:172.16.30.230 'ip'
+2019-04-25 11:17:07,569:WARNING:db.CiscoIOS:172.16.30.240 'ip'
+2019-04-25 11:17:07,569:WARNING:db.CiscoIOS:172.16.30.65 'ip'
+2019-04-25 11:17:07,570:WARNING:db.CiscoXR:172.16.30.246 'ip'
+2019-04-25 11:17:07,570:WARNING:db.CiscoXR:172.16.30.250 'ip'
+2019-04-25 11:17:07,570:WARNING:db.CiscoXR:172.16.30.254 'ip'
+2019-04-25 11:17:07,571:WARNING:db.CiscoXR:172.16.30.251 'ip'
+2019-04-25 11:17:07,571:WARNING:db.CiscoXR:172.16.30.253 'ip'
+2019-04-25 11:20:51,124:WARNING:db.CiscoIOS:172.16.30.231 error en bulk save ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\n,\n,\n,\n,' at line 11") INSERT INTO 
+interface_states(link_state,
+protocol_state,
+input_rate,
+output_rate,
+util_in,
+util_out,
+input_errors,
+output_errors,
+interface_uid,
+state_timestamp) VALUES ,
+,
+,
+,
+,
+
+2019-04-25 11:20:54,656:WARNING:db.CiscoIOS:172.16.30.226 error en bulk save ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\n,\n,\n,\n,\n,\n,' at line 11") INSERT INTO 
+interface_states(link_state,
+protocol_state,
+input_rate,
+output_rate,
+util_in,
+util_out,
+input_errors,
+output_errors,
+interface_uid,
+state_timestamp) VALUES ,
+,
+,
+,
+,
+,
+,
+
+2019-04-25 17:00:10,370:WARNING:db.CiscoXR:sql not able to get data AttributeError("'dict_values' object has no attribute 'save'")
+2019-04-25 17:00:10,730:WARNING:db.CiscoXR:bgp_state_save 172.16.30.250 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbor_states`, CONSTRAINT `bgp_neighbor_states_ibfk_1` FOREIGN KEY (`bgp_neighbor_uid`) REFERENCES `bgp_neighbors` (`uid`))') INSERT INTO 
+bgp_neighbor_states(state,
+last_error,
+advertised_prefixes,
+accepted_prefixes,
+bgp_neighbor_uid,
+state_timestamp) VALUES ('established','peer in wrong AS','0','0','0','2019-04-25 17:00:10'),
+('idle','connection rejected','0','0','0','2019-04-25 17:00:10'),
+('idle','connection rejected','0','0','0','2019-04-25 17:00:10'),
+('idle','','0','0','0','2019-04-25 17:00:10'),
+('idle','hold time expired','0','0','0','2019-04-25 17:00:10'),
+('idle','','0','0','0','2019-04-25 17:00:10'),
+('established','hold time expired','1','0','0','2019-04-25 17:00:10'),
+('established','administrative shutdown','9717','0','0','2019-04-25 17:00:10'),
+('established','hold time expired','177','739065','0','2019-04-25 17:00:10'),
+('idle','hold time expired','0','0','0','2019-04-25 17:00:10'),
+('active','hold time expired','0','0','0','2019-04-25 17:00:10'),
+('idle','','0','0','0','2019-04-25 17:00:10'),
+('established','hold time expired','0','10','0','2019-04-25 17:00:10'),
+('idle','','0','0','0','2019-04-25 17:00:10'),
+('idle','','0','0','0','2019-04-25 17:00:10'),
+('established','hold time expired','0','1','0','2019-04-25 17:00:10'),
+('idle','hold time expired','0','0','0','2019-04-25 17:00:10'),
+('established','hold time expired','0','2','0','2019-04-25 17:00:10'),
+('established','peer in wrong AS','1345386','13','0','2019-04-25 17:00:10'),
+('established','peer in wrong AS','0','1','0','2019-04-25 17:00:10'),
+('established','administrative shutdown','16622571','6','0','2019-04-25 17:00:10'),
+('established','peer unconfigured','0','1','0','2019-04-25 17:00:10'),
+('established','peer in wrong AS','0','1','0','2019-04-25 17:00:10'),
+('established','administrative shutdown','100947','0','0','2019-04-25 17:00:10'),
+('established','hold time expired','1','2','0','2019-04-25 17:00:10'),
+('active','hold time expired','0','0','0','2019-04-25 17:00:10'),
+('idle','hold time expired','0','0','0','2019-04-25 17:00:10'),
+('established','hold time expired','191175','0','0','2019-04-25 17:00:10'),
+('established','hold time expired','29419183','6','0','2019-04-25 17:00:10'),
+('idle','hold time expired','0','0','0','2019-04-25 17:00:10'),
+('idle','','0','0','0','2019-04-25 17:00:10'),
+('established','hold time expired','2380','0','0','2019-04-25 17:00:10'),
+('idle','hold time expired','0','0','0','2019-04-25 17:00:10'),
+('established','hold time expired','0','1','0','2019-04-25 17:00:10'),
+('established','hold time expired','0','5','0','2019-04-25 17:00:10'),
+('established','hold time expired','0','4','0','2019-04-25 17:00:10')
+2019-04-25 17:03:01,571:WARNING:db.CiscoXR:sql not able to get data AttributeError("'BGPNeighbor' object has no attribute 'parent_device'")
+2019-04-25 17:03:01,943:WARNING:db.CiscoXR:bgp_state_save 172.16.30.250 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbor_states`, CONSTRAINT `bgp_neighbor_states_ibfk_1` FOREIGN KEY (`bgp_neighbor_uid`) REFERENCES `bgp_neighbors` (`uid`))') INSERT INTO 
+bgp_neighbor_states(state,
+last_error,
+advertised_prefixes,
+accepted_prefixes,
+bgp_neighbor_uid,
+state_timestamp) VALUES ('established','peer in wrong AS','0','0','0','2019-04-25 17:03:01'),
+('idle','connection rejected','0','0','0','2019-04-25 17:03:01'),
+('idle','connection rejected','0','0','0','2019-04-25 17:03:01'),
+('idle','','0','0','0','2019-04-25 17:03:01'),
+('idle','hold time expired','0','0','0','2019-04-25 17:03:01'),
+('idle','','0','0','0','2019-04-25 17:03:01'),
+('established','hold time expired','1','0','0','2019-04-25 17:03:01'),
+('established','administrative shutdown','9717','0','0','2019-04-25 17:03:01'),
+('established','hold time expired','177','739067','0','2019-04-25 17:03:01'),
+('idle','hold time expired','0','0','0','2019-04-25 17:03:01'),
+('active','hold time expired','0','0','0','2019-04-25 17:03:01'),
+('idle','','0','0','0','2019-04-25 17:03:01'),
+('established','hold time expired','0','10','0','2019-04-25 17:03:01'),
+('idle','','0','0','0','2019-04-25 17:03:01'),
+('idle','','0','0','0','2019-04-25 17:03:01'),
+('established','hold time expired','0','1','0','2019-04-25 17:03:01'),
+('idle','hold time expired','0','0','0','2019-04-25 17:03:01'),
+('established','hold time expired','0','2','0','2019-04-25 17:03:01'),
+('established','peer in wrong AS','1348258','13','0','2019-04-25 17:03:01'),
+('established','peer in wrong AS','0','1','0','2019-04-25 17:03:01'),
+('established','administrative shutdown','16625438','6','0','2019-04-25 17:03:01'),
+('established','peer unconfigured','0','1','0','2019-04-25 17:03:01'),
+('established','peer in wrong AS','0','1','0','2019-04-25 17:03:01'),
+('established','administrative shutdown','100947','0','0','2019-04-25 17:03:01'),
+('established','hold time expired','1','2','0','2019-04-25 17:03:01'),
+('active','hold time expired','0','0','0','2019-04-25 17:03:01'),
+('idle','hold time expired','0','0','0','2019-04-25 17:03:01'),
+('established','hold time expired','191175','0','0','2019-04-25 17:03:01'),
+('established','hold time expired','29422050','6','0','2019-04-25 17:03:01'),
+('idle','hold time expired','0','0','0','2019-04-25 17:03:01'),
+('idle','','0','0','0','2019-04-25 17:03:01'),
+('established','hold time expired','2380','0','0','2019-04-25 17:03:01'),
+('idle','hold time expired','0','0','0','2019-04-25 17:03:01'),
+('established','hold time expired','0','1','0','2019-04-25 17:03:01'),
+('established','hold time expired','0','5','0','2019-04-25 17:03:01'),
+('established','hold time expired','0','4','0','2019-04-25 17:03:01')
+2019-04-25 17:05:16,871:WARNING:db.CiscoXR:sql not able to get data AttributeError("'BGPNeighbor' object has no attribute 'parent_device'")
+2019-04-25 17:06:40,208:WARNING:db.BGPNeighbor:bgp_save bgp 63.245.68.45 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('63.245.68.45','23520','ipv4')
+2019-04-25 17:06:40,909:WARNING:db.BGPNeighbor:bgp_save bgp 84.16.11.190 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('84.16.11.190','12956','ipv4')
+2019-04-25 17:06:41,625:WARNING:db.BGPNeighbor:bgp_save bgp 84.16.11.194 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('84.16.11.194','12956','ipv4')
+2019-04-25 17:06:42,328:WARNING:db.BGPNeighbor:bgp_save bgp 176.52.252.153 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('176.52.252.153','12956','ipv4')
+2019-04-25 17:06:43,048:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.109.66 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.109.66','52468','ipv4')
+2019-04-25 17:06:43,767:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.122 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.122','52454','ipv4')
+2019-04-25 17:06:44,470:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.125 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.125','52468','ipv4')
+2019-04-25 17:06:45,170:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.164 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.164','52468','ipv4')
+2019-04-25 17:06:45,882:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.192 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.192','52468','ipv4')
+2019-04-25 17:06:46,627:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.1 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.1','52468','ipv4')
+2019-04-25 17:06:47,323:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.44.3 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.44.3','52468','ipv4')
+2019-04-25 17:06:48,033:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.44.5 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.44.5','52468','ipv4')
+2019-04-25 17:06:48,776:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.44.7 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.44.7','52468','ipv4')
+2019-04-25 17:06:49,485:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.44.9 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.44.9','52468','ipv4')
+2019-04-25 17:06:50,201:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.44.130 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.44.130','52468','ipv4')
+2019-04-25 17:06:50,908:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.50.34 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.50.34','266688','ipv4')
+2019-04-25 17:06:51,615:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.50.46 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.50.46','266755','ipv4')
+2019-04-25 17:06:52,326:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.0.2 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.0.2','266755','ipv4')
+2019-04-25 17:06:53,069:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.0.14 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.0.14','28049','ipv4')
+2019-04-25 17:06:53,778:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.0.34 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.0.34','263781','ipv4')
+2019-04-25 17:06:54,484:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.1.9 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.1.9','28469','ipv4')
+2019-04-25 17:06:55,203:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.1.22 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.1.22','264764','ipv4')
+2019-04-25 17:06:55,909:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.3.35 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.3.35','262255','ipv4')
+2019-04-25 17:06:56,626:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.5.122 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.5.122','40027','ipv4')
+2019-04-25 17:06:57,337:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.6.58 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.6.58','262207','ipv4')
+2019-04-25 17:06:58,052:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.6.89 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.6.89','52468','ipv4')
+2019-04-25 17:06:58,786:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.6.95 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.6.95','52276','ipv4')
+2019-04-25 17:06:59,488:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.6.153 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.6.153','36040','ipv4')
+2019-04-25 17:07:00,208:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.6.162 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.6.162','265684','ipv4')
+2019-04-25 17:07:00,916:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.7.253 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.7.253','52468','ipv4')
+2019-04-25 17:07:01,632:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.10.254 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.10.254','28087','ipv4')
+2019-04-25 17:07:02,346:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.11.80 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.11.80','63293','ipv4')
+2019-04-25 17:07:03,072:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.11.190 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.11.190','52468','ipv4')
+2019-04-25 17:07:03,784:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.11.241 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.11.241','28069','ipv4')
+2019-04-25 17:07:04,486:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.13.101 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.13.101','28087','ipv4')
+2019-04-25 17:07:05,216:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.13.125 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.13.125','28087','ipv4')
+2019-04-25 17:07:05,216:WARNING:db.BGPNeighbor:get uid bgp 63.245.68.45 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:05,928:WARNING:db.BGPNeighbor:bgp_save bgp 63.245.68.45 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('63.245.68.45','23520','ipv4')
+2019-04-25 17:07:05,928:WARNING:db.BGPNeighbor:get uid bgp 84.16.11.190 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:06,637:WARNING:db.BGPNeighbor:bgp_save bgp 84.16.11.190 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('84.16.11.190','12956','ipv4')
+2019-04-25 17:07:06,637:WARNING:db.BGPNeighbor:get uid bgp 84.16.11.194 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:07,358:WARNING:db.BGPNeighbor:bgp_save bgp 84.16.11.194 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('84.16.11.194','12956','ipv4')
+2019-04-25 17:07:07,358:WARNING:db.BGPNeighbor:get uid bgp 176.52.252.153 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:08,059:WARNING:db.BGPNeighbor:bgp_save bgp 176.52.252.153 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('176.52.252.153','12956','ipv4')
+2019-04-25 17:07:08,059:WARNING:db.BGPNeighbor:get uid bgp 186.148.109.66 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:08,760:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.109.66 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.109.66','52468','ipv4')
+2019-04-25 17:07:08,760:WARNING:db.BGPNeighbor:get uid bgp 186.148.111.122 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:09,461:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.122 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.122','52454','ipv4')
+2019-04-25 17:07:09,461:WARNING:db.BGPNeighbor:get uid bgp 186.148.111.125 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:10,176:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.125 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.125','52468','ipv4')
+2019-04-25 17:07:10,176:WARNING:db.BGPNeighbor:get uid bgp 186.148.111.164 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:10,886:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.164 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.164','52468','ipv4')
+2019-04-25 17:07:10,886:WARNING:db.BGPNeighbor:get uid bgp 186.148.111.192 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:11,589:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.192 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.192','52468','ipv4')
+2019-04-25 17:07:11,590:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.1 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:12,313:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.1 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.1','52468','ipv4')
+2019-04-25 17:07:12,313:WARNING:db.BGPNeighbor:get uid bgp 190.61.44.3 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:13,031:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.44.3 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.44.3','52468','ipv4')
+2019-04-25 17:07:13,031:WARNING:db.BGPNeighbor:get uid bgp 190.61.44.5 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:13,752:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.44.5 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.44.5','52468','ipv4')
+2019-04-25 17:07:13,752:WARNING:db.BGPNeighbor:get uid bgp 190.61.44.7 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:14,759:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.44.7 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.44.7','52468','ipv4')
+2019-04-25 17:07:14,759:WARNING:db.BGPNeighbor:get uid bgp 190.61.44.9 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:15,445:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.44.9 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.44.9','52468','ipv4')
+2019-04-25 17:07:15,445:WARNING:db.BGPNeighbor:get uid bgp 190.61.44.130 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:16,139:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.44.130 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.44.130','52468','ipv4')
+2019-04-25 17:07:16,140:WARNING:db.BGPNeighbor:get uid bgp 190.61.50.34 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:16,844:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.50.34 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.50.34','266688','ipv4')
+2019-04-25 17:07:16,844:WARNING:db.BGPNeighbor:get uid bgp 190.61.50.46 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:17,556:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.50.46 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.50.46','266755','ipv4')
+2019-04-25 17:07:17,556:WARNING:db.BGPNeighbor:get uid bgp 190.115.0.2 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:18,296:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.0.2 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.0.2','266755','ipv4')
+2019-04-25 17:07:18,296:WARNING:db.BGPNeighbor:get uid bgp 190.115.0.14 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:19,022:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.0.14 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.0.14','28049','ipv4')
+2019-04-25 17:07:19,022:WARNING:db.BGPNeighbor:get uid bgp 190.115.0.34 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:19,724:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.0.34 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.0.34','263781','ipv4')
+2019-04-25 17:07:19,724:WARNING:db.BGPNeighbor:get uid bgp 190.115.1.9 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:20,416:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.1.9 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.1.9','28469','ipv4')
+2019-04-25 17:07:20,416:WARNING:db.BGPNeighbor:get uid bgp 190.115.1.22 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:21,147:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.1.22 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.1.22','264764','ipv4')
+2019-04-25 17:07:21,147:WARNING:db.BGPNeighbor:get uid bgp 190.115.3.35 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:21,851:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.3.35 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.3.35','262255','ipv4')
+2019-04-25 17:07:21,851:WARNING:db.BGPNeighbor:get uid bgp 190.115.5.122 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:22,569:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.5.122 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.5.122','40027','ipv4')
+2019-04-25 17:07:22,569:WARNING:db.BGPNeighbor:get uid bgp 190.115.6.58 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:23,274:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.6.58 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.6.58','262207','ipv4')
+2019-04-25 17:07:23,274:WARNING:db.BGPNeighbor:get uid bgp 190.115.6.89 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:23,988:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.6.89 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.6.89','52468','ipv4')
+2019-04-25 17:07:23,988:WARNING:db.BGPNeighbor:get uid bgp 190.115.6.95 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:24,702:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.6.95 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.6.95','52276','ipv4')
+2019-04-25 17:07:24,703:WARNING:db.BGPNeighbor:get uid bgp 190.115.6.153 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:25,405:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.6.153 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.6.153','36040','ipv4')
+2019-04-25 17:07:25,405:WARNING:db.BGPNeighbor:get uid bgp 190.115.6.162 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:26,121:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.6.162 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.6.162','265684','ipv4')
+2019-04-25 17:07:26,121:WARNING:db.BGPNeighbor:get uid bgp 190.115.7.253 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:26,836:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.7.253 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.7.253','52468','ipv4')
+2019-04-25 17:07:26,836:WARNING:db.BGPNeighbor:get uid bgp 190.115.10.254 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:27,558:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.10.254 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.10.254','28087','ipv4')
+2019-04-25 17:07:27,558:WARNING:db.BGPNeighbor:get uid bgp 190.115.11.80 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:28,258:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.11.80 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.11.80','63293','ipv4')
+2019-04-25 17:07:28,258:WARNING:db.BGPNeighbor:get uid bgp 190.115.11.190 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:28,973:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.11.190 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.11.190','52468','ipv4')
+2019-04-25 17:07:28,974:WARNING:db.BGPNeighbor:get uid bgp 190.115.11.241 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:29,664:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.11.241 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.11.241','28069','ipv4')
+2019-04-25 17:07:29,664:WARNING:db.BGPNeighbor:get uid bgp 190.115.13.101 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:30,377:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.13.101 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.13.101','28087','ipv4')
+2019-04-25 17:07:30,377:WARNING:db.BGPNeighbor:get uid bgp 190.115.13.125 dev 172.16.30.250 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-25 17:07:31,087:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.13.125 dev 172.16.30.250 error en bulk save InternalError(1136, "Column count doesn't match value count at row 1") INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.13.125','28087','ipv4')
+2019-04-25 17:07:31,441:WARNING:db.CiscoXR:bgp_state_save 172.16.30.250 error en bulk save ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,' at line 7") INSERT INTO 
+bgp_neighbor_states(state,
+last_error,
+advertised_prefixes,
+accepted_prefixes,
+bgp_neighbor_uid,
+state_timestamp) VALUES ,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+
