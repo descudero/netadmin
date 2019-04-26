@@ -22,6 +22,18 @@ class InterfaceUfinet(InterfaceIOS):
     L1_conection
     '''
     FILTERS_GROUP = {'OSPF_MPLS': {'OSPF_MPLS': {'l3p': 'MPLS', 'l3a': 'OSP'}}}
+
+    _PROTOCOL_STATES = {1: 'up',
+                        2: 'down',
+                        3: 'testing',
+                        4: 'unknown',
+                        5: 'dormant',
+                        6: 'notPresent',
+                        7: 'lowerLayerDown'}
+
+    _LINK_STATE = {1: 'up',
+                   2: 'down',
+                   3: 'testing'}
     _sql_state_columns = ['link_state',
                           'protocol_state',
                           'input_rate',
@@ -65,6 +77,11 @@ class InterfaceUfinet(InterfaceIOS):
 
     def __init__(self, *args, **kargs):
         super().__init__(*args, **kargs)
+        self.if_index = InterfaceUfinet.get_normalize_interface_name(self.if_index)
+        self.link_state = InterfaceUfinet._LINK_STATE[self.link_state] \
+            if isinstance(self.link_state, int) else self.link_state
+        self.protocol_state = InterfaceUfinet._PROTOCOL_STATES[self.protocol_state] \
+            if isinstance(self.protocol_state, int) else self.protocol_state
         l3 = re.findall("L3:\w*", self.description)
         self.l3_protocol = "UNKNOWN"
         self.l3_protocol_attr = "UNKNOWN"
@@ -335,14 +352,25 @@ class InterfaceUfinet(InterfaceIOS):
             'input_errors': '1.3.6.1.2.1.2.2.1.14'}
 
     @staticmethod
-    def bulk_snmp_data_interfaces(device):
+    def factory_from_dict(device, interfaces_data=[]) -> dict:
+        interfaces_dict = {}
+        for parse_data in interfaces_data:
+            interface_object = InterfaceUfinet(parent_device=device, parse_data=parse_data)
+            interfaces_dict[interface_object.if_index] = interface_object
+        return interfaces_dict
+
+    @staticmethod
+    def bulk_snmp_data_interfaces(device) -> dict:
         count_interfaces = get_oid_size(target=device.ip, credentials=device.community, oid='1.3.6.1.2.1.31.1.1.1.18')
         interface_data = {}
         for attr, oid in InterfaceUfinet._OID.items():
             oid_data = get_bulk(target=device.ip, credentials=device.community, oids=[oid], count=count_interfaces)
+            # if attr == 'bw':
+            #    print(oid_data)
             for register in oid_data:
                 snmp_ip = register[0].replace(oid + ".", "")
-                interface_data.setdefault(snmp_ip, {})[attr] = register[1]
+                value = register[1] * 1000000 if attr == 'bw' else register[1]
+                interface_data.setdefault(snmp_ip, {})[attr] = value
         oid_data = get_bulk_real_auto(target=device.ip, credentials=device.community, oid=InterfaceUfinet._OID_IP,
                                       window_size=500)
         for register in oid_data:

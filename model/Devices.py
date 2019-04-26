@@ -67,7 +67,8 @@ class Devices:
                         if device.ip in kwargs:
                             try:
                                 print(kwargs[device.ip][method])
-                                t = th.Thread(target=method_instantiated, kwargs=kwargs[device.ip][method])
+                                t = th.Thread(target=method_instantiated, kwargs=kwargs[device.ip][method],
+                                              name=f'{device.ip} {method} ')
                             except KeyError as e:
                                 print(e)
                         else:

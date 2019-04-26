@@ -19,17 +19,7 @@ from model.InterfaceUfinet import InterfaceUfinet
                 data_flow,
                 net_device_uid'''
 
-protocol_states = {1: 'up',
-                   2: 'down',
-                   3: 'testing',
-                   4: 'unknown',
-                   5: 'dormant',
-                   6: 'notPresent',
-                   7: 'lowerLayerDown'}
 
-link_state = {1: 'up',
-              2: 'down',
-              3: 'testing'}
 
 
 host = '172.16.30.250'
@@ -46,10 +36,13 @@ isp = ISP()
 isp.master = Master()
 device = CiscoXR(ip=host, display_name='a', master=isp.master)
 device.set_snmp_community()
+device.set_interfaces_snmp()
+pprint(device.interfaces['Bundle-Ether3'])
 
-data = InterfaceUfinet.bulk_snmp_data_interfaces(device=device)
-pprint(data)
-community = 'INTERNET_UFINET'
+pprint("")
+# data = InterfaceUfinet.bulk_snmp_data_interfaces(device=device)
+# pprint(data)
+# community = 'INTERNET_UFINET'
 # pprint( get_bulk_real_auto(target=host, oid='1.3.6.1.2.1.4.20.1.2', credentials=community))
 
 '''
@@ -77,3 +70,4 @@ def calculate_delta(old_counter, new_counter, timelapse):
 
 
 '''
+

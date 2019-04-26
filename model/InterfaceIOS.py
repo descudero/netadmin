@@ -65,14 +65,13 @@ class InterfaceIOS(object):
 
     def correct_bw(self):
 
-        self.bw = int(float(self.bw) * 1024)
-        if ("BVI" in self.if_index):
+        if "BVI" in self.if_index:
             self.bw = 10000000000
-        if ("Hu" in self.if_index):
+        if "Hu" in self.if_index:
             self.bw = 100000000000
-        if ("Te" in self.if_index):
+        if "Te" in self.if_index:
             self.bw = 10000000000
-        if ("Gi" in self.if_index):
+        if "Gi" in self.if_index:
             self.bw = 1000000000
 
     def util(self):

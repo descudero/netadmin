@@ -1577,3 +1577,7 @@ class CiscoIOS(Parent):
 
         for add, neighbors in self.bgp_snmp_neighbors.items():
             BGPNeighbor.save_bulk_states(device=self, neighbors=neighbors.values())
+
+    def set_interfaces_snmp(self):
+        interfaces_data = InterfaceUfinet.bulk_snmp_data_interfaces(device=self)
+        self.interfaces = InterfaceUfinet.factory_from_dict(device=self, interfaces_data=interfaces_data.values())
