@@ -303,6 +303,7 @@ def reporte_internet_actual():
     sort_columns = {'CAPACIDADES_TRANSITO_INTERNET': 'util_in', 'CAPACIDADES_DIRECTOS_ASN': 'util_in',
                     'SERVIDORES_CACHE_TERCEROS': 'util_in',
                     'default': 'util_out'}
+
     titulo = "ESTADO ACTUAL DE CAPACIDADES RELACIONADAS A INTERNET UFINET"
     return render_template('reporte_internet.html', titulo=titulo,
                            tables=filter_summary(pd.read_sql(sql, con=master.db_connect()), columns, sort_columns))
@@ -405,7 +406,7 @@ def filter_sql(filtro, apply_and=True, table_suffix=""):
                    'CAPACIDADES_DIRECTOS_ASN': {'l3_protocol_attr': 'PNI'},
                    'BGPS_DIRECTOS_INTERNOS_DOWNSTREAM': {'l3_protocol_attr': 'IBP', 'data_flow': 'DOWNSTREAM'},
                    'TRUNCALES_MPLS_DOWNSTREAM': {'l3_protocol': 'MPLS',
-                                                 'l1_protocol': 'CABLE_SUBMARINO'
+                                                 'l1_protocol': 'CABLE_SUBMARINO', 'data_flow': 'DOWNSTREAM'
                                                  },
                    'SERVIDORES_CACHE_TERCEROS': {'l3_protocol_attr': 'CDN'}
                    }
