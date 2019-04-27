@@ -14,7 +14,6 @@ args = parser.parse_args()
 
 ip = args.host
 print(ip)
-devices = list(iter(Devices(master=isp.master, ip_list=[ip])))[0]
-devices.set_interfaces_snmp()
-print('a')
-pprint(devices.interfaces)
+device = list(iter(Devices(master=isp.master, ip_list=[ip])))[0]
+device.set_interfaces_snmp()
+device.save_interfaces()

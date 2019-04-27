@@ -1584,3 +1584,11 @@ class CiscoIOS(Parent):
         self.interfaces = InterfaceUfinet.factory_from_dict(device=self, interfaces_data=interfaces_data.values())
         self.verbose.critical(f'set_interfaces_snmp interfaces {len(self.interfaces)}')
         return self.interfaces
+
+    def save_interfaces(self):
+        interfaces = [interface for interface in self.interfaces.values()
+                      if interface.l3_protocol != "UNKNOWN"
+                      and interface.l3_protocol_attr != "UNKNOWN"
+                      and interface.l1_protocol_attr != "UNKNOWN"
+                      and interface.l1_protocol != "UNKNOWN"]
+        InterfaceUfinet.save_bulk_states(device=self, interfaces=interfaces)

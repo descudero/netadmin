@@ -378,7 +378,7 @@ class InterfaceUfinet(InterfaceIOS):
                 #    print(oid_data)
                 for register in oid_data:
                     snmp_ip = register[0].replace(oid + ".", "")
-                    value = register[1] * 10_000_000 if attr == 'bw' else register[1]
+                    value = register[1] * 1_000_000 if attr == 'bw' else register[1]
                     interface_data.setdefault(snmp_ip, {})[attr] = value
             except Exception as e:
                 device.logger_connection.critical(

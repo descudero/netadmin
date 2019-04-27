@@ -26,13 +26,16 @@ from model.Devices import Devices
 isp = ISP()
 isp.master = Master()
 list_dev = ['172.16.30.4', '172.16.30.3', '172.16.30.1']
-string_network = '172.16.30.0/29'
-devices = Devices(master=isp.master, ip_list=list_dev)
-devices.execute(methods=["set_snmp_community"])
-devices.execute_processes(methods=["set_interfaces_snmp"], thread_window=5)
-
+string_network = '172.16.30.0/24'
+devices = Devices(master=isp.master, network=string_network)
+pprint(devices)
 for device in devices:
-    print(device.get_interfaces_filtered(filters={'l3_protocol': 'MPLS'}))
+    print(f"{device.ip},{device.hostname}")
+
+ips = "\n".join([device.ip for device in devices])
+print(ips)
+with open('ips_regional', 'w') as dile:
+    dile.write(ips)
 
 '''
 real_oid = '1.3.6.1.2.1.31.1.1.1.6'
