@@ -1,6 +1,9 @@
 import ipaddress
 from collections import OrderedDict
+from tools import logged
 
+
+@logged
 class InterfaceIOS(object):
     def __init__(self, parent_device, parse_data):
         self.uid = 0
@@ -49,6 +52,7 @@ class InterfaceIOS(object):
         for key, value in parse_data.items():
             if not value == '':
                 setattr(self, key, value)
+        self.if_index = InterfaceIOS.get_normalize_interface_name(self.if_index)
         self.correct_bw()
         try:
             self.util_in, self.util_out = self.util()
@@ -66,18 +70,20 @@ class InterfaceIOS(object):
     def correct_bw(self):
 
         if "BVI" in self.if_index:
-            self.bw = 10000000000
-        if "Hu" in self.if_index:
-            self.bw = 100000000000
-        if "Te" in self.if_index:
-            self.bw = 10000000000
-        if "Gi" in self.if_index:
-            self.bw = 1000000000
+            self.bw = 10_000_000_000
+        elif "Hu" in self.if_index:
+            self.bw = 100_000_000_000
+        elif "Te" in self.if_index:
+            self.bw = 10_000_000_000
+        elif "Gi" in self.if_index:
+            self.bw = 1_000_000_000
+
 
     def util(self):
 
         util_in = round(float(self.input_rate) / self.bw * 100, 2)
         util_out = round(float(self.output_rate) / self.bw * 100, 2)
+
         return util_in, util_out
 
     def get_interface_errors(self, filter="0"):
@@ -132,11 +138,11 @@ class InterfaceIOS(object):
 
     def __str__(self):
         return str(id(self)) + str(
-            self.__class__) + self.if_index + " " + self.description + " " + self.link_state + " "
+            self.__class__) + self.if_index + " " + self.description + " " + str(self.link_state) + " "
 
     def __repr__(self):
         return str(id(self)) + str(
-            self.__class__) + self.if_index + " " + self.description + " " + self.link_state + " "
+            self.__class__) + self.if_index + " " + self.description + " " + str(self.link_state) + " "
 
     @property
     def dict(self):

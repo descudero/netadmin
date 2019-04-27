@@ -4,7 +4,7 @@ import ipaddress
 from multiping import multi_ping
 import threading  as th
 from tools import logged
-
+from multiprocessing import Process
 
 @logged
 class Devices:
@@ -45,10 +45,12 @@ class Devices:
         for ip, device in self.devices.items():
             platform = device.platform
             hostname = device.hostname
+            community = device.community
             device = eval(device.platform)(device.ip, device.display_name, self.master)
             new_devices[ip] = device
             device.platform = platform
             device.hostname = hostname
+            device.community = community
         self.devices = new_devices
 
     def execute(self, methods, kwargs={}, thread_window=100):
@@ -87,3 +89,76 @@ class Devices:
                     self.verbose.warning("dev {0} excute method {1} error {2}".format(device, method, repr(e)))
         for t in threads:
             t.join()
+
+        def execute(self, methods, kwargs={}, thread_window=100):
+            th.Thread()
+            threads = []
+            for method in methods:
+
+                for device in self:
+                    self.dev.info("dev {0} excute method {1}".format(device, method))
+                    self.verbose.info("dev {0} excute method {1}".format(device, method))
+                    try:
+                        print(kwargs.keys())
+                        if len(threads) < thread_window:
+                            method_instantiated = getattr(device, method)
+                            print(device.ip in kwargs)
+                            if device.ip in kwargs:
+                                try:
+                                    print(kwargs[device.ip][method])
+                                    t = th.Thread(target=method_instantiated, kwargs=kwargs[device.ip][method],
+                                                  name=f'{device.ip} {method} ')
+                                except KeyError as e:
+                                    print(e)
+                            else:
+                                t = th.Thread(target=method_instantiated)
+                            t.start()
+                            threads.append(t)
+                        else:
+                            self.dev.info("excute_methods: Window join ")
+                            self.verbose.info("excute_methods: Window join ")
+                            for t in threads:
+                                t.join()
+                            threads = []
+
+                    except Exception as e:
+                        self.errors.get(device.ip, []).append(repr(e))
+                        self.verbose.warning("dev {0} excute method {1} error {2}".format(device, method, repr(e)))
+            for t in threads:
+                t.join()
+
+    def execute_processes(self, methods, kwargs={}, thread_window=100):
+
+        processes = []
+        for method in methods:
+
+            for device in self:
+                self.dev.info("dev {0} excute method {1}".format(device, method))
+                self.verbose.info("dev {0} excute method {1}".format(device, method))
+                try:
+                    print(kwargs.keys())
+                    if len(processes) < thread_window:
+                        method_instantiated = getattr(device, method)
+                        print(device.ip in kwargs)
+                        if device.ip in kwargs:
+                            try:
+                                print(kwargs[device.ip][method])
+                                p = Process(target=method_instantiated, kwargs=kwargs[device.ip][method])
+                            except KeyError as e:
+                                print(e)
+                        else:
+                            p = th.Thread(target=method_instantiated)
+                        p.start()
+                        processes.append(p)
+                    else:
+                        self.dev.info("excute_methods: Window join ")
+                        self.verbose.info("excute_methods: Window join ")
+                        for p in processes:
+                            p.join()
+                        processes = []
+
+                except Exception as e:
+                    self.errors.get(device.ip, []).append(repr(e))
+                    self.verbose.warning("dev {0} excute method {1} error {2}".format(device, method, repr(e)))
+        for p in processes:
+            p.join()

@@ -1194,15 +1194,15 @@ class CiscoIOS(Parent):
         return self.interfaces
 
     def set_snmp_community(self):
-
-        for community in self.master.communities:
-            self.community = community
-            self.set_snmp_hostname()
-            if self.hostname != "no_snmp":
-                self.logger_connection.info("{0} snmp community set".format(self.ip))
-                break
-        else:
-            self.logger_connection.info("{0} unable to set snmp community".format(self.ip))
+        if self.community == "":
+            for community in self.master.communities:
+                self.community = community
+                self.set_snmp_hostname()
+                if self.hostname != "no_snmp":
+                    self.logger_connection.info("{0} snmp community set".format(self.ip))
+                    break
+            else:
+                self.logger_connection.info("{0} unable to set snmp community".format(self.ip))
 
     def set_snmp_hostname(self):
         oid = "1.3.6.1.2.1.1.5.0"
@@ -1579,5 +1579,8 @@ class CiscoIOS(Parent):
             BGPNeighbor.save_bulk_states(device=self, neighbors=neighbors.values())
 
     def set_interfaces_snmp(self):
+        self.verbose.critical(f'set_interfaces_snmp {self.ip}')
         interfaces_data = InterfaceUfinet.bulk_snmp_data_interfaces(device=self)
         self.interfaces = InterfaceUfinet.factory_from_dict(device=self, interfaces_data=interfaces_data.values())
+        self.verbose.critical(f'set_interfaces_snmp interfaces {len(self.interfaces)}')
+        return self.interfaces

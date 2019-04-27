@@ -5,9 +5,13 @@ from model.InternetServiceProvider import InternetServiceProvider as ISP
 from config.Master import Master
 from model.CiscoIOS import CiscoIOS
 from model.CiscoXR import CiscoXR
+import ipaddress
 from model.BGPNeigbor import BGPNeighbor
 import time
 from model.InterfaceUfinet import InterfaceUfinet
+from model.Devices import Devices
+
+
 
 '''if_index,
                 description,
@@ -19,55 +23,40 @@ from model.InterfaceUfinet import InterfaceUfinet
                 data_flow,
                 net_device_uid'''
 
-
-
-
-host = '172.16.30.250'
-
-'''
-
-real_oid = '1.3.6.1.2.1.31.1.1.1.6'
-community = 'INTERNET_UFINET'
-oid_64 = get_oid_size(target=host,  credentials=community,oid='1.3.6.1.2.1.31.1.1.1.6')
-oid_32 = get_oid_size(target=host,  credentials=community,oid='1.3.6.1.2.1.2.2.1.7')
-print(f'64 {oid_64} 32 {oid_32}')
-'''
 isp = ISP()
 isp.master = Master()
-device = CiscoXR(ip=host, display_name='a', master=isp.master)
+list_dev = ['172.16.30.4', '172.16.30.3', '172.16.30.1']
+string_network = '172.16.30.0/29'
+devices = Devices(master=isp.master, ip_list=list_dev)
+devices.execute(methods=["set_snmp_community"])
+devices.execute_processes(methods=["set_interfaces_snmp"], thread_window=5)
+
+for device in devices:
+    print(device.get_interfaces_filtered(filters={'l3_protocol': 'MPLS'}))
+
+'''
+real_oid = '1.3.6.1.2.1.31.1.1.1.6'
+community = 'uFi08NeT'
+oid_64 = get_bulk_real_auto(target=host,  credentials=community,oid='1.3.6.1.2.1.31.1.1.1.15')
+pprint(oid_64)
+
+'''
+'''
+device = CiscoIOS(ip='172.16.30.1', display_name='a', master=isp.master)
 device.set_snmp_community()
 device.set_interfaces_snmp()
-pprint(device.interfaces['Bundle-Ether3'])
+interfaces = {interface.if_index:interface for interface in device.interfaces.values() if "." not in interface.if_index
+              and "Te" in interface.if_index and "-" not in interface.if_index }
+pprint(interfaces)
 
-pprint("")
+'''
+# pprint(f'rate_int {interface.util_in} inpute rate {interface.input_rate} bw {interface.bw} ')
+
+
 # data = InterfaceUfinet.bulk_snmp_data_interfaces(device=device)
 # pprint(data)
 # community = 'INTERNET_UFINET'
 # pprint( get_bulk_real_auto(target=host, oid='1.3.6.1.2.1.4.20.1.2', credentials=community))
-
-'''
 # device = CiscoXR(ip=host, display_name='a', master=isp.master)
 # device.set_snmp_bgp_neighbors(special_community="INTERNET_UFINET",address_family=['ipv4','ipv6'])
-time1 = time.time()
-data1 = get_bulk_real_auto(target=host, oid=real_oid, credentials=community)
-time.sleep(25)
-time2 = time.time()
-timelapse = float(time2 - time1)
-data3 = [[registro[0], calculate_delta(new_counter=registro[1],
-                                       old_counter=data1[index][1],
-                                       timelapse=timelapse) * 8]
-         for index, registro in enumerate(data2)]
-         
-pprint(data3[1])
-
-def calculate_delta(old_counter, new_counter, timelapse):
-    print(old_counter)
-    print(new_counter)
-    print(timelapse)
-    new_counter = new_counter if new_counter >= old_counter else new_counter + 18446744073709551616
-    return (new_counter - old_counter) / timelapse
-
-
-
-'''
 

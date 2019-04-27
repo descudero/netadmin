@@ -77,7 +77,7 @@ class InterfaceUfinet(InterfaceIOS):
 
     def __init__(self, *args, **kargs):
         super().__init__(*args, **kargs)
-        self.if_index = InterfaceUfinet.get_normalize_interface_name(self.if_index)
+
         self.link_state = InterfaceUfinet._LINK_STATE[self.link_state] \
             if isinstance(self.link_state, int) else self.link_state
         self.protocol_state = InterfaceUfinet._PROTOCOL_STATES[self.protocol_state] \
@@ -361,27 +361,50 @@ class InterfaceUfinet(InterfaceIOS):
 
     @staticmethod
     def bulk_snmp_data_interfaces(device) -> dict:
-        count_interfaces = get_oid_size(target=device.ip, credentials=device.community, oid='1.3.6.1.2.1.31.1.1.1.18')
         interface_data = {}
+        try:
+            count_interfaces = get_oid_size(target=device.ip, credentials=device.community,
+                                            oid='1.3.6.1.2.1.31.1.1.1.18')
+
+        except Exception as e:
+            device.logger_connection.critical(
+                f' bulk_snmp_data_interfaces error polling {device.ip} {device.community} 1.3.6.1.2.1.31.1.1.1.18 {e}')
+            count_interfaces = 0
+
         for attr, oid in InterfaceUfinet._OID.items():
-            oid_data = get_bulk(target=device.ip, credentials=device.community, oids=[oid], count=count_interfaces)
-            # if attr == 'bw':
-            #    print(oid_data)
-            for register in oid_data:
-                snmp_ip = register[0].replace(oid + ".", "")
-                value = register[1] * 1000000 if attr == 'bw' else register[1]
-                interface_data.setdefault(snmp_ip, {})[attr] = value
-        oid_data = get_bulk_real_auto(target=device.ip, credentials=device.community, oid=InterfaceUfinet._OID_IP,
+            try:
+                oid_data = get_bulk(target=device.ip, credentials=device.community, oids=[oid], count=count_interfaces)
+                # if attr == 'bw':
+                #    print(oid_data)
+                for register in oid_data:
+                    snmp_ip = register[0].replace(oid + ".", "")
+                    value = register[1] * 10_000_000 if attr == 'bw' else register[1]
+                    interface_data.setdefault(snmp_ip, {})[attr] = value
+            except Exception as e:
+                device.logger_connection.critical(
+                    f' bulk_snmp_data_interfaces error polling {device.ip} {device.community} {oid} {e}')
+                count_interfaces = 0
+        try:
+            oid_data = get_bulk_real_auto(target=device.ip, credentials=device.community, oid=InterfaceUfinet._OID_IP,
                                       window_size=500)
-        for register in oid_data:
-            snmp_ip = str(register[1])
-            ip = register[0].replace(InterfaceUfinet._OID_IP + ".", "")
-            interface_data.setdefault(snmp_ip, {})['ip'] = ip
-        for attr, oid in InterfaceUfinet._OID_RATES.items():
-            oid_data = InterfaceUfinet.delta_oid(device=device, count=count_interfaces, oid=oid)
+
             for register in oid_data:
-                snmp_ip = register[0].replace(oid + ".", "")
-                interface_data.setdefault(snmp_ip, {})[attr] = register[1]
+                snmp_ip = str(register[1])
+                ip = register[0].replace(InterfaceUfinet._OID_IP + ".", "")
+                interface_data.setdefault(snmp_ip, {})['ip'] = ip
+        except Exception as e:
+            device.logger_connection.critical(
+                f' bulk_snmp_data_interfaces error polling {device.ip} {device.community} {InterfaceUfinet._OID_IP} {e}')
+            count_interfaces = 0
+        for attr, oid in InterfaceUfinet._OID_RATES.items():
+            try:
+                oid_data = InterfaceUfinet.delta_oid(device=device, count=count_interfaces, oid=oid)
+                for register in oid_data:
+                    snmp_ip = register[0].replace(oid + ".", "")
+                    interface_data.setdefault(snmp_ip, {})[attr] = register[1]
+            except Exception as e:
+                device.logger_connection.critical(
+                    f' bulk_snmp_data_interfaces error polling {device.ip} {device.community} {oid} {e}')
 
         return interface_data
 
@@ -397,8 +420,6 @@ class InterfaceUfinet(InterfaceIOS):
                                                         timelapse=time_lapse)) * multiplier]
                       for index, register in enumerate(data_after)]
         return final_data
-
-        pass
 
 
 def calculate_delta(old_counter, new_counter, timelapse):
