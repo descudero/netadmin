@@ -13,6 +13,8 @@ parser.add_argument('host', type=str,
 args = parser.parse_args()
 
 ip = args.host
+print(ip)
 devices = list(iter(Devices(master=isp.master, ip_list=[ip])))[0]
 devices.set_interfaces_snmp()
+print('a')
 pprint(devices.interfaces)
