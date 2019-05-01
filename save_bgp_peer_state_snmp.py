@@ -13,4 +13,4 @@ parser.add_argument('host', type=str,
 args = parser.parse_args()
 ip = args.host
 device = list(iter(Devices(master=isp.master, ip_list=[ip])))[0]
-device.set_snmp_bgp_neighbors(special_community='INTERNET_UFINET')
+device.save_bgp_neighbors_states(special_community='INTERNET_UFINET')
