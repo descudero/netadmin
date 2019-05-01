@@ -1575,9 +1575,9 @@ class CiscoIOS(Parent):
 
         return new_paths
 
-    def save_bgp_neighbors_states(self, special_comnunity=None):
+    def save_bgp_neighbors_states(self, special_community=None):
         if not hasattr(self, 'snmp_bgp_neighbors'):
-            self.set_snmp_bgp_neighbors(special_community=special_comnunity)
+            self.set_snmp_bgp_neighbors(special_community=special_community)
 
         for address_family, neighbors in self.bgp_snmp_neighbors.items():
             BGPNeighbor.save_bulk_states(device=self, neighbors=neighbors.values())
