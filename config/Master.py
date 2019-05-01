@@ -19,7 +19,7 @@ class Master:
     def __init__(self, AdebugLevel=0, password="", username="", logg_name="master",
                  config_file="config/config_connection.yml", config_log_file="config/config_log.yml"):
 
-        self.communities = ["snmpUfi", "pnrw-med", "uFi08NeT", "pnrw-all"]
+        self.communities = ["snmpUfi", "pnrw-med", "uFi08NeT", "pnrw-all", 'DjFr4nk0', 'uFi14NetHN']
         self.device_connections = 20
         if password != "" and username != "":
             self.username = username

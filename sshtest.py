@@ -26,16 +26,12 @@ from model.Devices import Devices
 isp = ISP()
 isp.master = Master()
 list_dev = ['172.16.30.4', '172.16.30.3', '172.16.30.1']
-string_network = '172.16.30.0/24'
-devices = Devices(master=isp.master, network=string_network)
-pprint(devices)
-for device in devices:
-    print(f"{device.ip},{device.hostname}")
 
-ips = "\n".join([device.ip for device in devices])
-print(ips)
-with open('ips_regional', 'w') as dile:
-    dile.write(ips)
+device = CiscoXR(ip='172.17.24.210', display_name='a', master=isp.master)
+device.set_snmp_community()
+device.save_bgp_neighbors_states(special_comnunity="INTERNET_UFINET")
+device.set_snmp_bgp_neighbors()
+device.bgp_snmp_neighbors
 
 '''
 real_oid = '1.3.6.1.2.1.31.1.1.1.6'

@@ -43,6 +43,16 @@ def connect_mysql():
                            cursorclass=pymysql.cursors.DictCursor)
 
 
+@app.route('/reportes/bgp/clientes/<int:bgp_peer_id>')
+def interfaces_regionales():
+    return render_template('interfaces_regionales.html')
+
+
+@app.route('/reportes/bgp/clientes/')
+def interfaces_regionales():
+    return render_template('interfaces_regionales.html')
+
+
 @app.route('/reportes/interfaces/regionales/')
 def interfaces_regionales():
     return render_template('interfaces_regionales.html')
@@ -438,7 +448,7 @@ def function_pivot(data_sql, grouping_index=0, column_index=1, value_index=2):
 
 @app.route('/utilidades/metodos/cisco_json', methods=['POST', 'GET'])
 def json_cisco_commands_tabulated():
-    data = request.get_json()
+    request.get_json()
     ip = request.json['ip']
     method = request.json['method']
     ufinet = Claro()

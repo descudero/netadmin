@@ -2835,3 +2835,984 @@ state_timestamp) VALUES ,
 ,
 ,
 
+2019-04-30 17:49:59,026:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.2 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:50:00,107:WARNING:db.BGPNeighbor:bgp_save bgp 10.100.10.2 dev 172.17.24.33 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.100.10.2','262234','ipv4','0')
+2019-04-30 17:50:00,107:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.6 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:50:01,165:WARNING:db.BGPNeighbor:bgp_save bgp 10.100.10.6 dev 172.17.24.33 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.100.10.6','262234','ipv4','0')
+2019-04-30 17:50:01,165:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.10 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:50:02,232:WARNING:db.BGPNeighbor:bgp_save bgp 10.100.10.10 dev 172.17.24.33 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.100.10.10','262234','ipv4','0')
+2019-04-30 17:50:02,232:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.14 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:50:03,310:WARNING:db.BGPNeighbor:bgp_save bgp 10.100.10.14 dev 172.17.24.33 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.100.10.14','262234','ipv4','0')
+2019-04-30 17:50:03,310:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.18 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:50:04,393:WARNING:db.BGPNeighbor:bgp_save bgp 10.100.10.18 dev 172.17.24.33 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.100.10.18','262234','ipv4','0')
+2019-04-30 17:50:04,393:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.22 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:50:05,472:WARNING:db.BGPNeighbor:bgp_save bgp 10.100.10.22 dev 172.17.24.33 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.100.10.22','262234','ipv4','0')
+2019-04-30 17:50:05,472:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.26 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:50:06,549:WARNING:db.BGPNeighbor:bgp_save bgp 10.100.10.26 dev 172.17.24.33 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.100.10.26','262234','ipv4','0')
+2019-04-30 17:50:06,549:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.30 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:50:07,676:WARNING:db.BGPNeighbor:bgp_save bgp 10.100.10.30 dev 172.17.24.33 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.100.10.30','262234','ipv4','0')
+2019-04-30 17:50:07,676:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.34 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:50:08,754:WARNING:db.BGPNeighbor:bgp_save bgp 10.100.10.34 dev 172.17.24.33 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.100.10.34','262234','ipv4','0')
+2019-04-30 17:50:08,754:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.38 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:50:09,871:WARNING:db.BGPNeighbor:bgp_save bgp 10.100.10.38 dev 172.17.24.33 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.100.10.38','262234','ipv4','0')
+2019-04-30 17:50:09,871:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.42 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:50:10,952:WARNING:db.BGPNeighbor:bgp_save bgp 10.100.10.42 dev 172.17.24.33 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.100.10.42','262234','ipv4','0')
+2019-04-30 17:50:10,953:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.46 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:50:12,049:WARNING:db.BGPNeighbor:bgp_save bgp 10.100.10.46 dev 172.17.24.33 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.100.10.46','262234','ipv4','0')
+2019-04-30 17:50:12,049:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.50 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:50:13,145:WARNING:db.BGPNeighbor:bgp_save bgp 10.100.10.50 dev 172.17.24.33 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.100.10.50','262234','ipv4','0')
+2019-04-30 17:50:13,145:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.54 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:50:14,237:WARNING:db.BGPNeighbor:bgp_save bgp 10.100.10.54 dev 172.17.24.33 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.100.10.54','262234','ipv4','0')
+2019-04-30 17:50:14,237:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.58 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:50:15,332:WARNING:db.BGPNeighbor:bgp_save bgp 10.100.10.58 dev 172.17.24.33 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.100.10.58','262234','ipv4','0')
+2019-04-30 17:50:15,332:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.62 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:50:16,434:WARNING:db.BGPNeighbor:bgp_save bgp 10.100.10.62 dev 172.17.24.33 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.100.10.62','262234','ipv4','0')
+2019-04-30 17:50:16,434:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.66 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:50:17,539:WARNING:db.BGPNeighbor:bgp_save bgp 10.100.10.66 dev 172.17.24.33 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.100.10.66','262234','ipv4','0')
+2019-04-30 17:50:17,539:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.70 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:50:18,678:WARNING:db.BGPNeighbor:bgp_save bgp 10.100.10.70 dev 172.17.24.33 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.100.10.70','262234','ipv4','0')
+2019-04-30 17:50:18,678:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.74 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:50:19,766:WARNING:db.BGPNeighbor:bgp_save bgp 10.100.10.74 dev 172.17.24.33 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.100.10.74','262234','ipv4','0')
+2019-04-30 17:50:19,766:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.78 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:50:20,855:WARNING:db.BGPNeighbor:bgp_save bgp 10.100.10.78 dev 172.17.24.33 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.100.10.78','262234','ipv4','0')
+2019-04-30 17:50:20,855:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.82 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:50:21,990:WARNING:db.BGPNeighbor:bgp_save bgp 10.100.10.82 dev 172.17.24.33 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.100.10.82','262234','ipv4','0')
+2019-04-30 17:50:21,990:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.86 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:50:23,106:WARNING:db.BGPNeighbor:bgp_save bgp 10.100.10.86 dev 172.17.24.33 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.100.10.86','262234','ipv4','0')
+2019-04-30 17:50:23,106:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.90 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:50:24,212:WARNING:db.BGPNeighbor:bgp_save bgp 10.100.10.90 dev 172.17.24.33 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.100.10.90','262234','ipv4','0')
+2019-04-30 17:50:24,213:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.94 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:50:25,298:WARNING:db.BGPNeighbor:bgp_save bgp 10.100.10.94 dev 172.17.24.33 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.100.10.94','262234','ipv4','0')
+2019-04-30 17:50:25,298:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.102 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:51:48,431:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.2 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:51:49,727:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.6 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:51:50,644:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.10 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:51:51,461:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.14 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:51:52,263:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.18 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:51:53,153:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.22 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:51:54,019:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.26 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:51:54,836:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.30 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:51:55,670:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.34 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:51:56,486:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.38 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:51:57,313:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.42 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:51:58,129:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.46 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:51:58,979:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.50 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:51:59,887:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.54 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:00,755:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.58 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:01,597:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.62 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:02,413:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.66 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:03,238:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.70 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:04,089:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.74 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:04,896:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.78 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:05,747:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.82 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:06,564:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.86 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:07,380:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.90 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:08,197:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.94 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:09,030:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.102 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:09,847:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.106 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:10,672:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.110 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:11,506:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.114 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:12,347:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.118 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:13,206:WARNING:db.BGPNeighbor:get uid bgp 10.100.10.122 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:14,047:WARNING:db.BGPNeighbor:get uid bgp 10.244.253.42 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:14,864:WARNING:db.BGPNeighbor:get uid bgp 172.16.30.244 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:15,699:WARNING:db.BGPNeighbor:get uid bgp 172.16.30.246 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:16,525:WARNING:db.BGPNeighbor:get uid bgp 172.16.30.250 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:17,347:WARNING:db.BGPNeighbor:get uid bgp 172.16.30.253 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:18,190:WARNING:db.BGPNeighbor:get uid bgp 172.16.30.254 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:19,015:WARNING:db.BGPNeighbor:get uid bgp 172.18.16.251 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:19,857:WARNING:db.BGPNeighbor:get uid bgp 190.61.48.14 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:20,674:WARNING:db.BGPNeighbor:get uid bgp 190.61.48.17 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:21,516:WARNING:db.BGPNeighbor:get uid bgp 190.61.48.19 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:22,323:WARNING:db.BGPNeighbor:get uid bgp 190.61.48.21 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:23,158:WARNING:db.BGPNeighbor:get uid bgp 190.61.48.23 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 17:52:23,982:WARNING:db.BGPNeighbor:get uid bgp 190.61.48.25 dev 172.17.24.33 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:10:46,999:WARNING:db.BGPNeighbor:get uid bgp 10.244.253.42 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:10:48,089:WARNING:db.BGPNeighbor:bgp_save bgp 10.244.253.42 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.244.253.42','262234','ipv4','0')
+2019-04-30 18:10:48,089:WARNING:db.BGPNeighbor:get uid bgp 10.244.253.46 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:10:49,149:WARNING:db.BGPNeighbor:bgp_save bgp 10.244.253.46 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.244.253.46','262234','ipv4','0')
+2019-04-30 18:10:49,149:WARNING:db.BGPNeighbor:get uid bgp 10.244.253.50 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:10:50,227:WARNING:db.BGPNeighbor:bgp_save bgp 10.244.253.50 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.244.253.50','262234','ipv4','0')
+2019-04-30 18:10:50,227:WARNING:db.BGPNeighbor:get uid bgp 84.16.11.188 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:10:51,328:WARNING:db.BGPNeighbor:bgp_save bgp 84.16.11.188 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('84.16.11.188','12956','ipv4','0')
+2019-04-30 18:10:51,328:WARNING:db.BGPNeighbor:get uid bgp 172.16.30.253 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:10:52,421:WARNING:db.BGPNeighbor:bgp_save bgp 172.16.30.253 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('172.16.30.253','52468','ipv4','0')
+2019-04-30 18:10:52,421:WARNING:db.BGPNeighbor:get uid bgp 172.16.30.254 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:10:53,507:WARNING:db.BGPNeighbor:bgp_save bgp 172.16.30.254 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('172.16.30.254','52468','ipv4','0')
+2019-04-30 18:10:53,507:WARNING:db.BGPNeighbor:get uid bgp 172.18.16.250 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:10:54,594:WARNING:db.BGPNeighbor:bgp_save bgp 172.18.16.250 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('172.18.16.250','52468','ipv4','0')
+2019-04-30 18:10:54,594:WARNING:db.BGPNeighbor:get uid bgp 186.148.111.78 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:10:55,673:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.78 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.78','263751','ipv4','0')
+2019-04-30 18:10:55,673:WARNING:db.BGPNeighbor:get uid bgp 186.148.111.90 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:10:56,759:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.90 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.90','27884','ipv4','0')
+2019-04-30 18:10:56,760:WARNING:db.BGPNeighbor:get uid bgp 186.148.111.126 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:10:57,846:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.126 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.126','52468','ipv4','0')
+2019-04-30 18:10:57,846:WARNING:db.BGPNeighbor:get uid bgp 186.148.111.141 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:10:58,936:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.141 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.141','52468','ipv4','0')
+2019-04-30 18:10:58,936:WARNING:db.BGPNeighbor:get uid bgp 186.148.111.189 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:11:00,026:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.189 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.189','52468','ipv4','0')
+2019-04-30 18:11:00,026:WARNING:db.BGPNeighbor:get uid bgp 186.179.79.4 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:11:01,110:WARNING:db.BGPNeighbor:bgp_save bgp 186.179.79.4 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.179.79.4','52468','ipv4','0')
+2019-04-30 18:11:01,110:WARNING:db.BGPNeighbor:get uid bgp 190.61.33.101 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:14:42,498:WARNING:db.BGPNeighbor:get uid bgp 10.244.253.42 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:14:43,594:WARNING:db.BGPNeighbor:bgp_save bgp 10.244.253.42 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.244.253.42','262234','ipv4','0')
+2019-04-30 18:14:43,595:WARNING:db.BGPNeighbor:get uid bgp 10.244.253.46 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:14:44,690:WARNING:db.BGPNeighbor:bgp_save bgp 10.244.253.46 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.244.253.46','262234','ipv4','0')
+2019-04-30 18:14:44,690:WARNING:db.BGPNeighbor:get uid bgp 10.244.253.50 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:14:45,792:WARNING:db.BGPNeighbor:bgp_save bgp 10.244.253.50 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.244.253.50','262234','ipv4','0')
+2019-04-30 18:14:45,792:WARNING:db.BGPNeighbor:get uid bgp 84.16.11.188 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:14:46,903:WARNING:db.BGPNeighbor:bgp_save bgp 84.16.11.188 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('84.16.11.188','12956','ipv4','0')
+2019-04-30 18:14:46,903:WARNING:db.BGPNeighbor:get uid bgp 172.16.30.253 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:14:47,992:WARNING:db.BGPNeighbor:bgp_save bgp 172.16.30.253 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('172.16.30.253','52468','ipv4','0')
+2019-04-30 18:14:47,992:WARNING:db.BGPNeighbor:get uid bgp 172.16.30.254 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:14:49,061:WARNING:db.BGPNeighbor:bgp_save bgp 172.16.30.254 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('172.16.30.254','52468','ipv4','0')
+2019-04-30 18:14:49,061:WARNING:db.BGPNeighbor:get uid bgp 172.18.16.250 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:14:50,132:WARNING:db.BGPNeighbor:bgp_save bgp 172.18.16.250 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('172.18.16.250','52468','ipv4','0')
+2019-04-30 18:14:50,132:WARNING:db.BGPNeighbor:get uid bgp 186.148.111.78 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:14:51,250:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.78 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.78','263751','ipv4','0')
+2019-04-30 18:14:51,251:WARNING:db.BGPNeighbor:get uid bgp 186.148.111.90 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:14:52,328:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.90 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.90','27884','ipv4','0')
+2019-04-30 18:14:52,328:WARNING:db.BGPNeighbor:get uid bgp 186.148.111.126 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:14:53,400:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.126 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.126','52468','ipv4','0')
+2019-04-30 18:14:53,401:WARNING:db.BGPNeighbor:get uid bgp 186.148.111.141 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:14:54,490:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.141 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.141','52468','ipv4','0')
+2019-04-30 18:14:54,490:WARNING:db.BGPNeighbor:get uid bgp 186.148.111.189 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:14:55,586:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.189 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.189','52468','ipv4','0')
+2019-04-30 18:14:55,586:WARNING:db.BGPNeighbor:get uid bgp 186.179.79.4 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:14:56,658:WARNING:db.BGPNeighbor:bgp_save bgp 186.179.79.4 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.179.79.4','52468','ipv4','0')
+2019-04-30 18:14:56,658:WARNING:db.BGPNeighbor:get uid bgp 190.61.33.101 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:14:57,733:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.33.101 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.33.101','262204','ipv4','0')
+2019-04-30 18:14:57,733:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.17 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:14:58,818:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.17 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.17','262234','ipv4','0')
+2019-04-30 18:14:58,818:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.19 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:14:59,929:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.19 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.19','262234','ipv4','0')
+2019-04-30 18:14:59,929:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.29 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:01,018:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.29 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.29','262234','ipv4','0')
+2019-04-30 18:15:01,018:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.38 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:02,102:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.38 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.38','262234','ipv4','0')
+2019-04-30 18:15:02,102:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.42 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:03,174:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.42 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.42','262234','ipv4','0')
+2019-04-30 18:15:03,174:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.86 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:04,240:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.86 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.86','262234','ipv4','0')
+2019-04-30 18:15:04,240:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.98 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:05,323:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.98 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.98','262146','ipv4','0')
+2019-04-30 18:15:05,323:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.138 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:06,403:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.138 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.138','262234','ipv4','0')
+2019-04-30 18:15:06,403:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.194 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:07,487:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.194 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.194','262234','ipv4','0')
+2019-04-30 18:15:07,487:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.226 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:08,561:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.226 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.226','262234','ipv4','0')
+2019-04-30 18:15:08,562:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.236 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:09,651:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.236 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.236','267761','ipv4','0')
+2019-04-30 18:15:09,651:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.250 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:10,735:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.250 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.250','262262','ipv4','0')
+2019-04-30 18:15:10,735:WARNING:db.BGPNeighbor:get uid bgp 190.61.44.4 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:11,836:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.44.4 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.44.4','52468','ipv4','0')
+2019-04-30 18:15:11,836:WARNING:db.BGPNeighbor:get uid bgp 190.115.6.88 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:12,908:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.6.88 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.6.88','52468','ipv4','0')
+2019-04-30 18:15:12,908:WARNING:db.BGPNeighbor:get uid bgp 201.158.48.97 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:13,976:WARNING:db.BGPNeighbor:bgp_save bgp 201.158.48.97 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.158.48.97','27884','ipv4','0')
+2019-04-30 18:15:13,976:WARNING:db.BGPNeighbor:get uid bgp 201.159.114.10 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:15,062:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.114.10 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.114.10','263725','ipv4','0')
+2019-04-30 18:15:15,063:WARNING:db.BGPNeighbor:get uid bgp 201.159.114.14 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:25,226:WARNING:db.BGPNeighbor:get uid bgp 10.244.253.42 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:26,319:WARNING:db.BGPNeighbor:bgp_save bgp 10.244.253.42 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.244.253.42','262234','ipv4','0')
+2019-04-30 18:15:26,320:WARNING:db.BGPNeighbor:get uid bgp 10.244.253.46 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:27,398:WARNING:db.BGPNeighbor:bgp_save bgp 10.244.253.46 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.244.253.46','262234','ipv4','0')
+2019-04-30 18:15:27,398:WARNING:db.BGPNeighbor:get uid bgp 10.244.253.50 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:28,490:WARNING:db.BGPNeighbor:bgp_save bgp 10.244.253.50 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.244.253.50','262234','ipv4','0')
+2019-04-30 18:15:28,491:WARNING:db.BGPNeighbor:get uid bgp 84.16.11.188 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:29,583:WARNING:db.BGPNeighbor:bgp_save bgp 84.16.11.188 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('84.16.11.188','12956','ipv4','0')
+2019-04-30 18:15:29,583:WARNING:db.BGPNeighbor:get uid bgp 172.16.30.253 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:30,671:WARNING:db.BGPNeighbor:bgp_save bgp 172.16.30.253 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('172.16.30.253','52468','ipv4','0')
+2019-04-30 18:15:30,671:WARNING:db.BGPNeighbor:get uid bgp 172.16.30.254 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:31,793:WARNING:db.BGPNeighbor:bgp_save bgp 172.16.30.254 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('172.16.30.254','52468','ipv4','0')
+2019-04-30 18:15:31,793:WARNING:db.BGPNeighbor:get uid bgp 172.18.16.250 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:32,865:WARNING:db.BGPNeighbor:bgp_save bgp 172.18.16.250 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('172.18.16.250','52468','ipv4','0')
+2019-04-30 18:15:32,865:WARNING:db.BGPNeighbor:get uid bgp 186.148.111.78 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:33,947:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.78 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.78','263751','ipv4','0')
+2019-04-30 18:15:33,947:WARNING:db.BGPNeighbor:get uid bgp 186.148.111.90 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:35,047:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.90 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.90','27884','ipv4','0')
+2019-04-30 18:15:35,047:WARNING:db.BGPNeighbor:get uid bgp 186.148.111.126 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:36,134:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.126 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.126','52468','ipv4','0')
+2019-04-30 18:15:36,134:WARNING:db.BGPNeighbor:get uid bgp 186.148.111.141 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:37,220:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.141 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.141','52468','ipv4','0')
+2019-04-30 18:15:37,221:WARNING:db.BGPNeighbor:get uid bgp 186.148.111.189 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:38,323:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.189 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.189','52468','ipv4','0')
+2019-04-30 18:15:38,324:WARNING:db.BGPNeighbor:get uid bgp 186.179.79.4 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:39,417:WARNING:db.BGPNeighbor:bgp_save bgp 186.179.79.4 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.179.79.4','52468','ipv4','0')
+2019-04-30 18:15:39,418:WARNING:db.BGPNeighbor:get uid bgp 190.61.33.101 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:40,510:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.33.101 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.33.101','262204','ipv4','0')
+2019-04-30 18:15:40,510:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.17 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:41,591:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.17 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.17','262234','ipv4','0')
+2019-04-30 18:15:41,592:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.19 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:42,668:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.19 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.19','262234','ipv4','0')
+2019-04-30 18:15:42,668:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.29 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:43,752:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.29 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.29','262234','ipv4','0')
+2019-04-30 18:15:43,752:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.38 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:44,830:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.38 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.38','262234','ipv4','0')
+2019-04-30 18:15:44,831:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.42 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:45,897:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.42 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.42','262234','ipv4','0')
+2019-04-30 18:15:45,897:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.86 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:46,977:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.86 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.86','262234','ipv4','0')
+2019-04-30 18:15:46,978:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.98 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:48,060:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.98 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.98','262146','ipv4','0')
+2019-04-30 18:15:48,060:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.138 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:49,140:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.138 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.138','262234','ipv4','0')
+2019-04-30 18:15:49,140:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.194 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:50,224:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.194 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.194','262234','ipv4','0')
+2019-04-30 18:15:50,224:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.226 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:51,283:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.226 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.226','262234','ipv4','0')
+2019-04-30 18:15:51,283:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.236 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:52,338:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.236 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.236','267761','ipv4','0')
+2019-04-30 18:15:52,338:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.250 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:53,422:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.250 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.250','262262','ipv4','0')
+2019-04-30 18:15:53,422:WARNING:db.BGPNeighbor:get uid bgp 190.61.44.4 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:54,484:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.44.4 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.44.4','52468','ipv4','0')
+2019-04-30 18:15:54,484:WARNING:db.BGPNeighbor:get uid bgp 190.115.6.88 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:55,572:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.6.88 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.6.88','52468','ipv4','0')
+2019-04-30 18:15:55,572:WARNING:db.BGPNeighbor:get uid bgp 201.158.48.97 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:56,682:WARNING:db.BGPNeighbor:bgp_save bgp 201.158.48.97 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.158.48.97','27884','ipv4','0')
+2019-04-30 18:15:56,682:WARNING:db.BGPNeighbor:get uid bgp 201.159.114.10 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:57,772:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.114.10 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.114.10','263725','ipv4','0')
+2019-04-30 18:15:57,772:WARNING:db.BGPNeighbor:get uid bgp 201.159.114.14 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:58,868:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.114.14 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.114.14','263170','ipv4','0')
+2019-04-30 18:15:58,868:WARNING:db.BGPNeighbor:get uid bgp 201.159.114.30 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:15:59,946:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.114.30 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.114.30','262234','ipv4','0')
+2019-04-30 18:15:59,946:WARNING:db.BGPNeighbor:get uid bgp 201.159.114.41 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:16:01,024:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.114.41 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.114.41','262234','ipv4','0')
+2019-04-30 18:16:01,024:WARNING:db.BGPNeighbor:get uid bgp 201.159.114.47 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:16:02,120:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.114.47 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.114.47','262234','ipv4','0')
+2019-04-30 18:16:02,120:WARNING:db.BGPNeighbor:get uid bgp 201.159.114.58 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:16:03,202:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.114.58 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.114.58','264812','ipv4','0')
+2019-04-30 18:16:03,202:WARNING:db.BGPNeighbor:get uid bgp 201.159.114.215 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:16:04,295:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.114.215 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.114.215','262234','ipv4','0')
+2019-04-30 18:16:04,295:WARNING:db.BGPNeighbor:get uid bgp 201.159.114.254 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:16:05,360:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.114.254 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.114.254','262234','ipv4','0')
+2019-04-30 18:16:05,360:WARNING:db.BGPNeighbor:get uid bgp 201.159.115.2 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:16:06,436:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.115.2 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.115.2','265780','ipv4','0')
+2019-04-30 18:16:06,436:WARNING:db.BGPNeighbor:get uid bgp 201.159.115.6 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:16:07,527:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.115.6 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.115.6','262234','ipv4','0')
+2019-04-30 18:16:07,527:WARNING:db.BGPNeighbor:get uid bgp 201.159.115.25 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:16:08,628:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.115.25 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.115.25','262234','ipv4','0')
+2019-04-30 18:16:08,628:WARNING:db.BGPNeighbor:get uid bgp 201.159.115.39 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:16:09,737:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.115.39 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.115.39','262234','ipv4','0')
+2019-04-30 18:16:09,738:WARNING:db.BGPNeighbor:get uid bgp 201.159.115.93 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:16:10,830:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.115.93 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.115.93','262234','ipv4','0')
+2019-04-30 18:16:10,830:WARNING:db.BGPNeighbor:get uid bgp 201.159.115.95 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:16:11,938:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.115.95 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.115.95','262234','ipv4','0')
+2019-04-30 18:16:11,939:WARNING:db.BGPNeighbor:get uid bgp 201.159.115.159 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:16:13,025:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.115.159 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.115.159','262234','ipv4','0')
+2019-04-30 18:16:13,025:WARNING:db.BGPNeighbor:get uid bgp 201.159.115.179 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:16:14,120:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.115.179 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.115.179','262234','ipv4','0')
+2019-04-30 18:16:14,121:WARNING:db.BGPNeighbor:get uid bgp 201.159.115.206 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:16:15,193:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.115.206 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.115.206','262234','ipv4','0')
+2019-04-30 18:16:15,193:WARNING:db.BGPNeighbor:get uid bgp 201.159.115.215 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:16:16,250:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.115.215 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.115.215','262234','ipv4','0')
+2019-04-30 18:16:16,251:WARNING:db.BGPNeighbor:get uid bgp 201.159.115.221 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:16:17,351:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.115.221 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.115.221','262234','ipv4','0')
+2019-04-30 18:16:17,351:WARNING:db.BGPNeighbor:get uid bgp 201.159.115.238 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:16:18,408:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.115.238 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.115.238','262234','ipv4','0')
+2019-04-30 18:16:18,766:WARNING:db.CiscoXR:bgp_state_save 172.17.24.210 error en bulk save ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,' at line 7") INSERT INTO 
+bgp_neighbor_states(state,
+last_error,
+advertised_prefixes,
+accepted_prefixes,
+bgp_neighbor_uid,
+state_timestamp) VALUES ,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+
+2019-04-30 18:17:44,048:WARNING:db.BGPNeighbor:get uid bgp 10.244.253.42 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:17:45,122:WARNING:db.BGPNeighbor:bgp_save bgp 10.244.253.42 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.244.253.42','262234','ipv4','0')
+2019-04-30 18:17:45,122:WARNING:db.BGPNeighbor:get uid bgp 10.244.253.46 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:17:46,199:WARNING:db.BGPNeighbor:bgp_save bgp 10.244.253.46 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.244.253.46','262234','ipv4','0')
+2019-04-30 18:17:46,199:WARNING:db.BGPNeighbor:get uid bgp 10.244.253.50 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:17:47,278:WARNING:db.BGPNeighbor:bgp_save bgp 10.244.253.50 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('10.244.253.50','262234','ipv4','0')
+2019-04-30 18:17:47,279:WARNING:db.BGPNeighbor:get uid bgp 84.16.11.188 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:17:48,375:WARNING:db.BGPNeighbor:bgp_save bgp 84.16.11.188 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('84.16.11.188','12956','ipv4','0')
+2019-04-30 18:17:48,375:WARNING:db.BGPNeighbor:get uid bgp 172.16.30.253 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:17:49,462:WARNING:db.BGPNeighbor:bgp_save bgp 172.16.30.253 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('172.16.30.253','52468','ipv4','0')
+2019-04-30 18:17:49,463:WARNING:db.BGPNeighbor:get uid bgp 172.16.30.254 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:17:50,568:WARNING:db.BGPNeighbor:bgp_save bgp 172.16.30.254 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('172.16.30.254','52468','ipv4','0')
+2019-04-30 18:17:50,568:WARNING:db.BGPNeighbor:get uid bgp 172.18.16.250 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:17:51,661:WARNING:db.BGPNeighbor:bgp_save bgp 172.18.16.250 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('172.18.16.250','52468','ipv4','0')
+2019-04-30 18:17:51,661:WARNING:db.BGPNeighbor:get uid bgp 186.148.111.78 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:17:52,730:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.78 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.78','263751','ipv4','0')
+2019-04-30 18:17:52,730:WARNING:db.BGPNeighbor:get uid bgp 186.148.111.90 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:17:53,797:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.90 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.90','27884','ipv4','0')
+2019-04-30 18:17:53,797:WARNING:db.BGPNeighbor:get uid bgp 186.148.111.126 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:17:54,913:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.126 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.126','52468','ipv4','0')
+2019-04-30 18:17:54,913:WARNING:db.BGPNeighbor:get uid bgp 186.148.111.141 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:17:55,998:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.141 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.141','52468','ipv4','0')
+2019-04-30 18:17:55,999:WARNING:db.BGPNeighbor:get uid bgp 186.148.111.189 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:17:57,063:WARNING:db.BGPNeighbor:bgp_save bgp 186.148.111.189 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.148.111.189','52468','ipv4','0')
+2019-04-30 18:17:57,063:WARNING:db.BGPNeighbor:get uid bgp 186.179.79.4 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:17:58,153:WARNING:db.BGPNeighbor:bgp_save bgp 186.179.79.4 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('186.179.79.4','52468','ipv4','0')
+2019-04-30 18:17:58,153:WARNING:db.BGPNeighbor:get uid bgp 190.61.33.101 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:17:59,216:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.33.101 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.33.101','262204','ipv4','0')
+2019-04-30 18:17:59,216:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.17 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:00,297:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.17 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.17','262234','ipv4','0')
+2019-04-30 18:18:00,297:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.19 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:01,420:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.19 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.19','262234','ipv4','0')
+2019-04-30 18:18:01,421:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.29 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:02,517:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.29 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.29','262234','ipv4','0')
+2019-04-30 18:18:02,517:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.38 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:03,629:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.38 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.38','262234','ipv4','0')
+2019-04-30 18:18:03,629:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.42 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:04,719:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.42 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.42','262234','ipv4','0')
+2019-04-30 18:18:04,719:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.86 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:05,816:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.86 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.86','262234','ipv4','0')
+2019-04-30 18:18:05,817:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.98 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:06,901:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.98 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.98','262146','ipv4','0')
+2019-04-30 18:18:06,902:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.138 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:07,966:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.138 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.138','262234','ipv4','0')
+2019-04-30 18:18:07,966:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.194 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:09,037:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.194 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.194','262234','ipv4','0')
+2019-04-30 18:18:09,037:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.226 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:10,105:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.226 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.226','262234','ipv4','0')
+2019-04-30 18:18:10,105:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.236 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:11,199:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.236 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.236','267761','ipv4','0')
+2019-04-30 18:18:11,199:WARNING:db.BGPNeighbor:get uid bgp 190.61.37.250 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:12,265:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.37.250 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.37.250','262262','ipv4','0')
+2019-04-30 18:18:12,266:WARNING:db.BGPNeighbor:get uid bgp 190.61.44.4 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:13,324:WARNING:db.BGPNeighbor:bgp_save bgp 190.61.44.4 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.61.44.4','52468','ipv4','0')
+2019-04-30 18:18:13,324:WARNING:db.BGPNeighbor:get uid bgp 190.115.6.88 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:14,391:WARNING:db.BGPNeighbor:bgp_save bgp 190.115.6.88 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('190.115.6.88','52468','ipv4','0')
+2019-04-30 18:18:14,391:WARNING:db.BGPNeighbor:get uid bgp 201.158.48.97 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:15,445:WARNING:db.BGPNeighbor:bgp_save bgp 201.158.48.97 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.158.48.97','27884','ipv4','0')
+2019-04-30 18:18:15,445:WARNING:db.BGPNeighbor:get uid bgp 201.159.114.10 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:16,592:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.114.10 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.114.10','263725','ipv4','0')
+2019-04-30 18:18:16,592:WARNING:db.BGPNeighbor:get uid bgp 201.159.114.14 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:17,720:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.114.14 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.114.14','263170','ipv4','0')
+2019-04-30 18:18:17,720:WARNING:db.BGPNeighbor:get uid bgp 201.159.114.30 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:18,803:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.114.30 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.114.30','262234','ipv4','0')
+2019-04-30 18:18:18,803:WARNING:db.BGPNeighbor:get uid bgp 201.159.114.41 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:19,920:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.114.41 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.114.41','262234','ipv4','0')
+2019-04-30 18:18:19,920:WARNING:db.BGPNeighbor:get uid bgp 201.159.114.47 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:21,005:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.114.47 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.114.47','262234','ipv4','0')
+2019-04-30 18:18:21,005:WARNING:db.BGPNeighbor:get uid bgp 201.159.114.58 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:22,089:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.114.58 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.114.58','264812','ipv4','0')
+2019-04-30 18:18:22,089:WARNING:db.BGPNeighbor:get uid bgp 201.159.114.215 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:23,162:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.114.215 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.114.215','262234','ipv4','0')
+2019-04-30 18:18:23,162:WARNING:db.BGPNeighbor:get uid bgp 201.159.114.254 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:24,252:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.114.254 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.114.254','262234','ipv4','0')
+2019-04-30 18:18:24,252:WARNING:db.BGPNeighbor:get uid bgp 201.159.115.2 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:25,319:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.115.2 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.115.2','265780','ipv4','0')
+2019-04-30 18:18:25,320:WARNING:db.BGPNeighbor:get uid bgp 201.159.115.6 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:26,388:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.115.6 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.115.6','262234','ipv4','0')
+2019-04-30 18:18:26,388:WARNING:db.BGPNeighbor:get uid bgp 201.159.115.25 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:27,506:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.115.25 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.115.25','262234','ipv4','0')
+2019-04-30 18:18:27,506:WARNING:db.BGPNeighbor:get uid bgp 201.159.115.39 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:28,615:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.115.39 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.115.39','262234','ipv4','0')
+2019-04-30 18:18:28,616:WARNING:db.BGPNeighbor:get uid bgp 201.159.115.93 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:29,703:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.115.93 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.115.93','262234','ipv4','0')
+2019-04-30 18:18:29,704:WARNING:db.BGPNeighbor:get uid bgp 201.159.115.95 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:30,803:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.115.95 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.115.95','262234','ipv4','0')
+2019-04-30 18:18:30,803:WARNING:db.BGPNeighbor:get uid bgp 201.159.115.159 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:31,892:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.115.159 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.115.159','262234','ipv4','0')
+2019-04-30 18:18:31,892:WARNING:db.BGPNeighbor:get uid bgp 201.159.115.179 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:32,969:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.115.179 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.115.179','262234','ipv4','0')
+2019-04-30 18:18:32,969:WARNING:db.BGPNeighbor:get uid bgp 201.159.115.206 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:34,062:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.115.206 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.115.206','262234','ipv4','0')
+2019-04-30 18:18:34,062:WARNING:db.BGPNeighbor:get uid bgp 201.159.115.215 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:35,126:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.115.215 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.115.215','262234','ipv4','0')
+2019-04-30 18:18:35,126:WARNING:db.BGPNeighbor:get uid bgp 201.159.115.221 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:36,232:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.115.221 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.115.221','262234','ipv4','0')
+2019-04-30 18:18:36,232:WARNING:db.BGPNeighbor:get uid bgp 201.159.115.238 dev 172.17.24.210 error  AttributeError("'BGPNeighbor' object has no attribute 'device'") 
+2019-04-30 18:18:37,333:WARNING:db.BGPNeighbor:bgp_save bgp 201.159.115.238 dev 172.17.24.210 error en bulk save IntegrityError(1452, 'Cannot add or update a child row: a foreign key constraint fails (`netadmin`.`bgp_neighbors`, CONSTRAINT `bgp_neighbors_ibfk_1` FOREIGN KEY (`net_device_uid`) REFERENCES `network_devices` (`uid`))') INSERT INTO 
+                       bgp_neighbors(ip,asn,address_family,
+                       net_device_uid)
+                       VALUES ('201.159.115.238','262234','ipv4','0')
+2019-04-30 18:18:37,692:WARNING:db.CiscoXR:bgp_state_save 172.17.24.210 error en bulk save ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,\n,' at line 7") INSERT INTO 
+bgp_neighbor_states(state,
+last_error,
+advertised_prefixes,
+accepted_prefixes,
+bgp_neighbor_uid,
+state_timestamp) VALUES ,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+

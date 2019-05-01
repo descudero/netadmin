@@ -1204,10 +1204,12 @@ class CiscoIOS(Parent):
             else:
                 self.logger_connection.info("{0} unable to set snmp community".format(self.ip))
 
-    def set_snmp_hostname(self):
+    def set_snmp_hostname(self, community=""):
         oid = "1.3.6.1.2.1.1.5.0"
         cmd_gen = cmdgen.CommandGenerator()
-        error_indication, error_status, error_index, var_binds = cmd_gen.getCmd(cmdgen.CommunityData(self.community),
+        community = self.community if community == "" else self.community
+
+        error_indication, error_status, error_index, var_binds = cmd_gen.getCmd(cmdgen.CommunityData(community),
                                                                                 cmdgen.UdpTransportTarget(
                                                                                     (self.ip, 161)),
                                                                                 oid
@@ -1223,6 +1225,8 @@ class CiscoIOS(Parent):
         for add in address_family:
             self.bgp_snmp_neighbors[add] = BGPNeighbor.factory_snmp(device=self, community=special_community,
                                                                     address_family=add)
+        self.verbose.warning(
+            f'set_snmp_bgp_neighbors dev {self.ip} bgp peers ipv4 {len(self.bgp_snmp_neighbors["ipv4"])}')
 
     def set_snmp_plattform(self):
 
@@ -1575,7 +1579,7 @@ class CiscoIOS(Parent):
         if not hasattr(self, 'snmp_bgp_neighbors'):
             self.set_snmp_bgp_neighbors(special_community=special_comnunity)
 
-        for add, neighbors in self.bgp_snmp_neighbors.items():
+        for address_family, neighbors in self.bgp_snmp_neighbors.items():
             BGPNeighbor.save_bulk_states(device=self, neighbors=neighbors.values())
 
     def set_interfaces_snmp(self):

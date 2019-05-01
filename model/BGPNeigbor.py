@@ -1,5 +1,7 @@
 from tools import get_oid_size, get_bulk, logged
 import datetime
+from pprint import pprint
+import re
 
 
 @logged
@@ -105,9 +107,19 @@ class BGPNeighbor:
     @staticmethod
     def factory_snmp(device, community, address_family):
         snmp_dict = BGPNeighbor.bulk_load_snmp(device=device, community=community, address_family=address_family)
+        bgp_dict = {}
 
-        return {ip: BGPNeighbor(ip=ip, parent_device=device, address_family=address_family, **record) for ip, record in
-                snmp_dict.items()}
+        for ip, record in snmp_dict.items():
+            try:
+                bgp_dict[ip] = BGPNeighbor(parent_device=device, address_family=address_family, ip=ip, **record)
+            except TypeError as e:
+                pass
+                device.dev.warning(f'factory_snmp unable to create BGPNeighbor record {record} {e}')
+
+        return bgp_dict
+
+
+
 
     @staticmethod
     def bulk_load_snmp(device, community, address_family):
@@ -121,10 +133,9 @@ class BGPNeighbor:
             for record in data_oid:
                 ip = record[0].replace(real_oid + ".", "")
                 if ip.count('.') > 3:
-                    ip = ip[:-4]
+                    ip = re.findall(pattern="(((\d{1,3}\.){3}\d{1,3}))", string=ip)[0][0]
                 value = record[1]
                 device_data.setdefault(ip, {})[attr] = value
-
         return device_data
 
     @staticmethod
@@ -138,7 +149,6 @@ class BGPNeighbor:
         if len(neighbors) > 0:
             BGPNeighbor.set_uids(device=device, neighbors=neighbors)
             sql = BGPNeighbor.bulk_sql_state(neighbors=neighbors)
-            print(sql)
             try:
                 connection = device.master.db_connect()
                 with connection.cursor() as cursor:

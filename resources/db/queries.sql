@@ -1,5 +1,6 @@
-update interfaces
-set column description = right(description,CHAR_LENGTH(description)-20);
+select *
+from bgp_neighbor_states
 
 
-
+select *
+from network_devices
