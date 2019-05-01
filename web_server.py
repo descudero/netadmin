@@ -43,7 +43,9 @@ def connect_mysql():
                            cursorclass=pymysql.cursors.DictCursor)
 
 
-
+@app.route('/reportes/bgp/sesiones/')
+def bgp_peer_list():
+    return render_template('bgp_peer_list.html')
 
 
 @app.route('/reportes/interfaces/regionales/')

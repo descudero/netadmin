@@ -27,6 +27,9 @@ class BGPNeighbor:
 
                   }
 
+    _sql_columns = ['net_device_uid', 'ip', 'asn', 'address_family', 'uid']
+    _sql_table = 'bgp_neighbors'
+
     def __init__(self, parent_device, ip, asn, address_family, state, last_error, advertised_prefixes,
                  accepted_prefixes, **kwargs):
         self.parent = parent_device
@@ -53,16 +56,18 @@ class BGPNeighbor:
             return True
 
     def save(self):
+        print(f'device save bgp peer uid {self.parent.uid_db()}')
         if self.parent.uid_db() == 0:
             self.parent.save()
+            print(f'device save bgp peer uid {self.parent.uid}')
         try:
             connection = self.parent.master.db_connect()
             with connection.cursor() as cursor:
-
+                self.verbose.warning(f'device save bgp peer uid {self.parent.uid_db()}')
                 sql = f'''INSERT INTO 
                        bgp_neighbors(ip,asn,address_family,
                        net_device_uid)
-                       VALUES ('{self.ip}','{self.asn}','{self.address_family}','{(self.parent.uid)}')'''
+                       VALUES ('{self.ip}','{self.asn}','{self.address_family}','{(self.parent.uid_db())}')'''
 
                 cursor.execute(sql)
                 connection.commit()
@@ -76,10 +81,11 @@ class BGPNeighbor:
     def uid_db(self):
 
         try:
-            connection = self.device.master.db_connect()
+            connection = self.parent.master.db_connect()
             with connection.cursor() as cursor:
-                sql = f'''SELECT uid FROM bgp_neighbors WHERE ip={self.ip} AND net_device_uid ={self.parent.uid} 
+                sql = f'''SELECT uid FROM bgp_neighbors WHERE ip='{self.ip}' AND net_device_uid={self.parent.uid_db()} 
                 '''
+                print(sql)
                 cursor.execute(sql)
                 result = cursor.fetchone()
                 if result:
@@ -91,7 +97,9 @@ class BGPNeighbor:
                     connection.close()
                     return 0
         except Exception as e:
+            print('error')
             self.db_log.warning(f"get uid bgp {self.ip} dev {self.parent.ip} error  {repr(e)} ")
+            print(e)
             self.uid = 0
             return 0
 
@@ -117,9 +125,6 @@ class BGPNeighbor:
                 device.dev.warning(f'factory_snmp unable to create BGPNeighbor record {record} {e}')
 
         return bgp_dict
-
-
-
 
     @staticmethod
     def bulk_load_snmp(device, community, address_family):
@@ -160,6 +165,39 @@ class BGPNeighbor:
                 return 0
         else:
             return
+
+    @staticmethod
+    def bgp_peers_from_db(devices=[], date_start="", date_end="", other_filters=""):
+        filter_count = 0
+        filter_count += 1 if not other_filters == "" else 0
+        filters = f' {other_filters} '
+        if devices:
+            join_data = ",".join([f'"{device}"' for device in devices])
+            filters += " AND " if filter_count > 0 else ""
+            filters += f" net_device_ip in  ({join_data})"
+            filter_count += 1
+        if not date_start == "":
+            filters += " AND " if filter_count > 0 else ""
+            filters += f" WHERE bs.state_timestamp>='{date_start}'"
+
+        if not date_end == "":
+            filters += " AND " if filter_count > 0 else ""
+            filters += f" WHERE bs.state_timestamp>='{date_end}'"
+        tables = f'{BGPNeighbor._sql_table} as bg INNER JOIN ' \
+            f'bgp_neighbor_states as bs on bs.bgp_neighbor_uid=bg.uid' \
+            f' INNER JOIN  network_devices as nd on nd.uid=bg.net_device_uid'
+        print([f'bg.{column} as {column} '
+               for column in BGPNeighbor._sql_columns])
+        columns = ",".join([f"bg.{column} as {column} "
+                            for column in BGPNeighbor._sql_columns]) \
+                  + ', nd.ip as net_device_ip , nd.hostname'
+        print(columns)
+        if filter_count > 0:
+            sql = f'SELECT {columns} FROM {tables} WHERE {filters} '
+        else:
+            sql = f'SELECT {columns} FROM {tables}  '
+        print(sql)
+
 
     @staticmethod
     def set_uids(device, neighbors):

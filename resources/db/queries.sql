@@ -1,5 +1,5 @@
 select *
-from bgp_neighbor_states
+from bgp_neighbors
 
 
 select *
