@@ -43,14 +43,7 @@ def connect_mysql():
                            cursorclass=pymysql.cursors.DictCursor)
 
 
-@app.route('/reportes/bgp/clientes/<int:bgp_peer_id>')
-def interfaces_regionales():
-    return render_template('interfaces_regionales.html')
 
-
-@app.route('/reportes/bgp/clientes/')
-def interfaces_regionales():
-    return render_template('interfaces_regionales.html')
 
 
 @app.route('/reportes/interfaces/regionales/')
