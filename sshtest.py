@@ -28,9 +28,7 @@ isp.master = Master()
 list_dev = ['172.16.30.4', '172.16.30.3', '172.16.30.1']
 
 device = CiscoIOS(ip='172.17.24.33', display_name='a', master=isp.master)
-device.set_snmp_bgp_neighbors(special_community="INTERNET_UFINET")
-print(device.bgp_snmp_neighbors['ipv4']['172.16.30.246'].uid_save())
-
+BGPNeighbor.bgp_peers_from_db(master=isp.master, devices=['172.16.30.250', '172.16.30.240'])
 
 '''
 real_oid = '1.3.6.1.2.1.31.1.1.1.6'

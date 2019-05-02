@@ -167,14 +167,14 @@ class BGPNeighbor:
             return
 
     @staticmethod
-    def bgp_peers_from_db(devices=[], date_start="", date_end="", other_filters=""):
+    def bgp_peers_sql(devices=[], date_start="", date_end="", other_filters=""):
         filter_count = 0
         filter_count += 1 if not other_filters == "" else 0
         filters = f' {other_filters} '
         if devices:
-            join_data = ",".join([f'"{device}"' for device in devices])
+            join_data = ",".join([f"'{device}'" for device in devices])
             filters += " AND " if filter_count > 0 else ""
-            filters += f" net_device_ip in  ({join_data})"
+            filters += f" nd.ip in  ({join_data})"
             filter_count += 1
         if not date_start == "":
             filters += " AND " if filter_count > 0 else ""
@@ -184,20 +184,35 @@ class BGPNeighbor:
             filters += " AND " if filter_count > 0 else ""
             filters += f" WHERE bs.state_timestamp>='{date_end}'"
         tables = f'{BGPNeighbor._sql_table} as bg INNER JOIN ' \
-            f'bgp_neighbor_states as bs on bs.bgp_neighbor_uid=bg.uid' \
-            f' INNER JOIN  network_devices as nd on nd.uid=bg.net_device_uid'
-        print([f'bg.{column} as {column} '
-               for column in BGPNeighbor._sql_columns])
+            f'bgp_neighbor_states as bs on bs.bgp_neighbor_uid=bg.uid ' \
+            f'INNER JOIN  network_devices as nd on nd.uid=bg.net_device_uid ' \
+            f'INNER JOIN (select max(uid) as uid ' \
+            f'from bgp_neighbor_states group by bgp_neighbor_uid) ' \
+            f'as bs2 on bs.uid = bs2.uid '
+
         columns = ",".join([f"bg.{column} as {column} "
                             for column in BGPNeighbor._sql_columns]) \
-                  + ', nd.ip as net_device_ip , nd.hostname'
-        print(columns)
+                  + ', nd.ip as net_device_ip , nd.hostname, bs.state as state'
+
         if filter_count > 0:
             sql = f'SELECT {columns} FROM {tables} WHERE {filters} '
         else:
             sql = f'SELECT {columns} FROM {tables}  '
-        print(sql)
+        return sql
 
+    @staticmethod
+    def bgp_peers_from_db(master, devices=[], date_start="", date_end="", other_filters=""):
+        sql = BGPNeighbor.bgp_peers_sql(devices=devices, date_start=date_start, date_end=date_end,
+                                        other_filters=other_filters)
+        try:
+            connection = master.db_connect()
+            with connection.cursor() as cursor:
+                cursor.execute(sql)
+                data_neighbors = cursor.fetchall()
+                print(data_neighbors)
+        except Exception as e:
+            print(e)
+            pass
 
     @staticmethod
     def set_uids(device, neighbors):
