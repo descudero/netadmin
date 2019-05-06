@@ -28,8 +28,10 @@ isp.master = Master()
 list_dev = ['172.16.30.4', '172.16.30.3', '172.16.30.1']
 
 device = CiscoIOS(ip='172.17.24.33', display_name='a', master=isp.master)
-BGPNeighbor.bgp_peers_from_db(master=isp.master, devices=['172.16.30.250', '172.16.30.240'])
-
+pprint(BGPNeighbor.bgp_peers_from_db(master=isp.master, date_start="2019-5-2", date_end='2019-5-3'))
+# bgp = BGPNeighbor.load_uid(isp=isp,uid='26572')
+# data= BGPNeighbor.bgp_peers_from_db()
+# pprint(len(data))
 '''
 real_oid = '1.3.6.1.2.1.31.1.1.1.6'
 community = 'uFi08NeT'

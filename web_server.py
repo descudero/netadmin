@@ -19,6 +19,7 @@ from support.ConfigTemplate import ConfigTemplate
 import pandas as pd
 from model.ospf_database import ospf_database
 from model.InterfaceUfinet import InterfaceUfinet
+from model.BGPNeigbor import BGPNeighbor
 
 app = Flask(__name__)
 
@@ -28,7 +29,8 @@ app.config['MYSQL_PASSWORD'] = 'Ufinet_2010!'
 app.config['MYSQL_DB'] = 'netadmin'
 master = Master()
 mysql = master
-
+isp = ISP()
+isp.master = master
 weblog = logging.getLogger("web.netadmin.app")
 per = logging.getLogger("performance.netadmin.app")
 verbose = logging.getLogger("verbose.netadmin.app")
@@ -43,13 +45,43 @@ def connect_mysql():
                            cursorclass=pymysql.cursors.DictCursor)
 
 
-@app.route('/reportes/bgp/sesiones/')
-def bgp_peer_list():
+@app.route('/reportes/bgp_neighbors/view/<int:uid>', )
+def bgp_peer_view(uid):
+    return render_template('bgp_peer_view.html', uid=uid)
+
+
+@app.route('/reportes/bgp_neighbors/json/<int:uid>', methods=['POST'])
+def bgp_peer_json(uid):
+    print("sdadadadad")
+    bgp_peer = BGPNeighbor.load_uid(isp=isp, uid=uid)
+    date_start = str(datetime.date.today()) + ' 00:00:00'
+    date_end = str(datetime.date.today()) + ' 23:59:00'
+    data_peer = bgp_peer.load_states(date_start, date_end)
+
+    x = [str(state['state_timestamp'].strftime("%Y-%m-%d %H:%M:%S")) for state in data_peer]
+    y = [state['accepted_prefixes'] for state in data_peer]
+    name = f'BGP PREFIXES PEER {bgp_peer.ip} in {bgp_peer.parent.hostname}'
+    fill = "tonexty"
+    data = [{'x': x, 'y': y, 'name': name, 'stackgroup': 'dos',
+             'fill': 'tonexty', 'hoverlabel': {'namelength': -1}}]
+    return jsonify(data)
+
+
+@app.route('/reportes/bgp_neighbors/peers/', )
+def bgp_peers():
     return render_template('bgp_peer_list.html')
 
 
+@app.route('/reportes/bgp_neighbors/peers/json', methods=['POST'])
+def bgp_peers_json():
+    date_start = str(datetime.date.today()) + ' 00:00:00'
+    date_end = str(datetime.date.today()) + ' 23:59:00'
+    data = BGPNeighbor.bgp_peers_from_db(master=master, date_start=date_start, date_end=date_end)
+    return jsonify(data)
+
 @app.route('/reportes/interfaces/regionales/')
 def interfaces_regionales():
+
     return render_template('interfaces_regionales.html')
 
 
@@ -507,6 +539,7 @@ def json_data_graph():
         pl.new_flag("pivot")
 
     jdata = jsonify(data)
+    print(data)
     pl.new_flag("j data")
     pl.new_flag("end")
     if (pl.time_flag() > 2000):

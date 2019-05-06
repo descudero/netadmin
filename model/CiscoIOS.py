@@ -1596,3 +1596,12 @@ class CiscoIOS(Parent):
                       and interface.l1_protocol_attr != "UNKNOWN"
                       and interface.l1_protocol != "UNKNOWN"]
         InterfaceUfinet.save_bulk_states(device=self, interfaces=interfaces)
+
+    @staticmethod
+    def load_uid(master, uid):
+        connection = master.db_connect()
+        with connection.cursor() as cursor:
+            sql = f'''SELECT * FROM    netadmin.network_devices WHERE   uid ={uid} '''
+            cursor.execute(sql)
+            data = cursor.fetchone()
+            print(data)

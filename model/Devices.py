@@ -9,19 +9,29 @@ from multiprocessing import Process
 @logged
 class Devices:
 
-    def __init__(self, master, ip_list=[], network=""):
+    def __init__(self, master, ip_list=[], network="", platfforms={}, check_up=True):
         self.errors = {}
         self.master = master
         self.devices = dict()
         if network != "" and len(ip_list) == 0:
             ip_list = [str(host) for host in ipaddress.ip_network(network).hosts()]
         for ip in ip_list:
-            self.devices[ip] = CiscoIOS(ip=ip, display_name="", master=master)
-        self.execute(methods=["check_able_connect"])
-        self._not_connected_devices = {ip: device for ip, device in self.devices.items() if not device.able_connect}
-        self.devices = {ip: device for ip, device in self.devices.items() if device.able_connect}
+            if not platfforms:
+                self.devices[ip] = CiscoIOS(ip=ip, display_name="", master=master)
+            else:
+                self.devices[ip] = eval(platfforms[ip])(ip=ip, display_name="", master=master)
 
-        self.__correct_classes()
+        if check_up:
+            self.execute(methods=["check_able_connect"])
+            self._not_connected_devices = {ip: device for ip, device in self.devices.items() if not device.able_connect}
+            self.devices = {ip: device for ip, device in self.devices.items() if device.able_connect}
+            self.execute(methods=["set_snmp_community"])
+
+        if not platfforms:
+            self.__correct_classes()
+
+    def __getitem__(self, item):
+        return self.devices.__getitem__(item)
 
     def items(self):
         return self.devices.items()
@@ -162,3 +172,26 @@ class Devices:
                     self.verbose.warning("dev {0} excute method {1} error {2}".format(device, method, repr(e)))
         for p in processes:
             p.join()
+
+    @staticmethod
+    def load_uids(master, uids=[]):
+        connection = master.db_connect()
+        with connection.cursor() as cursor:
+            join_data = ",".join([f"'{uid}'" for uid in uids])
+            sql = f'''SELECT * FROM    netadmin.network_devices WHERE   uid in ({join_data}) '''
+            print(sql)
+            cursor.execute(sql)
+            data_devices = cursor.fetchall()
+            data_devices = {register["ip"]: register for register in data_devices}
+            platforms = {register["ip"]: register["platform"] for register in data_devices.values()}
+            devices = Devices(master=master, ip_list=data_devices.keys(), check_up=False, platfforms=platforms)
+            for device in devices:
+                device.uid = data_devices[device.ip]["uid"]
+                device.hostname = data_devices[device.ip]["hostname"]
+                device.platform = data_devices[device.ip]["platform"]
+            return devices
+        return None
+
+    @staticmethod
+    def load_uid(master, uid=0):
+        return list(Devices.load_uids(master=master, uids=[uid]))[0]

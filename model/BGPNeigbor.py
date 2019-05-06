@@ -18,7 +18,8 @@ class BGPNeighbor:
             }
     ADDRESS_FAMILY = {'ipv4': '.1.4', 'ipv6': '.2.6'}
 
-    STATE_DICT = {1: 'idle',
+    STATE_DICT = {0: 'NA',
+                  1: 'idle',
                   2: 'connect',
                   3: 'active',
                   4: 'opensent',
@@ -209,7 +210,7 @@ class BGPNeighbor:
             with connection.cursor() as cursor:
                 cursor.execute(sql)
                 data_neighbors = cursor.fetchall()
-                print(data_neighbors)
+                return data_neighbors
         except Exception as e:
             print(e)
             pass
@@ -237,3 +238,45 @@ class BGPNeighbor:
                 return 0
         else:
             return 0
+
+    @staticmethod
+    def load_uid(isp, uid):
+        connection = isp.master.db_connect()
+        with connection.cursor() as cursor:
+            sql = f'''SELECT * FROM    bgp_neighbors WHERE   uid ={uid} '''
+            cursor.execute(sql)
+            data = cursor.fetchone()
+            data_object = dict()
+            data_object['parent_device'] = isp.load_device_uid(uid=data['net_device_uid'])
+            data_object['ip'] = data["ip"]
+            data_object['asn'] = data["asn"]
+            data_object['address_family'] = ["address_family"]
+            data_object['state'] = 0
+            data_object['last_error'] = ""
+            data_object['advertised_prefixes'] = 0
+            data_object['accepted_prefixes'] = 0
+            bgp_neigbor = BGPNeighbor(**data_object)
+            bgp_neigbor.uid = uid
+            return bgp_neigbor
+
+    def load_states(self, start_date, end_date):
+        try:
+            connection = self.parent.master.db_connect()
+            with connection.cursor() as cursor:
+                sql = f'''SELECT * FROM bgp_neighbor_states WHERE bgp_neighbor_uid={self.uid}\
+                        AND state_timestamp >='{start_date}' AND state_timestamp<='{end_date}'
+                    '''
+                print(sql)
+                cursor.execute(sql)
+
+                data = cursor.fetchall()
+                return data
+        except Exception as e:
+            print(e)
+
+    @staticmethod
+    def get_url(type, uid):
+        return f"/reportes/{BGPNeighbor._sql_table}/{type}/{uid}"
+
+    def __repr__(self):
+        return f'<BGPPEER D:{self.parent.ip}  P:{self.ip} A:{self.asn} U:{self.uid}>'

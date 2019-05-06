@@ -3,9 +3,16 @@ from model.claseClaro import Claro
 from os.path import isfile, join
 import time
 from model.CiscoIOS import CiscoIOS
-
+from model.Devices import Devices
 
 class InternetServiceProvider(Claro):
+
+    def load_device_uid(self, uid):
+        return Devices.load_uid(master=self.master, uid=uid)
+
+    def load_devices_uid(self, uids):
+        return Devices.load_uids(master=self.master, uids=uids)
+
 
     @staticmethod
     def search_file_name(folder, match):

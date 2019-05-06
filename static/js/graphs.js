@@ -38,10 +38,10 @@ $(document).ready(function () {
 
 
                 var plotDiv = document.getElementById(group + "_" + suffix);
+                console.log(traces)
                 Plotly.plot(plotDiv, traces, layout);
 
 
-                console.log("en teoria terminamos algo");
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 alert(xhr.status);
