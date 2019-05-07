@@ -7,17 +7,11 @@
     <bookmark url="file://$PROJECT_DIR$/web_server.py" line="353" />
     <bookmark url="file://$PROJECT_DIR$/static/js/graphs.js" line="57" />
     <bookmark url="file://$PROJECT_DIR$/model/CiscoIOS.py" line="412" />
-    <bookmark url="file://$PROJECT_DIR$/model/InterfaceUfinet.py" line="82" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="462384ac-2f64-47a0-b6d2-b16ff1b36497" name="Default" comment="&#10;a">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/64ab1a34-8529-4526-93b9-a2e1a4795eac.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/64ab1a34-8529-4526-93b9-a2e1a4795eac.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/connections.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/connections.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/CiscoIOS.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/CiscoIOS.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/InterfaceUfinet.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/InterfaceUfinet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/ospf_database.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/ospf_database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/db/queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/resources/db/queries.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sshtest.py" beforeDir="false" afterPath="$PROJECT_DIR$/sshtest.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +26,7 @@
     <SUITE FILE_PATH="coverage/netadmin$Nosetests_in_test_devices_py.coverage" NAME="Nosetests in test_devices.py Coverage Results" MODIFIED="1554307354016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/netadmin$ttextfsm_uf.coverage" NAME="ttextfsm_uf Coverage Results" MODIFIED="1552080879621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/resources/templates" />
     <SUITE FILE_PATH="coverage/netadmin$test_textfsm.coverage" NAME="test_textfsm Coverage Results" MODIFIED="1547657044051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/resources/templates" />
-    <SUITE FILE_PATH="coverage/netadmin$sshtest.coverage" NAME="sshtest Coverage Results" MODIFIED="1557265206887" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/netadmin$sshtest.coverage" NAME="sshtest Coverage Results" MODIFIED="1557266194984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -61,44 +55,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_server.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="312" column="29" selection-start-line="312" selection-start-column="29" selection-end-line="312" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#58#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/claseClaro.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/ospf_database.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/InterfaceUfinet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="223" column="33" selection-start-line="223" selection-start-column="33" selection-end-line="223" selection-end-column="33" />
+            <state relative-caret-position="267">
+              <caret line="136" column="16" selection-start-line="136" selection-start-column="16" selection-end-line="136" selection-end-column="16" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -107,10 +68,42 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bgp_peer_poll.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bgp_pe_list">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ips_regional">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/snmp_interface_poll_ips">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="426">
+              <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/save_interfaces_db.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="100" selection-start-line="8" selection-start-column="82" selection-end-line="8" selection-end-column="100" />
+            <state relative-caret-position="198">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -127,8 +120,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/save_snmp_interfaces.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+            <state relative-caret-position="418">
+              <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
               <folding>
                 <element signature="e#0#72#0" expanded="true" />
               </folding>
@@ -139,8 +132,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sshtest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+            <state relative-caret-position="302">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
             </state>
           </provider>
         </entry>
@@ -148,20 +141,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="1618" column="33" selection-start-line="1618" selection-start-column="33" selection-end-line="1618" selection-end-column="33" />
+            <state relative-caret-position="221">
+              <caret line="1622" column="24" selection-start-line="1622" selection-start-column="24" selection-end-line="1622" selection-end-column="24" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/db/queries.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="74" selection-start-line="74" selection-end-line="74" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -206,8 +190,8 @@
       <find>graph</find>
       <find>actual</find>
       <find>fetchall</find>
-      <find>osp</find>
       <find>def save</find>
+      <find>osp</find>
       <find>def save(</find>
     </findStrings>
     <replaceStrings>
@@ -250,8 +234,6 @@
         <option value="$PROJECT_DIR$/model/InterfaceIOS.py" />
         <option value="$PROJECT_DIR$/save_interfaces_db.sh" />
         <option value="$PROJECT_DIR$/templates/snmp_poll.sh" />
-        <option value="$PROJECT_DIR$/save_snmp_interfaces.py" />
-        <option value="$PROJECT_DIR$/snmp_interface_poll_ips" />
         <option value="$PROJECT_DIR$/snmp_poll.sh" />
         <option value="$PROJECT_DIR$/config/Master.py" />
         <option value="$PROJECT_DIR$/bgp_peer_poll.sh" />
@@ -268,9 +250,11 @@
         <option value="$PROJECT_DIR$/static/js/bgp_peer_view.js" />
         <option value="$PROJECT_DIR$/templates/bgp_peer_view.html" />
         <option value="$PROJECT_DIR$/web_server.py" />
-        <option value="$PROJECT_DIR$/model/CiscoIOS.py" />
         <option value="$PROJECT_DIR$/model/ospf_database.py" />
         <option value="$PROJECT_DIR$/resources/db/queries.sql" />
+        <option value="$PROJECT_DIR$/snmp_interface_poll_ips" />
+        <option value="$PROJECT_DIR$/model/CiscoIOS.py" />
+        <option value="$PROJECT_DIR$/save_snmp_interfaces.py" />
         <option value="$PROJECT_DIR$/sshtest.py" />
         <option value="$PROJECT_DIR$/model/InterfaceUfinet.py" />
       </list>
@@ -608,28 +592,7 @@
       <workItem from="1555969157896" duration="61395000" />
       <workItem from="1556657022683" duration="9886000" />
       <workItem from="1556809577878" duration="13787000" />
-      <workItem from="1557153334805" duration="12239000" />
-    </task>
-    <task id="LOCAL-00046" summary="first3">
-      <created>1548969575601</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1548969575601</updated>
-    </task>
-    <task id="LOCAL-00047" summary="first3">
-      <created>1549052469875</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1549052469875</updated>
-    </task>
-    <task id="LOCAL-00048" summary="first3">
-      <created>1549052536113</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1549052536113</updated>
+      <workItem from="1557153334805" duration="13525000" />
     </task>
     <task id="LOCAL-00049" summary="first3">
       <created>1549060198083</created>
@@ -953,7 +916,28 @@
       <option name="project" value="LOCAL" />
       <updated>1557253287400</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="&#10;a">
+      <created>1557265181282</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1557265181283</updated>
+    </task>
+    <task id="LOCAL-00096" summary="&#10;a">
+      <created>1557265215555</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1557265215555</updated>
+    </task>
+    <task id="LOCAL-00097" summary="&#10;a">
+      <created>1557266298286</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1557266298286</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -989,7 +973,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="484247000" />
+    <option name="totallyTimeSpent" value="485533000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1004,7 +988,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.80508476" visible="true" weight="0.16380237" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.80508476" visible="true" weight="0.16380237" />
       <window_info id="Structure" order="1" sideWeight="0.19491525" side_tool="true" visible="true" weight="0.16380237" />
       <window_info id="Favorites" order="2" sideWeight="0.50864196" side_tool="true" weight="0.16136725" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1012,7 +996,7 @@
       <window_info anchor="bottom" id="Debug" order="2" sideWeight="0.49875" weight="0.46153846" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.60042965" visible="true" weight="0.34225196" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.60042965" visible="true" weight="0.34225196" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946293" weight="0.32664436" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.39957035" side_tool="true" weight="0.2419175" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49462944" weight="0.3199554" />
@@ -1171,7 +1155,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/sshtest.py</url>
-          <line>54</line>
+          <line>57</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1285,9 +1269,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ips_regional">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/logs/dev.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider">
         <state relative-caret-position="1051248">
@@ -1346,26 +1327,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/snmp_interface_poll_ips">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service_instance_poll.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bgp_pe_list">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -1376,13 +1343,6 @@
           <folding>
             <element signature="e#0#72#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bgp_peer_poll.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
@@ -1516,14 +1476,14 @@
     <entry file="file://$PROJECT_DIR$/resources/db/queries.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
-          <caret line="74" selection-start-line="74" selection-end-line="74" selection-end-column="24" />
+          <caret line="84" selection-start-line="84" selection-end-line="85" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/ospf_database.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1547,10 +1507,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bgp_peer_poll.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bgp_pe_list">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/save_interfaces_db.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="100" selection-start-line="8" selection-start-column="82" selection-end-line="8" selection-end-column="100" />
+        <state relative-caret-position="198">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ips_regional">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sshtest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snmp_interface_poll_ips">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/save_snmp_interfaces.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#72#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1561,27 +1562,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sshtest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/save_snmp_interfaces.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#72#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="1618" column="33" selection-start-line="1618" selection-start-column="33" selection-end-line="1618" selection-end-column="33" />
+        <state relative-caret-position="221">
+          <caret line="1622" column="24" selection-start-line="1622" selection-start-column="24" selection-end-line="1622" selection-end-column="24" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
@@ -1590,8 +1574,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/InterfaceUfinet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="223" column="33" selection-start-line="223" selection-start-column="33" selection-end-line="223" selection-end-column="33" />
+        <state relative-caret-position="267">
+          <caret line="136" column="16" selection-start-line="136" selection-start-column="16" selection-end-line="136" selection-end-column="16" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>

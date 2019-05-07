@@ -134,7 +134,7 @@ class InterfaceUfinet(InterfaceIOS):
                     l1=self.l1_protocol, l1a=self.l1_protocol_attr)
 
     def correct_ip(self):
-        if self.self.uid_db() != 0:
+        if self.uid_db() != 0:
             connection = self.parent_device.master.db_connect()
             try:
                 with connection.cursor() as cursor:
