@@ -27,13 +27,16 @@ isp = ISP()
 isp.master = Master()
 list_dev = ['172.16.30.4', '172.16.30.3', '172.16.30.1']
 
-device = CiscoXR(ip='172.16.30.3', display_name='a', master=isp.master)
+device = CiscoXR(ip='172.16.30.253', display_name='a', master=isp.master)
 # pprint(device.interfaces_from_db_today())
 # pprint(device.interfaces)
+device.set_interfaces_snmp()
+device.save_interfaces()
+pprint(device.interfaces)
 
-data = device.dict_from_sql(sql='select * from interfaces where uid=1')
+# data = device.dict_from_sql(sql='select * from interfaces where uid=1')
 
-pprint(data)
+# pprint(data)
 # bgp = BGPNeighbor.load_uid(isp=isp,uid='26572')
 # data= BGPNeighbor.bgp_peers_from_db()
 # pprint(len(data))

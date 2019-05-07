@@ -1618,6 +1618,10 @@ class CiscoIOS(Parent):
                       and interface.l1_protocol != "UNKNOWN"]
         InterfaceUfinet.save_bulk_states(device=self, interfaces=interfaces)
 
+    def correct_ip_interfaces(self):
+        for if_index, interface in self.interfaces.items():
+            interface.correct_ip()
+
     @staticmethod
     def load_uid(master, uid):
         connection = master.db_connect()

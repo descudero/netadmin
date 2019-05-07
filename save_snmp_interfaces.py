@@ -17,3 +17,4 @@ print(ip)
 device = list(iter(Devices(master=isp.master, ip_list=[ip])))[0]
 device.set_interfaces_snmp()
 device.save_interfaces()
+device.correct_ip_interfaces()

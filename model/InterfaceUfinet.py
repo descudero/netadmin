@@ -75,15 +75,6 @@ class InterfaceUfinet(InterfaceIOS):
                           "S": "SUBINTERFACE",
                           "R": "ROUTED_VPLS"}}
 
-    def correct_ip(self):
-        if self.self.uid_db() != 0:
-            connection = self.parent_device.master.db_connect()
-            with connection.cursor() as cursor:
-                sql = f""" UPDATE interfaces
-                SET ip = '{self.ip}'
-                WHERE condition uid='{self.uid}'"""
-                cursor.execute(sql)
-
     def __init__(self, *args, **kargs):
         super().__init__(*args, **kargs)
 
@@ -141,6 +132,19 @@ class InterfaceUfinet(InterfaceIOS):
             .format(util_in=self.util_in, util_out=self.util_out, if_index=self.if_index,
                     l3=self.l3_protocol, l3a=self.l3_protocol_attr,
                     l1=self.l1_protocol, l1a=self.l1_protocol_attr)
+
+    def correct_ip(self):
+        if self.self.uid_db() != 0:
+            connection = self.parent_device.master.db_connect()
+            try:
+                with connection.cursor() as cursor:
+                    sql = f""" UPDATE interfaces
+                    SET ip = '{self.ip}'
+                    WHERE condition uid='{self.uid}'"""
+                    cursor.execute(sql)
+                    print(sql)
+            except Exception as e:
+                self.verbose.warning(f' correct_ip ERROR dev {self.parent_device.ip}{sql} {e}')
 
     @staticmethod
     def sql_today_last_polled_interfaces(device):
@@ -220,8 +224,6 @@ class InterfaceUfinet(InterfaceIOS):
     def bulk_sql_state(interfaces) -> str:
         columns_sql = ",\n".join(InterfaceUfinet._sql_state_columns)
         interfaces_data = ",\n".join([interface.sql_state for interface in interfaces])
-        for interface in interfaces:
-            interface.correct_ip()
         return f'INSERT INTO \ninterface_states({columns_sql}) VALUES {interfaces_data}'
 
     @property
