@@ -10,13 +10,13 @@ $(document).ready(function () {
         $('#loading_json').show();
         $("#bgp_peers_data tbody").empty();
         $("#bgp_peers_data thead").empty();
-        var initial_date = $('#date_start').val();
-        var end_date = $('#date_end').val();
+        var date_start = $('#date_start').val();
+        var date_end = $('#date_end').val();
         var asn = $('#asn').val();
         var hostname = $('#hostname').val();
         var ip = $('#ip').val();
         var state = $('#state').val();
-        send_ajax(initial_date, end_date, asn, hostname, ip, state)
+        send_ajax(date_start, date_end, asn, hostname, ip, state)
     }
 
     function add_table_header(table_data, table_id) {
@@ -59,14 +59,14 @@ $(document).ready(function () {
 
     }
 
-    function send_ajax(initial_date, end_date, asn, hostname, ip, state) {
+    function send_ajax(date_start, date_end, asn, hostname, ip, state) {
 
         $.ajax({
             type: 'POST',
             contentType: 'application/json;charset=UTF-8',
             data: JSON.stringify({
-                initial_date: initial_date,
-                end_date: end_date, asn: asn,
+                date_start: date_start,
+                date_end: date_end, asn: asn,
                 hostname: hostname, ip: ip,
                 state: state
             }),

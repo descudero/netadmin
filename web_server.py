@@ -20,6 +20,7 @@ import pandas as pd
 from model.ospf_database import ospf_database
 from model.InterfaceUfinet import InterfaceUfinet
 from model.BGPNeigbor import BGPNeighbor
+from operator import itemgetter
 
 app = Flask(__name__)
 
@@ -51,18 +52,30 @@ def bgp_peer_view(uid):
 
 
 @app.route('/reportes/bgp_neighbors/json/<int:uid>', methods=['POST'])
+
 def bgp_peer_json(uid):
     bgp_peer = BGPNeighbor.load_uid(isp=isp, uid=uid)
-    date_start = str(datetime.date.today()) + ' 00:00:00'
-    date_end = str(datetime.date.today()) + ' 23:59:00'
+    request.get_json()
+    date_start_json = request.json['date_start']
+    date_end_json = request.json['date_end']
+    date_start = (str(datetime.date.today()) if date_start_json is '' else date_start_json) + ' 00:00:00'
+    date_end = (str(datetime.date.today()) if date_end_json is '' else date_end_json) + ' 23:59:00'
     data_peer = bgp_peer.load_states(date_start, date_end)
 
     x = [str(state['state_timestamp'].strftime("%Y-%m-%d %H:%M:%S")) for state in data_peer]
     y = [state['accepted_prefixes'] for state in data_peer]
-    name = f'BGP PREFIXES PEER {bgp_peer.ip} in {bgp_peer.parent.hostname}'
-    fill = "tonexty"
-    data = [{'x': x, 'y': y, 'name': name, 'stackgroup': 'dos',
+    print(data_peer)
+    state_data = [
+        {"bgp_state": state['state'], 'last_know_error': state['last_error'], 'time': state['state_timestamp']} for
+        state in data_peer]
+    state_data.sort(key=itemgetter('time'), reverse=True)
+    name = f'PREFIJOS BGP PEER {bgp_peer.ip} EN {bgp_peer.parent.hostname} {date_start} A {date_end}'
+    data = {}
+    traces = [{'x': x, 'y': y, 'name': name, 'stackgroup': 'dos',
              'fill': 'tonexty', 'hoverlabel': {'namelength': -1}}]
+    data['traces'] = traces
+    data['state_data'] = state_data
+    data['title'] = name
     return jsonify(data)
 
 
@@ -73,24 +86,28 @@ def bgp_peers():
 
 @app.route('/reportes/bgp_neighbors/peers/json', methods=['POST'])
 def bgp_peers_json():
-    date_start = str(datetime.date.today()) + ' 00:00:00'
-    date_end = str(datetime.date.today()) + ' 23:59:00'
-    data = dict()
     request.get_json()
-    data['asn'] = request.json['asn']
-    data['ip'] = request.json['ip']
-    data['hostname'] = request.json['hostname']
-    data['state'] = request.json['state']
-    other_filter = " "
+    date_start_json = request.json['date_start']
+    date_end_json = request.json['date_start']
+    date_start = (str(datetime.date.today()) if date_start_json is '' else date_start_json) + ' 00:00:00'
+    date_end = (str(datetime.date.today()) if date_end_json is '' else date_end_json) + ' 23:59:00'
+    data = dict()
+
+    data['bg.asn'] = request.json['asn']
+    data['bg.ip'] = request.json['ip']
+    data['nd.hostname'] = request.json['hostname']
+    data['bs.state'] = request.json['state']
+    other_filter = ""
 
     counter = 0
-    for column, data in data.items():
-        if data != "":
+    pprint(data)
+    for column, value in data.items():
+        if value is not '':
             if counter != 0:
                 other_filter += f" AND "
             else:
                 counter += 1
-            other_filter += f" {column} LIKE '{data}' "
+            other_filter += f" {column} LIKE '%{value}%' "
 
     data = BGPNeighbor.bgp_peers_from_db(master=master, date_start=date_start, date_end=date_end,
                                          other_filters=other_filter)

@@ -177,13 +177,14 @@ class BGPNeighbor:
             filters += " AND " if filter_count > 0 else ""
             filters += f" nd.ip in  ({join_data})"
             filter_count += 1
+
         if not date_start == "":
             filters += " AND " if filter_count > 0 else ""
-            filters += f" WHERE bs.state_timestamp>='{date_start}'"
+            filters += f"  bs.state_timestamp>='{date_start}'"
 
         if not date_end == "":
             filters += " AND " if filter_count > 0 else ""
-            filters += f" WHERE bs.state_timestamp>='{date_end}'"
+            filters += f"  bs.state_timestamp<='{date_end}'"
         tables = f'{BGPNeighbor._sql_table} as bg INNER JOIN ' \
             f'bgp_neighbor_states as bs on bs.bgp_neighbor_uid=bg.uid ' \
             f'INNER JOIN  network_devices as nd on nd.uid=bg.net_device_uid ' \
@@ -193,7 +194,7 @@ class BGPNeighbor:
 
         columns = ",".join([f"bg.{column} as {column} "
                             for column in BGPNeighbor._sql_columns]) \
-                  + ', nd.ip as net_device_ip , nd.hostname, bs.state as state'
+                  + ', nd.ip as net_device_ip , nd.hostname, bs.state as state, bs.accepted_prefixes as accepted_prefixes'
 
         if filter_count > 0:
             sql = f'SELECT {columns} FROM {tables} WHERE {filters} '

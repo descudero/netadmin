@@ -1,20 +1,22 @@
 $(document).ready(function () {
     $('#loading_json').hide()
-    load_data()
+    load_data(false)
     $('#request_json').click(function (e) {
-        load_data()
+        load_data(true)
 
     });
 
-    function load_data() {
+    function load_data(delete_data) {
         $('#loading_json').show();
-        $("#bgp_peers_data tbody").empty();
-        $("#bgp_peers_data thead").empty();
-        var initial_date = $('#date_start').val();
-        var end_date = $('#date_end').val();
+        if (delete_data === true) {
+            Plotly.deleteTraces('graph', 0);
+        }
+        var date_start = $('#date_start').val();
+        var date_end = $('#date_end').val();
         var uid = $('#uid').val();
-        send_ajax_graph(initial_date, end_date, uid)
+        send_ajax_graph(date_start, date_end, uid)
     }
+
 
 
     function add_table_header(table_data, table_id) {
@@ -50,6 +52,8 @@ $(document).ready(function () {
 
     function create_table_json_dict(table_id, table_data) {
         console.log(table_data)
+        $(table_id + " tbody").empty();
+        $(table_id + " thead").empty();
         add_table_header(table_data, table_id);
         $.each(table_data, function (key, row) {
             add_row_data_table(table_id, row);
@@ -57,38 +61,8 @@ $(document).ready(function () {
 
     }
 
-    function send_ajax(initial_date, end_date, uid) {
-        ;
-        $.ajax({
-            type: 'POST',
-            contentType: 'application/json;charset=UTF-8',
-            data: JSON.stringify({
-                initial_date: initial_date,
-                end_date: end_date, uid: uid
-            }),
-            dataType: "json",
 
-            url: "/reportes/bgp_neighbors/json/",
-            success: function (traces) {
-                console.log(traces)
-                create_table_json_dict("#bgp_peers_data", traces)
-                $('#loading_json').hide()
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                alert(xhr.status);
-                alert(thrownError);
-            },
-            complete: function () {
-                // Handle the complete event
-
-            }
-        });
-
-
-    }
-
-
-    function send_ajax_graph(date_start, date_end, uid) {
+    function create_bgp_graph(data, delete_data) {
         var layout = {
             hovermode: 'closest',
             font: {
@@ -105,6 +79,18 @@ $(document).ready(function () {
             },
             bargap: 0.05
         };
+        data['title'] = data[0]['name']
+        var plotDiv = document.getElementById('graph')
+        data['type'] = 'scatter'
+        console.log(data)
+        Plotly.plot(plotDiv, data, layout);
+    }
+
+
+
+
+    function send_ajax_graph(date_start, date_end, uid) {
+
         var url = "/reportes/bgp_neighbors/json/" + uid
         $.ajax({
             type: 'POST',
@@ -113,14 +99,11 @@ $(document).ready(function () {
             dataType: "json",
 
             url: url,
-            success: function (traces) {
+            success: function (data_json) {
 
-                layout['title'] = traces[0]['name']
-                var plotDiv = document.getElementById('graph')
-                traces['type'] = 'scatter'
-                console.log(traces)
-                Plotly.plot(plotDiv, traces, layout);
-
+                create_bgp_graph(data_json['traces'])
+                create_table_json_dict('#bgp_peer_data', data_json['state_data'])
+                $('#title_bgp').html(data_json['title'])
 
             },
             error: function (xhr, ajaxOptions, thrownError) {
