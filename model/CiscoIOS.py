@@ -1512,6 +1512,27 @@ class CiscoIOS(Parent):
 
             return 0
 
+    def dict_from_sql(self, sql):
+        if self.in_db():
+            try:
+                connection = self.master.db_connect()
+                with connection.cursor() as cursor:
+                    cursor.execute(sql)
+                    data = cursor.fetchall()
+                    return data
+            except Exception as e:
+                print('error')
+                self.db_log(f'dict_from_sql error {self.ip} {e}')
+                pass
+
+    def interfaces_from_db_today(self):
+        sql = InterfaceUfinet.sql_today_last_polled_interfaces(
+            device=self)
+        print(sql)
+        self.interfaces = InterfaceUfinet.factory_from_dict(device=self,
+                                                            interfaces_data=self.dict_from_sql(
+                                                                sql=sql))
+
     def in_db(self):
         if self.uid != 0:
             return True

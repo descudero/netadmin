@@ -75,6 +75,15 @@ class InterfaceUfinet(InterfaceIOS):
                           "S": "SUBINTERFACE",
                           "R": "ROUTED_VPLS"}}
 
+    def correct_ip(self):
+        if self.self.uid_db() != 0:
+            connection = self.parent_device.master.db_connect()
+            with connection.cursor() as cursor:
+                sql = f""" UPDATE interfaces
+                SET ip = '{self.ip}'
+                WHERE condition uid='{self.uid}'"""
+                cursor.execute(sql)
+
     def __init__(self, *args, **kargs):
         super().__init__(*args, **kargs)
 
@@ -83,11 +92,13 @@ class InterfaceUfinet(InterfaceIOS):
         self.protocol_state = InterfaceUfinet._PROTOCOL_STATES[self.protocol_state] \
             if isinstance(self.protocol_state, int) else self.protocol_state
         l3 = re.findall("L3:\w*", self.description)
-        self.l3_protocol = "UNKNOWN"
-        self.l3_protocol_attr = "UNKNOWN"
-        self.data_flow = "UNKNOWN"
+        if not hasattr(self, 'l3_protocol'):
+            self.l3_protocol = "UNKNOWN"
+        if not hasattr(self, 'l3_protocol_attr'):
+            self.l3_protocol_attr = "UNKNOWN"
+        if not hasattr(self, 'data_flow'):
+            self.data_flow = "UNKNOWN"
         if l3:
-
             if (l3[0][3:6] == "MPL"):
                 self.l3_protocol = "MPLS"
             elif l3[0][3:6] == "BGP":
@@ -102,6 +113,7 @@ class InterfaceUfinet(InterfaceIOS):
                 self.data_flow = "UNKNOWN"
 
         l1 = re.findall("L1:\S*", self.description)
+
         if l1:
 
             l1_info = l1[0].split(":")[1].split()[0]
@@ -119,8 +131,10 @@ class InterfaceUfinet(InterfaceIOS):
                 self.l1_protocol = "UNKNOWN"
                 self.l1_protocol_attr = "UNKNOWN"
         else:
-            self.l1_protocol = "UNKNOWN"
-            self.l1_protocol_attr = "UNKNOWN"
+            if not hasattr(self, 'l1_protocol'):
+                self.l1_protocol = "UNKNOWN"
+            if not hasattr(self, 'l1_protocol_attr'):
+                self.l1_protocol_attr = "UNKNOWN"
 
     def __repr__(self):
         return "{if_index} I:{util_in} O:{util_out} L3:{l3}{l3a} L1:{l1}{l1a}" \
@@ -129,12 +143,42 @@ class InterfaceUfinet(InterfaceIOS):
                     l1=self.l1_protocol, l1a=self.l1_protocol_attr)
 
     @staticmethod
+    def sql_today_last_polled_interfaces(device):
+        date_start = str(datetime.date.today()) + ' 00:00:00'
+        date_end = str(datetime.date.today()) + ' 23:59:00'
+        if device.in_db():
+            sql = f"""SELECT i.uid as uid,
+                        i.if_index as if_index,
+                        i.l3_protocol,
+                        i.l3_protocol_attr,
+                        i.l1_protocol,
+                        i.l1_protocol_attr,
+                        i.data_flow,
+                        s.util_in as util_in,
+                        s.util_out as util_out,
+                        s.link_state,
+                        s.protocol_state,
+                        s.output_rate,
+                        s.input_rate,
+                        s.state_timestamp
+    
+               from network_devices as d
+               inner join interfaces as i on d.uid = i.net_device_uid 
+           inner join	(select * from interface_states where DATE(state_timestamp)=DATE(NOW())) as s on s.interface_uid= i.uid
+               inner join  (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid
+                WHERE   net_device_uid ={device.uid}  and state_timestamp >='{date_start}' and state_timestamp <='{date_end}' """
+            return sql
+        else:
+            return ''
+
+    @staticmethod
     def interfaces_uid(device, interfaces):
         if device.in_db():
             try:
                 connection = device.master.db_connect()
                 with connection.cursor() as cursor:
-                    sql = f'''SELECT uid,if_index,l3_protocol,l3_protocol_attr,l1_protocol,l1_protocol_attr,data_flow FROM                                    interfaces WHERE   net_device_uid ={device.uid} '''
+                    sql = f'''SELECT uid,if_index,l3_protocol,l3_protocol_attr,l1_protocol,l1_protocol_attr,data_flow 
+                    FROM interfaces WHERE   net_device_uid ={device.uid} '''
                     cursor.execute(sql)
                     data_interfaces = cursor.fetchall()
                     data_interfaces = {data['if_index']: data for data in data_interfaces}
@@ -176,6 +220,8 @@ class InterfaceUfinet(InterfaceIOS):
     def bulk_sql_state(interfaces) -> str:
         columns_sql = ",\n".join(InterfaceUfinet._sql_state_columns)
         interfaces_data = ",\n".join([interface.sql_state for interface in interfaces])
+        for interface in interfaces:
+            interface.correct_ip()
         return f'INSERT INTO \ninterface_states({columns_sql}) VALUES {interfaces_data}'
 
     @property
@@ -232,7 +278,7 @@ class InterfaceUfinet(InterfaceIOS):
                 ,l1_protocol,
                 l1_protocol_attr,
                 data_flow,
-                net_device_uid)
+                net_device_uid,ip)
                 VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)'''
 
                 cursor.execute(sql, (self.if_index,
@@ -243,7 +289,7 @@ class InterfaceUfinet(InterfaceIOS):
                                      self.l1_protocol,
                                      self.l1_protocol_attr,
                                      self.data_flow,
-                                     self.parent_device.uid))
+                                     self.parent_device.uid, self.ip))
                 connection.commit()
                 self.uid = cursor.lastrowid
             return self.uid
@@ -386,7 +432,7 @@ class InterfaceUfinet(InterfaceIOS):
                 count_interfaces = 0
         try:
             oid_data = get_bulk_real_auto(target=device.ip, credentials=device.community, oid=InterfaceUfinet._OID_IP,
-                                      window_size=500)
+                                          window_size=500)
 
             for register in oid_data:
                 snmp_ip = str(register[1])

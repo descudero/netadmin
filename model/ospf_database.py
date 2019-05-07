@@ -20,7 +20,7 @@ class ospf_database:
         self.routers = isp.correct_device_platform(self.routers)
         self.routers = {router.ip: router for router in self.routers}
 
-        self.isp.excute_methods(methods={"set_interfaces": {}},
+        self.isp.excute_methods(methods={"interfaces_from_db_today": {}},
                                 devices=self.routers.values(), thread_window=35)
         self.isp.do_uni_methods(methods={"set_snmp_community": {}, "get_uid_save": {}}, devices=self.routers.values())
         self.isp.do_uni_methods(methods={"set_snmp_location_attr": {}}, devices=self.routers.values())
