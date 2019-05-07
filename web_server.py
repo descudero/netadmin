@@ -64,7 +64,6 @@ def bgp_peer_json(uid):
 
     x = [str(state['state_timestamp'].strftime("%Y-%m-%d %H:%M:%S")) for state in data_peer]
     y = [state['accepted_prefixes'] for state in data_peer]
-    print(data_peer)
     state_data = [
         {"bgp_state": state['state'], 'last_know_error': state['last_error'], 'time': state['state_timestamp']} for
         state in data_peer]
