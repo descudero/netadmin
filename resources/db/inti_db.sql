@@ -58,3 +58,8 @@ create table bgp_neighbor_states
 
 select *
 from bgp_neighbor_states
+
+
+UPDATE interfaces
+SET ip = '127.0.0.1'
+WHERE uid = '60552'

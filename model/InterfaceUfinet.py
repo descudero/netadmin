@@ -140,7 +140,7 @@ class InterfaceUfinet(InterfaceIOS):
                 with connection.cursor() as cursor:
                     sql = f""" UPDATE interfaces
                     SET ip = '{self.ip}'
-                    WHERE condition uid='{self.uid}'"""
+                    WHERE  uid='{self.uid}'"""
                     cursor.execute(sql)
                     print(sql)
             except Exception as e:
