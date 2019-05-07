@@ -57,9 +57,10 @@ create table bgp_neighbor_states
 );
 
 select *
-from bgp_neighbor_states
+from interfaces
+WHERE uid = '60565';
 
 
 UPDATE interfaces
 SET ip = '127.0.0.1'
-WHERE uid = '60552'
+WHERE uid = '60565';

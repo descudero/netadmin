@@ -142,6 +142,7 @@ class InterfaceUfinet(InterfaceIOS):
                     SET ip = '{self.ip}'
                     WHERE  uid='{self.uid}'"""
                     cursor.execute(sql)
+                    connection.commit()
                     print(sql)
             except Exception as e:
                 self.verbose.warning(f' correct_ip ERROR dev {self.parent_device.ip}{sql} {e}')
