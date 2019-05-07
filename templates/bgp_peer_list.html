@@ -7,30 +7,41 @@
             <div class="input-group-prepend">
                 <div class="input-group-text">Fecha Inicial</div>
             </div>
-            <input class="form-control" id="initial_date" name="initial_date" placeholder="Fecha inicial" type="date">
+            <input class="form-control" id="date_start" name="date_start" placeholder="Fecha inicial" type="date">
         </div>
         <div class="input-group mb-2 mr-sm-2">
             <div class="input-group-prepend">
                 <div class="input-group-text">Fecha Final</div>
             </div>
-            <input class="form-control" id="end_date" name="end_date" placeholder="Fecha Final" type="date">
+            <input class="form-control" id="date_end" name="date_end" placeholder="Fecha Final" type="date">
         </div>
         <div class="input-group mb-2 mr-sm-2">
             <div class="input-group-prepend">
-                <div class="input-group-text">Cantidad Interfaces</div>
+                <div class="input-group-text">ASN BGP</div>
             </div>
-            <input class="form-control" id="cantidad_interfaces" placeholder="1" type="number" value="10">
+            <input class="form-control" id="asn" placeholder="1" type="text">
         </div>
-        <div class="form-group">
+        <div class="input-group mb-2 mr-sm-2">
             <div class="input-group-prepend">
-                <div class="input-group-text">clasificacion interfaces</div>
+                <div class="input-group-text">Hostname PE</div>
             </div>
-            <select class="form-control" id="grupo_interfaces">
-                <option selected value="OSPF_MPLS">MPLS REGIONAL</option>
-            </select>
+            <input class="form-control" id="hostname" placeholder="1" type="text">
         </div>
+        <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+                <div class="input-group-text">IP Vecino BGP</div>
+            </div>
+            <input class="form-control" id="ip" placeholder="1" type="text">
+        </div>
+        <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+                <div class="input-group-text">Estado BGP</div>
+            </div>
+            <input class="form-control" id="state" placeholder="1" type="text">
+        </div>
+
     </form>
-    <button class="btn btn-primary mb-2" id='request_json'>ver top interfaces</button>
+    <button class="btn btn-primary mb-2" id='request_json'>Vecinos BGP</button>
 </div>
 
 

@@ -1,16 +1,20 @@
 $(document).ready(function () {
     $('#loading_json').hide()
-
+    load_data()
     $('#request_json').click(function (e) {
+        load_data()
+
+    });
+
+    function load_data() {
         $('#loading_json').show();
         $("#bgp_peers_data tbody").empty();
         $("#bgp_peers_data thead").empty();
-        var initial_date = $('#initial_date').val();
-        var end_date = $('#end_date').val();
+        var initial_date = $('#date_start').val();
+        var end_date = $('#date_end').val();
         var uid = $('#uid').val();
         send_ajax_graph(initial_date, end_date, uid)
-
-    });
+    }
 
 
     function add_table_header(table_data, table_id) {

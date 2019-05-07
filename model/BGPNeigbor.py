@@ -205,6 +205,7 @@ class BGPNeighbor:
     def bgp_peers_from_db(master, devices=[], date_start="", date_end="", other_filters=""):
         sql = BGPNeighbor.bgp_peers_sql(devices=devices, date_start=date_start, date_end=date_end,
                                         other_filters=other_filters)
+        print(sql)
         try:
             connection = master.db_connect()
             with connection.cursor() as cursor:

@@ -52,7 +52,6 @@ def bgp_peer_view(uid):
 
 @app.route('/reportes/bgp_neighbors/json/<int:uid>', methods=['POST'])
 def bgp_peer_json(uid):
-    print("sdadadadad")
     bgp_peer = BGPNeighbor.load_uid(isp=isp, uid=uid)
     date_start = str(datetime.date.today()) + ' 00:00:00'
     date_end = str(datetime.date.today()) + ' 23:59:00'
@@ -76,12 +75,30 @@ def bgp_peers():
 def bgp_peers_json():
     date_start = str(datetime.date.today()) + ' 00:00:00'
     date_end = str(datetime.date.today()) + ' 23:59:00'
-    data = BGPNeighbor.bgp_peers_from_db(master=master, date_start=date_start, date_end=date_end)
+    data = dict()
+    request.get_json()
+    data['asn'] = request.json['asn']
+    data['ip'] = request.json['ip']
+    data['hostname'] = request.json['hostname']
+    data['state'] = request.json['state']
+    other_filter = " "
+
+    counter = 0
+    for column, data in data.items():
+        if data != "":
+            if counter != 0:
+                other_filter += f" AND "
+            else:
+                counter += 1
+            other_filter += f" {column} LIKE '{data}' "
+
+    data = BGPNeighbor.bgp_peers_from_db(master=master, date_start=date_start, date_end=date_end,
+                                         other_filters=other_filter)
     return jsonify(data)
+
 
 @app.route('/reportes/interfaces/regionales/')
 def interfaces_regionales():
-
     return render_template('interfaces_regionales.html')
 
 

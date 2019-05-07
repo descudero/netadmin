@@ -1,16 +1,23 @@
 $(document).ready(function () {
     $('#loading_json').hide()
-
+    load_data();
     $('#request_json').click(function (e) {
-        $('#loading_json').show();
-        $("#bgp_peers_data tbody").empty();
-        $("#bgp_peers_data thead").empty();
-        var initial_date = $('#initial_date').val();
-        var end_date = $('#end_date').val();
-        send_ajax(initial_date, end_date)
+        load_data();
 
     });
 
+    function load_data() {
+        $('#loading_json').show();
+        $("#bgp_peers_data tbody").empty();
+        $("#bgp_peers_data thead").empty();
+        var initial_date = $('#date_start').val();
+        var end_date = $('#date_end').val();
+        var asn = $('#asn').val();
+        var hostname = $('#hostname').val();
+        var ip = $('#ip').val();
+        var state = $('#state').val();
+        send_ajax(initial_date, end_date, asn, hostname, ip, state)
+    }
 
     function add_table_header(table_data, table_id) {
         console.log("add table header")
@@ -52,16 +59,16 @@ $(document).ready(function () {
 
     }
 
-    function send_ajax(initial_date, end_date) {
-        ;
+    function send_ajax(initial_date, end_date, asn, hostname, ip, state) {
+
         $.ajax({
             type: 'POST',
             contentType: 'application/json;charset=UTF-8',
             data: JSON.stringify({
                 initial_date: initial_date,
-                end_date: end_date,
-                cantidad_interfaces: cantidad_interfaces,
-                grupo_interfaces: grupo_interfaces
+                end_date: end_date, asn: asn,
+                hostname: hostname, ip: ip,
+                state: state
             }),
             dataType: "json",
 
