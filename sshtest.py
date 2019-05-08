@@ -19,20 +19,34 @@ from model.Devices import Devices
                 l3_protocol,
                 l3_protocol_attr
                 ,l1_protocol,
-                l1_protocol_attr,
+                l1_protocol_attr,   
                 data_flow,
                 net_device_uid'''
+'''
 
+list_dev = ['172.16.30.4', '172.16.30.3', '172.16.30.1']
+date = time.strftime("%Y%m%d")
+parameters= {
+        "ip_seed_router": "172.16.30.15",
+        "shelve_name": "shelves/" + date + "_ospf_ufinet_regional"
+    }
+data =isp.ospf_topology_vs(**parameters)
+'''
 isp = ISP()
 isp.master = Master()
-list_dev = ['172.16.30.4', '172.16.30.3', '172.16.30.1']
+device = CiscoIOS(ip='172.16.30.39', display_name='a', master=isp.master)
+device.set_snmp_community()
 
-device = CiscoXR(ip='172.16.30.253', display_name='a', master=isp.master)
-# pprint(device.interfaces_from_db_today())
-# pprint(device.interfaces)
 device.set_interfaces_snmp()
-device.save_interfaces()
-pprint(device.interfaces)
+device.correct_ip_interfaces()
+device.uid_db()
+pprint(device.interfaces_from_db_today())
+
+pprint([f"{index} + {interface.ip} {interface.uid}" for index, interface in device.interfaces.items()])
+
+# device.set_interfaces()
+# InterfaceUfinet.interfaces_uid(device,device.interfaces.values())
+
 
 # data = device.dict_from_sql(sql='select * from interfaces where uid=1')
 

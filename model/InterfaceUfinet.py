@@ -143,7 +143,6 @@ class InterfaceUfinet(InterfaceIOS):
                     WHERE  uid='{self.uid}'"""
                     cursor.execute(sql)
                     connection.commit()
-                    print(sql)
             except Exception as e:
                 self.verbose.warning(f' correct_ip ERROR dev {self.parent_device.ip}{sql} {e}')
 
@@ -165,7 +164,7 @@ class InterfaceUfinet(InterfaceIOS):
                         s.protocol_state,
                         s.output_rate,
                         s.input_rate,
-                        s.state_timestamp
+                        s.state_timestamp,i.ip
     
                from network_devices as d
                inner join interfaces as i on d.uid = i.net_device_uid 
@@ -177,28 +176,38 @@ class InterfaceUfinet(InterfaceIOS):
             return ''
 
     @staticmethod
-    def interfaces_uid(device, interfaces):
+    def interfaces_uid(device, interfaces=[]):
         if device.in_db():
             try:
                 connection = device.master.db_connect()
                 with connection.cursor() as cursor:
                     sql = f'''SELECT uid,if_index,l3_protocol,l3_protocol_attr,l1_protocol,l1_protocol_attr,data_flow 
-                    FROM interfaces WHERE   net_device_uid ={device.uid} '''
+                    FROM interfaces WHERE   net_device_uid = {device.uid} ORDER BY uid DESC'''
+
                     cursor.execute(sql)
                     data_interfaces = cursor.fetchall()
-                    data_interfaces = {data['if_index']: data for data in data_interfaces}
-                    print(data_interfaces.keys())
+                    data_dict_interfaces = {}
+                    try:
+                        for data in data_interfaces:
+                            if data['if_index'] not in data_dict_interfaces:
+                                data_dict_interfaces[data['if_index']] = data
+                    except Exception as e:
+                        device.db_log.warning(f'interfaces_uid: create dict{repr(e)}')
+                        return -1
                     for interface in interfaces:
-                        if interface.if_index in data_interfaces:
-                            data_sql = data_interfaces[interface.if_index]
+                        if interface.if_index in data_dict_interfaces:
+
+                            data_sql = data_dict_interfaces[interface.if_index]
                             if interface.l3_protocol == data_sql['l3_protocol'] and \
                                     interface.l3_protocol_attr == data_sql['l3_protocol_attr'] and \
                                     interface.l1_protocol == data_sql['l1_protocol'] and \
                                     interface.l1_protocol_attr == data_sql['l1_protocol_attr'] and \
                                     interface.data_flow == data_sql['data_flow']:
+
                                 interface.uid = data_sql['uid']
                     return 1
             except Exception as e:
+                print(e)
                 device.db_log.warning(f'sql not able to get data {repr(e)}')
                 return 0
         else:
@@ -247,9 +256,9 @@ class InterfaceUfinet(InterfaceIOS):
         try:
             connection = self.parent_device.master.db_connect()
             with connection.cursor() as cursor:
-                sql = '''SELECT uid FROM interfaces WHERE if_index=%s AND net_device_uid =%s AND l3_protocol=%s
-                 AND l3_protocol_attr=%s AND l1_protocol=%s AND l1_protocol_attr=%s AND data_flow=%s
-                '''
+                sql = '''SELECT uid FROM interfaces   WHERE if_index=%s AND net_device_uid =%s AND l3_protocol=%s
+                 AND l3_protocol_attr=%s AND l1_protocol=%s AND l1_protocol_attr=%s AND data_flow=%s 
+                 order by uid DESC  limit 1'''
                 cursor.execute(sql, (self.if_index, self.parent_device.uid_db(), self.l3_protocol,
                                      self.l3_protocol_attr, self.l1_protocol, self.l1_protocol_attr, self.data_flow))
                 result = cursor.fetchone()

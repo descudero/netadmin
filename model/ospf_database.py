@@ -5,29 +5,31 @@ from collections import defaultdict
 from tools import logged
 from threading import Thread
 import os, shelve
+from model.Devices import Devices
+
 
 @logged
 class ospf_database:
     edge_roundness = {1: .05, 2: .05, 3: .15, 4: .15, 5: .25, 6: .25, 7: .35, 8: .35}
 
     def __init__(self, ip_seed_router, isp, process_id='1', area='0'):
-        seed_router = CiscoIOS(ip=ip_seed_router, display_name='seed', master=isp.master)
-        seed_router = isp.correct_device_platform([seed_router])[0]
-        p2p, self.routers = seed_router.ospf_area_adjacency_p2p(process_id=process_id, area=area)
-        self.verbose.warning(f"_INIT_ p2p :{len(p2p)} rourters {len(self.routers)}")
         self.isp = isp
-        self.routers = [CiscoIOS(ip=router, display_name=router, master=self.isp.master) for router in self.routers]
-        self.routers = isp.correct_device_platform(self.routers)
-        self.routers = {router.ip: router for router in self.routers}
 
-        self.isp.excute_methods(methods={"interfaces_from_db_today": {}},
-                                devices=self.routers.values(), thread_window=35)
-        self.isp.do_uni_methods(methods={"set_snmp_community": {}, "get_uid_save": {}}, devices=self.routers.values())
-        self.isp.do_uni_methods(methods={"set_snmp_location_attr": {}}, devices=self.routers.values())
+        seed_router = Devices.factory_device(master=self.isp.master, ip=ip_seed_router)
+
+        p2p, routers = seed_router.ospf_area_adjacency_p2p(process_id=process_id, area=area)
+
+        self.verbose.warning(f"_INIT_ p2p :{len(p2p)} rourters {len(routers)}")
+
+        self.devices = Devices(master=self.isp.master, ip_list=routers)
+        self.devices.execute_processes(methods=['set_snmp_location_attr', 'get_uid_save'])
+        self.devices.execute_processes(methods=['interfaces_from_db_today'])
+
         self.graph = Graph()
         self.neighbors_occurrences_count = defaultdict(int)
         threads = []
         result_p2p = []
+
         for network, neighbors in p2p.items():
             kwargs = {"list_networks": result_p2p, 'network_id': network, 'ospf_database': self, 'neighbors': neighbors,
                       'network_type': 'p2p'}
@@ -36,9 +38,19 @@ class ospf_database:
             threads.append(t)
         for t in threads:
             t.join()
+
         self.p2p = {p2p.network_id: p2p for p2p in result_p2p}
+        self.p2p_down_links = {}
 
         self.dev.info("OSPF DATABASE INIT FINISH")
+
+    @property
+    def routers(self):
+        return self.devices.devices
+
+    def set_down_mpls_interfaces(self):
+
+        pass
 
     def get_yed_file(self, filename):
 

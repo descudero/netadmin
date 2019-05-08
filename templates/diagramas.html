@@ -6,7 +6,7 @@
 
 
 <div class="row p-4">
-    <form action="" class="form-inline" method="POST">
+    <form id='ospf_form' class="form-inline">
         <div class="input-group mb-2 mr-sm-2">
             <div class="input-group-prepend">
                 <div class="input-group-text">Fecha</div>
@@ -35,10 +35,26 @@
             </select>
         </div>
 
+        <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+                <div class="input-group-text">Habilitar TE</div>
+            </div>
+            <input class="form-control" id='enable_te' type="checkbox">
+        </div>
+        <div class="input-group mb-2 mr-sm-2">
+            <button class="btn btn-primary mb-2" id="send_path">Obtner TE</button>
+        </div>
+        <div class="input-group mb-2 mr-sm-2">
+            <button class="btn btn-primary mb-2" id="request_json">Enviar</button>
+        </div>
     </form>
-    <button class="btn btn-primary mb-2" id="request_json">Enviar</button>
+
+    </form>
+
+
 </div>
-<button class="btn btn-primary mb-2" id="send_path">Obtner TE</button>
+
+
 <style type="text/css">
     #mynetwork {
         width: 100%;

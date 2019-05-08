@@ -1,10 +1,13 @@
 var network = undefined
 var selected_edges = new Object()
-
+var te_enabled = false
 
 function deselect_edge(edge) {
 
 
+}
+
+function enable_te() {
 }
 
 function compute_array(edges) {
@@ -49,7 +52,26 @@ $(document).ready(function () {
     var date = $('#date').val();
     var network_name = $('#network').val();
 
+
     send_ajax_diag_network(date, network_name, saved);
+
+
+    $("#ospf_form").submit(function (e) {
+        return false;
+    });
+
+    $("#send_path").hide()
+    $('#enable_te').change(function () {
+        if (this.checked) {
+            $("#send_path").show()
+            te_enabled = true
+        } else {
+            $("#send_path").hide()
+            te_enabled = false
+        }
+
+    });
+
     $("#send_path").click(function (e) {
 
         send_path(compute_array(selected_edges));
@@ -83,18 +105,20 @@ $(document).ready(function () {
         });
 
         network.on("click", function (params) {
-            var edge_id = this.getEdgeAt(params.pointer.DOM);
-            if (selected_edges.hasOwnProperty(edge_id)) {
-                this.body.edges[edge_id].options.color.color = this.body.edges[edge_id].prev_color
-                this.body.edges[edge_id].options.width = 1
-                delete selected_edges[edge_id]
-            } else {
-                this.body.edges[edge_id].prev_color = this.body.edges[edge_id].options.color.color
-                this.body.edges[edge_id].options.color.color = '#FF8C00'
-                this.body.edges[edge_id].options.width = 4
-                selected_edges[edge_id] = this.body.edges[edge_id]
+            if (te_enabled) {
+                var edge_id = this.getEdgeAt(params.pointer.DOM);
+                if (selected_edges.hasOwnProperty(edge_id)) {
+                    this.body.edges[edge_id].options.color.color = this.body.edges[edge_id].prev_color
+                    this.body.edges[edge_id].options.width = 1
+                    delete selected_edges[edge_id]
+                } else {
+                    this.body.edges[edge_id].prev_color = this.body.edges[edge_id].options.color.color
+                    this.body.edges[edge_id].options.color.color = '#FF8C00'
+                    this.body.edges[edge_id].options.width = 4
+                    selected_edges[edge_id] = this.body.edges[edge_id]
+                }
+                this.redraw()
             }
-            this.redraw()
         });
 
 

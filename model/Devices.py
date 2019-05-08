@@ -30,6 +30,11 @@ class Devices:
         if not platfforms:
             self.__correct_classes()
 
+    @staticmethod
+    def factory_device(master, ip):
+        return list(Devices(master=master, ip_list=[ip]).devices.values())[0]
+
+
     def __getitem__(self, item):
         return self.devices.__getitem__(item)
 

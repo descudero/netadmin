@@ -1072,7 +1072,6 @@ class CiscoIOS(Parent):
     def set_pim_interfaces(self):
         # todo parse textfsm.. not user for the moment
         connection = self.connect()
-        command = "show "
         command2 = 'show ip pim neighbor | b Add'
         show_pim_neighbor = self.send_command(connection, command2, self.hostname, timeout=5)
         command3 = 'show ip pim interface  | b Prior'
@@ -1496,7 +1495,7 @@ class CiscoIOS(Parent):
         try:
             connection = self.master.db_connect()
             with connection.cursor() as cursor:
-                sql = '''SELECT uid FROM network_devices WHERE ip=%s'''
+                sql = '''SELECT uid FROM network_devices WHERE ip=%s ORDER BY uid DESC limit 1'''
                 cursor.execute(sql, (self.ip,))
                 result = cursor.fetchone()
                 if (result):
@@ -1526,12 +1525,15 @@ class CiscoIOS(Parent):
                 pass
 
     def interfaces_from_db_today(self):
+
         sql = InterfaceUfinet.sql_today_last_polled_interfaces(
             device=self)
-        print(sql)
+        self.verbose.warning(f'interfaces_from_db_today: {self.uid} {self.ip} {sql}')
         self.interfaces = InterfaceUfinet.factory_from_dict(device=self,
                                                             interfaces_data=self.dict_from_sql(
                                                                 sql=sql))
+        self.interfaces_ip = {str(interface_object.ip): interface_object for interface_object in
+                              self.interfaces.values()}
 
     def in_db(self):
         if self.uid != 0:
@@ -1543,8 +1545,7 @@ class CiscoIOS(Parent):
 
     def get_uid_save(self):
         if not self.in_db():
-            self.save(
-            )
+            self.save()
         return self.uid
 
     def save(self):
@@ -1608,6 +1609,9 @@ class CiscoIOS(Parent):
         interfaces_data = InterfaceUfinet.bulk_snmp_data_interfaces(device=self)
         self.interfaces = InterfaceUfinet.factory_from_dict(device=self, interfaces_data=interfaces_data.values())
         self.verbose.critical(f'set_interfaces_snmp interfaces {len(self.interfaces)}')
+        if len(self.interfaces) == 0:
+            self.set_interfaces()
+            self.verbose.critical(f'set_interfaces_snmp Unable to set Interfaces snmp {len(self.interfaces)}')
         return self.interfaces
 
     def save_interfaces(self):
@@ -1619,6 +1623,7 @@ class CiscoIOS(Parent):
         InterfaceUfinet.save_bulk_states(device=self, interfaces=interfaces)
 
     def correct_ip_interfaces(self):
+        self.verbose.warning(f'correct_ip_interfaces {self.ip}')
         for if_index, interface in self.interfaces.items():
             interface.correct_ip()
 
