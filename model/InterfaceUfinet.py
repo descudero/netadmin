@@ -215,6 +215,7 @@ class InterfaceUfinet(InterfaceIOS):
 
     @staticmethod
     def save_bulk_states(device, interfaces):
+        device.db_log.warning(f"save_bulk_states: {device.ip}  e {len(interfaces)}")
         if len(interfaces) > 0:
             InterfaceUfinet.interfaces_uid(device=device, interfaces=interfaces)
             sql = InterfaceUfinet.bulk_sql_state(interfaces=interfaces)
@@ -223,6 +224,7 @@ class InterfaceUfinet(InterfaceIOS):
                 with connection.cursor() as cursor:
                     cursor.execute(sql)
                     connection.commit()
+                    device.db_log.warning(f"{device.ip}  en bulk save  {sql}")
                     return 1
             except Exception as e:
                 device.db_log.warning(f"{device.ip} error en bulk save {repr(e)} {sql}")
@@ -281,7 +283,7 @@ class InterfaceUfinet(InterfaceIOS):
             connection = self.parent_device.master.db_connect()
             with connection.cursor() as cursor:
 
-                sql = '''INSERT INTO 
+                sql = f"""INSERT INTO 
                 interfaces(if_index,
                 description,
                 bandwith,
@@ -291,22 +293,16 @@ class InterfaceUfinet(InterfaceIOS):
                 l1_protocol_attr,
                 data_flow,
                 net_device_uid,ip)
-                VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)'''
+                VALUES ('{self.if_index}','{self.description}','{self.bw}','{self.l3_protocol}',
+                        '{self.l3_protocol_attr}','{self.l1_protocol}','{self.l1_protocol_attr}','{self.data_flow}',
+                       {self.parent_device.uid},'{str(self.ip)}')"""
 
-                cursor.execute(sql, (self.if_index,
-                                     self.description,
-                                     self.bw,
-                                     self.l3_protocol,
-                                     self.l3_protocol_attr,
-                                     self.l1_protocol,
-                                     self.l1_protocol_attr,
-                                     self.data_flow,
-                                     self.parent_device.uid, self.ip))
+                cursor.execute(sql)
                 connection.commit()
                 self.uid = cursor.lastrowid
             return self.uid
         except Exception as e:
-            print(e)
+            self.db_log.warning(f'INTERFACE SAVE error {e} {sql}')
             return False
 
     def in_db(self):

@@ -22,8 +22,9 @@ class ospf_database:
         self.verbose.warning(f"_INIT_ p2p :{len(p2p)} rourters {len(routers)}")
 
         self.devices = Devices(master=self.isp.master, ip_list=routers)
-        self.devices.execute_processes(methods=['set_snmp_location_attr', 'get_uid_save'])
-        self.devices.execute_processes(methods=['interfaces_from_db_today'])
+        self.devices.execute_processes(methods=['set_snmp_location_attr'])
+        self.devices.execute_processes(methods=['get_uid_save'], thread_window=15)
+        self.devices.execute_processes(methods=['interfaces_from_db_today'], thread_window=15)
 
         self.graph = Graph()
         self.neighbors_occurrences_count = defaultdict(int)

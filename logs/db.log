@@ -7157,3 +7157,229 @@ state_timestamp) VALUES ('up','up','1583446000','113576000','15.83','1.14','0','
 2019-05-08 16:12:40,792:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
 2019-05-08 16:12:40,792:WARNING:db.CiscoIOS:172.16.30.242 (1040, 'Too many connections')
 2019-05-08 16:12:40,792:WARNING:db.CiscoXR:172.16.30.251 (1040, 'Too many connections')
+2019-05-08 16:59:31,751:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.43  e 0
+2019-05-08 17:01:11,587:WARNING:db.CiscoIOS:172.16.30.45 (1040, 'Too many connections')
+2019-05-08 17:01:11,587:WARNING:db.CiscoIOS:172.16.30.130 (1040, 'Too many connections')
+2019-05-08 17:01:11,587:WARNING:db.CiscoXR:172.16.30.251 (1040, 'Too many connections')
+2019-05-08 17:01:11,588:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-05-08 17:01:11,588:WARNING:db.CiscoIOS:172.16.30.130 (1040, 'Too many connections')
+2019-05-08 17:01:11,588:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-05-08 17:01:11,589:WARNING:db.CiscoIOS:172.16.30.232 (1040, 'Too many connections')
+2019-05-08 17:01:11,589:WARNING:db.CiscoIOS:172.16.30.43 (1040, 'Too many connections')
+2019-05-08 17:01:11,589:WARNING:db.CiscoXR:172.16.30.251 (1040, 'Too many connections')
+2019-05-08 17:01:11,589:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-05-08 17:01:11,589:WARNING:db.CiscoIOS:172.16.30.129 (1040, 'Too many connections')
+2019-05-08 17:01:11,606:WARNING:db.CiscoXR:172.16.30.251 (1040, 'Too many connections')
+2019-05-08 17:01:11,606:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-05-08 17:01:11,606:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-05-08 17:01:11,606:WARNING:db.CiscoIOS:172.16.30.242 (1040, 'Too many connections')
+2019-05-08 17:01:11,607:WARNING:db.CiscoXR:172.16.30.248 (1040, 'Too many connections')
+2019-05-08 17:01:11,607:WARNING:db.CiscoXR:172.16.30.254 (1040, 'Too many connections')
+2019-05-08 17:01:11,607:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-05-08 17:01:11,607:WARNING:db.CiscoXR:172.16.30.251 (1040, 'Too many connections')
+2019-05-08 17:01:11,607:WARNING:db.CiscoXR:172.16.30.254 (1040, 'Too many connections')
+2019-05-08 17:01:11,607:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-05-08 17:01:11,607:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-05-08 17:01:11,607:WARNING:db.CiscoXR:172.16.30.253 (1040, 'Too many connections')
+2019-05-08 17:01:11,608:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-05-08 17:01:11,608:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-05-08 17:01:11,608:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-05-08 17:01:11,608:WARNING:db.CiscoXR:172.16.30.251 (1040, 'Too many connections')
+2019-05-08 17:01:11,608:WARNING:db.CiscoXR:172.16.30.251 (1040, 'Too many connections')
+2019-05-08 17:01:11,608:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-05-08 17:01:11,608:WARNING:db.CiscoXR:172.16.30.246 (1040, 'Too many connections')
+2019-05-08 17:01:11,608:WARNING:db.CiscoXR:172.16.30.250 (1040, 'Too many connections')
+2019-05-08 17:01:11,609:WARNING:db.CiscoXR:172.16.30.246 (1040, 'Too many connections')
+2019-05-08 17:01:11,609:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-05-08 17:01:11,609:WARNING:db.CiscoXR:172.16.30.247 (1040, 'Too many connections')
+2019-05-08 17:01:11,609:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-05-08 17:01:11,609:WARNING:db.CiscoXR:172.16.30.253 (1040, 'Too many connections')
+2019-05-08 17:01:11,609:WARNING:db.CiscoXR:172.16.30.251 (1040, 'Too many connections')
+2019-05-08 17:01:11,609:WARNING:db.CiscoIOS:172.16.30.245 (1040, 'Too many connections')
+2019-05-08 17:01:11,609:WARNING:db.CiscoXR:172.16.30.251 (1040, 'Too many connections')
+2019-05-08 17:01:11,609:WARNING:db.CiscoXR:172.16.30.251 (1040, 'Too many connections')
+2019-05-08 17:01:11,610:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-05-08 17:01:11,610:WARNING:db.CiscoXR:172.16.30.253 (1040, 'Too many connections')
+2019-05-08 17:01:11,610:WARNING:db.CiscoXR:172.16.30.246 (1040, 'Too many connections')
+2019-05-08 17:01:11,770:WARNING:db.CiscoXR:172.16.30.251 (1040, 'Too many connections')
+2019-05-08 17:01:11,776:WARNING:db.CiscoXR:172.16.30.246 (1040, 'Too many connections')
+2019-05-08 17:01:11,777:WARNING:db.CiscoIOS:172.16.30.45 (1040, 'Too many connections')
+2019-05-08 17:01:11,777:WARNING:db.CiscoXR:172.16.30.251 (1040, 'Too many connections')
+2019-05-08 17:01:11,777:WARNING:db.CiscoXR:172.16.30.253 (1040, 'Too many connections')
+2019-05-08 17:01:11,777:WARNING:db.CiscoXR:172.16.30.247 (1040, 'Too many connections')
+2019-05-08 17:01:11,777:WARNING:db.CiscoXR:172.16.30.254 (1040, 'Too many connections')
+2019-05-08 17:01:11,778:WARNING:db.CiscoIOS:172.16.30.44 (1040, 'Too many connections')
+2019-05-08 17:01:11,778:WARNING:db.CiscoXR:172.16.30.253 (1040, 'Too many connections')
+2019-05-08 17:01:11,778:WARNING:db.CiscoIOS:172.16.30.232 (1040, 'Too many connections')
+2019-05-08 17:01:11,778:WARNING:db.CiscoXR:172.16.30.246 (1040, 'Too many connections')
+2019-05-08 17:01:11,779:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-05-08 17:01:11,793:WARNING:db.CiscoXR:172.16.30.251 (1040, 'Too many connections')
+2019-05-08 17:01:11,793:WARNING:db.CiscoXR:172.16.30.248 (1040, 'Too many connections')
+2019-05-08 17:01:11,794:WARNING:db.CiscoXR:172.16.30.248 (1040, 'Too many connections')
+2019-05-08 17:01:11,794:WARNING:db.CiscoIOS:172.16.30.242 (1040, 'Too many connections')
+2019-05-08 17:01:11,794:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-05-08 17:01:11,794:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-05-08 17:01:11,794:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-05-08 17:01:11,794:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-05-08 17:01:11,794:WARNING:db.CiscoXR:172.16.30.254 (1040, 'Too many connections')
+2019-05-08 17:01:11,795:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-05-08 17:01:11,795:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-05-08 17:01:11,795:WARNING:db.CiscoXR:172.16.30.246 (1040, 'Too many connections')
+2019-05-08 17:01:11,795:WARNING:db.CiscoXR:172.16.30.244 (1040, 'Too many connections')
+2019-05-08 17:01:11,795:WARNING:db.CiscoXR:172.16.30.247 (1040, 'Too many connections')
+2019-05-08 17:01:11,795:WARNING:db.CiscoXR:172.16.30.250 (1040, 'Too many connections')
+2019-05-08 17:01:11,796:WARNING:db.CiscoXR:172.16.30.251 (1040, 'Too many connections')
+2019-05-08 17:01:11,796:WARNING:db.CiscoXR:172.16.30.253 (1040, 'Too many connections')
+2019-05-08 17:01:11,796:WARNING:db.CiscoXR:172.16.30.251 (1040, 'Too many connections')
+2019-05-08 17:01:12,478:WARNING:db.CiscoXR:172.16.30.253 (1040, 'Too many connections')
+2019-05-08 17:01:12,478:WARNING:db.CiscoXR:172.16.30.254 (1040, 'Too many connections')
+2019-05-08 17:01:12,478:WARNING:db.CiscoXR:172.16.30.254 (1040, 'Too many connections')
+2019-05-08 17:04:17,044:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.43  e 0
+2019-05-08 17:09:57,188:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.43  e 10
+2019-05-08 17:10:11,780:WARNING:db.CiscoIOS:172.16.30.43 error en bulk save ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\n,\n,\n,\n,\n,\n,\n,\n,' at line 11") INSERT INTO 
+interface_states(link_state,
+protocol_state,
+input_rate,
+output_rate,
+util_in,
+util_out,
+input_errors,
+output_errors,
+interface_uid,
+state_timestamp) VALUES ,
+,
+,
+,
+,
+,
+,
+,
+,
+
+2019-05-08 17:10:26,285:WARNING:db.CiscoIOS:172.16.30.43 (1040, 'Too many connections')
+2019-05-08 17:15:39,812:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.43  e 10
+2019-05-08 17:15:55,885:WARNING:db.CiscoIOS:172.16.30.43 error en bulk save ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\n,\n,\n,\n,\n,\n,\n,\n,' at line 11") INSERT INTO 
+interface_states(link_state,
+protocol_state,
+input_rate,
+output_rate,
+util_in,
+util_out,
+input_errors,
+output_errors,
+interface_uid,
+state_timestamp) VALUES ,
+,
+,
+,
+,
+,
+,
+,
+,
+
+2019-05-08 17:20:53,288:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.43  e 10
+2019-05-08 17:21:07,920:WARNING:db.CiscoIOS:172.16.30.43 error en bulk save ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\n,\n,\n,\n,\n,\n,\n,\n,' at line 11") INSERT INTO 
+interface_states(link_state,
+protocol_state,
+input_rate,
+output_rate,
+util_in,
+util_out,
+input_errors,
+output_errors,
+interface_uid,
+state_timestamp) VALUES ,
+,
+,
+,
+,
+,
+,
+,
+,
+
+2019-05-08 17:24:28,895:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.43  e 10
+2019-05-08 17:24:43,607:WARNING:db.CiscoIOS:172.16.30.43 error en bulk save ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\n,\n,\n,\n,\n,\n,\n,\n,' at line 11") INSERT INTO 
+interface_states(link_state,
+protocol_state,
+input_rate,
+output_rate,
+util_in,
+util_out,
+input_errors,
+output_errors,
+interface_uid,
+state_timestamp) VALUES ,
+,
+,
+,
+,
+,
+,
+,
+,
+
+2019-05-08 17:30:01,730:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.43  e 10
+2019-05-08 17:30:16,967:WARNING:db.CiscoIOS:172.16.30.43 error en bulk save ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\n,\n,\n,\n,\n,\n,\n,\n,' at line 11") INSERT INTO 
+interface_states(link_state,
+protocol_state,
+input_rate,
+output_rate,
+util_in,
+util_out,
+input_errors,
+output_errors,
+interface_uid,
+state_timestamp) VALUES ,
+,
+,
+,
+,
+,
+,
+,
+,
+
+2019-05-08 17:32:04,856:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.43  e 10
+2019-05-08 17:32:20,339:WARNING:db.CiscoIOS:172.16.30.43 error en bulk save ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\n,\n,\n,\n,\n,\n,\n,\n,' at line 11") INSERT INTO 
+interface_states(link_state,
+protocol_state,
+input_rate,
+output_rate,
+util_in,
+util_out,
+input_errors,
+output_errors,
+interface_uid,
+state_timestamp) VALUES ,
+,
+,
+,
+,
+,
+,
+,
+,
+
+2019-05-08 17:34:45,217:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.43  e 10
+2019-05-08 17:35:02,103:WARNING:db.CiscoIOS:172.16.30.43  en bulk save  INSERT INTO 
+interface_states(link_state,
+protocol_state,
+input_rate,
+output_rate,
+util_in,
+util_out,
+input_errors,
+output_errors,
+interface_uid,
+state_timestamp) VALUES ('up','up','413727688','465312944','4.14','4.65','417','0','82543','2019-05-08 17:34:47'),
+('up','up','1497846728','1586741864','14.98','15.87','71258717','0','82544','2019-05-08 17:34:48'),
+('up','up','2632','199461104','0.0','1.99','0','0','82545','2019-05-08 17:34:50'),
+('up','up','728770104','2249172112','7.29','22.49','44897','0','82546','2019-05-08 17:34:51'),
+('up','up','82319296','593175608','0.82','5.93','2524','0','82547','2019-05-08 17:34:53'),
+('up','up','1074703704','904416856','10.75','9.04','620','0','82548','2019-05-08 17:34:55'),
+('up','up','1772654232','213810560','17.73','2.14','0','0','82549','2019-05-08 17:34:56'),
+('up','up','3105973440','9205912','31.06','0.09','4493','0','82550','2019-05-08 17:34:58'),
+('up','up','1238898808','6994249872','12.39','69.94','1','0','82551','2019-05-08 17:35:00'),
+('up','up','3904980824','269866568','39.05','2.7','0','0','82552','2019-05-08 17:35:01')

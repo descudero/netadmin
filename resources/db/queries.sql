@@ -88,3 +88,25 @@ from interfaces
 
 ALTER TABLE interfaces
   ADD COLUMN ip VARCHAR(70) AFTER if_index;
+
+select *
+from interfaces;
+
+select *
+from network_devices
+where ip = '172.16.30.43'
+select *
+from interfaces
+where net_device_uid = 55;
+INSERT INTO interfaces(if_index,
+                       description,
+                       bandwith,
+                       l3_protocol,
+                       l3_protocol_attr
+  , l1_protocol,
+                       l1_protocol_attr,
+                       data_flow,
+                       net_device_uid, ip)
+VALUES ('Te0/2/1', 'L3:MPLOSP D:B L1:DP TO_RO-PIN-CER1_TE0/0/1_PATH1', '10000000000', 'MPLS',
+        'OSP', 'DWDM', 'BOTH',
+        55, '172.16.25.10')
