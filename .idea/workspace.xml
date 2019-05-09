@@ -12,16 +12,7 @@
     <list default="true" id="462384ac-2f64-47a0-b6d2-b16ff1b36497" name="Default" comment="&#10;a">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/connections.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/connections.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/db.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/db.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/performance.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/performance.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Diagram.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Diagram.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/InterfaceUfinet.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/InterfaceUfinet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/ospf_adjacency.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/ospf_adjacency.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sshtest.py" beforeDir="false" afterPath="$PROJECT_DIR$/sshtest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/diagramas.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/diagramas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/vis.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/vis.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/diagramas.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/diagramas.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +55,7 @@
               <entry file="file://$PROJECT_DIR$/model/Diagram.py">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="-841">
-                    <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+                    <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
                   </state>
                 </provider>
               </entry>
@@ -81,7 +72,7 @@
               <entry file="file://$PROJECT_DIR$/model/InterfaceUfinet.py">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="457">
-                    <caret line="487" column="71" selection-start-line="487" selection-start-column="71" selection-end-line="487" selection-end-column="71" />
+                    <caret line="487" column="73" selection-start-line="487" selection-start-column="73" selection-end-line="487" selection-end-column="73" />
                     <folding>
                       <element signature="e#0#43#0" expanded="true" />
                     </folding>
@@ -147,7 +138,7 @@
               <entry file="file://$PROJECT_DIR$/model/ospf_adjacency.py">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="435">
-                    <caret line="152" column="32" selection-start-line="152" selection-start-column="32" selection-end-line="152" selection-end-column="32" />
+                    <caret line="149" column="32" selection-start-line="149" selection-start-column="32" selection-end-line="149" selection-end-column="32" />
                     <folding>
                       <element signature="e#0#25#0" expanded="true" />
                     </folding>
@@ -221,8 +212,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/diagramas.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="177" column="9" selection-start-line="177" selection-start-column="9" selection-end-line="177" selection-end-column="9" />
+            <state relative-caret-position="286">
+              <caret line="142" column="54" lean-forward="true" selection-start-line="142" selection-start-column="54" selection-end-line="142" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -264,7 +255,7 @@
         <entry file="file://$PROJECT_DIR$/static/js/vis.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="214">
-              <caret line="15406" column="327" selection-start-line="15406" selection-start-column="327" selection-end-line="15406" selection-end-column="327" />
+              <caret line="15406" column="330" selection-start-line="15406" selection-start-column="330" selection-end-line="15406" selection-end-column="330" />
             </state>
           </provider>
         </entry>
@@ -395,8 +386,8 @@
         <option value="$PROJECT_DIR$/model/Diagram.py" />
         <option value="$PROJECT_DIR$/model/ospf_adjacency.py" />
         <option value="$PROJECT_DIR$/static/js/vis.js" />
-        <option value="$PROJECT_DIR$/static/js/diagramas.js" />
         <option value="$PROJECT_DIR$/model/InterfaceUfinet.py" />
+        <option value="$PROJECT_DIR$/static/js/diagramas.js" />
       </list>
     </option>
   </component>
@@ -724,21 +715,7 @@
       <workItem from="1556657022683" duration="9886000" />
       <workItem from="1556809577878" duration="13787000" />
       <workItem from="1557153334805" duration="31427000" />
-      <workItem from="1557339722010" duration="25267000" />
-    </task>
-    <task id="LOCAL-00055" summary="first3">
-      <created>1550676913565</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1550676913565</updated>
-    </task>
-    <task id="LOCAL-00056" summary="first3">
-      <created>1550677249211</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1550677249211</updated>
+      <workItem from="1557339722010" duration="26147000" />
     </task>
     <task id="LOCAL-00057" summary="first3">
       <created>1550701336597</created>
@@ -1069,7 +1046,21 @@
       <option name="project" value="LOCAL" />
       <updated>1557435741300</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="&#10;a">
+      <created>1557441047661</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1557441047661</updated>
+    </task>
+    <task id="LOCAL-00105" summary="&#10;a">
+      <created>1557441177813</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1557441177813</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1105,7 +1096,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="528702000" />
+    <option name="totallyTimeSpent" value="529582000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1287,7 +1278,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/sshtest.py</url>
-          <line>68</line>
+          <line>69</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1645,31 +1636,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/diagramas.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="60" column="61" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/Diagram.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-841">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/vis.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
-          <caret line="15406" column="327" selection-start-line="15406" selection-start-column="327" selection-end-line="15406" selection-end-column="327" />
+          <caret line="15406" column="330" selection-start-line="15406" selection-start-column="330" selection-end-line="15406" selection-end-column="330" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/ospf_adjacency.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
-          <caret line="152" column="32" selection-start-line="152" selection-start-column="32" selection-end-line="152" selection-end-column="32" />
+          <caret line="149" column="32" selection-start-line="149" selection-start-column="32" selection-end-line="149" selection-end-column="32" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
@@ -1693,17 +1677,24 @@
     <entry file="file://$PROJECT_DIR$/model/InterfaceUfinet.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="457">
-          <caret line="487" column="71" selection-start-line="487" selection-start-column="71" selection-end-line="487" selection-end-column="71" />
+          <caret line="487" column="73" selection-start-line="487" selection-start-column="73" selection-end-line="487" selection-end-column="73" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/diagramas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="60" column="61" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/diagramas.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="177" column="9" selection-start-line="177" selection-start-column="9" selection-end-line="177" selection-end-column="9" />
+        <state relative-caret-position="286">
+          <caret line="142" column="54" lean-forward="true" selection-start-line="142" selection-start-column="54" selection-end-line="142" selection-end-column="54" />
         </state>
       </provider>
     </entry>

@@ -139,7 +139,7 @@ $(document).ready(function () {
                     var edge_id = this.getEdgeAt(params.pointer.DOM);
                     if (selected_edges.hasOwnProperty(edge_id)) {
                         this.body.edges[edge_id].options.color.color = this.body.edges[edge_id].prev_color
-                        this.body.edges[edge_id].options.width = 1
+                        this.body.edges[edge_id].options.width = 2
                         delete selected_edges[edge_id]
                     } else {
                         this.body.edges[edge_id].prev_color = this.body.edges[edge_id].options.color.color
