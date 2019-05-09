@@ -11,7 +11,7 @@ import pymysql
 from tools import get_bulk_real_auto, get_oid_size, get_bulk
 from pprint import pprint
 import time
-
+from colour import Color
 
 @logged
 class InterfaceUfinet(InterfaceIOS):
@@ -475,6 +475,20 @@ class InterfaceUfinet(InterfaceIOS):
                       for index, register in enumerate(data_after)]
         return final_data
 
+    @property
+    def color_usage(self):
+
+        width_array = [1, 1, 2, 2, 3, 3, 3, 4, 5, 5]
+        good = Color("SpringGreen")
+        medium = Color("Orange")
+        bad = Color("OrangeRed")
+        colors = list(good.range_to(medium, 50)) + list(medium.range_to(bad, 51))
+
+        color = colors[int(max(self.util_in, self.util_out))].hex
+        width = width_array[(int(max(self.util_in, self.util_out) / 10))]
+
+        return color, width
+
 
 def calculate_delta(old_counter, new_counter, timelapse):
     new_counter = new_counter if new_counter >= old_counter else new_counter + 18446744073709551616
@@ -496,3 +510,4 @@ def filter_summary(sql_dataframe, columns, sort_column={}, filter_keys={}):
 
         results[key] = results[key][columns].to_dict(orient='records')
     return results
+

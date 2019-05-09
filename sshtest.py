@@ -36,15 +36,11 @@ isp = ISP()
 isp.master = Master()
 device = CiscoIOS(ip='172.16.30.43', display_name='a', master=isp.master)
 device.uid_db()
-device.set_snmp_community()
-
-device.set_interfaces_snmp()
-device.save_interfaces()
-device.correct_ip_interfaces()
 
 pprint(device.interfaces_from_db_today())
 
-pprint([f"{index} + {interface.ip} {interface.uid}" for index, interface in device.interfaces.items()])
+pprint([f"{index} + {interface.ip} {interface.uid} {interface.color_usage} " for index, interface in
+        device.interfaces.items()])
 
 # device.set_interfaces()
 # InterfaceUfinet.interfaces_uid(device,device.interfaces.values())

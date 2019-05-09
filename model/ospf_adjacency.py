@@ -147,8 +147,25 @@ class ospf_adjacency:
 
         try:
             self.vs['color'] = {'color': self.color}
+            self.vs['width'] = 2
+            self.vs['interface_type'] = self.color
+            self.vs['winterface_type'] = 3
         except Exception as e:
             pass
+        try:
+            self.vs['cusage'] = self.adj_neighbors['t']['interface'].color_usage[0]
+            self.vs['wusage'] = self.adj_neighbors['t']['interface'].color_usage[1]
+        except Exception as e:
+            self.verbose.warning(f'ERROR color_usage {e}')
+            try:
+
+                self.vs['cusage'] = self.adj_neighbors['s']['interface'].color_usage[0]
+                self.vs['wusage'] = self.adj_neighbors['s']['interface'].color_usage[1]
+            except Exception as e:
+                self.verbose.warning(f'ERROR color_usage {e}')
+                self.vs['cusage'] = ospf_adjacency.__l1["DEF"]
+                self.vs['wusage'] = 2
+
     @property
     def l1(self):
         try:

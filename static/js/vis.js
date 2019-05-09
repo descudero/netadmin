@@ -14707,7 +14707,8 @@
                     this.labelDirty = true;
                     this.ip_from = undefined
                     this.ip_to = undefined
-
+                    this.cusage = undefined
+                    this.interface_type = undefined
                     this.baseWidth = this.options.width;
                     this.baseFontSize = this.options.font.size;
 
@@ -14752,6 +14753,20 @@
                         }
                         if (options.ip_from !== undefined) {
                             this.ip_from = options.ip_from;
+                        }
+                        if (options.cusage !== undefined) {
+                            this.cusage = options.cusage;
+                        }
+
+                        if (options.winterface_type !== undefined) {
+                            this.winterface_type = options.winterface_type;
+                        }
+                        if (options.wusage !== undefined) {
+                            this.wusage = options.wusage;
+                        }
+
+                        if (options.interface_type !== undefined) {
+                            this.interface_type = options.interface_type;
                         }
                         if (options.ip_to !== undefined) {
                             this.ip_to = options.ip_to;
@@ -15389,7 +15404,7 @@
                         var globalOptions = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
                         var copyFromGlobals = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : false;
 
-                        var fields = ['arrowStrikethrough', 'ip_from', 'ip_to', 'id', 'from', 'hidden', 'hoverWidth', 'labelHighlightBold', 'length', 'line', 'opacity', 'physics', 'scaling', 'selectionWidth', 'selfReferenceSize', 'to', 'title', 'value', 'width', 'font', 'chosen', 'widthConstraint'];
+                        var fields = ['arrowStrikethrough', 'ip_from', 'ip_to', 'id', 'from', 'hidden', 'hoverWidth', 'labelHighlightBold', 'length', 'line', 'opacity', 'physics', 'scaling', 'selectionWidth', 'selfReferenceSize', 'to', 'title', 'value', 'width', 'font', 'chosen', 'widthConstraint', 'cusage', 'interface_type', 'wusage', 'winterface_type'];
 
                         // only deep extend the items in the field array. These do not have shorthand.
                         util.selectiveDeepExtend(fields, parentOptions, newOptions, allowDeletion);
