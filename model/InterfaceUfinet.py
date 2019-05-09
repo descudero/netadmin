@@ -478,7 +478,7 @@ class InterfaceUfinet(InterfaceIOS):
     @property
     def color_usage(self):
 
-        width_array = [1, 1, 2, 2, 3, 3, 3, 4, 5, 5]
+        width_array = [1, 2, 2, 2, 3, 3, 3, 5, 5, 6]
         good = Color("SpringGreen")
         medium = Color("OrangeRed")
         bad = Color("Red")

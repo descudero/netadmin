@@ -11,8 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="462384ac-2f64-47a0-b6d2-b16ff1b36497" name="Default" comment="&#10;a">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/connections.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/connections.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/diagramas.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/diagramas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/InterfaceUfinet.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/InterfaceUfinet.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,8 +70,8 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/model/InterfaceUfinet.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="457">
-                    <caret line="487" column="73" selection-start-line="487" selection-start-column="73" selection-end-line="487" selection-end-column="73" />
+                  <state relative-caret-position="523">
+                    <caret line="480" column="27" selection-start-line="480" selection-start-column="27" selection-end-line="480" selection-end-column="27" />
                     <folding>
                       <element signature="e#0#43#0" expanded="true" />
                     </folding>
@@ -213,7 +212,7 @@
         <entry file="file://$PROJECT_DIR$/static/js/diagramas.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
-              <caret line="142" column="54" lean-forward="true" selection-start-line="142" selection-start-column="54" selection-end-line="142" selection-end-column="54" />
+              <caret line="142" column="54" selection-start-line="142" selection-start-column="54" selection-end-line="142" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -386,8 +385,8 @@
         <option value="$PROJECT_DIR$/model/Diagram.py" />
         <option value="$PROJECT_DIR$/model/ospf_adjacency.py" />
         <option value="$PROJECT_DIR$/static/js/vis.js" />
-        <option value="$PROJECT_DIR$/model/InterfaceUfinet.py" />
         <option value="$PROJECT_DIR$/static/js/diagramas.js" />
+        <option value="$PROJECT_DIR$/model/InterfaceUfinet.py" />
       </list>
     </option>
   </component>
@@ -715,21 +714,7 @@
       <workItem from="1556657022683" duration="9886000" />
       <workItem from="1556809577878" duration="13787000" />
       <workItem from="1557153334805" duration="31427000" />
-      <workItem from="1557339722010" duration="26147000" />
-    </task>
-    <task id="LOCAL-00057" summary="first3">
-      <created>1550701336597</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1550701336597</updated>
-    </task>
-    <task id="LOCAL-00058" summary="first3">
-      <created>1550702872845</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1550702872845</updated>
+      <workItem from="1557339722010" duration="26536000" />
     </task>
     <task id="LOCAL-00059" summary="first3">
       <created>1550707896317</created>
@@ -1060,7 +1045,21 @@
       <option name="project" value="LOCAL" />
       <updated>1557441177813</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="&#10;a">
+      <created>1557441803561</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1557441803561</updated>
+    </task>
+    <task id="LOCAL-00107" summary="&#10;a">
+      <created>1557442150367</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1557442150367</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1096,7 +1095,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="529582000" />
+    <option name="totallyTimeSpent" value="529971000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1674,16 +1673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/InterfaceUfinet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="487" column="73" selection-start-line="487" selection-start-column="73" selection-end-line="487" selection-end-column="73" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/diagramas.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -1694,7 +1683,17 @@
     <entry file="file://$PROJECT_DIR$/static/js/diagramas.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
-          <caret line="142" column="54" lean-forward="true" selection-start-line="142" selection-start-column="54" selection-end-line="142" selection-end-column="54" />
+          <caret line="142" column="54" selection-start-line="142" selection-start-column="54" selection-end-line="142" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/InterfaceUfinet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="480" column="27" selection-start-line="480" selection-start-column="27" selection-end-line="480" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
