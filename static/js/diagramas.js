@@ -143,7 +143,7 @@ $(document).ready(function () {
                         delete selected_edges[edge_id]
                     } else {
                         this.body.edges[edge_id].prev_color = this.body.edges[edge_id].options.color.color
-                        this.body.edges[edge_id].options.color.color = '#FF8C00'
+                        this.body.edges[edge_id].options.color.color = '#000000'
                         this.body.edges[edge_id].options.width = 5
                         selected_edges[edge_id] = this.body.edges[edge_id]
                     }
