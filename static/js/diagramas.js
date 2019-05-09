@@ -10,13 +10,22 @@ function deselect_edge(edge) {
 function enable_te() {
 }
 
+
+function get_xy_nodes() {
+    var data = {}
+    $.each(network.body.nodes, function (index, node) {
+        data[index] = {x: node.x, y: node.y, net_device_uid: index}
+    });
+    return data;
+}
+
 function compute_array(edges) {
     var edges_array = [];
     Object.values(edges).forEach(function (edge) {
-        console.log(edge)
         edge_object = {from_id: edge.fromId, to_id: edge.toId, to_ip: edge.ip_to, from_ip: edge.ip_from}
         edges_array.push(edge_object);
     });
+
     console.log(edges_array)
     return edges_array
 }
@@ -55,6 +64,14 @@ $(document).ready(function () {
 
     send_ajax_diag_network(date, network_name, saved);
 
+
+    $("#save_xy").click(function (e) {
+
+
+        var network = $('#network').val();
+        save_xy(network, get_xy_nodes())
+
+    });
 
     $("#ospf_form").submit(function (e) {
         return false;
@@ -173,6 +190,33 @@ $(document).ready(function () {
                 // Handle the complete event
             }
         });
+    }
+
+
+    function save_xy(network_name, data) {
+
+        $.ajax({
+            type: 'POST',
+            contentType: 'application/json;charset=UTF-8',
+            data: JSON.stringify({network: network_name, data: data}),
+            dataType: "json",
+
+            url: "/diagramas/save_xy",
+            success: function (traces) {
+                console.log(traces)
+
+
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status);
+                alert(thrownError);
+            },
+            complete: function () {
+                // Handle the complete event
+            }
+        });
+
+
     }
 
 });

@@ -1370,7 +1370,7 @@ class CiscoIOS(Parent):
                           )
         return node
 
-    def get_vs(self):
+    def get_vs(self, x=0, y=0):
         try:
             image = '../static/img/' + "CiscoIOS" + CiscoIOS.images[self.country] + '.png'
         except Exception as e:
@@ -1380,7 +1380,7 @@ class CiscoIOS(Parent):
         if self.uid_db() == 0:
             self.save()
         return {'mass': 10, 'id': self.uid, 'label': self.ip + " " + self.hostname, 'font': {'size': '8'},
-                'image': image, 'shape': 'image', 'ip': self.ip}
+                'image': image, 'shape': 'image', 'ip': self.ip, 'x': x, 'y': y}
 
     def get_vfis_interface_per_service_instance(self):
         '''

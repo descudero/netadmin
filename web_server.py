@@ -21,7 +21,7 @@ from model.ospf_database import ospf_database
 from model.InterfaceUfinet import InterfaceUfinet
 from model.BGPNeigbor import BGPNeighbor
 from operator import itemgetter
-
+from model.Diagram import Diagram
 app = Flask(__name__)
 
 app.config['MYSQL_HOST'] = '10.250.55.17'
@@ -505,6 +505,15 @@ def function_pivot(data_sql, grouping_index=0, column_index=1, value_index=2):
         for serie_name, serie in data.items()]
     return data2
 
+
+@app.route('/diagramas/save_xy', methods=['POST'])
+def save_xy_diagram():
+    request.get_json()
+    network = request.json['network']
+    data = request.json['data']
+    diagram = Diagram(master=master, name=network)
+    diagram.save_xy(data_devices=data)
+    return jsonify({"bueno": "dsd"})
 
 @app.route('/utilidades/metodos/cisco_json', methods=['POST', 'GET'])
 def json_cisco_commands_tabulated():

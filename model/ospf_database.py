@@ -6,15 +6,16 @@ from tools import logged
 from threading import Thread
 import os, shelve
 from model.Devices import Devices
+from model.Diagram import Diagram
 
 
 @logged
 class ospf_database:
     edge_roundness = {1: .05, 2: .05, 3: .15, 4: .15, 5: .25, 6: .25, 7: .35, 8: .35}
 
-    def __init__(self, ip_seed_router, isp, process_id='1', area='0'):
+    def __init__(self, ip_seed_router, isp, process_id='1', area='0', network_name='ospf_regional'):
         self.isp = isp
-
+        self.diagram = Diagram(master=isp.master, name=network_name)
         seed_router = Devices.factory_device(master=self.isp.master, ip=ip_seed_router)
 
         p2p, routers = seed_router.ospf_area_adjacency_p2p(process_id=process_id, area=area)
@@ -64,14 +65,21 @@ class ospf_database:
             file.write(self.graph.get_graph())
 
     def get_vs(self):
-        topology = {"nodes": [router.get_vs() for router in self.routers.values()],
+        topology = {"nodes": [
+            router.get_vs(x=self.diagram.devices_uid[router.uid]['x'] if router.uid in self.diagram.devices_uid
+            else 0,
+                          y=self.diagram.devices_uid[router.uid][
+                              'y'] if router.uid in self.diagram.devices_uid
+                          else 0,
+                          ) for router in
+            self.routers.values()],
                     "edges": [edge.get_vs() for edge in self.p2p.values()],
                     'options': self.get_vs_options()}
 
         return topology
 
     def get_vs_options(self):
-        physics = {'enabled': True,
+        physics = {'enabled': False,
                    'solver': 'barnesHut',
                    'barnesHut': {
                        'gravitationalConstant': -2000,
@@ -97,3 +105,9 @@ class ospf_database:
             except Exception as e:
                 print("no able lo load shelve")
         return {"label": "no_data_in_date"}
+
+    @staticmethod
+    def save_xy(master, data):
+        ids = data.keys()
+
+        pass

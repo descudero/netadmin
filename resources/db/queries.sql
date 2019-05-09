@@ -89,8 +89,8 @@ from interfaces
 ALTER TABLE interfaces
   ADD COLUMN ip VARCHAR(70) AFTER if_index;
 
-select *
-from interfaces;
+select count(uid)
+from network_devices;
 
 select *
 from network_devices
@@ -110,3 +110,34 @@ INSERT INTO interfaces(if_index,
 VALUES ('Te0/2/1', 'L3:MPLOSP D:B L1:DP TO_RO-PIN-CER1_TE0/0/1_PATH1', '10000000000', 'MPLS',
         'OSP', 'DWDM', 'BOTH',
         55, '172.16.25.10')
+
+
+create table diagrams
+(
+  uid         int auto_increment primary key,
+  name        varchar(50) unique,
+  description text
+
+);
+drop table diagram_network_devices;
+create table diagram_network_devices
+(
+  uid            int auto_increment primary key,
+  diagram_uid    int,
+  net_device_uid int,
+  x              float,
+  y              float,
+  foreign key (net_device_uid) references network_devices (uid),
+  foreign key (diagram_uid) references diagrams (uid)
+
+)
+
+insert into diagrams(name, description)
+values ('_ospf_ufinet_regional', 'Red de transporte internacional');
+
+delete
+from diagram_network_devices
+where uid > 0;
+
+select *
+from diagram_network_devices;
