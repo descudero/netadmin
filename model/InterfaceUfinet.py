@@ -481,8 +481,8 @@ class InterfaceUfinet(InterfaceIOS):
         width_array = [1, 2, 2, 2, 3, 3, 3, 5, 5, 6]
         good = Color("SpringGreen")
         medium = Color("OrangeRed")
-        bad = Color("Red")
-        colors = list(good.range_to(medium, 50)) + list(medium.range_to(bad, 51))
+        bad = Color("DarkRed")
+        colors = list(good.range_to(medium, 65)) + list(medium.range_to(bad, 36))
 
         color = colors[int(max(self.util_in, self.util_out))].hex
         width = width_array[(int(max(self.util_in, self.util_out) / 10))]
