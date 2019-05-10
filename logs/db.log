@@ -7638,3 +7638,4 @@ state_timestamp) VALUES ('up','up','289770328','453895504','2.9','4.54','417','0
 2019-05-10 12:25:41,261:WARNING:db.CiscoXR:172.16.30.251 (1040, 'Too many connections')
 2019-05-10 12:25:41,264:WARNING:db.CiscoXR:172.16.30.254 (1040, 'Too many connections')
 2019-05-10 12:25:41,265:WARNING:db.CiscoXR:172.16.30.253 (1040, 'Too many connections')
+2019-05-10 12:37:11,044:WARNING:db.Diagram:load_devices_uid_from_db  DIAG _ospf_ufinet_regional (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1") 

@@ -1563,6 +1563,8 @@ class CiscoIOS(Parent):
             return self.uid
         except Exception as e:
             self.db_log.warning(f'SAVE {self.ip} {e}')
+
+            connection.close()
             return False
 
     def save_interfaces_states(self, filters={}):
