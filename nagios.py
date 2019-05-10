@@ -17,11 +17,13 @@ parser.add_argument('--ig', type=str,nargs='?', help='jump gateway')
 
 parser.add_argument('filename', type=str,
                     help='nombre del archivo')
+
+
+args = parser.parse_args()
 '''
 claro = Claro()
-#args = parser.parse_args()
 master = Master()
-test = CiscoIOS("192.168.205.55", "XR", master)
+test = CiscoIOS("10.242.55.5", "XR", master)
 
 test.set_jump_gateway("10.250.55.3", protocol="telnet")
 
@@ -35,7 +37,9 @@ test.set_jump_gateway("10.250.55.3", protocol="telnet")
 claro.master = master
 # xrs = CiscoXR.devices(master)
 
-test.create_file_nagios_arp()
+data = test.create_file_nagios_arp()
+with open("nagios_nic.txt", "w") as f:
+    f.write(data)
 
 # devices = CiscoXR.devices(master)
 # pprint(devices)

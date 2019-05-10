@@ -407,10 +407,10 @@ class CiscoIOS(Parent):
             host_string += "\tuse\tlocal-service\n"
             host_string += "\thost_name\t" + ip + "\n"
             host_string += "\tservice_description\tPING\n"
-            host_string += "\theck_command\tcheck_ping!100.0,20%!500.0,60%\n"
+            host_string += "\tcheck_command\tcheck_ping!100.0,20%!500.0,60%\n"
             host_string += "}\n\n"
             output += host_string
-        print(output)
+        return output
 
     def set_coneccted_routes(self, vrf="default"):
 
