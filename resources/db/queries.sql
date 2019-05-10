@@ -141,3 +141,6 @@ where uid > 0;
 
 select *
 from diagram_network_devices;
+select *
+from network_devices
+WHERE hostname LIKE '%SMA%';

@@ -34,7 +34,7 @@ data =isp.ospf_topology_vs(**parameters)
 '''
 isp = ISP()
 isp.master = Master()
-device = CiscoIOS(ip='172.16.30.43', display_name='a', master=isp.master)
+device = CiscoIOS(ip='172.16.30.38', display_name='a', master=isp.master)
 device.uid_db()
 
 pprint(device.interfaces_from_db_today())

@@ -408,6 +408,7 @@ class CiscoIOS(Parent):
             host_string += "\thost_name\t" + ip + "\n"
             host_string += "\tservice_description\tPING\n"
             host_string += "\tcheck_command\tcheck_ping!100.0,20%!500.0,60%\n"
+            host_string += "\tcheck_command\tcheck_ping!100.0,20%!500.0,60%\n"
             host_string += "}\n\n"
             output += host_string
         return output
@@ -1553,15 +1554,15 @@ class CiscoIOS(Parent):
         try:
             connection = self.master.db_connect()
             with connection.cursor() as cursor:
-                sql = '''INSERT INTO network_devices(ip,hostname,platform)
-                VALUES (%s,%s,%s)'''
-                cursor.execute(sql, (self.ip, self.hostname, self.platform))
+                sql = f'''INSERT INTO network_devices(ip,hostname,platform)
+                VALUES ('{self.ip}','{self.hostname}','{self.platform}')'''
+                cursor.execute(sql)
                 connection.commit()
                 self.uid = cursor.lastrowid
                 self.db_log(":SAVED uid:" + self.uid)
             return self.uid
         except Exception as e:
-            print(e)
+            self.db_log.warning(f'SAVE {self.ip} {e}')
             return False
 
     def save_interfaces_states(self, filters={}):
