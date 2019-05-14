@@ -129,10 +129,7 @@ $(document).ready(function () {
             };
             var options = {};
             network = new vis.Network(container, data, options);
-            network.on("stabilizationIterationsDone", function () {
-                network.setOptions({physics: false});
 
-            });
 
             network.on("click", function (params) {
                 if (te_enabled) {

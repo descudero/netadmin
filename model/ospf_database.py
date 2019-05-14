@@ -1,5 +1,5 @@
 from model.CiscoIOS import CiscoIOS
-from model.ospf_adjacency import ospf_adjacency, add_ospf_adjacency
+from model.ospf_adjacency import ospf_adjacency
 from lib.pyyed import *
 from collections import defaultdict
 from tools import logged
@@ -25,7 +25,8 @@ class ospf_database:
         self.devices = Devices(master=self.isp.master, ip_list=routers)
         self.devices.execute_processes(methods=['set_snmp_location_attr'])
         self.devices.execute_processes(methods=['get_uid_save'], thread_window=15)
-        self.devices.execute_processes(methods=['interfaces_from_db_today'], thread_window=15)
+        self.devices.execute_processes(methods=['set_interfaces_snmp'], thread_window=20)
+        # self.devices.execute_processes(methods=['interfaces_from_db_today'], thread_window=15)
 
         self.graph = Graph()
         self.neighbors_occurrences_count = defaultdict(int)
@@ -35,7 +36,7 @@ class ospf_database:
         for network, neighbors in p2p.items():
             kwargs = {"list_networks": result_p2p, 'network_id': network, 'ospf_database': self, 'neighbors': neighbors,
                       'network_type': 'p2p'}
-            t = Thread(target=add_ospf_adjacency, kwargs=kwargs)
+            t = Thread(target=ospf_adjacency.add_ospf_adjacency, kwargs=kwargs)
             t.start()
             threads.append(t)
         for t in threads:

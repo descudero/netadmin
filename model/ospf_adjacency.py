@@ -205,8 +205,11 @@ class ospf_adjacency:
 
         return self.pair
 
-
-def add_ospf_adjacency(list_networks, network_id, ospf_database, neighbors,
+    @staticmethod
+    def add_ospf_adjacency(list_networks, network_id, ospf_database, neighbors,
                        network_type):
-    list_networks.append(ospf_adjacency(network_id=network_id, ospf_database=ospf_database, neighbors=neighbors,
+        try:
+            list_networks.append(ospf_adjacency(network_id=network_id, ospf_database=ospf_database, neighbors=neighbors,
                                         network_type=network_type))
+        except Exception as e:
+            ospf_database.dev.warning(f'adding adjacency {network_id} error {e}')

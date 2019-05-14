@@ -82,50 +82,53 @@ class InterfaceUfinet(InterfaceIOS):
             if isinstance(self.link_state, int) else self.link_state
         self.protocol_state = InterfaceUfinet._PROTOCOL_STATES[self.protocol_state] \
             if isinstance(self.protocol_state, int) else self.protocol_state
-        l3 = re.findall("L3:\w*", self.description)
-        if not hasattr(self, 'l3_protocol'):
-            self.l3_protocol = "UNKNOWN"
-        if not hasattr(self, 'l3_protocol_attr'):
-            self.l3_protocol_attr = "UNKNOWN"
-        if not hasattr(self, 'data_flow'):
-            self.data_flow = "UNKNOWN"
-        if l3:
-            if (l3[0][3:6] == "MPL"):
-                self.l3_protocol = "MPLS"
-            elif l3[0][3:6] == "BGP":
-                self.l3_protocol = "BGP"
-            self.l3_protocol_attr = l3[0][6:]
-        direction = re.findall("D:\w*", self.description)
-        if direction:
-            try:
-                self.data_flow = self.directions[direction[0].split(":")[1]]
-            except KeyError as e:
-                self.dev.info(self.parent_device.ip + " DF if" + self.if_index + repr(e))
+        try:
+            l3 = re.findall("L3:\w*", self.description)
+            if not hasattr(self, 'l3_protocol'):
+                self.l3_protocol = "UNKNOWN"
+            if not hasattr(self, 'l3_protocol_attr'):
+                self.l3_protocol_attr = "UNKNOWN"
+            if not hasattr(self, 'data_flow'):
                 self.data_flow = "UNKNOWN"
-
-        l1 = re.findall("L1:\S*", self.description)
-
-        if l1:
-
-            l1_info = l1[0].split(":")[1].split()[0]
-
-            try:
-                self.l1_protocol = self.l1_converter[l1_info[0]]["DATA"]
+            if l3:
+                if (l3[0][3:6] == "MPL"):
+                    self.l3_protocol = "MPLS"
+                elif l3[0][3:6] == "BGP":
+                    self.l3_protocol = "BGP"
+                self.l3_protocol_attr = l3[0][6:]
+            direction = re.findall("D:\w*", self.description)
+            if direction:
                 try:
+                    self.data_flow = self.directions[direction[0].split(":")[1]]
+                except KeyError as e:
+                    self.dev.info(self.parent_device.ip + " DF if" + self.if_index + repr(e))
+                    self.data_flow = "UNKNOWN"
 
-                    self.l1_protocol_attr = self.l1_converter[l1_info[0]][l1_info[1]]
-                except (KeyError, IndexError) as e:
-                    self.dev.info(self.parent_device.ip + " l1 if" + self.if_index + repr(e))
+            l1 = re.findall("L1:\S*", self.description)
+
+            if l1:
+
+                l1_info = l1[0].split(":")[1].split()[0]
+
+                try:
+                    self.l1_protocol = self.l1_converter[l1_info[0]]["DATA"]
+                    try:
+
+                        self.l1_protocol_attr = self.l1_converter[l1_info[0]][l1_info[1]]
+                    except (KeyError, IndexError) as e:
+                        self.dev.info(self.parent_device.ip + " l1 if" + self.if_index + repr(e))
+                        self.l1_protocol_attr = "UNKNOWN"
+                except KeyError as e:
+                    self.dev.info(self.parent_device.ip + " L1 if" + self.if_index + repr(e))
+                    self.l1_protocol = "UNKNOWN"
                     self.l1_protocol_attr = "UNKNOWN"
-            except KeyError as e:
-                self.dev.info(self.parent_device.ip + " L1 if" + self.if_index + repr(e))
-                self.l1_protocol = "UNKNOWN"
-                self.l1_protocol_attr = "UNKNOWN"
-        else:
-            if not hasattr(self, 'l1_protocol'):
-                self.l1_protocol = "UNKNOWN"
-            if not hasattr(self, 'l1_protocol_attr'):
-                self.l1_protocol_attr = "UNKNOWN"
+            else:
+                if not hasattr(self, 'l1_protocol'):
+                    self.l1_protocol = "UNKNOWN"
+                if not hasattr(self, 'l1_protocol_attr'):
+                    self.l1_protocol_attr = "UNKNOWN"
+        except Exception as e:
+            self.dev.warning(f'__INIT__ {e}')
 
     def __repr__(self):
         return "{if_index} I:{util_in} O:{util_out} L3:{l3}{l3a} L1:{l1}{l1a}" \

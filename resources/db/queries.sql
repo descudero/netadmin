@@ -130,17 +130,17 @@ create table diagram_network_devices
   foreign key (net_device_uid) references network_devices (uid),
   foreign key (diagram_uid) references diagrams (uid)
 
-)
+);
 
 insert into diagrams(name, description)
-values ('_ospf_ufinet_regional', 'Red de transporte internacional');
+values ('RCE_GUATEMALA', 'Red de transporte nacional de Guatemala');
 
 delete
 from diagram_network_devices
 where uid > 0;
 
 select *
-from diagram_network_devices;
+from diagrams;
 select *
 from network_devices
 WHERE hostname LIKE '%SMA%';

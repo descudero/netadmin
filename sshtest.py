@@ -10,8 +10,7 @@ from model.BGPNeigbor import BGPNeighbor
 import time
 from model.InterfaceUfinet import InterfaceUfinet
 from model.Devices import Devices
-
-
+from model.ospf_database import ospf_database
 
 '''if_index,
                 description,
@@ -34,14 +33,29 @@ data =isp.ospf_topology_vs(**parameters)
 '''
 isp = ISP()
 isp.master = Master()
-device = CiscoIOS(ip='172.16.30.38', display_name='a', master=isp.master)
-device.uid_db()
+device = CiscoIOS(ip='172.17.22.52', display_name='a', master=isp.master)
 
-pprint(device.interfaces_from_db_today())
+dbd = ospf_database(ip_seed_router=device.ip, isp=isp, process_id='502', area='502008', network_name='RCE_GUATEMALA')
 
-pprint([f"{index} + {interface.ip} {interface.uid} {interface.color_usage} " for index, interface in
-        device.interfaces.items()])
+adjs = [adj
+        for p2p in dbd.p2p.values() for adj in p2p.adj_neighbors.values()]
 
+dict_data = []
+dist_snmp = []
+for adj in adjs:
+    try:
+
+        dict_data.append({"interface": adj['interface'].if_index,
+                          "ip_dev": adj['router_id'], "description": adj['interface'].description,
+                          "command": f"interface {adj['interface'].if_index} "
+                          f"\n description L3:MPLOSP D:B L1:DP {adj['interface'].description}"})
+    except Exception as e:
+        dist_snmp.append(adj['router_id'])
+        pprint(f' {adj} {e}')
+
+dist_snmp = [{"ip": ip} for ip in dist_snmp]
+isp.save_to_excel_list(list_data=dict_data, file_name='interfaces guatemala')
+isp.save_to_excel_list(list_data=dist_snmp, file_name='no_snmp')
 # device.set_interfaces()
 # InterfaceUfinet.interfaces_uid(device,device.interfaces.values())
 
@@ -76,4 +90,3 @@ pprint(interfaces)
 # pprint( get_bulk_real_auto(target=host, oid='1.3.6.1.2.1.4.20.1.2', credentials=community))
 # device = CiscoXR(ip=host, display_name='a', master=isp.master)
 # device.set_snmp_bgp_neighbors(special_community="INTERNET_UFINET",address_family=['ipv4','ipv6'])
-

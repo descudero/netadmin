@@ -278,31 +278,32 @@ def ospf_json_vs():
     datos_red = {"_ospf_ufinet_regional": {
         "ip_seed_router": "172.16.30.15",
         "shelve_name": "shelves/" + date + "_ospf_ufinet_regional"
+        , 'network_name': '_ospf_ufinet_regional'
     }, "guatemala": {
         "ip_seed_router": "172.17.22.52",
         "shelve_name": "shelves/" + date + "guatemala",
-        "process_id": '502', "area": '502008'
+        "process_id": '502', "area": '502008', 'network_name': 'RCE_GUATEMALA'
     }, "el_salvador": {
         "ip_seed_router": "172.17.23.11",
         "shelve_name": "shelves/" + date + "el_salvador",
-        "process_id": '503', "area": '503001'
+        "process_id": '503', "area": '503001', 'network_name': 'RCE_EL_SALVADOR'
     }, "nicaragua": {
         "ip_seed_router": "172.17.25.1",
         "shelve_name": "shelves/" + date + "nicaragua",
-        "process_id": '1', "area": '50501'
+        "process_id": '1', "area": '50501', 'network_name': 'RCE_NICARAGUA'
     }, "honduras": {
         "ip_seed_router": "172.17.24.5",
         "shelve_name": "shelves/" + date + "honduras",
-        "process_id": '504', "area": '504002'
+        "process_id": '504', "area": '504002', 'network_name': 'RCE_HONDURAS'
     }, "costa_rica": {
         "ip_seed_router": "172.17.26.2",
         "shelve_name": "shelves/" + date + "costa_rica",
-        "process_id": '1', "area": '506001'
+        "process_id": '1', "area": '506001', 'network_name': 'RCE_COSTA_RICA'
     }
         , "panama": {
             "ip_seed_router": "172.17.27.1",
             "shelve_name": "shelves/" + date + "guatemala",
-            "process_id": '507', "area": '507001'
+            "process_id": '507', "area": '507001', 'network_name': 'RCE_PANAMA'
         }
 
     }
