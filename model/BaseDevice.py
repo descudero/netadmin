@@ -58,17 +58,15 @@ class BaseDevice(object):
             # try ssh
             connection = ConnectHandler(device_type="cisco_ios_telnet", ip=self.ip, username=self.master.username,
                                         password=self.master.password)
-            print("telnet conected")
+
 
         except NetMikoTimeoutException:
             try:
 
                 connection = ConnectHandler(device_type="cisco_ios_ssh", ip=self.ip, username=self.master.username,
                                             password=self.master.password)
-                print("ssh conected " + self.display_name)
             except NetMikoAuthenticationException:
                 connection = None
-                print("contrasena o usuario incorrecto")
 
         return connection
 

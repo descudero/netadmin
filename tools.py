@@ -2,16 +2,21 @@ from datetime import datetime
 from collections import OrderedDict
 import logging
 from pysnmp import hlapi
+from pysnmp.hlapi.asyncore import *
+from pysnmp.carrier.asyncore.dispatch import AsyncoreDispatcher
 
 
-def get(target, oids, credentials, port=161, engine=hlapi.SnmpEngine(), context=hlapi.ContextData()):
-    handler = hlapi.getCmd(
+def get(target, oids, credentials, port=161, engine=SnmpEngine(), context=ContextData()):
+    handler = getCmd(
         engine,
         credentials,
         hlapi.UdpTransportTarget((target, port)),
         context,
         *construct_object_types(oids)
     )
+    transportDispatcher = AsyncoreDispatcher()
+    engine.registerTransportDispatcher(transportDispatcher, "a")
+    engine.transportDispatcher.runDispatcher()
     return fetch(handler, 1)[0]
 
 
@@ -54,7 +59,7 @@ def cast(value):
 
 
 def get_bulk(target, oids, credentials, count, start_from=0, port=161,
-             engine=hlapi.SnmpEngine(), context=hlapi.ContextData()):
+             engine=SnmpEngine(), context=ContextData()):
     credentials = hlapi.CommunityData(credentials)
     handler = hlapi.bulkCmd(
         engine,
@@ -64,17 +69,20 @@ def get_bulk(target, oids, credentials, count, start_from=0, port=161,
         start_from, count,
         *construct_object_types(oids)
     )
+    transportDispatcher = AsyncoreDispatcher()
+    engine.registerTransportDispatcher(transportDispatcher, "a")
+    engine.transportDispatcher.runDispatcher()
     return fetch(handler, count)
 
 
 def get_bulk_auto(target, oids, credentials, count_oid, start_from=0, port=161,
-                  engine=hlapi.SnmpEngine(), context=hlapi.ContextData()):
+                  engine=SnmpEngine(), context=ContextData()):
     count = get(target, [count_oid], credentials, port, engine, context)[count_oid]
     return get_bulk(target, oids, credentials, count, start_from, port, engine, context)
 
 
 def get_bulk_real_auto(target, oid, credentials, window_size=500, start_from=0, port=161,
-                       engine=hlapi.SnmpEngine(), context=hlapi.ContextData()):
+                       engine=SnmpEngine(), context=ContextData()):
     count = get_oid_size(target=target, oid=oid, credentials=credentials, window_size=window_size)
     return get_bulk(target, [oid], credentials, count, start_from, port, engine, context)
 
@@ -87,6 +95,7 @@ def get_oid_size(target, oid, credentials, window_size=500):
         data = get_bulk(target=target, oids=[oid], credentials=credentials, count=window_size)
         data_filtered = [registro for registro in data if oid in registro[0]]
     return len(data_filtered)
+
 
 def tdm(start, end):
     '''

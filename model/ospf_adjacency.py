@@ -11,11 +11,12 @@ class ospf_adjacency:
             "CENTURY": "#FF1493",
             "TELXIUS": "#8B4513",
             "LANAUTILUS": "#BC8F8F",
-            "DEF": "#00BFFF"
+            "DEF": "#00BFFF", "DOWN": "00000"
 
             }
 
-    def __init__(self, network_id, ospf_database, neighbors, network_type='p2p'):
+    def __init__(self, network_id, ospf_database, neighbors, network_type='p2p', state='up'):
+        self.state = 'state'
         self.verbose.debug("net " + network_id + " start init ")
         self.network_id = network_id
         self.network_type = network_type
@@ -145,8 +146,8 @@ class ospf_adjacency:
             self.dev.warning(f' error vs no ip target {e}')
             self.vs['ip_to'] = "NA"
 
+        self.vs['color'] = {'color': self.color}
         try:
-            self.vs['color'] = {'color': self.color}
             self.vs['width'] = 2
             self.vs['interface_type'] = self.color
             self.vs['winterface_type'] = 3
@@ -179,7 +180,9 @@ class ospf_adjacency:
 
     @property
     def color(self):
-        return ospf_adjacency.__l1.get(self.l1, ospf_adjacency.__l1["DEF"])
+
+        return ospf_adjacency.__l1.get(self.l1, ospf_adjacency.__l1["DEF"]) if self.state == 'up' else \
+        ospf_adjacency.__l1["DOWN"]
 
     def get_vs(self):
         return self.vs

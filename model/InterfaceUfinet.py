@@ -13,6 +13,7 @@ from pprint import pprint
 import time
 from colour import Color
 
+
 @logged
 class InterfaceUfinet(InterfaceIOS):
     '''
@@ -206,12 +207,10 @@ class InterfaceUfinet(InterfaceIOS):
                                     interface.l1_protocol == data_sql['l1_protocol'] and \
                                     interface.l1_protocol_attr == data_sql['l1_protocol_attr'] and \
                                     interface.data_flow == data_sql['data_flow']:
-
                                 interface.uid = data_sql['uid']
                     return 1
             except Exception as e:
-                print(e)
-                device.db_log.warning(f'sql not able to get data {repr(e)}')
+                device.db_log.warning(f'interfaces_uid sql not able to get data {repr(e)}')
                 return 0
         else:
             return 0
@@ -424,7 +423,7 @@ class InterfaceUfinet(InterfaceIOS):
                                             oid='1.3.6.1.2.1.31.1.1.1.18')
 
         except Exception as e:
-            device.logger_connection.critical(
+            device.dev.critical(
                 f' bulk_snmp_data_interfaces error polling {device.ip} {device.community} 1.3.6.1.2.1.31.1.1.1.18 {e}')
             count_interfaces = 0
 
@@ -438,7 +437,7 @@ class InterfaceUfinet(InterfaceIOS):
                     value = register[1] * 1_000_000 if attr == 'bw' else register[1]
                     interface_data.setdefault(snmp_ip, {})[attr] = value
             except Exception as e:
-                device.logger_connection.critical(
+                device.dev.critical(
                     f' bulk_snmp_data_interfaces error polling {device.ip} {device.community} {oid} {e}')
                 count_interfaces = 0
         try:
@@ -489,8 +488,10 @@ class InterfaceUfinet(InterfaceIOS):
 
         color = colors[int(max(self.util_in, self.util_out))].hex
         width = width_array[(int(max(self.util_in, self.util_out) / 10))]
-
-        return color, width
+        if self.link_state == "up":
+            return color, width
+        else:
+            return Color("Black"), 2
 
 
 def calculate_delta(old_counter, new_counter, timelapse):
@@ -513,4 +514,3 @@ def filter_summary(sql_dataframe, columns, sort_column={}, filter_keys={}):
 
         results[key] = results[key][columns].to_dict(orient='records')
     return results
-

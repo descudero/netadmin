@@ -84,12 +84,12 @@ class InterfaceIOS(object):
             util_in = round(float(self.input_rate) / self.bw * 100, 2)
         except TypeError as te:
             util_in = 0
-            self.dev.info('interface util no able to set until_in')
+            self.dev.info(f'{self.parent_device} {self.if_index} interface util no able to set until_in')
         try:
             util_out = round(float(self.output_rate) / self.bw * 100, 2)
         except TypeError as te:
             util_out = 0
-            self.dev.info('interface util no able to set until_out')
+            self.dev.info(f'{self.parent_device} {self.if_index} interface util no able to set until_out ')
         return util_in, util_out
 
     def get_interface_errors(self, filter="0"):

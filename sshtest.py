@@ -33,29 +33,12 @@ data =isp.ospf_topology_vs(**parameters)
 '''
 isp = ISP()
 isp.master = Master()
-device = CiscoIOS(ip='172.17.22.52', display_name='a', master=isp.master)
+device = CiscoIOS(ip='172.16.30.5', display_name='a', master=isp.master)
 
-dbd = ospf_database(ip_seed_router=device.ip, isp=isp, process_id='502', area='502008', network_name='RCE_GUATEMALA')
+dbd = ospf_database(ip_seed_router=device.ip, isp=isp, process_id='1', area='0')
 
-adjs = [adj
-        for p2p in dbd.p2p.values() for adj in p2p.adj_neighbors.values()]
+pprint(dbd.set_down_mpls_interfaces())
 
-dict_data = []
-dist_snmp = []
-for adj in adjs:
-    try:
-
-        dict_data.append({"interface": adj['interface'].if_index,
-                          "ip_dev": adj['router_id'], "description": adj['interface'].description,
-                          "command": f"interface {adj['interface'].if_index} "
-                          f"\n description L3:MPLOSP D:B L1:DP {adj['interface'].description}"})
-    except Exception as e:
-        dist_snmp.append(adj['router_id'])
-        pprint(f' {adj} {e}')
-
-dist_snmp = [{"ip": ip} for ip in dist_snmp]
-isp.save_to_excel_list(list_data=dict_data, file_name='interfaces guatemala')
-isp.save_to_excel_list(list_data=dist_snmp, file_name='no_snmp')
 # device.set_interfaces()
 # InterfaceUfinet.interfaces_uid(device,device.interfaces.values())
 

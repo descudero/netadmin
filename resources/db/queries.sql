@@ -144,3 +144,39 @@ from diagrams;
 select *
 from network_devices
 WHERE hostname LIKE '%SMA%';
+
+
+select *
+from interface_states
+where link_state = 'down'
+limit 10;
+
+
+SELECT i.uid      as uid,
+       i.if_index as if_index,
+       i.l3_protocol,
+       i.l3_protocol_attr,
+       i.l1_protocol,
+       i.l1_protocol_attr,
+       i.data_flow,
+       s.util_in  as util_in,
+       s.util_out as util_out,
+       s.link_state,
+       s.protocol_state,
+       s.output_rate,
+       s.input_rate,
+       s.state_timestamp,
+       i.ip
+
+from network_devices as d
+       inner join interfaces as i on d.uid = i.net_device_uid
+       inner join (select * from interface_states where DATE(state_timestamp) = DATE(NOW())) as s
+                  on s.interface_uid = i.uid
+       inner join (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid
+WHERE net_device_uid = 6
+  and state_timestamp >= '2019-05-14 00:00:00'
+  and state_timestamp <= '2019-05-14 23:59:00'
+
+select uid
+from network_devices
+where ip = '172.16.30.1';

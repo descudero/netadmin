@@ -1,0 +1,18 @@
+interface $LOCAL_INTERFACE_INDEX description L3:MPLOSP D:B L1:F0 $NEIGHBOR $NEIGHBOR_INTERFACE
+interface $LOCAL_INTERFACE_INDEX cdp
+interface $LOCAL_INTERFACE_INDEX mtu 9216
+interface $LOCAL_INTERFACE_INDEX service-policy input NNI-I
+interface $LOCAL_INTERFACE_INDEX service-policy output NNI-E
+interface $LOCAL_INTERFACE_INDEX ipv4 address $IP_ADDRESS 255.255.255.252
+interface $LOCAL_INTERFACE_INDEX carrier-delay up 2000 down 0
+interface $LOCAL_INTERFACE_INDEX load-interval 30
+interface $LOCAL_INTERFACE_INDEX dampening 1 750 2000 4
+router ospf MPLS area $AREA_ID interface $LOCAL_INTERFACE_INDEX
+router ospf MPLS area $AREA_ID interface $LOCAL_INTERFACE_INDEX bfd fast-detect
+router ospf MPLS area $AREA_ID interface $LOCAL_INTERFACE_INDEX network point-to-point
+router ospf MPLS area $AREA_ID interface $LOCAL_INTERFACE_INDEX passive disable
+rsvp interface $LOCAL_INTERFACE_INDEX
+rsvp interface $LOCAL_INTERFACE_INDEX bandwidth percentage 95
+mpls traffic-eng interface $LOCAL_INTERFACE_INDEX
+mpls traffic-eng interface $LOCAL_INTERFACE_INDEX bfd fast-detect
+mpls ldp interface $LOCAL_INTERFACE_INDEX

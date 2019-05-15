@@ -6,6 +6,7 @@ import threading  as th
 from tools import logged
 from multiprocessing import Process
 
+
 @logged
 class Devices:
 
@@ -34,6 +35,8 @@ class Devices:
     def factory_device(master, ip):
         return list(Devices(master=master, ip_list=[ip]).devices.values())[0]
 
+    def __len__(self):
+        return len(self.devices)
 
     def __getitem__(self, item):
         return self.devices.__getitem__(item)
@@ -68,113 +71,89 @@ class Devices:
             device.community = community
         self.devices = new_devices
 
+    def run_methods(self, methods, kwargs={}):
+
+        for method in methods:
+
+            for count, device in enumerate(self):
+                self.dev.info("dev {0} execute method {1}".format(device, method))
+
+                try:
+                    getattr(device, method)()
+
+                except Exception as e:
+                    self.errors.get(device.ip, []).append(repr(e))
+                    self.verbose.warning("dev {0} excute method {1} error {2}".format(device, method, repr(e)))
+
     def execute(self, methods, kwargs={}, thread_window=100):
         th.Thread()
         threads = []
         for method in methods:
 
-            for device in self:
-                self.dev.info("dev {0} excute method {1}".format(device, method))
-                self.verbose.info("dev {0} excute method {1}".format(device, method))
+            for count, device in enumerate(self):
+                self.dev.info("dev {0} execute method {1}".format(device, method))
+
                 try:
-                    print(kwargs.keys())
+
                     if len(threads) < thread_window:
                         method_instantiated = getattr(device, method)
-                        print(device.ip in kwargs)
+
                         if device.ip in kwargs:
                             try:
-                                print(kwargs[device.ip][method])
+
                                 t = th.Thread(target=method_instantiated, kwargs=kwargs[device.ip][method],
                                               name=f'{device.ip} {method} ')
                             except KeyError as e:
-                                print(e)
+                                self.dev.warning(f'execute threads error in Kwags {e} {kwargs} ')
                         else:
                             t = th.Thread(target=method_instantiated)
                         t.start()
                         threads.append(t)
+
                     else:
                         self.dev.info("excute_methods: Window join ")
-                        self.verbose.info("excute_methods: Window join ")
+                        self.verbose.info("Excute_methods: Window join ")
                         for t in threads:
                             t.join()
                         threads = []
-
+                        self.verbose.info(f"execute {method} devices done{count + 1} total {len(self)}")
                 except Exception as e:
                     self.errors.get(device.ip, []).append(repr(e))
                     self.verbose.warning("dev {0} excute method {1} error {2}".format(device, method, repr(e)))
         for t in threads:
             t.join()
 
-        def execute(self, methods, kwargs={}, thread_window=100):
-            th.Thread()
-            threads = []
-            for method in methods:
-
-                for device in self:
-                    self.dev.info("dev {0} excute method {1}".format(device, method))
-                    self.verbose.info("dev {0} excute method {1}".format(device, method))
-                    try:
-                        print(kwargs.keys())
-                        if len(threads) < thread_window:
-                            method_instantiated = getattr(device, method)
-                            print(device.ip in kwargs)
-                            if device.ip in kwargs:
-                                try:
-                                    print(kwargs[device.ip][method])
-                                    t = th.Thread(target=method_instantiated, kwargs=kwargs[device.ip][method],
-                                                  name=f'{device.ip} {method} ')
-                                except KeyError as e:
-                                    print(e)
-                            else:
-                                t = th.Thread(target=method_instantiated)
-                            t.start()
-                            threads.append(t)
-                        else:
-                            self.dev.info("excute_methods: Window join ")
-                            self.verbose.info("excute_methods: Window join ")
-                            for t in threads:
-                                t.join()
-                            threads = []
-
-                    except Exception as e:
-                        self.errors.get(device.ip, []).append(repr(e))
-                        self.verbose.warning("dev {0} excute method {1} error {2}".format(device, method, repr(e)))
-            for t in threads:
-                t.join()
-
     def execute_processes(self, methods, kwargs={}, thread_window=100):
 
         processes = []
         for method in methods:
 
-            for device in self:
+            for count, device in enumerate(self):
                 self.dev.info("dev {0} excute method {1}".format(device, method))
-                self.verbose.info("dev {0} excute method {1}".format(device, method))
+
                 try:
-                    print(kwargs.keys())
                     if len(processes) < thread_window:
                         method_instantiated = getattr(device, method)
-                        print(device.ip in kwargs)
                         if device.ip in kwargs:
                             try:
-                                print(kwargs[device.ip][method])
                                 p = Process(target=method_instantiated, kwargs=kwargs[device.ip][method])
                             except KeyError as e:
-                                print(e)
+                                self.dev.warning(f'execute_processes error in Kwags {e} {kwargs} ')
                         else:
                             p = th.Thread(target=method_instantiated)
                         p.start()
                         processes.append(p)
                     else:
-                        self.dev.info("excute_methods: Window join ")
-                        self.verbose.info("excute_methods: Window join ")
+                        self.dev.info("execute_processes: Window join ")
+                        self.verbose.info("execute_processes: Window join ")
+
                         for p in processes:
                             p.join()
                         processes = []
-
+                        self.verbose.info(f"execute_processes {method} devices  done{count + 1} total {len(self)}")
                 except Exception as e:
                     self.errors.get(device.ip, []).append(repr(e))
-                    self.verbose.warning("dev {0} excute method {1} error {2}".format(device, method, repr(e)))
+                    self.verbose.warning("dev {0}execute_processes {1} error {2}".format(device, method, repr(e)))
         for p in processes:
             p.join()
 
@@ -184,7 +163,6 @@ class Devices:
         with connection.cursor() as cursor:
             join_data = ",".join([f"'{uid}'" for uid in uids])
             sql = f'''SELECT * FROM    netadmin.network_devices WHERE   uid in ({join_data}) '''
-            print(sql)
             cursor.execute(sql)
             data_devices = cursor.fetchall()
             data_devices = {register["ip"]: register for register in data_devices}

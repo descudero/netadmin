@@ -350,10 +350,9 @@ class CiscoIOS(Parent):
 
             # print(self.service_instances.keys())
         if (not hasattr(self, 'pseudo_wire_class')):
-            print(self.ip + " pseudo wires class ")
             self.set_pseudo_wire_class()
         if (not hasattr(self, 'pseudowires')):
-            print(self.ip + " set_pseudorires ")
+
             self.set_pseudowires()
         try:
             pw_class = self.get_pw_class_by_tunnel_id(tunnel_id=tunnel_id)
@@ -385,8 +384,7 @@ class CiscoIOS(Parent):
                 arp_info["interface"] = splitline[5]
                 list_arp_entries[arp_info["ip"]] = arp_info
             except Exception:
-                # print(line)
-                # print(splitline)
+
                 pass
         self.arp_list = list_arp_entries
         return self.arp_list
@@ -732,7 +730,7 @@ class CiscoIOS(Parent):
                     se envia el output al equipo
         """
         self.set_static_route()
-        # print(self.static_routes)
+
         output = ""
         connection = self.connect()
 
@@ -1199,10 +1197,10 @@ class CiscoIOS(Parent):
                 self.community = community
                 self.set_snmp_hostname()
                 if self.hostname != "no_snmp":
-                    self.logger_connection.info("{0} snmp community set".format(self.ip))
+                    self.logger_connection.info("set_snmp_community {0} snmp community set".format(self.ip))
                     break
             else:
-                self.logger_connection.info("{0} unable to set snmp community".format(self.ip))
+                self.logger_connection.info("set_snmp_community {0} unable to set snmp community".format(self.ip))
 
     def set_snmp_hostname(self, community=""):
         oid = "1.3.6.1.2.1.1.5.0"
@@ -1280,7 +1278,7 @@ class CiscoIOS(Parent):
         except:
             self.x = "0"
             self.y = "0"
-            print(self.ip, self.snmp_location, " unable to split location ")
+
 
     def get_physical_interfaces(self):
         if self.interfaces is None:
@@ -1312,9 +1310,9 @@ class CiscoIOS(Parent):
         return parts
 
     def set_chassis(self, from_db=False):
-        print("set _chassis")
+
         if from_db:
-            print("set _chassis db")
+
             self.verbose.warning("set_chassis:DB")
             CiscoPart.chassis_from_db(self)
         else:
@@ -1521,7 +1519,7 @@ class CiscoIOS(Parent):
                     data = cursor.fetchall()
                     return data
             except Exception as e:
-                print('error')
+
                 self.db_log(f'dict_from_sql error {self.ip} {e}')
                 pass
 
@@ -1607,15 +1605,15 @@ class CiscoIOS(Parent):
         for address_family, neighbors in self.bgp_snmp_neighbors.items():
             BGPNeighbor.save_bulk_states(device=self, neighbors=neighbors.values())
 
-    def set_interfaces_snmp(self, connection=True):
+    def set_interfaces_snmp(self, connection=False):
         self.verbose.critical(f'set_interfaces_snmp {self.ip}')
         interfaces_data = InterfaceUfinet.bulk_snmp_data_interfaces(device=self)
         self.interfaces = InterfaceUfinet.factory_from_dict(device=self, interfaces_data=interfaces_data.values())
 
-        if len(self.interfaces) == 0 and connection:
+        if len(self.interfaces) == 0:
             if not connection:
                 self.dev.critical(
-                    f'set_interfaces_snmp Unable to set Interfaces snmp {len(self.interfaces)} {self.ip} not conected')
+                    f'set_interfaces_snmp Unable to set Interfaces snmp {len(self.interfaces)} {self.ip} not connected')
             else:
                 self.set_interfaces()
                 self.dev.warning(
@@ -1645,4 +1643,3 @@ class CiscoIOS(Parent):
             sql = f'''SELECT * FROM    netadmin.network_devices WHERE   uid ={uid} '''
             cursor.execute(sql)
             data = cursor.fetchone()
-            print(data)
