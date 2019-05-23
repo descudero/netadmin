@@ -180,7 +180,7 @@ class ospf_adjacency:
 
     @property
     def color(self):
-
+        print(self.state)
         self.verbose(f' {self.network_id} state {self.state} ')
         color = ospf_adjacency.__l1.get(self.l1, ospf_adjacency.__l1["DEF"]) if self.state == 'up' else \
             ospf_adjacency.__l1["DOWN"]
@@ -212,9 +212,9 @@ class ospf_adjacency:
 
     @staticmethod
     def add_ospf_adjacency(list_networks, network_id, ospf_database, neighbors,
-                       network_type):
+                           network_type, state):
         try:
             list_networks.append(ospf_adjacency(network_id=network_id, ospf_database=ospf_database, neighbors=neighbors,
-                                        network_type=network_type))
+                                                network_type=network_type, state=state))
         except Exception as e:
             ospf_database.dev.warning(f'adding adjacency {network_id} error {e}')

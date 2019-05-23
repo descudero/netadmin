@@ -7954,3 +7954,5 @@ state_timestamp) VALUES ('up','up','289770328','453895504','2.9','4.54','417','0
 2019-05-23 10:04:11,510:WARNING:db.CiscoIOS:SAVE 172.16.30.233 (1062, "Duplicate entry 'STGO-ASR920-CENTURY' for key 'hostname'")
 2019-05-23 15:51:13,530:WARNING:db.CiscoIOS:SAVE 172.16.30.233 (1062, "Duplicate entry 'STGO-ASR920-CENTURY' for key 'hostname'")
 2019-05-23 15:51:53,550:WARNING:db.CiscoIOS:SAVE 172.16.30.233 (1062, "Duplicate entry 'STGO-ASR920-CENTURY' for key 'hostname'")
+2019-05-23 15:56:00,708:WARNING:db.CiscoIOS:SAVE 172.16.30.233 (1062, "Duplicate entry 'STGO-ASR920-CENTURY' for key 'hostname'")
+2019-05-23 16:05:31,156:WARNING:db.CiscoIOS:SAVE 172.16.30.233 (1062, "Duplicate entry 'no_snmp' for key 'hostname'")
