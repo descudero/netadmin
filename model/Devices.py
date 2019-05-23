@@ -5,7 +5,7 @@ from multiping import multi_ping
 import threading  as th
 from tools import logged
 from multiprocessing import Process
-
+import time
 
 @logged
 class Devices:
@@ -85,9 +85,10 @@ class Devices:
                     self.errors.get(device.ip, []).append(repr(e))
                     self.verbose.warning("dev {0} excute method {1} error {2}".format(device, method, repr(e)))
 
-    def execute(self, methods, kwargs={}, thread_window=100):
+    def execute(self, methods, kwargs={}, thread_window=100, deferred=False, deferred_seconds=5, deferred_group=5):
         th.Thread()
         threads = []
+        deferred_count = 0
         for method in methods:
 
             for count, device in enumerate(self):
@@ -95,7 +96,7 @@ class Devices:
 
                 try:
 
-                    if len(threads) < thread_window:
+                    if len(threads) < thread_window or deferred:
                         method_instantiated = getattr(device, method)
 
                         if device.ip in kwargs:
@@ -109,13 +110,16 @@ class Devices:
                             t = th.Thread(target=method_instantiated)
                         t.start()
                         threads.append(t)
-
+                        if deferred:
+                            deferred_count += 1
+                            if deferred_group == deferred_count:
+                                time.sleep(deferred_seconds)
+                                deferred_count = 0
                     else:
-                        self.dev.info("excute_methods: Window join ")
-                        self.verbose.info("Excute_methods: Window join ")
                         for t in threads:
                             t.join()
                         threads = []
+
                         self.verbose.info(f"execute {method} devices done{count + 1} total {len(self)}")
                 except Exception as e:
                     self.errors.get(device.ip, []).append(repr(e))

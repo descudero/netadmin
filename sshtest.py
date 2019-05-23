@@ -11,6 +11,8 @@ import time
 from model.InterfaceUfinet import InterfaceUfinet
 from model.Devices import Devices
 from model.ospf_database import ospf_database
+from tools import real_get_bulk
+import pysnmp
 
 '''if_index,
                 description,
@@ -31,14 +33,15 @@ parameters= {
     }
 data =isp.ospf_topology_vs(**parameters)
 '''
+'''
 isp = ISP()
 isp.master = Master()
 device = CiscoIOS(ip='172.16.30.5', display_name='a', master=isp.master)
 
 dbd = ospf_database(ip_seed_router=device.ip, isp=isp, process_id='1', area='0')
 
-pprint(dbd.set_down_mpls_interfaces())
-
+pprint(dbd.ospf_down_interfaces())
+'''
 # device.set_interfaces()
 # InterfaceUfinet.interfaces_uid(device,device.interfaces.values())
 
@@ -73,3 +76,42 @@ pprint(interfaces)
 # pprint( get_bulk_real_auto(target=host, oid='1.3.6.1.2.1.4.20.1.2', credentials=community))
 # device = CiscoXR(ip=host, display_name='a', master=isp.master)
 # device.set_snmp_bgp_neighbors(special_community="INTERNET_UFINET",address_family=['ipv4','ipv6'])
+
+import asyncio
+from pysnmp.hlapi import *
+import time
+
+import threading
+
+oid = "1.3.6.1.2.1.2.2.1.2"
+community = 'uFi08NeT'
+ip1 = '172.16.30.250'
+data_bind1 = []
+data = [{"ip": '172.17.22.28', "community": 'uFi08NeT', 'oid': "1.3.6.1.2.1.31.1.1.1.18", 'data_bind': []},
+        {"ip": '172.16.30.250', "community": 'uFi08NeT', 'oid': "1.3.6.1.2.1.31.1.1.1.18", 'data_bind': []},
+        ]
+ips = [ip.replace("\n", '') for ip in open('bgp_pe_list', "r")]
+
+dev = Devices(master=Master(), ip_list=ips)
+dev.execute(methods=['set_interfaces_snmp'], deferred_seconds=5, deferred=True)
+
+for device in dev:
+    print(f' {device.ip} {len(device.interfaces)}')
+
+threads = []
+# data =[{"ip":ip.replace("\n",''),"community":'uFi08NeT','oid':"1.3.6.1.2.1.31.1.1.1.18",'data_bind':[]} for ip in open('bgp_pe_list',"r")]
+# real_get_bulk(**data[0])
+
+'''
+for kwargs in data:
+    print(f"{kwargs['ip']}")
+    for line in kwargs['data_bind']:
+        print(line)
+for kwargs in data:
+   t=threading.Thread(target=real_get_bulk, kwargs=kwargs)
+   t.start()
+   threads.append(t)
+
+for t in threads:
+    t.join()
+'''

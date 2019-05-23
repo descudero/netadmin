@@ -7,8 +7,6 @@ master = ma()
 
 isp.master = master
 
-device = Devices.factory_device(master=master, ip='172.17.22.28')
-
+device = Devices.factory_device(master=master, ip='172.16.30.250')
+device.set_snmp_community()
 device.set_interfaces_snmp()
-
-print(device.interfaces)

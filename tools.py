@@ -2,8 +2,8 @@ from datetime import datetime
 from collections import OrderedDict
 import logging
 from pysnmp import hlapi
-from pysnmp.hlapi.asyncore import *
-from pysnmp.carrier.asyncore.dispatch import AsyncoreDispatcher
+from pysnmp.hlapi import *
+import time
 
 
 def get(target, oids, credentials, port=161, engine=SnmpEngine(), context=ContextData()):
@@ -14,9 +14,7 @@ def get(target, oids, credentials, port=161, engine=SnmpEngine(), context=Contex
         context,
         *construct_object_types(oids)
     )
-    transportDispatcher = AsyncoreDispatcher()
-    engine.registerTransportDispatcher(transportDispatcher, "a")
-    engine.transportDispatcher.runDispatcher()
+
     return fetch(handler, 1)[0]
 
 
@@ -69,9 +67,7 @@ def get_bulk(target, oids, credentials, count, start_from=0, port=161,
         start_from, count,
         *construct_object_types(oids)
     )
-    transportDispatcher = AsyncoreDispatcher()
-    engine.registerTransportDispatcher(transportDispatcher, "a")
-    engine.transportDispatcher.runDispatcher()
+
     return fetch(handler, count)
 
 
@@ -95,6 +91,48 @@ def get_oid_size(target, oid, credentials, window_size=500):
         data = get_bulk(target=target, oids=[oid], credentials=credentials, count=window_size)
         data_filtered = [registro for registro in data if oid in registro[0]]
     return len(data_filtered)
+
+
+def real_get_bulk(oid, community, ip, data_bind, id_ip=False):
+    g = bulkCmd(SnmpEngine(),
+                CommunityData(community),
+                UdpTransportTarget((ip, 161)),
+                ContextData(),
+                0, 25,
+                ObjectType(ObjectIdentity(oid)))
+
+    break_flag = True
+    contador = 0
+    while break_flag:
+        contador += 1
+
+        try:
+            error_indication, error_status, error_index, var_binds = next(g)
+
+            timestamp = time.time()
+            if error_indication or error_status:
+                break_flag = False
+            else:
+                for var_bind in var_binds:
+                    try:
+
+                        oid_flat = str(var_bind[0]).replace(f'{oid}.', '')
+                        items = {"id": oid_flat, "value": cast(var_bind[1]), "timestamp": timestamp}
+
+                        if "." in oid_flat and not id_ip or (id_ip and oid_flat.count(".") > 3):
+                            break_flag = False
+
+                        else:
+                            data_bind.append(items)
+                        # pprint(items)
+                    except Exception as e:
+                        print(f'break error exeption local  {oid}')
+                        pass
+
+        except Exception as e:
+            break_flag = False
+
+    return data_bind
 
 
 def tdm(start, end):

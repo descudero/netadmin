@@ -8,7 +8,7 @@ from tools import logged
 import pandas as pd
 import pymysql.cursors
 import pymysql
-from tools import get_bulk_real_auto, get_oid_size, get_bulk
+from tools import get_bulk_real_auto, get_oid_size, get_bulk, real_get_bulk
 from pprint import pprint
 import time
 from colour import Color
@@ -418,62 +418,59 @@ class InterfaceUfinet(InterfaceIOS):
     @staticmethod
     def bulk_snmp_data_interfaces(device) -> dict:
         interface_data = {}
-        try:
-            count_interfaces = get_oid_size(target=device.ip, credentials=device.community,
-                                            oid='1.3.6.1.2.1.31.1.1.1.18')
-
-        except Exception as e:
-            device.dev.critical(
-                f' bulk_snmp_data_interfaces error polling {device.ip} {device.community} 1.3.6.1.2.1.31.1.1.1.18 {e}')
-            count_interfaces = 0
 
         for attr, oid in InterfaceUfinet._OID.items():
             try:
-                oid_data = get_bulk(target=device.ip, credentials=device.community, oids=[oid], count=count_interfaces)
+                oid_data = []
+                real_get_bulk(oid=oid, ip=device.ip, community=device.community, data_bind=oid_data)
+
                 # if attr == 'bw':
                 #    print(oid_data)
                 for register in oid_data:
-                    snmp_ip = register[0].replace(oid + ".", "")
-                    value = register[1] * 1_000_000 if attr == 'bw' else register[1]
+                    snmp_ip = register['id']
+                    value = register['value'] * 1_000_000 if attr == 'bw' else register['value']
                     interface_data.setdefault(snmp_ip, {})[attr] = value
             except Exception as e:
                 device.dev.critical(
                     f' bulk_snmp_data_interfaces error polling {device.ip} {device.community} {oid} {e}')
-                count_interfaces = 0
         try:
-            oid_data = get_bulk_real_auto(target=device.ip, credentials=device.community, oid=InterfaceUfinet._OID_IP,
-                                          window_size=500)
+            oid_data = []
+            real_get_bulk(oid=InterfaceUfinet._OID_IP, ip=device.ip, community=device.community, data_bind=oid_data,
+                          id_ip=True)
 
             for register in oid_data:
-                snmp_ip = str(register[1])
-                ip = register[0].replace(InterfaceUfinet._OID_IP + ".", "")
-                interface_data.setdefault(snmp_ip, {})['ip'] = ip
+                id = str(register['value'])
+                ip = str(register['id'])
+                interface_data.setdefault(id, {})['ip'] = ip
         except Exception as e:
             device.logger_connection.critical(
                 f' bulk_snmp_data_interfaces error polling {device.ip} {device.community} {InterfaceUfinet._OID_IP} {e}')
-            count_interfaces = 0
+
         for attr, oid in InterfaceUfinet._OID_RATES.items():
             try:
-                oid_data = InterfaceUfinet.delta_oid(device=device, count=count_interfaces, oid=oid)
+                oid_data = InterfaceUfinet.delta_oid(device=device, oid=oid)
                 for register in oid_data:
-                    snmp_ip = register[0].replace(oid + ".", "")
-                    interface_data.setdefault(snmp_ip, {})[attr] = register[1]
+                    id = register['id']
+                    interface_data.setdefault(id, {})[attr] = register['value']
             except Exception as e:
                 device.logger_connection.critical(
                     f' bulk_snmp_data_interfaces error polling {device.ip} {device.community} {oid} {e}')
-
         return interface_data
 
     @staticmethod
-    def delta_oid(device, count, oid, multiplier=8, sleep_time=20):
-        time1 = time.time()
-        data_before = get_bulk(target=device.ip, credentials=device.community, oids=[oid], count=count)
+    def delta_oid(device, oid, multiplier=8, sleep_time=30):
+        prev_oid_data = []
+        real_get_bulk(oid=oid, ip=device.ip, community=device.community, data_bind=prev_oid_data)
         time.sleep(sleep_time)
-        time_lapse = time.time() - time1
-        data_after = get_bulk(target=device.ip, credentials=device.community, oids=[oid], count=count)
-        final_data = [[register[0], int(calculate_delta(new_counter=register[1],
-                                                        old_counter=data_before[index][1],
-                                                        timelapse=time_lapse)) * multiplier]
+
+        data_after = []
+        real_get_bulk(oid=oid, ip=device.ip, community=device.community, data_bind=data_after)
+
+        final_data = [{'id': register['id'], 'value': (int(calculate_delta(new_counter=register['value'],
+                                                                           old_counter=prev_oid_data[index]['value'],
+                                                                           timelapse=register['timestamp'] -
+                                                                                     prev_oid_data[index]['timestamp']))
+                                                       * multiplier)}
                       for index, register in enumerate(data_after)]
         return final_data
 
