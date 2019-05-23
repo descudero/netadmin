@@ -212,7 +212,7 @@ class ospf_adjacency:
 
     @staticmethod
     def add_ospf_adjacency(list_networks, network_id, ospf_database, neighbors,
-                           network_type, state):
+                           network_type, state='up'):
         try:
             list_networks.append(ospf_adjacency(network_id=network_id, ospf_database=ospf_database, neighbors=neighbors,
                                                 network_type=network_type, state=state))
