@@ -22,7 +22,6 @@ from model.InterfaceUfinet import InterfaceUfinet
 from model.BGPNeigbor import BGPNeighbor
 from operator import itemgetter
 from model.Diagram import Diagram
-from flask_httpauth import HTTPBasicAuth
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "autenticacion basica"
 app.config['MYSQL_HOST'] = '10.250.55.17'

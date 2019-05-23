@@ -16,7 +16,7 @@ class ospf_adjacency:
             }
 
     def __init__(self, network_id, ospf_database, neighbors, network_type='p2p', state='up'):
-        self.state = 'state'
+        self.state = state
         self.verbose.debug("net " + network_id + " start init ")
         self.network_id = network_id
         self.network_type = network_type
@@ -181,8 +181,10 @@ class ospf_adjacency:
     @property
     def color(self):
 
-        return ospf_adjacency.__l1.get(self.l1, ospf_adjacency.__l1["DEF"]) if self.state == 'up' else \
-        ospf_adjacency.__l1["DOWN"]
+        self.verbose(f' {self.network_id} state {self.state} ')
+        color = ospf_adjacency.__l1.get(self.l1, ospf_adjacency.__l1["DEF"]) if self.state == 'up' else \
+            ospf_adjacency.__l1["DOWN"]
+        return color
 
     def get_vs(self):
         return self.vs
