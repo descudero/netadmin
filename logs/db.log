@@ -7949,3 +7949,6 @@ state_timestamp) VALUES ('up','up','289770328','453895504','2.9','4.54','417','0
 2019-05-16 16:33:59,280:WARNING:db.CiscoIOS:172.19.8.7 (1040, 'Too many connections')
 2019-05-16 16:33:59,280:WARNING:db.CiscoIOS:172.19.8.80 (1040, 'Too many connections')
 2019-05-23 09:57:44,015:WARNING:db.CiscoIOS:SAVE 172.16.30.233 (1062, "Duplicate entry 'STGO-ASR920-CENTURY' for key 'hostname'")
+2019-05-23 10:03:38,763:WARNING:db.CiscoIOS:SAVE 172.16.30.233 (1062, "Duplicate entry 'STGO-ASR920-CENTURY' for key 'hostname'")
+2019-05-23 10:04:07,202:WARNING:db.CiscoIOS:172.16.30.14 Packet sequence number wrong - got 194 expected 2
+2019-05-23 10:04:11,510:WARNING:db.CiscoIOS:SAVE 172.16.30.233 (1062, "Duplicate entry 'STGO-ASR920-CENTURY' for key 'hostname'")

@@ -610,12 +610,12 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.filtered_interfaces" />
-      <item itemvalue="Python.path_test" />
-      <item itemvalue="Python.save_bgp_peer_state_snmp" />
+      <item itemvalue="Python.sshtest" />
       <item itemvalue="Python.save_interfaces_db" />
       <item itemvalue="Python.script_template_test" />
-      <item itemvalue="Python.sshtest" />
+      <item itemvalue="Python.path_test" />
+      <item itemvalue="Python.filtered_interfaces" />
+      <item itemvalue="Python.save_bgp_peer_state_snmp" />
     </list>
     <recent_temporary>
       <list>

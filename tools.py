@@ -87,7 +87,7 @@ def get_oid_size(target, oid, credentials, window_size=500):
     data = []
     data_filtered = []
     while len(data) == len(data_filtered):
-        window_size += 100
+        window_size = 100
         data = get_bulk(target=target, oids=[oid], credentials=credentials, count=window_size)
         data_filtered = [registro for registro in data if oid in registro[0]]
     return len(data_filtered)
