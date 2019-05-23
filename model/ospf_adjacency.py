@@ -180,10 +180,10 @@ class ospf_adjacency:
 
     @property
     def color(self):
-        print(self.state)
-        self.verbose(f' {self.network_id} state {self.state} ')
+
         color = ospf_adjacency.__l1.get(self.l1, ospf_adjacency.__l1["DEF"]) if self.state == 'up' else \
             ospf_adjacency.__l1["DOWN"]
+        self.verbose.warning(f' {self.network_id} state {self.state} {color}')
         return color
 
     def get_vs(self):

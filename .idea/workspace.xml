@@ -11,10 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="462384ac-2f64-47a0-b6d2-b16ff1b36497" name="Default" comment="ultimo commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/connections.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/connections.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/db.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/db.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/performance.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/performance.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/ospf_adjacency.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/ospf_adjacency.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -78,10 +74,10 @@
                 </provider>
               </entry>
             </file>
-            <file pinned="false" current-in-tab="true">
+            <file pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/model/ospf_database.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="966">
+                  <state relative-caret-position="218">
                     <caret line="55" column="63" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="63" />
                   </state>
                 </provider>
@@ -117,11 +113,11 @@
                 </provider>
               </entry>
             </file>
-            <file pinned="false" current-in-tab="false">
+            <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/model/ospf_adjacency.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="1420">
-                    <caret line="217" column="77" selection-start-line="217" selection-start-column="77" selection-end-line="217" selection-end-column="77" />
+                  <state relative-caret-position="291">
+                    <caret line="185" column="75" selection-start-line="185" selection-start-column="75" selection-end-line="185" selection-end-column="75" />
                   </state>
                 </provider>
               </entry>
@@ -195,7 +191,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/Master.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
+            <state relative-caret-position="220">
               <caret line="81" column="38" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="38" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -259,7 +255,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>save(</find>
       <find>parent_</find>
       <find>def save(</find>
       <find>filter</find>
@@ -289,6 +284,7 @@
       <find>def c</find>
       <find>ospf</find>
       <find>add_ospf_adjacency</find>
+      <find>def colo</find>
     </findStrings>
     <replaceStrings>
       <replace>type</replace>
@@ -664,21 +660,7 @@
       <workItem from="1557188475265" duration="25099000" />
       <workItem from="1558384966392" duration="1196000" />
       <workItem from="1558554993042" duration="441000" />
-      <workItem from="1558626822387" duration="7550000" />
-    </task>
-    <task id="LOCAL-00049" summary="first3">
-      <created>1549060198083</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1549060198083</updated>
-    </task>
-    <task id="LOCAL-00050" summary="first3">
-      <created>1550507505838</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1550507505839</updated>
+      <workItem from="1558626822387" duration="8340000" />
     </task>
     <task id="LOCAL-00051" summary="first3">
       <created>1550511549846</created>
@@ -1009,7 +991,21 @@
       <option name="project" value="LOCAL" />
       <updated>1558649080787</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="ultimo commit">
+      <created>1558650468083</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1558650468083</updated>
+    </task>
+    <task id="LOCAL-00099" summary="ultimo commit">
+      <created>1558650846446</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1558650846446</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1045,7 +1041,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="506896000" />
+    <option name="totallyTimeSpent" value="507686000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1579,9 +1575,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/model/ospf_database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="55" column="63" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/Master.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
+        <state relative-caret-position="220">
           <caret line="81" column="38" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="38" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
@@ -1591,15 +1594,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/ospf_adjacency.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1420">
-          <caret line="217" column="77" selection-start-line="217" selection-start-column="77" selection-end-line="217" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/ospf_database.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="55" column="63" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="63" />
+        <state relative-caret-position="291">
+          <caret line="185" column="75" selection-start-line="185" selection-start-column="75" selection-end-line="185" selection-end-column="75" />
         </state>
       </provider>
     </entry>
