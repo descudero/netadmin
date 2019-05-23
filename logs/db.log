@@ -7948,3 +7948,4 @@ state_timestamp) VALUES ('up','up','289770328','453895504','2.9','4.54','417','0
 2019-05-16 16:33:59,280:WARNING:db.CiscoIOS:172.17.31.9 (1040, 'Too many connections')
 2019-05-16 16:33:59,280:WARNING:db.CiscoIOS:172.19.8.7 (1040, 'Too many connections')
 2019-05-16 16:33:59,280:WARNING:db.CiscoIOS:172.19.8.80 (1040, 'Too many connections')
+2019-05-23 09:57:44,015:WARNING:db.CiscoIOS:SAVE 172.16.30.233 (1062, "Duplicate entry 'STGO-ASR920-CENTURY' for key 'hostname'")

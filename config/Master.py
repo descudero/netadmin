@@ -15,7 +15,7 @@ import yaml
 
 @logged
 class Master:
-
+    __master_encoder = "ufinet 2019"
     def __init__(self, AdebugLevel=0, password="", username="", logg_name="master",
                  config_file="config/config_connection.yml", config_log_file="config/config_log.yml"):
 
@@ -99,7 +99,7 @@ class Master:
                         msg=" usr " + self.username + " class " + str(type(originator).__name__) + " " + str(message))
 
     @staticmethod
-    def encode(key, hash):
+    def encode(key, hash="ufinet_2019"):
         enc = []
         for i in range(len(hash)):
             key_c = key[i % len(key)]
@@ -108,7 +108,7 @@ class Master:
         return base64.urlsafe_b64encode("".join(enc).encode()).decode()
 
     @staticmethod
-    def decode(key, hash):
+    def decode(key, hash="ufinet_2019"):
         dec = []
         hash = base64.urlsafe_b64decode(hash).decode()
         for i in range(len(hash)):

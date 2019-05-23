@@ -180,3 +180,17 @@ WHERE net_device_uid = 6
 select uid
 from network_devices
 where ip = '172.16.30.1';
+
+drop table users;
+create table users
+(
+  uid      int auto_increment primary key,
+  username    varchar(50),
+  hash varchar(70)
+
+);
+
+
+
+
+select * from interface_states ORDER  BY uid DESC limit 20;
