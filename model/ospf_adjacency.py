@@ -13,7 +13,7 @@ class ospf_adjacency:
             "CENTURY": "#FF1493",
             "TELXIUS": "#8B4513",
             "LANAUTILUS": "#BC8F8F",
-            "DEF": "#00BFFF", "DOWN": "#330066"
+            "DEF": "#00BFFF", "DOWN": "#333333"
 
             }
 
