@@ -26,7 +26,7 @@ class Devices:
             self.execute(methods=["check_able_connect"])
             self._not_connected_devices = {ip: device for ip, device in self.devices.items() if not device.able_connect}
             self.devices = {ip: device for ip, device in self.devices.items() if device.able_connect}
-            self.execute(methods=["set_snmp_community"])
+        self.execute(methods=["set_snmp_community"])
 
         if not platfforms:
             self.__correct_classes()
@@ -182,3 +182,11 @@ class Devices:
     @staticmethod
     def load_uid(master, uid=0):
         return list(Devices.load_uids(master=master, uids=[uid]))[0]
+
+    def set_attrs(self, data):
+        for device_ip, attrs in data.items():
+            for attr, value in attrs.items():
+                try:
+                    setattr(self.devices[device_ip], attr, value)
+                except:
+                    self.verbose.warning(f'error {attr} {device_ip}')

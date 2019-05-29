@@ -1,3 +1,145 @@
+select *
+from interface_states
+order by uid desc
+limit 10;
+
+select *
+from diagram_network_devices;
+
+select *
+from diagrams;
+select i.if_index,i.uid,s.link_state,s.protocol_state,i.l3_protocol,i.l3_protocol_attr, s.state_timestamp
+from network_devices as nd
+       inner join interfaces as i on i.net_device_uid = nd.uid
+       inner join
+     interface_states as s on i.uid = s.interface_uid
+where nd.ip = '172.16.30.244'
+  and i.l3_protocol_attr = 'OSP'
+order by s.uid desc
+limit 30;
+'network_id',
+'diagram_state_uid',
+'net_device_1_ip',
+'interface_1_uid',
+'interface_1_ip',
+'interface_1_weight',
+'interface_2_uid',
+'net_device_2_ip',
+'interface_2_ip',
+'interface_2_weight'
+
+select *
+from diagram_state_adjacencies;
+drop table diagram_state_adjacencies;
+create table diagram_state_adjacencies
+(
+  uid                int auto_increment primary key,
+  network_id         varchar(40),
+  diagram_state_uid  int,
+  net_device_1_ip    varchar(40),
+  interface_1_ip     varchar(40),
+  interface_1_weight int,
+  net_device_2_ip    varchar(40),
+  interface_2_ip     varchar(40),
+  interface_2_weight int,
+
+  foreign key (diagram_state_uid) references diagram_states (uid)
+);
+
+
+create table diagram_states
+(
+  uid             int auto_increment primary key,
+  diagram_uid     int,
+  state_timestamp datetime,
+  foreign key (diagram_uid) references diagrams (uid)
+
+);
+
+SELECT nd.ip,nd.hostname,ds.x,ds.y
+FROM netadmin.network_devices as nd
+       inner join
+     diagram_state_net_devices as ds ON nd.uid = ds.net_device_uid;
+
+
+SELECT uid,state_timestamp
+FROM diagram_states
+WHERE diagram_uid = 1
+ORDER BY uid DESC
+limit 1;
+
+INSERT INTO diagram_state_net_devices(diagram_state_uid, net_device_uid, x, y)
+values ('4', '644', '7836', '-540'),
+       ('4', '6', '1643', '34'),
+       ('4', '54', '7187', '198'),
+       ('4', '40', '6548', '3870'),
+       ('4', '46', '1914', '1634'),
+       ('4', '45', '4311', '923'),
+       ('4', '48', '6847', '-1143'),
+       ('4', '59', '3692', '4272'),
+       ('4', '2', '4024', '-685'),
+       ('4', '53', '5048', '4498'),
+       ('4', '7', '4229', '139'),
+       ('4', '648', '7836', '-540'),
+       ('4', '8', '3817', '1900'),
+       ('4', '70', '5217', '1802'),
+       ('4', '57', '6483', '198'),
+       ('4', '55', '6273', '2606'),
+       ('4', '44', '6548', '3870'),
+       ('4', '3', '1492', '2829'),
+       ('4', '67', '5073', '3034'),
+       ('4', '52', '0', '0'),
+       ('4', '606', '5467', '3919'),
+       ('4', '49', '5685', '5101'),
+       ('4', '41', '2655', '-1558'),
+       ('4', '42', '5467', '3919'),
+       ('4', '62', '6162', '4498'),
+       ('4', '1', '1877', '-685'),
+       ('4', '38', '5463', '2456'),
+       ('4', '68', '4513', '4683'),
+       ('4', '51', '7836', '-540'),
+       ('4', '12501', '6548', '3870'),
+       ('4', '39', '4442', '2652'),
+       ('4', '60', '0', '0'),
+       ('4', '56', '6175', '-485'),
+       ('4', '66', '0', '0'),
+       ('4', '69', '4984', '-142'),
+       ('4', '50', '8055', '-1143'),
+       ('4', '5', '3628', '3298'),
+       ('4', '58', '2335', '2402'),
+       ('4', '61', '3696', '-1558'),
+       ('4', '63', '4274', '1653'),
+       ('4', '580', '6548', '3870'),
+       ('4', '36', '7836', '-540'),
+       ('4', '65', '3597', '-1021'),
+       ('4', '37', '2699', '-1021'),
+       ('4', '25', '5217', '1802'),
+       ('4', '26', '7187', '2709'),
+       ('4', '4', '2560', '4015'),
+       ('4', '64', '0', '0')
+delete
+from network_devices
+where hostname = 'STGO-ASR920-CENTURY';
+drop table diagram_state_net_devices;
+create table diagram_state_net_devices
+(
+  uid               int auto_increment primary key,
+  diagram_state_uid int,
+  net_device_uid    int,
+  x                 float,
+  y                 float,
+  foreign key (diagram_state_uid) references diagram_states (uid),
+  foreign key (net_device_uid) references network_devices (uid)
+);
+
+select *
+from diagram_state_net_devices;
+
+INSERT INTO diagram_states(diagram_uid, state_timestamp)
+VALUES ('1', '2019-05-28 15:00:16');
+select *
+from diagram_states;
+
 set foreign_key_checks = 0;
 drop table network_devices;
 set foreign_key_checks = 1;
@@ -39,7 +181,10 @@ create table bgp_neighbors
   net_device_uid int,
   foreign key (net_device_uid) references network_devices (uid)
 );
-
+SELECT ds.diagram_state_uid,nd.ip,nd.hostname,ds.x,ds.y
+FROM network_devices as nd
+       inner join diagram_state_net_devices as ds ON nd.uid = ds.net_device_uid
+where ds.diagram_state_uid = 5;
 
 set foreign_key_checks = 0;
 drop table bgp_neighbor_states;

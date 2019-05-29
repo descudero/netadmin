@@ -90,7 +90,7 @@ class InterfaceIOS(object):
         except TypeError as te:
             util_out = 0
             self.dev.info(f'{self.parent_device} {self.if_index} interface util no able to set until_out ')
-        return util_in, util_out
+        return 100 if util_in > 100 else util_in, 100 if util_out > 100 else util_out
 
     def get_interface_errors(self, filter="0"):
         list_properties_erros = ["output_drops", "runts", "giants", "throttles", "input_errors", "crc"
@@ -143,12 +143,14 @@ class InterfaceIOS(object):
         return interface_string
 
     def __str__(self):
-        return str(id(self)) + str(
-            self.__class__) + self.if_index + " " + self.description + " " + str(self.link_state) + " "
+        s = f'{id(
+            self)}  {self.__class__} u:{self.uid} {self.if_index} L:{self.protocol_state} P:{self.link_state} {self.description}'
+        return s
 
     def __repr__(self):
-        return str(id(self)) + str(
-            self.__class__) + self.if_index + " " + self.description + " " + str(self.link_state) + " "
+        s = f'{id(
+            self)}  {self.__class__}  u:{self.uid} {self.if_index} L:{self.protocol_state} P:{self.link_state} {self.description}'
+        return s
 
     @property
     def dict(self):

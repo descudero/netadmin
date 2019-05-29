@@ -3,6 +3,8 @@ from colour import Color
 from tools import logged
 import os
 import shelve
+from pprint import pprint
+
 
 @logged
 class ospf_adjacency:
@@ -11,11 +13,19 @@ class ospf_adjacency:
             "CENTURY": "#FF1493",
             "TELXIUS": "#8B4513",
             "LANAUTILUS": "#BC8F8F",
-            "DEF": "#00BFFF", "DOWN": "00000"
+            "DEF": "#00BFFF", "DOWN": "#330066"
 
             }
 
+    __columns__ = ['network_id', 'diagram_state_uid', 'net_device_1_ip', 'interface_1_uid', 'interface_1_ip',
+                   'interface_1_weight',
+                   'interface_2_uid', 'net_device_2_ip', 'interface_2_ip', 'interface_2_weight']
+
+    __table__ = "diagram_state_adjacencies"
+
     def __init__(self, network_id, ospf_database, neighbors, network_type='p2p', state='up'):
+        self.uid = 0
+        self.diagram_state = None
         self.state = state
         self.verbose.debug("net " + network_id + " start init ")
         self.network_id = network_id
@@ -60,45 +70,9 @@ class ospf_adjacency:
         return str(self.__class__) + " NET " + self.network_id + " " + self.network_type + " N " + str(
             len(self.adj_neighbors))
 
-    def yed_edge(self):
-        green = Color("LawnGreen")
-        yellow = Color("Yellow")
-        red = Color("Red")
-        colors = list(green.range_to(yellow, 50)) + list(yellow.range_to(red, 51))
-        additional_labels = []
-        line_type = "line"
-        if "NAP" in self.adj_neighbors["s"]["network_device"].hostname or \
-                "NAP" in self.adj_neighbors["t"]["network_device"].hostname:
-            line_type = "dashed"
-        sd = self.adj_neighbors["s"]["network_device"]
-        td = self.adj_neighbors["t"]["network_device"]
-        tx, ty, sx, sy = td.x, sd.y, sd.x, sd.y
-
-        t_dir = td.get_xy_direction(sx, sy)
-        s_dir = sd.get_xy_direction(sx, sy)
-
-        etx, ety = td.get_next_edge_point(sx, sy)
-        esx, esy = sd.get_next_edge_point(tx, ty)
-        for key, neighbor in self.adj_neighbors.items():
-            input_rate, output_rate = neighbor["interface"].util()
-            color = colors[int(max(input_rate, output_rate))].hex
-            width = str(2 * int(max(input_rate, output_rate) / 10))
-            interface_rate_text = neighbor["interface"].if_index + "C:" + neighbor[
-                "metric"] + '\n' + str(output_rate) + "% "
-            additional_labels.append(
-                {"text": interface_rate_text, "color": "#000000", "position": key + "center", "size": '20'})
-
-        additional_labels.append({"text": self.network_id,
-                                  "color": "#000000", "position": "center", "size": '20'})
-
-        edge = pyyed.Edge(node1=self.adj_neighbors['s']["router_id"],
-                          node2=self.adj_neighbors['t']["router_id"],
-                          id=self.network_id, line_type=line_type,
-                          additional_labels=additional_labels, width=width,
-                          color=color, sy=esy, sx=esx, tx=etx, ty=ety
-                          )
-
-        return edge
+    @property
+    def master(self):
+        self.ospf_database.isp.master
 
     def edge_label(self, orient='source'):
         index = 0 if orient == 'source' else 1
@@ -183,7 +157,10 @@ class ospf_adjacency:
 
         color = ospf_adjacency.__l1.get(self.l1, ospf_adjacency.__l1["DEF"]) if self.state == 'up' else \
             ospf_adjacency.__l1["DOWN"]
-        self.verbose.warning(f' {self.network_id} state {self.state} {color}')
+
+        self.dev.debug(f' {self.network_id} state {self.state} {color}')
+        if self.state == 'down':
+            self.verbose.warning(f' {self.network_id} state {self.state} {color}')
         return color
 
     def get_vs(self):
@@ -218,3 +195,36 @@ class ospf_adjacency:
                                                 network_type=network_type, state=state))
         except Exception as e:
             ospf_database.dev.warning(f'adding adjacency {network_id} error {e}')
+
+    @property
+    def sql_values(self):
+        try:
+
+            if self.adj_neighbors['s']['interface'] != 'null' and self.adj_neighbors['t']['interface'] != 'null':
+                values = [self.network_id,
+                          self.diagram_state.uid,
+                          self.adj_neighbors['s']["router_id"],
+                          self.adj_neighbors['s']['interface'].uid,
+                          self.adj_neighbors['s']['metric'],
+                          self.adj_neighbors['s']["interface_ip"],
+                          self.adj_neighbors['t']["router_id"],
+                          self.adj_neighbors['t']['interface'].uid,
+                          self.adj_neighbors['t']['metric'],
+                          self.adj_neighbors['t']["interface_ip"],
+                          ]
+
+                return "(" + (",".join([f"'{column}'" for column in values])) + ")"
+            else:
+                return ""
+        except Exception as e:
+            self.verbose.warning(
+                f'sql_values {e} {self.adj_neighbors["s"]["interface"]} {self.adj_neighbors["t"]["interface"]}')
+            return ""
+
+    @staticmethod
+    def sql_columns():
+
+        return f'({",".join(ospf_adjacency.__columns__)})'
+
+    def save(self):
+        pass

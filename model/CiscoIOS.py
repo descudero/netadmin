@@ -64,6 +64,8 @@ class CiscoIOS(Parent):
         self.device_type = "cisco_ios_"
         self.uid = 0
         self.country = "NA"
+        self.x = 0
+        self.y = 0
 
     def add_p2p_ospf(self, p2p, p2p_ospf):
 
@@ -352,7 +354,6 @@ class CiscoIOS(Parent):
         if (not hasattr(self, 'pseudo_wire_class')):
             self.set_pseudo_wire_class()
         if (not hasattr(self, 'pseudowires')):
-
             self.set_pseudowires()
         try:
             pw_class = self.get_pw_class_by_tunnel_id(tunnel_id=tunnel_id)
@@ -1279,7 +1280,6 @@ class CiscoIOS(Parent):
             self.x = "0"
             self.y = "0"
 
-
     def get_physical_interfaces(self):
         if self.interfaces is None:
             self.set_interfaces()
@@ -1527,7 +1527,8 @@ class CiscoIOS(Parent):
 
         sql = InterfaceUfinet.sql_today_last_polled_interfaces(
             device=self)
-        self.verbose.warning(f'interfaces_from_db_today: {self.uid} {self.ip} {sql}')
+        self.db_log.debug(f'interfaces_from_db_today: {self.uid} {self.ip} {sql}')
+        self.db_log.debug(f'interfaces_from_db_today: {self.uid} {self.ip} {sql}')
         self.interfaces = InterfaceUfinet.factory_from_dict(device=self,
                                                             interfaces_data=self.dict_from_sql(
                                                                 sql=sql))

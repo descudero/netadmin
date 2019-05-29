@@ -8,24 +8,29 @@ import os, shelve
 from model.Devices import Devices
 from model.Diagram import Diagram
 import ipaddress
+from pprint import pprint
+from collections import ChainMap
 
 
 @logged
 class ospf_database:
-    edge_roundness = {1: .05, 2: .05, 3: .15, 4: .15, 5: .25, 6: .25, 7: .35, 8: .35}
+    edge_roundness = {1: .05, 2: .05, 3: .15, 4: .15, 5: .25, 6: .25, 7: .35, 8: .35, 9: .375, 10: .375}
 
     def __init__(self, ip_seed_router, isp, process_id='1', area='0', interface_method="interfaces_from_db_today",
-                 network_name='ospf_regional'):
+                 network_name='ospf_regional', source="real_time"):
         self.area = area
         self.isp = isp
         self.diagram = Diagram(master=isp.master, name=network_name)
-        seed_router = Devices.factory_device(master=self.isp.master, ip=ip_seed_router)
 
-        p2p, routers = seed_router.ospf_area_adjacency_p2p(process_id=process_id, area=area)
+        if source == 'real_time':
+            seed_router = Devices.factory_device(master=self.isp.master, ip=ip_seed_router)
+
+            p2p, routers = seed_router.ospf_area_adjacency_p2p(process_id=process_id, area=area)
+        # elif source =='last_state':
 
         self.verbose.warning(f"_INIT_ p2p :{len(p2p)} rourters {len(routers)}")
 
-        self.devices = Devices(master=self.isp.master, ip_list=routers)
+        self.devices = Devices(master=self.isp.master, ip_list=routers, check_up=False)
         self.devices.execute_processes(methods=['set_snmp_location_attr'])
         self.devices.execute_processes(methods=['get_uid_save'], thread_window=15)
         self.devices.execute(methods=[interface_method], deferred=True, deferred_seconds=7, deferred_group=10)
@@ -46,10 +51,10 @@ class ospf_database:
             t.join()
 
         self.p2p = {p2p.network_id: p2p for p2p in result_p2p}
-        p2p_down = self.ospf_down_interfaces()
+        self.p2p_down_links = self.ospf_down_interfaces()
         p2p_down_adj = []
         threads = []
-        for network, neighbors in p2p_down.items():
+        for network, neighbors in self.p2p_down_links.items():
             kwargs = {"list_networks": p2p_down_adj, 'network_id': network, 'ospf_database': self,
                       'neighbors': neighbors,
                       'network_type': 'p2p_down', 'state': 'down'}
@@ -58,10 +63,14 @@ class ospf_database:
             threads.append(t)
         for t in threads:
             t.join()
+        self.p2p_down_links = {p2p.network_id: p2p for p2p in p2p_down_adj}
 
-        self.p2p_down_links = {}
-
+        self.verbose.warning(f'OSPF LINKS DOWN {len(self.p2p_down_links)}')
         self.dev.info("OSPF DATABASE INIT FINISH")
+
+    @property
+    def adjacencies(self):
+        return ChainMap(self.p2p, self.p2p_down_links)
 
     @property
     def routers(self):
@@ -70,18 +79,23 @@ class ospf_database:
     def ospf_down_interfaces(self):
 
         p2p = {}
-
         down_ospf_interfaces = [interface for device in self.devices for interface in device.interfaces.values() if
-                                interface.link_state == 'down' and interface.l3_protocol == "MPLS" and interface.l3_protocol_attr == "OSP"]
+                                (interface.protocol_state == 'down' or interface.link_state == 'down') \
+                                and interface.l3_protocol == "MPLS"
+                                and interface.l3_protocol_attr == "OSP"]
 
         for interface in down_ospf_interfaces:
             net_id = str(ipaddress.IPv4Network(str(interface.ip) + "/30", strict=False).network_address)
+            if interface.parent_device.ip in ['172.16.30.246', '172.16.30.244']:
+                self.verbose.warning(f' nt:{net_id} n:{interface.parent_device.ip} i:{interface.ip}')
             try:
                 if net_id != "127.0.0.0":
+
                     if net_id in p2p:
+
                         if len(p2p[net_id]) == 1:
                             data = {'router_id': interface.parent_device.ip,
-                                    'neighbor_ip': p2p[net_id]["s"]['router_id'],
+                                    'neighbor_ip': p2p[net_id][0]['router_id'],
                                     'interface_ip': str(interface.ip),
                                     'area': self.area,
                                     'metric': "100000",
@@ -89,6 +103,7 @@ class ospf_database:
                                     }
                             p2p[net_id].append(data)
                             p2p[net_id][0]['neighbor_ip'] = interface.parent_device.ip
+
 
                     else:
 
@@ -99,9 +114,11 @@ class ospf_database:
                                 'network': net_id
                                 }
                         p2p[net_id] = [data]
-                self.verbose.warning(f'set_down_mpls_interfaces p2p down {len(p2p)}')
+                self.verbose.warning(
+                    f'set_down_mpls_interfaces p2p down {net_id} {interface.parent_device.ip} {len(p2p)}')
             except Exception as e:
-                self.dev.warning(f'set_down_mpls_interfaces {interface} error {e}')
+                self.verbose.warning(f'set_down_mpls_interfaces {interface} error {e}')
+        pprint(p2p)
         return p2p
 
     def get_yed_file(self, filename):
@@ -115,6 +132,8 @@ class ospf_database:
             file.write(self.graph.get_graph())
 
     def get_vs(self):
+        edges = [edge.get_vs() for edge in self.p2p.values()]
+        edges_down = [edge.get_vs() for edge in self.p2p_down_links.values()]
         topology = {"nodes": [
             router.get_vs(x=self.diagram.devices_uid[router.uid]['x'] if router.uid in self.diagram.devices_uid
             else 0,
@@ -123,7 +142,7 @@ class ospf_database:
                           else 0,
                           ) for router in
             self.routers.values()],
-            "edges": [edge.get_vs() for edge in self.p2p.values()],
+            "edges": edges + edges_down,
             'options': self.get_vs_options()}
 
         return topology
@@ -161,3 +180,6 @@ class ospf_database:
         ids = data.keys()
 
         pass
+
+    def save_state(self):
+        self.diagram.save_state(devices=self.devices, adjacencies=self.adjacencies)

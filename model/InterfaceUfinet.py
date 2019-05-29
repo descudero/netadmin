@@ -185,7 +185,7 @@ class InterfaceUfinet(InterfaceIOS):
             try:
                 connection = device.master.db_connect()
                 with connection.cursor() as cursor:
-                    sql = f'''SELECT uid,if_index,l3_protocol,l3_protocol_attr,l1_protocol,l1_protocol_attr,data_flow 
+                    sql = f'''SELECT uid,description,if_index,l3_protocol,l3_protocol_attr,l1_protocol,l1_protocol_attr,data_flow 
                     FROM interfaces WHERE   net_device_uid = {device.uid} ORDER BY uid DESC'''
 
                     cursor.execute(sql)
@@ -410,9 +410,12 @@ class InterfaceUfinet(InterfaceIOS):
     @staticmethod
     def factory_from_dict(device, interfaces_data=[]) -> dict:
         interfaces_dict = {}
-        for parse_data in interfaces_data:
-            interface_object = InterfaceUfinet(parent_device=device, parse_data=parse_data)
-            interfaces_dict[interface_object.if_index] = interface_object
+        try:
+            for parse_data in interfaces_data:
+                interface_object = InterfaceUfinet(parent_device=device, parse_data=parse_data)
+                interfaces_dict[interface_object.if_index] = interface_object
+        except TypeError as e:
+            device.dev.debug(f' factory_from_dict {device.ip} type error non type')
         return interfaces_dict
 
     @staticmethod
@@ -477,7 +480,7 @@ class InterfaceUfinet(InterfaceIOS):
     @property
     def color_usage(self):
 
-        width_array = [1, 2, 2, 2, 3, 3, 3, 5, 5, 6]
+        width_array = [2, 2, 3, 3, 4, 5, 5, 6, 7, 8]
         good = Color("SpringGreen")
         medium = Color("OrangeRed")
         bad = Color("DarkRed")
@@ -485,10 +488,10 @@ class InterfaceUfinet(InterfaceIOS):
 
         color = colors[int(max(self.util_in, self.util_out))].hex
         width = width_array[(int(max(self.util_in, self.util_out) / 10))]
-        if self.link_state == "up":
-            return color, width
+        if self.link_state == "up" and self.protocol_state == 'up':
+            return str(color), width
         else:
-            return Color("Black"), 2
+            return str(Color("DarkGray").hex), 2
 
 
 def calculate_delta(old_counter, new_counter, timelapse):

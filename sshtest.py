@@ -13,6 +13,7 @@ from model.Devices import Devices
 from model.ospf_database import ospf_database
 from tools import real_get_bulk
 import pysnmp
+from model.Diagram import DiagramState, Diagram
 
 '''if_index,
                 description,
@@ -83,6 +84,22 @@ import time
 
 import threading
 
+master = Master()
+isp = ISP()
+isp.master = Master()
+
+dbd = ospf_database(ip_seed_router='172.16.30.5', isp=isp, process_id='1', area='0',
+                    network_name='_ospf_ufinet_regional')
+
+dbd.save_state()
+
+diagram = Diagram(name='_ospf_ufinet_regional', master=isp.master)
+
+diagram.get_newer_state()
+devices = diagram.state.devices()
+print([device.ip for device in devices])
+
+'''
 oid = "1.3.6.1.2.1.2.2.1.2"
 community = 'uFi08NeT'
 ip1 = '172.16.30.250'
@@ -90,15 +107,18 @@ data_bind1 = []
 data = [{"ip": '172.17.22.28', "community": 'uFi08NeT', 'oid': "1.3.6.1.2.1.31.1.1.1.18", 'data_bind': []},
         {"ip": '172.16.30.250', "community": 'uFi08NeT', 'oid': "1.3.6.1.2.1.31.1.1.1.18", 'data_bind': []},
         ]
-ips = [ip.replace("\n", '') for ip in open('bgp_pe_list', "r")]
+ips = ['172.16.30.246']
 
 dev = Devices(master=Master(), ip_list=ips)
-dev.execute(methods=['set_interfaces_snmp'], deferred_seconds=5, deferred=True)
+dev.execute(methods=['interfaces_from_db_today'], deferred_seconds=5, deferred=True)
 
 for device in dev:
-    print(f' {device.ip} {len(device.interfaces)}')
+    mpls_interfaces = [interface for interface in device.interfaces.values() if interface.l3_protocol == 'MPLS']
+    for interface in mpls_interfaces:
+        print(f' interface {interface}')
 
 threads = []
+'''
 # data =[{"ip":ip.replace("\n",''),"community":'uFi08NeT','oid':"1.3.6.1.2.1.31.1.1.1.18",'data_bind':[]} for ip in open('bgp_pe_list',"r")]
 # real_get_bulk(**data[0])
 
