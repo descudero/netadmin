@@ -29,30 +29,50 @@ limit 30;
 'interface_2_weight'
 
 select *
+from interfaces;
+select *
 from diagram_state_adjacencies;
 drop table diagram_state_adjacencies;
+use netadmin;
 create table diagram_state_adjacencies
 (
   uid                int auto_increment primary key,
   network_id         varchar(40),
   diagram_state_uid  int,
   net_device_1_ip    varchar(40),
+  interface_1_uid    int,
   interface_1_ip     varchar(40),
   interface_1_weight int,
+  interface_2_uid    int,
   net_device_2_ip    varchar(40),
   interface_2_ip     varchar(40),
   interface_2_weight int,
-
+  foreign key (interface_1_uid) references interfaces (uid),
+  foreign key (interface_2_uid) references interfaces (uid),
   foreign key (diagram_state_uid) references diagram_states (uid)
 );
 
 
+
+select *
+from diagrams;
+select *
+from diagram_states;
 create table diagram_states
 (
   uid             int auto_increment primary key,
   diagram_uid     int,
   state_timestamp datetime,
   foreign key (diagram_uid) references diagrams (uid)
+
+);
+
+
+create table diagrams
+(
+  uid         int auto_increment primary key,
+  name        varchar(50),
+  description text
 
 );
 

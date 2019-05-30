@@ -6,6 +6,8 @@ select *
 from network_devices
 
 
+select * from diagram_sta
+
 SELECT bg.net_device_uid as net_device_uid,
        bg.ip             as ip,
        bg.asn            as asn,

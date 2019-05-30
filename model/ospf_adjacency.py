@@ -17,9 +17,16 @@ class ospf_adjacency:
 
             }
 
-    __columns__ = ['network_id', 'diagram_state_uid', 'net_device_1_ip', 'interface_1_uid', 'interface_1_ip',
+    __columns__ = ['network_id',
+                   'diagram_state_uid',
+                   'net_device_1_ip',
+                   'interface_1_uid',
                    'interface_1_weight',
-                   'interface_2_uid', 'net_device_2_ip', 'interface_2_ip', 'interface_2_weight']
+                   'interface_1_ip',
+                   'net_device_2_ip',
+                   'interface_2_uid',
+                   'interface_2_weight',
+                   'interface_2_ip']
 
     __table__ = "diagram_state_adjacencies"
 

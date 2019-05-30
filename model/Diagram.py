@@ -204,6 +204,43 @@ class DiagramState:
             connection.close()
             return False
 
+    def p2p(self):
+        try:
+            connection = self.master.db_connect()
+            with connection.cursor() as cursor:
+                sql = f'''SELECT * FROM  diagram_state_adjacencies where diagram_state_uid={self.uid}'''
+                cursor.execute(sql)
+                data = cursor.fetchall()
+                p2p = []
+                connection.close()
+                for row in data:
+                    __columns__ = ['network_id',
+                                   'diagram_state_uid',
+                                   'net_device_1_ip',
+                                   'interface_1_uid',
+                                   'interface_1_weight',
+                                   'interface_1_ip',
+                                   'net_device_2_ip',
+                                   'interface_2_uid',
+                                   'interface_2_weight',
+                                   'interface_2_ip']
+
+                [{'router_id': row['net_device_1_ip'],
+                  'neighbor_ip': row['net_device_2_ip'],
+                  'interface_ip': row['interface_1_ip'],
+                  'metric': row['interface_1_weight'],
+                  'network': row['network_id'] + "/32"
+
+                  }]
+
+                return p2p
+
+            return self.uid
+        except Exception as e:
+            self.db_log.warning(f'devices unable to load {self.diagram.name} {sql} {e}')
+            connection.close()
+            return []
+
     def devices(self):
         try:
             connection = self.master.db_connect()

@@ -143,14 +143,12 @@ class InterfaceIOS(object):
         return interface_string
 
     def __str__(self):
-        s = f'{id(
-            self)}  {self.__class__} u:{self.uid} {self.if_index} L:{self.protocol_state} P:{self.link_state} {self.description}'
+        s = f'{id(self)}  {self.__class__} u:{self.uid} {self.if_index}' \
+            f'L:{self.protocol_state} P:{self.link_state} {self.description}'
         return s
 
     def __repr__(self):
-        s = f'{id(
-            self)}  {self.__class__}  u:{self.uid} {self.if_index} L:{self.protocol_state} P:{self.link_state} {self.description}'
-        return s
+        return str(self)
 
     @property
     def dict(self):
