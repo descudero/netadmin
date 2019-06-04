@@ -1,11 +1,7 @@
 from tools import logged
-from sqlalchemy.orm import deferred
-from sqlalchemy import Integer, String, Text, Binary, Column
-from sqlalchemy.ext.declarative import declarative_base
 import datetime
 from model.ospf_adjacency import ospf_adjacency
 
-Base = declarative_base()
 from model.Devices import Devices
 
 
