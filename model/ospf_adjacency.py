@@ -56,16 +56,16 @@ class ospf_adjacency:
         except KeyError:
             self.s_interface = "null"
             self.verbose.warning(
-                f'_INIT_ no interface ip uid:{self.s_device.uid} N:{self.network_id} dev:{self.s_device.hostname} I:{
-                self.s["interface_ip"]}')
+                f'_INIT_ no interface ip uid:{self.s_device.uid} N:{self.network_id} '
+                f'dev:{self.s_device.hostname} I:{self.s["interface_ip"]}')
         try:
             self.t_interface = self.t_device.interfaces_ip[self.t["interface_ip"]]
         except KeyError:
             self.t_interface = "null"
 
             self.verbose.warning(
-                f'_INIT_ no interface ip uid:{self.t_device.uid} N:{self.network_id} dev:{self.t_device.hostname} I:{
-                self.t["interface_ip"]}')
+                f'_INIT_ no interface ip uid:{self.t_device.uid} N:{self.network_id}'
+                f' dev:{self.t_device.hostname} I:{self.t["interface_ip"]}')
         self.s["interface"] = self.s_interface
         self.t["interface"] = self.t_interface
         try:
