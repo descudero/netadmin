@@ -513,7 +513,9 @@ def save_xy_diagram():
     network = request.json['network']
     data = request.json['data']
     diagram = Diagram(master=master, name=network)
-    diagram.save_xy(data_devices=data)
+    diagram.get_newer_state()
+    diagram.state.devices()
+    diagram.state.save_position(data_devices=data)
     return jsonify({"bueno": "dsd"})
 
 @app.route('/utilidades/metodos/cisco_json', methods=['POST', 'GET'])

@@ -196,3 +196,118 @@ create table users
 
 
 select * from interface_states ORDER  BY uid DESC limit 20;
+
+
+SELECT i.net_device_uid,
+       i.uid      as uid,
+       i.if_index as if_index,
+       i.l3_protocol,
+       i.l3_protocol_attr,
+       i.l1_protocol,
+       i.l1_protocol_attr,
+       i.data_flow,
+       s.util_in  as util_in,
+       s.util_out as util_out,
+       s.link_state,
+       s.protocol_state,
+       s.output_rate,
+       s.input_rate,
+       s.state_timestamp,
+       i.ip
+
+from network_devices as d
+       inner join interfaces as i on d.uid = i.net_device_uid
+       inner join (select * from interface_states where DATE(state_timestamp) = DATE(NOW()))
+  as s on s.interface_uid = i.uid
+       inner join (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid
+WHERE net_device_uid in
+      (48, 54, 41, 66, 49, 644, 40, 39, 46, 53, 63, 62, 42, 6, 37, 64, 55, 69, 50, 5, 606, 25, 4, 44, 1, 26, 36, 2,
+       12501, 59, 8, 52, 60, 65, 61, 56, 7, 155743, 51, 68, 58, 3, 67, 38, 580, 57, 648, 70, 45)
+  and state_timestamp >= '2019-06-03 00:00:00'
+  and state_timestamp <= '2019-06-03 23:59:00'
+
+
+SELECT uid,state_timestamp
+FROM diagram_states
+WHERE diagram_uid = 1
+ORDER BY uid DESC
+limit 1
+
+SELECT COUNT(uid)
+FROM diagram_state_adjacencies
+WHERE diagram_state_uid = 43
+
+select *
+from network_devices
+where hostname like 'RO_PCO_CER1';
+
+
+
+SELECT i.net_device_uid,
+       i.uid      as uid,
+       i.if_index as if_index,
+       i.l3_protocol,
+       i.l3_protocol_attr,
+       i.l1_protocol,
+       i.l1_protocol_attr,
+       i.data_flow,
+       s.util_in  as util_in,
+       s.util_out as util_out,
+       s.link_state,
+       s.protocol_state,
+       s.output_rate,
+       s.input_rate,
+       s.state_timestamp,
+       i.ip
+
+from network_devices as d
+       inner join interfaces as i on d.uid = i.net_device_uid
+       inner join (select * from interface_states where DATE(state_timestamp) = DATE(NOW()))
+  as s on s.interface_uid = i.uid
+       inner join (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid
+WHERE net_device_uid IN
+      (60, 57, 41, 56, 644, 36, 38, 64, 69, 45, 6, 68, 67, 48, 42, 51, 606, 40, 62, 61, 46, 37, 65, 55, 66, 49, 26, 58,
+       52, 648, 39, 3, 8, 50, 2, 155743, 59, 12501, 70, 25, 53, 4, 5, 54, 1, 580, 44, 0, 7)
+  and state_timestamp >= '2019-06-03 00:00:00'
+  and state_timestamp <= '2019-06-03 23:59:00'
+  2019-06-03 17:42:09
+    ,411:WARNING:db.Devices:dict_from_sql
+SELECT i.net_device_uid,
+       i.uid      as uid,
+       i.if_index as if_index,
+       i.l3_protocol,
+       i.l3_protocol_attr,
+       i.l1_protocol,
+       i.l1_protocol_attr,
+       i.data_flow,
+       s.util_in  as util_in,
+       s.util_out as util_out,
+       s.link_state,
+       s.protocol_state,
+       s.output_rate,
+       s.input_rate,
+       s.state_timestamp,
+       i.ip
+
+from network_devices as d
+       inner join interfaces as i on d.uid = i.net_device_uid
+       inner join (select * from interface_states where DATE(state_timestamp) = DATE(NOW()))
+  as s on s.interface_uid = i.uid
+       inner join (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid
+WHERE net_device_uid IN
+      (45, 3, 155743, 69, 52, 7, 38, 68, 40, 25, 26, 12501, 37, 55, 6, 644, 53, 63, 46, 4, 64, 54, 57, 8, 1, 65, 51, 42,
+       56, 49, 66, 44, 36, 41, 60, 61, 58, 580, 62, 48, 59, 67, 5, 50, 606, 2, 70, 0, 648)
+  and state_timestamp >= '2019-06-03 00:00:00'
+  and state_timestamp <= '2019-06-03 23:59:00'
+
+UPDATE netadmin.network_devices
+SET hostname='RO-NIC-EDGE2',
+    ip='172.16.30.235',
+    country='NICARAGUA',
+    area='PLAZAINTER',
+    roll='[LSR]'
+WHERE uid = '12501'
+
+
+commit
+

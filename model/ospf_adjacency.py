@@ -4,6 +4,8 @@ from tools import logged
 import os
 import shelve
 from pprint import pprint
+from model.InterfaceUfinet import InterfaceUfinet
+import threading
 
 
 @logged
@@ -13,7 +15,7 @@ class ospf_adjacency:
             "CENTURY": "#FF1493",
             "TELXIUS": "#8B4513",
             "LANAUTILUS": "#BC8F8F",
-            "DEF": "#00BFFF", "DOWN": "#333333"
+            "DEF": "#00BFFF", "DOWN": "#330F53"
 
             }
 
@@ -30,52 +32,81 @@ class ospf_adjacency:
 
     __table__ = "diagram_state_adjacencies"
 
-    def __init__(self, network_id, ospf_database, neighbors, network_type='p2p', state='up'):
+    def __init__(self, lock, network_id, ospf_database, neighbors, network_type='p2p', state='up'):
         self.uid = 0
         self.diagram_state = None
-        self.state = state
-        self.verbose.debug("net " + network_id + " start init ")
+        self.dev.debug("net " + network_id + " start init ")
         self.network_id = network_id
         self.network_type = network_type
         self.ospf_database = ospf_database
         self.adj_neighbors = {}
         self.reversed = False
         self.neighbors_dict = {neighbor["router_id"]: neighbor for neighbor in neighbors}
-        for neighbor in neighbors:
-            neighbor_key = "s"
-            if 's' in self.adj_neighbors:
-                neighbor_key = 't'
-            device = self.ospf_database.routers[neighbor["router_id"]]
 
-            self.adj_neighbors[neighbor_key] = neighbor
-            try:
-                self.adj_neighbors[neighbor_key]["interface"] = device.interfaces_ip[neighbor["interface_ip"]]
-                try:
-                    setattr(self, f'{neighbor_key}_ip', self.adj_neighbors[neighbor_key]["interface"].ip)
-                except Exception as e:
-                    self.dev.warning(f'ops_adjacenfy __init__  no ip {neighbor_key}_ip')
-            except KeyError:
-                self.adj_neighbors[neighbor_key]["interface"] = "null"
-                self.dev.warning(f'ospf_adjacncy no interface ip')
-            self.adj_neighbors[neighbor_key]["network_device"] = device
+        self.s = neighbors[0]
+        self.t = neighbors[1]
+
+        self.s_device = self.ospf_database.routers[self.s["router_id"]]
+        self.t_device = self.ospf_database.routers[self.t["router_id"]]
+        self.s["network_device"] = self.s_device
+        self.t["network_device"] = self.t_device
+        try:
+            self.s_interface = self.s_device.interfaces_ip[self.s["interface_ip"]]
+
+        except KeyError:
+            self.s_interface = "null"
+            self.verbose.warning(
+                f'_INIT_ no interface ip uid:{self.s_device.uid} N:{self.network_id} dev:{self.s_device.hostname} I:{
+                self.s["interface_ip"]}')
+        try:
+            self.t_interface = self.t_device.interfaces_ip[self.t["interface_ip"]]
+        except KeyError:
+            self.t_interface = "null"
+
+            self.verbose.warning(
+                f'_INIT_ no interface ip uid:{self.t_device.uid} N:{self.network_id} dev:{self.t_device.hostname} I:{
+                self.t["interface_ip"]}')
+        self.s["interface"] = self.s_interface
+        self.t["interface"] = self.t_interface
+        try:
+            setattr(self, f's_ip', self.s_interface.ip)
+        except Exception as e:
+            self.dev.warning(f'__init__  no ip s_ip')
+        try:
+            setattr(self, f't_ip', self.t_interface.ip)
+        except Exception as e:
+            self.dev.warning(f'__init__  no ip t_ip')
+
         pair = self.pair_id()
 
-        self.ospf_database.neighbors_occurrences_count[pair] += 1
+        with lock:
+            self.ospf_database.neighbors_occurrences_count[pair] += 1
         self.roundness = self.ospf_database.edge_roundness[self.ospf_database.neighbors_occurrences_count[pair]]
         if self.ospf_database.neighbors_occurrences_count[pair] % 2 == 0:
             self.reversed = True
             self.adj_obj_list()
-            self.verbose.debug(" net_id reversed ")
+            self.dev.debug(" net_id reversed ")
         else:
-            self.verbose.debug(" net_id not reversed ")
+            self.dev.debug(" net_id not reversed ")
         # self.adj_neighbors["s"]["network_device"].add_p2p_ospf(self,self.adj_neighbors["t"])
         # self.adj_neighbors["t"]["network_device"].add_p2p_ospf(self,self.adj_neighbors["s"])
-        self.dev.info("adjacency " + pair + " inited")
+        self.dev.debug(f"adjacency {self.network_id} inited")
         self.set_vs()
 
+    @property
+    def state(self):
+
+        return "up" if self.up else "down"
+
+    @property
+    def up(self):
+        try:
+            return self.s_interface.up and self.t_interface.up
+        except:
+            return False
+
     def __repr__(self):
-        return str(self.__class__) + " NET " + self.network_id + " " + self.network_type + " N " + str(
-            len(self.adj_neighbors))
+        return str(self.__class__) + " NET " + self.network_id + " " + self.network_type + " N "
 
     @property
     def master(self):
@@ -97,11 +128,11 @@ class ospf_adjacency:
         return label
 
     def set_vs(self):
-
+        self.dev.warning(f'{self.pair} init set vs')
         source, target = self.neighbors()
         if self.reversed:
             source, target = target, source
-            self.vs = {'from': source.uid_db(), 'to': target.uid_db(),
+            self.vs = {'from': source.uid, 'to': target.uid,
 
                        'label': self.l1,
                        'font': {'size': '8'},
@@ -110,7 +141,7 @@ class ospf_adjacency:
                        'smooth': {'type': 'curvedCW', 'roundness': self.roundness}}
 
         else:
-            self.vs = {'from': source.uid_db(), 'to': target.uid_db(),
+            self.vs = {'from': source.uid, 'to': target.uid,
                        'label': self.l1,
                        'font': {'size': '8'},
                        'labelFrom': self.edge_label(orient='source'),
@@ -127,26 +158,31 @@ class ospf_adjacency:
             self.dev.warning(f' error vs no ip target {e}')
             self.vs['ip_to'] = "NA"
 
-        self.vs['color'] = {'color': self.color}
         try:
-            self.vs['width'] = 2
+
             self.vs['interface_type'] = self.color
-            self.vs['winterface_type'] = 3
+            if self.up:
+                self.vs['width'] = 2
+                self.vs['winterface_type'] = 3
+            else:
+                self.vs['width'] = 5
+                self.vs['winterface_type'] = 5
         except Exception as e:
             pass
         try:
-            self.vs['cusage'] = self.adj_neighbors['t']['interface'].color_usage[0]
-            self.vs['wusage'] = self.adj_neighbors['t']['interface'].color_usage[1]
-        except Exception as e:
-            self.verbose.warning(f'ERROR color_usage {e}')
-            try:
+            color, width = InterfaceUfinet.maximum_usage_color(self.s_interface
+                                                               , self.t_interface)
+            self.vs['color'] = {'color': color}
 
-                self.vs['cusage'] = self.adj_neighbors['s']['interface'].color_usage[0]
-                self.vs['wusage'] = self.adj_neighbors['s']['interface'].color_usage[1]
-            except Exception as e:
-                self.verbose.warning(f'ERROR color_usage {e}')
-                self.vs['cusage'] = ospf_adjacency.__l1["DEF"]
-                self.vs['wusage'] = 2
+            self.vs['cusage'] = color
+            self.vs['wusage'] = width
+        except Exception as e:
+            self.dev.warning(f'ERROR color_usage {e}')
+            self.vs['cusage'] = ospf_adjacency.__l1["DEF"]
+            self.vs['color'] = {'color': ospf_adjacency.__l1["DEF"]}
+            self.vs['width'] = 5
+            self.vs['wusage'] = 2
+        self.dev.warning(f'{self.network_id} end set vs')
 
     @property
     def l1(self):
@@ -162,23 +198,23 @@ class ospf_adjacency:
     @property
     def color(self):
 
-        color = ospf_adjacency.__l1.get(self.l1, ospf_adjacency.__l1["DEF"]) if self.state == 'up' else \
+        color = ospf_adjacency.__l1.get(self.l1, ospf_adjacency.__l1["DEF"]) if self.up else \
             ospf_adjacency.__l1["DOWN"]
-
         self.dev.debug(f' {self.network_id} state {self.state} {color}')
-        if self.state == 'down':
-            self.verbose.warning(f' {self.network_id} state {self.state} {color}')
+
         return color
 
     def get_vs(self):
         return self.vs
 
     def adj_obj_list(self):
-        neighbor_data = sorted([self.adj_neighbors["s"], self.adj_neighbors["t"]], key=lambda x: x["network_device"].ip)
-        if self.reversed:
-            reversed(neighbor_data)
-        self.adj_ob = neighbor_data
-        return neighbor_data
+        if not hasattr(self, "adj_ob"):
+            neighbor_data = [self.t, self.s] if self.s["network_device"].ip > self.t["network_device"].ip else [self.t,
+                                                                                                                self.s]
+            if self.reversed:
+                reversed(neighbor_data)
+            self.adj_ob = neighbor_data
+        return self.adj_ob
 
     def neighbors(self):
         if hasattr(self, 'adj_ob'):
@@ -195,37 +231,40 @@ class ospf_adjacency:
         return self.pair
 
     @staticmethod
-    def add_ospf_adjacency(list_networks, network_id, ospf_database, neighbors,
+    def add_ospf_adjacency(lock, list_networks, network_id, ospf_database, neighbors,
                            network_type, state='up'):
         try:
-            list_networks.append(ospf_adjacency(network_id=network_id, ospf_database=ospf_database, neighbors=neighbors,
-                                                network_type=network_type, state=state))
+            adj = ospf_adjacency(lock, network_id=network_id, ospf_database=ospf_database, neighbors=neighbors,
+                                 network_type=network_type, state=state)
+
+            with lock:
+                list_networks.append(adj)
         except Exception as e:
-            ospf_database.dev.warning(f'adding adjacency {network_id} error {e}')
+            ospf_database.verbose.warning(f'adding adjacency {network_id} ERROR {e} {e.__class__}')
 
     @property
     def sql_values(self):
         try:
 
-            if self.adj_neighbors['s']['interface'] != 'null' and self.adj_neighbors['t']['interface'] != 'null':
+            if self.s_interface != 'null' and self.t_interface != 'null':
                 values = [self.network_id,
                           self.diagram_state.uid,
-                          self.adj_neighbors['s']["router_id"],
-                          self.adj_neighbors['s']['interface'].uid,
-                          self.adj_neighbors['s']['metric'],
-                          self.adj_neighbors['s']["interface_ip"],
-                          self.adj_neighbors['t']["router_id"],
-                          self.adj_neighbors['t']['interface'].uid,
-                          self.adj_neighbors['t']['metric'],
-                          self.adj_neighbors['t']["interface_ip"],
+                          self.s["router_id"],
+                          self.s_interface.uid,
+                          self.s['metric'],
+                          self.s["interface_ip"],
+                          self.t["router_id"],
+                          self.t_interface.uid,
+                          self.t['metric'],
+                          self.t["interface_ip"],
                           ]
 
                 return "(" + (",".join([f"'{column}'" for column in values])) + ")"
             else:
                 return ""
         except Exception as e:
-            self.verbose.warning(
-                f'sql_values {e} {self.adj_neighbors["s"]["interface"]} {self.adj_neighbors["t"]["interface"]}')
+            self.dev.warning(
+                f'sql_values {e} {self.s_interface} {self.t_interface}')
             return ""
 
     @staticmethod

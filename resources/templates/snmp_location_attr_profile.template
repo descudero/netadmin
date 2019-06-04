@@ -1,8 +1,6 @@
 Value country (\w+)
 Value area (\w+)
 Value roll (\S+)
-Value x (\S+)
-Value y (\S+)
 
 Start
-  ^P:$country\s,A:$area\s,R:$roll\s,x:$x,y:$y -> Record
+  ^P:$country\s,A:$area\s,R:$roll\s* -> Record

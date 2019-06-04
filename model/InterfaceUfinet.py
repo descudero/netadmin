@@ -76,6 +76,10 @@ class InterfaceUfinet(InterfaceIOS):
                           "S": "SUBINTERFACE",
                           "R": "ROUTED_VPLS"}}
 
+    @property
+    def up(self):
+        return self.link_state == "up" and self.protocol_state == "up"
+
     def __init__(self, *args, **kargs):
         super().__init__(*args, **kargs)
 
@@ -151,11 +155,13 @@ class InterfaceUfinet(InterfaceIOS):
                 self.verbose.warning(f' correct_ip ERROR dev {self.parent_device.ip}{sql} {e}')
 
     @staticmethod
-    def sql_today_last_polled_interfaces(device):
+    def sql_today_last_polled_interfaces(devices):
         date_start = str(datetime.date.today()) + ' 00:00:00'
         date_end = str(datetime.date.today()) + ' 23:59:00'
-        if device.in_db():
-            sql = f"""SELECT i.uid as uid,
+        devices_uid = {dev.ip: str(dev.uid) for dev in devices}
+        sql = f"""SELECT 
+                        i.net_device_uid, 
+                        i.uid as uid,
                         i.if_index as if_index,
                         i.l3_protocol,
                         i.l3_protocol_attr,
@@ -172,12 +178,12 @@ class InterfaceUfinet(InterfaceIOS):
     
                from network_devices as d
                inner join interfaces as i on d.uid = i.net_device_uid 
-           inner join	(select * from interface_states where DATE(state_timestamp)=DATE(NOW())) as s on s.interface_uid= i.uid
+               inner join	(select * from interface_states where DATE(state_timestamp)=DATE(NOW())) 
+               as s on s.interface_uid= i.uid
                inner join  (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid
-                WHERE   net_device_uid ={device.uid}  and state_timestamp >='{date_start}' and state_timestamp <='{date_end}' """
-            return sql
-        else:
-            return ''
+                WHERE   net_device_uid IN ({','.join(
+            devices_uid.values())})  and state_timestamp >='{date_start}' and state_timestamp <='{date_end}' """
+        return sql
 
     @staticmethod
     def interfaces_uid(device, interfaces=[]):
@@ -479,19 +485,33 @@ class InterfaceUfinet(InterfaceIOS):
 
     @property
     def color_usage(self):
+        if self.up:
+            width_array = [2, 2, 3, 3, 4, 5, 5, 6, 7, 8]
+            good = Color("SpringGreen")
+            medium = Color("OrangeRed")
+            bad = Color("DarkRed")
+            colors = list(good.range_to(medium, 65)) + list(medium.range_to(bad, 36))
 
-        width_array = [2, 2, 3, 3, 4, 5, 5, 6, 7, 8]
-        good = Color("SpringGreen")
-        medium = Color("OrangeRed")
-        bad = Color("DarkRed")
-        colors = list(good.range_to(medium, 65)) + list(medium.range_to(bad, 36))
-
-        color = colors[int(max(self.util_in, self.util_out))].hex
-        width = width_array[(int(max(self.util_in, self.util_out) / 10))]
-        if self.link_state == "up" and self.protocol_state == 'up':
+            color = colors[int(self.util_out)].hex
+            width = width_array[(int(self.util_out / 10))]
             return str(color), width
         else:
             return str(Color("DarkGray").hex), 2
+
+    @staticmethod
+    def maximum_usage_color(*interfaces):
+        maximum_interface = None
+
+        for interface in interfaces:
+            if isinstance(interface, InterfaceUfinet):
+                if not interface.up:
+                    return '#330F53', 5
+                if maximum_interface is None:
+                    maximum_interface = interface
+                else:
+                    maximum_interface = maximum_interface if maximum_interface.util_out > interface.util_out \
+                        else interface
+        return maximum_interface.color_usage
 
 
 def calculate_delta(old_counter, new_counter, timelapse):

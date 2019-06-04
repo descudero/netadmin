@@ -11,7 +11,7 @@ from model.Devices import Devices
 
 @logged
 class Diagram:
-
+    __table__ = "diagrams"
     def __init__(self, master, name):
         self.master = master
         self.name = name
@@ -20,12 +20,32 @@ class Diagram:
         self.load_devices_uid_from_db()
         pass
 
+    def save(self):
+
+        try:
+            connection = self.master.db_connect()
+            with connection.cursor() as cursor:
+                sql = f'''INSERT INTO {Diagram.__table__}(name,description)
+                  VALUES('{self.name}','{""}')'''
+                cursor.execute(sql)
+                connection.commit()
+                self.uid = cursor.lastrowid
+                connection.close()
+            return self.uid
+        except Exception as e:
+            self.db_log.warning(f'SAVE_state {self.name} {sql} {e}')
+            connection.close()
+            return False
+
+
+
     def save_state(self, devices, adjacencies):
         self.state = DiagramState()
         self.state.diagram = self
         self.state.save()
         self.state.save_devices(devices=devices)
         self.state.save_adjacencies(adjacencies=adjacencies)
+
 
     def get_newer_state(self):
         if self.in_db():
@@ -94,8 +114,8 @@ class Diagram:
         try:
             connection = self.master.db_connect()
             with connection.cursor() as cursor:
-                sql = f""" INSERT INTO diagram_network_devices( net_device_uid, x, y,diagram_uid) VALUES {','.join(
-                    data)}"""
+                sql = f""" INSERT INTO diagram_network_devices( net_device_uid, x, y,diagram_uid) 
+                VALUES {','.join(data)}"""
 
                 cursor.execute(sql)
                 connection.commit()
@@ -106,7 +126,8 @@ class Diagram:
         try:
             connection = self.master.db_connect()
             with connection.cursor() as cursor:
-                sql = f'''SELECT uid,net_device_uid,x,y FROM diagram_network_devices WHERE diagram_uid={self.uid} ORDER BY uid;'''
+                sql = f'''SELECT uid,net_device_uid,x,y FROM diagram_network_devices WHERE diagram_uid={self.uid}
+                 ORDER BY uid;'''
                 cursor.execute(sql)
                 data_sql = cursor.fetchall();
                 self.devices_uid = {
@@ -125,6 +146,8 @@ class DiagramState:
         self.uid = 0
         self.diagram = None
         self.state_timestamp = None
+        self.devices_uid = {}
+
 
     @property
     def sql_values(self):
@@ -164,18 +187,17 @@ class DiagramState:
         try:
             connection = self.master.db_connect()
             with connection.cursor() as cursor:
+                self.verbose.warning(f'save_adjacencies {self.diagram.name} p2p {len(adjacencies)} ')
                 sql = f'''INSERT INTO diagram_state_adjacencies{ospf_adjacency.sql_columns()} VALUES'''
                 data_values = []
                 for adjacency in adjacencies.values():
                     adjacency.diagram_state = self
                     values = adjacency.sql_values
-                    print(values)
                     if values != "":
                         data_values.append(values)
 
                 sql += ",".join(data_values)
 
-                print(sql)
                 cursor.execute(sql)
                 connection.commit()
                 connection.close()
@@ -184,6 +206,30 @@ class DiagramState:
             self.db_log.warning(f'save_adjacencies {self.diagram.name}  {sql} {e}')
             connection.close()
             return False
+
+    def save_position(self, data_devices):
+
+        try:
+            connection = self.master.db_connect()
+            with connection.cursor() as cursor:
+                for uid, device in data_devices.items():
+                    x = device['x']
+                    y = device['y']
+                    self.verbose.debug(f'save_position u:{uid} x:{x} y:{y}')
+                    device_before = self.devices_uid[int(uid)]
+                    if device_before.x != x or device_before.y != y:
+                        sql = f'''UPDATE diagram_state_net_devices SET x={x},y={y} WHERE net_device_uid={uid} AND \
+                                  diagram_state_uid={self.uid}'''
+                        self.verbose.warning(f'save positition {uid} {self.uid}')
+                        try:
+                            cursor.execute(sql)
+                        except Exception as e:
+                            self.db_log.warning(f'save_position cursor_excecute {self.diagram.state} {e} {sql}')
+                connection.commit()
+                connection.close()
+        except Exception as e:
+            self.verbose.warning(f'save_position  DIAG {self.diagram.state} {e} ')
+            connection.close()
 
     def save_devices(self, devices):
         try:
@@ -211,54 +257,52 @@ class DiagramState:
                 sql = f'''SELECT * FROM  diagram_state_adjacencies where diagram_state_uid={self.uid}'''
                 cursor.execute(sql)
                 data = cursor.fetchall()
-                p2p = []
+                p2p = {}
                 connection.close()
                 for row in data:
-                    __columns__ = ['network_id',
-                                   'diagram_state_uid',
-                                   'net_device_1_ip',
-                                   'interface_1_uid',
-                                   'interface_1_weight',
-                                   'interface_1_ip',
-                                   'net_device_2_ip',
-                                   'interface_2_uid',
-                                   'interface_2_weight',
-                                   'interface_2_ip']
+                    p2p[row['network_id']] = [{'router_id': row['net_device_1_ip'],
+                                               'neighbor_ip': row['net_device_2_ip'],
+                                               'interface_ip': row['interface_1_ip'],
+                                               'metric': row['interface_1_weight'],
+                                               'network': row['network_id'] + "/32"
 
-                [{'router_id': row['net_device_1_ip'],
-                  'neighbor_ip': row['net_device_2_ip'],
-                  'interface_ip': row['interface_1_ip'],
-                  'metric': row['interface_1_weight'],
-                  'network': row['network_id'] + "/32"
+                                               }, {'router_id': row['net_device_2_ip'],
+                                                   'neighbor_ip': row['net_device_1_ip'],
+                                                   'interface_ip': row['interface_2_ip'],
+                                                   'metric': row['interface_2_weight'],
+                                                   'network': row['network_id'] + "/32"
 
-                  }]
+                                                   }]
 
                 return p2p
+        except Exception as e:
+            self.db_log.warning(f'p2p error loading')
+            return {}
 
-            return self.uid
         except Exception as e:
             self.db_log.warning(f'devices unable to load {self.diagram.name} {sql} {e}')
             connection.close()
-            return []
+            return {}
 
     def devices(self):
         try:
             connection = self.master.db_connect()
             with connection.cursor() as cursor:
-                sql = f'''SELECT nd.ip,nd.hostname,ds.x,ds.y FROM network_devices as nd inner join\
+                sql = f'''SELECT nd.roll,nd.country,nd.area,nd.uid,nd.ip,nd.hostname,nd.platform,ds.x,ds.y FROM network_devices as nd inner join\
                 diagram_state_net_devices as ds ON nd.uid=ds.net_device_uid where ds.diagram_state_uid={self.uid}'''
                 cursor.execute(sql)
                 data = cursor.fetchall()
                 attrs = {row['ip']: row for row in data}
+                platforms = {row['ip']: row['platform'] for row in data}
 
-                devices = Devices(ip_list=attrs.keys(), check_up=False, master=self.master)
+                devices = Devices(ip_list=attrs.keys(), platfforms=platforms, check_up=False, master=self.master)
                 devices.set_attrs(data=attrs)
+                devices.set_uid = True
+                self.devices_uid = {device.uid: device for device in devices}
                 connection.close()
-
                 return devices
-
-            return self.uid
         except Exception as e:
             self.db_log.warning(f'devices unable to load {self.diagram.name} {sql} {e}')
             connection.close()
             return []
+        return []

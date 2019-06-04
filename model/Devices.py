@@ -6,6 +6,9 @@ import threading  as th
 from tools import logged
 from multiprocessing import Process
 import time
+from model.InterfaceUfinet import InterfaceUfinet
+from collections import defaultdict
+
 
 @logged
 class Devices:
@@ -14,6 +17,7 @@ class Devices:
         self.errors = {}
         self.master = master
         self.devices = dict()
+        self.uid_devices = {}
         if network != "" and len(ip_list) == 0:
             ip_list = [str(host) for host in ipaddress.ip_network(network).hosts()]
         for ip in ip_list:
@@ -26,10 +30,12 @@ class Devices:
             self.execute(methods=["check_able_connect"])
             self._not_connected_devices = {ip: device for ip, device in self.devices.items() if not device.able_connect}
             self.devices = {ip: device for ip, device in self.devices.items() if device.able_connect}
-        self.execute(methods=["set_snmp_community"])
+            self.execute(methods=["set_snmp_community"])
 
         if not platfforms:
             self.__correct_classes()
+
+        self.set_uid = False
 
     @staticmethod
     def factory_device(master, ip):
@@ -64,11 +70,13 @@ class Devices:
             platform = device.platform
             hostname = device.hostname
             community = device.community
-            device = eval(device.platform)(device.ip, device.display_name, self.master)
+            if device.platform != "CiscoIOS":
+                device = eval(device.platform)(device.ip, device.display_name, self.master)
             new_devices[ip] = device
             device.platform = platform
             device.hostname = hostname
             device.community = community
+
         self.devices = new_devices
 
     def run_methods(self, methods, kwargs={}):
@@ -127,6 +135,49 @@ class Devices:
         for t in threads:
             t.join()
 
+    def dict_from_sql(self, sql) -> list:
+        self.db_log.warning(f'dict_from_sql {sql}')
+        try:
+            connection = self.master.db_connect()
+            with connection.cursor() as cursor:
+                cursor.execute(sql)
+                data = cursor.fetchall()
+                return data
+        except Exception as e:
+            self.db_log.warning(f'dict_from_sql error  {e} {sql}')
+            return []
+
+    def set_uids(self):
+        ipdevs = [f"'{dev.ip}'" for dev in self]
+        sql = f'SELECT uid,ip FROM netadmin.network_devices where ip in({",".join(ipdevs)})'
+        data = self.dict_from_sql(sql=sql)
+        for row in data:
+            self.devices[row['ip']].uid = row['uid']
+        for device in self:
+            device.get_uid_save()
+        self.set_uid = True
+
+    def uid_dict(self):
+        if not self.set_uid:
+            self.set_uids()
+
+        if len(self.uid_devices) == 0:
+            self.uid_devices = {dev.uid: dev for dev in self}
+
+    def set_interfaces_db(self):
+        self.uid_dict()
+        self.verbose.warning(f'set_interfaces_db INIT')
+        sql = InterfaceUfinet.sql_today_last_polled_interfaces(self.values())
+
+        data_interfaces = self.dict_from_sql(sql=sql)
+
+        data_segmented_by_uid = defaultdict(list)
+        for row in data_interfaces:
+            data_segmented_by_uid[row['net_device_uid']].append(row)
+
+        for device in self:
+            device.set_interfaces_data(interfaces_data=data_segmented_by_uid[device.uid])
+        self.verbose.warning(f'set_interfaces_db FINISH')
     def execute_processes(self, methods, kwargs={}, thread_window=100):
 
         processes = []

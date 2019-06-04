@@ -10,6 +10,7 @@ from model.Diagram import Diagram
 import ipaddress
 from pprint import pprint
 from collections import ChainMap
+from threading import Lock
 
 
 @logged
@@ -21,52 +22,65 @@ class ospf_database:
         self.area = area
         self.isp = isp
         self.diagram = Diagram(master=isp.master, name=network_name)
-
+        lock = Lock()
         if source == 'real_time':
             seed_router = Devices.factory_device(master=self.isp.master, ip=ip_seed_router)
 
             p2p, routers = seed_router.ospf_area_adjacency_p2p(process_id=process_id, area=area)
+            self.devices = Devices(master=self.isp.master, ip_list=routers, check_up=False)
+            self.devices.execute_processes(methods=['set_snmp_location_attr'])
+            self.devices.set_uids()
+            self.verbose.warning(f"_INIT_real_time  p2p :{len(p2p)} rourters {len(routers)}")
+
         # elif source =='last_state':
-
-        self.verbose.warning(f"_INIT_ p2p :{len(p2p)} rourters {len(routers)}")
-
-        self.devices = Devices(master=self.isp.master, ip_list=routers, check_up=False)
-        self.devices.execute_processes(methods=['set_snmp_location_attr'])
-        self.devices.execute_processes(methods=['get_uid_save'], thread_window=15)
-        self.devices.execute(methods=[interface_method], deferred=True, deferred_seconds=7, deferred_group=10)
-        # self.devices.execute_processes(methods=['interfaces_from_db_today'], thread_window=15)
+        elif source == "db":
+            self.diagram.get_newer_state()
+            self.devices = self.diagram.state.devices()
+            p2p = self.diagram.state.p2p()
+            self.verbose.warning(f"_INIT_ db  p2p:{len(p2p)} dev:{len(self.devices)}")
+        self.devices.set_interfaces_db()
 
         self.graph = Graph()
         self.neighbors_occurrences_count = defaultdict(int)
         threads = []
         result_p2p = []
-
+        self.verbose.warning(f"__INIT__Fishish diagram.state.p2p  {len(p2p)} ")
         for network, neighbors in p2p.items():
-            kwargs = {"list_networks": result_p2p, 'network_id': network, 'ospf_database': self, 'neighbors': neighbors,
-                      'network_type': 'p2p'}
-            t = Thread(target=ospf_adjacency.add_ospf_adjacency, kwargs=kwargs)
-            t.start()
-            threads.append(t)
-        for t in threads:
-            t.join()
-
-        self.p2p = {p2p.network_id: p2p for p2p in result_p2p}
-        self.p2p_down_links = self.ospf_down_interfaces()
-        p2p_down_adj = []
-        threads = []
-        for network, neighbors in self.p2p_down_links.items():
-            kwargs = {"list_networks": p2p_down_adj, 'network_id': network, 'ospf_database': self,
+            kwargs = {'lock': lock, "list_networks": result_p2p, 'network_id': network, 'ospf_database': self,
                       'neighbors': neighbors,
-                      'network_type': 'p2p_down', 'state': 'down'}
-            t = Thread(target=ospf_adjacency.add_ospf_adjacency, kwargs=kwargs)
+                      'network_type': 'p2p'}
+
+            t = Thread(target=ospf_adjacency.add_ospf_adjacency, name=network, kwargs=kwargs)
             t.start()
             threads.append(t)
-        for t in threads:
+        for index, t in enumerate(threads):
+            self.verbose.warning(f"tried p2p {index} {t.name} ")
             t.join()
-        self.p2p_down_links = {p2p.network_id: p2p for p2p in p2p_down_adj}
+            self.verbose.warning(f"joined p2p {index} {t.name} ")
 
-        self.verbose.warning(f'OSPF LINKS DOWN {len(self.p2p_down_links)}')
-        self.dev.info("OSPF DATABASE INIT FINISH")
+        self.verbose.warning(f"__INIT__Fishish join add_ospf_adjacency p2p {len(result_p2p)} ")
+        self.p2p = {p2p.network_id: p2p for p2p in result_p2p}
+        self.verbose.warning(f"__INIT__Fishish join add_ospf_adjacency real p2p {len(self.p2p)} ")
+
+        if source == 'real_time':
+            self.p2p_down_links = self.ospf_down_interfaces()
+            p2p_down_adj = []
+            threads = []
+            for network, neighbors in self.p2p_down_links.items():
+                kwargs = {'lock': lock, "list_networks": p2p_down_adj, 'network_id': network, 'ospf_database': self,
+                          'neighbors': neighbors,
+                          'network_type': 'p2p_down', 'state': 'down'}
+                t = Thread(target=ospf_adjacency.add_ospf_adjacency, kwargs=kwargs)
+                t.start()
+                threads.append(t)
+            for t in threads:
+                t.join()
+            self.p2p_down_links = {p2p.network_id: p2p for p2p in p2p_down_adj}
+            self.verbose.warning(f'OSPF LINKS DOWN {len(self.p2p_down_links)}')
+        else:
+            self.p2p_down_links = {}
+
+        self.verbose.warning("OSPF DATABASE INIT FINISH")
 
     @property
     def adjacencies(self):
@@ -80,13 +94,13 @@ class ospf_database:
 
         p2p = {}
         down_ospf_interfaces = [interface for device in self.devices for interface in device.interfaces.values() if
-                                (interface.protocol_state == 'down' or interface.link_state == 'down') \
+                                (interface.protocol_state == 'down' or interface.link_state == 'down')
                                 and interface.l3_protocol == "MPLS"
                                 and interface.l3_protocol_attr == "OSP"]
 
         for interface in down_ospf_interfaces:
             net_id = str(ipaddress.IPv4Network(str(interface.ip) + "/30", strict=False).network_address)
-            if interface.parent_device.ip in ['172.16.30.246', '172.16.30.244']:
+            if interface.parent_device.ip in []:
                 self.verbose.warning(f' nt:{net_id} n:{interface.parent_device.ip} i:{interface.ip}')
             try:
                 if net_id != "127.0.0.0":
@@ -114,11 +128,10 @@ class ospf_database:
                                 'network': net_id
                                 }
                         p2p[net_id] = [data]
-                self.verbose.warning(
+                self.verbose.debug(
                     f'set_down_mpls_interfaces p2p down {net_id} {interface.parent_device.ip} {len(p2p)}')
             except Exception as e:
                 self.verbose.warning(f'set_down_mpls_interfaces {interface} error {e}')
-        pprint(p2p)
         return p2p
 
     def get_yed_file(self, filename):
@@ -135,12 +148,7 @@ class ospf_database:
         edges = [edge.get_vs() for edge in self.p2p.values()]
         edges_down = [edge.get_vs() for edge in self.p2p_down_links.values()]
         topology = {"nodes": [
-            router.get_vs(x=self.diagram.devices_uid[router.uid]['x'] if router.uid in self.diagram.devices_uid
-            else 0,
-                          y=self.diagram.devices_uid[router.uid][
-                              'y'] if router.uid in self.diagram.devices_uid
-                          else 0,
-                          ) for router in
+            router.get_vs() for router in
             self.routers.values()],
             "edges": edges + edges_down,
             'options': self.get_vs_options()}

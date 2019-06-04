@@ -14,6 +14,8 @@ from model.ospf_database import ospf_database
 from tools import real_get_bulk
 import pysnmp
 from model.Diagram import DiagramState, Diagram
+import tools
+from collections import Counter
 
 '''if_index,
                 description,
@@ -34,15 +36,19 @@ parameters= {
     }
 data =isp.ospf_topology_vs(**parameters)
 '''
-'''
+
 isp = ISP()
 isp.master = Master()
-device = CiscoIOS(ip='172.16.30.5', display_name='a', master=isp.master)
+device = CiscoIOS(ip='172.16.30.5', display_name='a', master=isp.master, )
+guatemala = {
+    "ip_seed_router": "172.17.22.52",
+    "process_id": '502', "area": '502008', 'network_name': 'RCE_GUATEMALA'
+}
+dbd = ospf_database(isp=isp, source='real_time', **guatemala)
+dbd.diagram.save()
+dbd.diagram.save_state()
 
-dbd = ospf_database(ip_seed_router=device.ip, isp=isp, process_id='1', area='0')
 
-pprint(dbd.ospf_down_interfaces())
-'''
 # device.set_interfaces()
 # InterfaceUfinet.interfaces_uid(device,device.interfaces.values())
 
@@ -88,16 +94,17 @@ master = Master()
 isp = ISP()
 isp.master = Master()
 
-dbd = ospf_database(ip_seed_router='172.16.30.5', isp=isp, process_id='1', area='0',
-                    network_name='_ospf_ufinet_regional')
+# dbd = ospf_database(ip_seed_router='172.16.30.5', isp=isp, process_id='1', area='0',
+#                  network_name='_ospf_ufinet_regional',source='db')
 
-dbd.save_state()
+# dbd.save_state()
 
-diagram = Diagram(name='_ospf_ufinet_regional', master=isp.master)
-
-diagram.get_newer_state()
-devices = diagram.state.devices()
-print([device.ip for device in devices])
+dia = Diagram(name='_ospf_ufinet_regional', master=master)
+dia.get_newer_state()
+devices = dia.state.devices()
+devices.execute(methods=['set_snmp_location_attr'])
+for device in devices:
+    device.update_db()
 
 '''
 oid = "1.3.6.1.2.1.2.2.1.2"

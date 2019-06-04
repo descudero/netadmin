@@ -1375,11 +1375,8 @@ class CiscoIOS(Parent):
         except Exception as e:
             image = '../static/img/' + self.platform + '.png'
             self.verbose.warning("get_vs:" + self.ip + " err " + str(e))
-
-        if self.uid_db() == 0:
-            self.save()
         return {'mass': 10, 'id': self.uid, 'label': self.ip + " " + self.hostname, 'font': {'size': '8'},
-                'image': image, 'shape': 'image', 'ip': self.ip, 'x': x, 'y': y}
+                'image': image, 'shape': 'image', 'ip': self.ip, 'x': self.x, 'y': self.y}
 
     def get_vfis_interface_per_service_instance(self):
         '''
@@ -1491,24 +1488,27 @@ class CiscoIOS(Parent):
             self.log_db.warning(self.ip + " " + str(e))
 
     def uid_db(self):
-        try:
-            connection = self.master.db_connect()
-            with connection.cursor() as cursor:
-                sql = '''SELECT uid FROM network_devices WHERE ip=%s ORDER BY uid DESC limit 1'''
-                cursor.execute(sql, (self.ip,))
-                result = cursor.fetchone()
-                if (result):
-                    self.uid = result['uid']
-                    connection.close()
-                    return self.uid
-                else:
-                    self.uid = 0
-                    connection.close()
-                    return 0
-        except Exception as e:
-            self.log_db.warning(self.ip + " " + str(e))
+        if self.uid == 0:
+            try:
+                connection = self.master.db_connect()
+                with connection.cursor() as cursor:
+                    sql = '''SELECT uid FROM network_devices WHERE ip=%s ORDER BY uid DESC limit 1'''
+                    cursor.execute(sql, (self.ip,))
+                    result = cursor.fetchone()
+                    if (result):
+                        self.uid = result['uid']
+                        connection.close()
+                        return self.uid
+                    else:
+                        self.uid = 0
+                        connection.close()
+                        return 0
+            except Exception as e:
+                self.log_db.warning(self.ip + " " + str(e))
 
-            return 0
+                return 0
+        else:
+            return self.uid
 
     def dict_from_sql(self, sql):
         if self.in_db():
@@ -1517,23 +1517,33 @@ class CiscoIOS(Parent):
                 with connection.cursor() as cursor:
                     cursor.execute(sql)
                     data = cursor.fetchall()
+                    if len(data) == 0:
+                        self.verbose.warning(f'dict_from_sql no data {self.ip} {sql}')
                     return data
             except Exception as e:
 
                 self.db_log(f'dict_from_sql error {self.ip} {e}')
                 pass
 
+    def set_interfaces_data(self, interfaces_data=[]):
+        self.interfaces = InterfaceUfinet.factory_from_dict(device=self, interfaces_data=interfaces_data)
+        self.interfaces_ip = {str(interface_object.ip): interface_object
+                              for interface_object in self.interfaces.values()}
+        if len(self.interfaces) == 0:
+            self.verbose.warning(
+                f'set_interfaces_data u:{self.uid} {self.ip} {self.hostname} I:{len(self.interfaces)} ID:{len(
+                    interfaces_data)}')
+
     def interfaces_from_db_today(self):
 
         sql = InterfaceUfinet.sql_today_last_polled_interfaces(
-            device=self)
+            devices=[self])
+
+        interfaces_data = self.dict_from_sql(sql=sql)
         self.db_log.debug(f'interfaces_from_db_today: {self.uid} {self.ip} {sql}')
-        self.db_log.debug(f'interfaces_from_db_today: {self.uid} {self.ip} {sql}')
-        self.interfaces = InterfaceUfinet.factory_from_dict(device=self,
-                                                            interfaces_data=self.dict_from_sql(
-                                                                sql=sql))
-        self.interfaces_ip = {str(interface_object.ip): interface_object for interface_object in
-                              self.interfaces.values()}
+        self.set_interfaces_data(interfaces_data=interfaces_data)
+
+
 
     def in_db(self):
         if self.uid != 0:
@@ -1548,13 +1558,33 @@ class CiscoIOS(Parent):
             self.save()
         return self.uid
 
+    def update_db(self):
+        try:
+            connection = self.master.db_connect()
+            with connection.cursor() as cursor:
+                sql = f'''UPDATE netadmin.network_devices SET 
+                hostname='{self.hostname}',
+                ip='{self.ip}',
+                country='{self.country}',
+                area='{self.area}',
+                roll='{self.roll}' 
+                 WHERE uid='{self.uid}' '''
+                try:
+                    cursor.execute(sql)
+                    connection.commit()
+                except Exception as e:
+                    self.db_log.warning(f'update {self.hostname} {self.ip} {e} {sql}')
+
+        except Exception as e:
+            self.verbose.warning(f'update {self.hostname} {self.ip} {e}')
+
     def save(self):
 
         try:
             connection = self.master.db_connect()
             with connection.cursor() as cursor:
-                sql = f'''INSERT INTO network_devices(ip,hostname,platform)
-                VALUES ('{self.ip}','{self.hostname}','{self.platform}')'''
+                sql = f'''INSERT INTO network_devices(ip,hostname,platform,country,area,roll)
+                VALUES ('{self.ip}','{self.hostname}','{self.platform}','{self.country}','{self.area}','{self.roll}')'''
                 cursor.execute(sql)
                 connection.commit()
                 self.uid = cursor.lastrowid

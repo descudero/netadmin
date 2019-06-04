@@ -1532,47 +1532,65 @@
       <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="359" parent="240" name="ip">
+    <column id="359" parent="240" name="country">
+      <Position>5</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <DefaultExpression>&apos;NA&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="360" parent="240" name="area">
+      <Position>6</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <DefaultExpression>&apos;NA&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="361" parent="240" name="roll">
+      <Position>7</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <DefaultExpression>&apos;NA&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="362" parent="240" name="ip">
       <ColNames>ip</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="360" parent="240" name="hostname">
+    <index id="363" parent="240" name="hostname">
       <ColNames>hostname</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="361" parent="240" name="PRIMARY">
+    <key id="364" parent="240" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>uid</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="362" parent="240" name="ip">
+    <key id="365" parent="240" name="ip">
       <ColNames>ip</ColNames>
       <UnderlyingIndexName>ip</UnderlyingIndexName>
     </key>
-    <key id="363" parent="240" name="hostname">
+    <key id="366" parent="240" name="hostname">
       <ColNames>hostname</ColNames>
       <UnderlyingIndexName>hostname</UnderlyingIndexName>
     </key>
-    <column id="364" parent="241" name="uid">
+    <column id="367" parent="241" name="uid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="365" parent="241" name="username">
+    <column id="368" parent="241" name="username">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="366" parent="241" name="hash">
+    <column id="369" parent="241" name="hash">
       <Position>3</Position>
       <DataType>varchar(70)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="367" parent="241" name="PRIMARY">
+    <key id="370" parent="241" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>uid</ColNames>
       <Primary>1</Primary>
