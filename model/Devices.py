@@ -27,10 +27,10 @@ class Devices:
                 self.devices[ip] = eval(platfforms[ip])(ip=ip, display_name="", master=master)
 
         if check_up:
-            self.execute(methods=["check_able_connect"])
+            self.execute(methods=["check_able_connect"], thread_window=50)
             self._not_connected_devices = {ip: device for ip, device in self.devices.items() if not device.able_connect}
             self.devices = {ip: device for ip, device in self.devices.items() if device.able_connect}
-            self.execute(methods=["set_snmp_community"])
+            self.execute(methods=["set_snmp_community"], thread_window=50)
 
         if not platfforms:
             self.__correct_classes()
@@ -154,7 +154,8 @@ class Devices:
         for row in data:
             self.devices[row['ip']].uid = row['uid']
         for device in self:
-            device.get_uid_save()
+            if device.uid == 0:
+                device.save()
         self.set_uid = True
 
     def uid_dict(self):

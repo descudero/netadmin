@@ -64,6 +64,8 @@ class CiscoIOS(Parent):
         self.device_type = "cisco_ios_"
         self.uid = 0
         self.country = "NA"
+        self.roll = "NA"
+        self.area = "NA"
         self.x = 0
         self.y = 0
 
@@ -457,6 +459,10 @@ class CiscoIOS(Parent):
         self.prefix_per_interface = prefix_interface
         return prefix_interface
 
+    def auto_send_command(self, command):
+        connection = self.connect()
+        data = self.send_command(connection=connection, command=command)
+        self.verbose.warning(f'auto_send_command {data}')
     def connect(self, username_pattern='username', password_pattern="password", pattern="#", device_type="cisco_ios_"):
         self.logger_connection.info("Start of connection {0}".format(self.ip))
         '''
@@ -1534,152 +1540,138 @@ class CiscoIOS(Parent):
                 f'set_interfaces_data u:{self.uid} {self.ip} {self.hostname} I:{len(self.interfaces)} ' \
                     f'ID:{len(interfaces_data)}')
 
+    def interfaces_from_db_today(self):
+        sql = InterfaceUfinet.sql_today_last_polled_interfaces(
+            devices=[self])
 
-def interfaces_from_db_today(self):
-    sql = InterfaceUfinet.sql_today_last_polled_interfaces(
-        devices=[self])
+        interfaces_data = self.dict_from_sql(sql=sql)
+        self.db_log.debug(f'interfaces_from_db_today: {self.uid} {self.ip} {sql}')
+        self.set_interfaces_data(interfaces_data=interfaces_data)
 
-    interfaces_data = self.dict_from_sql(sql=sql)
-    self.db_log.debug(f'interfaces_from_db_today: {self.uid} {self.ip} {sql}')
-    self.set_interfaces_data(interfaces_data=interfaces_data)
+    def in_db(self):
+        if self.uid != 0:
+            return True
+        elif self.uid_db() == 0:
+            return False
+        else:
+            return True
 
+    def get_uid_save(self):
+        if not self.in_db():
+            self.save()
+        return self.uid
 
-def in_db(self):
-    if self.uid != 0:
-        return True
-    elif self.uid_db() == 0:
-        return False
-    else:
-        return True
+    def update_db(self):
+        try:
+            connection = self.master.db_connect()
+            with connection.cursor() as cursor:
+                sql = f'''UPDATE netadmin.network_devices SET 
+                    hostname='{self.hostname}',
+                    ip='{self.ip}',
+                    country='{self.country}',
+                    area='{self.area}',
+                    roll='{self.roll}' 
+                     WHERE uid='{self.uid}' '''
+                try:
+                    cursor.execute(sql)
+                    connection.commit()
+                except Exception as e:
+                    self.db_log.warning(f'update {self.hostname} {self.ip} {e} {sql}')
 
+        except Exception as e:
+            self.verbose.warning(f'update {self.hostname} {self.ip} {e}')
 
-def get_uid_save(self):
-    if not self.in_db():
-        self.save()
-    return self.uid
-
-
-def update_db(self):
-    try:
-        connection = self.master.db_connect()
-        with connection.cursor() as cursor:
-            sql = f'''UPDATE netadmin.network_devices SET 
-                hostname='{self.hostname}',
-                ip='{self.ip}',
-                country='{self.country}',
-                area='{self.area}',
-                roll='{self.roll}' 
-                 WHERE uid='{self.uid}' '''
-            try:
+    def save(self):
+        try:
+            connection = self.master.db_connect()
+            with connection.cursor() as cursor:
+                sql = f'''INSERT INTO network_devices(ip,hostname,platform,country,area,roll)
+                    VALUES ('{self.ip}','{self.hostname}','{self.platform}','{self.country}','{self.area}','{self.roll}')'''
                 cursor.execute(sql)
                 connection.commit()
-            except Exception as e:
-                self.db_log.warning(f'update {self.hostname} {self.ip} {e} {sql}')
+                self.uid = cursor.lastrowid
+                self.db_log(":SAVED uid:" + self.uid)
+            return self.uid
+        except Exception as e:
+            self.db_log.warning(f'SAVE {self.ip} {e}')
 
-    except Exception as e:
-        self.verbose.warning(f'update {self.hostname} {self.ip} {e}')
+            connection.close()
+            return False
 
+    def save_interfaces_states(self, filters={}):
+        interfaces = self.get_interfaces_filtered(filters=filters)
+        return InterfaceUfinet.save_bulk_states(device=self, interfaces=interfaces)
 
-def save(self):
-    try:
-        connection = self.master.db_connect()
-        with connection.cursor() as cursor:
-            sql = f'''INSERT INTO network_devices(ip,hostname,platform,country,area,roll)
-                VALUES ('{self.ip}','{self.hostname}','{self.platform}','{self.country}','{self.area}','{self.roll}')'''
-            cursor.execute(sql)
-            connection.commit()
-            self.uid = cursor.lastrowid
-            self.db_log(":SAVED uid:" + self.uid)
-        return self.uid
-    except Exception as e:
-        self.db_log.warning(f'SAVE {self.ip} {e}')
+    def get_interfaces_filtered(self, filters):
+        interfaces = self.interfaces.values()
+        for attribute, filter in filters.items():
+            interfaces = [interface for interface in interfaces
+                          if filter in getattr(interface, attribute)]
+        return interfaces
 
-        connection.close()
-        return False
+    def set_ip_explicit_paths(self, template_name="ip explicit-path ios.template"):
+        list_of_hops = self.send_command_and_parse(command="show run | s ip explicit-path", \
+                                                   template_name=template_name)
+        path_names = {hop['name'] for hop in list_of_hops}
+        self.explicit_paths = {}
+        for path_name in path_names:
+            self.explicit_paths[path_name] = IpExplicitPath(name=path_name, hops=[hop for hop in list_of_hops if
+                                                                                  hop["name"] == path_name],
+                                                            parent_device=self)
 
+        return self.explicit_paths
 
-def save_interfaces_states(self, filters={}):
-    interfaces = self.get_interfaces_filtered(filters=filters)
-    return InterfaceUfinet.save_bulk_states(device=self, interfaces=interfaces)
+    def add_hop_ip_explicit_paths(self, hop, ip_reference_hop, index_way="before"):
+        self.ip_explicit_paths()
+        new_paths = []
 
+        for path in [path_ for key, path_ in self.explicit_paths.items() if path_.ip_on_path(ip=ip_reference_hop)]:
+            new_paths.append(path.copy_path_new_hop(ip_reference_hop=ip_reference_hop, hop=hop, index_way=index_way))
 
-def get_interfaces_filtered(self, filters):
-    interfaces = self.interfaces.values()
-    for attribute, filter in filters.items():
-        interfaces = [interface for interface in interfaces
-                      if filter in getattr(interface, attribute)]
-    return interfaces
+        return new_paths
 
+    def save_bgp_neighbors_states(self, special_community=None):
+        if not hasattr(self, 'snmp_bgp_neighbors'):
+            self.set_snmp_bgp_neighbors(special_community=special_community)
 
-def set_ip_explicit_paths(self, template_name="ip explicit-path ios.template"):
-    list_of_hops = self.send_command_and_parse(command="show run | s ip explicit-path", \
-                                               template_name=template_name)
-    path_names = {hop['name'] for hop in list_of_hops}
-    self.explicit_paths = {}
-    for path_name in path_names:
-        self.explicit_paths[path_name] = IpExplicitPath(name=path_name, hops=[hop for hop in list_of_hops if
-                                                                              hop["name"] == path_name],
-                                                        parent_device=self)
+        for address_family, neighbors in self.bgp_snmp_neighbors.items():
+            BGPNeighbor.save_bulk_states(device=self, neighbors=neighbors.values())
 
-    return self.explicit_paths
+    def set_interfaces_snmp(self, connection=False):
+        self.verbose.critical(f'set_interfaces_snmp {self.ip}')
+        interfaces_data = InterfaceUfinet.bulk_snmp_data_interfaces(device=self)
+        self.interfaces = InterfaceUfinet.factory_from_dict(device=self, interfaces_data=interfaces_data.values())
 
-
-def add_hop_ip_explicit_paths(self, hop, ip_reference_hop, index_way="before"):
-    self.ip_explicit_paths()
-    new_paths = []
-
-    for path in [path_ for key, path_ in self.explicit_paths.items() if path_.ip_on_path(ip=ip_reference_hop)]:
-        new_paths.append(path.copy_path_new_hop(ip_reference_hop=ip_reference_hop, hop=hop, index_way=index_way))
-
-    return new_paths
-
-
-def save_bgp_neighbors_states(self, special_community=None):
-    if not hasattr(self, 'snmp_bgp_neighbors'):
-        self.set_snmp_bgp_neighbors(special_community=special_community)
-
-    for address_family, neighbors in self.bgp_snmp_neighbors.items():
-        BGPNeighbor.save_bulk_states(device=self, neighbors=neighbors.values())
-
-
-def set_interfaces_snmp(self, connection=False):
-    self.verbose.critical(f'set_interfaces_snmp {self.ip}')
-    interfaces_data = InterfaceUfinet.bulk_snmp_data_interfaces(device=self)
-    self.interfaces = InterfaceUfinet.factory_from_dict(device=self, interfaces_data=interfaces_data.values())
-
-    if len(self.interfaces) == 0:
-        if not connection:
-            self.dev.critical(
-                f'set_interfaces_snmp Unable to set Interfaces snmp {len(self.interfaces)} {self.ip} not connected')
+        if len(self.interfaces) == 0:
+            if not connection:
+                self.dev.critical(
+                    f'set_interfaces_snmp Unable to set Interfaces snmp {len(self.interfaces)} {self.ip} not connected')
+            else:
+                self.set_interfaces()
+                self.dev.warning(
+                    f'set_interfaces_snmp Unable to set Interfaces snmp {len(self.interfaces)} {self.ip}')
         else:
-            self.set_interfaces()
-            self.dev.warning(
-                f'set_interfaces_snmp Unable to set Interfaces snmp {len(self.interfaces)} {self.ip}')
-    else:
-        self.dev.info(f'set_interfaces_snmp able Interfaces snmp {len(self.interfaces)} {self.ip}')
+            self.dev.info(f'set_interfaces_snmp able Interfaces snmp {len(self.interfaces)} {self.ip}')
 
-    return self.interfaces
+        return self.interfaces
 
+    def save_interfaces(self):
+        interfaces = [interface for interface in self.interfaces.values()
+                      if interface.l3_protocol != "UNKNOWN"
+                      and interface.l3_protocol_attr != "UNKNOWN"
+                      and interface.l1_protocol_attr != "UNKNOWN"
+                      and interface.l1_protocol != "UNKNOWN"]
+        InterfaceUfinet.save_bulk_states(device=self, interfaces=interfaces)
 
-def save_interfaces(self):
-    interfaces = [interface for interface in self.interfaces.values()
-                  if interface.l3_protocol != "UNKNOWN"
-                  and interface.l3_protocol_attr != "UNKNOWN"
-                  and interface.l1_protocol_attr != "UNKNOWN"
-                  and interface.l1_protocol != "UNKNOWN"]
-    InterfaceUfinet.save_bulk_states(device=self, interfaces=interfaces)
+    def correct_ip_interfaces(self):
+        self.verbose.warning(f'correct_ip_interfaces {self.ip}')
+        for if_index, interface in self.interfaces.items():
+            interface.correct_ip()
 
-
-def correct_ip_interfaces(self):
-    self.verbose.warning(f'correct_ip_interfaces {self.ip}')
-    for if_index, interface in self.interfaces.items():
-        interface.correct_ip()
-
-
-@staticmethod
-def load_uid(master, uid):
-    connection = master.db_connect()
-    with connection.cursor() as cursor:
-        sql = f'''SELECT * FROM    netadmin.network_devices WHERE   uid ={uid} '''
-        cursor.execute(sql)
-        data = cursor.fetchone()
+    @staticmethod
+    def load_uid(master, uid):
+        connection = master.db_connect()
+        with connection.cursor() as cursor:
+            sql = f'''SELECT * FROM    netadmin.network_devices WHERE   uid ={uid} '''
+            cursor.execute(sql)
+            data = cursor.fetchone()

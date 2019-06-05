@@ -16,6 +16,8 @@ import pysnmp
 from model.Diagram import DiagramState, Diagram
 import tools
 from collections import Counter
+from collections import defaultdict
+import pickle
 
 '''if_index,
                 description,
@@ -39,15 +41,79 @@ data =isp.ospf_topology_vs(**parameters)
 
 isp = ISP()
 isp.master = Master()
-device = CiscoIOS(ip='172.16.30.5', display_name='a', master=isp.master, )
-guatemala = {
-    "ip_seed_router": "172.17.22.52",
-    "process_id": '502', "area": '502008', 'network_name': 'RCE_GUATEMALA'
-}
-dbd = ospf_database(isp=isp, source='real_time', **guatemala)
-dbd.diagram.save()
-dbd.diagram.save_state()
+isp.master.username = 'descuderor'
+isp.master.password = 'Zekto2014-'
+# device = CiscoIOS(ip='172.16.30.5', display_name='a', master=isp.master, )
+# guatemala = {
+#      "ip_seed_router": "172.17.22.52",
+#      "process_id": '502', "area": '502008', 'network_name': 'RCE_GUATEMALA'
+#  }
+# dbd = ospf_database(isp=isp, source='real_time', **guatemala)
+# with open("ip_routers_gt","w") as f:
+#     f.write("\n".join(dbd.real_routers))
 
+with open("ip_routers_gt", "r") as f:
+    ips = [line.replace("\n", "") for line in f]
+
+devs = Devices(ip_list=ips, master=isp.master, check_up=True)
+data = [{"ip": dev.ip, "com": dev.community} for dev in devs]
+isp.save_to_excel_list(list_data=data, file_name="snmp_gt_data")
+
+#
+# data = []
+# def_dict = defaultdict(list)
+# prepend = "interface "
+# suffix = "description L3:MPLOSP D:B L1:DP "
+# for network, adj in dbd.adjacencies.items():
+#     try:
+#         s = {'ip': adj.s_device.ip,
+#              'config': f' {prepend} {adj.s_interface.if_index} \n {suffix} {adj.s_interface.description}'}
+#
+#     except:
+#         s = {'ip': adj.s_device.ip, 'config': adj.s["interface_ip"]}
+#     try:
+#         t = {'ip': adj.t_device.ip,
+#              'config': f' {prepend} {adj.t_interface.if_index} \n {suffix} {adj.t_interface.description}'}
+#     except:
+#         t = {'ip': adj.t_device.ip, 'config': adj.t["interface_ip"]}
+#
+#     data.append(s)
+#     data.append(t)
+#     try:
+#         if adj.s_interface.l3_protocol == "UNKNOWN":
+#             def_dict[t['ip']].append(t["config"])
+#     except:
+#         pass
+#     try:
+#         if adj.t_interface.l3_protocol == "UNKNOWN":
+#             def_dict[s['ip']].append(s["config"])
+#     except:
+#         pass
+#
+# pickle.dump(def_dict,open( "gt.p", "wb" ))
+# pprint(def_dict)
+# def_dict = pickle.load(open( "gt.p", "rb" ))
+# ips = list(def_dict.keys())
+# pprint(ips)
+# pprint(len(ips))
+
+# data_config = {}
+#
+# for ip, data in def_dict.items():
+#
+#     interfaces = [row for row in data if row.count('L3:') == 1]
+#     if interfaces:
+#         dv = CiscoIOS(ip=ip, display_name="", master=isp.master)
+#
+#         command = "configure terminal \n\n"+"\n".join(interfaces) + "\nend\n wr"
+#         data_config[ip]=command
+#         dv.auto_send_command(command=command)
+#
+#     # dbd.devices.devices[ip].auto_send_command(command=command)
+# pickle.dump(def_dict,open( "gt2.p", "wb" ))
+# pprint(data_config)
+
+# isp.save_to_excel_list(list_data=data, file_name="gt_config")
 
 # device.set_interfaces()
 # InterfaceUfinet.interfaces_uid(device,device.interfaces.values())
@@ -98,13 +164,13 @@ isp.master = Master()
 #                  network_name='_ospf_ufinet_regional',source='db')
 
 # dbd.save_state()
-
-dia = Diagram(name='_ospf_ufinet_regional', master=master)
-dia.get_newer_state()
-devices = dia.state.devices()
-devices.execute(methods=['set_snmp_location_attr'])
-for device in devices:
-    device.update_db()
+#
+# dia = Diagram(name='_ospf_ufinet_regional', master=master)
+# dia.get_newer_state()
+# devices = dia.state.devices()
+# devices.execute(methods=['set_snmp_location_attr'])
+# for device in devices:
+#     device.update_db()
 
 '''
 oid = "1.3.6.1.2.1.2.2.1.2"
