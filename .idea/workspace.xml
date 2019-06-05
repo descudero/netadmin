@@ -7,7 +7,7 @@
     <bookmark url="file://$PROJECT_DIR$/web_server.py" line="354" />
     <bookmark url="file://$PROJECT_DIR$/static/js/graphs.js" line="57" />
     <bookmark url="file://$PROJECT_DIR$/model/CiscoIOS.py" line="414" />
-    <bookmark url="file://$PROJECT_DIR$/model/Diagram.py" line="216" />
+    <bookmark url="file://$PROJECT_DIR$/model/Diagram.py" line="217" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="462384ac-2f64-47a0-b6d2-b16ff1b36497" name="Default" comment="mejora de ospf diagram.">
@@ -15,10 +15,13 @@
       <change beforePath="$PROJECT_DIR$/logs/connections.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/connections.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/db.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/db.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/CiscoIOS.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/CiscoIOS.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Devices.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Devices.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/performance.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/performance.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Diagram.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Diagram.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/ospf_adjacency.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/ospf_adjacency.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/ospf_database.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/ospf_database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/db/queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/resources/db/queries.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sshtest.py" beforeDir="false" afterPath="$PROJECT_DIR$/sshtest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_server.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +36,7 @@
     <SUITE FILE_PATH="coverage/netadmin$Nosetests_in_test_devices_py.coverage" NAME="Nosetests in test_devices.py Coverage Results" MODIFIED="1554307354016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/netadmin$ttextfsm_uf.coverage" NAME="ttextfsm_uf Coverage Results" MODIFIED="1552080879621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/resources/templates" />
     <SUITE FILE_PATH="coverage/netadmin$test_textfsm.coverage" NAME="test_textfsm Coverage Results" MODIFIED="1547657044051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/resources/templates" />
-    <SUITE FILE_PATH="coverage/netadmin$sshtest.coverage" NAME="sshtest Coverage Results" MODIFIED="1559693518931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/netadmin$sshtest.coverage" NAME="sshtest Coverage Results" MODIFIED="1559696204955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -70,6 +73,13 @@
         <item name="ufinet" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="netadmin: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="diagram_states: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ufinet" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="netadmin: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="diagrams: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
@@ -80,11 +90,35 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file pinned="false" current-in-tab="true">
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="809">
+                    <caret line="1589" column="35" selection-start-line="1589" selection-start-column="35" selection-end-line="1589" selection-end-column="35" />
+                    <folding>
+                      <element signature="e#0#16#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/model/ospf_adjacency.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="396">
+                    <caret line="249" column="72" selection-start-line="249" selection-start-column="72" selection-end-line="249" selection-end-column="72" />
+                    <folding>
+                      <element signature="e#0#25#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/sshtest.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="276">
-                    <caret line="57" column="59" selection-start-line="57" selection-start-column="59" selection-end-line="57" selection-end-column="59" />
+                  <state relative-caret-position="232">
+                    <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
                     <folding>
                       <element signature="e#0#25#0" expanded="true" />
                     </folding>
@@ -101,13 +135,33 @@
                 </provider>
               </entry>
             </file>
-            <file pinned="false" current-in-tab="false">
+            <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/model/ospf_database.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="637">
-                    <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+                  <state relative-caret-position="-660">
+                    <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
                     <folding>
                       <element signature="e#0#35#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+    <window id="2">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/web_server.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="168">
+                    <caret line="511" column="44" selection-start-line="511" selection-start-column="44" selection-end-line="511" selection-end-column="44" />
+                    <folding>
+                      <element signature="e#0#58#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -129,57 +183,6 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/InterfaceUfinet.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="94" column="48" selection-start-line="94" selection-start-column="41" selection-end-line="94" selection-end-column="48" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fix_sql.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="46562" column="7" selection-start-line="46562" selection-start-column="7" selection-end-line="46562" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/diagramas.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="72" column="10" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/db/queries.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6864">
-              <caret line="312" selection-start-line="312" selection-end-line="312" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/InterfaceIOS.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2772">
-              <caret line="128" column="35" selection-start-line="128" selection-start-column="35" selection-end-line="128" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="das://64ab1a34-8529-4526-93b9-a2e1a4795eac/schema/netadmin/table/diagram_states">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
@@ -188,14 +191,59 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logs/db.log">
+          <provider selected="true" editor-type-id="LogFileEditorProvider">
+            <state relative-caret-position="-7352">
+              <caret line="11432" column="34" selection-start-line="11427" selection-start-column="124" selection-end-line="11432" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/model/Devices.py">
+        <entry file="file://$PROJECT_DIR$/model/Diagram.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1069">
-              <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+            <state relative-caret-position="208">
+              <caret line="46" column="13" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="13" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#0#24#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/db/queries.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="426">
+              <caret line="314" column="47" selection-start-line="314" selection-start-column="47" selection-end-line="314" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://64ab1a34-8529-4526-93b9-a2e1a4795eac/schema/netadmin/table/diagrams">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://64ab1a34-8529-4526-93b9-a2e1a4795eac/schema/netadmin/table/diagram_state_adjacencies">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://64ab1a34-8529-4526-93b9-a2e1a4795eac/schema/netadmin/table/diagram_network_devices">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -231,8 +279,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>adj_neighbors</find>
-      <find>neighbors_dict</find>
       <find>'interface</find>
       <find>'interface'</find>
       <find>adj_ob</find>
@@ -240,7 +286,6 @@
       <find>get_vs</find>
       <find>diagram</find>
       <find>ospf</find>
-      <find>save</find>
       <find>interface</find>
       <find>def sql</find>
       <find>self.diagram</find>
@@ -261,6 +306,9 @@
       <find>def conn</find>
       <find>conn</find>
       <find>def color_usage</find>
+      <find>set_interfaces_snmp</find>
+      <find>save</find>
+      <find>save_x</find>
     </findStrings>
     <replaceStrings>
       <replace>type</replace>
@@ -315,16 +363,16 @@
         <option value="$PROJECT_DIR$/model/claseClaro.py" />
         <option value="$PROJECT_DIR$/resources/templates/snmp_location_attr_profile.template" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/resources/db/queries.sql" />
         <option value="$PROJECT_DIR$/templates/diagramas.html" />
-        <option value="$PROJECT_DIR$/web_server.py" />
         <option value="$PROJECT_DIR$/model/InterfaceUfinet.py" />
-        <option value="$PROJECT_DIR$/model/Diagram.py" />
-        <option value="$PROJECT_DIR$/model/ospf_adjacency.py" />
         <option value="$PROJECT_DIR$/model/CiscoIOS.py" />
-        <option value="$PROJECT_DIR$/model/ospf_database.py" />
         <option value="$PROJECT_DIR$/model/Devices.py" />
+        <option value="$PROJECT_DIR$/resources/db/queries.sql" />
         <option value="$PROJECT_DIR$/sshtest.py" />
+        <option value="$PROJECT_DIR$/model/ospf_adjacency.py" />
+        <option value="$PROJECT_DIR$/model/ospf_database.py" />
+        <option value="$PROJECT_DIR$/model/Diagram.py" />
+        <option value="$PROJECT_DIR$/web_server.py" />
       </list>
     </option>
   </component>
@@ -347,6 +395,22 @@
             <path>
               <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
               <item name="netadmin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
@@ -644,14 +708,7 @@
       <workItem from="1558582026839" duration="437000" />
       <workItem from="1558971508129" duration="33395000" />
       <workItem from="1559228888342" duration="11754000" />
-      <workItem from="1559577410160" duration="50170000" />
-    </task>
-    <task id="LOCAL-00070" summary="first3">
-      <created>1555088907685</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1555088907685</updated>
+      <workItem from="1559577410160" duration="53923000" />
     </task>
     <task id="LOCAL-00071" summary="first3">
       <created>1555091711138</created>
@@ -989,7 +1046,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559678534756</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="mejora de ospf diagram.">
+      <created>1559693855879</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1559693855879</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1025,7 +1089,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="669176000" />
+    <option name="totallyTimeSpent" value="672929000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1038,19 +1102,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.73540145" visible="true" weight="0.25832438" />
-      <window_info id="Structure" order="1" sideWeight="0.26459855" side_tool="true" visible="true" weight="0.25832438" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.73624593" visible="true" weight="0.25832438" />
+      <window_info id="Structure" order="1" sideWeight="0.26375404" side_tool="true" visible="true" weight="0.25832438" />
       <window_info id="Favorites" order="2" sideWeight="0.50864196" side_tool="true" weight="0.16136725" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4977778" weight="0.3277592" />
       <window_info anchor="bottom" id="Debug" order="2" sideWeight="0.49785176" weight="0.46153846" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.59828144" visible="true" weight="0.38907468" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.59828144" visible="true" weight="0.3110368" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49838883" weight="0.32664436" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50590765" side_tool="true" weight="0.32441473" />
-      <window_info anchor="bottom" auto_hide="true" x="-17" y="817" width="1862" height="203" id="Terminal" order="8" sideWeight="0.49409238" type="WINDOWED" visible="true" weight="0.44370124" />
+      <window_info active="true" anchor="bottom" auto_hide="true" x="-17" y="817" width="1862" height="203" id="Terminal" order="8" sideWeight="0.49409238" type="WINDOWED" visible="true" weight="0.44370124" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49731472" weight="0.24526198" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32960895" />
       <window_info anchor="bottom" id="Database Console" order="11" sideWeight="0.4989259" weight="0.30769232" />
@@ -1061,8 +1126,8 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.24973147" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32921588" />
-      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="4" side_tool="true" visible="true" weight="0.32975295" />
+      <window_info anchor="right" id="Database" order="3" sideWeight="0.49817517" visible="true" weight="0.32921588" />
+      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="4" sideWeight="0.5018248" side_tool="true" weight="0.32921588" />
       <window_info anchor="right" id="SciView" order="5" weight="0.32975295" />
       <window_info anchor="right" id="Coverage" order="6" side_tool="true" />
     </layout>
@@ -1170,12 +1235,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model/CiscoIOS.py</url>
-          <line>1277</line>
+          <line>1276</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model/CiscoIOS.py</url>
-          <line>1288</line>
+          <line>1287</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1185,7 +1250,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model/CiscoIOS.py</url>
-          <line>1278</line>
+          <line>1277</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1200,7 +1265,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/web_server.py</url>
-          <line>548</line>
+          <line>550</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1215,7 +1280,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model/CiscoIOS.py</url>
-          <line>1208</line>
+          <line>1207</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1224,7 +1289,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model/CiscoIOS.py</url>
-          <line>1217</line>
+          <line>1216</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1242,39 +1307,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://E:/progra/anaconda/Lib/site-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="1956" selection-start-line="1956" selection-end-line="1956" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/method_cisco.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="20" column="43" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/vis.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="15406" column="330" selection-start-line="15406" selection-start-column="330" selection-end-line="15406" selection-end-column="330" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nagios_nic.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-396" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bgp_pe_list">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nagios.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1458,13 +1490,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logs/db.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="375">
-          <caret line="11432" column="34" selection-start-line="11427" selection-start-column="124" selection-end-line="11432" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logs/dev.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider">
         <state relative-caret-position="-1996">
@@ -1472,50 +1497,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/Diagram.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2992">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/ospf_adjacency.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="251" column="46" selection-start-line="251" selection-start-column="46" selection-end-line="251" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/diagramas.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
           <caret line="238" column="40" selection-start-line="238" selection-start-column="22" selection-end-line="238" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="509" column="30" selection-start-line="509" selection-start-column="12" selection-end-line="509" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="465" column="57" selection-start-line="465" selection-start-column="57" selection-end-line="465" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1539,20 +1524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://64ab1a34-8529-4526-93b9-a2e1a4795eac/schema/netadmin/table/network_devices">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://64ab1a34-8529-4526-93b9-a2e1a4795eac/schema/netadmin/table/diagram_states">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/InterfaceIOS.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2772">
@@ -1560,13 +1531,6 @@
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/db/queries.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6864">
-          <caret line="312" selection-start-line="312" selection-end-line="312" />
         </state>
       </provider>
     </entry>
@@ -1594,13 +1558,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://64ab1a34-8529-4526-93b9-a2e1a4795eac/schema/netadmin/table/diagram_state_net_devices">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/progra/anaconda/Lib/typing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
@@ -1610,30 +1567,140 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/Devices.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1069">
-          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+        <state relative-caret-position="97">
+          <caret line="81" column="46" selection-start-line="81" selection-start-column="46" selection-end-line="81" selection-end-column="46" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/ospf_database.py">
+    <entry file="das://64ab1a34-8529-4526-93b9-a2e1a4795eac/schema/netadmin/table/interfaces">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://64ab1a34-8529-4526-93b9-a2e1a4795eac/schema/netadmin/table/interface_states">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://64ab1a34-8529-4526-93b9-a2e1a4795eac/schema/netadmin/table/network_devices">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://64ab1a34-8529-4526-93b9-a2e1a4795eac/schema/netadmin/table/diagrams">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+        <state relative-caret-position="809">
+          <caret line="1589" column="35" selection-start-line="1589" selection-start-column="35" selection-end-line="1589" selection-end-column="35" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://64ab1a34-8529-4526-93b9-a2e1a4795eac/schema/netadmin/table/diagram_network_devices">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/ospf_adjacency.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="249" column="72" selection-start-line="249" selection-start-column="72" selection-end-line="249" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sshtest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="57" column="59" selection-start-line="57" selection-start-column="59" selection-end-line="57" selection-end-column="59" />
+        <state relative-caret-position="232">
+          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://64ab1a34-8529-4526-93b9-a2e1a4795eac/schema/netadmin/table/diagram_states">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://64ab1a34-8529-4526-93b9-a2e1a4795eac/schema/netadmin/table/diagram_state_adjacencies">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/db.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="-7352">
+          <caret line="11432" column="34" selection-start-line="11427" selection-start-column="124" selection-end-line="11432" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://64ab1a34-8529-4526-93b9-a2e1a4795eac/schema/netadmin/table/diagram_state_net_devices">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/db/queries.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="314" column="47" selection-start-line="314" selection-start-column="47" selection-end-line="314" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Diagram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="46" column="13" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/ospf_database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-660">
+          <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="511" column="44" selection-start-line="511" selection-start-column="44" selection-end-line="511" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
           </folding>
         </state>
       </provider>

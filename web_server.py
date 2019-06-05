@@ -509,8 +509,9 @@ def function_pivot(data_sql, grouping_index=0, column_index=1, value_index=2):
 
 @app.route('/diagramas/save_xy', methods=['POST'])
 def save_xy_diagram():
+    covertidor = {"guatemala": "RCE_GUATEMALA", "_ospf_ufinet_regional": "_ospf_ufinet_regional"}
     request.get_json()
-    network = request.json['network']
+    network = covertidor[request.json['network']]
     data = request.json['data']
     diagram = Diagram(master=master, name=network)
     diagram.get_newer_state()

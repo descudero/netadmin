@@ -30,7 +30,7 @@ class ospf_database:
             self.devices = Devices(master=self.isp.master, ip_list=routers, check_up=False)
             self.devices.execute_processes(methods=['set_snmp_location_attr'])
             self.devices.set_uids()
-            self.devices.execute_processes(methods=['set_interfaces'])
+            # self.devices.execute_processes(methods=['set_interfaces'])
             self.verbose.warning(f"_INIT_real_time  p2p :{len(p2p)} rourters {len(routers)}")
             self.real_routers = routers
 
@@ -40,7 +40,7 @@ class ospf_database:
             self.devices = self.diagram.state.devices()
             p2p = self.diagram.state.p2p()
             self.verbose.warning(f"_INIT_ db  p2p:{len(p2p)} dev:{len(self.devices)}")
-            self.devices.set_interfaces_db()
+        self.devices.set_interfaces_db()
 
         self.graph = Graph()
         self.neighbors_occurrences_count = defaultdict(int)

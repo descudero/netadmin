@@ -247,19 +247,23 @@ class ospf_adjacency:
         try:
 
             if self.s_interface != 'null' and self.t_interface != 'null':
-                values = [self.network_id,
-                          self.diagram_state.uid,
-                          self.s["router_id"],
-                          self.s_interface.uid,
-                          self.s['metric'],
-                          self.s["interface_ip"],
-                          self.t["router_id"],
-                          self.t_interface.uid,
-                          self.t['metric'],
-                          self.t["interface_ip"],
-                          ]
+                if self.s_interface.uid != 0 and self.t_interface.uid != 0:
+                    values = [self.network_id,
+                              self.diagram_state.uid,
+                              self.s["router_id"],
+                              self.s_interface.uid,
+                              self.s['metric'],
+                              self.s["interface_ip"],
+                              self.t["router_id"],
+                              self.t_interface.uid,
+                              self.t['metric'],
+                              self.t["interface_ip"],
+                              ]
 
-                return "(" + (",".join([f"'{column}'" for column in values])) + ")"
+                    return "(" + (",".join([f"'{column}'" for column in values])) + ")"
+                else:
+                    return ""
+
             else:
                 return ""
         except Exception as e:

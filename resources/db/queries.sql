@@ -311,3 +311,8 @@ WHERE uid = '12501'
 
 commit
 
+
+select *
+from interfaces
+order by uid DESC
+limit 1300

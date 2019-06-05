@@ -43,21 +43,21 @@ isp = ISP()
 isp.master = Master()
 isp.master.username = 'descuderor'
 isp.master.password = 'Zekto2014-'
-# device = CiscoIOS(ip='172.16.30.5', display_name='a', master=isp.master, )
-# guatemala = {
-#      "ip_seed_router": "172.17.22.52",
-#      "process_id": '502', "area": '502008', 'network_name': 'RCE_GUATEMALA'
-#  }
-# dbd = ospf_database(isp=isp, source='real_time', **guatemala)
-# with open("ip_routers_gt","w") as f:
-#     f.write("\n".join(dbd.real_routers))
+device = CiscoIOS(ip='172.16.30.5', display_name='a', master=isp.master, )
+guatemala = {
+    "ip_seed_router": "172.17.22.52",
+    "process_id": '502', "area": '502008', 'network_name': 'RCE_GUATEMALA'
+}
+dbd = ospf_database(isp=isp, source='real_time', **guatemala)
 
-with open("ip_routers_gt", "r") as f:
-    ips = [line.replace("\n", "") for line in f]
+dbd.save_state()
 
-devs = Devices(ip_list=ips, master=isp.master, check_up=True)
-data = [{"ip": dev.ip, "com": dev.community} for dev in devs]
-isp.save_to_excel_list(list_data=data, file_name="snmp_gt_data")
+# with open("ip_routers_gt", "r") as f:
+#     ips = [line.replace("\n", "") for line in f]
+#
+# devs = Devices(ip_list=ips, master=isp.master, check_up=True)
+# data = [{"ip": dev.ip, "com": dev.community} for dev in devs]
+# isp.save_to_excel_list(list_data=data, file_name="snmp_gt_data")
 
 #
 # data = []

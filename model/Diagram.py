@@ -44,6 +44,7 @@ class Diagram:
 
 
     def get_newer_state(self):
+        print(f'get_newer_state u:{self.uid}')
         if self.in_db():
             try:
                 connection = self.master.db_connect()
