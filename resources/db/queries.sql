@@ -317,11 +317,10 @@ from interfaces
 order by uid DESC
 limit 1300
 
-select i.if_index,i.ip
+select i.uid,i.if_index,i.ip,i.description
 from network_devices as ns
        inner join interfaces as i on i.net_device_uid = ns.uid
-       inner join interface_states as s on s.interface_uid = i.uid
-where ns.ip = '172.16.30.244';
+where ns.ip = '172.16.30.246';
 
 select *
 from interfaces

@@ -14,6 +14,7 @@ ips = [line.replace("\n", "") for line in open("hosts/interfaces/guatemala")]
 
 # devs.execute_processes(methods=["fix_interfaces_attr"],thread_window=20)
 c = CiscoIOS(ip="172.17.22.53", master=isp.master, display_name="")
-c.set_snmp_community()
-c.set_interfaces_snmp()
-interfaces = list(c.interfaces.values())
+p2ps, routers = c.ospf_area_adjacency_p2p(area="504002", process_id="504")
+
+with open("hn_ips", "w") as f:
+    f.write("\n".join(routers))

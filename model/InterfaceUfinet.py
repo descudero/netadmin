@@ -209,7 +209,8 @@ class InterfaceUfinet(InterfaceIOS):
                         if interface.if_index in data_dict_interfaces:
 
                             data_sql = data_dict_interfaces[interface.if_index]
-                            if interface.l3_protocol == data_sql['l3_protocol'] and \
+                            if interface.description == data_sql['description'] and \
+                                    interface.l3_protocol == data_sql['l3_protocol'] and \
                                     interface.l3_protocol_attr == data_sql['l3_protocol_attr'] and \
                                     interface.l1_protocol == data_sql['l1_protocol'] and \
                                     interface.l1_protocol_attr == data_sql['l1_protocol_attr'] and \
