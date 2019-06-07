@@ -321,7 +321,7 @@ select i.if_index,i.ip
 from network_devices as ns
        inner join interfaces as i on i.net_device_uid = ns.uid
        inner join interface_states as s on s.interface_uid = i.uid
-where ns.ip = '172.20.32.46';
+where ns.ip = '172.16.30.244';
 
 select *
 from interfaces
@@ -336,6 +336,6 @@ where interface_uid = 129585;
 select *
 from network_devices as ns
        inner join interfaces as i on i.net_device_uid = ns.uid
-where ns.ip = '172.17.22.53';
+where ns.ip = '172.19.8.7';
 
 

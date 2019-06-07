@@ -6621,3 +6621,728 @@
 2019-06-06 18:32:15,123:WARNING:dev.InterfaceUfinet: 172.19.8.7 i:Tunnel50211-mpls layer b:0  Division by 0
 2019-06-06 18:32:15,123:WARNING:dev.InterfaceUfinet: 172.19.8.7 Tunnel50211-mpls layer Division by 0
 2019-06-06 18:32:15,123:INFO:dev.CiscoIOS:set_interfaces_snmp able Interfaces snmp 60 172.19.8.7
+2019-06-06 18:45:54,941:INFO:dev.Devices:dev  172.17.22.52 execute method check_able_connect
+2019-06-06 18:45:56,119:INFO:dev.Devices:dev  172.17.22.52 execute method set_snmp_community
+2019-06-06 18:46:08,520:INFO:dev.Devices:dev  172.17.22.52 execute method get_platform
+2019-06-06 18:46:22,384:INFO:dev.Devices:dev  172.17.22.18 execute method get_platform
+2019-06-06 18:46:22,385:INFO:dev.Devices:dev  172.17.22.34 execute method get_platform
+2019-06-06 18:46:22,385:INFO:dev.Devices:dev  172.17.22.41 execute method get_platform
+2019-06-06 18:46:22,386:INFO:dev.Devices:dev  172.19.8.18 execute method get_platform
+2019-06-06 18:46:22,386:INFO:dev.Devices:dev  172.17.22.39 execute method get_platform
+2019-06-06 18:46:22,387:INFO:dev.Devices:dev  172.19.8.36 execute method get_platform
+2019-06-06 18:46:22,387:INFO:dev.Devices:dev  172.17.22.78 execute method get_platform
+2019-06-06 18:46:22,388:INFO:dev.Devices:dev  172.19.8.80 execute method get_platform
+2019-06-06 18:46:22,388:INFO:dev.Devices:dev  172.17.22.51 execute method get_platform
+2019-06-06 18:46:22,392:INFO:dev.Devices:dev  172.17.22.17 execute method get_platform
+2019-06-06 18:46:22,393:INFO:dev.Devices:dev  172.17.22.21 execute method get_platform
+2019-06-06 18:46:22,393:INFO:dev.Devices:dev  172.17.22.45 execute method get_platform
+2019-06-06 18:46:22,394:INFO:dev.Devices:dev  172.17.22.61 execute method get_platform
+2019-06-06 18:46:22,397:INFO:dev.Devices:dev  172.17.31.2 execute method get_platform
+2019-06-06 18:46:22,398:INFO:dev.Devices:dev  172.17.22.42 execute method get_platform
+2019-06-06 18:46:22,398:INFO:dev.Devices:dev  172.17.22.57 execute method get_platform
+2019-06-06 18:46:22,399:INFO:dev.Devices:dev  172.19.8.50 execute method get_platform
+2019-06-06 18:46:22,399:INFO:dev.Devices:dev  172.17.22.87 execute method get_platform
+2019-06-06 18:46:22,399:INFO:dev.Devices:dev  172.19.8.14 execute method get_platform
+2019-06-06 18:46:22,400:INFO:dev.Devices:dev  172.17.22.53 execute method get_platform
+2019-06-06 18:46:22,400:INFO:dev.Devices:dev  172.19.8.5 execute method get_platform
+2019-06-06 18:46:22,403:INFO:dev.Devices:dev  172.17.22.70 execute method get_platform
+2019-06-06 18:46:22,404:INFO:dev.Devices:dev  172.19.8.74 execute method get_platform
+2019-06-06 18:46:22,405:INFO:dev.Devices:dev  172.19.8.49 execute method get_platform
+2019-06-06 18:46:22,405:INFO:dev.Devices:dev  172.17.22.69 execute method get_platform
+2019-06-06 18:46:22,406:INFO:dev.Devices:dev  172.19.8.33 execute method get_platform
+2019-06-06 18:46:22,406:INFO:dev.Devices:dev  172.17.22.80 execute method get_platform
+2019-06-06 18:46:22,409:INFO:dev.Devices:dev  172.17.22.14 execute method get_platform
+2019-06-06 18:46:22,410:INFO:dev.Devices:dev  172.19.8.34 execute method get_platform
+2019-06-06 18:46:22,410:INFO:dev.Devices:dev  172.19.8.75 execute method get_platform
+2019-06-06 18:46:22,411:INFO:dev.Devices:dev  172.17.22.37 execute method get_platform
+2019-06-06 18:46:22,411:INFO:dev.Devices:dev  172.17.22.55 execute method get_platform
+2019-06-06 18:46:22,412:INFO:dev.Devices:dev  172.17.22.86 execute method get_platform
+2019-06-06 18:46:22,412:INFO:dev.Devices:dev  172.16.30.50 execute method get_platform
+2019-06-06 18:46:22,415:INFO:dev.Devices:dev  172.17.22.46 execute method get_platform
+2019-06-06 18:46:22,416:INFO:dev.Devices:dev  172.17.22.52 execute method get_platform
+2019-06-06 18:46:22,416:INFO:dev.Devices:dev  172.17.31.3 execute method get_platform
+2019-06-06 18:46:22,417:INFO:dev.Devices:dev  172.19.8.15 execute method get_platform
+2019-06-06 18:46:22,417:INFO:dev.Devices:dev  172.19.8.51 execute method get_platform
+2019-06-06 18:46:22,418:INFO:dev.Devices:dev  172.17.22.44 execute method get_platform
+2019-06-06 18:46:22,418:INFO:dev.Devices:dev  172.19.8.79 execute method get_platform
+2019-06-06 18:46:22,419:INFO:dev.Devices:dev  172.17.22.27 execute method get_platform
+2019-06-06 18:46:22,419:INFO:dev.Devices:dev  172.19.8.1 execute method get_platform
+2019-06-06 18:46:22,422:INFO:dev.Devices:dev  172.17.22.66 execute method get_platform
+2019-06-06 18:46:22,423:INFO:dev.Devices:dev  172.19.8.7 execute method get_platform
+2019-06-06 18:46:22,424:INFO:dev.Devices:dev  172.17.31.4 execute method get_platform
+2019-06-06 18:46:22,425:INFO:dev.Devices:dev  172.17.22.31 execute method get_platform
+2019-06-06 18:46:22,425:INFO:dev.Devices:dev  172.17.31.1 execute method get_platform
+2019-06-06 18:46:22,428:INFO:dev.Devices:dev  172.17.22.49 execute method get_platform
+2019-06-06 18:46:22,429:INFO:dev.Devices:dev  172.19.8.35 execute method get_platform
+2019-06-06 18:46:22,429:INFO:dev.Devices:dev  172.17.22.100 execute method get_platform
+2019-06-06 18:46:22,431:INFO:dev.Devices:dev  172.17.22.73 execute method get_platform
+2019-06-06 18:46:22,431:INFO:dev.Devices:dev  172.17.22.71 execute method get_platform
+2019-06-06 18:46:22,431:INFO:dev.Devices:dev  172.17.22.79 execute method get_platform
+2019-06-06 18:46:22,432:INFO:dev.Devices:dev  172.17.22.40 execute method get_platform
+2019-06-06 18:46:22,436:INFO:dev.Devices:dev  172.17.22.63 execute method get_platform
+2019-06-06 18:46:22,444:INFO:dev.Devices:dev  172.19.8.65 execute method get_platform
+2019-06-06 18:46:22,444:INFO:dev.Devices:dev  172.17.22.72 execute method get_platform
+2019-06-06 18:46:22,445:INFO:dev.Devices:dev  172.19.8.21 execute method get_platform
+2019-06-06 18:46:22,445:INFO:dev.Devices:dev  172.19.8.73 execute method get_platform
+2019-06-06 18:46:22,446:INFO:dev.Devices:dev  172.17.22.74 execute method get_platform
+2019-06-06 18:46:22,449:INFO:dev.Devices:dev  172.19.8.55 execute method get_platform
+2019-06-06 18:46:22,456:INFO:dev.Devices:dev  172.17.22.33 execute method get_platform
+2019-06-06 18:46:22,457:INFO:dev.Devices:dev  172.19.8.78 execute method get_platform
+2019-06-06 18:46:22,458:INFO:dev.Devices:dev  172.17.22.3 execute method get_platform
+2019-06-06 18:46:22,459:INFO:dev.Devices:dev  172.17.22.82 execute method get_platform
+2019-06-06 18:46:22,460:INFO:dev.Devices:dev  172.17.31.5 execute method get_platform
+2019-06-06 18:46:22,465:INFO:dev.Devices:dev  172.19.8.9 execute method get_platform
+2019-06-06 18:46:22,468:INFO:dev.Devices:dev  172.19.8.47 execute method get_platform
+2019-06-06 18:46:22,469:INFO:dev.Devices:dev  172.19.8.59 execute method get_platform
+2019-06-06 18:46:22,470:INFO:dev.Devices:dev  172.19.8.64 execute method get_platform
+2019-06-06 18:46:22,471:INFO:dev.Devices:dev  172.17.22.30 execute method get_platform
+2019-06-06 18:46:22,471:INFO:dev.Devices:dev  172.19.8.19 execute method get_platform
+2019-06-06 18:46:22,471:INFO:dev.Devices:dev  172.17.22.85 execute method get_platform
+2019-06-06 18:46:22,472:INFO:dev.Devices:dev  172.19.8.68 execute method get_platform
+2019-06-06 18:46:22,472:INFO:dev.Devices:dev  172.17.22.48 execute method get_platform
+2019-06-06 18:46:22,473:INFO:dev.Devices:dev  172.17.31.7 execute method get_platform
+2019-06-06 18:46:22,480:INFO:dev.Devices:dev  172.19.8.30 execute method get_platform
+2019-06-06 18:46:22,480:INFO:dev.Devices:dev  172.17.22.62 execute method get_platform
+2019-06-06 18:46:22,481:INFO:dev.Devices:dev  172.17.22.83 execute method get_platform
+2019-06-06 18:46:22,482:INFO:dev.Devices:dev  172.17.31.6 execute method get_platform
+2019-06-06 18:46:22,483:INFO:dev.Devices:dev  172.19.8.16 execute method get_platform
+2019-06-06 18:46:22,483:INFO:dev.Devices:dev  172.19.8.56 execute method get_platform
+2019-06-06 18:46:22,483:INFO:dev.Devices:dev  172.19.8.11 execute method get_platform
+2019-06-06 18:46:22,485:INFO:dev.Devices:dev  172.19.8.63 execute method get_platform
+2019-06-06 18:46:22,492:INFO:dev.Devices:dev  172.17.22.26 execute method get_platform
+2019-06-06 18:46:22,493:INFO:dev.Devices:dev  172.17.22.29 execute method get_platform
+2019-06-06 18:46:22,496:INFO:dev.Devices:dev  172.17.22.20 execute method get_platform
+2019-06-06 18:46:22,498:INFO:dev.Devices:dev  172.17.22.36 execute method get_platform
+2019-06-06 18:46:22,499:INFO:dev.Devices:dev  172.19.8.57 execute method get_platform
+2019-06-06 18:46:22,499:INFO:dev.Devices:dev  172.19.8.52 execute method get_platform
+2019-06-06 18:46:22,500:INFO:dev.Devices:dev  172.17.22.59 execute method get_platform
+2019-06-06 18:46:22,514:INFO:dev.Devices:dev  172.19.8.6 execute method get_platform
+2019-06-06 18:46:22,514:INFO:dev.Devices:dev  172.19.8.67 execute method get_platform
+2019-06-06 18:46:22,517:INFO:dev.Devices:dev  172.17.22.28 execute method get_platform
+2019-06-06 18:46:22,548:INFO:dev.Devices:dev  172.17.22.60 execute method get_platform
+2019-06-06 18:46:22,552:INFO:dev.Devices:dev  172.19.8.76 execute method get_platform
+2019-06-06 18:46:22,561:INFO:dev.Devices:dev  172.19.8.20 execute method get_platform
+2019-06-06 18:46:22,561:INFO:dev.Devices:dev  172.17.22.19 execute method get_platform
+2019-06-06 18:46:22,565:INFO:dev.Devices:dev  172.19.8.4 execute method get_platform
+2019-06-06 18:46:22,565:INFO:dev.Devices:dev  172.17.22.67 execute method get_platform
+2019-06-06 18:47:08,945:INFO:dev.Devices:dev  172.19.8.60 execute method get_platform
+2019-06-06 18:47:08,945:INFO:dev.Devices:dev  172.17.22.77 execute method get_platform
+2019-06-06 18:47:08,946:INFO:dev.Devices:dev  172.17.22.22 execute method get_platform
+2019-06-06 18:47:08,946:INFO:dev.Devices:dev  172.19.8.25 execute method get_platform
+2019-06-06 18:47:08,947:INFO:dev.Devices:dev  172.19.8.8 execute method get_platform
+2019-06-06 18:47:08,947:INFO:dev.Devices:dev  172.19.8.72 execute method get_platform
+2019-06-06 18:47:08,948:INFO:dev.Devices:dev  172.17.22.54 execute method get_platform
+2019-06-06 18:47:08,948:INFO:dev.Devices:dev  172.17.22.25 execute method get_platform
+2019-06-06 18:47:08,952:INFO:dev.Devices:dev  172.19.8.10 execute method get_platform
+2019-06-06 18:47:08,953:INFO:dev.Devices:dev  172.17.22.24 execute method get_platform
+2019-06-06 18:47:08,953:INFO:dev.Devices:dev  172.17.31.9 execute method get_platform
+2019-06-06 18:47:08,953:INFO:dev.Devices:dev  172.17.22.35 execute method get_platform
+2019-06-06 18:47:08,954:INFO:dev.Devices:dev  172.17.22.58 execute method get_platform
+2019-06-06 18:47:08,954:INFO:dev.Devices:dev  172.17.31.8 execute method get_platform
+2019-06-06 18:47:08,955:INFO:dev.Devices:dev  172.17.22.68 execute method get_platform
+2019-06-06 18:47:08,958:INFO:dev.Devices:dev  172.19.8.58 execute method get_platform
+2019-06-06 18:47:08,958:INFO:dev.Devices:dev  172.17.22.38 execute method get_platform
+2019-06-06 18:47:08,959:INFO:dev.Devices:dev  172.19.8.82 execute method get_platform
+2019-06-06 18:47:08,959:INFO:dev.Devices:dev  172.19.8.71 execute method get_platform
+2019-06-06 18:47:08,960:INFO:dev.Devices:dev  172.17.22.12 execute method get_platform
+2019-06-06 18:47:08,960:INFO:dev.Devices:dev  172.19.8.54 execute method get_platform
+2019-06-06 18:47:08,961:INFO:dev.Devices:dev  172.17.22.13 execute method get_platform
+2019-06-06 18:47:08,961:INFO:dev.Devices:dev  172.17.22.11 execute method get_platform
+2019-06-06 18:47:08,962:INFO:dev.Devices:dev  172.16.30.250 execute method get_platform
+2019-06-06 18:47:08,965:INFO:dev.Devices:dev  172.19.8.32 execute method get_platform
+2019-06-06 18:47:08,965:INFO:dev.Devices:dev  172.19.8.70 execute method get_platform
+2019-06-06 18:47:08,966:INFO:dev.Devices:dev  172.19.8.77 execute method get_platform
+2019-06-06 18:47:08,966:INFO:dev.Devices:dev  172.17.22.47 execute method get_platform
+2019-06-06 18:47:08,967:INFO:dev.Devices:dev  172.19.8.17 execute method get_platform
+2019-06-06 18:47:08,970:INFO:dev.Devices:dev  172.19.8.46 execute method get_platform
+2019-06-06 18:47:08,970:INFO:dev.Devices:dev  172.16.30.35 execute method get_platform
+2019-06-06 18:47:08,971:INFO:dev.Devices:dev  172.17.22.65 execute method get_platform
+2019-06-06 18:47:08,972:INFO:dev.Devices:dev  172.16.30.65 execute method get_platform
+2019-06-06 18:47:08,972:INFO:dev.Devices:dev  172.19.8.12 execute method get_platform
+2019-06-06 18:47:08,973:INFO:dev.Devices:dev  172.17.22.32 execute method get_platform
+2019-06-06 18:47:08,973:INFO:dev.Devices:dev  172.19.8.66 execute method get_platform
+2019-06-06 18:47:08,974:INFO:dev.Devices:dev  172.19.8.13 execute method get_platform
+2019-06-06 18:47:08,977:INFO:dev.Devices:dev  172.17.22.64 execute method get_platform
+2019-06-06 18:47:08,977:INFO:dev.Devices:dev  172.17.22.50 execute method get_platform
+2019-06-06 18:47:08,978:INFO:dev.Devices:dev  172.17.22.84 execute method get_platform
+2019-06-06 18:47:08,978:INFO:dev.Devices:dev  172.17.22.15 execute method get_platform
+2019-06-06 18:47:08,979:INFO:dev.Devices:dev  172.17.22.56 execute method get_platform
+2019-06-06 18:47:08,986:INFO:dev.Devices:dev  172.19.8.81 execute method get_platform
+2019-06-06 18:47:08,987:INFO:dev.Devices:dev  172.17.22.81 execute method get_platform
+2019-06-06 18:47:08,990:INFO:dev.Devices:dev  172.19.8.22 execute method get_platform
+2019-06-06 18:47:08,990:INFO:dev.Devices:dev  172.17.22.10 execute method get_platform
+2019-06-06 18:47:08,991:INFO:dev.Devices:dev  172.17.22.23 execute method get_platform
+2019-06-06 18:47:08,991:INFO:dev.Devices:dev  172.17.22.76 execute method get_platform
+2019-06-06 18:47:08,992:INFO:dev.Devices:dev  172.17.22.16 execute method get_platform
+2019-06-06 18:47:08,993:INFO:dev.Devices:dev  172.17.22.43 execute method get_platform
+2019-06-06 18:47:36,205:INFO:dev.Devices:dev  172.17.22.18 excute method set_snmp_location_attr
+2019-06-06 18:47:36,206:INFO:dev.Devices:dev  172.17.22.34 excute method set_snmp_location_attr
+2019-06-06 18:47:36,206:INFO:dev.Devices:dev  172.17.22.41 excute method set_snmp_location_attr
+2019-06-06 18:47:36,207:INFO:dev.Devices:dev  172.19.8.18 excute method set_snmp_location_attr
+2019-06-06 18:47:36,207:INFO:dev.Devices:dev  172.17.22.39 excute method set_snmp_location_attr
+2019-06-06 18:47:36,208:INFO:dev.Devices:dev  172.19.8.36 excute method set_snmp_location_attr
+2019-06-06 18:47:36,208:INFO:dev.Devices:dev  172.17.22.78 excute method set_snmp_location_attr
+2019-06-06 18:47:36,209:INFO:dev.Devices:dev  172.19.8.80 excute method set_snmp_location_attr
+2019-06-06 18:47:36,212:INFO:dev.Devices:dev  172.17.22.51 excute method set_snmp_location_attr
+2019-06-06 18:47:36,213:INFO:dev.Devices:dev  172.17.22.17 excute method set_snmp_location_attr
+2019-06-06 18:47:36,213:INFO:dev.Devices:dev  172.17.22.21 excute method set_snmp_location_attr
+2019-06-06 18:47:36,214:INFO:dev.Devices:dev  172.17.22.45 excute method set_snmp_location_attr
+2019-06-06 18:47:36,214:INFO:dev.Devices:dev  172.17.22.61 excute method set_snmp_location_attr
+2019-06-06 18:47:36,215:INFO:dev.Devices:dev  172.17.31.2 excute method set_snmp_location_attr
+2019-06-06 18:47:36,215:INFO:dev.Devices:dev  172.17.22.42 excute method set_snmp_location_attr
+2019-06-06 18:47:36,216:INFO:dev.Devices:dev  172.17.22.57 excute method set_snmp_location_attr
+2019-06-06 18:47:36,220:INFO:dev.Devices:dev  172.19.8.50 excute method set_snmp_location_attr
+2019-06-06 18:47:36,220:INFO:dev.Devices:dev  172.17.22.87 excute method set_snmp_location_attr
+2019-06-06 18:47:36,221:INFO:dev.Devices:dev  172.19.8.14 excute method set_snmp_location_attr
+2019-06-06 18:47:36,222:INFO:dev.Devices:dev  172.17.22.53 excute method set_snmp_location_attr
+2019-06-06 18:47:36,225:INFO:dev.Devices:dev  172.19.8.5 excute method set_snmp_location_attr
+2019-06-06 18:47:36,226:INFO:dev.Devices:dev  172.17.22.70 excute method set_snmp_location_attr
+2019-06-06 18:47:36,227:INFO:dev.Devices:dev  172.19.8.74 excute method set_snmp_location_attr
+2019-06-06 18:47:36,227:INFO:dev.Devices:dev  172.19.8.49 excute method set_snmp_location_attr
+2019-06-06 18:47:36,228:INFO:dev.Devices:dev  172.17.22.69 excute method set_snmp_location_attr
+2019-06-06 18:47:36,228:INFO:dev.Devices:dev  172.19.8.33 excute method set_snmp_location_attr
+2019-06-06 18:47:36,228:INFO:dev.Devices:dev  172.17.22.80 excute method set_snmp_location_attr
+2019-06-06 18:47:36,229:INFO:dev.Devices:dev  172.17.22.14 excute method set_snmp_location_attr
+2019-06-06 18:47:36,229:INFO:dev.Devices:dev  172.19.8.34 excute method set_snmp_location_attr
+2019-06-06 18:47:36,230:INFO:dev.Devices:dev  172.19.8.75 excute method set_snmp_location_attr
+2019-06-06 18:47:36,230:INFO:dev.Devices:dev  172.17.22.37 excute method set_snmp_location_attr
+2019-06-06 18:47:36,233:INFO:dev.Devices:dev  172.17.22.55 excute method set_snmp_location_attr
+2019-06-06 18:47:36,234:INFO:dev.Devices:dev  172.17.22.86 excute method set_snmp_location_attr
+2019-06-06 18:47:36,234:INFO:dev.Devices:dev  172.16.30.50 excute method set_snmp_location_attr
+2019-06-06 18:47:36,235:INFO:dev.Devices:dev  172.17.22.46 excute method set_snmp_location_attr
+2019-06-06 18:47:36,235:INFO:dev.Devices:dev  172.17.22.52 excute method set_snmp_location_attr
+2019-06-06 18:47:36,236:INFO:dev.Devices:dev  172.17.31.3 excute method set_snmp_location_attr
+2019-06-06 18:47:36,236:INFO:dev.Devices:dev  172.19.8.15 excute method set_snmp_location_attr
+2019-06-06 18:47:36,237:INFO:dev.Devices:dev  172.19.8.51 excute method set_snmp_location_attr
+2019-06-06 18:47:36,238:INFO:dev.Devices:dev  172.17.22.44 excute method set_snmp_location_attr
+2019-06-06 18:47:36,241:INFO:dev.Devices:dev  172.19.8.79 excute method set_snmp_location_attr
+2019-06-06 18:47:36,241:INFO:dev.Devices:dev  172.17.22.27 excute method set_snmp_location_attr
+2019-06-06 18:47:36,242:INFO:dev.Devices:dev  172.19.8.1 excute method set_snmp_location_attr
+2019-06-06 18:47:36,242:INFO:dev.Devices:dev  172.17.22.66 excute method set_snmp_location_attr
+2019-06-06 18:47:36,243:INFO:dev.Devices:dev  172.19.8.7 excute method set_snmp_location_attr
+2019-06-06 18:47:36,243:INFO:dev.Devices:dev  172.17.31.4 excute method set_snmp_location_attr
+2019-06-06 18:47:36,246:INFO:dev.Devices:dev  172.17.22.31 excute method set_snmp_location_attr
+2019-06-06 18:47:36,247:INFO:dev.Devices:dev  172.17.31.1 excute method set_snmp_location_attr
+2019-06-06 18:47:36,248:INFO:dev.Devices:dev  172.17.22.49 excute method set_snmp_location_attr
+2019-06-06 18:47:36,249:INFO:dev.Devices:dev  172.19.8.35 excute method set_snmp_location_attr
+2019-06-06 18:47:36,249:INFO:dev.Devices:dev  172.17.22.100 excute method set_snmp_location_attr
+2019-06-06 18:47:36,256:INFO:dev.Devices:dev  172.17.22.73 excute method set_snmp_location_attr
+2019-06-06 18:47:36,257:INFO:dev.Devices:dev  172.17.22.71 excute method set_snmp_location_attr
+2019-06-06 18:47:36,258:INFO:dev.Devices:dev  172.17.22.79 excute method set_snmp_location_attr
+2019-06-06 18:47:36,263:INFO:dev.Devices:dev  172.17.22.40 excute method set_snmp_location_attr
+2019-06-06 18:47:36,267:INFO:dev.Devices:dev  172.17.22.63 excute method set_snmp_location_attr
+2019-06-06 18:47:36,268:INFO:dev.Devices:dev  172.19.8.65 excute method set_snmp_location_attr
+2019-06-06 18:47:36,268:INFO:dev.Devices:dev  172.17.22.72 excute method set_snmp_location_attr
+2019-06-06 18:47:36,269:INFO:dev.Devices:dev  172.19.8.21 excute method set_snmp_location_attr
+2019-06-06 18:47:36,269:INFO:dev.Devices:dev  172.19.8.73 excute method set_snmp_location_attr
+2019-06-06 18:47:36,270:INFO:dev.Devices:dev  172.17.22.74 excute method set_snmp_location_attr
+2019-06-06 18:47:36,274:INFO:dev.Devices:dev  172.19.8.55 excute method set_snmp_location_attr
+2019-06-06 18:47:36,275:INFO:dev.Devices:dev  172.17.22.33 excute method set_snmp_location_attr
+2019-06-06 18:47:36,276:INFO:dev.Devices:dev  172.19.8.78 excute method set_snmp_location_attr
+2019-06-06 18:47:36,289:INFO:dev.Devices:dev  172.17.22.3 excute method set_snmp_location_attr
+2019-06-06 18:47:36,289:INFO:dev.Devices:dev  172.17.22.82 excute method set_snmp_location_attr
+2019-06-06 18:47:36,295:INFO:dev.Devices:dev  172.17.31.5 excute method set_snmp_location_attr
+2019-06-06 18:47:36,295:INFO:dev.Devices:dev  172.19.8.9 excute method set_snmp_location_attr
+2019-06-06 18:47:36,296:INFO:dev.Devices:dev  172.19.8.47 excute method set_snmp_location_attr
+2019-06-06 18:47:36,296:INFO:dev.Devices:dev  172.19.8.59 excute method set_snmp_location_attr
+2019-06-06 18:47:36,297:INFO:dev.Devices:dev  172.19.8.64 excute method set_snmp_location_attr
+2019-06-06 18:47:36,300:INFO:dev.Devices:dev  172.17.22.30 excute method set_snmp_location_attr
+2019-06-06 18:47:36,301:INFO:dev.Devices:dev  172.19.8.19 excute method set_snmp_location_attr
+2019-06-06 18:47:36,302:INFO:dev.Devices:dev  172.17.22.85 excute method set_snmp_location_attr
+2019-06-06 18:47:36,302:INFO:dev.Devices:dev  172.19.8.68 excute method set_snmp_location_attr
+2019-06-06 18:47:36,303:INFO:dev.Devices:dev  172.17.22.48 excute method set_snmp_location_attr
+2019-06-06 18:47:36,304:INFO:dev.Devices:dev  172.17.31.7 excute method set_snmp_location_attr
+2019-06-06 18:47:36,308:INFO:dev.Devices:dev  172.19.8.30 excute method set_snmp_location_attr
+2019-06-06 18:47:36,309:INFO:dev.Devices:dev  172.17.22.62 excute method set_snmp_location_attr
+2019-06-06 18:47:36,313:INFO:dev.Devices:dev  172.17.22.83 excute method set_snmp_location_attr
+2019-06-06 18:47:36,318:INFO:dev.Devices:dev  172.17.31.6 excute method set_snmp_location_attr
+2019-06-06 18:47:36,318:INFO:dev.Devices:dev  172.19.8.16 excute method set_snmp_location_attr
+2019-06-06 18:47:36,320:INFO:dev.Devices:dev  172.19.8.56 excute method set_snmp_location_attr
+2019-06-06 18:47:36,320:INFO:dev.Devices:dev  172.19.8.11 excute method set_snmp_location_attr
+2019-06-06 18:47:36,321:INFO:dev.Devices:dev  172.19.8.63 excute method set_snmp_location_attr
+2019-06-06 18:47:36,321:INFO:dev.Devices:dev  172.17.22.26 excute method set_snmp_location_attr
+2019-06-06 18:47:36,323:INFO:dev.Devices:dev  172.17.22.29 excute method set_snmp_location_attr
+2019-06-06 18:47:36,327:INFO:dev.Devices:dev  172.17.22.20 excute method set_snmp_location_attr
+2019-06-06 18:47:36,329:INFO:dev.Devices:dev  172.17.22.36 excute method set_snmp_location_attr
+2019-06-06 18:47:36,329:INFO:dev.Devices:dev  172.19.8.57 excute method set_snmp_location_attr
+2019-06-06 18:47:36,330:INFO:dev.Devices:dev  172.19.8.52 excute method set_snmp_location_attr
+2019-06-06 18:47:36,330:INFO:dev.Devices:dev  172.17.22.59 excute method set_snmp_location_attr
+2019-06-06 18:47:36,331:INFO:dev.Devices:dev  172.19.8.6 excute method set_snmp_location_attr
+2019-06-06 18:47:36,331:INFO:dev.Devices:dev  172.19.8.67 excute method set_snmp_location_attr
+2019-06-06 18:47:36,337:INFO:dev.Devices:dev  172.17.22.28 excute method set_snmp_location_attr
+2019-06-06 18:47:36,342:INFO:dev.Devices:dev  172.17.22.60 excute method set_snmp_location_attr
+2019-06-06 18:47:36,343:INFO:dev.Devices:dev  172.19.8.76 excute method set_snmp_location_attr
+2019-06-06 18:47:36,344:INFO:dev.Devices:dev  172.19.8.20 excute method set_snmp_location_attr
+2019-06-06 18:47:36,346:INFO:dev.Devices:dev  172.17.22.19 excute method set_snmp_location_attr
+2019-06-06 18:47:36,347:INFO:dev.Devices:dev  172.19.8.4 excute method set_snmp_location_attr
+2019-06-06 18:47:36,347:INFO:dev.Devices:dev  172.17.22.67 excute method set_snmp_location_attr
+2019-06-06 18:47:36,347:INFO:dev.Devices:execute_processes: Window join 
+2019-06-06 18:47:37,549:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.18 err no snmp location data
+2019-06-06 18:47:37,718:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.34 err no snmp location data
+2019-06-06 18:47:37,992:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.39 err no snmp location data
+2019-06-06 18:47:38,024:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.51 err no snmp location data
+2019-06-06 18:47:38,283:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.74 err no snmp location data
+2019-06-06 18:47:38,466:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.17 err no snmp location data
+2019-06-06 18:47:38,602:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.34 err no snmp location data
+2019-06-06 18:47:38,740:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.7 err no snmp location data
+2019-06-06 18:47:39,014:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.78 err no snmp location data
+2019-06-06 18:47:39,257:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.36 err no snmp location data
+2019-06-06 18:47:39,269:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.27 err no snmp location data
+2019-06-06 18:47:39,522:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.73 err no snmp location data
+2019-06-06 18:47:39,578:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.40 err no snmp location data
+2019-06-06 18:47:39,650:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.45 err no snmp location data
+2019-06-06 18:47:39,944:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.59 err no snmp location data
+2019-06-06 18:47:40,090:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.61 err no snmp location data
+2019-06-06 18:47:40,332:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.16 err no snmp location data
+2019-06-06 18:47:40,395:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.18 err no snmp location data
+2019-06-06 18:47:40,591:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.35 err no snmp location data
+2019-06-06 18:47:40,617:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.9 err no snmp location data
+2019-06-06 18:47:40,652:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.55 err no snmp location data
+2019-06-06 18:47:40,950:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.82 err no snmp location data
+2019-06-06 18:47:41,085:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.68 err no snmp location data
+2019-06-06 18:47:41,140:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.1 err no snmp location data
+2019-06-06 18:47:41,406:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.72 err no snmp location data
+2019-06-06 18:47:41,453:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.28 err no snmp location data
+2019-06-06 18:47:41,624:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.49 err no snmp location data
+2019-06-06 18:47:41,939:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.4 err no snmp location data
+2019-06-06 18:47:42,066:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.6 err no snmp location data
+2019-06-06 18:47:42,079:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.78 err no snmp location data
+2019-06-06 18:47:42,081:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.20 err no snmp location data
+2019-06-06 18:47:42,134:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.62 err no snmp location data
+2019-06-06 18:47:42,369:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.51 err no snmp location data
+2019-06-06 18:47:42,513:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.57 err no snmp location data
+2019-06-06 18:47:42,701:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.5 err no snmp location data
+2019-06-06 18:47:42,799:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.55 err no snmp location data
+2019-06-06 18:47:42,883:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.31.7 err no snmp location data
+2019-06-06 18:47:42,912:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.85 err no snmp location data
+2019-06-06 18:47:43,167:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.30 err no snmp location data
+2019-06-06 18:47:43,345:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.66 err no snmp location data
+2019-06-06 18:47:43,801:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.33 err no snmp location data
+2019-06-06 18:47:43,813:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.33 err no snmp location data
+2019-06-06 18:47:44,211:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.74 err no snmp location data
+2019-06-06 18:47:44,493:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.53 err no snmp location data
+2019-06-06 18:47:44,512:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.79 err no snmp location data
+2019-06-06 18:47:44,524:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.31 err no snmp location data
+2019-06-06 18:47:44,608:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.37 err no snmp location data
+2019-06-06 18:47:44,707:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.80 err no snmp location data
+2019-06-06 18:47:44,730:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.56 err no snmp location data
+2019-06-06 18:47:44,809:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.73 err no snmp location data
+2019-06-06 18:47:44,874:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.30 err no snmp location data
+2019-06-06 18:47:44,911:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.41 err no snmp location data
+2019-06-06 18:47:44,934:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.57 err no snmp location data
+2019-06-06 18:47:45,007:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.50 countryGUATEMALA
+2019-06-06 18:47:45,019:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.76 err no snmp location data
+2019-06-06 18:47:45,053:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.21 err no snmp location data
+2019-06-06 18:47:45,059:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.31.2 err no snmp location data
+2019-06-06 18:47:45,095:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.44 err no snmp location data
+2019-06-06 18:47:45,106:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.50 areaPUERTO_BARRIOS_VIEJO
+2019-06-06 18:47:45,260:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.49 err no snmp location data
+2019-06-06 18:47:45,298:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.50 roll[LSR]
+2019-06-06 18:47:45,351:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.65 err no snmp location data
+2019-06-06 18:47:45,549:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.64 err no snmp location data
+2019-06-06 18:47:45,590:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.14 err no snmp location data
+2019-06-06 18:47:45,746:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.63 err no snmp location data
+2019-06-06 18:47:45,892:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.42 err no snmp location data
+2019-06-06 18:47:45,959:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.87 err no snmp location data
+2019-06-06 18:47:45,965:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.83 err no snmp location data
+2019-06-06 18:47:45,977:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.67 err no snmp location data
+2019-06-06 18:47:45,992:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.20 err no snmp location data
+2019-06-06 18:47:46,093:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.60 err no snmp location data
+2019-06-06 18:47:46,101:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.79 err no snmp location data
+2019-06-06 18:47:46,126:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.48 err no snmp location data
+2019-06-06 18:47:46,154:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.50 err no snmp location data
+2019-06-06 18:47:46,504:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.31.3 err no snmp location data
+2019-06-06 18:47:46,597:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.31.4 err no snmp location data
+2019-06-06 18:47:46,611:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.59 err no snmp location data
+2019-06-06 18:47:46,614:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.19 err no snmp location data
+2019-06-06 18:47:46,917:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.36 err no snmp location data
+2019-06-06 18:47:47,253:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.14 err no snmp location data
+2019-06-06 18:47:47,275:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.11 err no snmp location data
+2019-06-06 18:47:47,277:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.31.1 err no snmp location data
+2019-06-06 18:47:47,308:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.63 err no snmp location data
+2019-06-06 18:47:47,404:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.69 err no snmp location data
+2019-06-06 18:47:47,478:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.31.5 err no snmp location data
+2019-06-06 18:47:47,513:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.70 err no snmp location data
+2019-06-06 18:47:47,536:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.52 err no snmp location data
+2019-06-06 18:47:47,678:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.29 err no snmp location data
+2019-06-06 18:47:47,691:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.47 err no snmp location data
+2019-06-06 18:47:47,747:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.75 err no snmp location data
+2019-06-06 18:47:47,963:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.100 err no snmp location data
+2019-06-06 18:47:48,035:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.80 err no snmp location data
+2019-06-06 18:47:48,035:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.21 err no snmp location data
+2019-06-06 18:47:48,118:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.46 err no snmp location data
+2019-06-06 18:47:48,124:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.71 err no snmp location data
+2019-06-06 18:47:48,165:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.31.6 err no snmp location data
+2019-06-06 18:47:48,334:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.15 err no snmp location data
+2019-06-06 18:47:48,335:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.19 err no snmp location data
+2019-06-06 18:47:48,393:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.3 err no snmp location data
+2019-06-06 18:47:48,451:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.26 err no snmp location data
+2019-06-06 18:47:48,463:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.52 err no snmp location data
+2019-06-06 18:47:48,534:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.86 err no snmp location data
+2019-06-06 18:47:48,535:INFO:dev.Devices:dev  172.19.8.60 excute method set_snmp_location_attr
+2019-06-06 18:47:48,535:INFO:dev.Devices:dev  172.17.22.77 excute method set_snmp_location_attr
+2019-06-06 18:47:48,536:INFO:dev.Devices:dev  172.17.22.22 excute method set_snmp_location_attr
+2019-06-06 18:47:48,536:INFO:dev.Devices:dev  172.19.8.25 excute method set_snmp_location_attr
+2019-06-06 18:47:48,536:INFO:dev.Devices:dev  172.19.8.8 excute method set_snmp_location_attr
+2019-06-06 18:47:48,537:INFO:dev.Devices:dev  172.19.8.72 excute method set_snmp_location_attr
+2019-06-06 18:47:48,537:INFO:dev.Devices:dev  172.17.22.54 excute method set_snmp_location_attr
+2019-06-06 18:47:48,538:INFO:dev.Devices:dev  172.17.22.25 excute method set_snmp_location_attr
+2019-06-06 18:47:48,542:INFO:dev.Devices:dev  172.19.8.10 excute method set_snmp_location_attr
+2019-06-06 18:47:48,542:INFO:dev.Devices:dev  172.17.22.24 excute method set_snmp_location_attr
+2019-06-06 18:47:48,543:INFO:dev.Devices:dev  172.17.31.9 excute method set_snmp_location_attr
+2019-06-06 18:47:48,543:INFO:dev.Devices:dev  172.17.22.35 excute method set_snmp_location_attr
+2019-06-06 18:47:48,544:INFO:dev.Devices:dev  172.17.22.58 excute method set_snmp_location_attr
+2019-06-06 18:47:48,544:INFO:dev.Devices:dev  172.17.31.8 excute method set_snmp_location_attr
+2019-06-06 18:47:48,545:INFO:dev.Devices:dev  172.17.22.68 excute method set_snmp_location_attr
+2019-06-06 18:47:48,545:INFO:dev.Devices:dev  172.19.8.58 excute method set_snmp_location_attr
+2019-06-06 18:47:48,549:INFO:dev.Devices:dev  172.17.22.38 excute method set_snmp_location_attr
+2019-06-06 18:47:48,549:INFO:dev.Devices:dev  172.19.8.82 excute method set_snmp_location_attr
+2019-06-06 18:47:48,549:INFO:dev.Devices:dev  172.19.8.71 excute method set_snmp_location_attr
+2019-06-06 18:47:48,550:INFO:dev.Devices:dev  172.17.22.12 excute method set_snmp_location_attr
+2019-06-06 18:47:48,550:INFO:dev.Devices:dev  172.19.8.54 excute method set_snmp_location_attr
+2019-06-06 18:47:48,551:INFO:dev.Devices:dev  172.17.22.13 excute method set_snmp_location_attr
+2019-06-06 18:47:48,551:INFO:dev.Devices:dev  172.17.22.11 excute method set_snmp_location_attr
+2019-06-06 18:47:48,552:INFO:dev.Devices:dev  172.16.30.250 excute method set_snmp_location_attr
+2019-06-06 18:47:48,555:INFO:dev.Devices:dev  172.19.8.32 excute method set_snmp_location_attr
+2019-06-06 18:47:48,555:INFO:dev.Devices:dev  172.19.8.70 excute method set_snmp_location_attr
+2019-06-06 18:47:48,556:INFO:dev.Devices:dev  172.19.8.77 excute method set_snmp_location_attr
+2019-06-06 18:47:48,556:INFO:dev.Devices:dev  172.17.22.47 excute method set_snmp_location_attr
+2019-06-06 18:47:48,557:INFO:dev.Devices:dev  172.19.8.17 excute method set_snmp_location_attr
+2019-06-06 18:47:48,557:INFO:dev.Devices:dev  172.19.8.46 excute method set_snmp_location_attr
+2019-06-06 18:47:48,561:INFO:dev.Devices:dev  172.16.30.35 excute method set_snmp_location_attr
+2019-06-06 18:47:48,562:INFO:dev.Devices:dev  172.17.22.65 excute method set_snmp_location_attr
+2019-06-06 18:47:48,562:INFO:dev.Devices:dev  172.16.30.65 excute method set_snmp_location_attr
+2019-06-06 18:47:48,562:INFO:dev.Devices:dev  172.19.8.12 excute method set_snmp_location_attr
+2019-06-06 18:47:48,563:INFO:dev.Devices:dev  172.17.22.32 excute method set_snmp_location_attr
+2019-06-06 18:47:48,563:INFO:dev.Devices:dev  172.19.8.66 excute method set_snmp_location_attr
+2019-06-06 18:47:48,564:INFO:dev.Devices:dev  172.19.8.13 excute method set_snmp_location_attr
+2019-06-06 18:47:48,565:INFO:dev.Devices:dev  172.17.22.64 excute method set_snmp_location_attr
+2019-06-06 18:47:48,565:INFO:dev.Devices:dev  172.17.22.50 excute method set_snmp_location_attr
+2019-06-06 18:47:48,568:INFO:dev.Devices:dev  172.17.22.84 excute method set_snmp_location_attr
+2019-06-06 18:47:48,569:INFO:dev.Devices:dev  172.17.22.15 excute method set_snmp_location_attr
+2019-06-06 18:47:48,570:INFO:dev.Devices:dev  172.17.22.56 excute method set_snmp_location_attr
+2019-06-06 18:47:48,571:INFO:dev.Devices:dev  172.19.8.81 excute method set_snmp_location_attr
+2019-06-06 18:47:48,572:INFO:dev.Devices:dev  172.17.22.81 excute method set_snmp_location_attr
+2019-06-06 18:47:48,575:INFO:dev.Devices:dev  172.19.8.22 excute method set_snmp_location_attr
+2019-06-06 18:47:48,576:INFO:dev.Devices:dev  172.17.22.10 excute method set_snmp_location_attr
+2019-06-06 18:47:48,576:INFO:dev.Devices:dev  172.17.22.23 excute method set_snmp_location_attr
+2019-06-06 18:47:48,584:INFO:dev.Devices:dev  172.17.22.76 excute method set_snmp_location_attr
+2019-06-06 18:47:48,585:INFO:dev.Devices:dev  172.17.22.16 excute method set_snmp_location_attr
+2019-06-06 18:47:48,585:INFO:dev.Devices:dev  172.17.22.43 excute method set_snmp_location_attr
+2019-06-06 18:47:49,768:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.60 err no snmp location data
+2019-06-06 18:47:50,251:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.22 err no snmp location data
+2019-06-06 18:47:50,268:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.72 err no snmp location data
+2019-06-06 18:47:50,398:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.82 err no snmp location data
+2019-06-06 18:47:50,428:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.25 err no snmp location data
+2019-06-06 18:47:50,712:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.77 err no snmp location data
+2019-06-06 18:47:51,033:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.81 err no snmp location data
+2019-06-06 18:47:51,050:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.58 err no snmp location data
+2019-06-06 18:47:51,112:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.58 err no snmp location data
+2019-06-06 18:47:51,201:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.35 countryGUATEMALA
+2019-06-06 18:47:51,213:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.35 area20_CALLE
+2019-06-06 18:47:51,213:INFO:dev.CiscoIOS:snmp location atrubute ccheck 172.16.30.35 roll[LSR]
+2019-06-06 18:47:51,462:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.54 err no snmp location data
+2019-06-06 18:47:51,563:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.13 err no snmp location data
+2019-06-06 18:47:51,581:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.64 err no snmp location data
+2019-06-06 18:47:51,610:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.31.9 err no snmp location data
+2019-06-06 18:47:52,087:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.66 err no snmp location data
+2019-06-06 18:47:52,166:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.38 err no snmp location data
+2019-06-06 18:47:52,177:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.43 err no snmp location data
+2019-06-06 18:47:52,215:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.250 countryGUATEMALA
+2019-06-06 18:47:52,215:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.250 areaGUAYACAN
+2019-06-06 18:47:52,215:INFO:dev.CiscoXR:snmp location atrubute ccheck 172.16.30.250 roll[LSR,PE]
+2019-06-06 18:47:52,389:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.23 err no snmp location data
+2019-06-06 18:47:52,440:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.8 err no snmp location data
+2019-06-06 18:47:52,529:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.11 err no snmp location data
+2019-06-06 18:47:52,583:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.76 err no snmp location data
+2019-06-06 18:47:52,820:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.70 err no snmp location data
+2019-06-06 18:47:52,956:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.16.30.65 err no snmp location data
+2019-06-06 18:47:52,974:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.81 err no snmp location data
+2019-06-06 18:47:52,996:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.47 err no snmp location data
+2019-06-06 18:47:53,199:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.12 err no snmp location data
+2019-06-06 18:47:53,290:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.10 err no snmp location data
+2019-06-06 18:47:53,413:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.13 err no snmp location data
+2019-06-06 18:47:53,508:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.31.8 err no snmp location data
+2019-06-06 18:47:53,513:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.24 err no snmp location data
+2019-06-06 18:47:53,537:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.17 err no snmp location data
+2019-06-06 18:47:53,771:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.12 err no snmp location data
+2019-06-06 18:47:53,789:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.35 err no snmp location data
+2019-06-06 18:47:53,821:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.77 err no snmp location data
+2019-06-06 18:47:53,878:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.50 err no snmp location data
+2019-06-06 18:47:53,891:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.25 err no snmp location data
+2019-06-06 18:47:53,965:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.71 err no snmp location data
+2019-06-06 18:47:54,153:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.68 err no snmp location data
+2019-06-06 18:47:54,195:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.22 err no snmp location data
+2019-06-06 18:47:54,224:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.65 err no snmp location data
+2019-06-06 18:47:54,262:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.15 err no snmp location data
+2019-06-06 18:47:54,267:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.16 err no snmp location data
+2019-06-06 18:47:54,278:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.46 err no snmp location data
+2019-06-06 18:47:54,385:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.84 err no snmp location data
+2019-06-06 18:47:54,401:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.54 err no snmp location data
+2019-06-06 18:47:54,401:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.56 err no snmp location data
+2019-06-06 18:47:54,526:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.32 err no snmp location data
+2019-06-06 18:47:54,526:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.19.8.32 err no snmp location data
+2019-06-06 18:47:54,592:WARNING:dev.CiscoIOS:set_snmp_location_attr ip172.17.22.10 err no snmp location data
+2019-06-06 18:47:56,677:WARNING:dev.ospf_adjacency:__init__  no ip t_ip
+2019-06-06 18:47:56,679:WARNING:dev.ospf_adjacency:__init__  no ip t_ip
+2019-06-07 09:55:11,548:INFO:dev.Devices:dev  172.16.30.244 execute method check_able_connect
+2019-06-07 09:55:12,792:INFO:dev.Devices:dev  172.16.30.244 execute method set_snmp_community
+2019-06-07 09:55:25,281:INFO:dev.Devices:dev  172.16.30.244 execute method get_platform
+2019-06-07 09:57:15,283:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:Null0 b:0  Division by 0
+2019-06-07 09:57:15,283:WARNING:dev.InterfaceUfinet: 172.16.30.244 Null0 Division by 0
+2019-06-07 09:57:15,284:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:MgmtEth0/RSP0/CPU0/1 b:0  Division by 0
+2019-06-07 09:57:15,284:WARNING:dev.InterfaceUfinet: 172.16.30.244 MgmtEth0/RSP0/CPU0/1 Division by 0
+2019-06-07 09:57:15,284:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:Loopback1 b:0  Division by 0
+2019-06-07 09:57:15,284:WARNING:dev.InterfaceUfinet: 172.16.30.244 Loopback1 Division by 0
+2019-06-07 09:57:15,284:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:MgmtEth0/RSP1/CPU0/0 b:0  Division by 0
+2019-06-07 09:57:15,284:WARNING:dev.InterfaceUfinet: 172.16.30.244 MgmtEth0/RSP1/CPU0/0 Division by 0
+2019-06-07 09:57:15,284:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:MgmtEth0/RSP1/CPU0/1 b:0  Division by 0
+2019-06-07 09:57:15,284:WARNING:dev.InterfaceUfinet: 172.16.30.244 MgmtEth0/RSP1/CPU0/1 Division by 0
+2019-06-07 09:57:15,285:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/1/0 b:0  Division by 0
+2019-06-07 09:57:15,285:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/1/0 Division by 0
+2019-06-07 09:57:15,285:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/1/1 b:0  Division by 0
+2019-06-07 09:57:15,285:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/1/1 Division by 0
+2019-06-07 09:57:15,285:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/1/2 b:0  Division by 0
+2019-06-07 09:57:15,285:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/1/2 Division by 0
+2019-06-07 09:57:15,285:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/1/3 b:0  Division by 0
+2019-06-07 09:57:15,285:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/1/3 Division by 0
+2019-06-07 09:57:15,285:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/1/4 b:0  Division by 0
+2019-06-07 09:57:15,285:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/1/4 Division by 0
+2019-06-07 09:57:15,285:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/1/5 b:0  Division by 0
+2019-06-07 09:57:15,285:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/1/5 Division by 0
+2019-06-07 09:57:15,285:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/1/6 b:0  Division by 0
+2019-06-07 09:57:15,286:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/1/6 Division by 0
+2019-06-07 09:57:15,286:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/1/7 b:0  Division by 0
+2019-06-07 09:57:15,286:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/1/7 Division by 0
+2019-06-07 09:57:15,286:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/0/0 b:0  Division by 0
+2019-06-07 09:57:15,286:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/0/0 Division by 0
+2019-06-07 09:57:15,286:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/1/0 b:0  Division by 0
+2019-06-07 09:57:15,286:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/1/0 Division by 0
+2019-06-07 09:57:15,286:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/1/1 b:0  Division by 0
+2019-06-07 09:57:15,287:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/1/1 Division by 0
+2019-06-07 09:57:15,287:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/0/1 b:0  Division by 0
+2019-06-07 09:57:15,287:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/0/1 Division by 0
+2019-06-07 09:57:15,287:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/1/2 b:0  Division by 0
+2019-06-07 09:57:15,287:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/1/2 Division by 0
+2019-06-07 09:57:15,287:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/0/2 b:0  Division by 0
+2019-06-07 09:57:15,287:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/0/2 Division by 0
+2019-06-07 09:57:15,287:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/1/3 b:0  Division by 0
+2019-06-07 09:57:15,287:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/1/3 Division by 0
+2019-06-07 09:57:15,287:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/0/3 b:0  Division by 0
+2019-06-07 09:57:15,287:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/0/3 Division by 0
+2019-06-07 09:57:15,287:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/1/4 b:0  Division by 0
+2019-06-07 09:57:15,287:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/1/4 Division by 0
+2019-06-07 09:57:15,287:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/0/4 b:0  Division by 0
+2019-06-07 09:57:15,288:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/0/4 Division by 0
+2019-06-07 09:57:15,288:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/1/5 b:0  Division by 0
+2019-06-07 09:57:15,288:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/1/5 Division by 0
+2019-06-07 09:57:15,288:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/0/5 b:0  Division by 0
+2019-06-07 09:57:15,288:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/0/5 Division by 0
+2019-06-07 09:57:15,288:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/1/6 b:0  Division by 0
+2019-06-07 09:57:15,288:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/1/6 Division by 0
+2019-06-07 09:57:15,288:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/0/6 b:0  Division by 0
+2019-06-07 09:57:15,288:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/0/6 Division by 0
+2019-06-07 09:57:15,289:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/0/7 b:0  Division by 0
+2019-06-07 09:57:15,289:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/0/7 Division by 0
+2019-06-07 09:57:15,289:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/1/7 b:0  Division by 0
+2019-06-07 09:57:15,289:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/1/7 Division by 0
+2019-06-07 09:57:15,298:INFO:dev.InterfaceUfinet:172.16.30.244 DF ifTe0/1/1/1.1558KeyError('PENDIENTE')
+2019-06-07 09:57:15,305:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/0/0 b:0  Division by 0
+2019-06-07 09:57:15,305:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/0/0 Division by 0
+2019-06-07 09:57:15,305:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/1/0 b:0  Division by 0
+2019-06-07 09:57:15,305:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/1/0 Division by 0
+2019-06-07 09:57:15,305:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/1/1 b:0  Division by 0
+2019-06-07 09:57:15,305:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/1/1 Division by 0
+2019-06-07 09:57:15,305:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/0/1 b:0  Division by 0
+2019-06-07 09:57:15,305:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/0/1 Division by 0
+2019-06-07 09:57:15,306:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/1/2 b:0  Division by 0
+2019-06-07 09:57:15,306:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/1/2 Division by 0
+2019-06-07 09:57:15,306:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/1/3 b:0  Division by 0
+2019-06-07 09:57:15,306:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/1/3 Division by 0
+2019-06-07 09:57:15,306:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/1/4 b:0  Division by 0
+2019-06-07 09:57:15,306:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/1/4 Division by 0
+2019-06-07 09:57:15,306:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/1/5 b:0  Division by 0
+2019-06-07 09:57:15,306:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/1/5 Division by 0
+2019-06-07 09:57:15,306:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/1/6 b:0  Division by 0
+2019-06-07 09:57:15,306:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/1/6 Division by 0
+2019-06-07 09:57:15,306:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/1/7 b:0  Division by 0
+2019-06-07 09:57:15,306:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/1/7 Division by 0
+2019-06-07 09:57:15,309:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/0/0 b:0  Division by 0
+2019-06-07 09:57:15,309:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/0/0 Division by 0
+2019-06-07 09:57:15,309:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/0/1 b:0  Division by 0
+2019-06-07 09:57:15,309:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/0/1 Division by 0
+2019-06-07 09:57:15,309:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/0/2 b:0  Division by 0
+2019-06-07 09:57:15,309:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/0/2 Division by 0
+2019-06-07 09:57:15,309:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/0/3 b:0  Division by 0
+2019-06-07 09:57:15,309:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/0/3 Division by 0
+2019-06-07 09:57:15,309:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/0/4 b:0  Division by 0
+2019-06-07 09:57:15,309:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/0/4 Division by 0
+2019-06-07 09:57:15,310:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/0/5 b:0  Division by 0
+2019-06-07 09:57:15,310:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/0/5 Division by 0
+2019-06-07 09:57:15,310:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/0/6 b:0  Division by 0
+2019-06-07 09:57:15,310:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/0/6 Division by 0
+2019-06-07 09:57:15,310:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/0/7 b:0  Division by 0
+2019-06-07 09:57:15,310:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/0/7 Division by 0
+2019-06-07 09:57:15,314:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:Loopback10432 b:0  Division by 0
+2019-06-07 09:57:15,314:WARNING:dev.InterfaceUfinet: 172.16.30.244 Loopback10432 Division by 0
+2019-06-07 09:57:15,314:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/0/2 b:0  Division by 0
+2019-06-07 09:57:15,314:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/0/2 Division by 0
+2019-06-07 09:57:15,314:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/0/3 b:0  Division by 0
+2019-06-07 09:57:15,315:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/0/3 Division by 0
+2019-06-07 09:57:15,315:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/0/4 b:0  Division by 0
+2019-06-07 09:57:15,315:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/0/4 Division by 0
+2019-06-07 09:57:15,315:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/0/5 b:0  Division by 0
+2019-06-07 09:57:15,315:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/0/5 Division by 0
+2019-06-07 09:57:15,315:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/0/6 b:0  Division by 0
+2019-06-07 09:57:15,315:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/0/6 Division by 0
+2019-06-07 09:57:15,315:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/0/7 b:0  Division by 0
+2019-06-07 09:57:15,315:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/0/7 Division by 0
+2019-06-07 09:57:15,318:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/2/0/0 b:0  Division by 0
+2019-06-07 09:57:15,318:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/2/0/0 Division by 0
+2019-06-07 09:57:15,319:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/2/0/1 b:0  Division by 0
+2019-06-07 09:57:15,319:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/2/0/1 Division by 0
+2019-06-07 09:57:15,319:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/2/0/2 b:0  Division by 0
+2019-06-07 09:57:15,319:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/2/0/2 Division by 0
+2019-06-07 09:57:15,319:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/2/0/3 b:0  Division by 0
+2019-06-07 09:57:15,319:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/2/0/3 Division by 0
+2019-06-07 09:57:15,319:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/2/0/4 b:0  Division by 0
+2019-06-07 09:57:15,319:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/2/0/4 Division by 0
+2019-06-07 09:57:15,319:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/2/0/5 b:0  Division by 0
+2019-06-07 09:57:15,319:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/2/0/5 Division by 0
+2019-06-07 09:57:15,319:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/2/0/6 b:0  Division by 0
+2019-06-07 09:57:15,319:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/2/0/6 Division by 0
+2019-06-07 09:57:15,320:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/2/0/7 b:0  Division by 0
+2019-06-07 09:57:15,320:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/2/0/7 Division by 0
+2019-06-07 09:57:15,325:WARNING:dev.InterfaceUfinet: 172.16.30.244 i: b:0  Division by 0
+2019-06-07 09:57:15,326:WARNING:dev.InterfaceUfinet: 172.16.30.244  Division by 0
+2019-06-07 09:58:17,097:INFO:dev.Devices:dev  172.16.30.244 execute method check_able_connect
+2019-06-07 09:58:18,334:INFO:dev.Devices:dev  172.16.30.244 execute method set_snmp_community
+2019-06-07 09:58:30,788:INFO:dev.Devices:dev  172.16.30.244 execute method get_platform
+2019-06-07 10:00:20,102:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:Null0 b:0  Division by 0
+2019-06-07 10:00:20,102:WARNING:dev.InterfaceUfinet: 172.16.30.244 Null0 Division by 0
+2019-06-07 10:00:20,103:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:MgmtEth0/RSP0/CPU0/1 b:0  Division by 0
+2019-06-07 10:00:20,103:WARNING:dev.InterfaceUfinet: 172.16.30.244 MgmtEth0/RSP0/CPU0/1 Division by 0
+2019-06-07 10:00:20,103:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:Loopback1 b:0  Division by 0
+2019-06-07 10:00:20,103:WARNING:dev.InterfaceUfinet: 172.16.30.244 Loopback1 Division by 0
+2019-06-07 10:00:20,103:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:MgmtEth0/RSP1/CPU0/0 b:0  Division by 0
+2019-06-07 10:00:20,103:WARNING:dev.InterfaceUfinet: 172.16.30.244 MgmtEth0/RSP1/CPU0/0 Division by 0
+2019-06-07 10:00:20,103:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:MgmtEth0/RSP1/CPU0/1 b:0  Division by 0
+2019-06-07 10:00:20,103:WARNING:dev.InterfaceUfinet: 172.16.30.244 MgmtEth0/RSP1/CPU0/1 Division by 0
+2019-06-07 10:00:20,103:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/1/0 b:0  Division by 0
+2019-06-07 10:00:20,103:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/1/0 Division by 0
+2019-06-07 10:00:20,103:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/1/1 b:0  Division by 0
+2019-06-07 10:00:20,103:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/1/1 Division by 0
+2019-06-07 10:00:20,104:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/1/2 b:0  Division by 0
+2019-06-07 10:00:20,104:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/1/2 Division by 0
+2019-06-07 10:00:20,104:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/1/3 b:0  Division by 0
+2019-06-07 10:00:20,104:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/1/3 Division by 0
+2019-06-07 10:00:20,104:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/1/4 b:0  Division by 0
+2019-06-07 10:00:20,104:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/1/4 Division by 0
+2019-06-07 10:00:20,104:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/1/5 b:0  Division by 0
+2019-06-07 10:00:20,104:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/1/5 Division by 0
+2019-06-07 10:00:20,104:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/1/6 b:0  Division by 0
+2019-06-07 10:00:20,104:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/1/6 Division by 0
+2019-06-07 10:00:20,104:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/1/7 b:0  Division by 0
+2019-06-07 10:00:20,104:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/1/7 Division by 0
+2019-06-07 10:00:20,105:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/0/0 b:0  Division by 0
+2019-06-07 10:00:20,105:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/0/0 Division by 0
+2019-06-07 10:00:20,105:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/1/0 b:0  Division by 0
+2019-06-07 10:00:20,105:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/1/0 Division by 0
+2019-06-07 10:00:20,105:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/1/1 b:0  Division by 0
+2019-06-07 10:00:20,105:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/1/1 Division by 0
+2019-06-07 10:00:20,105:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/0/1 b:0  Division by 0
+2019-06-07 10:00:20,105:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/0/1 Division by 0
+2019-06-07 10:00:20,105:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/1/2 b:0  Division by 0
+2019-06-07 10:00:20,106:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/1/2 Division by 0
+2019-06-07 10:00:20,106:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/0/2 b:0  Division by 0
+2019-06-07 10:00:20,106:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/0/2 Division by 0
+2019-06-07 10:00:20,106:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/1/3 b:0  Division by 0
+2019-06-07 10:00:20,106:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/1/3 Division by 0
+2019-06-07 10:00:20,106:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/0/3 b:0  Division by 0
+2019-06-07 10:00:20,106:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/0/3 Division by 0
+2019-06-07 10:00:20,106:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/1/4 b:0  Division by 0
+2019-06-07 10:00:20,106:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/1/4 Division by 0
+2019-06-07 10:00:20,106:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/0/4 b:0  Division by 0
+2019-06-07 10:00:20,106:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/0/4 Division by 0
+2019-06-07 10:00:20,107:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/1/5 b:0  Division by 0
+2019-06-07 10:00:20,107:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/1/5 Division by 0
+2019-06-07 10:00:20,107:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/0/5 b:0  Division by 0
+2019-06-07 10:00:20,107:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/0/5 Division by 0
+2019-06-07 10:00:20,107:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/1/6 b:0  Division by 0
+2019-06-07 10:00:20,107:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/1/6 Division by 0
+2019-06-07 10:00:20,107:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/0/6 b:0  Division by 0
+2019-06-07 10:00:20,107:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/0/6 Division by 0
+2019-06-07 10:00:20,107:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/0/7 b:0  Division by 0
+2019-06-07 10:00:20,107:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/0/7 Division by 0
+2019-06-07 10:00:20,107:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/1/1/7 b:0  Division by 0
+2019-06-07 10:00:20,107:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/1/1/7 Division by 0
+2019-06-07 10:00:20,117:INFO:dev.InterfaceUfinet:172.16.30.244 DF ifTe0/1/1/1.1558KeyError('PENDIENTE')
+2019-06-07 10:00:20,125:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/0/0 b:0  Division by 0
+2019-06-07 10:00:20,125:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/0/0 Division by 0
+2019-06-07 10:00:20,125:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/1/0 b:0  Division by 0
+2019-06-07 10:00:20,125:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/1/0 Division by 0
+2019-06-07 10:00:20,125:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/1/1 b:0  Division by 0
+2019-06-07 10:00:20,126:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/1/1 Division by 0
+2019-06-07 10:00:20,126:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/0/1 b:0  Division by 0
+2019-06-07 10:00:20,126:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/0/1 Division by 0
+2019-06-07 10:00:20,126:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/1/2 b:0  Division by 0
+2019-06-07 10:00:20,126:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/1/2 Division by 0
+2019-06-07 10:00:20,126:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/1/3 b:0  Division by 0
+2019-06-07 10:00:20,126:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/1/3 Division by 0
+2019-06-07 10:00:20,127:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/1/4 b:0  Division by 0
+2019-06-07 10:00:20,127:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/1/4 Division by 0
+2019-06-07 10:00:20,127:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/1/5 b:0  Division by 0
+2019-06-07 10:00:20,127:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/1/5 Division by 0
+2019-06-07 10:00:20,127:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/1/6 b:0  Division by 0
+2019-06-07 10:00:20,127:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/1/6 Division by 0
+2019-06-07 10:00:20,127:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/1/7 b:0  Division by 0
+2019-06-07 10:00:20,127:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/1/7 Division by 0
+2019-06-07 10:00:20,129:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/0/0 b:0  Division by 0
+2019-06-07 10:00:20,129:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/0/0 Division by 0
+2019-06-07 10:00:20,130:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/0/1 b:0  Division by 0
+2019-06-07 10:00:20,130:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/0/1 Division by 0
+2019-06-07 10:00:20,130:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/0/2 b:0  Division by 0
+2019-06-07 10:00:20,130:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/0/2 Division by 0
+2019-06-07 10:00:20,130:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/0/3 b:0  Division by 0
+2019-06-07 10:00:20,130:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/0/3 Division by 0
+2019-06-07 10:00:20,130:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/0/4 b:0  Division by 0
+2019-06-07 10:00:20,130:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/0/4 Division by 0
+2019-06-07 10:00:20,130:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/0/5 b:0  Division by 0
+2019-06-07 10:00:20,130:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/0/5 Division by 0
+2019-06-07 10:00:20,130:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/0/6 b:0  Division by 0
+2019-06-07 10:00:20,130:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/0/6 Division by 0
+2019-06-07 10:00:20,130:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/7/0/7 b:0  Division by 0
+2019-06-07 10:00:20,131:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/7/0/7 Division by 0
+2019-06-07 10:00:20,134:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:Loopback10432 b:0  Division by 0
+2019-06-07 10:00:20,135:WARNING:dev.InterfaceUfinet: 172.16.30.244 Loopback10432 Division by 0
+2019-06-07 10:00:20,135:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/0/2 b:0  Division by 0
+2019-06-07 10:00:20,135:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/0/2 Division by 0
+2019-06-07 10:00:20,135:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/0/3 b:0  Division by 0
+2019-06-07 10:00:20,135:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/0/3 Division by 0
+2019-06-07 10:00:20,135:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/0/4 b:0  Division by 0
+2019-06-07 10:00:20,135:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/0/4 Division by 0
+2019-06-07 10:00:20,135:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/0/5 b:0  Division by 0
+2019-06-07 10:00:20,135:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/0/5 Division by 0
+2019-06-07 10:00:20,136:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/0/6 b:0  Division by 0
+2019-06-07 10:00:20,136:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/0/6 Division by 0
+2019-06-07 10:00:20,136:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/0/0/7 b:0  Division by 0
+2019-06-07 10:00:20,136:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/0/0/7 Division by 0
+2019-06-07 10:00:20,139:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/2/0/0 b:0  Division by 0
+2019-06-07 10:00:20,139:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/2/0/0 Division by 0
+2019-06-07 10:00:20,140:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/2/0/1 b:0  Division by 0
+2019-06-07 10:00:20,140:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/2/0/1 Division by 0
+2019-06-07 10:00:20,140:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/2/0/2 b:0  Division by 0
+2019-06-07 10:00:20,140:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/2/0/2 Division by 0
+2019-06-07 10:00:20,140:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/2/0/3 b:0  Division by 0
+2019-06-07 10:00:20,140:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/2/0/3 Division by 0
+2019-06-07 10:00:20,140:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/2/0/4 b:0  Division by 0
+2019-06-07 10:00:20,140:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/2/0/4 Division by 0
+2019-06-07 10:00:20,140:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/2/0/5 b:0  Division by 0
+2019-06-07 10:00:20,140:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/2/0/5 Division by 0
+2019-06-07 10:00:20,140:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/2/0/6 b:0  Division by 0
+2019-06-07 10:00:20,140:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/2/0/6 Division by 0
+2019-06-07 10:00:20,141:WARNING:dev.InterfaceUfinet: 172.16.30.244 i:dwdm0/2/0/7 b:0  Division by 0
+2019-06-07 10:00:20,141:WARNING:dev.InterfaceUfinet: 172.16.30.244 dwdm0/2/0/7 Division by 0
+2019-06-07 10:00:20,146:WARNING:dev.InterfaceUfinet: 172.16.30.244 i: b:0  Division by 0
+2019-06-07 10:00:20,146:WARNING:dev.InterfaceUfinet: 172.16.30.244  Division by 0
+2019-06-07 10:00:20,147:INFO:dev.CiscoXR:set_interfaces_snmp able Interfaces snmp 728 172.16.30.244

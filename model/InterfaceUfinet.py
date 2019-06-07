@@ -417,14 +417,15 @@ class InterfaceUfinet(InterfaceIOS):
     @staticmethod
     def factory_from_dict(device, interfaces_data=[]) -> dict:
         interfaces_dict = {}
+        print(interfaces_data)
         try:
             for parse_data in interfaces_data:
 
                 interface_object = InterfaceUfinet(parent_device=device, parse_data=parse_data)
                 interfaces_dict[interface_object.if_index] = interface_object
-                if "BDI" in parse_data["if_index"] or "Po" in parse_data["if_index"]:
-                    device.verbose.warning(
-                        f"factory_from_dict d{device.ip} {device.hostname}  i{parse_data['if_index']}")
+                # if "BDI" in parse_data["if_index"] or "Po" in parse_data["if_index"]:
+                #    device.verbose.warning(
+                #        f"factory_from_dict d{device.ip} {device.hostname}  i{parse_data['if_index']}")
         except TypeError as e:
             device.dev.debug(f' factory_from_dict {device.ip} type error non type {parse_data["if_index"]}')
         return interfaces_dict
