@@ -55,8 +55,7 @@ class ospf_adjacency:
         self.t = neighbors[1]
         if self.s["interface_ip"] in interfaces_data or self.t["interface_ip"] in interfaces_data:
             self.verbose.warning(
-                f"__INIT__ Debug  {self.s_device.ip} {self.s_device.hostname} {self.s['router_id']} {self.t[
-                    'router_id']} ")
+                f"__INIT__ Debug  {self.s_device.ip} {self.s_device.hostname} {self.s['router_id']}  ")
         self.s_device = self.ospf_database.routers[self.s["router_id"]]
         self.t_device = self.ospf_database.routers[self.t["router_id"]]
         self.s["network_device"] = self.s_device
