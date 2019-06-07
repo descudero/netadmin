@@ -316,3 +316,26 @@ select *
 from interfaces
 order by uid DESC
 limit 1300
+
+select i.if_index,i.ip
+from network_devices as ns
+       inner join interfaces as i on i.net_device_uid = ns.uid
+       inner join interface_states as s on s.interface_uid = i.uid
+where ns.ip = '172.20.32.46';
+
+select *
+from interfaces
+where if_index like '%BD%'
+   OR if_index like '%Po%'
+order by uid DESC
+limit 25;
+select *
+from interface_states
+where interface_uid = 129585;
+
+select *
+from network_devices as ns
+       inner join interfaces as i on i.net_device_uid = ns.uid
+where ns.ip = '172.17.22.53';
+
+

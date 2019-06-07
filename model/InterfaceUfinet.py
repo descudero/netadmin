@@ -161,6 +161,7 @@ class InterfaceUfinet(InterfaceIOS):
         devices_uid = {dev.ip: str(dev.uid) for dev in devices}
         sql = f"""SELECT 
                         i.net_device_uid, 
+                        i.bandwith as bw,
                         i.uid as uid,
                         i.if_index as if_index,
                         i.l3_protocol,
@@ -418,10 +419,14 @@ class InterfaceUfinet(InterfaceIOS):
         interfaces_dict = {}
         try:
             for parse_data in interfaces_data:
+
                 interface_object = InterfaceUfinet(parent_device=device, parse_data=parse_data)
                 interfaces_dict[interface_object.if_index] = interface_object
+                if "BDI" in parse_data["if_index"] or "Po" in parse_data["if_index"]:
+                    device.verbose.warning(
+                        f"factory_from_dict d{device.ip} {device.hostname}  i{parse_data['if_index']}")
         except TypeError as e:
-            device.dev.debug(f' factory_from_dict {device.ip} type error non type')
+            device.dev.debug(f' factory_from_dict {device.ip} type error non type {parse_data["if_index"]}')
         return interfaces_dict
 
     @staticmethod

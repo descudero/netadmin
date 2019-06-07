@@ -40,8 +40,8 @@ function display_te(data) {
     var ba_hops = data['b-a'];
     var label_a = network.body.nodes[data['a']].options.label;
     var label_b = network.body.nodes[data['b']].options.label;
-    a.html("<h5>" + label_a + "</h5><br>" + get_te_hops(ab_hops));
-    b.html("<h5>" + label_b + "</h5><br>" + get_te_hops(ba_hops));
+    a.html(data['str_a']);
+    b.html(data['str_b']);
 
 }
 

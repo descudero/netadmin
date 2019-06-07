@@ -33,6 +33,9 @@ class ospf_database:
             # self.devices.execute_processes(methods=['set_interfaces'])
             self.verbose.warning(f"_INIT_real_time  p2p :{len(p2p)} rourters {len(routers)}")
             self.real_routers = routers
+            self.diagram.get_newer_state()
+            old_devices = self.diagram.state.devices()
+            self.devices.copy_attr(other_devices=old_devices, attrs=["x", "y"])
 
         # elif source =='last_state':
         elif source == "db":
@@ -56,11 +59,11 @@ class ospf_database:
             t.start()
             threads.append(t)
         for index, t in enumerate(threads):
-            self.verbose.warning(f"tried p2p {index} {t.name} ")
+            self.verbose.debug(f"tried p2p {index} {t.name} ")
             t.join()
-            self.verbose.warning(f"joined p2p {index} {t.name} ")
+            self.verbose.debug(f"joined p2p {index} {t.name} ")
 
-        self.verbose.warning(f"__INIT__Fishish join add_ospf_adjacency p2p {len(result_p2p)} ")
+        self.verbose.debug(f"__INIT__Fishish join add_ospf_adjacency p2p {len(result_p2p)} ")
         self.p2p = {p2p.network_id: p2p for p2p in result_p2p}
         self.verbose.warning(f"__INIT__Fishish join add_ospf_adjacency real p2p {len(self.p2p)} ")
 

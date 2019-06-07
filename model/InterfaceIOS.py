@@ -52,6 +52,9 @@ class InterfaceIOS(object):
         for key, value in parse_data.items():
             if not value == '':
                 setattr(self, key, value)
+        if hasattr(self, "bandwith"):
+            self.bw = self.bandwith
+        self.description = str(self.description).replace("\\", "")
         self.if_index = InterfaceIOS.get_normalize_interface_name(self.if_index)
         self.correct_bw()
         try:
@@ -71,6 +74,8 @@ class InterfaceIOS(object):
 
         if "BVI" in self.if_index:
             self.bw = 10_000_000_000
+        if "BDI" in self.if_index:
+            self.bw = 1_000_000_000
         elif "Hu" in self.if_index:
             self.bw = 100_000_000_000
         elif "Te" in self.if_index:
@@ -85,11 +90,19 @@ class InterfaceIOS(object):
         except TypeError as te:
             util_in = 0
             self.dev.info(f'{self.parent_device} {self.if_index} interface util no able to set until_in')
+        except ZeroDivisionError as te:
+            util_in = 0
+            self.dev.warning(
+                f'{self.parent_device} i:{self.if_index} b:{self.bw}  Division by 0')
         try:
             util_out = round(float(self.output_rate) / self.bw * 100, 2)
         except TypeError as te:
             util_out = 0
-            self.dev.info(f'{self.parent_device} {self.if_index} interface util no able to set until_out ')
+            self.dev.info(
+                f'{self.parent_device} i:{self.if_index} b:{self.bw} interface util no able to set until_out ')
+        except ZeroDivisionError as te:
+            util_out = 0
+            self.dev.warning(f'{self.parent_device} {self.if_index} Division by 0')
         return 100 if util_in > 100 else util_in, 100 if util_out > 100 else util_out
 
     def get_interface_errors(self, filter="0"):
@@ -135,7 +148,7 @@ class InterfaceIOS(object):
                           "GigabitEthernet": "Gi",
                           "TenGigE": "Te",
                           "HundredGigE": "Hu",
-                          "FortyGigE": "Fo"}
+                          "FortyGigE": "Fo", "BD": "BD", 'Port-channel': "Port-channel"}
 
         for pattern, corrected_name in interface_dict.items():
             interface_string = interface_string.replace(pattern, corrected_name)

@@ -57,8 +57,12 @@ class IpExplicitPath:
 
     @property
     def command(self):
-        command_string = f" ip explicit-path name  {self.name}  enable\n"
-        for hop in self:
+        command_string = f"explicit-path name  {self.name}  enable\n"
+        if self.parent_device.platform == "CiscoIOS":
+            command_string = f'ip {command_string}'
+        for index, hop in enumerate(self):
+            if self.parent_device.platform == "CiscoXR":
+                command_string += f"index {(index + 1) * 7}  "
             command_string += f" next-address {hop['loose']}  {hop['next_hop']} \n"
 
         return command_string

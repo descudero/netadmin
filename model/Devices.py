@@ -228,12 +228,21 @@ class Devices:
                 device.uid = data_devices[device.ip]["uid"]
                 device.hostname = data_devices[device.ip]["hostname"]
                 device.platform = data_devices[device.ip]["platform"]
+                device.country = data_devices[device.ip]["country"]
             return devices
         return None
 
     @staticmethod
     def load_uid(master, uid=0):
         return list(Devices.load_uids(master=master, uids=[uid]))[0]
+
+    def copy_attr(self, other_devices, attrs=[]):
+        for device in self:
+            if device.ip in other_devices.devices:
+                other = other_devices[device.ip]
+                for attr in attrs:
+                    setattr(device, attr, getattr(other, attr))
+
 
     def set_attrs(self, data):
         for device_ip, attrs in data.items():

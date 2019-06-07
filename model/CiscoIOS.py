@@ -860,10 +860,10 @@ class CiscoIOS(Parent):
 
         connection = self.connect()
         ospf_interface_output = self.send_command(connection,
-                                                  "show ip ospf " + as_ospf + " interface",
+                                                  f"show ip ospf {as_ospf}  interface",
                                                   self.hostname, timeout=5)
         ospf_neighbor_output = self.send_command(connection,
-                                                 "show ip ospf " + as_ospf + " neighbor",
+                                                 f"show ip ospf {as_ospf} neighbor",
                                                  self.hostname, timeout=5)
         interface_ospf = ospf_interface_output.split("line ")
         interfaces_dict = {}
@@ -1380,7 +1380,7 @@ class CiscoIOS(Parent):
             image = '../static/img/' + "CiscoIOS" + CiscoIOS.images[self.country] + '.png'
         except Exception as e:
             image = '../static/img/' + self.platform + '.png'
-            self.verbose.warning("get_vs:" + self.ip + " err " + str(e))
+            self.verbose.debug("get_vs:" + self.ip + " err " + str(e))
         return {'mass': 10, 'id': self.uid, 'label': self.ip + " " + self.hostname, 'font': {'size': '8'},
                 'image': image, 'shape': 'image', 'ip': self.ip, 'x': self.x, 'y': self.y}
 
@@ -1609,6 +1609,13 @@ class CiscoIOS(Parent):
                           if filter in getattr(interface, attribute)]
         return interfaces
 
+    def new_ip_explicit_path(self, to_device, ip_hops=[]) -> str:
+        hops = [{"next_hop": hop, "loose": ''} for hop in ip_hops]
+        ep = IpExplicitPath(name=f'F:{self.hostname}_T:{to_device.hostname}', hops=hops, parent_device=self)
+        return ep.command
+
+
+
     def set_ip_explicit_paths(self, template_name="ip explicit-path ios.template"):
         list_of_hops = self.send_command_and_parse(command="show run | s ip explicit-path", \
                                                    template_name=template_name)
@@ -1675,3 +1682,16 @@ class CiscoIOS(Parent):
             sql = f'''SELECT * FROM    netadmin.network_devices WHERE   uid ={uid} '''
             cursor.execute(sql)
             data = cursor.fetchone()
+
+    def fix_interfaces_attr(self, asn_ospf="502"):
+        self.set_ip_ospf_interfaces(as_ospf=asn_ospf)
+        self.set_interfaces()
+        indexes = [index for index in self.ospf_interfaces.keys() if "Tu" not in index and "Lo" not in index]
+        configuration = "conf t\n"
+        for index in indexes:
+            if "L3:" not in self.interfaces[index].description:
+                configuration += "\n interface " + self.interfaces[index].if_index
+                configuration += "\n description L3:MPLOSP D:B L1:DP " + self.interfaces[index].description
+        configuration += "\nend\nwr\n\n"
+        if "interface" in configuration:
+            self.auto_send_command(command=configuration)

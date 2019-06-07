@@ -22,6 +22,7 @@ from model.InterfaceUfinet import InterfaceUfinet
 from model.BGPNeigbor import BGPNeighbor
 from operator import itemgetter
 from model.Diagram import Diagram
+from model.Devices import Devices
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "autenticacion basica"
 app.config['MYSQL_HOST'] = '10.250.55.17'
@@ -238,26 +239,44 @@ def diagramas():
 def te_json():
     request.get_json()
     data = request.json['data']
-    print(data)
     nodes = {edge['from_id'] for edge in data} | {edge['to_id'] for edge in data}
     G = nx.Graph()
     G.add_nodes_from(nodes)
-    print(nodes)
+
     for edge in data:
         G.add_edge(edge['to_id'], edge['from_id'])
         G.edges[edge['to_id'], edge['from_id']]['attr'] = {str(edge['to_id']) + 'ip': edge['to_ip'],
                                                            str(edge['from_id']) + 'ip': edge['from_ip']}
     final = [node for node in G.nodes if len(G.edges(node)) == 1]
-    print(f'final nodes {final}')
+
     shortest = nx.shortest_path(G, source=final[0], target=final[1])
-    print(f'path {shortest}')
+    dev1 = list(Devices.load_uids(master=master, uids=[final[0]]))[0]
+    dev2 = list(Devices.load_uids(master=master, uids=[final[1]]))[0]
     ip_go = []
     ip_return = []
     for index in range(len(shortest) - 1):
         ip_return.append(G.edges[shortest[index], shortest[index + 1]]['attr'][f'{shortest[index]}ip'])
         ip_go.append(G.edges[shortest[index], shortest[index + 1]]['attr'][f'{shortest[index + 1]}ip'])
+    ip_return = list(reversed(ip_return))
+    path1 = f"explicit-path name {dev1.hostname}_{dev2.hostname} <br>"
+    path2 = f"explicit-path name {dev2.hostname}_{dev1.hostname} <br>"
+    print(dev1.platform)
+    print(dev2.platform)
 
-    return jsonify({"a-b": ip_go, 'b-a': list(reversed(ip_return)), "a": final[0], "b": final[1]})
+    for index, hop in enumerate(ip_go):
+        if dev1.platform == "CiscoXR":
+            path1 += f'index {(index + 1) * 5} '
+        path1 += f"next-address {hop} <br>"
+    for index, hop in enumerate(ip_return):
+        if dev2.platform == "CiscoXR":
+            path2 += f'index {(index + 1) * 5} '
+        path2 += f"next-address {hop} <br>"
+
+    path1 = dev1.new_ip_explicit_path(to_device=dev2, ip_hops=ip_go).replace("\n", "<br>")
+    path2 = dev2.new_ip_explicit_path(to_device=dev1, ip_hops=ip_return).replace("\n", "<br>")
+    path1 = f' <h3>{dev1.hostname} {dev1.ip}</h3> <br> {path1}'
+    path2 = f' <h3>{dev2.hostname} {dev2.ip}</h3> <br> {path2}'
+    return jsonify({"a-b": ip_go, 'b-a': ip_return, "a": final[0], "b": final[1], "str_a": path1, "str_b": path2})
 
 
 @app.route('/diagramas/prueba_json', methods=['POST'])

@@ -3,7 +3,7 @@ from config.Master import Master
 from model.Devices import Devices
 from pprint import pprint
 import argparse
-
+import ipaddress
 isp = ISP()
 isp.master = Master()
 
