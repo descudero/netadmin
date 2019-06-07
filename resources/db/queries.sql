@@ -317,10 +317,53 @@ from interfaces
 order by uid DESC
 limit 1300
 
+set foreign_key_checks = 0;
+delete
+from interface_states
+where interface_uid in (
+                        135289,
+                        135290,
+                        135291,
+                        135292,
+                        135518,
+                        135536
+  );
+
+delete
+from diagram_state_adjacencies
+where interface_1_uid in (
+                          135289,
+                          135290,
+                          135291,
+                          135292,
+                          135518,
+                          135536
+  )
+   or interface_2_uid
+  in (
+      135289,
+      135290,
+      135291,
+      135292,
+      135518,
+      135536
+        );
+
+delete
+from interfaces
+where uid in (
+              135289,
+              135290,
+              135291,
+              135292,
+              135518,
+              135536
+  );
+
 select i.uid,i.if_index,i.ip,i.description
 from network_devices as ns
        inner join interfaces as i on i.net_device_uid = ns.uid
-where ns.ip = '172.16.30.246';
+where ns.ip = '172.16.30.3';
 
 select *
 from interfaces

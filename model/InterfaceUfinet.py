@@ -209,7 +209,7 @@ class InterfaceUfinet(InterfaceIOS):
                         if interface.if_index in data_dict_interfaces:
 
                             data_sql = data_dict_interfaces[interface.if_index]
-                            if interface.description == data_sql['description'] and \
+                            if str(interface.ip) == data_sql['ip'] and \
                                     interface.l3_protocol == data_sql['l3_protocol'] and \
                                     interface.l3_protocol_attr == data_sql['l3_protocol_attr'] and \
                                     interface.l1_protocol == data_sql['l1_protocol'] and \
@@ -269,10 +269,11 @@ class InterfaceUfinet(InterfaceIOS):
             connection = self.parent_device.master.db_connect()
             with connection.cursor() as cursor:
                 sql = '''SELECT uid FROM interfaces   WHERE if_index=%s AND net_device_uid =%s AND l3_protocol=%s
-                 AND l3_protocol_attr=%s AND l1_protocol=%s AND l1_protocol_attr=%s AND data_flow=%s 
+                 AND l3_protocol_attr=%s AND l1_protocol=%s AND l1_protocol_attr=%s AND data_flow=%s  AND ip=%s
                  order by uid DESC  limit 1'''
                 cursor.execute(sql, (self.if_index, self.parent_device.uid_db(), self.l3_protocol,
-                                     self.l3_protocol_attr, self.l1_protocol, self.l1_protocol_attr, self.data_flow))
+                                     self.l3_protocol_attr, self.l1_protocol, self.l1_protocol_attr, self.data_flow,
+                                     str(self.ip)))
                 result = cursor.fetchone()
                 if result:
                     self.uid = result['uid']
@@ -502,7 +503,7 @@ class InterfaceUfinet(InterfaceIOS):
             width = width_array[(int(self.util_out / 10))]
             return str(color), width
         else:
-            return str(Color("DarkGray").hex), 2
+            return str(Color("DarkGray").hex), 3
 
     @staticmethod
     def maximum_usage_color(*interfaces):

@@ -192,8 +192,9 @@ class ospf_adjacency:
                 self.vs['width'] = 2
                 self.vs['winterface_type'] = 3
             else:
-                self.vs['width'] = 5
-                self.vs['winterface_type'] = 5
+                self.vs['width'] = 3
+                self.vs['dashes'] = [3, 6]
+                self.vs['winterface_type'] = 3
         except Exception as e:
             pass
         try:
@@ -209,6 +210,7 @@ class ospf_adjacency:
             self.vs['color'] = {'color': ospf_adjacency.__l1["DEF"]}
             self.vs['width'] = 5
             self.vs['wusage'] = 2
+
         self.dev.debug(f'{self.network_id} end set vs')
 
     @property
