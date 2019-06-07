@@ -336,6 +336,6 @@ where interface_uid = 129585;
 select *
 from network_devices as ns
        inner join interfaces as i on i.net_device_uid = ns.uid
-where ns.ip = '172.19.8.7';
+where ns.ip = '172.19.8.60';
 
 

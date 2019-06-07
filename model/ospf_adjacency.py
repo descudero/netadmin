@@ -33,13 +33,13 @@ class ospf_adjacency:
     __table__ = "diagram_state_adjacencies"
 
     def __init__(self, lock, network_id, ospf_database, neighbors, network_type='p2p', state='up'):
-        interfaces_data = ['172.20.33.86',
-                           '172.20.33.101',
-                           '172.20.33.74',
-                           '172.20.33.73',
-                           '172.20.33.53',
-                           '172.20.33.85',
-                           '172.20.33.82']
+        # interfaces_data = ['172.20.33.86',
+        #                    '172.20.33.101',
+        #                    '172.20.33.74',
+        #                    '172.20.33.73',
+        #                    '172.20.33.53',
+        #                    '172.20.33.85',
+        #                    '172.20.33.82']
 
         self.uid = 0
         self.diagram_state = None
@@ -53,18 +53,18 @@ class ospf_adjacency:
 
         self.s = neighbors[0]
         self.t = neighbors[1]
-        if self.s["interface_ip"] in interfaces_data or self.t["interface_ip"] in interfaces_data:
-            self.verbose.warning(
-                f"__INIT__ Debug  {self.s_device.ip} {self.s_device.hostname} {self.s['router_id']}  ")
         self.s_device = self.ospf_database.routers[self.s["router_id"]]
         self.t_device = self.ospf_database.routers[self.t["router_id"]]
+        # if self.s["interface_ip"] in interfaces_data or self.t["interface_ip"] in interfaces_data:
+        #     self.verbose.warning(
+        #         f"__INIT__ Debug  {self.s_device.ip} {self.s_device.hostname} {self.s['router_id']}  ")
         self.s["network_device"] = self.s_device
         self.t["network_device"] = self.t_device
         try:
             self.s_interface = self.s_device.interfaces_ip[self.s["interface_ip"]]
-            if "BDI" in self.s_interface.if_index or "Po" in self.s_interface.if_index:
-                self.verbose.warning(
-                    f"__INIT__ d{self.s_device.ip} {self.s_device.hostname}  i{self.s_interface.if_index}")
+            # if "BDI" in self.s_interface.if_index or "Po" in self.s_interface.if_index:
+            #     self.verbose.warning(
+            #         f"__INIT__ d{self.s_device.ip} {self.s_device.hostname}  i{self.s_interface.if_index}")
         except KeyError:
             self.s_interface = "null"
             self.verbose.warning(
@@ -72,9 +72,9 @@ class ospf_adjacency:
                 f'dev:{self.s_device.hostname} I:{self.s["interface_ip"]}')
         try:
             self.t_interface = self.t_device.interfaces_ip[self.t["interface_ip"]]
-            if "BDI" in self.t_interface.if_index or "Po" in self.t_interface.if_index:
-                self.verbose.warning(
-                    f"__INIT__ d{self.t_device.ip} {self.t_device.hostname}  i{self.t_interface.if_index}")
+            # if "BDI" in self.t_interface.if_index or "Po" in self.t_interface.if_index:
+            #     self.verbose.warning(
+            #         f"__INIT__ d{self.t_device.ip} {self.t_device.hostname}  i{self.t_interface.if_index}")
         except KeyError:
             self.t_interface = "null"
 
@@ -91,15 +91,24 @@ class ospf_adjacency:
             setattr(self, f't_ip', self.t_interface.ip)
         except Exception as e:
             self.dev.warning(f'__init__  no ip t_ip')
-        if "BD" in self.s_interface.if_index or "Port" in self.s_interface.if_index:
-            self.verbose.warning(f'N:{self.network_id} {self.s_device.ip} {self.s_interface}')
-        if "BD" in self.t_interface.if_index or "Port" in self.t_interface.if_index:
-            self.verbose.warning(f'N:{self.network_id} {self.t_device.ip} {self.t_interface}')
+        # if "BD" in self.s_interface.if_index or "Port" in self.s_interface.if_index:
+        #     self.verbose.warning(f'N:{self.network_id} {self.s_device.ip} {self.s_interface}')
+        # if "BD" in self.t_interface.if_index or "Port" in self.t_interface.if_index:
+        #     self.verbose.warning(f'N:{self.network_id} {self.t_device.ip} {self.t_interface}')
         pair = self.pair_id()
 
         with lock:
-            self.ospf_database.neighbors_occurrences_count[pair] += 1
-        self.roundness = self.ospf_database.edge_roundness[self.ospf_database.neighbors_occurrences_count[pair]]
+            try:
+                self.ospf_database.neighbors_occurrences_count[pair] += 1
+
+            except Exception as  e:
+
+                self.dev.warning(f'ERROR_INIT_ neighbors_occurrences_count counter {e}')
+        try:
+            self.roundness = self.ospf_database.edge_roundness[self.ospf_database.neighbors_occurrences_count[pair]]
+        except Exception as e:
+            self.dev.warning(f'ERROR_INIT_ roundess {e}')
+
         if self.ospf_database.neighbors_occurrences_count[pair] % 2 == 0:
             self.reversed = True
             self.adj_obj_list()

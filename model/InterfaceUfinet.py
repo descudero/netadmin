@@ -417,7 +417,6 @@ class InterfaceUfinet(InterfaceIOS):
     @staticmethod
     def factory_from_dict(device, interfaces_data=[]) -> dict:
         interfaces_dict = {}
-        print(interfaces_data)
         try:
             for parse_data in interfaces_data:
 
