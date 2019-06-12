@@ -321,50 +321,37 @@ set foreign_key_checks = 0;
 delete
 from interface_states
 where interface_uid in (
-                        135289,
-                        135290,
-                        135291,
-                        135292,
-                        135518,
-                        135536
+                        135604,
+                        135611
   );
 
 delete
 from diagram_state_adjacencies
 where interface_1_uid in (
-                          135289,
-                          135290,
-                          135291,
-                          135292,
-                          135518,
-                          135536
+                          135604,
+                          135611
   )
    or interface_2_uid
   in (
-      135289,
-      135290,
-      135291,
-      135292,
-      135518,
-      135536
+      135604,
+      135611
         );
 
 delete
 from interfaces
 where uid in (
-              135289,
-              135290,
-              135291,
-              135292,
-              135518,
-              135536
+              135604,
+              135611
   );
 
 select i.uid,i.if_index,i.ip,i.description
 from network_devices as ns
        inner join interfaces as i on i.net_device_uid = ns.uid
-where ns.ip = '172.16.30.3';
+where ns.ip = '172.16.30.250';
 
+
+135604,
+135611
 select *
 from interfaces
 where if_index like '%BD%'

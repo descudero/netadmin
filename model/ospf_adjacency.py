@@ -193,7 +193,7 @@ class ospf_adjacency:
                 self.vs['winterface_type'] = 3
             else:
                 self.vs['width'] = 3
-                self.vs['dashes'] = [3, 6]
+                self.vs['dashes'] = [8, 12]
                 self.vs['winterface_type'] = 3
         except Exception as e:
             pass

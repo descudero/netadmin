@@ -52,13 +52,14 @@ class InterfaceUfinet(InterfaceIOS):
 
     l1_converter = {"D": {"DATA": "DWDM",
                           "P": "PATEC",
-                          "N": "NOKIA"},
+                          "N": "NOKIA", "H": "HUAWEI"},
                     "C": {"DATA": "CABLE_SUBMARINO",
                           "M": "MAYA",
                           "L": "LEVEL3",
                           "N": "LANAUTILUS",
                           "C": "CENTURY",
-                          "T": "TELXIUS"
+                          "T": "TELXIUS",
+                          "G": "GLOBENET"
                           },
                     "F": {"DATA": "FIBRA_DIRECTA",
                           "0": "0-10m",
@@ -72,6 +73,7 @@ class InterfaceUfinet(InterfaceIOS):
                           "8": "80-500km",
                           "9": ">500km ",
                           },
+                    "R": {"DATA": "RADIO", "D": "DEFAULT", "H": "HUAWEI"},
                     "W": {"DATA": "PSEUDOWIRE",
                           "S": "SUBINTERFACE",
                           "R": "ROUTED_VPLS"}}
@@ -155,35 +157,41 @@ class InterfaceUfinet(InterfaceIOS):
                 self.verbose.warning(f' correct_ip ERROR dev {self.parent_device.ip}{sql} {e}')
 
     @staticmethod
+    def sql_last_period_polled_interfaces(devices, date_start, date_end):
+
+        devices_uid = {dev.ip: str(dev.uid) for dev in devices}
+        sql = f"""SELECT 
+                                i.net_device_uid, 
+                                i.bandwith as bw,
+                                i.uid as uid,
+                                i.if_index as if_index,
+                                i.l3_protocol,
+                                i.l3_protocol_attr,
+                                i.l1_protocol,
+                                i.l1_protocol_attr,
+                                i.data_flow,
+                                s.util_in as util_in,
+                                s.util_out as util_out,
+                                s.link_state,
+                                s.protocol_state,
+                                s.output_rate,
+                                s.input_rate,
+                                s.state_timestamp,i.ip
+
+                       from network_devices as d
+                       inner join interfaces as i on d.uid = i.net_device_uid 
+                       inner join	(select * from interface_states where DATE(state_timestamp)=DATE(NOW())) 
+                       as s on s.interface_uid= i.uid
+                       inner join  (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid
+                        WHERE   net_device_uid IN ({','.join(
+            devices_uid.values())})  and state_timestamp >='{date_start}' and state_timestamp <='{date_end}' """
+        return sql
+    @staticmethod
     def sql_today_last_polled_interfaces(devices):
         date_start = str(datetime.date.today()) + ' 00:00:00'
         date_end = str(datetime.date.today()) + ' 23:59:00'
-        devices_uid = {dev.ip: str(dev.uid) for dev in devices}
-        sql = f"""SELECT 
-                        i.net_device_uid, 
-                        i.bandwith as bw,
-                        i.uid as uid,
-                        i.if_index as if_index,
-                        i.l3_protocol,
-                        i.l3_protocol_attr,
-                        i.l1_protocol,
-                        i.l1_protocol_attr,
-                        i.data_flow,
-                        s.util_in as util_in,
-                        s.util_out as util_out,
-                        s.link_state,
-                        s.protocol_state,
-                        s.output_rate,
-                        s.input_rate,
-                        s.state_timestamp,i.ip
-    
-               from network_devices as d
-               inner join interfaces as i on d.uid = i.net_device_uid 
-               inner join	(select * from interface_states where DATE(state_timestamp)=DATE(NOW())) 
-               as s on s.interface_uid= i.uid
-               inner join  (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid
-                WHERE   net_device_uid IN ({','.join(
-            devices_uid.values())})  and state_timestamp >='{date_start}' and state_timestamp <='{date_end}' """
+        sql = InterfaceUfinet.sql_last_period_polled_interfaces(devices=devices, date_start=date_start,
+                                                                date_end=date_end)
         return sql
 
     @staticmethod

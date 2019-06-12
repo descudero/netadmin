@@ -179,6 +179,20 @@ class Devices:
         for device in self:
             device.set_interfaces_data(interfaces_data=data_segmented_by_uid[device.uid])
         self.verbose.warning(f'set_interfaces_db FINISH')
+
+    def set_interfaces_db_period(self, period_start, period_end):
+        self.uid_dict()
+        sql = InterfaceUfinet.sql_last_period_polled_interfaces(devices=self.values(),
+                                                                date_start=period_start,
+                                                                date_end=period_end)
+        data_interfaces = self.dict_from_sql(sql=sql)
+        data_segmented_by_uid = defaultdict(list)
+        for row in data_interfaces:
+            data_segmented_by_uid[row['net_device_uid']].append(row)
+
+        for device in self:
+            device.set_interfaces_data(interfaces_data=data_segmented_by_uid[device.uid])
+
     def execute_processes(self, methods, kwargs={}, thread_window=100):
 
         processes = []
