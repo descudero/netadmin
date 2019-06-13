@@ -410,12 +410,12 @@ class InterfaceUfinet(InterfaceIOS):
         return tables
 
     _OID_IP = '1.3.6.1.2.1.4.20.1.2'
+    _OID_MASK = '1.3.6.1.2.1.4.20.1.3'
 
     _OID_RATES = {'input_rate': '1.3.6.1.2.1.31.1.1.1.6',
                   'output_rate': '1.3.6.1.2.1.31.1.1.1.10'}
 
     _OID = {'description': "1.3.6.1.2.1.31.1.1.1.18",
-
             'if_index': '1.3.6.1.2.1.2.2.1.2',
             'mtu': '1.3.6.1.2.1.2.2.1.4',
             'bw': '1.3.6.1.2.1.31.1.1.1.15',
@@ -458,6 +458,12 @@ class InterfaceUfinet(InterfaceIOS):
                 device.dev.critical(
                     f' bulk_snmp_data_interfaces error polling {device.ip} {device.community} {oid} {e}')
         try:
+            oid_data_mask = []
+            real_get_bulk(oid=InterfaceUfinet._OID_MASK, ip=device.ip, community=device.community,
+                          data_bind=oid_data_mask,
+                          id_ip=True)
+            mask_ip = {register['id']: register['value'] for register in oid_data_mask}
+            print(mask_ip)
             oid_data = []
             real_get_bulk(oid=InterfaceUfinet._OID_IP, ip=device.ip, community=device.community, data_bind=oid_data,
                           id_ip=True)
@@ -465,7 +471,13 @@ class InterfaceUfinet(InterfaceIOS):
             for register in oid_data:
                 id = str(register['value'])
                 ip = str(register['id'])
+                try:
+                    mask = mask_ip[ip]
+                except Exception as e:
+                    print(e)
+                    mask = "255.255.255.255"
                 interface_data.setdefault(id, {})['ip'] = ip
+                interface_data[id]['mask'] = mask
         except Exception as e:
             device.logger_connection.critical(
                 f' bulk_snmp_data_interfaces error polling {device.ip} {device.community} {InterfaceUfinet._OID_IP} {e}')

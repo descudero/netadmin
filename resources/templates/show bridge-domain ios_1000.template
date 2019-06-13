@@ -4,11 +4,12 @@ Value service_instance (\d+)
 
 Start
   ^Bridge-domain\s$bride_domain\s.+
-  ^Maximum.* -> Interface
+  ^Aging-Timer.* -> Interface
 
 Interface
   ^\s+$interface_name\sservice\sinstance\s$service_instance -> Record
-  ^\s+Nile.* -> Start
+  ^\s+$interface_name\s.*(up|down).* -> Record
+  ^\s+MAC.* -> Start
   ^Bridge-domain\s$bride_domain\s.* -> Start
 
 

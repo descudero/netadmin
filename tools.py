@@ -117,8 +117,9 @@ def real_get_bulk(oid, community, ip, data_bind, id_ip=False):
                     try:
 
                         oid_flat = str(var_bind[0]).replace(f'{oid}.', '')
-                        items = {"id": oid_flat, "value": cast(var_bind[1]), "timestamp": timestamp}
 
+                        items = {"id": oid_flat, "value": cast(var_bind[1]), "timestamp": timestamp}
+                        print(var_bind)
                         if "." in oid_flat and not id_ip or (id_ip and oid_flat.count(".") > 3):
                             break_flag = False
 

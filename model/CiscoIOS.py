@@ -301,10 +301,12 @@ class CiscoIOS(Parent):
                 data["interface"] = "null"
             self.template_type_pseudowires[data["name"]] = data
 
-    def set_bridge_domains(self):
+    def set_bridge_domains(self, template_name_b="show bridge-domain ios.template"):
+
         # todo change to textfsm
-        list_bridge = self.send_command_and_parse(template_name="show bridge-domain ios.template",
+        list_bridge = self.send_command_and_parse(template_name=template_name_b,
                                                   command="show bridge-domain")
+        pprint(list_bridge)
         list_bridge_vfi = self.send_command_and_parse(template_name="show bridge-domain vfi ios.template",
                                                       command="show bridge-domain")
         self.bridge_domains = {}
@@ -315,7 +317,6 @@ class CiscoIOS(Parent):
                 self.bridge_domains[index_bd].add_interfaces(interface_bridge)
             else:
                 self.bridge_domains[index_bd].add_interfaces(interface_bridge)
-
         for interface_bridge in list_bridge_vfi:
             index_bd = interface_bridge["bride_domain"]
             if index_bd not in self.bridge_domains:
@@ -323,6 +324,8 @@ class CiscoIOS(Parent):
                 self.bridge_domains[index_bd].add_vfi(interface_bridge)
             else:
                 self.bridge_domains[index_bd].add_vfi(interface_bridge)
+        pprint(self.bridge_domains)
+        self.bdi_bridge_domain = {f'BDI{id_bd}': bd for id_bd, bd in self.bridge_domains.items()}
 
     def set_pseudowires(self):
 
@@ -463,6 +466,7 @@ class CiscoIOS(Parent):
         connection = self.connect()
         data = self.send_command(connection=connection, command=command)
         self.verbose.warning(f'auto_send_command {data}')
+
     def connect(self, username_pattern='username', password_pattern="password", pattern="#", device_type="cisco_ios_"):
         self.logger_connection.info("Start of connection {0}".format(self.ip))
         '''
@@ -1613,8 +1617,6 @@ class CiscoIOS(Parent):
         hops = [{"next_hop": hop, "loose": ''} for hop in ip_hops]
         ep = IpExplicitPath(name=f'F:{self.hostname}_T:{to_device.hostname}', hops=hops, parent_device=self)
         return ep.command
-
-
 
     def set_ip_explicit_paths(self, template_name="ip explicit-path ios.template"):
         list_of_hops = self.send_command_and_parse(command="show run | s ip explicit-path", \

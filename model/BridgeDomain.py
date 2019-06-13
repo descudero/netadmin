@@ -8,6 +8,7 @@ class BridgeDomain:
         self.id_bd = id_bd
         self.interfaces = {}
         self.vfis = {}
+        self.routed_interface = f"BDI{id_bd}"
 
     def add_interfaces(self, interface_data):
         '''
@@ -16,7 +17,10 @@ class BridgeDomain:
         '''
         index = normalize_interface_name(interface_data["interface_name"])
         if index != '':
-            self.interfaces[index] = interface_data
+            if "BDI" in index:
+                self.routed_interface = index
+            else:
+                self.interfaces[index] = interface_data
 
     def add_vfi(self, vfi_data):
         '''
@@ -37,7 +41,7 @@ class BridgeDomain:
     def __repr__(self):
         return str(self.__class__) + " id " \
                + self.id_bd + " vfi " + str(len(self.vfis)) \
-               + " int " + str(len(self.interfaces.__repr__()))
+               + " int " + str(len(self.interfaces))
 
     def get_string_vfi(self):
         output = ""
@@ -52,3 +56,7 @@ class BridgeDomain:
         if interface in self.interfaces:
             return self.interfaces[interface]['service_instance'] == service_instance
         return False
+
+    def get_first_interface(self):
+        for index, interface in self.interfaces.items():
+            return index, interface['service_instance']
