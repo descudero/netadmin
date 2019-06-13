@@ -1,0 +1,14 @@
+Value Filldown bride_domain (\d+)
+Value interface_name (\S+)
+Value service_instance (\d+)
+
+Start
+  ^Bridge-domain\s$bride_domain\s.+
+  ^Maximum.* -> Interface
+
+Interface
+  ^\s+$interface_name\sservice\sinstance\s$service_instance -> Record
+  ^\s+Nile.* -> Start
+  ^Bridge-domain\s$bride_domain\s.* -> Start
+
+
