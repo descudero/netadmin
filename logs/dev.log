@@ -14324,3 +14324,23 @@
 2019-06-11 16:25:01,365:WARNING:dev.InterfaceUfinet: 172.16.30.253 i:dwdm0/2/0/23 b:0  Division by 0
 2019-06-11 16:25:01,365:WARNING:dev.InterfaceUfinet: 172.16.30.253 dwdm0/2/0/23 Division by 0
 2019-06-11 16:25:01,367:INFO:dev.CiscoXR:set_interfaces_snmp able Interfaces snmp 179 172.16.30.253
+2019-06-12 15:36:36,225:ERROR:dev.CiscoIOS:unable to load template show bridge-domain ios_1000.template err TextFSMTemplateError("Invalid state name: '  ^\\s+$interface_name\\sservice\\sinstance\\s$service_instance -> Record'. Line: 11",)
+2019-06-12 15:36:36,225:CRITICAL:dev.CiscoIOS:10.240.233.150 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'",) template (2) 
+2019-06-12 15:38:35,344:ERROR:dev.CiscoIOS:unable to load template show bridge-domain ios_1000.template err TextFSMTemplateError("Invalid state name: '  ^\\s+$interface_name\\sservice\\sinstance\\s$service_instance -> Record'. Line: 11",)
+2019-06-12 15:38:35,345:CRITICAL:dev.CiscoIOS:10.240.233.150 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'",) template (2) 
+2019-06-12 15:40:38,261:ERROR:dev.CiscoIOS:unable to load template show bridge-domain ios_1000.template err TextFSMTemplateError("Invalid state name: '  ^\\s+$interface_name\\sservice\\sinstance\\s$service_instance -> Record'. Line: 11",)
+2019-06-12 15:40:38,261:CRITICAL:dev.CiscoIOS:10.240.233.150 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'",) template (2) 
+2019-06-12 15:41:50,184:ERROR:dev.CiscoIOS:unable to load template show bridge-domain ios_1000.template err TextFSMTemplateError("Invalid state name: '  ^\\s+$interface_name\\sservice\\sinstance\\s$service_instance -> Record'. Line: 11",)
+2019-06-12 15:41:50,184:CRITICAL:dev.CiscoIOS:10.240.233.150 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'",) template (2) 
+2019-06-12 15:44:53,266:ERROR:dev.CiscoIOS:unable to load template show bridge-domain ios_1000.template err TextFSMTemplateError("Invalid state name: '  ^\\s+$interface_name\\sservice\\sinstance\\s$service_instance -> Record'. Line: 11",)
+2019-06-12 15:44:53,266:CRITICAL:dev.CiscoIOS:10.240.233.150 Unable to parse data AttributeError("'int' object has no attribute 'ParseText'",) template (2) 
+2019-06-12 15:47:26,843:INFO:dev.CiscoIOS:set_interfaces_snmp able Interfaces snmp 907 10.240.233.150
+2019-06-12 16:02:54,953:CRITICAL:dev.CiscoIOS:set_interfaces_snmp Unable to set Interfaces snmp 0 10.240.233.150 not connected
+2019-06-12 16:22:52,013:INFO:dev.CiscoIOS:set_interfaces_snmp able Interfaces snmp 907 10.240.233.150
+2019-06-12 16:28:11,508:INFO:dev.CiscoIOS:set_interfaces_snmp able Interfaces snmp 907 10.240.233.150
+2019-06-12 17:09:18,767:INFO:dev.CiscoIOS:set_interfaces_snmp able Interfaces snmp 909 10.240.233.150
+2019-06-12 19:10:04,067:INFO:dev.CiscoIOS:set_interfaces_snmp able Interfaces snmp 909 10.240.233.150
+2019-06-12 19:23:20,730:INFO:dev.CiscoIOS:set_interfaces_snmp able Interfaces snmp 909 10.240.233.150
+2019-06-12 19:28:27,253:INFO:dev.CiscoIOS:set_interfaces_snmp able Interfaces snmp 909 10.240.233.150
+2019-06-12 19:31:57,451:INFO:dev.CiscoIOS:set_interfaces_snmp able Interfaces snmp 909 10.240.233.150
+2019-06-12 19:44:09,629:INFO:dev.CiscoIOS:set_interfaces_snmp able Interfaces snmp 909 10.240.233.150

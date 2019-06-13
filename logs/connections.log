@@ -3028,3 +3028,206 @@
 2019-06-11 16:23:30,536:WARNING:connection.Master:username gestion password Ufinet18_2
 2019-06-11 16:23:37,707:WARNING:connection.Master:username gestion password Ufinet18_2
 2019-06-11 16:23:51,360:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.253 snmp community set
+2019-06-12 15:19:00,909:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 15:19:00,909:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 15:19:06,542:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000002CF64A83DD8> 
+2019-06-12 15:19:06,542:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 15:19:28,776:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 15:19:34,245:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000002CF64A83DD8> 
+2019-06-12 15:19:34,245:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 15:21:16,409:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 15:21:16,409:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 15:21:21,871:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x0000021A49765D30> 
+2019-06-12 15:21:21,871:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 15:21:47,102:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 15:21:52,513:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x0000021A49765D30> 
+2019-06-12 15:21:52,513:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 15:31:01,694:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 15:31:01,695:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 15:31:07,185:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x0000026D43593BE0> 
+2019-06-12 15:31:07,185:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 15:31:29,901:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 15:31:35,311:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x0000026D43776240> 
+2019-06-12 15:31:35,311:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 15:33:00,238:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 15:33:00,238:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 15:33:05,690:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x00000191E5F94C50> 
+2019-06-12 15:33:05,690:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 15:33:28,154:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 15:33:33,522:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x00000191E616CEB8> 
+2019-06-12 15:33:33,522:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 15:36:07,098:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 15:36:07,099:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 15:36:13,998:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x0000020BF7965BE0> 
+2019-06-12 15:36:13,998:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 15:36:36,226:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 15:36:41,642:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x0000020BF7965BE0> 
+2019-06-12 15:36:41,642:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 15:37:03,930:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 15:37:09,614:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x0000020BF7965BE0> 
+2019-06-12 15:37:09,614:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show interfaces RC 0
+2019-06-12 15:37:52,376:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 15:37:52,376:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 15:37:57,879:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000001C6A7EB5DD8> 
+2019-06-12 15:37:57,879:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 15:38:07,563:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 15:38:07,563:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 15:38:13,099:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000001AA05E05C18> 
+2019-06-12 15:38:13,099:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 15:38:35,346:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 15:38:40,748:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000001AA05E05C18> 
+2019-06-12 15:38:40,748:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 15:39:02,986:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 15:39:08,397:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000001AA05E05C18> 
+2019-06-12 15:39:08,397:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show interfaces RC 0
+2019-06-12 15:40:09,928:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 15:40:09,929:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 15:40:16,062:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x00000213932E3C18> 
+2019-06-12 15:40:16,062:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 15:40:38,262:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 15:40:43,645:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x00000213932E3C18> 
+2019-06-12 15:40:43,645:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 15:41:05,867:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 15:41:11,276:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x00000213932E3C18> 
+2019-06-12 15:41:11,276:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show interfaces RC 0
+2019-06-12 15:41:22,621:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 15:41:22,621:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 15:41:27,980:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000001D593B33C18> 
+2019-06-12 15:41:27,980:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 15:41:50,184:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 15:41:55,570:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000001D593B33C18> 
+2019-06-12 15:41:55,570:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 15:42:17,786:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 15:42:23,161:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000001D593B33C18> 
+2019-06-12 15:42:23,161:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show interfaces RC 0
+2019-06-12 15:44:23,531:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 15:44:23,531:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 15:44:29,051:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x0000027FAC014BA8> 
+2019-06-12 15:44:29,051:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 15:44:53,267:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 15:44:58,688:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x0000027FAC014BA8> 
+2019-06-12 15:44:58,688:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 15:45:39,853:INFO:connection.CiscoIOS:set_snmp_community 10.240.233.150 snmp community set
+2019-06-12 15:59:10,067:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 15:59:10,067:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 15:59:37,910:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 15:59:37,910:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 15:59:43,374:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000002D4C0CA4C18> 
+2019-06-12 15:59:43,374:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 16:00:06,273:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 16:00:11,699:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000002D4C0C981D0> 
+2019-06-12 16:00:11,699:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 16:07:33,824:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 16:07:33,824:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 16:07:39,328:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x0000013362614DD8> 
+2019-06-12 16:07:39,328:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 16:08:01,832:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 16:08:07,247:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x00000133627F6320> 
+2019-06-12 16:08:07,247:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 16:09:29,108:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 16:09:29,108:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 16:09:34,601:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x0000020DCB933BE0> 
+2019-06-12 16:09:34,601:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 16:09:57,145:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 16:10:02,834:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x0000020DCBB17278> 
+2019-06-12 16:10:02,834:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 16:12:54,040:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 16:12:54,040:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 16:12:59,617:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000001F1F7C54BA8> 
+2019-06-12 16:12:59,617:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 16:13:23,106:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 16:13:28,546:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000001F1F7E361D0> 
+2019-06-12 16:13:28,546:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 16:15:35,908:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 16:15:35,909:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 16:15:41,408:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x00000288A52C4BE0> 
+2019-06-12 16:15:41,408:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 16:16:03,946:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 16:16:09,478:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x00000288A54A7240> 
+2019-06-12 16:16:09,478:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 16:17:08,342:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 16:17:08,342:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 16:17:13,801:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x00000270DC944BA8> 
+2019-06-12 16:17:13,801:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 16:17:36,299:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 16:17:41,718:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x00000270DC944BA8> 
+2019-06-12 16:17:41,718:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 16:18:19,846:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 16:18:19,847:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 16:18:25,402:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x0000022F1D543C18> 
+2019-06-12 16:18:25,402:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 16:18:47,814:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 16:18:53,368:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x0000022F1D726240> 
+2019-06-12 16:18:53,368:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 16:19:46,519:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 16:19:46,519:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 16:19:52,083:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000001E63E884BE0> 
+2019-06-12 16:19:52,083:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 16:20:14,608:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 16:20:20,208:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000001E63EA67208> 
+2019-06-12 16:20:20,208:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 16:21:01,338:INFO:connection.CiscoIOS:set_snmp_community 10.240.233.150 snmp community set
+2019-06-12 16:25:05,002:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 16:25:05,002:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 16:25:10,569:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000001DEEE714BA8> 
+2019-06-12 16:25:10,569:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 16:25:35,082:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 16:25:40,497:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000001DEEE714BA8> 
+2019-06-12 16:25:40,497:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 16:26:21,679:INFO:connection.CiscoIOS:set_snmp_community 10.240.233.150 snmp community set
+2019-06-12 17:06:04,334:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 17:06:04,334:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 17:06:09,847:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000001E4B00B5C88> 
+2019-06-12 17:06:09,847:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 17:06:35,362:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 17:06:40,825:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000001E4B0097390> 
+2019-06-12 17:06:40,825:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 17:07:21,801:INFO:connection.CiscoIOS:set_snmp_community 10.240.233.150 snmp community set
+2019-06-12 19:06:55,147:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 19:06:55,147:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 19:07:00,867:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x0000017269026C50> 
+2019-06-12 19:07:00,867:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 19:07:23,388:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 19:07:28,935:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x00000172690094A8> 
+2019-06-12 19:07:28,935:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 19:08:10,295:INFO:connection.CiscoIOS:set_snmp_community 10.240.233.150 snmp community set
+2019-06-12 19:20:09,626:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 19:20:09,627:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 19:20:15,313:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x00000248890F7AC8> 
+2019-06-12 19:20:15,313:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 19:20:37,834:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 19:20:43,528:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x00000248890DA208> 
+2019-06-12 19:20:43,528:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 19:21:24,723:INFO:connection.CiscoIOS:set_snmp_community 10.240.233.150 snmp community set
+2019-06-12 19:25:13,716:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 19:25:13,716:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 19:25:19,343:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000002C0E6FD9C88> 
+2019-06-12 19:25:19,344:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 19:25:41,746:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 19:25:47,304:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000002C0E71C2F60> 
+2019-06-12 19:25:47,304:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 19:26:28,525:INFO:connection.CiscoIOS:set_snmp_community 10.240.233.150 snmp community set
+2019-06-12 19:28:42,460:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 19:28:42,461:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 19:28:48,111:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000002F25C587E10> 
+2019-06-12 19:28:48,111:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 19:29:11,070:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 19:29:16,691:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000002F25C781FD0> 
+2019-06-12 19:29:16,691:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 19:29:59,047:INFO:connection.CiscoIOS:set_snmp_community 10.240.233.150 snmp community set
+2019-06-12 19:37:58,041:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 19:37:58,041:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 19:38:03,590:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000001BFF56E8AC8> 
+2019-06-12 19:38:03,590:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 19:38:26,119:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 19:38:31,679:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000001BFF58D3CF8> 
+2019-06-12 19:38:31,680:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 19:39:12,845:INFO:connection.CiscoIOS:set_snmp_community 10.240.233.150 snmp community set
+2019-06-12 19:41:00,040:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-12 19:41:00,040:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 19:41:05,674:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000001D12AD79AC8> 
+2019-06-12 19:41:05,674:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 19:41:28,229:INFO:connection.CiscoIOS:Start of connection 10.240.233.150
+2019-06-12 19:41:33,658:INFO:connection.CiscoIOS:Connected 10.240.233.150 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000001D12AD5B208> 
+2019-06-12 19:41:33,658:INFO:connection.CiscoIOS: 10.240.233.150 about to sen command show bridge-domain RC 0
+2019-06-12 19:42:14,814:INFO:connection.CiscoIOS:set_snmp_community 10.240.233.150 snmp community set
