@@ -16,6 +16,7 @@ class InterfaceIOS(object):
         self.bia = "aaaa.aaaa.aaaa"
         self.description = "null"
         self.media_type = "null"
+        self.mask = "NA"
         self.mtu = "1500"
         self.bw = 0
         self.duplex = "NA"

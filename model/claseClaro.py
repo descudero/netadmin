@@ -145,8 +145,10 @@ class Claro:
                         print(colindex)
                         print(col)
                         print(data)
-
-        workbook.save(file_name + '.xls')
+        try:
+            workbook.save(file_name + '.xls')
+        except:
+            workbook.save(file_name + '_second_.xls')
 
     def search_recived_routers_ipt_advertise(self, ip_pe, display_name_pe, bgp_neigbor_description_filter,
                                              address_family="ipv4 unicast", print_on_screen=True, sep="|"):

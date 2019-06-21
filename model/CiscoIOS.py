@@ -245,8 +245,9 @@ class CiscoIOS(Parent):
         command = "show ethernet service instance detail"
         template = "show ethernet service instance detail ios.template"
         service_instances = self.send_command_and_parse(template_name=template,
-                                                        command=command)
-        self.service_instances = {normalize_interface_name(row["interface"]) + ":" + row["id"]: row
+                                                        command=command, timeout=15)
+        self.service_instances = {normalize_interface_name(
+            InterfaceUfinet.get_normalize_interface_name(row["interface"])) + ":" + row["id"]: row
                                   for row in service_instances}
 
         return self.service_instances
@@ -306,7 +307,6 @@ class CiscoIOS(Parent):
         # todo change to textfsm
         list_bridge = self.send_command_and_parse(template_name=template_name_b,
                                                   command="show bridge-domain")
-        pprint(list_bridge)
         list_bridge_vfi = self.send_command_and_parse(template_name="show bridge-domain vfi ios.template",
                                                       command="show bridge-domain")
         self.bridge_domains = {}
@@ -324,7 +324,7 @@ class CiscoIOS(Parent):
                 self.bridge_domains[index_bd].add_vfi(interface_bridge)
             else:
                 self.bridge_domains[index_bd].add_vfi(interface_bridge)
-        pprint(self.bridge_domains)
+
         self.bdi_bridge_domain = {f'BDI{id_bd}': bd for id_bd, bd in self.bridge_domains.items()}
 
     def set_pseudowires(self):
@@ -945,8 +945,7 @@ class CiscoIOS(Parent):
         :param address_family(string) default("ipv4 unicast"):
         :return:
         '''
-        if self.bgp_neighbors is None:
-            self.bgp_neighbors = dict()
+        self.bgp_neighbors = dict()
 
         connection = self.connect()
         command = "show bgp " + address_family + " neighbors"

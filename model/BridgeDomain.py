@@ -1,5 +1,5 @@
 from tools import normalize_interface_name
-
+from model.InterfaceUfinet import InterfaceUfinet
 
 class BridgeDomain:
 
@@ -15,7 +15,7 @@ class BridgeDomain:
         Value interface_name (\S+)
         Value service_instance (\d+)
         '''
-        index = normalize_interface_name(interface_data["interface_name"])
+        index = InterfaceUfinet.get_normalize_interface_name(interface_data["interface_name"])
         if index != '':
             if "BDI" in index:
                 self.routed_interface = index
@@ -31,7 +31,7 @@ class BridgeDomain:
 
                 :return:
                 '''
-        index = normalize_interface_name(vfi_data["interface_name"])
+        index = InterfaceUfinet.get_normalize_interface_name(vfi_data["interface_name"])
         if index != '':
             if index not in self.vfis:
                 self.vfis[index] = [vfi_data]

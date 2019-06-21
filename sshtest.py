@@ -50,7 +50,7 @@ regional = {
     'network_name': '_ospf_ufinet_regional'
 }
 guatemala = {
-    "ip_seed_router": "172.16.30.",
+    "ip_seed_router": "172.17.22.52",
     "process_id": '502', "area": '502008', 'network_name': 'RCE_GUATEMALA'
 }
 dbd = ospf_database(isp=isp, source='real_time', **regional)

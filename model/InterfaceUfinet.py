@@ -463,21 +463,20 @@ class InterfaceUfinet(InterfaceIOS):
                           data_bind=oid_data_mask,
                           id_ip=True)
             mask_ip = {register['id']: register['value'] for register in oid_data_mask}
-            print(mask_ip)
             oid_data = []
             real_get_bulk(oid=InterfaceUfinet._OID_IP, ip=device.ip, community=device.community, data_bind=oid_data,
                           id_ip=True)
 
             for register in oid_data:
-                id = str(register['value'])
+                id_ = str(register['value'])
                 ip = str(register['id'])
                 try:
                     mask = mask_ip[ip]
                 except Exception as e:
                     print(e)
                     mask = "255.255.255.255"
-                interface_data.setdefault(id, {})['ip'] = ip
-                interface_data[id]['mask'] = mask
+                interface_data.setdefault(id_, {})['ip'] = ip
+                interface_data[id_]['mask'] = mask
         except Exception as e:
             device.logger_connection.critical(
                 f' bulk_snmp_data_interfaces error polling {device.ip} {device.community} {InterfaceUfinet._OID_IP} {e}')
@@ -486,8 +485,8 @@ class InterfaceUfinet(InterfaceIOS):
             try:
                 oid_data = InterfaceUfinet.delta_oid(device=device, oid=oid)
                 for register in oid_data:
-                    id = register['id']
-                    interface_data.setdefault(id, {})[attr] = register['value']
+                    id_ = register['id']
+                    interface_data.setdefault(id_, {})[attr] = register['value']
             except Exception as e:
                 device.logger_connection.critical(
                     f' bulk_snmp_data_interfaces error polling {device.ip} {device.community} {oid} {e}')

@@ -4,7 +4,7 @@ import logging
 from pysnmp import hlapi
 from pysnmp.hlapi import *
 import time
-
+import ipaddress
 
 def get(target, oids, credentials, port=161, engine=SnmpEngine(), context=ContextData()):
     handler = getCmd(
@@ -43,6 +43,12 @@ def fetch(handler, count):
 
 
 def cast(value):
+    try:
+        if "IpAddress" in str(value.__class__):
+            data = [str(val) for val in map(ord, str(value))]
+            return ".".join(data)
+    except Exception as e:
+        print(f"error casting ip {e}")
     try:
         return int(value)
     except (ValueError, TypeError):
@@ -117,17 +123,24 @@ def real_get_bulk(oid, community, ip, data_bind, id_ip=False):
                     try:
 
                         oid_flat = str(var_bind[0]).replace(f'{oid}.', '')
+                        try:
+                            value = cast(var_bind[1])
+                        except Exception as e:
+                            print(f'error casting value {value} v:{value.__class__}')
+                            value = "na"
 
-                        items = {"id": oid_flat, "value": cast(var_bind[1]), "timestamp": timestamp}
-                        print(var_bind)
-                        if "." in oid_flat and not id_ip or (id_ip and oid_flat.count(".") > 3):
-                            break_flag = False
+                        items = {"id": oid_flat, "value": value, "timestamp": timestamp}
+                        try:
+                            if "." in oid_flat and not id_ip or (id_ip and oid_flat.count(".") > 3):
+                                break_flag = False
 
-                        else:
-                            data_bind.append(items)
-                        # pprint(items)
+                            else:
+                                data_bind.append(items)
+                            # pprint(items)
+                        except Exception as e:
+                            print(f'checking   {oid} {e}')
                     except Exception as e:
-                        print(f'break error exeption local  {oid}')
+                        print(f'break error exeption local  {oid} {e}')
                         pass
 
         except Exception as e:
