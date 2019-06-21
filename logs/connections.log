@@ -4002,3 +4002,355 @@ Ufinet18_2
 2019-06-19 15:44:02,576:INFO:connection.CiscoIOS:CONNECTED 10.249.9.251 VIA GTW gateway 10.250.55.3
 2019-06-19 15:44:02,576:INFO:connection.CiscoIOS:Connected 10.249.9.251 via <netmiko.cisco.cisco_ios.CiscoIosSSH object at 0x0000023806F1A320> 
 2019-06-19 15:44:02,576:INFO:connection.CiscoIOS: 10.249.9.251 about to sen command show ip arp    | e plete RC 0
+2019-06-21 12:25:48,506:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-21 12:26:02,563:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.15 snmp community set
+2019-06-21 12:26:02,799:INFO:connection.CiscoIOS:Start of connection 172.16.30.15
+2019-06-21 12:26:08,197:INFO:connection.CiscoIOS:Connected 172.16.30.15 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000001445C266E48> 
+2019-06-21 12:26:08,197:INFO:connection.CiscoIOS: 172.16.30.15 about to sen command show ip ospf 1 database router RC 0
+2019-06-21 12:26:22,285:INFO:connection.CiscoIOS:set_snmp_community 172.17.26.68 snmp community set
+2019-06-21 12:26:24,695:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.130 snmp community set
+2019-06-21 12:26:27,733:INFO:connection.CiscoIOS:set_snmp_community 172.17.28.192 snmp community set
+2019-06-21 12:26:33,133:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.254 snmp community set
+2019-06-21 12:26:33,702:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.10 snmp community set
+2019-06-21 12:26:34,821:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.129 snmp community set
+2019-06-21 12:26:34,890:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.8 snmp community set
+2019-06-21 12:26:34,949:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.43 snmp community set
+2019-06-21 12:26:35,246:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.253 snmp community set
+2019-06-21 12:26:35,760:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.13 snmp community set
+2019-06-21 12:26:36,032:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.11 snmp community set
+2019-06-21 12:26:36,046:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.42 snmp community set
+2019-06-21 12:26:36,365:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.7 snmp community set
+2019-06-21 12:26:36,417:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.246 snmp community set
+2019-06-21 12:26:36,965:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.251 snmp community set
+2019-06-21 12:26:37,099:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.45 snmp community set
+2019-06-21 12:26:37,476:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.12 snmp community set
+2019-06-21 12:26:37,507:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.14 snmp community set
+2019-06-21 12:26:38,181:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.15 snmp community set
+2019-06-21 12:26:38,303:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.5 snmp community set
+2019-06-21 12:26:39,123:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.1 snmp community set
+2019-06-21 12:26:39,452:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.245 snmp community set
+2019-06-21 12:26:40,187:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.244 snmp community set
+2019-06-21 12:26:41,413:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.35 snmp community set
+2019-06-21 12:26:42,419:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.232 snmp community set
+2019-06-21 12:26:42,469:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.241 snmp community set
+2019-06-21 12:26:42,886:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.235 snmp community set
+2019-06-21 12:26:42,970:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.40 snmp community set
+2019-06-21 12:26:43,935:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.128 snmp community set
+2019-06-21 12:26:43,956:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.50 snmp community set
+2019-06-21 12:26:44,520:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.6 snmp community set
+2019-06-21 12:26:44,630:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.250 snmp community set
+2019-06-21 12:26:44,797:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.37 snmp community set
+2019-06-21 12:26:44,984:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.38 snmp community set
+2019-06-21 12:26:45,600:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.41 snmp community set
+2019-06-21 12:26:46,053:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.242 snmp community set
+2019-06-21 12:26:46,647:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.247 snmp community set
+2019-06-21 12:26:47,238:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.248 snmp community set
+2019-06-21 12:26:47,382:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.44 snmp community set
+2019-06-21 12:26:47,388:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.3 snmp community set
+2019-06-21 12:26:47,918:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.4 snmp community set
+2019-06-21 12:26:47,937:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.9 snmp community set
+2019-06-21 12:26:48,016:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.39 snmp community set
+2019-06-21 12:26:48,406:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.16 snmp community set
+2019-06-21 12:26:49,577:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.233 snmp community set
+2019-06-21 12:26:51,313:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.36 snmp community set
+2019-06-21 12:26:52,776:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.2 snmp community set
+2019-06-21 12:26:53,266:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.240 snmp community set
+2019-06-21 12:26:54,157:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.209 snmp community set
+2019-06-21 12:27:05,735:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-21 12:27:05,782:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-21 15:21:21,411:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-21 15:21:35,479:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.15 snmp community set
+2019-06-21 15:21:35,791:INFO:connection.CiscoIOS:Start of connection 172.16.30.15
+2019-06-21 15:21:41,660:INFO:connection.CiscoIOS:Connected 172.16.30.15 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000001525A8DCFD0> 
+2019-06-21 15:21:41,660:INFO:connection.CiscoIOS: 172.16.30.15 about to sen command show ip ospf 1 database router RC 0
+2019-06-21 15:21:58,027:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.130 snmp community set
+2019-06-21 15:22:01,015:INFO:connection.CiscoIOS:set_snmp_community 172.17.26.68 snmp community set
+2019-06-21 15:22:06,342:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.41 snmp community set
+2019-06-21 15:22:08,655:INFO:connection.CiscoIOS:set_snmp_community 172.17.28.192 snmp community set
+2019-06-21 15:22:09,271:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.35 snmp community set
+2019-06-21 15:22:09,978:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.250 snmp community set
+2019-06-21 15:22:10,713:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.128 snmp community set
+2019-06-21 15:22:10,955:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.44 snmp community set
+2019-06-21 15:22:11,041:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.38 snmp community set
+2019-06-21 15:22:12,542:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.245 snmp community set
+2019-06-21 15:22:12,841:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.129 snmp community set
+2019-06-21 15:22:13,296:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.247 snmp community set
+2019-06-21 15:22:14,265:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.15 snmp community set
+2019-06-21 15:22:15,090:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.6 snmp community set
+2019-06-21 15:22:15,157:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.12 snmp community set
+2019-06-21 15:22:15,619:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.241 snmp community set
+2019-06-21 15:22:15,865:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.232 snmp community set
+2019-06-21 15:22:16,092:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.253 snmp community set
+2019-06-21 15:22:16,275:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.14 snmp community set
+2019-06-21 15:22:16,826:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.248 snmp community set
+2019-06-21 15:22:16,907:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.40 snmp community set
+2019-06-21 15:22:17,428:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.42 snmp community set
+2019-06-21 15:22:18,091:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.8 snmp community set
+2019-06-21 15:22:18,294:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.13 snmp community set
+2019-06-21 15:22:19,062:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.235 snmp community set
+2019-06-21 15:22:19,598:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.251 snmp community set
+2019-06-21 15:22:19,675:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.43 snmp community set
+2019-06-21 15:22:20,327:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.1 snmp community set
+2019-06-21 15:22:21,433:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.246 snmp community set
+2019-06-21 15:22:22,005:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.45 snmp community set
+2019-06-21 15:22:22,183:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.244 snmp community set
+2019-06-21 15:22:22,433:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.5 snmp community set
+2019-06-21 15:22:22,899:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.242 snmp community set
+2019-06-21 15:22:23,718:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.10 snmp community set
+2019-06-21 15:22:24,129:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.37 snmp community set
+2019-06-21 15:22:24,883:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.50 snmp community set
+2019-06-21 15:22:25,264:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.39 snmp community set
+2019-06-21 15:22:25,424:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.7 snmp community set
+2019-06-21 15:22:26,627:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.11 snmp community set
+2019-06-21 15:22:28,877:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.9 snmp community set
+2019-06-21 15:22:28,898:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.16 snmp community set
+2019-06-21 15:22:29,865:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.36 snmp community set
+2019-06-21 15:22:30,316:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.254 snmp community set
+2019-06-21 15:22:30,400:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.3 snmp community set
+2019-06-21 15:22:30,949:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.233 snmp community set
+2019-06-21 15:22:31,583:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.209 snmp community set
+2019-06-21 15:22:33,727:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.2 snmp community set
+2019-06-21 15:22:33,926:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.4 snmp community set
+2019-06-21 15:22:35,314:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.240 snmp community set
+2019-06-21 15:22:50,223:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-21 15:22:50,300:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-21 15:29:07,071:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-21 15:29:20,992:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.244 snmp community set
+2019-06-21 15:33:06,570:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-21 15:33:19,228:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.244 snmp community set
+2019-06-21 15:34:10,783:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-21 15:34:23,440:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.244 snmp community set
+2019-06-21 15:38:12,288:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-21 15:38:26,140:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.244 snmp community set
+2019-06-21 15:40:22,784:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-21 15:40:36,848:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.244 snmp community set
+2019-06-21 15:43:51,606:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-21 15:44:05,593:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.244 snmp community set
+2019-06-21 15:49:25,977:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-21 15:49:39,824:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.248 snmp community set
+2019-06-21 15:53:34,044:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-21 15:53:47,822:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.244 snmp community set
+2019-06-21 16:09:06,276:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-21 16:09:20,590:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.15 snmp community set
+2019-06-21 16:09:20,849:INFO:connection.CiscoIOS:Start of connection 172.16.30.15
+2019-06-21 16:09:26,347:INFO:connection.CiscoIOS:Connected 172.16.30.15 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000002DDBA3EBF98> 
+2019-06-21 16:09:26,347:INFO:connection.CiscoIOS: 172.16.30.15 about to sen command show ip ospf 1 database router RC 0
+2019-06-21 16:09:42,582:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.130 snmp community set
+2019-06-21 16:09:46,084:INFO:connection.CiscoIOS:set_snmp_community 172.17.26.68 snmp community set
+2019-06-21 16:09:51,416:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.241 snmp community set
+2019-06-21 16:09:51,451:INFO:connection.CiscoIOS:set_snmp_community 172.17.28.192 snmp community set
+2019-06-21 16:09:51,841:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.13 snmp community set
+2019-06-21 16:09:52,100:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.248 snmp community set
+2019-06-21 16:09:52,597:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.50 snmp community set
+2019-06-21 16:09:52,633:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.35 snmp community set
+2019-06-21 16:09:52,654:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.246 snmp community set
+2019-06-21 16:09:53,398:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.6 snmp community set
+2019-06-21 16:09:53,584:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.14 snmp community set
+2019-06-21 16:09:53,594:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.232 snmp community set
+2019-06-21 16:09:54,106:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.7 snmp community set
+2019-06-21 16:09:54,282:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.37 snmp community set
+2019-06-21 16:09:55,096:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.128 snmp community set
+2019-06-21 16:09:55,161:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.10 snmp community set
+2019-06-21 16:09:55,191:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.5 snmp community set
+2019-06-21 16:09:55,235:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.11 snmp community set
+2019-06-21 16:09:55,264:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.129 snmp community set
+2019-06-21 16:09:55,430:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.12 snmp community set
+2019-06-21 16:09:56,184:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.247 snmp community set
+2019-06-21 16:09:56,328:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.253 snmp community set
+2019-06-21 16:09:57,249:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.8 snmp community set
+2019-06-21 16:09:58,061:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.42 snmp community set
+2019-06-21 16:09:58,284:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.43 snmp community set
+2019-06-21 16:09:58,408:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.3 snmp community set
+2019-06-21 16:09:58,640:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.244 snmp community set
+2019-06-21 16:09:59,070:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.242 snmp community set
+2019-06-21 16:09:59,654:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.40 snmp community set
+2019-06-21 16:10:00,168:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.41 snmp community set
+2019-06-21 16:10:00,407:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.254 snmp community set
+2019-06-21 16:10:00,628:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.1 snmp community set
+2019-06-21 16:10:01,289:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.250 snmp community set
+2019-06-21 16:10:01,922:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.245 snmp community set
+2019-06-21 16:10:02,348:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.44 snmp community set
+2019-06-21 16:10:03,071:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.251 snmp community set
+2019-06-21 16:10:04,437:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.235 snmp community set
+2019-06-21 16:10:04,630:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.15 snmp community set
+2019-06-21 16:10:05,218:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.38 snmp community set
+2019-06-21 16:10:06,346:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.9 snmp community set
+2019-06-21 16:10:06,389:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.45 snmp community set
+2019-06-21 16:10:07,632:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.36 snmp community set
+2019-06-21 16:10:09,781:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.39 snmp community set
+2019-06-21 16:10:10,244:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.2 snmp community set
+2019-06-21 16:10:11,416:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.240 snmp community set
+2019-06-21 16:10:11,469:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.4 snmp community set
+2019-06-21 16:10:11,880:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.16 snmp community set
+2019-06-21 16:10:12,004:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.209 snmp community set
+2019-06-21 16:10:12,174:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.233 snmp community set
+2019-06-21 16:10:28,163:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-21 16:10:28,209:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-21 16:20:43,955:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-21 16:20:58,197:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.15 snmp community set
+2019-06-21 16:20:58,454:INFO:connection.CiscoIOS:Start of connection 172.16.30.15
+2019-06-21 16:21:03,897:INFO:connection.CiscoIOS:Connected 172.16.30.15 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x0000026460FD9FD0> 
+2019-06-21 16:21:03,897:INFO:connection.CiscoIOS: 172.16.30.15 about to sen command show ip ospf 1 database router RC 0
+2019-06-21 16:21:21,866:INFO:connection.CiscoIOS:set_snmp_community 172.17.26.68 snmp community set
+2019-06-21 16:21:28,779:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.130 snmp community set
+2019-06-21 16:21:32,694:INFO:connection.CiscoIOS:set_snmp_community 172.17.28.192 snmp community set
+2019-06-21 16:21:33,439:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.244 snmp community set
+2019-06-21 16:21:34,142:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.7 snmp community set
+2019-06-21 16:21:34,421:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.248 snmp community set
+2019-06-21 16:21:34,639:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.1 snmp community set
+2019-06-21 16:21:36,100:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.11 snmp community set
+2019-06-21 16:21:36,252:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.15 snmp community set
+2019-06-21 16:21:36,411:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.251 snmp community set
+2019-06-21 16:21:37,115:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.9 snmp community set
+2019-06-21 16:21:37,128:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.128 snmp community set
+2019-06-21 16:21:37,373:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.8 snmp community set
+2019-06-21 16:21:37,452:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.41 snmp community set
+2019-06-21 16:21:38,080:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.45 snmp community set
+2019-06-21 16:21:38,387:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.247 snmp community set
+2019-06-21 16:21:38,674:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.38 snmp community set
+2019-06-21 16:21:39,114:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.13 snmp community set
+2019-06-21 16:21:39,195:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.42 snmp community set
+2019-06-21 16:21:39,855:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.129 snmp community set
+2019-06-21 16:21:39,888:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.250 snmp community set
+2019-06-21 16:21:40,334:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.12 snmp community set
+2019-06-21 16:21:41,278:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.235 snmp community set
+2019-06-21 16:21:42,073:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.241 snmp community set
+2019-06-21 16:21:42,522:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.232 snmp community set
+2019-06-21 16:21:42,625:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.37 snmp community set
+2019-06-21 16:21:43,396:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.44 snmp community set
+2019-06-21 16:21:43,680:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.14 snmp community set
+2019-06-21 16:21:43,970:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.40 snmp community set
+2019-06-21 16:21:44,373:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.10 snmp community set
+2019-06-21 16:21:44,970:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.35 snmp community set
+2019-06-21 16:21:45,054:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.5 snmp community set
+2019-06-21 16:21:45,366:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.3 snmp community set
+2019-06-21 16:21:46,258:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.50 snmp community set
+2019-06-21 16:21:46,689:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.242 snmp community set
+2019-06-21 16:21:47,345:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.254 snmp community set
+2019-06-21 16:21:47,363:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.43 snmp community set
+2019-06-21 16:21:47,432:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.246 snmp community set
+2019-06-21 16:21:49,005:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.209 snmp community set
+2019-06-21 16:21:50,986:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.245 snmp community set
+2019-06-21 16:21:52,400:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.253 snmp community set
+2019-06-21 16:21:55,104:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.36 snmp community set
+2019-06-21 16:21:55,766:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.4 snmp community set
+2019-06-21 16:21:56,620:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.6 snmp community set
+2019-06-21 16:21:56,793:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.233 snmp community set
+2019-06-21 16:21:57,235:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.240 snmp community set
+2019-06-21 16:21:57,909:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.39 snmp community set
+2019-06-21 16:21:59,018:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.16 snmp community set
+2019-06-21 16:21:59,051:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.2 snmp community set
+2019-06-21 16:22:14,525:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-21 16:22:14,631:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-21 16:58:40,864:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-21 16:58:54,935:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.15 snmp community set
+2019-06-21 16:58:55,161:INFO:connection.CiscoIOS:Start of connection 172.16.30.15
+2019-06-21 16:59:03,452:INFO:connection.CiscoIOS:Connected 172.16.30.15 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x0000022938171630> 
+2019-06-21 16:59:03,452:INFO:connection.CiscoIOS: 172.16.30.15 about to sen command show ip ospf 1 database router RC 0
+2019-06-21 16:59:18,911:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.130 snmp community set
+2019-06-21 16:59:24,525:INFO:connection.CiscoIOS:set_snmp_community 172.17.28.192 snmp community set
+2019-06-21 16:59:25,133:INFO:connection.CiscoIOS:set_snmp_community 172.17.26.68 snmp community set
+2019-06-21 16:59:27,342:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.9 snmp community set
+2019-06-21 16:59:28,058:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.42 snmp community set
+2019-06-21 16:59:28,394:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.44 snmp community set
+2019-06-21 16:59:29,192:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.248 snmp community set
+2019-06-21 16:59:29,254:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.14 snmp community set
+2019-06-21 16:59:30,216:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.250 snmp community set
+2019-06-21 16:59:30,299:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.10 snmp community set
+2019-06-21 16:59:30,623:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.43 snmp community set
+2019-06-21 16:59:31,067:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.41 snmp community set
+2019-06-21 16:59:31,341:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.11 snmp community set
+2019-06-21 16:59:31,442:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.12 snmp community set
+2019-06-21 16:59:31,668:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.37 snmp community set
+2019-06-21 16:59:32,389:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.235 snmp community set
+2019-06-21 16:59:32,478:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.251 snmp community set
+2019-06-21 16:59:32,949:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.13 snmp community set
+2019-06-21 16:59:33,545:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.242 snmp community set
+2019-06-21 16:59:34,030:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.15 snmp community set
+2019-06-21 16:59:34,095:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.247 snmp community set
+2019-06-21 16:59:34,418:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.35 snmp community set
+2019-06-21 16:59:35,039:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.8 snmp community set
+2019-06-21 16:59:35,212:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.3 snmp community set
+2019-06-21 16:59:35,520:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.246 snmp community set
+2019-06-21 16:59:36,955:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.38 snmp community set
+2019-06-21 16:59:37,060:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.6 snmp community set
+2019-06-21 16:59:38,132:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.40 snmp community set
+2019-06-21 16:59:38,241:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.5 snmp community set
+2019-06-21 16:59:39,024:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.245 snmp community set
+2019-06-21 16:59:39,477:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.232 snmp community set
+2019-06-21 16:59:39,556:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.45 snmp community set
+2019-06-21 16:59:40,173:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.253 snmp community set
+2019-06-21 16:59:40,440:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.128 snmp community set
+2019-06-21 16:59:40,621:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.1 snmp community set
+2019-06-21 16:59:40,771:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.50 snmp community set
+2019-06-21 16:59:41,779:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.7 snmp community set
+2019-06-21 16:59:41,950:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.241 snmp community set
+2019-06-21 16:59:42,412:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.244 snmp community set
+2019-06-21 16:59:42,499:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.254 snmp community set
+2019-06-21 16:59:43,158:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.2 snmp community set
+2019-06-21 16:59:43,176:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.129 snmp community set
+2019-06-21 16:59:43,480:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.4 snmp community set
+2019-06-21 16:59:44,293:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.240 snmp community set
+2019-06-21 16:59:45,010:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.209 snmp community set
+2019-06-21 16:59:46,564:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.16 snmp community set
+2019-06-21 16:59:47,396:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.233 snmp community set
+2019-06-21 16:59:47,421:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.39 snmp community set
+2019-06-21 16:59:47,610:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.36 snmp community set
+2019-06-21 16:59:59,557:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-21 16:59:59,613:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-21 17:06:10,128:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-21 17:06:24,683:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.15 snmp community set
+2019-06-21 17:06:25,018:INFO:connection.CiscoIOS:Start of connection 172.16.30.15
+2019-06-21 17:06:30,764:INFO:connection.CiscoIOS:Connected 172.16.30.15 via <netmiko.cisco.cisco_ios.CiscoIosBase object at 0x000002349866BFD0> 
+2019-06-21 17:06:30,764:INFO:connection.CiscoIOS: 172.16.30.15 about to sen command show ip ospf 1 database router RC 0
+2019-06-21 17:06:52,888:INFO:connection.CiscoIOS:set_snmp_community 172.17.28.192 snmp community set
+2019-06-21 17:06:56,733:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.130 snmp community set
+2019-06-21 17:07:01,232:INFO:connection.CiscoIOS:set_snmp_community 172.17.26.68 snmp community set
+2019-06-21 17:07:06,410:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.232 snmp community set
+2019-06-21 17:07:07,100:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.235 snmp community set
+2019-06-21 17:07:07,628:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.1 snmp community set
+2019-06-21 17:07:09,544:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.244 snmp community set
+2019-06-21 17:07:09,561:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.12 snmp community set
+2019-06-21 17:07:09,831:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.128 snmp community set
+2019-06-21 17:07:12,123:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.41 snmp community set
+2019-06-21 17:07:12,361:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.11 snmp community set
+2019-06-21 17:07:14,215:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.251 snmp community set
+2019-06-21 17:07:14,968:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.13 snmp community set
+2019-06-21 17:07:14,996:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.42 snmp community set
+2019-06-21 17:07:15,093:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.250 snmp community set
+2019-06-21 17:07:15,535:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.248 snmp community set
+2019-06-21 17:07:15,787:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.43 snmp community set
+2019-06-21 17:07:16,370:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.37 snmp community set
+2019-06-21 17:07:16,629:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.10 snmp community set
+2019-06-21 17:07:17,122:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.254 snmp community set
+2019-06-21 17:07:17,603:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.247 snmp community set
+2019-06-21 17:07:17,631:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.40 snmp community set
+2019-06-21 17:07:18,269:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.129 snmp community set
+2019-06-21 17:07:18,402:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.14 snmp community set
+2019-06-21 17:07:18,691:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.5 snmp community set
+2019-06-21 17:07:18,724:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.242 snmp community set
+2019-06-21 17:07:20,323:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.241 snmp community set
+2019-06-21 17:07:20,347:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.44 snmp community set
+2019-06-21 17:07:22,043:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.7 snmp community set
+2019-06-21 17:07:22,087:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.35 snmp community set
+2019-06-21 17:07:22,338:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.50 snmp community set
+2019-06-21 17:07:23,006:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.8 snmp community set
+2019-06-21 17:07:23,070:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.9 snmp community set
+2019-06-21 17:07:23,084:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.246 snmp community set
+2019-06-21 17:07:23,172:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.45 snmp community set
+2019-06-21 17:07:23,716:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.38 snmp community set
+2019-06-21 17:07:23,972:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.245 snmp community set
+2019-06-21 17:07:25,032:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.15 snmp community set
+2019-06-21 17:07:25,434:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.6 snmp community set
+2019-06-21 17:07:25,689:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.3 snmp community set
+2019-06-21 17:07:26,222:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.253 snmp community set
+2019-06-21 17:07:28,124:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.2 snmp community set
+2019-06-21 17:07:28,664:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.39 snmp community set
+2019-06-21 17:07:29,687:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.4 snmp community set
+2019-06-21 17:07:30,335:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.209 snmp community set
+2019-06-21 17:07:31,448:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.240 snmp community set
+2019-06-21 17:07:32,384:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.16 snmp community set
+2019-06-21 17:07:32,397:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.36 snmp community set
+2019-06-21 17:07:32,636:INFO:connection.CiscoIOS:set_snmp_community 172.16.30.233 snmp community set
+2019-06-21 17:07:49,831:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-06-21 17:07:49,918:WARNING:connection.Master:username gestion password Ufinet18_2

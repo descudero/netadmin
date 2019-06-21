@@ -1536,6 +1536,11 @@ class CiscoIOS(Parent):
 
     def set_interfaces_data(self, interfaces_data=[]):
         self.interfaces = InterfaceUfinet.factory_from_dict(device=self, interfaces_data=interfaces_data)
+        if self.ip == '172.16.30.244':
+            print(interfaces_data)
+            ips = [str(interface_object.ip) for interface_object in self.interfaces.values()]
+            print(self.interfaces.keys())
+            print(ips)
         self.interfaces_ip = {str(interface_object.ip): interface_object
                               for interface_object in self.interfaces.values()}
         if len(self.interfaces) == 0:
@@ -1647,9 +1652,12 @@ class CiscoIOS(Parent):
 
     def set_interfaces_snmp(self, connection=False):
         self.verbose.critical(f'set_interfaces_snmp {self.ip}')
-        interfaces_data = InterfaceUfinet.bulk_snmp_data_interfaces(device=self)
-        self.interfaces = InterfaceUfinet.factory_from_dict(device=self, interfaces_data=interfaces_data.values())
 
+        interfaces_data = InterfaceUfinet.bulk_snmp_data_interfaces(device=self)
+
+        self.interfaces = InterfaceUfinet.factory_from_dict(device=self, interfaces_data=interfaces_data.values())
+        self.interfaces_ip = {str(interface_object.ip): interface_object
+                              for interface_object in self.interfaces.values()}
         if len(self.interfaces) == 0:
             if not connection:
                 self.dev.critical(

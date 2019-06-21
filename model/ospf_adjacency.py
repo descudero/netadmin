@@ -96,14 +96,13 @@ class ospf_adjacency:
         # if "BD" in self.t_interface.if_index or "Port" in self.t_interface.if_index:
         #     self.verbose.warning(f'N:{self.network_id} {self.t_device.ip} {self.t_interface}')
         pair = self.pair_id()
+        try:
+            self.ospf_database.neighbors_occurrences_count[pair] += 1
 
-        with lock:
-            try:
-                self.ospf_database.neighbors_occurrences_count[pair] += 1
+        except Exception as  e:
 
-            except Exception as  e:
+            self.dev.warning(f'ERROR_INIT_ neighbors_occurrences_count counter {e}')
 
-                self.dev.warning(f'ERROR_INIT_ neighbors_occurrences_count counter {e}')
         try:
             self.roundness = self.ospf_database.edge_roundness[self.ospf_database.neighbors_occurrences_count[pair]]
         except Exception as e:

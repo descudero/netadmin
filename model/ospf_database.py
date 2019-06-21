@@ -144,13 +144,14 @@ class ospf_database:
                 p2p_down_adj = []
                 threads = []
                 for network, neighbors in p2p.items():
-                    kwargs = {'lock': self.lock, "list_networks": p2p_down_adj, 'network_id': network,
-                              'ospf_database': self,
-                              'neighbors': neighbors,
-                              'network_type': 'p2p_down', 'state': 'down'}
-                    t = Thread(target=ospf_adjacency.add_ospf_adjacency, kwargs=kwargs)
-                    t.start()
-                    threads.append(t)
+                    if len(neighbors) == 2:
+                        kwargs = {'lock': self.lock, "list_networks": p2p_down_adj, 'network_id': network,
+                                  'ospf_database': self,
+                                  'neighbors': neighbors,
+                                  'network_type': 'p2p_down', 'state': 'down'}
+                        t = Thread(target=ospf_adjacency.add_ospf_adjacency, kwargs=kwargs)
+                        t.start()
+                        threads.append(t)
                 for t in threads:
                     t.join()
                 self.p2p_down_links = {p2p.network_id: p2p for p2p in p2p_down_adj}

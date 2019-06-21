@@ -2836,3 +2836,354 @@ state_timestamp) VALUES ('up','up','122230416','14336','1.22','0.0','153','0','5
                        as s on s.interface_uid= i.uid
                        inner join  (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid
                         WHERE   net_device_uid IN (68,56,55,65,60,36,41,59,25,53,62,63,6,70,8,2,26,1,45,3,12501,52,54,69,40,57,50,5,64,42,7,155743,49,58,46,606,39,4,37,644,580,67,48,648,66,38,51,44,61)  and state_timestamp >='2019-06-19 00:00:00' and state_timestamp <='2019-06-19 23:59:00' 
+2019-06-21 12:27:04,299:WARNING:db.Devices:dict_from_sql SELECT uid,ip FROM netadmin.network_devices where ip in('172.17.26.68','172.16.30.209','172.16.30.44','172.16.30.2','172.16.30.253','172.16.30.38','172.16.30.250','172.16.30.15','172.16.30.16','172.16.30.10','172.16.30.40','172.16.30.45','172.16.30.251','172.16.30.247','172.16.30.42','172.16.30.39','172.16.30.8','172.16.30.7','172.16.30.6','172.16.30.14','172.16.30.11','172.16.30.36','172.16.30.130','172.16.30.242','172.16.30.241','172.16.30.128','172.16.30.43','172.16.30.41','172.16.30.248','172.16.30.245','172.16.30.254','172.16.30.244','172.16.30.232','172.16.30.233','172.16.30.129','172.16.30.4','172.16.30.50','172.16.30.235','172.16.30.1','172.16.30.12','172.16.30.240','172.16.30.37','172.17.28.192','172.16.30.35','172.16.30.9','172.16.30.5','172.16.30.246','172.16.30.3','172.16.30.13')
+2019-06-21 12:27:04,403:WARNING:db.Devices:dict_from_sql SELECT 
+                                i.net_device_uid, 
+                                i.bandwith as bw,
+                                i.uid as uid,
+                                i.if_index as if_index,
+                                i.l3_protocol,
+                                i.l3_protocol_attr,
+                                i.l1_protocol,
+                                i.l1_protocol_attr,
+                                i.data_flow,
+                                s.util_in as util_in,
+                                s.util_out as util_out,
+                                s.link_state,
+                                s.protocol_state,
+                                s.output_rate,
+                                s.input_rate,
+                                s.state_timestamp,i.ip
+
+                       from network_devices as d
+                       inner join interfaces as i on d.uid = i.net_device_uid 
+                       inner join	(select * from interface_states where DATE(state_timestamp)=DATE(NOW())) 
+                       as s on s.interface_uid= i.uid
+                       inner join  (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid
+                        WHERE   net_device_uid IN (60,644,63,65,1,42,4,57,648,66,40,38,70,25,67,62,41,61,64,54,37,49,46,59,606,69,55,44,26,39,2,5,50,155743,48,52,58,12501,6,56,580,53,36,68,45,7,3,8,51)  and state_timestamp >='2019-06-21 00:00:00' and state_timestamp <='2019-06-21 23:59:00' 
+2019-06-21 15:22:48,557:WARNING:db.Devices:dict_from_sql SELECT uid,ip FROM netadmin.network_devices where ip in('172.16.30.250','172.16.30.15','172.16.30.38','172.16.30.233','172.16.30.44','172.16.30.235','172.16.30.39','172.16.30.5','172.16.30.6','172.16.30.41','172.16.30.128','172.16.30.7','172.16.30.242','172.16.30.251','172.16.30.43','172.16.30.253','172.16.30.50','172.16.30.40','172.16.30.11','172.16.30.130','172.16.30.245','172.16.30.13','172.16.30.35','172.16.30.247','172.16.30.241','172.16.30.244','172.16.30.37','172.16.30.2','172.16.30.129','172.16.30.209','172.16.30.45','172.16.30.42','172.16.30.36','172.16.30.254','172.16.30.246','172.16.30.14','172.16.30.4','172.16.30.248','172.16.30.3','172.17.26.68','172.16.30.10','172.16.30.9','172.16.30.8','172.17.28.192','172.16.30.16','172.16.30.232','172.16.30.1','172.16.30.240','172.16.30.12')
+2019-06-21 15:22:48,663:WARNING:db.Devices:dict_from_sql SELECT 
+                                i.net_device_uid, 
+                                i.bandwith as bw,
+                                i.uid as uid,
+                                i.if_index as if_index,
+                                i.l3_protocol,
+                                i.l3_protocol_attr,
+                                i.l1_protocol,
+                                i.l1_protocol_attr,
+                                i.data_flow,
+                                s.util_in as util_in,
+                                s.util_out as util_out,
+                                s.link_state,
+                                s.protocol_state,
+                                s.output_rate,
+                                s.input_rate,
+                                s.state_timestamp,i.ip
+
+                       from network_devices as d
+                       inner join interfaces as i on d.uid = i.net_device_uid 
+                       inner join	(select * from interface_states where DATE(state_timestamp)=DATE(NOW())) 
+                       as s on s.interface_uid= i.uid
+                       inner join  (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid
+                        WHERE   net_device_uid IN (4,57,42,155743,63,12501,62,7,64,44,69,61,59,70,55,1,58,40,37,46,39,51,68,25,606,5,53,65,48,644,38,67,49,2,3,54,52,26,8,60,66,45,41,36,648,50,6,580,56)  and state_timestamp >='2019-06-21 00:00:00' and state_timestamp <='2019-06-21 23:59:00' 
+2019-06-21 15:29:21,192:WARNING:db.Devices:dict_from_sql SELECT uid,ip FROM netadmin.network_devices where ip in('172.16.30.244')
+2019-06-21 15:29:21,265:WARNING:db.Devices:dict_from_sql SELECT 
+                                i.net_device_uid, 
+                                i.bandwith as bw,
+                                i.uid as uid,
+                                i.if_index as if_index,
+                                i.l3_protocol,
+                                i.l3_protocol_attr,
+                                i.l1_protocol,
+                                i.l1_protocol_attr,
+                                i.data_flow,
+                                s.util_in as util_in,
+                                s.util_out as util_out,
+                                s.link_state,
+                                s.protocol_state,
+                                s.output_rate,
+                                s.input_rate,
+                                s.state_timestamp,i.ip
+
+                       from network_devices as d
+                       inner join interfaces as i on d.uid = i.net_device_uid 
+                       inner join	(select * from interface_states where DATE(state_timestamp)=DATE(NOW())) 
+                       as s on s.interface_uid= i.uid
+                       inner join  (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid
+                        WHERE   net_device_uid IN (5)  and state_timestamp >='2019-06-21 00:00:00' and state_timestamp <='2019-06-21 23:59:00' 
+2019-06-21 15:33:19,594:WARNING:db.Devices:dict_from_sql SELECT uid,ip FROM netadmin.network_devices where ip in('172.16.30.244')
+2019-06-21 15:33:19,624:WARNING:db.Devices:dict_from_sql SELECT 
+                                i.net_device_uid, 
+                                i.bandwith as bw,
+                                i.uid as uid,
+                                i.if_index as if_index,
+                                i.l3_protocol,
+                                i.l3_protocol_attr,
+                                i.l1_protocol,
+                                i.l1_protocol_attr,
+                                i.data_flow,
+                                s.util_in as util_in,
+                                s.util_out as util_out,
+                                s.link_state,
+                                s.protocol_state,
+                                s.output_rate,
+                                s.input_rate,
+                                s.state_timestamp,i.ip
+
+                       from network_devices as d
+                       inner join interfaces as i on d.uid = i.net_device_uid 
+                       inner join	(select * from interface_states where DATE(state_timestamp)=DATE(NOW())) 
+                       as s on s.interface_uid= i.uid
+                       inner join  (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid
+                        WHERE   net_device_uid IN (5)  and state_timestamp >='2019-06-21 00:00:00' and state_timestamp <='2019-06-21 23:59:00' 
+2019-06-21 15:34:23,635:WARNING:db.Devices:dict_from_sql SELECT uid,ip FROM netadmin.network_devices where ip in('172.16.30.244')
+2019-06-21 15:34:23,673:WARNING:db.Devices:dict_from_sql SELECT 
+                                i.net_device_uid, 
+                                i.bandwith as bw,
+                                i.uid as uid,
+                                i.if_index as if_index,
+                                i.l3_protocol,
+                                i.l3_protocol_attr,
+                                i.l1_protocol,
+                                i.l1_protocol_attr,
+                                i.data_flow,
+                                s.util_in as util_in,
+                                s.util_out as util_out,
+                                s.link_state,
+                                s.protocol_state,
+                                s.output_rate,
+                                s.input_rate,
+                                s.state_timestamp,i.ip
+
+                       from network_devices as d
+                       inner join interfaces as i on d.uid = i.net_device_uid 
+                       inner join	(select * from interface_states where DATE(state_timestamp)=DATE(NOW())) 
+                       as s on s.interface_uid= i.uid
+                       inner join  (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid
+                        WHERE   net_device_uid IN (5)  and state_timestamp >='2019-06-21 00:00:00' and state_timestamp <='2019-06-21 23:59:00' 
+2019-06-21 15:38:26,393:WARNING:db.Devices:dict_from_sql SELECT uid,ip FROM netadmin.network_devices where ip in('172.16.30.244')
+2019-06-21 15:38:26,487:WARNING:db.Devices:dict_from_sql SELECT 
+                                i.net_device_uid, 
+                                i.bandwith as bw,
+                                i.uid as uid,
+                                i.if_index as if_index,
+                                i.l3_protocol,
+                                i.l3_protocol_attr,
+                                i.l1_protocol,
+                                i.l1_protocol_attr,
+                                i.data_flow,
+                                s.util_in as util_in,
+                                s.util_out as util_out,
+                                s.link_state,
+                                s.protocol_state,
+                                s.output_rate,
+                                s.input_rate,
+                                s.state_timestamp,i.ip
+
+                       from network_devices as d
+                       inner join interfaces as i on d.uid = i.net_device_uid 
+                       inner join	(select * from interface_states where DATE(state_timestamp)=DATE(NOW())) 
+                       as s on s.interface_uid= i.uid
+                       inner join  (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid
+                        WHERE   net_device_uid IN (5)  and state_timestamp >='2019-06-21 00:00:00' and state_timestamp <='2019-06-21 23:59:00' 
+2019-06-21 15:40:37,064:WARNING:db.Devices:dict_from_sql SELECT uid,ip FROM netadmin.network_devices where ip in('172.16.30.244')
+2019-06-21 15:40:37,097:WARNING:db.Devices:dict_from_sql SELECT 
+                                i.net_device_uid, 
+                                i.bandwith as bw,
+                                i.uid as uid,
+                                i.if_index as if_index,
+                                i.l3_protocol,
+                                i.l3_protocol_attr,
+                                i.l1_protocol,
+                                i.l1_protocol_attr,
+                                i.data_flow,
+                                s.util_in as util_in,
+                                s.util_out as util_out,
+                                s.link_state,
+                                s.protocol_state,
+                                s.output_rate,
+                                s.input_rate,
+                                s.state_timestamp,i.ip
+
+                       from network_devices as d
+                       inner join interfaces as i on d.uid = i.net_device_uid 
+                       inner join	(select * from interface_states where DATE(state_timestamp)=DATE(NOW())) 
+                       as s on s.interface_uid= i.uid
+                       inner join  (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid
+                        WHERE   net_device_uid IN (5)  and state_timestamp >='2019-06-21 00:00:00' and state_timestamp <='2019-06-21 23:59:00' 
+2019-06-21 15:44:05,893:WARNING:db.Devices:dict_from_sql SELECT uid,ip FROM netadmin.network_devices where ip in('172.16.30.244')
+2019-06-21 15:44:05,921:WARNING:db.Devices:dict_from_sql SELECT 
+                                i.net_device_uid, 
+                                i.bandwith as bw,
+                                i.uid as uid,
+                                i.if_index as if_index,
+                                i.l3_protocol,
+                                i.l3_protocol_attr,
+                                i.l1_protocol,
+                                i.l1_protocol_attr,
+                                i.data_flow,
+                                s.util_in as util_in,
+                                s.util_out as util_out,
+                                s.link_state,
+                                s.protocol_state,
+                                s.output_rate,
+                                s.input_rate,
+                                s.state_timestamp,i.ip
+
+                       from network_devices as d
+                       inner join interfaces as i on d.uid = i.net_device_uid 
+                       inner join	(select * from interface_states where DATE(state_timestamp)=DATE(NOW())) 
+                       as s on s.interface_uid= i.uid
+                       inner join  (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid
+                        WHERE   net_device_uid IN (5)  and state_timestamp >='2019-06-21 00:00:00' and state_timestamp <='2019-06-21 23:59:00' 
+2019-06-21 15:49:40,095:WARNING:db.Devices:dict_from_sql SELECT uid,ip FROM netadmin.network_devices where ip in('172.16.30.248')
+2019-06-21 15:49:43,131:WARNING:db.Devices:dict_from_sql SELECT 
+                                i.net_device_uid, 
+                                i.bandwith as bw,
+                                i.uid as uid,
+                                i.if_index as if_index,
+                                i.l3_protocol,
+                                i.l3_protocol_attr,
+                                i.l1_protocol,
+                                i.l1_protocol_attr,
+                                i.data_flow,
+                                s.util_in as util_in,
+                                s.util_out as util_out,
+                                s.link_state,
+                                s.protocol_state,
+                                s.output_rate,
+                                s.input_rate,
+                                s.state_timestamp,i.ip
+
+                       from network_devices as d
+                       inner join interfaces as i on d.uid = i.net_device_uid 
+                       inner join	(select * from interface_states where DATE(state_timestamp)=DATE(NOW())) 
+                       as s on s.interface_uid= i.uid
+                       inner join  (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid
+                        WHERE   net_device_uid IN (26)  and state_timestamp >='2019-06-21 00:00:00' and state_timestamp <='2019-06-21 23:59:00' 
+2019-06-21 15:53:48,040:WARNING:db.Devices:dict_from_sql SELECT uid,ip FROM netadmin.network_devices where ip in('172.16.30.244')
+2019-06-21 15:53:48,086:WARNING:db.Devices:dict_from_sql SELECT 
+                                i.net_device_uid, 
+                                i.bandwith as bw,
+                                i.uid as uid,
+                                i.if_index as if_index,
+                                i.l3_protocol,
+                                i.l3_protocol_attr,
+                                i.l1_protocol,
+                                i.l1_protocol_attr,
+                                i.data_flow,
+                                s.util_in as util_in,
+                                s.util_out as util_out,
+                                s.link_state,
+                                s.protocol_state,
+                                s.output_rate,
+                                s.input_rate,
+                                s.state_timestamp,i.ip
+
+                       from network_devices as d
+                       inner join interfaces as i on d.uid = i.net_device_uid 
+                       inner join	(select * from interface_states where DATE(state_timestamp)=DATE(NOW())) 
+                       as s on s.interface_uid= i.uid
+                       inner join  (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid
+                        WHERE   net_device_uid IN (5)  and state_timestamp >='2019-06-21 00:00:00' and state_timestamp <='2019-06-21 23:59:00' 
+2019-06-21 16:10:26,816:WARNING:db.Devices:dict_from_sql SELECT uid,ip FROM netadmin.network_devices where ip in('172.16.30.36','172.16.30.13','172.16.30.12','172.16.30.14','172.16.30.247','172.16.30.248','172.16.30.250','172.16.30.6','172.16.30.245','172.16.30.41','172.16.30.251','172.16.30.233','172.16.30.38','172.16.30.246','172.16.30.1','172.16.30.45','172.16.30.50','172.16.30.254','172.16.30.39','172.16.30.35','172.16.30.2','172.17.28.192','172.16.30.44','172.16.30.128','172.16.30.40','172.16.30.209','172.16.30.11','172.16.30.7','172.16.30.5','172.16.30.235','172.16.30.8','172.16.30.4','172.16.30.9','172.16.30.3','172.16.30.242','172.16.30.244','172.16.30.10','172.16.30.43','172.16.30.232','172.16.30.240','172.16.30.130','172.16.30.16','172.16.30.42','172.16.30.129','172.16.30.241','172.17.26.68','172.16.30.37','172.16.30.15','172.16.30.253')
+2019-06-21 16:10:26,897:WARNING:db.Devices:dict_from_sql SELECT 
+                                i.net_device_uid, 
+                                i.bandwith as bw,
+                                i.uid as uid,
+                                i.if_index as if_index,
+                                i.l3_protocol,
+                                i.l3_protocol_attr,
+                                i.l1_protocol,
+                                i.l1_protocol_attr,
+                                i.data_flow,
+                                s.util_in as util_in,
+                                s.util_out as util_out,
+                                s.link_state,
+                                s.protocol_state,
+                                s.output_rate,
+                                s.input_rate,
+                                s.state_timestamp,i.ip
+
+                       from network_devices as d
+                       inner join interfaces as i on d.uid = i.net_device_uid 
+                       inner join	(select * from interface_states where DATE(state_timestamp)=DATE(NOW())) 
+                       as s on s.interface_uid= i.uid
+                       inner join  (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid
+                        WHERE   net_device_uid IN (49,51,56,54,25,26,4,64,39,44,70,155743,42,3,6,38,58,2,62,68,65,36,63,69,40,644,37,61,7,12501,41,52,45,8,59,5,66,55,50,580,46,648,67,48,606,60,53,57,1)  and state_timestamp >='2019-06-21 00:00:00' and state_timestamp <='2019-06-21 23:59:00' 
+2019-06-21 16:22:12,513:WARNING:db.Devices:dict_from_sql SELECT uid,ip FROM netadmin.network_devices where ip in('172.16.30.248','172.16.30.250','172.16.30.44','172.16.30.8','172.16.30.1','172.16.30.14','172.16.30.232','172.16.30.247','172.16.30.38','172.17.26.68','172.16.30.7','172.16.30.50','172.16.30.35','172.16.30.11','172.16.30.233','172.16.30.128','172.16.30.2','172.16.30.39','172.16.30.37','172.16.30.240','172.16.30.5','172.16.30.43','172.16.30.254','172.16.30.15','172.16.30.244','172.16.30.246','172.16.30.36','172.16.30.42','172.16.30.13','172.17.28.192','172.16.30.241','172.16.30.6','172.16.30.10','172.16.30.209','172.16.30.235','172.16.30.130','172.16.30.245','172.16.30.41','172.16.30.253','172.16.30.16','172.16.30.45','172.16.30.251','172.16.30.12','172.16.30.3','172.16.30.40','172.16.30.129','172.16.30.9','172.16.30.4','172.16.30.242')
+2019-06-21 16:22:12,596:WARNING:db.Devices:dict_from_sql SELECT 
+                                i.net_device_uid, 
+                                i.bandwith as bw,
+                                i.uid as uid,
+                                i.if_index as if_index,
+                                i.l3_protocol,
+                                i.l3_protocol_attr,
+                                i.l1_protocol,
+                                i.l1_protocol_attr,
+                                i.data_flow,
+                                s.util_in as util_in,
+                                s.util_out as util_out,
+                                s.link_state,
+                                s.protocol_state,
+                                s.output_rate,
+                                s.input_rate,
+                                s.state_timestamp,i.ip
+
+                       from network_devices as d
+                       inner join interfaces as i on d.uid = i.net_device_uid 
+                       inner join	(select * from interface_states where DATE(state_timestamp)=DATE(NOW())) 
+                       as s on s.interface_uid= i.uid
+                       inner join  (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid
+                        WHERE   net_device_uid IN (26,4,63,41,6,54,50,25,42,60,61,58,68,37,155743,69,65,62,53,580,7,55,2,57,5,3,49,67,51,36,606,64,66,644,12501,46,39,44,1,648,38,70,56,8,40,48,45,52,59)  and state_timestamp >='2019-06-21 00:00:00' and state_timestamp <='2019-06-21 23:59:00' 
+2019-06-21 16:59:58,833:WARNING:db.Devices:dict_from_sql SELECT uid,ip FROM netadmin.network_devices where ip in('172.16.30.240','172.16.30.9','172.16.30.42','172.16.30.14','172.16.30.44','172.16.30.248','172.16.30.40','172.16.30.235','172.16.30.7','172.16.30.128','172.16.30.247','172.16.30.38','172.17.26.68','172.16.30.10','172.16.30.244','172.16.30.2','172.16.30.1','172.16.30.43','172.16.30.241','172.16.30.250','172.16.30.251','172.16.30.232','172.16.30.36','172.16.30.129','172.16.30.12','172.16.30.246','172.16.30.209','172.16.30.35','172.16.30.6','172.16.30.11','172.16.30.37','172.16.30.130','172.16.30.3','172.16.30.13','172.16.30.50','172.16.30.8','172.16.30.5','172.16.30.16','172.16.30.245','172.16.30.41','172.17.28.192','172.16.30.4','172.16.30.254','172.16.30.15','172.16.30.45','172.16.30.39','172.16.30.253','172.16.30.233','172.16.30.242')
+2019-06-21 16:59:59,005:WARNING:db.Devices:dict_from_sql SELECT 
+                                i.net_device_uid, 
+                                i.bandwith as bw,
+                                i.uid as uid,
+                                i.if_index as if_index,
+                                i.l3_protocol,
+                                i.l3_protocol_attr,
+                                i.l1_protocol,
+                                i.l1_protocol_attr,
+                                i.data_flow,
+                                s.util_in as util_in,
+                                s.util_out as util_out,
+                                s.link_state,
+                                s.protocol_state,
+                                s.output_rate,
+                                s.input_rate,
+                                s.state_timestamp,i.ip
+
+                       from network_devices as d
+                       inner join interfaces as i on d.uid = i.net_device_uid 
+                       inner join	(select * from interface_states where DATE(state_timestamp)=DATE(NOW())) 
+                       as s on s.interface_uid= i.uid
+                       inner join  (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid
+                        WHERE   net_device_uid IN (580,45,67,54,63,26,40,12501,61,69,25,42,60,66,5,65,6,55,606,4,70,50,49,48,56,3,644,68,64,37,53,46,8,51,58,41,7,648,39,44,36,52,2,57,38,62,1,155743,59)  and state_timestamp >='2019-06-21 00:00:00' and state_timestamp <='2019-06-21 23:59:00' 
+2019-06-21 16:59:59,490:WARNING:db.DiagramState:save_adjacencies _ospf_ufinet_regional  INSERT INTO diagram_state_adjacencies(network_id,diagram_state_uid,net_device_1_ip,interface_1_uid,interface_1_weight,interface_1_ip,net_device_2_ip,interface_2_uid,interface_2_weight,interface_2_ip) VALUES (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1")
+2019-06-21 17:07:47,046:WARNING:db.Devices:dict_from_sql SELECT uid,ip FROM netadmin.network_devices where ip in('172.16.30.235','172.16.30.3','172.16.30.128','172.16.30.12','172.16.30.232','172.17.26.68','172.16.30.129','172.16.30.8','172.16.30.130','172.16.30.1','172.16.30.251','172.16.30.35','172.16.30.42','172.16.30.45','172.16.30.39','172.16.30.15','172.16.30.248','172.17.28.192','172.16.30.11','172.16.30.44','172.16.30.233','172.16.30.37','172.16.30.36','172.16.30.43','172.16.30.240','172.16.30.13','172.16.30.16','172.16.30.209','172.16.30.10','172.16.30.5','172.16.30.245','172.16.30.253','172.16.30.2','172.16.30.241','172.16.30.9','172.16.30.6','172.16.30.7','172.16.30.242','172.16.30.244','172.16.30.250','172.16.30.246','172.16.30.254','172.16.30.14','172.16.30.38','172.16.30.40','172.16.30.50','172.16.30.247','172.16.30.4','172.16.30.41')
+2019-06-21 17:07:47,146:WARNING:db.Devices:dict_from_sql SELECT 
+                                i.net_device_uid, 
+                                i.bandwith as bw,
+                                i.uid as uid,
+                                i.if_index as if_index,
+                                i.l3_protocol,
+                                i.l3_protocol_attr,
+                                i.l1_protocol,
+                                i.l1_protocol_attr,
+                                i.data_flow,
+                                s.util_in as util_in,
+                                s.util_out as util_out,
+                                s.link_state,
+                                s.protocol_state,
+                                s.output_rate,
+                                s.input_rate,
+                                s.state_timestamp,i.ip
+
+                       from network_devices as d
+                       inner join interfaces as i on d.uid = i.net_device_uid 
+                       inner join	(select * from interface_states where DATE(state_timestamp)=DATE(NOW())) 
+                       as s on s.interface_uid= i.uid
+                       inner join  (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid
+                        WHERE   net_device_uid IN (12501,8,69,56,50,60,48,41,46,6,70,68,67,38,62,57,26,36,37,63,155743,53,49,55,580,51,648,644,66,7,39,1,65,606,45,64,61,59,5,4,3,2,54,42,40,58,25,52,44)  and state_timestamp >='2019-06-21 00:00:00' and state_timestamp <='2019-06-21 23:59:00' 

@@ -21,8 +21,7 @@ class Diagram:
         try:
             connection = self.master.db_connect()
             with connection.cursor() as cursor:
-                sql = f'''INSERT INTO {Diagram.__table__}(name,description)
-                  VALUES('{self.name}','{""}')'''
+                sql = f'''INSERT INTO {Diagram.__table__}(name,description) VALUES('{self.name}','{""}')'''
                 cursor.execute(sql)
                 connection.commit()
                 self.uid = cursor.lastrowid

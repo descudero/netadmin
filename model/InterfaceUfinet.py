@@ -148,9 +148,11 @@ class InterfaceUfinet(InterfaceIOS):
             connection = self.parent_device.master.db_connect()
             try:
                 with connection.cursor() as cursor:
+
                     sql = f""" UPDATE interfaces
                     SET ip = '{self.ip}'
                     WHERE  uid='{self.uid}'"""
+                    self.verbose.warning(f' correct_ip ERROR dev {self.parent_device.ip} {sql}')
                     cursor.execute(sql)
                     connection.commit()
             except Exception as e:
