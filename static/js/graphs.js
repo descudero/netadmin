@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    console.log("document ready");
+
 
     date_start = $("#initial_date").val();
     date_end = $("#end_date").val();

@@ -1650,7 +1650,7 @@ class CiscoIOS(Parent):
         for address_family, neighbors in self.bgp_snmp_neighbors.items():
             BGPNeighbor.save_bulk_states(device=self, neighbors=neighbors.values())
 
-    def set_interfaces_snmp(self, connection=False):
+    def set_interfaces_snmp(self, connection=False, save=False, clear_memory=False):
         self.verbose.critical(f'set_interfaces_snmp {self.ip}')
 
         interfaces_data = InterfaceUfinet.bulk_snmp_data_interfaces(device=self)
@@ -1668,8 +1668,13 @@ class CiscoIOS(Parent):
                     f'set_interfaces_snmp Unable to set Interfaces snmp {len(self.interfaces)} {self.ip}')
         else:
             self.dev.info(f'set_interfaces_snmp able Interfaces snmp {len(self.interfaces)} {self.ip}')
-
-        return self.interfaces
+        if save:
+            self.save_interfaces()
+        if clear_memory:
+            del self.interfaces
+            self.interfaces = {}
+        else:
+            return self.interfaces
 
     def save_interfaces(self):
         interfaces = [interface for interface in self.interfaces.values()

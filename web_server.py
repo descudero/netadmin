@@ -23,6 +23,7 @@ from model.BGPNeigbor import BGPNeighbor
 from operator import itemgetter
 from model.Diagram import Diagram
 from model.Devices import Devices
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "autenticacion basica"
 app.config['MYSQL_HOST'] = '10.250.55.17'
@@ -53,7 +54,6 @@ def bgp_peer_view(uid):
 
 
 @app.route('/reportes/bgp_neighbors/json/<int:uid>', methods=['POST'])
-
 def bgp_peer_json(uid):
     bgp_peer = BGPNeighbor.load_uid(isp=isp, uid=uid)
     request.get_json()
@@ -72,7 +72,7 @@ def bgp_peer_json(uid):
     name = f'PREFIJOS BGP PEER {bgp_peer.ip} EN {bgp_peer.parent.hostname} {date_start} A {date_end}'
     data = {}
     traces = [{'x': x, 'y': y, 'name': name, 'stackgroup': 'dos',
-             'fill': 'tonexty', 'hoverlabel': {'namelength': -1}}]
+               'fill': 'tonexty', 'hoverlabel': {'namelength': -1}}]
     data['traces'] = traces
     data['state_data'] = state_data
     data['title'] = name
@@ -139,6 +139,52 @@ def json_interfaces_cisco():
     cantidad_interfaces = cantidad_interfaces - 1 if len(data_grupo) >= cantidad_interfaces else len(
         cantidad_interfaces) - 1
     return jsonify(data_grupo[0:cantidad_interfaces])
+
+
+@app.route('/reportes/internet/json', methods=['POST'])
+def data_interfaces():
+    request.get_json()
+    grupo_interfaces = request.json['grupo_interfaces']
+    month = datetime.date.today().month
+    year = datetime.date.today().year
+    last_day = calendar.monthrange(year, month)[1]
+    initial_date = '{year}-{month}-{day} 00:00:00'.format(year=year, month=month, day=1) \
+        if request.json['initial_date'] == '' else request.json['initial_date'] + ' 00:00:00'
+    end_date = '{year}-{month}-{day} 23:59:59'.format(year=year, month=month, day=last_day) \
+        if request.json['end_date'] == '' else request.json['end_date'] + ' 00:00:00'
+
+    data = InterfaceUfinet.interface_states_data_by_date(master=master, initial_date=initial_date, end_date=end_date,
+                                                         filter_keys=InterfaceUfinet.FILTERS_GROUP[grupo_interfaces])
+
+    pass
+
+
+@app.route('/reportes/internet/nuevo', methods=['POST', 'GET'])
+def reporte_internet_filtrado():
+    return render_template('reporte_interfaces_filtradas.html')
+
+
+@app.route('/reportes/internet/json_group_interfaces', methods=['POST'])
+def json_group_interfaces():
+    request.get_json()
+    pprint(request.json)
+    group_interfaces = request.json['group_interfaces']
+    month = datetime.date.today().month
+    year = datetime.date.today().year
+    last_day = calendar.monthrange(year, month)[1]
+    initial_date = '{year}-{month}-{day} 00:00:00'.format(year=year, month=month, day=1) \
+        if request.json['initial_date'] == '' else request.json['initial_date'] + ' 00:00:00'
+    end_date = '{year}-{month}-{day} 23:59:59'.format(year=year, month=month, day=last_day) \
+        if request.json['end_date'] == '' else request.json['end_date'] + ' 00:00:00'
+
+    data = InterfaceUfinet.interface_states_data_by_date_query(master=master, initial_date=initial_date,
+                                                               end_date=end_date,
+                                                               sql_filters=InterfaceUfinet.FILTERS_GROUP[
+                                                                   group_interfaces]
+                                                               , sort=InterfaceUfinet.ORDER_BY_INTERFFACE_GROUPS[
+            group_interfaces])
+
+    return jsonify(data)
 
 
 @app.route('/reportes/internet/', methods=['POST', 'GET'])
@@ -498,7 +544,14 @@ def filter_sql(filtro, apply_and=True, table_suffix=""):
                    'TRUNCALES_MPLS_DOWNSTREAM': {'l3_protocol': 'MPLS',
                                                  'l1_protocol': 'CABLE_SUBMARINO', 'data_flow': 'DOWNSTREAM'
                                                  },
-                   'SERVIDORES_CACHE_TERCEROS': {'l3_protocol_attr': 'CDN'}
+                   'SERVIDORES_CACHE_TERCEROS': {'l3_protocol_attr': 'CDN'},
+                   'PROVEEDORES_TIER_1_INTERNET': {'l3_protocol_attr': 'IPT'},
+                   'CONEXIONES_DIRECTAS_PEERING': {'l3_protocol_attr': 'PNI'},
+                   'SERVIDORES_CACHE_TERCEROS': {'l3_protocol_attr': 'CDN'},
+                   'TRUNCALES_SUBMARINAS_MPLS': {'l3_protocol': 'MPLS',
+                                                 'l1_protocol': 'CABLE_SUBMARINO', 'data_flow': 'DOWNSTREAM'
+                                                 },
+                   'BGPS_DIRECTOS': {'l3_protocol_attr': 'IBP', 'data_flow': 'DOWNSTREAM'}
                    }
     sql_filter = ""
 
@@ -537,6 +590,7 @@ def save_xy_diagram():
     diagram.state.devices()
     diagram.state.save_position(data_devices=data)
     return jsonify({"bueno": "dsd"})
+
 
 @app.route('/utilidades/metodos/cisco_json', methods=['POST', 'GET'])
 def json_cisco_commands_tabulated():
@@ -604,7 +658,6 @@ def json_data_graph():
         pl.new_flag("pivot")
 
     jdata = jsonify(data)
-    print(data)
     pl.new_flag("j data")
     pl.new_flag("end")
     if (pl.time_flag() > 2000):

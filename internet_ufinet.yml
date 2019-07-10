@@ -1,5 +1,0 @@
-RCE:
-  network: 172.16.30.0/24
-  filters:
-    - l3_protocol: MPLS
-      l3_protocol_attr: OSP

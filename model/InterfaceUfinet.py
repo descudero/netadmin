@@ -22,7 +22,23 @@ class InterfaceUfinet(InterfaceIOS):
     l3_rotocol
     L1_conection
     '''
-    FILTERS_GROUP = {'OSPF_MPLS': {'OSPF_MPLS': {'l3p': 'MPLS', 'l3a': 'OSP'}}}
+
+    FILTERS_GROUP = {'OSPF_MPLS': {'OSPF_MPLS': {'l3p': 'MPLS', 'l3a': 'OSP'}},
+                     'PROVEEDORES_TIER_1_INTERNET': {'l3_protocol_attr': 'IPT'},
+                     'CONEXIONES_DIRECTAS_PEERING': {'l3_protocol_attr': 'PNI'},
+                     'SERVIDORES_CACHE_TERCEROS': {'l3_protocol_attr': 'CDN'},
+                     'TRUNCALES_SUBMARINAS_MPLS': {'l3_protocol': 'MPLS',
+                                                   'l1_protocol': 'CABLE_SUBMARINO', 'data_flow': 'DOWNSTREAM'
+                                                   },
+                     'BGPS_DIRECTOS': {'l3_protocol_attr': 'IBP', 'data_flow': 'DOWNSTREAM'}
+                     }
+    ORDER_BY_INTERFFACE_GROUPS = {'OSPF_MPLS': {'OSPF_MPLS': {'l3p': 'MPLS', 'l3a': 'OSP'}},
+                                  'PROVEEDORES_TIER_1_INTERNET': 'util_in',
+                                  'CONEXIONES_DIRECTAS_PEERING': 'util_in',
+                                  'SERVIDORES_CACHE_TERCEROS': 'util_in',
+                                  'TRUNCALES_SUBMARINAS_MPLS': 'util_out',
+                                  'BGPS_DIRECTOS': 'util_out'
+                                  }
 
     _PROTOCOL_STATES = {1: 'up',
                         2: 'down',
@@ -185,9 +201,10 @@ class InterfaceUfinet(InterfaceIOS):
                        inner join	(select * from interface_states where DATE(state_timestamp)=DATE(NOW())) 
                        as s on s.interface_uid= i.uid
                        inner join  (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid
-                        WHERE   net_device_uid IN ({','.join(
+                        WHERE  i.ip <>"127.0.0.1" AND  net_device_uid IN ({','.join(
             devices_uid.values())})  and state_timestamp >='{date_start}' and state_timestamp <='{date_end}' """
         return sql
+
     @staticmethod
     def sql_today_last_polled_interfaces(devices):
         date_start = str(datetime.date.today()) + ' 00:00:00'
@@ -203,7 +220,7 @@ class InterfaceUfinet(InterfaceIOS):
                 connection = device.master.db_connect()
                 with connection.cursor() as cursor:
                     sql = f'''SELECT uid,description,if_index,l3_protocol,l3_protocol_attr,l1_protocol,l1_protocol_attr,data_flow 
-                    FROM interfaces WHERE   net_device_uid = {device.uid} ORDER BY uid DESC'''
+                    FROM interfaces WHERE  ip <>"127.0.0.1"  AND net_device_uid = {device.uid} ORDER BY uid DESC'''
 
                     cursor.execute(sql)
                     data_interfaces = cursor.fetchall()
@@ -373,7 +390,51 @@ class InterfaceUfinet(InterfaceIOS):
             return False
 
     @staticmethod
-    def interface_states_data_by_date(master, initial_date, end_date, filter_keys):
+    def sql_interface_states_data_by_date(initial_date, end_date, sql_filters={}):
+        sql = f'''select  
+                          d.hostname as host,
+                          i.uid,
+                          i.if_index as inter,
+                          right(i.description,CHAR_LENGTH(i.description)-20) as description,i.l3_protocol as l3p,
+                          i.l3_protocol_attr as l3a ,
+                          i.l1_protocol as l1p ,
+                          i.l1_protocol_attr as l1a,
+                          i.data_flow,
+                          s.util_in as util_in,util_out as util_out,
+                          (s.input_rate/1000000000) as in_gbs ,
+                          (s.output_rate/1000000000) as out_gbs
+                          ,s.state_timestamp  
+                          from network_devices as d
+                          inner join interfaces as i on d.uid = i.net_device_uid 
+                          inner join interface_states as s on i.uid = interface_uid 
+                          where s.state_timestamp >='{initial_date}' and s.state_timestamp <'{end_date}'
+                          '''
+        for column, value in sql_filters.items():
+            sql += f" AND i.{column}='{value}' "
+        return sql
+
+    @staticmethod
+    def interface_states_data_by_date_query(master, initial_date, end_date, sql_filters,
+                                            sort='util_out'):
+        sql = InterfaceUfinet.sql_interface_states_data_by_date(initial_date, end_date, sql_filters)
+        df = pd.read_sql(sql, con=master.db_connect())
+
+        df2 = df[['host', 'uid', 'inter', 'description', 'l3p', 'l3a', 'l1a', 'data_flow',
+                  'l1p']].drop_duplicates(subset='uid', keep='first')
+        df_proceded = (
+            df.groupby(by=['uid'])['util_out', 'util_in', 'out_gbs', 'in_gbs'].quantile(.95)).round(
+            1).reset_index()
+
+        df_merge = pd.merge(df_proceded, df2, on=['uid'], how='left').sort_values(ascending=False, by=['util_out'])
+        df_merge.drop(['uid'], axis=1, inplace=True)
+        df_merge.sort_values(by=[sort], inplace=True, ascending=False)
+        table = df_merge.to_dict(orient='records')
+
+        return table
+
+    @staticmethod
+    def interface_states_data_by_date(master, initial_date, end_date, filter_keys,
+                                      sort_columns={'default': 'util_out'}):
         sql = '''select  
                d.hostname as host,
                i.uid,
@@ -403,10 +464,9 @@ class InterfaceUfinet(InterfaceIOS):
 
         df_merge = pd.merge(df_proceded, df2, on=['uid'], how='left').sort_values(ascending=False, by=['util_out'])
         df_merge.drop(['uid'], axis=1, inplace=True)
-        columns = ['host', 'inter', 'description', 'l1_protocol', 'l1_protocol_attr', 'util_in', 'util_out', 'in_gbs',
+        columns = ['host', 'inter', 'description', 'l1', 'l1a', 'util_in', 'util_out', 'in_gbs',
                    'out_gbs']
 
-        sort_columns = {'default': 'util_out'}
         tables = filter_summary(df_merge, columns, sort_column=sort_columns, filter_keys=filter_keys)
 
         return tables
@@ -431,7 +491,6 @@ class InterfaceUfinet(InterfaceIOS):
         interfaces_dict = {}
         try:
             for parse_data in interfaces_data:
-
                 interface_object = InterfaceUfinet(parent_device=device, parse_data=parse_data)
                 interfaces_dict[interface_object.if_index] = interface_object
                 # if "BDI" in parse_data["if_index"] or "Po" in parse_data["if_index"]:

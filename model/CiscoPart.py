@@ -1,6 +1,6 @@
 from functools import cmp_to_key
-from multireplace import multi_replace_void
 from tools import logged
+from tools import replace
 from pprint import pprint
 import datetime
 from collections import Counter
@@ -52,7 +52,7 @@ class CiscoPart(object):
         self.name = name
         self.serial_number = serial_number
         self.vid = vid
-        self.pid = multi_replace_void(pid, [","])
+        self.pid = replace(pid, [","], "")
         self.local_name = local_name.strip()
         self.part_level = local_name.count("/")
         self.type = "OTHER"
@@ -127,10 +127,10 @@ class CiscoPart(object):
         if self.local_name.find("RSP") > -1:
             self.type = "RSP"
             self.slots = 0
-            self.slot_number = int(multi_replace_void(self.local_name, ["0/", "RSP"])) + 8
+            self.slot_number = int(replace(self.local_name, ["0/", "RSP"], "")) + 8
         if self.local_name.find("chassis") > -1:
             self.type = "CHASSIS"
-            self.slots = int(multi_replace_void(self.pid, {",", "ASR", "99", "DC", "V2", "-", "90"}))
+            self.slots = int(replace(self.pid, {",", "ASR", "99", "DC", "V2", "-", "90"}, ""))
             self.slot_number = 0
 
         if (self.pid.find("SFP") > -1 or self.pid.find("XFP") > -1):

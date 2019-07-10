@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="row p-4">
+    <form class="form-inline" id="form_send">
+        <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+                <div class="input-group-text">Fecha Inicial</div>
+            </div>
+            <input class="form-control" id="initial_date" name="initial_date" placeholder="Fecha inicial" type="date"
+                   value="{{initial_date}}">
+        </div>
+        <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+                <div class="input-group-text">Fecha Final</div>
+            </div>
+            <input class="form-control" id="end_date" name="end_date" placeholder="Fecha Final" type="date"
+                   value="{{end_date}}">
+        </div>
+
+        <button class="btn btn-primary mb-2" id="get_json">Submit</button>
+    </form>
+</div>
+
+<h1 id="titulo">REPORTE DE INTERNET MES ACTUAL </h1>
+<div class="row" id="main">
+
+</div>
+
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="{{ url_for('static', filename='js/reporte_internet_filtrado.js') }}"></script>
+
+{% endblock %}

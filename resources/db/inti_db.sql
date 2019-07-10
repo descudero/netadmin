@@ -8,29 +8,29 @@ from diagram_network_devices;
 
 select *
 from diagrams;
-select s.uid,
-       i.if_index,
-       i.uid,
-       s.link_state,
-       s.protocol_state,
-       i.l3_protocol,
-       i.l3_protocol_attr,
-       s.state_timestamp
+select i.if_index,i.uid,s.link_state,s.protocol_state,i.l3_protocol,i.l3_protocol_attr, s.state_timestamp
 from network_devices as nd
        inner join interfaces as i on i.net_device_uid = nd.uid
        inner join
      interface_states as s on i.uid = s.interface_uid
-where nd.ip = '172.16.30.244'
+where nd.ip = '172.16.30.247'
   and i.l3_protocol_attr = 'OSP'
 order by s.uid desc
 limit 30;
 
-select *
-from network_devices as nd
-where nd.ip = '172.16.30.244';
-select *
-from interfaces
-where interfaces.net_device_uid = 4;
+
+
+'network_id',
+'diagram_state_uid',
+'net_device_1_ip',
+'interface_1_uid',
+'interface_1_ip',
+'interface_1_weight',
+'interface_2_uid',
+'net_device_2_ip',
+'interface_2_ip',
+'interface_2_weight'
+
 select *
 from interfaces;
 select *
@@ -55,34 +55,7 @@ create table diagram_state_adjacencies
   foreign key (diagram_state_uid) references diagram_states (uid)
 );
 
-select i.uid,
-       i.ip,
-       s.uid,
-       i.if_index,
-       i.uid,
-       s.link_state,
-       s.protocol_state,
-       i.l3_protocol,
-       i.l3_protocol_attr,
-       s.state_timestamp
-from network_devices as nd
-       inner join interfaces as i on i.net_device_uid = nd.uid
-       inner join
-     interface_states as s on i.uid = s.interface_uid
-where nd.ip = '172.16.30.244'
-  and i.l3_protocol_attr = 'OSP'
-order by s.uid desc
-limit 30;
 
-
-select i.ip,i.if_index,i.uid,i.l3_protocol,i.l3_protocol_attr
-from network_devices as nd
-       inner join interfaces as i on i.net_device_uid = nd.uid
-
-where nd.ip = '172.16.30.248'
-  and i.l3_protocol_attr = 'OSP'
-order by i.uid desc
-limit 30;
 
 select *
 from diagrams;
@@ -254,7 +227,8 @@ create table bgp_neighbor_states
 select *
 from interfaces as i
        inner join network_devices as n on n.uid = i.net_device_uid
-where n.ip = '172.16.30.13';
+where n.ip = '172.16.30.248';
+
 
 select *
 from interfaces
