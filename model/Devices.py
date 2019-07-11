@@ -265,3 +265,6 @@ class Devices:
                     setattr(self.devices[device_ip], attr, value)
                 except:
                     self.verbose.warning(f'error {attr} {device_ip}')
+
+    def save_interfaces(self):
+        InterfaceUfinet.save_bulk_states_devices(self)

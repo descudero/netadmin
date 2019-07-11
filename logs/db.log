@@ -3751,3 +3751,471 @@ state_timestamp) VALUES ('up','up','5027055600','143352216','50.27','1.43','1358
                        as s on s.interface_uid= i.uid
                        inner join  (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid
                         WHERE  i.ip <>"127.0.0.1" AND  net_device_uid IN (117,102,81,92,166,83,142,196,82,202,71,152,0,78,127,135,73,197,187,4,183,181,182,198,101,164,178,121,150,146,213,185,105,76,84,217,140,141,86,160,529,0,108,771,204,162,147,137,91,177,138,72,215,188,136,167,107,95,143,88,214,128,89,193,169,212,205,155,176,123,199,174,554,144,175,148,106,79,75,161,58,184,149,98,170,206,153,171,131,769,584,94,93,125,180,192,114,110,122,103,104,770,134,156,159,111,112,189,207,130,190,80,191,139,85,157,118,126,211,186,115,68,96,173,119,132,585,145,116,87,208,168,209,0,129,90,99,179,172,216,195,165,113,555,100,210,124,151,97,200,201,109,194,77)  and state_timestamp >='2019-07-09 00:00:00' and state_timestamp <='2019-07-09 23:59:00' 
+2019-07-10 15:27:07,507:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.245  e 0
+2019-07-10 15:27:08,513:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.242  e 0
+2019-07-10 15:27:08,523:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.16  e 0
+2019-07-10 15:27:08,727:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.43  e 0
+2019-07-10 15:27:09,024:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.128  e 0
+2019-07-10 15:27:12,845:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.39  e 0
+2019-07-10 15:27:13,082:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.209  e 0
+2019-07-10 15:27:13,082:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.233  e 0
+2019-07-10 15:27:13,250:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.37  e 0
+2019-07-10 15:27:13,372:WARNING:db.CiscoXR:save_bulk_states: 172.16.30.135  e 0
+2019-07-10 15:27:17,934:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.14  e 0
+2019-07-10 15:27:18,059:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.232  e 0
+2019-07-10 15:27:18,233:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.10  e 0
+2019-07-10 15:27:18,701:WARNING:db.CiscoXR:save_bulk_states: 172.16.30.248  e 0
+2019-07-10 15:27:19,012:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.6  e 0
+2019-07-10 15:27:22,508:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.8  e 0
+2019-07-10 15:27:23,170:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.13  e 0
+2019-07-10 15:27:23,975:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.235  e 0
+2019-07-10 15:27:24,051:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.130  e 0
+2019-07-10 15:27:24,150:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.41  e 0
+2019-07-10 15:27:27,306:WARNING:db.CiscoXR:save_bulk_states: 172.16.30.246  e 0
+2019-07-10 15:27:27,473:WARNING:db.CiscoXR:save_bulk_states: 172.16.30.244  e 0
+2019-07-10 15:27:27,817:WARNING:db.CiscoXR:save_bulk_states: 172.16.30.250  e 0
+2019-07-10 15:27:29,136:WARNING:db.CiscoXR:save_bulk_states: 172.16.30.247  e 0
+2019-07-10 15:27:29,474:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.129  e 0
+2019-07-10 15:27:32,021:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.44  e 0
+2019-07-10 15:27:32,394:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.241  e 0
+2019-07-10 15:27:32,625:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.35  e 0
+2019-07-10 15:27:32,764:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.40  e 0
+2019-07-10 15:27:32,867:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.7  e 0
+2019-07-10 15:27:37,210:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.36  e 0
+2019-07-10 15:27:37,639:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.11  e 0
+2019-07-10 15:27:38,808:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.4  e 0
+2019-07-10 15:27:38,818:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.42  e 0
+2019-07-10 15:27:38,919:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.15  e 0
+2019-07-10 15:27:42,417:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.1  e 0
+2019-07-10 15:27:42,629:WARNING:db.CiscoIOS:save_bulk_states: 172.17.28.192  e 0
+2019-07-10 15:27:42,906:WARNING:db.CiscoXR:save_bulk_states: 172.16.30.3  e 0
+2019-07-10 15:27:43,020:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.38  e 0
+2019-07-10 15:27:43,430:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.45  e 0
+2019-07-10 15:27:47,202:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.2  e 0
+2019-07-10 15:27:47,433:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.9  e 0
+2019-07-10 15:27:48,063:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.50  e 0
+2019-07-10 15:27:48,151:WARNING:db.CiscoXR:save_bulk_states: 172.16.30.253  e 0
+2019-07-10 15:27:48,470:WARNING:db.CiscoXR:save_bulk_states: 172.16.30.251  e 0
+2019-07-10 15:27:51,488:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.5  e 0
+2019-07-10 15:27:51,663:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.12  e 0
+2019-07-10 15:27:51,844:WARNING:db.CiscoXR:save_bulk_states: 172.16.30.254  e 0
+2019-07-10 15:32:08,099:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.66  e 0
+2019-07-10 15:32:08,419:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.52  e 0
+2019-07-10 15:32:12,074:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.50  e 0
+2019-07-10 15:32:14,713:WARNING:db.CiscoIOS:save_bulk_states: 172.17.31.5  e 0
+2019-07-10 15:32:19,702:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.65  e 0
+2019-07-10 15:32:22,470:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.29  e 0
+2019-07-10 15:32:23,003:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.40  e 0
+2019-07-10 15:32:25,259:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.18  e 0
+2019-07-10 15:32:25,729:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.77  e 0
+2019-07-10 15:32:27,746:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.35  e 0
+2019-07-10 15:32:28,999:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.51  e 0
+2019-07-10 15:32:29,500:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.67  e 0
+2019-07-10 15:32:29,501:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.54  e 0
+2019-07-10 15:32:31,562:WARNING:db.CiscoIOS:save_bulk_states: 172.17.31.1  e 0
+2019-07-10 15:32:38,272:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.11  e 0
+2019-07-10 15:32:39,020:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.42  e 0
+2019-07-10 15:32:39,792:WARNING:db.CiscoXR:save_bulk_states: 172.16.30.250  e 0
+2019-07-10 15:32:40,884:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.70  e 0
+2019-07-10 15:32:43,339:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.73  e 0
+2019-07-10 15:32:45,126:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.62  e 0
+2019-07-10 15:32:48,697:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.13  e 0
+2019-07-10 15:32:49,200:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.68  e 0
+2019-07-10 15:32:50,350:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.76  e 0
+2019-07-10 15:32:51,353:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.58  e 0
+2019-07-10 15:32:52,392:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.76  e 0
+2019-07-10 15:32:55,521:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.12  e 0
+2019-07-10 15:32:59,125:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.18  e 0
+2019-07-10 15:33:02,641:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.11  e 0
+2019-07-10 15:33:03,126:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.71  e 0
+2019-07-10 15:33:03,233:WARNING:db.CiscoIOS:save_bulk_states: 172.17.31.7  e 0
+2019-07-10 15:33:04,326:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.77  e 0
+2019-07-10 15:33:04,845:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.22  e 0
+2019-07-10 15:33:08,367:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.57  e 0
+2019-07-10 15:33:08,868:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.12  e 0
+2019-07-10 15:33:11,238:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.44  e 0
+2019-07-10 15:33:14,164:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.33  e 0
+2019-07-10 15:33:16,506:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.79  e 0
+2019-07-10 15:33:21,745:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.67  e 0
+2019-07-10 15:33:21,745:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.66  e 0
+2019-07-10 15:33:22,807:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.10  e 0
+2019-07-10 15:33:24,442:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.30  e 0
+2019-07-10 15:33:27,150:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.60  e 0
+2019-07-10 15:33:29,184:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.72  e 0
+2019-07-10 15:33:32,294:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.80  e 0
+2019-07-10 15:33:33,827:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.9  e 0
+2019-07-10 15:33:33,828:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.63  e 0
+2019-07-10 15:33:37,634:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.52  e 0
+2019-07-10 15:33:38,141:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.49  e 0
+2019-07-10 15:33:40,227:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.78  e 0
+2019-07-10 15:33:43,354:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.47  e 0
+2019-07-10 15:33:43,867:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.71  e 0
+2019-07-10 15:33:44,297:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.70  e 0
+2019-07-10 15:33:47,924:WARNING:db.CiscoIOS:save_bulk_states: 172.17.31.6  e 0
+2019-07-10 15:33:50,102:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.24  e 0
+2019-07-10 15:33:50,522:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.22  e 0
+2019-07-10 15:33:51,498:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.46  e 0
+2019-07-10 15:33:52,875:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.15  e 0
+2019-07-10 15:33:54,082:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.36  e 0
+2019-07-10 15:33:54,807:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.26  e 0
+2019-07-10 15:34:00,670:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.3  e 0
+2019-07-10 15:34:03,453:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.73  e 0
+2019-07-10 15:34:06,096:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.21  e 0
+2019-07-10 15:34:10,591:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.31  e 0
+2019-07-10 15:34:11,882:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.34  e 0
+2019-07-10 15:34:13,056:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.15  e 0
+2019-07-10 15:34:13,128:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.69  e 0
+2019-07-10 15:34:13,145:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.100  e 0
+2019-07-10 15:34:13,581:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.36  e 0
+2019-07-10 15:34:13,958:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.25  e 0
+2019-07-10 15:34:16,467:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.78  e 0
+2019-07-10 15:34:16,941:WARNING:db.CiscoIOS:save_bulk_states: 172.17.31.8  e 0
+2019-07-10 15:34:17,726:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.6  e 0
+2019-07-10 15:34:19,749:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.82  e 0
+2019-07-10 15:34:21,117:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.59  e 0
+2019-07-10 15:34:21,639:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.20  e 0
+2019-07-10 15:34:23,600:WARNING:db.CiscoIOS:save_bulk_states: 172.17.31.4  e 0
+2019-07-10 15:34:27,383:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.74  e 0
+2019-07-10 15:34:28,635:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.14  e 0
+2019-07-10 15:34:30,033:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.65  e 0
+2019-07-10 15:34:30,144:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.82  e 0
+2019-07-10 15:34:31,145:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.80  e 0
+2019-07-10 15:34:32,558:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.25  e 0
+2019-07-10 15:34:33,587:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.84  e 0
+2019-07-10 15:34:34,021:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.28  e 0
+2019-07-10 15:34:34,379:WARNING:db.CiscoIOS:save_bulk_states: 172.17.31.9  e 0
+2019-07-10 15:34:35,380:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.19  e 0
+2019-07-10 15:34:36,061:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.63  e 0
+2019-07-10 15:34:36,525:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.47  e 0
+2019-07-10 15:34:37,354:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.86  e 0
+2019-07-10 15:34:38,406:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.55  e 0
+2019-07-10 15:34:38,418:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.33  e 0
+2019-07-10 15:34:39,008:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.35  e 0
+2019-07-10 15:34:39,357:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.16  e 0
+2019-07-10 15:34:40,359:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.50  e 0
+2019-07-10 15:34:41,010:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.64  e 0
+2019-07-10 15:34:41,371:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.21  e 0
+2019-07-10 15:34:42,011:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.20  e 0
+2019-07-10 15:34:45,711:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.87  e 0
+2019-07-10 15:34:46,829:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.75  e 0
+2019-07-10 15:34:47,342:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.23  e 0
+2019-07-10 15:34:49,604:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.54  e 0
+2019-07-10 15:34:49,632:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.74  e 0
+2019-07-10 15:34:49,812:WARNING:db.CiscoIOS:save_bulk_states: 172.17.31.3  e 0
+2019-07-10 15:34:51,122:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.39  e 0
+2019-07-10 15:34:51,190:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.56  e 0
+2019-07-10 15:34:53,282:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.45  e 0
+2019-07-10 15:34:54,135:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.17  e 0
+2019-07-10 15:34:54,357:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.55  e 0
+2019-07-10 15:34:55,359:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.19  e 0
+2019-07-10 15:34:55,988:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.43  e 0
+2019-07-10 15:34:56,413:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.5  e 0
+2019-07-10 15:34:57,489:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.64  e 0
+2019-07-10 15:34:57,802:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.14  e 0
+2019-07-10 15:34:59,864:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.48  e 0
+2019-07-10 15:35:00,318:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.81  e 0
+2019-07-10 15:35:00,365:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.27  e 0
+2019-07-10 15:35:00,611:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.16  e 0
+2019-07-10 15:35:01,105:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.51  e 0
+2019-07-10 15:35:01,167:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.46  e 0
+2019-07-10 15:35:01,255:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.49  e 0
+2019-07-10 15:35:02,388:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.35  e 0
+2019-07-10 15:35:02,388:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.34  e 0
+2019-07-10 15:35:03,648:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.32  e 0
+2019-07-10 15:35:04,265:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.41  e 0
+2019-07-10 15:35:05,255:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.17  e 0
+2019-07-10 15:35:05,284:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.68  e 0
+2019-07-10 15:35:05,367:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.53  e 0
+2019-07-10 15:35:05,539:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.58  e 0
+2019-07-10 15:35:05,671:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.10  e 0
+2019-07-10 15:35:06,114:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.83  e 0
+2019-07-10 15:35:06,114:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.59  e 0
+2019-07-10 15:35:06,620:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.79  e 0
+2019-07-10 15:35:07,298:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.7  e 0
+2019-07-10 15:35:07,404:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.8  e 0
+2019-07-10 15:35:08,272:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.57  e 0
+2019-07-10 15:35:08,495:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.13  e 0
+2019-07-10 15:35:09,648:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.65  e 0
+2019-07-10 15:35:10,046:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.30  e 0
+2019-07-10 15:35:11,005:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.38  e 0
+2019-07-10 15:35:11,230:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.32  e 0
+2019-07-10 15:35:12,962:WARNING:db.CiscoIOS:save_bulk_states: 172.17.31.2  e 0
+2019-07-10 15:35:13,233:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.50  e 0
+2019-07-10 15:35:13,778:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.72  e 0
+2019-07-10 15:35:14,235:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.85  e 0
+2019-07-10 15:35:14,399:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.56  e 0
+2019-07-10 15:35:14,787:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.37  e 0
+2019-07-10 15:35:15,622:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.60  e 0
+2019-07-10 15:35:16,997:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.1  e 0
+2019-07-10 15:35:17,300:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.81  e 0
+2019-07-10 15:35:18,416:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.61  e 0
+2019-07-10 15:35:21,220:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.4  e 0
+2019-07-10 16:09:05,926:WARNING:db.CiscoXR:172.16.30.254 error en bulk save ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 10") INSERT INTO interface_states(link_state,
+protocol_state,
+input_rate,
+output_rate,
+util_in,
+util_out,
+input_errors,
+output_errors,
+interface_uid,
+state_timestamp) VALUES 
+2019-07-10 16:16:45,863:WARNING:db.Devices:Devices super bulk save  interfaces 0 INSERT INTO interface_states(link_state,
+protocol_state,
+input_rate,
+output_rate,
+util_in,
+util_out,
+input_errors,
+output_errors,
+interface_uid,
+state_timestamp) VALUES 
+2019-07-10 16:16:45,863:WARNING:db.Devices:Devices super bulk save ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 10") INSERT INTO interface_states(link_state,
+protocol_state,
+input_rate,
+output_rate,
+util_in,
+util_out,
+input_errors,
+output_errors,
+interface_uid,
+state_timestamp) VALUES 
+2019-07-10 16:24:17,840:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.16  e 0
+2019-07-10 16:24:18,000:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.128  e 0
+2019-07-10 16:24:18,501:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.242  e 0
+2019-07-10 16:24:18,710:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.245  e 0
+2019-07-10 16:24:18,847:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.43  e 0
+2019-07-10 16:24:22,854:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.39  e 0
+2019-07-10 16:24:23,416:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.209  e 0
+2019-07-10 16:24:23,542:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.37  e 0
+2019-07-10 16:24:23,762:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.233  e 0
+2019-07-10 16:24:23,869:WARNING:db.CiscoXR:save_bulk_states: 172.16.30.135  e 0
+2019-07-10 16:24:28,027:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.14  e 0
+2019-07-10 16:24:28,119:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.10  e 0
+2019-07-10 16:24:28,618:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.6  e 0
+2019-07-10 16:24:28,740:WARNING:db.CiscoXR:save_bulk_states: 172.16.30.248  e 0
+2019-07-10 16:24:28,854:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.232  e 0
+2019-07-10 16:24:33,557:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.41  e 0
+2019-07-10 16:24:33,787:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.13  e 0
+2019-07-10 16:24:33,867:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.235  e 0
+2019-07-10 16:24:34,070:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.130  e 0
+2019-07-10 16:24:34,083:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.8  e 0
+2019-07-10 16:24:37,790:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.129  e 0
+2019-07-10 16:24:37,961:WARNING:db.CiscoXR:save_bulk_states: 172.16.30.244  e 0
+2019-07-10 16:24:38,082:WARNING:db.CiscoXR:save_bulk_states: 172.16.30.250  e 0
+2019-07-10 16:24:38,290:WARNING:db.CiscoXR:save_bulk_states: 172.16.30.246  e 0
+2019-07-10 16:24:39,486:WARNING:db.CiscoXR:save_bulk_states: 172.16.30.247  e 0
+2019-07-10 16:24:42,259:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.241  e 0
+2019-07-10 16:24:42,806:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.44  e 0
+2019-07-10 16:24:42,905:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.7  e 0
+2019-07-10 16:24:43,146:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.40  e 0
+2019-07-10 16:24:43,246:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.35  e 0
+2019-07-10 16:24:47,232:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.15  e 0
+2019-07-10 16:24:47,563:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.11  e 0
+2019-07-10 16:24:47,699:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.36  e 0
+2019-07-10 16:24:48,175:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.4  e 0
+2019-07-10 16:24:48,286:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.42  e 0
+2019-07-10 16:24:52,809:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.1  e 0
+2019-07-10 16:24:52,809:WARNING:db.CiscoXR:save_bulk_states: 172.16.30.3  e 0
+2019-07-10 16:24:52,940:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.45  e 0
+2019-07-10 16:24:53,084:WARNING:db.CiscoIOS:save_bulk_states: 172.17.28.192  e 0
+2019-07-10 16:24:53,308:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.38  e 0
+2019-07-10 16:24:57,866:WARNING:db.CiscoXR:save_bulk_states: 172.16.30.251  e 0
+2019-07-10 16:24:58,574:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.2  e 0
+2019-07-10 16:24:58,574:WARNING:db.CiscoXR:save_bulk_states: 172.16.30.253  e 0
+2019-07-10 16:24:58,899:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.50  e 0
+2019-07-10 16:24:59,008:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.9  e 0
+2019-07-10 16:25:01,687:WARNING:db.CiscoXR:save_bulk_states: 172.16.30.254  e 0
+2019-07-10 16:25:02,667:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.5  e 0
+2019-07-10 16:25:02,878:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.12  e 0
+2019-07-10 16:25:19,654:WARNING:db.Devices:Devices super bulk save  interfaces 0 INSERT INTO interface_states(link_state,
+protocol_state,
+input_rate,
+output_rate,
+util_in,
+util_out,
+input_errors,
+output_errors,
+interface_uid,
+state_timestamp) VALUES 
+2019-07-10 16:25:19,654:WARNING:db.Devices:Devices super bulk save ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 10") INSERT INTO interface_states(link_state,
+protocol_state,
+input_rate,
+output_rate,
+util_in,
+util_out,
+input_errors,
+output_errors,
+interface_uid,
+state_timestamp) VALUES 
+2019-07-10 16:28:16,648:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.66  e 0
+2019-07-10 16:28:17,612:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.52  e 0
+2019-07-10 16:28:20,906:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.18  e 0
+2019-07-10 16:28:24,034:WARNING:db.CiscoIOS:save_bulk_states: 172.17.31.5  e 0
+2019-07-10 16:28:24,833:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.29  e 0
+2019-07-10 16:28:27,421:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.50  e 0
+2019-07-10 16:28:28,137:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.77  e 0
+2019-07-10 16:28:29,668:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.65  e 0
+2019-07-10 16:28:31,212:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.40  e 0
+2019-07-10 16:28:32,736:WARNING:db.CiscoIOS:save_bulk_states: 172.17.31.1  e 0
+2019-07-10 16:28:35,081:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.35  e 0
+2019-07-10 16:28:37,200:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.73  e 0
+2019-07-10 16:28:37,724:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.67  e 0
+2019-07-10 16:28:42,454:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.11  e 0
+2019-07-10 16:28:44,316:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.54  e 0
+2019-07-10 16:28:44,317:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.51  e 0
+2019-07-10 16:28:44,841:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.42  e 0
+2019-07-10 16:28:45,350:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.13  e 0
+2019-07-10 16:28:54,197:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.70  e 0
+2019-07-10 16:28:55,290:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.12  e 0
+2019-07-10 16:28:57,262:WARNING:db.CiscoXR:save_bulk_states: 172.16.30.250  e 0
+2019-07-10 16:28:57,750:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.62  e 0
+2019-07-10 16:28:59,578:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.76  e 0
+2019-07-10 16:29:03,154:WARNING:db.CiscoIOS:save_bulk_states: 172.17.31.7  e 0
+2019-07-10 16:29:03,671:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.11  e 0
+2019-07-10 16:29:03,687:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.71  e 0
+2019-07-10 16:29:04,185:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.18  e 0
+2019-07-10 16:29:05,735:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.58  e 0
+2019-07-10 16:29:08,608:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.76  e 0
+2019-07-10 16:29:10,657:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.68  e 0
+2019-07-10 16:29:12,901:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.12  e 0
+2019-07-10 16:29:16,579:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.44  e 0
+2019-07-10 16:29:17,274:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.22  e 0
+2019-07-10 16:29:20,246:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.66  e 0
+2019-07-10 16:29:23,499:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.77  e 0
+2019-07-10 16:29:23,888:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.57  e 0
+2019-07-10 16:29:25,725:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.30  e 0
+2019-07-10 16:29:29,455:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.79  e 0
+2019-07-10 16:29:32,230:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.9  e 0
+2019-07-10 16:29:33,249:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.67  e 0
+2019-07-10 16:29:33,722:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.33  e 0
+2019-07-10 16:29:34,752:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.78  e 0
+2019-07-10 16:29:35,865:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.60  e 0
+2019-07-10 16:29:37,468:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.10  e 0
+2019-07-10 16:29:37,469:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.63  e 0
+2019-07-10 16:29:38,622:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.49  e 0
+2019-07-10 16:29:43,088:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.52  e 0
+2019-07-10 16:29:45,936:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.72  e 0
+2019-07-10 16:29:46,446:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.71  e 0
+2019-07-10 16:29:49,080:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.80  e 0
+2019-07-10 16:29:51,106:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.22  e 0
+2019-07-10 16:29:57,249:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.70  e 0
+2019-07-10 16:29:58,750:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.24  e 0
+2019-07-10 16:30:01,039:WARNING:db.CiscoIOS:save_bulk_states: 172.17.31.6  e 0
+2019-07-10 16:30:01,062:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.31  e 0
+2019-07-10 16:30:02,541:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.36  e 0
+2019-07-10 16:30:03,126:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.46  e 0
+2019-07-10 16:30:03,126:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.26  e 0
+2019-07-10 16:30:03,543:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.47  e 0
+2019-07-10 16:30:10,105:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.25  e 0
+2019-07-10 16:30:10,281:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.15  e 0
+2019-07-10 16:30:10,991:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.21  e 0
+2019-07-10 16:30:12,114:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.69  e 0
+2019-07-10 16:30:13,178:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.34  e 0
+2019-07-10 16:30:13,185:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.86  e 0
+2019-07-10 16:30:15,452:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.36  e 0
+2019-07-10 16:30:17,506:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.73  e 0
+2019-07-10 16:30:21,138:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.15  e 0
+2019-07-10 16:30:21,171:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.3  e 0
+2019-07-10 16:30:23,913:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.100  e 0
+2019-07-10 16:30:24,410:WARNING:db.CiscoIOS:save_bulk_states: 172.17.31.8  e 0
+2019-07-10 16:30:24,979:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.6  e 0
+2019-07-10 16:30:25,348:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.82  e 0
+2019-07-10 16:30:27,002:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.50  e 0
+2019-07-10 16:30:27,170:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.78  e 0
+2019-07-10 16:30:28,088:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.20  e 0
+2019-07-10 16:30:28,656:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.55  e 0
+2019-07-10 16:30:30,411:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.65  e 0
+2019-07-10 16:30:31,928:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.80  e 0
+2019-07-10 16:30:32,462:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.59  e 0
+2019-07-10 16:30:33,687:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.74  e 0
+2019-07-10 16:30:34,876:WARNING:db.CiscoIOS:save_bulk_states: 172.17.31.4  e 0
+2019-07-10 16:30:35,884:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.84  e 0
+2019-07-10 16:30:35,965:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.63  e 0
+2019-07-10 16:30:39,770:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.47  e 0
+2019-07-10 16:30:40,045:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.82  e 0
+2019-07-10 16:30:40,472:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.14  e 0
+2019-07-10 16:30:42,486:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.87  e 0
+2019-07-10 16:30:43,509:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.64  e 0
+2019-07-10 16:30:44,769:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.25  e 0
+2019-07-10 16:30:45,676:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.21  e 0
+2019-07-10 16:30:45,765:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.20  e 0
+2019-07-10 16:30:46,417:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.16  e 0
+2019-07-10 16:30:46,596:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.33  e 0
+2019-07-10 16:30:46,908:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.28  e 0
+2019-07-10 16:30:48,407:WARNING:db.CiscoIOS:save_bulk_states: 172.17.31.9  e 0
+2019-07-10 16:30:49,549:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.56  e 0
+2019-07-10 16:30:51,236:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.35  e 0
+2019-07-10 16:30:53,303:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.23  e 0
+2019-07-10 16:30:55,944:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.16  e 0
+2019-07-10 16:30:57,788:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.74  e 0
+2019-07-10 16:30:59,996:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.58  e 0
+2019-07-10 16:30:59,996:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.55  e 0
+2019-07-10 16:31:00,300:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.19  e 0
+2019-07-10 16:31:00,340:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.64  e 0
+2019-07-10 16:31:00,813:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.45  e 0
+2019-07-10 16:31:01,548:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.46  e 0
+2019-07-10 16:31:01,559:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.48  e 0
+2019-07-10 16:31:01,659:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.39  e 0
+2019-07-10 16:31:03,524:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.34  e 0
+2019-07-10 16:31:04,531:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.14  e 0
+2019-07-10 16:31:05,031:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.75  e 0
+2019-07-10 16:31:06,019:WARNING:db.CiscoIOS:save_bulk_states: 172.16.30.35  e 0
+2019-07-10 16:31:06,020:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.54  e 0
+2019-07-10 16:31:06,131:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.49  e 0
+2019-07-10 16:31:06,396:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.57  e 0
+2019-07-10 16:31:06,801:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.65  e 0
+2019-07-10 16:31:07,022:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.81  e 0
+2019-07-10 16:31:07,316:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.43  e 0
+2019-07-10 16:31:07,522:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.8  e 0
+2019-07-10 16:31:08,051:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.27  e 0
+2019-07-10 16:31:08,303:WARNING:db.CiscoIOS:save_bulk_states: 172.17.31.3  e 0
+2019-07-10 16:31:09,311:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.17  e 0
+2019-07-10 16:31:09,563:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.68  e 0
+2019-07-10 16:31:09,659:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.19  e 0
+2019-07-10 16:31:10,564:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.53  e 0
+2019-07-10 16:31:11,565:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.17  e 0
+2019-07-10 16:31:12,223:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.51  e 0
+2019-07-10 16:31:12,785:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.79  e 0
+2019-07-10 16:31:13,297:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.72  e 0
+2019-07-10 16:31:15,694:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.83  e 0
+2019-07-10 16:31:15,861:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.5  e 0
+2019-07-10 16:31:16,240:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.32  e 0
+2019-07-10 16:31:16,384:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.7  e 0
+2019-07-10 16:31:16,493:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.32  e 0
+2019-07-10 16:31:17,235:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.41  e 0
+2019-07-10 16:31:17,954:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.59  e 0
+2019-07-10 16:31:17,960:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.37  e 0
+2019-07-10 16:31:18,216:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.56  e 0
+2019-07-10 16:31:19,217:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.4  e 0
+2019-07-10 16:31:19,386:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.30  e 0
+2019-07-10 16:31:19,795:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.85  e 0
+2019-07-10 16:31:20,705:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.81  e 0
+2019-07-10 16:31:21,298:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.10  e 0
+2019-07-10 16:31:21,411:WARNING:db.CiscoIOS:save_bulk_states: 172.17.31.2  e 0
+2019-07-10 16:31:21,493:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.13  e 0
+2019-07-10 16:31:21,602:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.61  e 0
+2019-07-10 16:31:21,797:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.60  e 0
+2019-07-10 16:31:23,350:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.50  e 0
+2019-07-10 16:31:23,503:WARNING:db.CiscoIOS:save_bulk_states: 172.19.8.1  e 0
+2019-07-10 16:31:24,019:WARNING:db.CiscoIOS:save_bulk_states: 172.17.22.38  e 0
+2019-07-10 16:32:15,238:WARNING:db.Devices:Devices super bulk save  interfaces 0 INSERT INTO interface_states(link_state,
+protocol_state,
+input_rate,
+output_rate,
+util_in,
+util_out,
+input_errors,
+output_errors,
+interface_uid,
+state_timestamp) VALUES 
+2019-07-10 16:32:15,238:WARNING:db.Devices:Devices super bulk save ProgrammingError(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 10") INSERT INTO interface_states(link_state,
+protocol_state,
+input_rate,
+output_rate,
+util_in,
+util_out,
+input_errors,
+output_errors,
+interface_uid,
+state_timestamp) VALUES 

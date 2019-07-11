@@ -5,6 +5,7 @@ from pysnmp import hlapi
 from pysnmp.hlapi import *
 import time
 import ipaddress
+from pysnmp.entity.rfc3413 import cmdgen
 
 def get(target, oids, credentials, port=161, engine=SnmpEngine(), context=ContextData()):
     handler = getCmd(
@@ -99,8 +100,12 @@ def get_oid_size(target, oid, credentials, window_size=500):
     return len(data_filtered)
 
 
+def bulk_wierd():
+    cmd = cmdgen.GetCommandGenerator()
+
 def real_get_bulk(oid, community, ip, data_bind, id_ip=False):
-    g = bulkCmd(SnmpEngine(),
+    new_engine = SnmpEngine()
+    g = bulkCmd(new_engine,
                 CommunityData(community),
                 UdpTransportTarget((ip, 161)),
                 ContextData(),

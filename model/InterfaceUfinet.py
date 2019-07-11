@@ -251,6 +251,33 @@ class InterfaceUfinet(InterfaceIOS):
             return 0
 
     @staticmethod
+    def save_bulk_states_devices(devices):
+        interfaces = []
+        for device in devices:
+            dev_interfaces = [interface for interface in device.interfaces.values()
+                              if interface.l3_protocol != "UNKNOWN"
+                              and interface.l3_protocol_attr != "UNKNOWN"
+                              and interface.l1_protocol_attr != "UNKNOWN"
+                              and interface.l1_protocol != "UNKNOWN"]
+            InterfaceUfinet.interfaces_uid(device=device, interfaces=dev_interfaces)
+            interfaces.extend(dev_interfaces)
+
+        sql = InterfaceUfinet.bulk_sql_state(interfaces=interfaces)
+        try:
+
+            connection = devices.master.db_connect()
+            with connection.cursor() as cursor:
+                cursor.execute(sql)
+                connection.commit()
+                devices.db_log.warning(f"Devices super bulk save  {sql}")
+                return 1
+        except Exception as e:
+            devices.db_log.warning(f"Devices super bulk save  interfaces {len(interfaces)} {sql}")
+            devices.db_log.warning(f"Devices super bulk save {repr(e)} {sql}")
+            return 0
+
+
+    @staticmethod
     def save_bulk_states(device, interfaces):
         device.db_log.warning(f"save_bulk_states: {device.ip}  e {len(interfaces)}")
         if len(interfaces) > 0:
@@ -270,10 +297,17 @@ class InterfaceUfinet(InterfaceIOS):
             return 0
 
     @staticmethod
+    def bulk_sql_values(interfaces):
+        return ",\n".join([interface.sql_state for interface in interfaces])
+
+    @staticmethod
+    def bulk_sql_columns():
+        return ",\n".join(InterfaceUfinet._sql_state_columns)
+
+    @staticmethod
     def bulk_sql_state(interfaces) -> str:
-        columns_sql = ",\n".join(InterfaceUfinet._sql_state_columns)
-        interfaces_data = ",\n".join([interface.sql_state for interface in interfaces])
-        return f'INSERT INTO \ninterface_states({columns_sql}) VALUES {interfaces_data}'
+        return f'INSERT INTO interface_states({InterfaceUfinet.bulk_sql_columns()})' \
+            f' VALUES {InterfaceUfinet.bulk_sql_values(interfaces)}'
 
     @property
     def sql_state(self) -> str:
