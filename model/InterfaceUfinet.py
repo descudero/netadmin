@@ -175,7 +175,7 @@ class InterfaceUfinet(InterfaceIOS):
                 self.verbose.warning(f' correct_ip ERROR dev {self.parent_device.ip}{sql} {e}')
 
     @staticmethod
-    def sql_last_period_polled_interfaces(devices, date_start, date_end):
+    def sql_last_period_polled_interfaces(devices, date_start, date_end, sort_field="output_rate"):
 
         devices_uid = {dev.ip: str(dev.uid) for dev in devices}
         sql = f"""SELECT 
@@ -197,12 +197,13 @@ class InterfaceUfinet(InterfaceIOS):
                                 s.state_timestamp,i.ip
 
                        from network_devices as d
-                       inner join interfaces as i on d.uid = i.net_device_uid 
-                       inner join	(select * from interface_states where DATE(state_timestamp)=DATE(NOW())) 
-                       as s on s.interface_uid= i.uid
-                       inner join  (select max(uid) as uid from interface_states group by interface_uid) as s2 on s2.uid = s.uid
+                       inner join interfaces as i on d.uid = i.net_device_uid
+                       inner join	interface_states as s on s.interface_uid= i.uid
+                       inner join  (select distinct  interface_uid,uid,output_rate 
+                       from interface_states as h   where   h.state_timestamp >='{date_start}' 
+                       and h.state_timestamp <='{date_end}' ORDER BY h.{sort_field} DESC ) as s2 on s2.uid = s.uid
                         WHERE  i.ip <>"127.0.0.1" AND  net_device_uid IN ({','.join(
-            devices_uid.values())})  and state_timestamp >='{date_start}' and state_timestamp <='{date_end}' """
+            devices_uid.values())})  """
         return sql
 
     @staticmethod

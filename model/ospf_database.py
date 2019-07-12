@@ -19,11 +19,13 @@ class ospf_database:
                       12: .40, 13: .40}
 
     def __init__(self, ip_seed_router, isp, process_id='1', area='0', interface_method="interfaces_from_db_today",
-                 network_name='ospf_regional', source="real_time"):
+                 network_name='ospf_regional', source="real_time", period_start="", period_end=""):
         self.neighbors_occurrences_count = defaultdict(int)
         self.source = source
         self.area = area
         self.isp = isp
+        self.period_start = period_start
+        self.period_end = period_end
         self.diagram = Diagram(master=isp.master, name=network_name)
         self.diagram.get_newer_state()
         self.lock = Lock()
@@ -31,16 +33,30 @@ class ospf_database:
             self.set_ospf_data(ip_seed_router, process_id, area)
         elif source == "db":
             self.set_db_data()
-        self.set_interfaces_data()
+        elif source == 'period':
+            self.diagram.get_state_between(period_end=period_end)
+            self.set_db_data()
 
-        self.set_p2p()
-        self.ospf_down_interfaces()
+        if not source == 'delay_start':
+            self.set_interfaces_data()
+            self.set_p2p()
+            self.ospf_down_interfaces()
+            self.verbose.warning("OSPF DATABASE INIT FINISH")
 
         # if len(self.adjacencies) < len(p2ps):
         #     difference = set(p2ps.keys()).difference(set(self.adjacencies.keys()))
         #     self.verbose.warning(f"__INIT__Fishish missing nets {difference} ")
 
-        self.verbose.warning("OSPF DATABASE INIT FINISH")
+    def delay_start(self, source='period'):
+        self.source = source
+        if source == 'period':
+            self.verbose.warning(f'delay_start  period START')
+            self.diagram.get_state_between(period_end=self.period_end)
+            self.set_db_data()
+            self.set_interfaces_data()
+            self.set_p2p()
+            self.ospf_down_interfaces()
+            self.verbose.warning("OSPF DATABASE INIT FINISH")
 
     def set_ospf_data(self, ip_seed_router, process_id, area):
         seed_router = Devices.factory_device(master=self.isp.master, ip=ip_seed_router)
@@ -77,8 +93,11 @@ class ospf_database:
         self.p2p = {p2p.network_id: p2p for p2p in result_p2p}
         self.verbose.warning(f"__INIT__Fishish join add_ospf_adjacency real p2p {len(self.p2p)} ")
 
-    def set_interfaces_data(self, source="db"):
-        self.devices.set_interfaces_db()
+    def set_interfaces_data(self):
+        if self.source == 'period':
+            self.devices.set_interfaces_db_period(period_start=self.period_start, period_end=self.period_end)
+        else:
+            self.devices.set_interfaces_db()
 
     def set_db_data(self):
         self.devices = self.diagram.state.devices()

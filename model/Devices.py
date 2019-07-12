@@ -185,7 +185,9 @@ class Devices:
         sql = InterfaceUfinet.sql_last_period_polled_interfaces(devices=self.values(),
                                                                 date_start=period_start,
                                                                 date_end=period_end)
+        print(sql)
         data_interfaces = self.dict_from_sql(sql=sql)
+        print(data_interfaces)
         data_segmented_by_uid = defaultdict(list)
         for row in data_interfaces:
             data_segmented_by_uid[row['net_device_uid']].append(row)

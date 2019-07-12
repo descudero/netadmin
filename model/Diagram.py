@@ -41,9 +41,26 @@ class Diagram:
         self.state.save_devices(devices=devices)
         self.state.save_adjacencies(adjacencies=adjacencies)
 
+    def get_state_between(self, period_end):
+        if self.in_db():
+            try:
+                connection = self.master.db_connect()
+                with connection.cursor() as cursor:
+                    sql = f"""SELECT uid,state_timestamp FROM diagram_states WHERE diagram_uid={self.uid}
+                     AND state_timestamp<'{period_end}'
+                     ORDER BY uid DESC limit 1\
+                            
+                    """
+                    cursor.execute(sql)
+                    result = cursor.fetchone()
+                    self.state = DiagramState()
+                    self.state.uid = result['uid']
+                    self.state.state_timestamp = result['state_timestamp']
+                    self.state.diagram = self
+            except Exception as e:
+                self.log_db.warning(f'UNABLE TO LOAD newer state {self.name} {e} {sql}')
 
     def get_newer_state(self):
-        print(f'get_newer_state u:{self.uid}')
         if self.in_db():
             try:
                 connection = self.master.db_connect()

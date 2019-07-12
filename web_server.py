@@ -23,6 +23,8 @@ from model.BGPNeigbor import BGPNeighbor
 from operator import itemgetter
 from model.Diagram import Diagram
 from model.Devices import Devices
+from model.CiscoIOS import CiscoIOS
+from threading import Thread
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "autenticacion basica"
@@ -577,6 +579,61 @@ def function_pivot(data_sql, grouping_index=0, column_index=1, value_index=2):
          'fill': 'tonexty', 'hoverlabel': {'namelength': -1}}
         for serie_name, serie in data.items()]
     return data2
+
+
+@app.route('/diagramas/intervalos', methods=['POST', 'GET'])
+def diagrama_intervalos_view():
+    return render_template('diagramas_intervalos.html')
+
+
+@app.route('/diagramas/ospf_json_intervalos', methods=['POST', 'GET'])
+def diagrama_intervalos_json():
+    covertidor = {"guatemala": "RCE_GUATEMALA", "_ospf_ufinet_regional": "_ospf_ufinet_regional"}
+    request.get_json()
+    network = covertidor[request.json['network']]
+    tipo_periodo = request.json['tipo_periodo']
+    period_start = request.json['date']
+    if period_start == "":
+        period_start = str(datetime.datetime.today()).split(' ')[0]
+
+    isp = ISP()
+    isp.master = master
+    base = datetime.datetime.strptime(period_start, '%Y-%m-%d')
+    date_list = [str(base + datetime.timedelta(**{tipo_periodo: x})) for x in range(0, 25)]
+
+    data_red = {
+        "_ospf_ufinet_regional": {
+            "ip_seed_router": "172.16.30.5", "process_id": '1', "area": '0',
+            'network_name': '_ospf_ufinet_regional'
+        },
+        "RCE_GUATEMALA": {
+            "ip_seed_router": "172.17.22.52",
+            "process_id": '502', "area": '502008', 'network_name': 'RCE_GUATEMALA'
+        }}
+    pf = PerformanceLog('24 hours diagram')
+    threads = []
+    dbs = []
+    data_final = []
+    for i in range(0, 24):
+        period_start = date_list[i]
+        period_end = date_list[i + 1]
+        dbd = ospf_database(isp=isp, source='delay_start', period_start=period_start, period_end=period_end,
+                            **data_red[network])
+        dbs.append(dbd)
+        t = Thread(target=dbd.delay_start)
+        t.start()
+        threads.append(t)
+
+    for t in threads:
+        t.join()
+
+    for dbd in dbs:
+        data = dbd.get_vs()
+        data_final.append({'period': f'{dbd.period_start} - {dbd.period_end}', 'vs': data})
+    pf.flag('end')
+    pf.print_intervals()
+
+    return jsonify(data_final)
 
 
 @app.route('/diagramas/save_xy', methods=['POST'])

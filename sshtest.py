@@ -53,7 +53,7 @@ guatemala = {
     "ip_seed_router": "172.17.22.52",
     "process_id": '502', "area": '502008', 'network_name': 'RCE_GUATEMALA'
 }
-dbd = ospf_database(isp=isp, source='real_time', **guatemala)
+dbd = ospf_database(isp=isp, source='real_time', **regional)
 
 dbd.save_state()
 
