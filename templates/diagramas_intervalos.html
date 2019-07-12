@@ -1,0 +1,74 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<script src="{{ url_for('static', filename='js/vis.js') }}"></script>
+<link href="{{ url_for('static', filename='css/vis.min.css') }}" rel="stylesheet" type="text/css"/>
+
+
+<div class="row p-2">
+    <div class="col-sm-11">
+        <form id='ospf_form' class="form-inline">
+            <div class="input-group mb-2 mr-sm-2">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Fecha</div>
+                </div>
+                <input class="form-control" id='date' name="date" type="date">
+            </div>
+            <div class="form-group">
+                <label for="network"> Tipo Periodo </label>
+                <select class="form-control" id="tipo_periodo">
+                    <option value="hours" selected>horas</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="network"> DIAGRAMA </label>
+                <select class="form-control" id="network">
+                    <option value="_ospf_ufinet_regional" selected> MPLS REGIONAL UFINET</option>
+                    <option value="guatemala"> MPLS GUATEMALA</option>
+                    <option value="el_salvador"> MPLS El SALVADOR</option>
+                    <option value="honduras"> MPLS HONDURAS</option>
+                    <option value="nicaragua"> MPLS NICARAGUA</option>
+                    <option value="costa_rica"> MPLS COSTARICA</option>
+                    <option value="panama"> MPLS PANAMA</option>
+                    <option value="chile"> MPLS CHILE</option>
+                    <option value="argentina"> MPLS ARGENTINA</option>
+                </select>
+            </div>
+
+            <div data-role="fieldcontain" id="warmtemp">
+                <label for="horas">Rango de horas 0 - 23</label>
+                <input type="range" class="ui-slider-range-max" name="horas" id="horas" value="0" min="0" max="23"/>
+            </div>
+
+
+            <div class="input-group mb-2 mr-sm-2">
+                <button class="btn btn-primary mb-2" id="change_color">Cambiar Esquema de color</button>
+            </div>
+            <div class="input-group mb-2 mr-sm-2">
+                <button class="btn btn-primary mb-2" id="request_json">Ver Diagramas</button>
+            </div>
+            <h5 id="titulo"> DIAGRAMA MAX OUTPUT INTERVALO</h5>
+        </form>
+
+    </div>
+</div>
+
+<style type="text/css">
+    #mynetwork {
+        width: 100%;
+        height: 830px;
+        border: 5px solid lightgray;
+    }
+</style>
+
+<div class="row p-0">
+    <div class="col-sm-12">
+        <div id="mynetwork"></div>
+
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/diagramas_intervalos.js') }}"></script>
+    {% endblock %}
+
+

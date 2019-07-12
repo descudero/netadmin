@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     $('#loading_json').hide()
     load_data();
