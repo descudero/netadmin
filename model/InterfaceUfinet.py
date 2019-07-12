@@ -526,8 +526,10 @@ class InterfaceUfinet(InterfaceIOS):
         interfaces_dict = {}
         try:
             for parse_data in interfaces_data:
+
                 interface_object = InterfaceUfinet(parent_device=device, parse_data=parse_data)
-                interfaces_dict[interface_object.if_index] = interface_object
+                if interface_object.if_index not in interfaces_dict:
+                    interfaces_dict[interface_object.if_index] = interface_object
                 # if "BDI" in parse_data["if_index"] or "Po" in parse_data["if_index"]:
                 #    device.verbose.warning(
                 #        f"factory_from_dict d{device.ip} {device.hostname}  i{parse_data['if_index']}")
