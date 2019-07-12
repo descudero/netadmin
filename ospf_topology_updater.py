@@ -13,6 +13,12 @@ data_networks = {'regional': {
 }
 }
 
+devices_ips = []
 for name, kwargs_network in data_networks.items():
     dbd = ospf_database(isp=isp, source='real_time', **kwargs_network)
     dbd.save_state()
+    devices_ips.extend(list(dbd.devices.devices.keys()))
+devices_ips = list({ip for ip in devices_ips})
+with open('hosts/interfaces/all_network_ospf_devices', 'w') as f:
+    devices_ips.append('\n\n\n')
+    f.write("\n".join(devices_ips))

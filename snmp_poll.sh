@@ -1,7 +1,6 @@
 #!/bin/bash
 ### Do not do the following it will not work ###
 #source activate AVirtualEnvironment
-#python mypythonscript.pyK
 #source deactivate AVirtual Environment
 filename="snmp_interface_poll_ips"
 while read -r line; do
