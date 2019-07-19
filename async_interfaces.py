@@ -10,7 +10,7 @@ with open('hosts/interfaces/regional') as f:
 master = Master()
 
 diagrams = Diagram.recent_diagrams(master)
-date_last_ten_minutes = str(datetime.datetime.now() - datetime.timedelta(minutes=60))
+date_last_ten_minutes = str(datetime.datetime.now() - datetime.timedelta(minutes=10))
 sql = f'''SELECT net_device_uid from poll_events where timestamp>'{date_last_ten_minutes}' '''
 connection = master.db_connect()
 with connection.cursor() as cursor:
