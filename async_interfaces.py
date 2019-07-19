@@ -40,4 +40,4 @@ devs.execute(methods=["set_snmp_community"], thread_window=50)
 asyncio.get_event_loop().run_until_complete(devs.interfaces_async())
 #
 #
-# devs.save_interfaces()
+devs.save_interfaces()
