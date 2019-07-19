@@ -43,58 +43,45 @@ isp = ISP()
 isp.master = Master()
 isp.master.username = 'descuderor'
 isp.master.password = 'Zekto2014-'
-device = CiscoIOS(ip='172.16.30.5', display_name='a', master=isp.master, )
+# device = CiscoIOS(ip='172.16.30.5', display_name='a', master=isp.master, )
+#
+# honduras =  {
+#     "ip_seed_router": '172.17.24.210', "process_id": '504', "area": '504002',
+#     'network_name': 'RCE_HONDURAS'
+# }
+# regional = {
+#     "ip_seed_router": "172.16.30.5", "process_id": '1', "area": '0',
+#     'network_name': '_ospf_ufinet_regional'
+# }
+# guatemala = {
+#     "ip_seed_router": "172.17.22.52",
+#     "process_id": '502', "area": '502008', 'network_name': 'RCE_GUATEMALA'
+# }
+# dbd = ospf_database(isp=isp, source='real_time', **honduras)
+#
+# hn_ips = list(dbd.devices.devices.keys())
+# with open("hn_ips", "w") as f:
+#     f.write('\n'.join(hn_ips))
 
-regional = {
-    "ip_seed_router": "172.16.30.5", "process_id": '1', "area": '0',
-    'network_name': '_ospf_ufinet_regional'
-}
-guatemala = {
-    "ip_seed_router": "172.17.22.52",
-    "process_id": '502', "area": '502008', 'network_name': 'RCE_GUATEMALA'
-}
-dbd = ospf_database(isp=isp, source='real_time', **regional)
+with open("hn_ips", "r") as f:
+    ips = [line.replace("\n", "") for line in f]
 
-dbd.save_state()
+devs = Devices(ip_list=ips, master=isp.master, check_up=True)
+methods = {'set_ip_ospf_interfaces', 'set_interfaces_snmp'}
+kwargs = {dev.ip: {'set_ospf_interfaces': {'as_ospf': '504'}} for dev in devs}
+devs.execute(methods=methods)
 
-# with open("ip_routers_gt", "r") as f:
-#     ips = [line.replace("\n", "") for line in f]
-#
-# devs = Devices(ip_list=ips, master=isp.master, check_up=True)
-# data = [{"ip": dev.ip, "com": dev.community} for dev in devs]
-# isp.save_to_excel_list(list_data=data, file_name="snmp_gt_data")
+data_devices = {}
+suffix = ' L3:MPLOSP D:B L1:DP '
+for dev in devs:
+    data_devices[dev.ip] = []
+    for index, ospf_data in dev.ospf_interfaces.items():
+        data_config = f' interface {index} \n description {suffix} {dev.interfaces[index].description}'
+        data_devices[dev.ip].append()
 
-#
-# data = []
-# def_dict = defaultdict(list)
-# prepend = "interface "
-# suffix = "description L3:MPLOSP D:B L1:DP "
-# for network, adj in dbd.adjacencies.items():
-#     try:
-#         s = {'ip': adj.s_device.ip,
-#              'config': f' {prepend} {adj.s_interface.if_index} \n {suffix} {adj.s_interface.description}'}
-#
-#     except:
-#         s = {'ip': adj.s_device.ip, 'config': adj.s["interface_ip"]}
-#     try:
-#         t = {'ip': adj.t_device.ip,
-#              'config': f' {prepend} {adj.t_interface.if_index} \n {suffix} {adj.t_interface.description}'}
-#     except:
-#         t = {'ip': adj.t_device.ip, 'config': adj.t["interface_ip"]}
-#
-#     data.append(s)
-#     data.append(t)
-#     try:
-#         if adj.s_interface.l3_protocol == "UNKNOWN":
-#             def_dict[t['ip']].append(t["config"])
-#     except:
-#         pass
-#     try:
-#         if adj.t_interface.l3_protocol == "UNKNOWN":
-#             def_dict[s['ip']].append(s["config"])
-#     except:
-#         pass
-#
+pickle.dump(data_devices, open("hn.p", "wb"))
+
+
 # pickle.dump(def_dict,open( "gt.p", "wb" ))
 # pprint(def_dict)
 # def_dict = pickle.load(open( "gt.p", "rb" ))

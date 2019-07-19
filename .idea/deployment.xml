@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="192.168.10.132">
+  <component name="PublishConfigData" autoUpload="Always" serverName="admins@10.250.55.17:22">
     <serverData>
       <paths name="192.168.10.132">
         <serverdata>
@@ -9,6 +9,21 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="admins@10.250.55.17:22">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/admins/netadmin" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="descudero@192.168.10.132:22">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
     </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>

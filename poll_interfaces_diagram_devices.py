@@ -1,8 +1,7 @@
 from config.Master import Master
 from model.Diagram import Diagram
 
-diagrams = ['_ospf_ufinet_regional'
-            ]
+diagrams = ['_ospf_ufinet_regional']
 
 master = Master()
 

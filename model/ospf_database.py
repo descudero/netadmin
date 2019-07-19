@@ -68,8 +68,11 @@ class ospf_database:
         # self.devices.execute_processes(methods=['set_interfaces'])
         self.verbose.warning(f"_INIT_real_time  p2p :{len(self.p2p_data)} rourters {len(routers)}")
         self.real_routers = routers
-        old_devices = self.diagram.state.devices()
-        self.devices.copy_attr(other_devices=old_devices, attrs=["x", "y"])
+        try:
+            old_devices = self.diagram.state.devices()
+            self.devices.copy_attr(other_devices=old_devices, attrs=["x", "y"])
+        except AttributeError as e:
+            self.dev.warning('ospf_database no initial state')
 
     def set_p2p(self):
 

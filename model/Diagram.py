@@ -149,6 +149,33 @@ class Diagram:
         except Exception as e:
             self.log_db.warning(f'load_devices_uid_from_db  DIAG {self.name} {e} {sql}')
 
+    @staticmethod
+    def diagrams(master):
+        data = []
+        try:
+            connection = master.db_connect()
+            with connection.cursor() as cursor:
+                sql = f'''SELECT uid,name FROM diagrams 
+                 ORDER BY uid'''
+                cursor.execute(sql)
+                data_sql = cursor.fetchall();
+                print(sql)
+                for row in data_sql:
+                    diag = Diagram(name=row['name'], master=master)
+                    diag.uid = row['uid']
+                    data.append(diag)
+            return data
+        except Exception as e:
+            master.log_db.warning(f'erro loading diagrams {e} {sql}')
+
+    @staticmethod
+    def recent_diagrams(master):
+        diagrams = Diagram.diagrams(master)
+        for diagram in diagrams:
+            diagram.get_newer_state()
+            diagram.state.devices()
+        return diagrams
+
 
 @logged
 class DiagramState:
@@ -195,6 +222,10 @@ class DiagramState:
 
     def update_xy(self):
         pass
+
+    def devices_fromkeys(self, keys):
+        print(self.devices_uid.keys())
+        return self.devices_uid.fromkeys(keys)
 
     def save_adjacencies(self, adjacencies):
         try:
@@ -313,6 +344,7 @@ class DiagramState:
                 devices.set_uid = True
                 self.devices_uid = {device.uid: device for device in devices}
                 connection.close()
+                self.devs = devices
                 return devices
         except Exception as e:
             self.db_log.warning(f'devices unable to load {self.diagram.name} {sql} {e}')

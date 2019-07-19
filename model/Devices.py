@@ -8,8 +8,8 @@ from multiprocessing import Process
 import time
 from model.InterfaceUfinet import InterfaceUfinet
 from collections import defaultdict
-
-
+import asyncio
+import datetime
 @logged
 class Devices:
 
@@ -158,6 +158,10 @@ class Devices:
                 device.save()
         self.set_uid = True
 
+    def devices_fromkeys(self, keys):
+        devices_uids = self.devices.fromkeys(keys)
+        return devices_uids
+
     def uid_dict(self):
         if not self.set_uid:
             self.set_uids()
@@ -270,3 +274,30 @@ class Devices:
 
     def save_interfaces(self):
         InterfaceUfinet.save_bulk_states_devices(self)
+
+    def add_snmp_event(self, event, type):
+        try:
+            timestamp = str(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+            val = ",".join([f'''('{event}','{type}','{timestamp}',{dev.uid})''' for dev in self])
+            sql_poll_event = f'''INSERT INTO poll_events(name, type, timestamp, net_device_uid) 
+                                        VALUES  {val}'''
+            connection = self.master.db_connect()
+            with connection.cursor() as cursor:
+                cursor.execute(sql_poll_event)
+                connection.commit()
+        except Exception as e:
+
+            self.verbose.warning(f'Error add_snmp_event {e} {sql_poll_event}')
+
+    async def interfaces_async(self):
+
+        tasks = []
+        for dev in self:
+            tasks.append(asyncio.get_event_loop().create_task(dev.set_interfaces_snmp_async()))
+        for task in tasks:
+            await task
+
+    def __add__(self, other):
+        self.devices = {**self.devices, **other.devices}
+        self.uid_devices = {**self.uid_devices, **other.uid_devices}
+        return self

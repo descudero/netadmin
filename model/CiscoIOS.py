@@ -21,8 +21,9 @@ from lib.snmp_helper import *
 from model.BridgeDomain import BridgeDomain
 from model.IpExplicitPath import IpExplicitPath
 from model.MplsTeTunnel import MplsTeTunnel
+import datetime
 import sys
-
+import asyncio
 
 @logged
 class CiscoIOS(Parent):
@@ -1649,6 +1650,29 @@ class CiscoIOS(Parent):
 
         for address_family, neighbors in self.bgp_snmp_neighbors.items():
             BGPNeighbor.save_bulk_states(device=self, neighbors=neighbors.values())
+
+    async def set_interfaces_snmp_async(self, connection=False, save=False, clear_memory=False):
+        self.verbose.critical(f'set_interfaces_snmp  START {self.ip}')
+
+        interfaces_data = await InterfaceUfinet.bulk_snmp_data_interfaces_async(device=self)
+
+        self.interfaces = InterfaceUfinet.factory_from_dict(device=self, interfaces_data=interfaces_data.values())
+        self.interfaces_ip = {str(interface_object.ip): interface_object
+                              for interface_object in self.interfaces.values()}
+        if len(self.interfaces) == 0:
+            if not connection:
+                self.dev.critical(
+                    f'set_interfaces_snmp Unable to set Interfaces snmp {len(self.interfaces)} {self.ip} not connected')
+            else:
+                self.set_interfaces()
+                self.dev.warning(
+                    f'set_interfaces_snmp Unable to set Interfaces snmp {len(self.interfaces)} {self.ip}')
+        else:
+
+            self.dev.info(f'set_interfaces_snmp able Interfaces snmp {len(self.interfaces)} {self.ip}')
+        self.verbose.critical(f'set_interfaces_snmp  DONE {self.ip}')
+
+
 
     def set_interfaces_snmp(self, connection=False, save=False, clear_memory=False):
         self.verbose.critical(f'set_interfaces_snmp {self.ip}')

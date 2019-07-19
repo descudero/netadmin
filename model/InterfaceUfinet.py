@@ -12,6 +12,8 @@ from tools import get_bulk_real_auto, get_oid_size, get_bulk, real_get_bulk
 from pprint import pprint
 import time
 from colour import Color
+import asyncio
+from snmp_poller import snmp_walk
 
 
 @logged
@@ -271,7 +273,10 @@ class InterfaceUfinet(InterfaceIOS):
                 cursor.execute(sql)
                 connection.commit()
                 devices.db_log.warning(f"Devices super bulk save  {sql}")
+
+                connection.close()
                 return 1
+
         except Exception as e:
             devices.db_log.warning(f"Devices super bulk save  interfaces {len(interfaces)} {sql}")
             devices.db_log.warning(f"Devices super bulk save {repr(e)} {sql}")
@@ -538,6 +543,63 @@ class InterfaceUfinet(InterfaceIOS):
         return interfaces_dict
 
     @staticmethod
+    async def bulk_snmp_data_interfaces_async(device) -> dict:
+        interface_data = {}
+
+        for attr, oid in InterfaceUfinet._OID.items():
+            oid_data = await snmp_walk(oid=oid, ip=device.ip, community=device.community)
+            for register in oid_data:
+                snmp_ip = register['id']
+                value = register['value'] * 1_000_000 if attr == 'bw' else register['value']
+                interface_data.setdefault(snmp_ip, {})[attr] = value
+        oid_data_mask = await snmp_walk(oid=InterfaceUfinet._OID_MASK, ip=device.ip, community=device.community,
+                                        id_ip=True)
+        mask_ip = {register['id']: register['value'] for register in oid_data_mask}
+        oid_data = await snmp_walk(oid=InterfaceUfinet._OID_IP, ip=device.ip, community=device.community,
+                                   id_ip=True)
+
+        for register in oid_data:
+            id_ = str(register['value'])
+            ip = str(register['id'])
+            try:
+                mask = mask_ip[ip]
+            except Exception as e:
+                print(e)
+                mask = "255.255.255.255"
+            interface_data.setdefault(id_, {})['ip'] = ip
+            interface_data[id_]['mask'] = mask
+
+        for attr, oid in InterfaceUfinet._OID_RATES.items():
+            try:
+                oid_data = await InterfaceUfinet.delta_oid_async(device=device, oid=oid)
+                for register in oid_data:
+                    id_ = register['id']
+                    interface_data.setdefault(id_, {})[attr] = register['value']
+            except Exception as e:
+                device.logger_connection.critical(
+                    f' bulk_snmp_data_interfaces error polling {device.ip} {device.community} {oid} {e}')
+        return interface_data
+
+    @staticmethod
+    async def delta_oid_async(device, oid, multiplier=8, sleep_time=30):
+        initial_time = time.time()
+        prev_oid_data = await snmp_walk(oid=oid, ip=device.ip, community=device.community, )
+        new_time = time.time()
+        difference_time = new_time - initial_time
+        if difference_time < sleep_time:
+            await asyncio.sleep(sleep_time - difference_time)
+        data_after = await snmp_walk(oid=oid, ip=device.ip, community=device.community)
+
+        final_data = [{'id': register['id'], 'value': (int(calculate_delta(new_counter=register['value'],
+                                                                           old_counter=prev_oid_data[index]['value'],
+                                                                           timelapse=register['timestamp'] -
+                                                                                     prev_oid_data[index][
+                                                                                         'timestamp'])) * multiplier)}
+                      for index, register in enumerate(data_after)]
+        return final_data
+
+
+    @staticmethod
     def bulk_snmp_data_interfaces(device) -> dict:
         interface_data = {}
 
@@ -614,8 +676,7 @@ class InterfaceUfinet(InterfaceIOS):
             good = Color("SpringGreen")
             medium = Color("OrangeRed")
             bad = Color("DarkRed")
-            colors = list(good.range_to(medium, 65)) + list(medium.range_to(bad, 36))
-
+            colors = list(good.range_to(medium, 65)) + list(medium.range_to(bad, 110))
             color = colors[int(self.util_out)].hex
             width = width_array[(int(self.util_out / 10))]
             return str(color), width
