@@ -285,6 +285,8 @@ class Devices:
             with connection.cursor() as cursor:
                 cursor.execute(sql_poll_event)
                 connection.commit()
+            connection.close()
+            self.verbose.warning(f' add_snmp_event DONE')
         except Exception as e:
 
             self.verbose.warning(f'Error add_snmp_event {e} {sql_poll_event}')

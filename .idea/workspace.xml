@@ -13,6 +13,7 @@
     <list default="true" id="462384ac-2f64-47a0-b6d2-b16ff1b36497" name="Default" comment="mejora de ospf diagram.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/async_interfaces.py" beforeDir="false" afterPath="$PROJECT_DIR$/async_interfaces.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Devices.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Devices.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +81,7 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/async_interfaces.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="418">
+                  <state relative-caret-position="234">
                     <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
                     <folding>
                       <element signature="e#0#33#0" expanded="true" />
@@ -100,7 +101,7 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/sshtest.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="506">
+                  <state relative-caret-position="1496">
                     <caret line="68" column="12" lean-forward="true" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="12" />
                     <folding>
                       <element signature="e#0#25#0" expanded="true" />
@@ -191,11 +192,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/Devices.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6732">
-              <caret line="288" lean-forward="true" selection-start-line="288" selection-end-line="288" />
+            <state relative-caret-position="1674">
+              <caret line="280" column="97" lean-forward="true" selection-start-line="280" selection-start-column="97" selection-end-line="280" selection-end-column="97" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -221,7 +222,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/64ab1a34-8529-4526-93b9-a2e1a4795eac/console.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="660">
@@ -401,9 +402,9 @@
         <option value="$PROJECT_DIR$/snmp_poller.py" />
         <option value="$PROJECT_DIR$/model/CiscoIOS.py" />
         <option value="$PROJECT_DIR$/model/Diagram.py" />
-        <option value="$PROJECT_DIR$/model/Devices.py" />
         <option value="$PROJECT_DIR$/model/InterfaceUfinet.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/64ab1a34-8529-4526-93b9-a2e1a4795eac/console.sql" />
+        <option value="$PROJECT_DIR$/model/Devices.py" />
         <option value="$PROJECT_DIR$/async_interfaces.py" />
       </list>
     </option>
@@ -722,21 +723,7 @@
       <workItem from="1562883048600" duration="9771000" />
       <workItem from="1562892840626" duration="10521000" />
       <workItem from="1563115562116" duration="1346000" />
-      <workItem from="1563435591279" duration="25247000" />
-    </task>
-    <task id="LOCAL-00091" summary="&#10;a">
-      <created>1556672972249</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1556672972249</updated>
-    </task>
-    <task id="LOCAL-00092" summary="&#10;a">
-      <created>1557154840614</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1557154840614</updated>
+      <workItem from="1563435591279" duration="27030000" />
     </task>
     <task id="LOCAL-00093" summary="&#10;a">
       <created>1557253276663</created>
@@ -1067,7 +1054,21 @@
       <option name="project" value="LOCAL" />
       <updated>1563557252089</updated>
     </task>
-    <option name="localTasksCounter" value="140" />
+    <task id="LOCAL-00140" summary="mejora de ospf diagram.">
+      <created>1563557383229</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1563557383229</updated>
+    </task>
+    <task id="LOCAL-00141" summary="mejora de ospf diagram.">
+      <created>1563558219950</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1563558219950</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1103,7 +1104,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="862672000" />
+    <option name="totallyTimeSpent" value="864455000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1132,11 +1133,11 @@
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50590765" side_tool="true" weight="0.32441473" />
       <window_info anchor="bottom" auto_hide="true" x="0" y="23" width="1920" height="1017" id="Terminal" order="9" sideWeight="0.49409238" type="WINDOWED" visible="true" weight="0.44370124" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49731472" weight="0.24526198" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.32887402" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32887402" />
       <window_info anchor="bottom" id="Database Changes" order="12" sideWeight="0.4989259" weight="0.32998884" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Console" order="14" sideWeight="0.4989259" weight="0.30657747" />
-      <window_info anchor="bottom" id="Python Console" order="15" sideWeight="0.49785176" weight="0.53400224" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="15" sideWeight="0.49785176" visible="true" weight="0.46822742" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="16" sideWeight="0.49946293" weight="0.32998884" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1296,10 +1297,6 @@
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tools.py</url>
           <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/async_interfaces.py</url>
-          <option name="timeStamp" value="47" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -1599,16 +1596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sshtest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="68" column="12" lean-forward="true" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="479">
@@ -1686,16 +1673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/Devices.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6732">
-          <caret line="288" lean-forward="true" selection-start-line="288" selection-end-line="288" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/64ab1a34-8529-4526-93b9-a2e1a4795eac/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
@@ -1703,9 +1680,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sshtest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="68" column="12" lean-forward="true" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Devices.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1674">
+          <caret line="280" column="97" lean-forward="true" selection-start-line="280" selection-start-column="97" selection-end-line="280" selection-end-column="97" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/async_interfaces.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
+        <state relative-caret-position="234">
           <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />

@@ -17,7 +17,7 @@ with connection.cursor() as cursor:
     cursor.execute(sql)
     data = cursor.fetchall()
     uids = {row['net_device_uid'] for row in data}
-window = 7
+window = 15
 for diagram in diagrams:
     not_polled = set(diagram.state.devices_uid.keys()).difference(uids)
     if not_polled:
@@ -29,10 +29,12 @@ for diagram in diagrams:
 
 #
 #
-devs = Devices(master=Master(), ip_list=top_ten_ips, check_up=True)
+devs = Devices(master=Master(), ip_list=top_ten_ips, check_up=False)
 for dev in devs:
     dev.uid = ips_uid[dev.ip]
 devs.add_snmp_event(event='interfaces', type='asyc')
+
+devs.execute(methods=["set_snmp_community"], thread_window=50)
 #
 #
 asyncio.get_event_loop().run_until_complete(devs.interfaces_async())
