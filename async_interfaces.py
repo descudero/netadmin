@@ -17,7 +17,7 @@ with connection.cursor() as cursor:
     cursor.execute(sql)
     data = cursor.fetchall()
     uids = {row['net_device_uid'] for row in data}
-window = 15
+window = 7
 for diagram in diagrams:
     not_polled = set(diagram.state.devices_uid.keys()).difference(uids)
     if not_polled:
