@@ -2,6 +2,7 @@ var network = undefined
 var selected_edges = new Object()
 var te_enabled = false
 var color_scheme = true
+
 function deselect_edge(edge) {
 
 
@@ -57,6 +58,34 @@ function get_te_hops(hops) {
 
 
 $(document).ready(function () {
+    $(window).keypress(function (e) {
+        console.log(e)
+        var key = e.key;
+        if (key === "i") {
+            var edge_id = network.getSelectedEdges()[0]
+            var uid = network.body.edges[edge_id].s_uid
+            var win = window.open(window.location.protocol + "//" + window.location.host + '/interfaces/graph/' + uid);
+            if (win) {
+                //Browser has allowed it to be opened
+                win.focus();
+            } else {
+                //Browser has blocked it
+                alert('Please allow popups for this website');
+            }
+        }
+        if (key === "s") {
+            var edge_id = network.getSelectedEdges()[0]
+            var uid = network.body.edges[edge_id].t_uid
+            var win = window.open(window.location.protocol + "//" + window.location.host + '/interfaces/graph/' + uid);
+            if (win) {
+                //Browser has allowed it to be opened
+                win.focus();
+            } else {
+                //Browser has blocked it
+                alert('Please allow popups for this website');
+            }
+        }
+    });
         var saved = $('#saved').val();
         var date = $('#date').val();
         var network_name = $('#network').val();

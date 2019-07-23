@@ -199,6 +199,8 @@ class ospf_adjacency:
         try:
             color, width = InterfaceUfinet.maximum_usage_color(self.s_interface
                                                                , self.t_interface)
+            self.vs['s_uid'] = self.s_interface.uid
+            self.vs['t_uid'] = self.t_interface.uid
             self.vs['color'] = {'color': color}
 
             self.vs['cusage'] = color

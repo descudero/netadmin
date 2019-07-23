@@ -57,6 +57,7 @@ $(document).ready(function () {
 
         function slider_change(index) {
             var data = data_intervals[index]
+
             $('#titulo').text(" MAX OUPUT RATE " + data['period'])
             create_network(data['vs'])
             color_scheme = true
@@ -64,6 +65,12 @@ $(document).ready(function () {
         }
 
         function create_network(traces) {
+            var fix_scale = false;
+            if (network !== undefined) {
+                fix_scale = true;
+                var position = network.getViewPosition();
+                var scale = network.getScale();
+            }
             var container = document.getElementById('mynetwork');
             var data = {
                 nodes: new vis.DataSet(traces['nodes']),
@@ -72,6 +79,10 @@ $(document).ready(function () {
             };
             var options = {};
             network = new vis.Network(container, data, options);
+            if (fix_scale) {
+                network.moveTo({position: position, scale: scale});
+            }
+
 
 
             network.on("click", function (params) {
@@ -87,6 +98,7 @@ $(document).ready(function () {
                         this.body.edges[edge_id].options.width = 5
                         selected_edges[edge_id] = this.body.edges[edge_id]
                     }
+
                     this.redraw()
                 }
             });

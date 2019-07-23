@@ -104,7 +104,15 @@ class InterfaceIOS(object):
         except ZeroDivisionError as te:
             util_out = 0
             self.dev.warning(f'{self.parent_device} {self.if_index} Division by 0')
-        return 100 if util_in > 100 else util_in, 100 if util_out > 100 else util_out
+        if util_in > 100:
+            util_in = 100
+            self.input_rate = self.bw
+            self.dev.warning(f'{self.parent_device} {self.if_index} Division by 0')
+        if util_out > 100:
+            util_out = 100
+            self.output_rate = self.bw
+
+        return util_in, util_out
 
     def get_interface_errors(self, filter="0"):
         list_properties_erros = ["output_drops", "runts", "giants", "throttles", "input_errors", "crc"
