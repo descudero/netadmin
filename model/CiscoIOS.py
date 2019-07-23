@@ -27,7 +27,8 @@ import asyncio
 
 @logged
 class CiscoIOS(Parent):
-    images = {"GUATEMALA": "_GT",
+    images = {"MEXICO": "_MX",
+              "GUATEMALA": "_GT",
               "EL_SALVADOR": "_SV",
               "HONDURAS": "_HN",
               "NICARAGUA": "_NC",

@@ -6,14 +6,13 @@
     <bookmark url="file://$PROJECT_DIR$/resources/templates/transciever_ios.template" line="5" mnemonic="6" />
     <bookmark url="file://$PROJECT_DIR$/web_server.py" line="421" />
     <bookmark url="file://$PROJECT_DIR$/static/js/graphs.js" line="57" />
-    <bookmark url="file://$PROJECT_DIR$/model/CiscoIOS.py" line="418" />
+    <bookmark url="file://$PROJECT_DIR$/model/CiscoIOS.py" line="420" />
     <bookmark url="file://$PROJECT_DIR$/model/Diagram.py" line="264" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="462384ac-2f64-47a0-b6d2-b16ff1b36497" name="Default" comment="mejora de ospf diagram.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/db.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/db.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/diagramas.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/diagramas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/CiscoIOS.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/CiscoIOS.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -161,8 +160,8 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/templates/diagramas.html">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="682">
-                    <caret line="70" column="88" selection-start-line="70" selection-start-column="88" selection-end-line="70" selection-end-column="88" />
+                  <state relative-caret-position="286">
+                    <caret line="55" column="14" lean-forward="true" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
                   </state>
                 </provider>
               </entry>
@@ -239,6 +238,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/Devices.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -266,19 +277,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/64ab1a34-8529-4526-93b9-a2e1a4795eac/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="689">
-              <caret line="53" column="70" selection-start-line="53" selection-start-column="70" selection-end-line="53" selection-end-column="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/HuaweiBase.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="474">
+              <caret line="58" column="6" lean-forward="true" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -322,7 +322,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/diagramas.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="334">
@@ -356,7 +356,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>intervalos</find>
       <find>util_in</find>
       <find>ospf_interfaces</find>
       <find>set_ip_ospf_interfaces</find>
@@ -386,6 +385,7 @@
       <find>ip_to</find>
       <find>diagramas/ospf</find>
       <find>intervalo</find>
+      <find>def get_vs</find>
     </findStrings>
     <replaceStrings>
       <replace>type</replace>
@@ -431,7 +431,6 @@
         <option value="$PROJECT_DIR$/poll_interfaces_diagram_devices.py" />
         <option value="$PROJECT_DIR$/ospf_topology_updater.py" />
         <option value="$PROJECT_DIR$/snmp_poller.py" />
-        <option value="$PROJECT_DIR$/model/CiscoIOS.py" />
         <option value="$PROJECT_DIR$/model/Diagram.py" />
         <option value="$PROJECT_DIR$/model/Devices.py" />
         <option value="$PROJECT_DIR$/async_interfaces.py" />
@@ -442,7 +441,6 @@
         <option value="$PROJECT_DIR$/static/js/reporte_internet_filtrado.js" />
         <option value="$PROJECT_DIR$/templates/interfaces_filtered_graphs.html" />
         <option value="$PROJECT_DIR$/model/ospf_database.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/64ab1a34-8529-4526-93b9-a2e1a4795eac/console.sql" />
         <option value="$PROJECT_DIR$/model/InterfaceUfinet.py" />
         <option value="$PROJECT_DIR$/model/InterfaceIOS.py" />
         <option value="$PROJECT_DIR$/model/ospf_adjacency.py" />
@@ -450,6 +448,8 @@
         <option value="$PROJECT_DIR$/static/js/diagramas.js" />
         <option value="$PROJECT_DIR$/static/js/diagramas_intervalos.js" />
         <option value="$PROJECT_DIR$/templates/diagramas.html" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/64ab1a34-8529-4526-93b9-a2e1a4795eac/console.sql" />
+        <option value="$PROJECT_DIR$/model/CiscoIOS.py" />
       </list>
     </option>
   </component>
@@ -476,6 +476,21 @@
             <path>
               <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
               <item name="netadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="hosts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netadmin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netadmin" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -497,7 +512,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/Change SQL Dialect" value="MySQL" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="ClickHouse" />
-    <property name="database.console.LAST_STATE" value="false" />
+    <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/sshtest.py" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -782,21 +797,7 @@
       <workItem from="1562892840626" duration="10521000" />
       <workItem from="1563115562116" duration="1346000" />
       <workItem from="1563435591279" duration="33417000" />
-      <workItem from="1563898719438" duration="11081000" />
-    </task>
-    <task id="LOCAL-00097" summary="&#10;a">
-      <created>1557266298286</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1557266298286</updated>
-    </task>
-    <task id="LOCAL-00098" summary="&#10;a">
-      <created>1557266468644</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1557266468644</updated>
+      <workItem from="1563898719438" duration="11840000" />
     </task>
     <task id="LOCAL-00099" summary="&#10;a">
       <created>1557266616233</created>
@@ -1127,7 +1128,21 @@
       <option name="project" value="LOCAL" />
       <updated>1563921256370</updated>
     </task>
-    <option name="localTasksCounter" value="146" />
+    <task id="LOCAL-00146" summary="mejora de ospf diagram.">
+      <created>1563921520599</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1563921520599</updated>
+    </task>
+    <task id="LOCAL-00147" summary="mejora de ospf diagram.">
+      <created>1563921668688</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1563921668688</updated>
+    </task>
+    <option name="localTasksCounter" value="148" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1163,7 +1178,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="881923000" />
+    <option name="totallyTimeSpent" value="882682000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1178,7 +1193,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7177177" visible="true" weight="0.14769065" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7177177" visible="true" weight="0.14769065" />
       <window_info id="Structure" order="1" sideWeight="0.2822823" side_tool="true" weight="0.23254564" />
       <window_info id="Favorites" order="2" sideWeight="0.50864196" side_tool="true" weight="0.16136725" />
       <window_info anchor="bottom" id="File Transfer" order="0" sideWeight="0.49946293" weight="0.32998884" />
@@ -1190,13 +1205,13 @@
       <window_info anchor="bottom" id="Run" order="6" sideWeight="0.59828144" weight="0.2575251" />
       <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49838883" weight="0.32664436" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5048335" side_tool="true" weight="0.46822742" />
-      <window_info active="true" anchor="bottom" auto_hide="true" x="0" y="23" width="1920" height="1017" id="Terminal" order="9" sideWeight="0.49409238" type="WINDOWED" visible="true" weight="0.44370124" />
+      <window_info anchor="bottom" auto_hide="true" x="0" y="23" width="1920" height="1017" id="Terminal" order="9" sideWeight="0.49409238" type="WINDOWED" visible="true" weight="0.44370124" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49731472" weight="0.24526198" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32887402" />
       <window_info anchor="bottom" id="Database Changes" order="12" sideWeight="0.4989259" weight="0.32998884" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Console" order="14" sideWeight="0.49677765" weight="0.31326646" />
-      <window_info anchor="bottom" id="Python Console" order="15" sideWeight="0.49516648" visible="true" weight="0.24303234" />
+      <window_info anchor="bottom" id="Database Console" order="14" sideWeight="0.49677765" visible="true" weight="0.31326646" />
+      <window_info anchor="bottom" id="Python Console" order="15" sideWeight="0.49516648" weight="0.24303234" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="16" sideWeight="0.49946293" weight="0.32998884" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1301,17 +1316,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model/CiscoIOS.py</url>
-          <line>1280</line>
+          <line>1282</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model/CiscoIOS.py</url>
-          <line>1291</line>
+          <line>1293</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model/CiscoIOS.py</url>
-          <line>1281</line>
+          <line>1283</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1341,7 +1356,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model/CiscoIOS.py</url>
-          <line>1211</line>
+          <line>1213</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1350,7 +1365,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model/CiscoIOS.py</url>
-          <line>1220</line>
+          <line>1222</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1558,16 +1573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="1694" column="13" selection-start-line="1694" selection-start-column="13" selection-end-line="1694" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/-2053194998/201545291/asyncio/events.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6292">
@@ -1698,13 +1703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/64ab1a34-8529-4526-93b9-a2e1a4795eac/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="689">
-          <caret line="53" column="70" selection-start-line="53" selection-start-column="70" selection-end-line="53" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/ospf_database.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
@@ -1729,17 +1727,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/diagramas.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="75" column="26" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/interfaces_filtered_graphs.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="65" column="49" selection-start-line="65" selection-start-column="49" selection-end-line="65" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/diagramas_intervalos.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="71" column="47" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -1753,17 +1751,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/diagramas_intervalos.js">
+    <entry file="file://$PROJECT_DIR$/templates/diagramas.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="71" column="47" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
+        <state relative-caret-position="286">
+          <caret line="55" column="14" lean-forward="true" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/diagramas.html">
+    <entry file="file://$PROJECT_DIR$/static/js/diagramas.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="70" column="88" selection-start-line="70" selection-start-column="88" selection-end-line="70" selection-end-column="88" />
+        <state relative-caret-position="334">
+          <caret line="75" column="26" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/64ab1a34-8529-4526-93b9-a2e1a4795eac/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="58" column="6" lean-forward="true" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/CiscoIOS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
