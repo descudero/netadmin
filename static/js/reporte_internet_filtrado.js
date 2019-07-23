@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var groups = ['PROVEEDORES_TIER_1_INTERNET', 'CONEXIONES_DIRECTAS_PEERING',
         'SERVIDORES_CACHE_TERCEROS', 'TRUNCALES_SUBMARINAS_MPLS', 'BGPS_DIRECTOS']
-    var column_order = ['host', 'inter', 'description', 'l1a', 'l1p', 'l3a', 'l3p', 'data_flow', 'in_gbs', 'out_gbs', 'util_in', 'util_out']
+    var column_order = ['host', 'inter', 'description', 'l1a', 'l1p', 'l3a', 'l3p', 'data_flow', 'in_gbs', 'out_gbs', 'util_in', 'util_out', 'uid']
     $('#loading_json').hide()
     load_tables();
     load_data();
@@ -18,7 +18,6 @@ $(document).ready(function () {
         date_start = $("#initial_date").val();
         date_end = $("#end_date").val();
         $(".group_name").each(function () {
-            console.log($(this).val())
             send_ajax_graph($(this).val(), date_start, date_end, "input");
             send_ajax_graph($(this).val(), date_start, date_end, "output");
         });
@@ -53,7 +52,6 @@ $(document).ready(function () {
 
 
                 var plotDiv = document.getElementById(group + "_" + suffix);
-                console.log(traces)
                 Plotly.newPlot(plotDiv, traces, layout);
 
 
@@ -126,9 +124,18 @@ $(document).ready(function () {
     function add_row_data_table(table_id, row_data) {
         var row = $('<tr>');
         $.each(column_order, function (index, key) {
-            console.log(key)
+
+            var value = row_data[key]
             var col = $('<td>');
-            col.text(row_data[key]);
+            if (key === 'uid') {
+                var a = $('<a>');
+                a.text('graph');
+                a.attr('href', '/interfaces/graph/' + value)
+                col.append(a)
+            } else {
+                col.text(value);
+            }
+
             row.append(col);
 
         });
@@ -161,7 +168,6 @@ $(document).ready(function () {
 
             url: "/reportes/internet/json_group_interfaces",
             success: function (traces) {
-                console.log(traces)
                 create_table_json_dict('#' + group_interfaces, traces)
             },
             error: function (xhr, ajaxOptions, thrownError) {

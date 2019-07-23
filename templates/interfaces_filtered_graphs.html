@@ -1,0 +1,93 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="row p-4">
+    <form action="" class="form-inline" method="POST">
+        <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+                <div class="input-group-text">Ip del equipo</div>
+            </div>
+            <input class="form-control" id='ip' name="initial_date" placeholder="Ip del equipo" type="text">
+        </div>
+        <div class="form-group">
+            <label for="l3_protocol">L3</label>
+            <select class="form-control" id="l3_protocol">
+                <option value="MPL">MPLS</option>
+                <option selected value="BGP">BGP</option>
+                <option value="CON">Directamente Conectada</option>
+
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="l3_protocol_attr">Atributo L3</label>
+            <select class="form-control" id="l3_protocol_attr">
+                <option selected value="IPT">PROVEEDOR TIER 1</option>
+                <option value="OSP">OSPF</option>
+                <option value="CUS">CLIENTE</option>
+                <option value="CDN">CACHE</option>
+                <option value="PNI">CONEXIONES DIRECTAS OTROS ASN (PEERING)</option>
+
+
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="data_flow">Flujo de trafico</label>
+            <select class="form-control" id="data_flow">
+                <option value="B">OSPF</option>
+                <option value="D">CLIENTE</option>
+                <option value="U">PROVEEDOR TIER 1</option>
+                <option selected value="NA"> NA</option>
+
+
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="l1_protocol">Conexion Fisica</label>
+            <select class="form-control" id="l1_protocol">
+                <option value="D">DWDM</option>
+                <option value="C">LAMBDA SUBMARINA</option>
+                <option value="H">HUAWEI</option>
+                <option selected value="F">Fibra Obscura</option>
+                <option value="W"> Pseudowire L2</option>
+                <option value="NA"> todas</option>
+
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="l1_protocol_attr">Atrtibutos fisicos</label>
+            <select class="form-control" id="l1_protocol_attr">
+                <option value="P">PADTEC</option>
+                <option value="N">NOKIA</option>
+                <option value="T">TELXIUS</option>
+                <option value="M">MAYA</option>
+                <option value="C">CENTURY</option>
+                <option value="N">LANAUTILUS</option>
+                <option value="L">LEVEL3</option>
+                <option value="G">GLOBENET</option>
+                <option selected value="NA"> Todas</option>
+
+            </select>
+        </div>
+
+    </form>
+    <button class="btn btn-primary mb-2" id="request_json">Enviar</button>
+</div>
+
+<h1></h1>
+<img id="loading_json" src="http://thinkfuture.com/wp-content/uploads/2013/10/loading_spinner.gif"/>
+<div class="row">
+    <div class="col-sm-12">
+        <table id="device_data" class="table table-bordered table-striped table-hover table-sm table-light">
+
+            <thead class="thead-dark">
+            </thead>
+
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/na.js') }}"></script>
+{% endblock %}
+
+

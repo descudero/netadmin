@@ -15384,3 +15384,259 @@ state_timestamp) VALUES ('up','up','2616176','1076183336','0.03','10.76','1','0'
                        from interface_states as h   where   h.state_timestamp >='2019-07-17 00:00:00' 
                        and h.state_timestamp <='2019-07-17 23:59:00' ORDER BY h.output_rate DESC ) as s2 on s2.uid = s.uid
                         WHERE  i.ip <>"127.0.0.1" AND  net_device_uid IN (89,0,94,155,182,79,126,68,214,116,86,184,83,119,178,145,124,193,204,160,395803,183,118,388105,128,99,179,98,206,555,150,199,196,209,114,132,166,180,201,151,101,58,122,168,198,217,92,141,131,173,4,85,139,135,129,96,176,102,194,95,189,162,185,136,71,115,97,107,0,584,172,149,152,91,554,529,104,207,159,387950,195,138,186,387951,190,130,93,109,211,153,188,73,181,388104,105,187,84,82,192,167,202,213,771,123,165,0,175,146,210,103,137,164,205,121,100,113,161,215,148,75,140,72,770,117,585,143,769,108,125,169,110,111,144,80,142,76,174,112,216,388102,106,147,212,157,177,156,200,77,127,88,208,81,197,191,134,90,170,171,87,395802,78)  
+2019-07-23 10:43:20,210:WARNING:db.Devices:dict_from_sql SELECT uid,ip FROM netadmin.network_devices where ip in('172.16.30.45','172.16.30.235','172.16.30.242','172.16.30.135','172.16.30.39','172.16.30.209','172.16.30.13','172.16.30.250','172.16.30.6','172.16.30.50','172.16.30.129','172.16.30.36','172.16.30.8','172.16.30.2','172.16.30.11','172.16.30.16','172.16.30.38','172.16.30.244','172.16.30.15','172.16.30.245','172.16.30.130','172.16.30.233','172.16.30.43','172.16.30.246','172.16.30.248','172.16.30.9','172.16.30.4','172.17.28.192','172.16.30.37','172.16.30.1','172.16.30.14','172.16.30.251','172.16.30.128','172.16.30.241','172.16.30.232','172.16.30.7','172.16.30.12','172.16.30.3','172.16.30.41','172.16.30.40','172.16.30.10','172.16.30.35','172.16.30.44','172.16.30.247','172.16.30.5','172.16.30.42','172.16.30.253','172.16.30.254')
+2019-07-23 10:43:20,895:WARNING:db.Devices:dict_from_sql SELECT 
+                                i.net_device_uid, 
+                                i.bandwith as bw,
+                                i.uid as uid,
+                                i.if_index as if_index,
+                                i.l3_protocol,
+                                i.l3_protocol_attr,
+                                i.l1_protocol,
+                                i.l1_protocol_attr,
+                                i.data_flow,
+                                s.util_in as util_in,
+                                s.util_out as util_out,
+                                s.link_state,
+                                s.protocol_state,
+                                s.output_rate,
+                                s.input_rate,
+                                s.state_timestamp,i.ip
+
+                       from network_devices as d
+                       inner join interfaces as i on d.uid = i.net_device_uid
+                       inner join	interface_states as s on s.interface_uid= i.uid
+                       inner join  (select distinct  interface_uid,uid,output_rate 
+                       from interface_states as h   where   h.state_timestamp >='2019-07-23 00:00:00' 
+                       and h.state_timestamp <='2019-07-23 23:59:00' ORDER BY h.output_rate DESC ) as s2 on s2.uid = s.uid
+                        WHERE  i.ip <>"127.0.0.1" AND  net_device_uid IN (38,12501,59,310127,62,644,51,4,64,58,48,49,41,65,37,648,42,5,57,39,46,155743,55,3,26,45,52,36,53,6,54,70,69,606,50,61,56,8,44,40,66,68,63,25,7,67,1,2)  
+2019-07-23 10:46:45,964:WARNING:db.Devices:dict_from_sql SELECT uid,ip FROM netadmin.network_devices where ip in('172.17.22.16','172.17.22.49','172.17.22.51','172.19.8.32','172.17.22.57','172.17.22.52','172.16.30.50','172.17.22.15','172.19.8.20','172.19.8.66','172.19.8.77','172.17.22.12','172.19.40.4','172.19.8.79','172.19.8.16','172.17.22.83','172.19.8.78','172.19.8.65','172.17.22.84','172.19.8.35','172.19.8.58','172.19.8.10','172.19.8.75','172.17.22.65','172.19.40.3','172.17.22.69','172.17.22.55','172.17.22.45','172.17.22.26','172.19.8.7','172.17.22.31','172.17.22.37','172.19.8.63','172.17.22.63','172.17.22.36','172.17.22.89','172.17.22.34','172.19.8.55','172.17.22.60','172.17.22.21','172.19.8.5','172.19.8.1','172.17.22.10','172.17.22.53','172.17.22.79','172.19.8.25','172.17.22.71','172.17.22.32','172.17.22.22','172.17.22.27','172.19.8.11','172.19.8.72','172.17.31.4','172.17.22.48','172.17.22.100','172.17.22.74','172.17.31.5','172.17.31.9','172.19.8.21','172.19.8.81','172.17.22.64','172.17.31.11','172.19.8.33','172.16.30.65','172.17.22.39','172.17.22.88','172.17.22.3','172.17.31.1','172.19.8.68','172.19.8.14','172.19.8.83','172.17.22.67','172.17.22.68','172.19.8.73','172.17.22.66','172.19.8.18','172.17.22.47','172.17.22.11','172.19.8.8','172.17.22.87','172.19.8.70','172.19.8.34','172.19.8.64','172.17.22.90','172.16.30.250','172.19.8.46','172.19.8.47','172.17.22.25','172.19.8.12','172.19.40.8','172.17.22.86','172.17.22.44','172.17.31.8','172.17.22.19','172.19.8.4','172.19.8.49','172.19.8.6','172.17.22.24','172.19.40.7','172.19.8.51','172.17.22.13','172.19.8.15','172.19.8.13','172.16.30.35','172.17.22.61','172.17.22.73','172.19.8.30','172.17.22.38','172.17.22.29','172.17.31.6','172.19.8.52','172.19.40.1','172.17.22.33','172.19.8.71','172.19.8.22','172.19.8.80','172.17.22.28','172.19.8.76','172.17.22.59','172.17.22.14','172.17.22.76','172.17.22.50','172.19.8.9','172.17.22.85','172.19.8.19','172.17.22.62','172.17.22.72','172.19.8.50','172.19.8.67','172.17.31.2','172.19.40.2','172.19.8.17','172.19.8.82','172.17.22.40','172.17.22.82','172.17.22.41','172.19.8.54','172.17.22.81','172.17.22.18','172.17.31.3','172.17.22.30','172.17.22.42','172.17.22.23','172.17.22.17','172.19.8.59','172.17.22.70','172.19.8.56','172.17.22.20','172.17.22.46','172.17.22.43','172.17.22.77','172.19.8.60','172.17.22.80','172.19.8.57','172.17.22.58','172.19.8.74','172.17.22.78','172.17.31.7','172.17.22.56','172.17.22.35','172.19.8.36','172.17.22.54')
+2019-07-23 10:46:46,665:WARNING:db.CiscoIOS:SAVE 172.19.40.4 (1062, "Duplicate entry 'no_snmp' for key 'hostname'")
+2019-07-23 10:46:47,128:WARNING:db.CiscoIOS:SAVE 172.17.22.90 can only concatenate str (not "int") to str
+2019-07-23 10:46:47,481:WARNING:db.CiscoIOS:SAVE 172.19.40.8 (1062, "Duplicate entry 'no_snmp' for key 'hostname'")
+2019-07-23 10:46:47,825:WARNING:db.CiscoIOS:SAVE 172.19.40.7 (1062, "Duplicate entry 'no_snmp' for key 'hostname'")
+2019-07-23 10:46:48,199:WARNING:db.Devices:dict_from_sql SELECT 
+                                i.net_device_uid, 
+                                i.bandwith as bw,
+                                i.uid as uid,
+                                i.if_index as if_index,
+                                i.l3_protocol,
+                                i.l3_protocol_attr,
+                                i.l1_protocol,
+                                i.l1_protocol_attr,
+                                i.data_flow,
+                                s.util_in as util_in,
+                                s.util_out as util_out,
+                                s.link_state,
+                                s.protocol_state,
+                                s.output_rate,
+                                s.input_rate,
+                                s.state_timestamp,i.ip
+
+                       from network_devices as d
+                       inner join interfaces as i on d.uid = i.net_device_uid
+                       inner join	interface_states as s on s.interface_uid= i.uid
+                       inner join  (select distinct  interface_uid,uid,output_rate 
+                       from interface_states as h   where   h.state_timestamp >='2019-07-23 00:00:00' 
+                       and h.state_timestamp <='2019-07-23 23:59:00' ORDER BY h.output_rate DESC ) as s2 on s2.uid = s.uid
+                        WHERE  i.ip <>"127.0.0.1" AND  net_device_uid IN (125,177,71,129,132,138,58,175,192,117,83,84,0,529,189,216,771,96,149,135,191,151,159,202,388102,89,190,80,128,208,214,100,94,137,143,395802,211,170,108,205,173,77,162,116,99,212,150,195,167,157,178,165,184,118,176,156,81,180,171,585,103,387951,153,79,122,395803,199,142,213,98,387950,140,145,193,141,121,206,187,119,770,73,174,131,422126,4,85,188,114,182,0,554,217,106,110,124,126,169,136,0,168,197,95,201,68,200,152,90,97,196,215,102,388104,160,91,185,584,104,198,148,115,146,194,147,555,186,181,204,166,78,113,388105,130,769,82,123,87,127,172,92,207,105,183,111,209,179,107,134,75,88,139,76,109,72,86,164,161,144,101,210,93,155,112)  
+2019-07-23 14:39:43,516:WARNING:db.Devices:dict_from_sql SELECT 
+                                i.net_device_uid, 
+                                i.bandwith as bw,
+                                i.uid as uid,
+                                i.if_index as if_index,
+                                i.l3_protocol,
+                                i.l3_protocol_attr,
+                                i.l1_protocol,
+                                i.l1_protocol_attr,
+                                i.data_flow,
+                                s.util_in as util_in,
+                                s.util_out as util_out,
+                                s.link_state,
+                                s.protocol_state,
+                                s.output_rate,
+                                s.input_rate,
+                                s.state_timestamp,i.ip
+
+                       from network_devices as d
+                       inner join interfaces as i on d.uid = i.net_device_uid
+                       inner join	interface_states as s on s.interface_uid= i.uid
+                       inner join  (select distinct  interface_uid,uid,output_rate 
+                       from interface_states as h   where   h.state_timestamp >='2019-07-23 00:00:00' 
+                       and h.state_timestamp <='2019-07-23 23:59:00' ORDER BY h.state_timestamp DESC ) as s2 on s2.uid = s.uid
+                        WHERE  i.ip <>"127.0.0.1" AND  net_device_uid IN (38,12501,59,310127,62,644,51,4,64,58,48,49,41,65,37,648,42,5,57,39,46,155743,55,3,26,45,52,36,53,6,54,70,69,606,50,61,56,8,44,40,66,68,63,25,7,67,1,2)  
+2019-07-23 14:39:43,901:WARNING:db.Devices:dict_from_sql error  (3065, "Expression #1 of ORDER BY clause is not in SELECT list, references column 'netadmin.h.state_timestamp' which is not in SELECT list; this is incompatible with DISTINCT") SELECT 
+                                i.net_device_uid, 
+                                i.bandwith as bw,
+                                i.uid as uid,
+                                i.if_index as if_index,
+                                i.l3_protocol,
+                                i.l3_protocol_attr,
+                                i.l1_protocol,
+                                i.l1_protocol_attr,
+                                i.data_flow,
+                                s.util_in as util_in,
+                                s.util_out as util_out,
+                                s.link_state,
+                                s.protocol_state,
+                                s.output_rate,
+                                s.input_rate,
+                                s.state_timestamp,i.ip
+
+                       from network_devices as d
+                       inner join interfaces as i on d.uid = i.net_device_uid
+                       inner join	interface_states as s on s.interface_uid= i.uid
+                       inner join  (select distinct  interface_uid,uid,output_rate 
+                       from interface_states as h   where   h.state_timestamp >='2019-07-23 00:00:00' 
+                       and h.state_timestamp <='2019-07-23 23:59:00' ORDER BY h.state_timestamp DESC ) as s2 on s2.uid = s.uid
+                        WHERE  i.ip <>"127.0.0.1" AND  net_device_uid IN (38,12501,59,310127,62,644,51,4,64,58,48,49,41,65,37,648,42,5,57,39,46,155743,55,3,26,45,52,36,53,6,54,70,69,606,50,61,56,8,44,40,66,68,63,25,7,67,1,2)  
+2019-07-23 14:41:08,808:WARNING:db.Devices:dict_from_sql SELECT 
+                                i.net_device_uid, 
+                                i.bandwith as bw,
+                                i.uid as uid,
+                                i.if_index as if_index,
+                                i.l3_protocol,
+                                i.l3_protocol_attr,
+                                i.l1_protocol,
+                                i.l1_protocol_attr,
+                                i.data_flow,
+                                s.util_in as util_in,
+                                s.util_out as util_out,
+                                s.link_state,
+                                s.protocol_state,
+                                s.output_rate,
+                                s.input_rate,
+                                s.state_timestamp,i.ip
+
+                       from network_devices as d
+                       inner join interfaces as i on d.uid = i.net_device_uid
+                       inner join	interface_states as s on s.interface_uid= i.uid
+                       inner join  (select distinct  interface_uid,uid,output_rate 
+                       from interface_states as h   where   h.state_timestamp >='2019-07-23 00:00:00' 
+                       and h.state_timestamp <='2019-07-23 23:59:00' ORDER BY h.state_timestamp DESC ) as s2 on s2.uid = s.uid
+                        WHERE  i.ip <>"127.0.0.1" AND  net_device_uid IN (38,12501,59,310127,62,644,51,4,64,58,48,49,41,65,37,648,42,5,57,39,46,155743,55,3,26,45,52,36,53,6,54,70,69,606,50,61,56,8,44,40,66,68,63,25,7,67,1,2)  
+2019-07-23 14:41:09,154:WARNING:db.Devices:dict_from_sql error  (3065, "Expression #1 of ORDER BY clause is not in SELECT list, references column 'netadmin.h.state_timestamp' which is not in SELECT list; this is incompatible with DISTINCT") SELECT 
+                                i.net_device_uid, 
+                                i.bandwith as bw,
+                                i.uid as uid,
+                                i.if_index as if_index,
+                                i.l3_protocol,
+                                i.l3_protocol_attr,
+                                i.l1_protocol,
+                                i.l1_protocol_attr,
+                                i.data_flow,
+                                s.util_in as util_in,
+                                s.util_out as util_out,
+                                s.link_state,
+                                s.protocol_state,
+                                s.output_rate,
+                                s.input_rate,
+                                s.state_timestamp,i.ip
+
+                       from network_devices as d
+                       inner join interfaces as i on d.uid = i.net_device_uid
+                       inner join	interface_states as s on s.interface_uid= i.uid
+                       inner join  (select distinct  interface_uid,uid,output_rate 
+                       from interface_states as h   where   h.state_timestamp >='2019-07-23 00:00:00' 
+                       and h.state_timestamp <='2019-07-23 23:59:00' ORDER BY h.state_timestamp DESC ) as s2 on s2.uid = s.uid
+                        WHERE  i.ip <>"127.0.0.1" AND  net_device_uid IN (38,12501,59,310127,62,644,51,4,64,58,48,49,41,65,37,648,42,5,57,39,46,155743,55,3,26,45,52,36,53,6,54,70,69,606,50,61,56,8,44,40,66,68,63,25,7,67,1,2)  
+2019-07-23 14:41:46,433:WARNING:db.Devices:dict_from_sql SELECT 
+                                i.net_device_uid, 
+                                i.bandwith as bw,
+                                i.uid as uid,
+                                i.if_index as if_index,
+                                i.l3_protocol,
+                                i.l3_protocol_attr,
+                                i.l1_protocol,
+                                i.l1_protocol_attr,
+                                i.data_flow,
+                                s.util_in as util_in,
+                                s.util_out as util_out,
+                                s.link_state,
+                                s.protocol_state,
+                                s.output_rate,
+                                s.input_rate,
+                                s.state_timestamp,i.ip
+
+                       from network_devices as d
+                       inner join interfaces as i on d.uid = i.net_device_uid
+                       inner join	interface_states as s on s.interface_uid= i.uid
+                       inner join  (select distinct  interface_uid,uid,output_rate 
+                       from interface_states as h   where   h.state_timestamp >='2019-07-23 00:00:00' 
+                       and h.state_timestamp <='2019-07-23 23:59:00' ORDER BY h.state_timestamp DESC ) as s2 on s2.uid = s.uid
+                        WHERE  i.ip <>"127.0.0.1" AND  net_device_uid IN (38,12501,59,310127,62,644,51,4,64,58,48,49,41,65,37,648,42,5,57,39,46,155743,55,3,26,45,52,36,53,6,54,70,69,606,50,61,56,8,44,40,66,68,63,25,7,67,1,2)  
+2019-07-23 14:41:46,782:WARNING:db.Devices:dict_from_sql error  (3065, "Expression #1 of ORDER BY clause is not in SELECT list, references column 'netadmin.h.state_timestamp' which is not in SELECT list; this is incompatible with DISTINCT") SELECT 
+                                i.net_device_uid, 
+                                i.bandwith as bw,
+                                i.uid as uid,
+                                i.if_index as if_index,
+                                i.l3_protocol,
+                                i.l3_protocol_attr,
+                                i.l1_protocol,
+                                i.l1_protocol_attr,
+                                i.data_flow,
+                                s.util_in as util_in,
+                                s.util_out as util_out,
+                                s.link_state,
+                                s.protocol_state,
+                                s.output_rate,
+                                s.input_rate,
+                                s.state_timestamp,i.ip
+
+                       from network_devices as d
+                       inner join interfaces as i on d.uid = i.net_device_uid
+                       inner join	interface_states as s on s.interface_uid= i.uid
+                       inner join  (select distinct  interface_uid,uid,output_rate 
+                       from interface_states as h   where   h.state_timestamp >='2019-07-23 00:00:00' 
+                       and h.state_timestamp <='2019-07-23 23:59:00' ORDER BY h.state_timestamp DESC ) as s2 on s2.uid = s.uid
+                        WHERE  i.ip <>"127.0.0.1" AND  net_device_uid IN (38,12501,59,310127,62,644,51,4,64,58,48,49,41,65,37,648,42,5,57,39,46,155743,55,3,26,45,52,36,53,6,54,70,69,606,50,61,56,8,44,40,66,68,63,25,7,67,1,2)  
+2019-07-23 14:43:37,688:WARNING:db.Devices:dict_from_sql SELECT 
+                                i.net_device_uid, 
+                                i.bandwith as bw,
+                                i.uid as uid,
+                                i.if_index as if_index,
+                                i.l3_protocol,
+                                i.l3_protocol_attr,
+                                i.l1_protocol,
+                                i.l1_protocol_attr,
+                                i.data_flow,
+                                s.util_in as util_in,
+                                s.util_out as util_out,
+                                s.link_state,
+                                s.protocol_state,
+                                s.output_rate,
+                                s.input_rate,
+                                s.state_timestamp,i.ip
+
+                       from network_devices as d
+                       inner join interfaces as i on d.uid = i.net_device_uid
+                       inner join	interface_states as s on s.interface_uid= i.uid
+                       inner join  (select distinct  interface_uid,uid,output_rate 
+                       from interface_states as h   where   h.state_timestamp >='2019-07-23 00:00:00' 
+                       and h.state_timestamp <='2019-07-23 23:59:00' ORDER BY h.uid DESC ) as s2 on s2.uid = s.uid
+                        WHERE  i.ip <>"127.0.0.1" AND  net_device_uid IN (38,12501,59,310127,62,644,51,4,64,58,48,49,41,65,37,648,42,5,57,39,46,155743,55,3,26,45,52,36,53,6,54,70,69,606,50,61,56,8,44,40,66,68,63,25,7,67,1,2)  
+2019-07-23 14:53:24,889:WARNING:db.Devices:dict_from_sql SELECT 
+                                i.net_device_uid, 
+                                i.bandwith as bw,
+                                i.uid as uid,
+                                i.if_index as if_index,
+                                i.l3_protocol,
+                                i.l3_protocol_attr,
+                                i.l1_protocol,
+                                i.l1_protocol_attr,
+                                i.data_flow,
+                                s.util_in as util_in,
+                                s.util_out as util_out,
+                                s.link_state,
+                                s.protocol_state,
+                                s.output_rate,
+                                s.input_rate,
+                                s.state_timestamp,i.ip
+
+                       from network_devices as d
+                       inner join interfaces as i on d.uid = i.net_device_uid
+                       inner join	interface_states as s on s.interface_uid= i.uid
+                       inner join  (select distinct  interface_uid,uid,output_rate 
+                       from interface_states as h   where   h.state_timestamp >='2019-07-23 00:00:00' 
+                       and h.state_timestamp <='2019-07-23 23:59:00' ORDER BY h.uid DESC ) as s2 on s2.uid = s.uid
+                        WHERE  i.ip <>"127.0.0.1" AND  net_device_uid IN (38,12501,59,310127,62,644,51,4,64,58,48,49,41,65,37,648,42,5,57,39,46,155743,55,3,26,45,52,36,53,6,54,70,69,606,50,61,56,8,44,40,66,68,63,25,7,67,1,2)  

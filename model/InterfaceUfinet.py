@@ -206,6 +206,7 @@ class InterfaceUfinet(InterfaceIOS):
                        and h.state_timestamp <='{date_end}' ORDER BY h.{sort_field} DESC ) as s2 on s2.uid = s.uid
                         WHERE  i.ip <>"127.0.0.1" AND  net_device_uid IN ({','.join(
             devices_uid.values())})  """
+        print(sql)
         return sql
 
     @staticmethod
@@ -213,7 +214,7 @@ class InterfaceUfinet(InterfaceIOS):
         date_start = str(datetime.date.today()) + ' 00:00:00'
         date_end = str(datetime.date.today()) + ' 23:59:00'
         sql = InterfaceUfinet.sql_last_period_polled_interfaces(devices=devices, date_start=date_start,
-                                                                date_end=date_end)
+                                                                date_end=date_end, sort_field='uid')
         return sql
 
     @staticmethod
@@ -466,7 +467,6 @@ class InterfaceUfinet(InterfaceIOS):
             1).reset_index()
 
         df_merge = pd.merge(df_proceded, df2, on=['uid'], how='left').sort_values(ascending=False, by=['util_out'])
-        df_merge.drop(['uid'], axis=1, inplace=True)
         df_merge.sort_values(by=[sort], inplace=True, ascending=False)
         table = df_merge.to_dict(orient='records')
 
@@ -503,8 +503,7 @@ class InterfaceUfinet(InterfaceIOS):
             1).reset_index()
 
         df_merge = pd.merge(df_proceded, df2, on=['uid'], how='left').sort_values(ascending=False, by=['util_out'])
-        df_merge.drop(['uid'], axis=1, inplace=True)
-        columns = ['host', 'inter', 'description', 'l1', 'l1a', 'util_in', 'util_out', 'in_gbs',
+        columns = ['uid', 'host', 'inter', 'description', 'l1', 'l1a', 'util_in', 'util_out', 'in_gbs',
                    'out_gbs']
 
         tables = filter_summary(df_merge, columns, sort_column=sort_columns, filter_keys=filter_keys)
@@ -750,4 +749,5 @@ def filter_summary(sql_dataframe, columns, sort_column={}, filter_keys={}):
             results[key] = results[key].sort_values(by=sort_column['default'], ascending=False)
 
         results[key] = results[key][columns].to_dict(orient='records')
+        print(results)
     return results

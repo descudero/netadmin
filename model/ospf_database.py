@@ -19,7 +19,8 @@ class ospf_database:
                       12: .40, 13: .40}
 
     def __init__(self, ip_seed_router, isp, process_id='1', area='0', interface_method="interfaces_from_db_today",
-                 network_name='ospf_regional', source="real_time", period_start="", period_end=""):
+                 network_name='ospf_regional', source="real_time", period_start="", period_end="",
+                 sort_field="output_rate"):
         self.neighbors_occurrences_count = defaultdict(int)
         self.source = source
         self.area = area

@@ -8,17 +8,17 @@ $(document).ready(function () {
 
     function load_data(delete_data) {
         $('#loading_json').show();
-        if (delete_data === true) {
-            Plotly.deleteTraces('graph', [-2, -1]);
-        }
         var date_start = $('#date_start').val();
         var date_end = $('#date_end').val();
         var uid = $('#uid').val();
+        if (delete_data === true) {
+            Plotly.deleteTraces('graph' + uid, [-2, -1]);
+        }
         send_ajax_graph(date_start, date_end, uid)
     }
 
 
-    function create_interface_graph(data_interface) {
+    function create_interface_graph(data_interface, graph_id) {
         var layout = {
             title: {
                 text: data_interface['name'],
@@ -56,8 +56,8 @@ $(document).ready(function () {
         var data_in = data_interface['in']
         data_in['name'] = '% in_rate'
         var traces = [data_out, data_in]
-
-        var plotDiv = document.getElementById('graph')
+        console.log(graph_id)
+        var plotDiv = document.getElementById(graph_id)
         var plot = Plotly.plot(plotDiv, traces, layout);
 
     }
@@ -75,7 +75,9 @@ $(document).ready(function () {
             url: url,
             success: function (data_json) {
                 console.log(data_json)
-                create_interface_graph(data_json)
+                var graph_id = "graph" + uid
+                console.log(graph_id)
+                create_interface_graph(data_json, graph_id)
 
                 $('#title_interface').html(data_json['name'])
 

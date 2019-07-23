@@ -29,7 +29,16 @@ $(document).ready(function () {
         var row = $('<tr>');
         $.each(row_data, function (index, value) {
             var col = $('<td>');
-            col.text(String(value));
+            if (index === 'uid') {
+                var a = $('<a>');
+                a.text('Ver historico');
+                a.attr('href', '/interfaces/graph/' + value);
+                col.append(a);
+            } else {
+                col.text(String(value));
+            }
+
+
             row.append(col);
 
         });
