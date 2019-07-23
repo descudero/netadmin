@@ -6208,3 +6208,31 @@ Ufinet18_2
 2019-07-17 16:57:59,439:ERROR:connection.CiscoIOS:unable to get snmp location 172.19.40.2 TypeError("object of type 'NoneType' has no len()",)
 2019-07-17 16:58:07,045:ERROR:connection.CiscoIOS:unable to get snmp location 172.19.40.4 TypeError("object of type 'NoneType' has no len()",)
 2019-07-17 16:58:14,662:ERROR:connection.CiscoIOS:unable to get snmp location 172.19.40.3 TypeError("object of type 'NoneType' has no len()",)
+2019-07-22 16:14:05,832:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 16:14:09,328:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 16:16:30,887:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 16:18:56,365:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 16:21:04,074:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 16:21:46,557:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 16:28:58,244:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 16:31:19,342:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 16:33:05,106:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 16:39:05,120:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 16:43:11,430:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 16:43:33,392:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 16:45:45,304:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 16:46:01,528:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 16:47:15,776:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 16:47:29,985:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 16:48:41,101:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 16:49:43,338:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 16:49:51,391:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 16:54:09,038:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 17:05:11,033:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 17:07:35,711:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 17:09:24,350:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 17:09:52,490:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 17:10:41,156:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 17:13:55,267:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 17:49:10,497:WARNING:connection.Master:username gestion password Ufinet18_2
+2019-07-22 18:14:42,475:WARNING:connection.Master:username gestion password Ufinet18_2

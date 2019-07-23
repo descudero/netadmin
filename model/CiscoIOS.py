@@ -1497,6 +1497,31 @@ class CiscoIOS(Parent):
         except Exception as e:
             self.log_db.warning(self.ip + " " + str(e))
 
+    @staticmethod
+    def read(master, uid):
+        try:
+            connection = master.db_connect()
+            with connection.cursor() as cursor:
+                sql = '''SELECT * FROM network_devices WHERE uid=%s ORDER BY uid DESC limit 1'''
+                cursor.execute(sql, (uid,))
+                result = cursor.fetchone()
+                cd = CiscoIOS(master=master, ip=result['ip'], display_name="")
+                cd.uid = result['uid']
+                cd.country = result['country']
+                cd.hostname = result['hostname']
+                return cd
+        except Exception as e:
+            master.verbose.warning(master.ip + " " + str(e))
+
+    @staticmethod
+    def get_device_interface_uid(master, uid_interface):
+        interface = InterfaceUfinet.read(master=master, uid=uid_interface)
+        dev = CiscoIOS.read(master=master, uid=interface.net_device_uid)
+        interface.parent_device = dev
+        print('ind cisco ios')
+        print(interface)
+        return interface
+
     def uid_db(self):
         if self.uid == 0:
             try:

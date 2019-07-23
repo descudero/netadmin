@@ -581,6 +581,39 @@ def function_pivot(data_sql, grouping_index=0, column_index=1, value_index=2):
     return data2
 
 
+@app.route('/interface/json', methods=['POST', 'GET'])
+def json_interface():
+    request.get_json()
+    uid = request.json['uid']
+    start_date = request.json['date_start']
+    if start_date == "":
+        start_date = str(datetime.datetime.today()).split(' ')[0] + " 00:00:00"
+    end_date = request.json['date_end']
+    if end_date == "":
+        end_date = str(datetime.datetime.today()).split(' ')[0] + " 23:59:59"
+
+    interface = CiscoIOS.get_device_interface_uid(master=master, uid_interface=uid)
+    interface_data = interface.get_interface_states_by_date(initial_date=start_date, end_date=end_date)
+
+    out_data = [float(state['util_out']) for state in interface_data]
+    in_data = [float(-1 * state['util_in']) for state in interface_data]
+    dates = [str(state['state_timestamp']) for state in interface_data]
+
+    interface_d = {'name': f'{interface.parent_device.hostname} {interface.if_index} {interface.description}',
+                   'if_index': interface.if_index,
+                   'device': interface.parent_device.hostname,
+                   'description': interface.description, 'out': {'x': dates, 'y': out_data},
+                   'in': {'x': dates, 'y': in_data}}
+
+    return jsonify(interface_d)
+
+
+@app.route('/interfaces/graph/<int:uid>', methods=['POST', 'GET'])
+def graph_interface(uid):
+    return render_template('interface_view.html', uid=uid)
+
+
+
 @app.route('/diagramas/intervalos', methods=['POST', 'GET'])
 def diagrama_intervalos_view():
     return render_template('diagramas_intervalos.html')

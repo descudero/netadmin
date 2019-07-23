@@ -331,7 +331,7 @@ class InterfaceUfinet(InterfaceIOS):
         return self.uid
 
     def uid_db(self):
-
+        print(self.ip)
         try:
             connection = self.parent_device.master.db_connect()
             with connection.cursor() as cursor:
@@ -541,6 +541,38 @@ class InterfaceUfinet(InterfaceIOS):
         except TypeError as e:
             device.dev.debug(f' factory_from_dict {device.ip} type error non type {parse_data["if_index"]}')
         return interfaces_dict
+
+    @staticmethod
+    def read(master, uid):
+        connection = master.db_connect()
+        try:
+            with connection.cursor() as cursor:
+                sql = f''' SELECT * FROM interfaces where uid={uid} order by uid desc'''
+                print(sql)
+                cursor.execute(sql)
+                data_interface = cursor.fetchone()
+                print(data_interface)
+                interface = InterfaceUfinet(parent_device="", parse_data=data_interface)
+                print(interface)
+                return interface
+        except Exception as e:
+            print('fuck')
+            master.verbose.warning(f'get_interface_uid  uid{uid} {sql} {e}')
+
+    def get_interface_states_by_date(self, initial_date, end_date):
+        connection = self.parent_device.master.db_connect()
+
+        try:
+            with connection.cursor() as cursor:
+                sql = f''' SELECT * FROM interface_states where interface_uid={self.uid}
+                            and state_timestamp>='{initial_date}' and state_timestamp<='{end_date}'
+                            '''
+                cursor.execute(sql)
+                data_states = cursor.fetchall()
+                return data_states
+        except Exception as e:
+            self.verbose.warning(f'get_interface_states_by_date  uid{self.uid} {sql} {e}')
+
 
     @staticmethod
     async def bulk_snmp_data_interfaces_async(device) -> dict:
