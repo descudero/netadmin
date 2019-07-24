@@ -12,7 +12,7 @@ $(document).ready(function () {
         var date_end = $('#date_end').val();
         var uid = $('#uid').val();
         if (delete_data === true) {
-            Plotly.deleteTraces('graph' + uid, [-2, -1]);
+            Plotly.deleteTraces('graph' + uid, [-4, -3, -2, -1]);
         }
         send_ajax_graph(date_start, date_end, uid)
     }
