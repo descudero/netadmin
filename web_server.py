@@ -598,18 +598,24 @@ def json_interface():
     out_data = [float(state['util_out']) for state in interface_data]
     in_data = [float(-1 * state['util_in']) for state in interface_data]
     dates = [str(state['state_timestamp']) for state in interface_data]
-    level_up = [float(-95) for state in interface_data]
-    level_down = [float(95) for state in interface_data]
+    in_percentil_data = list(reversed(sorted(in_data)))
+    in_percentil = in_percentil_data[int(len(in_percentil_data) * .95)]
+    out_percentil_data = list(sorted(out_data))
+    out_percentil = out_percentil_data[int(len(out_percentil_data) * .95)]
+    in_percentil_line = [in_percentil for state in interface_data]
+    out_percentil_line = [out_percentil for state in interface_data]
+    print(in_percentil_line)
+    print(out_percentil_line)
     interface_d = {'name': f'{interface.parent_device.hostname} {interface.if_index} {interface.description}',
                    'if_index': interface.if_index,
                    'device': interface.parent_device.hostname,
                    'description': interface.description,
                    'out': {'fill': 'tozeroy', 'type': 'scatter', 'x': dates, 'y': out_data},
-                   'down': {'type': 'line', 'x': dates, 'y': level_up, 'color': 'red',
-                            'name': 'punto saturacion 95% in'},
+                   'down': {'type': 'line', 'x': dates, 'y': in_percentil_line, 'color': 'red',
+                            'name': ' 95%  percentile in'},
                    'in': {'x': dates, 'y': in_data, 'fill': 'tozeroy', 'type': 'scatter'},
-                   'up': {'type': 'line', 'x': dates, 'y': level_down, 'color': 'red',
-                          'name': 'punto saturacion 95% out'}}
+                   'up': {'type': 'line', 'x': dates, 'y': out_percentil_line, 'color': 'red',
+                          'name': '95%  percentile out'}}
 
     return jsonify(interface_d)
 
