@@ -602,7 +602,7 @@ def json_interface():
     interface_d = {'name': f'{interface.parent_device.hostname} {interface.if_index} {interface.description}',
                    'if_index': interface.if_index,
                    'device': interface.parent_device.hostname,
-                   'description': interface.description, 'out': {'x': dates, 'y': out_data},
+                   'description': interface.description, 'type': 'bar', 'out': {'x': dates, 'y': out_data},
                    'in': {'x': dates, 'y': in_data}}
 
     return jsonify(interface_d)
