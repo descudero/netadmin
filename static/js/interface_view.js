@@ -37,6 +37,9 @@ $(document).ready(function () {
                 tickangle: -90,
                 tickformat: '%m-%d-%H:%M'
             },
+            bargap: 0,
+            barmode: 'relative',
+
             yaxis: {
                 zeroline: true,
                 gridwidth: 2,
@@ -55,7 +58,7 @@ $(document).ready(function () {
         data_out['name'] = '% out_rate'
         var data_in = data_interface['in']
         data_in['name'] = '% in_rate'
-        var traces = [data_out, data_in]
+        var traces = [data_out, data_in, data_interface['up'], data_interface['down']]
         console.log(graph_id)
         var plotDiv = document.getElementById(graph_id)
         var plot = Plotly.plot(plotDiv, traces, layout);

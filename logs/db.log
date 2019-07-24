@@ -17575,3 +17575,28 @@ state_timestamp) VALUES ('up','up','2616176','1076183336','0.03','10.76','1','0'
                        from interface_states as h   where   h.state_timestamp >='2019-07-23 23:00:00' 
                        and h.state_timestamp <='2019-07-24 00:00:00' ORDER BY h.output_rate DESC ) as s2 on s2.uid = s.uid
                         WHERE  i.ip <>"127.0.0.1" AND  net_device_uid IN (26,36,45,41,65,12501,2,48,69,40,57,3,61,50,46,7,56,54,68,44,67,58,5,62,39,155743,51,38,4,52,49,64,42,53,644,1,70,63,8,25,59,606,66,310127,37,55,648,6)  
+2019-07-24 14:26:20,123:WARNING:db.Devices:dict_from_sql SELECT 
+                                i.net_device_uid, 
+                                i.bandwith as bw,
+                                i.uid as uid,
+                                i.if_index as if_index,
+                                i.l3_protocol,
+                                i.l3_protocol_attr,
+                                i.l1_protocol,
+                                i.l1_protocol_attr,
+                                i.data_flow,
+                                s.util_in as util_in,
+                                s.util_out as util_out,
+                                s.link_state,
+                                s.protocol_state,
+                                s.output_rate,
+                                s.input_rate,
+                                s.state_timestamp,i.ip
+
+                       from network_devices as d
+                       inner join interfaces as i on d.uid = i.net_device_uid
+                       inner join	interface_states as s on s.interface_uid= i.uid
+                       inner join  (select distinct  interface_uid,uid,output_rate 
+                       from interface_states as h   where   h.state_timestamp >='2019-07-24 00:00:00' 
+                       and h.state_timestamp <='2019-07-24 23:59:00' ORDER BY h.uid DESC ) as s2 on s2.uid = s.uid
+                        WHERE  i.ip <>"127.0.0.1" AND  net_device_uid IN (26,36,45,41,65,12501,2,48,69,40,57,3,61,50,46,7,56,54,68,44,67,58,5,62,39,155743,51,38,4,52,49,64,42,53,644,1,70,63,8,25,59,606,66,310127,37,55,648,6)  

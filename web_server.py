@@ -598,12 +598,18 @@ def json_interface():
     out_data = [float(state['util_out']) for state in interface_data]
     in_data = [float(-1 * state['util_in']) for state in interface_data]
     dates = [str(state['state_timestamp']) for state in interface_data]
-
+    level_up = [float(-95) for state in interface_data]
+    level_down = [float(95) for state in interface_data]
     interface_d = {'name': f'{interface.parent_device.hostname} {interface.if_index} {interface.description}',
                    'if_index': interface.if_index,
                    'device': interface.parent_device.hostname,
-                   'description': interface.description, 'type': 'bar', 'out': {'x': dates, 'y': out_data},
-                   'in': {'x': dates, 'y': in_data}}
+                   'description': interface.description,
+                   'out': {'fill': 'tozeroy', 'type': 'scatter', 'x': dates, 'y': out_data},
+                   'down': {'type': 'line', 'x': dates, 'y': level_up, 'color': 'red',
+                            'name': 'punto saturacion 95% in'},
+                   'in': {'x': dates, 'y': in_data, 'fill': 'tozeroy', 'type': 'scatter'},
+                   'up': {'type': 'line', 'x': dates, 'y': level_down, 'color': 'red',
+                          'name': 'punto saturacion 95% out'}}
 
     return jsonify(interface_d)
 
