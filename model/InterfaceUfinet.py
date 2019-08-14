@@ -684,7 +684,7 @@ class InterfaceUfinet(InterfaceIOS):
         return interface_data
 
     @staticmethod
-    def delta_oid(device, oid, multiplier=8, sleep_time=30):
+    def delta_oid(device, oid, multiplier=8, sleep_time=40):
         prev_oid_data = []
         real_get_bulk(oid=oid, ip=device.ip, community=device.community, data_bind=prev_oid_data)
         time.sleep(sleep_time)

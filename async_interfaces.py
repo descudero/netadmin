@@ -8,7 +8,7 @@ with open('hosts/interfaces/regional') as f:
     ip_lista = [line.replace('\n', '') for line in f]
 
 master = Master()
-delta_minutes = 6
+delta_minutes = 8
 diagrams = Diagram.recent_diagrams(master)
 date_last_minutes = str(datetime.datetime.now() - datetime.timedelta(minutes=delta_minutes))
 sql = f'''SELECT net_device_uid from poll_events where timestamp>'{date_last_minutes}' '''
@@ -17,7 +17,7 @@ with connection.cursor() as cursor:
     cursor.execute(sql)
     data = cursor.fetchall()
     uids = {row['net_device_uid'] for row in data}
-window = 20
+window = 15
 for diagram in diagrams:
     not_polled = set(diagram.state.devices_uid.keys()).difference(uids)
     if not_polled:
