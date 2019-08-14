@@ -25,6 +25,7 @@ import datetime
 import sys
 import asyncio
 
+
 @logged
 class CiscoIOS(Parent):
     images = {"MEXICO": "_MX",
@@ -329,10 +330,11 @@ class CiscoIOS(Parent):
 
         self.bdi_bridge_domain = {f'BDI{id_bd}': bd for id_bd, bd in self.bridge_domains.items()}
 
-    def set_pseudowires(self):
+    def set_pseudowires(self, template_name="show mpls l2transport vc detail ios.template",
+                        command="show mpls l2transport vc detail"):
 
-        output = self.send_command_and_parse(template_name="show mpls l2transport vc detail ios.template",
-                                             command="show mpls l2transport vc detail")
+        output = self.send_command_and_parse(template_name=template_name,
+                                             command=command, timeout=50)
         self.pseudowires = {row["vc_id"]: row for row in output}
 
         return self.pseudowires
@@ -1697,8 +1699,6 @@ class CiscoIOS(Parent):
 
             self.dev.info(f'set_interfaces_snmp able Interfaces snmp {len(self.interfaces)} {self.ip}')
         self.verbose.critical(f'set_interfaces_snmp  DONE {self.ip}')
-
-
 
     def set_interfaces_snmp(self, connection=False, save=False, clear_memory=False):
         self.verbose.critical(f'set_interfaces_snmp {self.ip}')

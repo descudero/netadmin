@@ -35,9 +35,10 @@ for dev in devs:
 devs.add_snmp_event(event='interfaces', type='asyc')
 
 devs.execute(methods=["set_snmp_community"], thread_window=50)
+devs.execute_processes(methods=["set_interfaces_snmp"], thread_window=50)
 #
 #
-asyncio.get_event_loop().run_until_complete(devs.interfaces_async())
+# asyncio.get_event_loop().run_until_complete(devs.interfaces_async())
 #
 #
 devs.save_interfaces()

@@ -126,8 +126,9 @@ class BaseDevice(object):
             cli_output = ""
         else:
             cli_output = self.send_command(connection=connection, command=command, timeout=timeout)
+
             connection.disconnect()
-        self.verbose.debug("{0} comm {1} cli {2}".format(self.ip, template_name, cli_output))
+        self.verbose.warning("{0} comm {1} cli {2}".format(self.ip, template_name, cli_output))
 
         return self.parse_txtfsm_template(template_name=template_name, text=cli_output)
 

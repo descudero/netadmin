@@ -5,18 +5,18 @@ $(document).ready(function () {
     $('#loading_json').hide()
     load_tables();
     load_data();
-    load_graph();
+    //load_graph();
     $("#form_send").submit(function (e) {
         $("#titulo").empty().text('REPORTE INTERNET ' + $("#initial_date").val() + " a " + $("#end_date").val())
         load_data();
-        load_graph();
+        //load_graph();
         return false;
 
     });
 
     function load_graph() {
-        date_start = $("#initial_date").val();
-        date_end = $("#end_date").val();
+        var date_start = $("#initial_date").val();
+        var date_end = $("#end_date").val();
         $(".group_name").each(function () {
             send_ajax_graph($(this).val(), date_start, date_end, "input");
             send_ajax_graph($(this).val(), date_start, date_end, "output");
@@ -90,7 +90,7 @@ $(document).ready(function () {
         var table =
             '<div class="row" >\n' +
 
-            '   <div class="col-sm-8">\n' +
+            '   <div class="col-sm-12">\n' +
             '       <table id="' + group_id + '" class="table table-bordered table-striped table-hover table-sm table-light"> \n' +
             '<h2>' + group_id + $("#initial_date").val() + " - " + $("#end_date").val() + '</h2>\n' +
             '               <input class="group_name" type="hidden" value="' + group_id + '">\n' +

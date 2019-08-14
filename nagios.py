@@ -23,9 +23,9 @@ args = parser.parse_args()
 '''
 claro = Claro()
 master = Master()
-test = CiscoIOS("10.249.9.251", "XR", master)
+test = CiscoIOS("10.240.233.154", "XR", master)
 
-test.set_jump_gateway("10.250.55.3", protocol="telnet")
+# test.set_jump_gateway("10.250.55.3", protocol="telnet")
 
 # test3 = CiscoIOS("172.17.28.110", "XR", master)
 # test2 = CiscoXR("172.16.30.253", "XR", master)
@@ -38,7 +38,7 @@ claro.master = master
 # xrs = CiscoXR.devices(master)
 
 data = test.create_file_nagios_arp()
-with open("nagios_ec.txt", "w") as f:
+with open("nagios_co_wbp.txt", "w") as f:
     f.write(data)
 
 # devices = CiscoXR.devices(master)
